@@ -77,3 +77,5 @@ Study desk: compact wordmark, clear task hierarchy, subdued progress indicators.
 ## Licence marking
 
 Future public course materials should carry the standard LibraUni notice unless a specific page states otherwise: course materials are CC BY-NC-SA 4.0; website code is MIT; the LibraUni name, logo, black-hole mark, wordmark and visual identity are reserved and excluded from those licences. Third-party media, readings, videos, simulations and data keep their own licences and must be marked with source and reuse information where applicable.
+
+On every public page, pair “Licence & reuse” with the official CC BY-NC-SA badge at `/licenses/cc-by-nc-sa.svg`, using the shared `licence-link` class. The badge covers course materials; the stated brand and other exclusions still apply.

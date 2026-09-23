@@ -7,3 +7,7 @@
 .logo-light .lu-lockup img{filter:none!important}
 .lu-reversed{background:#182E3B}
 .mark-board .lu-lockup{width:100%;max-width:400px;align-self:center;margin:25px 0}
+
+/* Shared licence link for every public page. Keep the official badge unmodified. */
+a.licence-link{display:inline-flex;align-items:center;gap:.65rem;flex-wrap:wrap}
+.licence-link img{display:block;width:88px;height:31px;flex:none}
