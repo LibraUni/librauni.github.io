@@ -1,6 +1,6 @@
-# LibraUni — visual identity proposal 01
+# LibraUni — visual identity
 
-23 September 2026. Name, balanced academic/contemporary character, warm light default and optional dark mode confirmed. Specific mark, palette and layouts proposed for review.
+23 September 2026. Name, balanced academic/contemporary character, warm light default and optional dark mode confirmed. The black-hole logo with subtly integrated L and U is approved and adopted on the study desk.
 
 ## Purpose and character
 
@@ -10,13 +10,13 @@ Suggested editorial line: “A place for deeper understanding.” Use sparingly 
 
 ## Logo
 
-The horizon mark combines a symmetrical arch, balanced horizontal line, an L beneath it and a point above. The interpretation is perspective and discovery; this is not an astronomical diagram or an actual constellation map.
+The approved black-hole mark combines sweeping lensing arcs and an equatorial disc with an L above and a U below. The first impression is a black hole; the initials emerge on closer inspection. Retain the rounded L elbow and flowing U of the approved artwork. Avoid making either letter heavier, squarer or more literal. This is symbolic artwork, not a scientific diagram.
 
 Use the symbol with the LibraUni wordmark on home pages and navigation. Use the symbol alone for browser icons and compact contexts. Keep the spelling and capitalisation LibraUni. Never stretch, rotate, add shadows, enclose in a fake seal, or overlay busy photography.
 
-Clear space: at least one quarter of the symbol's width on all sides. Minimum symbol size: 24 CSS pixels; favicon is a special compact application. Minimum wordmark width: 150 CSS pixels. At 16px use the supplied browser icon and judge optical clarity in the browser. Ink on ivory and ivory on midnight are the primary combinations; brass is an occasional symbol treatment on midnight.
+Clear space: at least one quarter of the symbol's height on all sides. Recommended symbol width: 76px or more in navigation; lockup width: 180px or more. At favicon sizes the silhouette is an identifier, and the embedded letters will not be readable. Ink on ivory and a light reversed treatment on midnight are the primary combinations.
 
-SVG assets are original editable vectors. Wordmark text currently uses Georgia and remains editable; exact appearance depends on installed fonts. Before external print production, convert approved lettering to outlines using a properly licensed local font. No claim of trademark clearance is made.
+The unchanged approved master is /brand/librauni-approved.png (1536 × 1024). The site frames this same image with CSS; dark surfaces use a CSS light treatment. The browser icon is an SVG container embedding that raster master, not a traced vector logo. The artwork's wordmark remains part of the original image; compact navigation pairs its symbol with live Georgia text. The old horizon SVGs are superseded and must not be reused. A faithful vector master remains a future production refinement for large-format print. Do not regenerate or redraw the approved geometry without reviewing the result.
 
 ## Colour tokens
 
