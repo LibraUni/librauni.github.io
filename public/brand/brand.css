@@ -1,13 +1,9 @@
-/* Display the approved original artwork without redrawing its geometry. */
-.lu-symbol,.lu-lockup{display:block;position:relative;overflow:hidden;flex:none;isolation:isolate;background:var(--paper,#F7F4ED)}
+/* Display transparent crops derived from the approved original artwork. */
+.lu-symbol,.lu-lockup{display:block;position:relative;overflow:hidden;flex:none;isolation:isolate;background:transparent}
 .lu-symbol{aspect-ratio:864/524;width:94px}
 .lu-lockup{aspect-ratio:864/679;width:100%}
-.lu-symbol img,.lu-lockup img{position:absolute;width:177.777778%;max-width:none;height:auto;left:-38.888889%;mix-blend-mode:multiply}
-.lu-symbol img{top:-27.480916%}
-.lu-lockup img{top:-21.207658%}
-:root[data-theme="dark"] .lu-symbol img,:root[data-theme="dark"] .lu-lockup img,.lu-reversed img{filter:grayscale(1) contrast(2) invert(1);mix-blend-mode:screen}
-.logo-light .lu-lockup img{filter:none!important;mix-blend-mode:multiply!important}
+.lu-symbol img,.lu-lockup img{display:block;width:100%;height:100%;object-fit:contain}
+:root[data-theme="dark"] .lu-symbol img,:root[data-theme="dark"] .lu-lockup img,.lu-reversed img{filter:grayscale(1) contrast(2) invert(1) brightness(1.12)}
+.logo-light .lu-lockup img{filter:none!important}
 .lu-reversed{background:#182E3B}
-.logo-light .lu-lockup{background:#F7F4ED}
 .mark-board .lu-lockup{width:100%;max-width:400px;align-self:center;margin:25px 0}
-.logo-pair .lu-lockup img{width:177.777778%}

@@ -16,7 +16,7 @@ Use the symbol with the LibraUni wordmark on home pages and navigation. Use the 
 
 Clear space: at least one quarter of the symbol's height on all sides. Recommended symbol width: 76px or more in navigation; lockup width: 180px or more. At favicon sizes the silhouette is an identifier, and the embedded letters will not be readable. Ink on ivory and a light reversed treatment on midnight are the primary combinations.
 
-The unchanged approved master is /brand/librauni-approved.png (1536 × 1024). The site frames this same image with CSS; dark surfaces use a CSS light treatment. The browser icon is an SVG container embedding that raster master, not a traced vector logo. The artwork's wordmark remains part of the original image; compact navigation pairs its symbol with live Georgia text. The old horizon SVGs are superseded and must not be reused. A faithful vector master remains a future production refinement for large-format print. Do not regenerate or redraw the approved geometry without reviewing the result.
+The unchanged approved master is /brand/librauni-approved.png (1536 × 1024). The site uses transparent derivatives from that master for production display: /brand/librauni-symbol-transparent.png and /brand/librauni-lockup-transparent.png. Dark surfaces use a CSS light treatment. The browser icon is an SVG container embedding the transparent symbol, not a traced vector logo. The artwork's wordmark remains part of the original image; compact navigation pairs its symbol with live Georgia text. The old horizon SVGs are superseded and must not be reused. A faithful vector master remains a future production refinement for large-format print. Do not regenerate or redraw the approved geometry without reviewing the result.
 
 ## Colour tokens
 
