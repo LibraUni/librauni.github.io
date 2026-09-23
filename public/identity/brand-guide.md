@@ -73,3 +73,7 @@ The specimen is a review artefact, not the full learning application. Its theme 
 ## Applications
 
 Study desk: compact wordmark, clear task hierarchy, subdued progress indicators. Lesson pages: spacious light reading surface and precise figures. Module covers: subject title and one relevant diagram, generous margins, restrained colour. Reference sheets: white print background, ink wordmark, compact equation hierarchy, visible version/date. Social/share cards: midnight field, ivory title, small brass symbol, no faux university credentials.
+
+## Licence marking
+
+Future public course materials should carry the standard LibraUni notice unless a specific page states otherwise: course materials are CC BY-NC-SA 4.0; website code is MIT; the LibraUni name, logo, black-hole mark, wordmark and visual identity are reserved and excluded from those licences. Third-party media, readings, videos, simulations and data keep their own licences and must be marked with source and reuse information where applicable.

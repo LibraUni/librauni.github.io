@@ -18,6 +18,10 @@ Never commit personal study records, responses, assessments, credentials, or dat
 
 The website saves notes transactionally with a revision check and immutable history. Unsynchronised drafts are kept in local browser storage, separated by user ID. They are not cloud backups. Lesson completion is distinct from server-managed assessment evidence; no curriculum or completion percentage is fabricated when the lesson catalogue is empty.
 
+## Licence
+
+LibraUni uses a split licence. Course materials and site text are CC BY-NC-SA 4.0 unless a page states otherwise. Website source code is MIT-licensed; see LICENSE-CODE. The LibraUni name, logo, black-hole mark, wordmark, visual identity, private learner records, answers, marks, tutor notes, credentials and database backups are reserved and excluded from those licences.
+
 ## Backup and recovery
 
 Daily backup automation runs in the private study repository with short-lived, read-only Google credentials. Recovery instructions and verification evidence live there. The public website links to the private backup folder; it does not expose backup contents or claim that a schedule is proof of a successful backup.
