@@ -69,8 +69,12 @@ $('auth-button').addEventListener('click',async()=>{
   notice();
   try{
     if(auth.currentUser){if(pending()||busy){notice('Please wait for your note to save, or download it before signing out.');return;}await signOut(auth);}
-    else await signInWithPopup(auth,new GithubAuthProvider());
-  }catch(e){notice(e.code==='auth/popup-closed-by-user'?'Sign-in was cancelled. You can try again.':'Sign-in could not finish. Allow the GitHub sign-in popup and try again.');}
+    else { $('account-message').textContent='Complete sign-in in the GitHub window.'; await signInWithPopup(auth,new GithubAuthProvider()); }
+  }catch(e){
+    const messages={'auth/popup-closed-by-user':'Sign-in was cancelled. You can try again.','auth/popup-blocked':'Your browser blocked the sign-in window. Allow popups for LibraUni, then try again.','auth/unauthorized-domain':'This website address needs to be authorised for sign-in.','auth/operation-not-allowed':'GitHub sign-in needs to be enabled in the project settings.','auth/invalid-credential':'The GitHub connection could not be verified. Its configuration needs checking.'};
+    notice((messages[e.code]||'Sign-in could not finish. Please share the error code with your tutor.')+' ('+(e.code||'unknown-error')+')');
+    $('account-message').textContent='Not signed in';
+  }
 });
 onAuthStateChanged(auth, async user=>{
   generation++;clearTimeout(timer);owner=null;conflict=false;revision=0;savedText='';
