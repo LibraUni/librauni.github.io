@@ -1,4 +1,10 @@
 .programme-page{max-width:1120px;margin:auto}
+.breadcrumb{flex-wrap:wrap;line-height:1.6}
+.unit-card{padding:1.6rem;margin:1.2rem 0;border:1px solid var(--line);background:var(--surface);scroll-margin-top:1rem}
+.unit-card h3{margin-top:0}.unit-card dl{line-height:1.75;max-width:85ch}.unit-card dt{font-weight:600;margin-top:1rem}.unit-card dd{margin:.3rem 0 0;color:var(--muted)}
+.learning-chain{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.5rem;border:1px solid var(--line);background:var(--tint);line-height:1.6}
+.source-list{padding-left:1.5rem;line-height:1.7}.source-list li{padding:.6rem 0;scroll-margin-top:1rem}.source-list p{color:var(--muted);margin:.4rem 0}
+.table-scroll:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
 .programme-nav{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;padding:1.2rem 0;border-block:1px solid var(--line)}
 .programme-section{padding:3rem 0;border-bottom:1px solid var(--line);scroll-margin-top:1rem}
 .programme-section h2{font-size:clamp(1.8rem,3vw,2.5rem)}
