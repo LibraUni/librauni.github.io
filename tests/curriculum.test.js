@@ -57,3 +57,15 @@ test('Block 1 review budgets reconcile with unit and computing allocations witho
  assert.equal(block1.units.reduce((sum,u)=>sum+u.hours.reduce((a,b)=>a+b,0),0),80);
  assert.ok(m100.assessment.find(a=>a.name==='TMA 01').outcomes.includes('O6'));
 });
+
+import {block2} from '../curriculum/m100-block2.js';
+test('Block 2 proposed redistribution preserves block and Python totals without changing active unit budgets',()=>{
+ assert.deepEqual(block2.units.map(u=>u.id),m100.blocks[1].units);
+ const proposed=block2.units.map(u=>u.hours.reduce((a,b)=>a+b,0));
+ assert.deepEqual(proposed,[20,22,20,28]);
+ assert.equal(proposed.reduce((a,b)=>a+b,0),m100.units.filter(u=>m100.blocks[1].units.includes(u.id)).reduce((s,u)=>s+u.hours,0));
+ for(const u of block2.units){assert.equal(u.hours.length,block2.workloadLabels.length);assert.equal(u.hours[2],computing.find(x=>x[0]===u.id)[1]);}
+ assert.deepEqual(m100.units.filter(u=>m100.blocks[1].units.includes(u.id)).map(u=>u.hours),[20,24,22,24]);
+ assert.ok(!m100.assessment.find(a=>a.name==='TMA 02').units.includes('U08'));
+ assert.ok(m100.assessment.find(a=>a.name==='TMA 03').units.includes('U08'));
+});
