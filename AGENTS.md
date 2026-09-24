@@ -51,3 +51,15 @@ Every public page must include the shared licence-link and official /licenses/cc
 ## Blocks confirmed — 24 September 2026
 
 Hierarchy: Degree > Stage > Module > Block > Unit > Lesson. Blocks are coherent groups of units within a module, not separate enrolments, awards or additional credits. M100 remains outside the degree and uses Module > Block > Unit > Lesson. Its three groups are B01 U01–U04 Calculate and express relationships; B02 U05–U08 Understand functions and models; B03 U09–U12 Investigate and explain. Preserve stable unit IDs, saved dates and chronological assessment placement. Later module blocks must be designed individually, not invented in bulk.
+
+## M100 completion principles — agreed 24 September 2026
+
+1. Demonstrate every essential capability; an aggregate mark cannot conceal a substantial foundational gap. Use targeted practice and reassessment where needed.
+2. Assess independent mathematics/Python separately from controlled assistance. Documentation is allowed for independent Python tasks, generated solutions are not; other work explicitly declares permitted assistance.
+3. Gather evidence through the existing TMAs and combined EMA within 300 hours, with no additional final examination.
+
+Detailed capability descriptors, rubrics, thresholds and reassessment arrangements remain to be finalised; agreement to principles is not evidence of learner mastery.
+
+## Inside-out coherence review — agreed 24 September 2026
+
+For every new or revised teaching piece, review Section → Lesson → Unit → Block → Module → Stage → Degree. Sections subdivide lessons. Check immediate levels in detail for accuracy, prerequisites, difficulty, pedagogy, examples/practice, graphics, accessibility, assessment purpose and workload; check higher levels for their general role, progression and coverage. Record evidence and unresolved issues rather than claiming perfect fit. Use findings to draft the next section in detail, next lesson as a plan, next unit as an outline and later blocks/modules/stages progressively more broadly. Repeat after revisions or relevant learner feedback; update affected outlines/coverage/dependencies visibly without silently changing agreed scope or mass-authoring distant content. Preserve identifiers and private progress. M100 connects to Stage 1 readiness but remains outside degree credits. The reusable public authoring procedure and short review-record template are in website/docs/curriculum-authoring.md (docs/curriculum-authoring.md within the website repository). Keep learner-specific review evidence private.
