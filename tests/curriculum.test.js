@@ -49,3 +49,11 @@ test('blocks partition units in teaching order without duplicate workload or orp
  for(const [, , ids] of m100.exitStandard)for(const id of ids)assert.ok(outcomes.has(id));
  for(const id of outcomes)assert.ok(m100.exitStandard.some(row=>row[2].includes(id)));
 });
+
+import {block1} from '../curriculum/m100-block1.js';
+test('Block 1 review budgets reconcile with unit and computing allocations without changing credits',()=>{
+ assert.deepEqual(block1.units.map(u=>u.id),m100.blocks[0].units);
+ for(const u of block1.units){assert.equal(u.hours.length,block1.workloadLabels.length);assert.equal(u.hours.reduce((a,b)=>a+b,0),m100.units.find(x=>x.id===u.id).hours);assert.equal(u.hours[2],computing.find(x=>x[0]===u.id)[1]);}
+ assert.equal(block1.units.reduce((sum,u)=>sum+u.hours.reduce((a,b)=>a+b,0),0),80);
+ assert.ok(m100.assessment.find(a=>a.name==='TMA 01').outcomes.includes('O6'));
+});

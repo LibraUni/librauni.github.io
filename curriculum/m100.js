@@ -1,6 +1,6 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m100 = {
-  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '0.7', date: '24 September 2026', credits: 30,
+  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '0.8', date: '24 September 2026', credits: 30,
   status: 'Optional bridge · outside the degree · specifications awaiting review',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
@@ -134,7 +134,7 @@ export const m100 = {
       context:'Rearrangements used in measurement formulas, with no new physics assumed.',
       evidence:'A justified simplification and a counterexample to an invalid cancellation.',
       boundary:'Full quadratic factorisation is reserved for U07; symbolic-algebra software is not required.'},
-    {id:'U04',title:'Equations, inequalities & changing the subject',hours:24,requires:['U03'],outcomes:['O2','O5','O7'],
+    {id:'U04',title:'Equations, inequalities & changing the subject',hours:24,requires:['U03'],outcomes:['O2','O5','O6','O7'],
       scope:'Linear equations; formulas with several variables; two simultaneous linear equations; inequalities and intervals; sign changes; extraneous solutions; checking answers by substitution.',
       can:'Choose a solution method, retain restrictions and distinguish no solution, one solution and an underdetermined relationship.',
       computing:'Use Boolean comparisons to check candidates, alongside a written algebraic argument.',
@@ -200,7 +200,7 @@ export const m100 = {
   ],
   additionalWork: [
     {name:'Orientation and study/computing setup',hours:6,detail:'Navigation, accessible tools, file organisation and an initial non-graded readiness conversation. No diagnostic is administered by this preview.'},
-    {name:'Three tutor-marked assignments (TMAs)',hours:18,detail:'Six hours each after U04, U07 and U10. Scope: quantitative/algebraic reasoning; functions/graphs including a short explained Python notebook; geometry/trigonometry/exponentials/vectors. TMA 02 allocates four hours to written reasoning and two to the notebook, including a clean rerun and independent hand check; this replaces part of its task load rather than adding hours. Pre-scheduled cut-offs in the module planner; personal changes remain possible.'},
+    {name:'Three tutor-marked assignments (TMAs)',hours:18,detail:'Six hours each after U04, U07 and U10. Proposed TMA 01 split: written reasoning 4.5 hours, short independent Python 1 hour, submission preparation/checks 0.5 hours; no extra workload. Scope: quantitative/algebraic reasoning; functions/graphs including a short explained Python notebook; geometry/trigonometry/exponentials/vectors. TMA 02 allocates four hours to written reasoning and two to the notebook, including a clean rerun and independent hand check; this replaces part of its task load rather than adding hours. Pre-scheduled cut-offs in the module planner; personal changes remain possible.'},
     {name:'EMA: written mathematics, modelling notebook and explanation',hours:18,detail:'One end-of-module assessment after U12, with one submission deadline. Component A: independent Python modelling notebook (10 hours). Component B: handwritten mathematical work (4 hours) and scanning/checking its PDF (1 hour). Component C: notebook interpretation (2 hours) and a tutor discussion (1 hour). These are work budgets, not a separate timed examination.'},
     {name:'Cumulative revision',hours:12,detail:'Spaced mixed practice across units, with a targeted plan based on earlier feedback.'},
     {name:'Feedback review and targeted corrections',hours:6,detail:'Review feedback, explain corrections and revisit identified misconceptions. Additional reassessment needs, if any, will be recorded separately rather than disguised within the estimate.'},
@@ -209,7 +209,7 @@ export const m100 = {
     {name:'iCMA 41',units:['U01','U02'],outcomes:['O1','O5']},
     {name:'iCMA 42',units:['U05','U06','U07'],outcomes:['O2','O3']},
     {name:'iCMA 43',units:['U09','U10','U11'],outcomes:['O3','O4','O5']},
-    {name:'TMA 01',units:['U01','U02','U03','U04'],outcomes:['O1','O2','O5','O7']},
+    {name:'TMA 01',units:['U01','U02','U03','U04'],outcomes:['O1','O2','O5','O6','O7']},
     {name:'TMA 02',units:['U05','U06','U07'],outcomes:['O2','O3','O6','O7']},
     {name:'TMA 03',units:['U08','U09','U10'],outcomes:['O1','O2','O3','O4','O5','O7']},
     {name:'EMA · Written mathematics, notebook and explanation',units:['U01','U02','U03','U04','U05','U06','U07','U08','U09','U10','U11','U12'],outcomes:['O1','O2','O3','O4','O5','O6','O7']},
