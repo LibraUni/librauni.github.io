@@ -15,3 +15,11 @@ Every public page must include the shared licence-link and official /licenses/cc
 - Clearly distinguish proposed outlines, approved outlines and available lessons. Keep enrolment, submissions, actual hours and demonstrated attainment private. No award is issued without its assessed evidence.
 
 - Structured curriculum sources live in curriculum/. The renderer in scripts/render-curriculum.mjs generates module and coverage HTML during build. Edit data/templates, regenerate, and commit both sources and generated pages. Preserve dated source limitations and unresolved coverage gaps; structural tests do not establish academic completeness.
+
+## Timetables and assessments
+
+- Use TMA (tutor-marked assignment), iCMA (interactive computer-marked assignment), EMA (end-of-module assessment), and final examination consistently. Written exam plans include handwriting, PDF scanning/checking and submission time. Do not pretend assessment materials or upload tools exist before release.
+- Every module has a referenced OU-style presentation duration and pre-scheduled unit windows, assessments and revision. Credits specify workload, not a universal calendar length. M101 uses the documented 30-study-week foundation pattern; select references for later modules individually. Personal extensions/earlier dates remain possible and must preserve the baseline.
+- Integrate all events in the expandable module study sequence and its calendar, with Expand all / Hide all, prerequisite links and availability-aware material links. The degree calendar aggregates the same private dates for enrolled modules; planned modules are an explicit optional view.
+- Use curriculum/schedules.js and shared planner/date components for future modules. Stable event IDs and schedule versions are durable record keys; never silently overwrite an enrolled timetable or repurpose IDs. Add migration/review for changed versions.
+- Keep private plan persistence, immutable revision history, stale-write protection, local draft recovery, export and recursive backup coverage working. Run schedule and emulator persistence/security tests before publication; never count elapsed calendar dates as learning or assessed mastery.
