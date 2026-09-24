@@ -70,3 +70,26 @@ test('planner adapter round-trips dates and refuses a second-device stale overwr
  assert.equal(combined(modules,reloaded.data.plans,true).find(r=>r.id==='TMA01').end,'2026-12-11');
  const history=await getDoc(doc(db,'users',uid,'plannerHistory','1'));assert.deepEqual(JSON.parse(history.data().payload),data);
 });
+
+test('profile adapter preserves text and photo, requires history and prevents stale overwrites or foreign access',async()=>{
+ const {loadProfile,saveProfile}=await import('../src/profile-store.js');
+ const {emptyProfile}=await import('../src/profile-data.js');
+ const assert=(await import('node:assert/strict')).default;
+ const uid='profile-test',db=env.authenticatedContext(uid,claims).firestore();
+ const p={...emptyProfile(),name:'Test learner',academic:'Test qualification',work:'Test work',photo:'data:image/jpeg;base64,YWJj'};
+ const ref=doc(db,'users',uid,'profile','main');
+ await assertFails(setDoc(ref,{payload:JSON.stringify(p),revision:1,updatedAt:serverTimestamp()}));
+ assert.equal((await loadProfile(uid,db)).revision,0);
+ await saveProfile(uid,p,0,db);assert.deepEqual((await loadProfile(uid,db)).data,p);
+ await saveProfile(uid,{...p,photo:'',name:'Updated'},1,db);
+ await assert.rejects(saveProfile(uid,p,1,db),/PROFILE_CONFLICT/);
+ const latest=await loadProfile(uid,db);assert.equal(latest.data.photo,'');assert.equal(latest.data.name,'Updated');
+ const history=doc(db,'users',uid,'profileHistory','1');assert.deepEqual(JSON.parse((await getDoc(history)).data().payload),p);
+ await assertFails(setDoc(history,{payload:'{}',revision:1,updatedAt:serverTimestamp()}));
+ await assertFails(deleteDoc(ref));
+ await assertFails(runTransaction(db,async tx=>{await tx.get(ref);const oversized={payload:'x'.repeat(250001),revision:3,updatedAt:serverTimestamp()};tx.set(ref,oversized);tx.set(doc(db,'users',uid,'profileHistory','3'),oversized);}));
+ for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('not-owner',claims).firestore(),env.authenticatedContext(uid,{firebase:{sign_in_provider:'github.com',identities:{'github.com':['other']}}}).firestore()]){
+  await assertFails(getDoc(doc(other,'users',uid,'profile','main')));await assertFails(getDoc(doc(other,'users',uid,'profileHistory','1')));
+  await assertFails(setDoc(doc(other,'users',uid,'profile','main'),{payload:'{}',revision:3,updatedAt:serverTimestamp()}));
+ }
+});

@@ -102,7 +102,7 @@ $('export').addEventListener('click',async()=>{
   if(!owner)return;const user=owner;const session=generation;$('export').disabled=true;
   try{
     const out={schemaVersion:1,exportedAt:new Date().toISOString(),uid:user.uid,collections:{}};
-    for(const name of ['notes','noteHistory','progress','attempts','assessments','bookmarks','planner','plannerHistory']){
+    for(const name of ['notes','noteHistory','progress','attempts','assessments','bookmarks','planner','plannerHistory','profile','profileHistory']){
       const q=await getDocsFromServer(collection(db,'users',user.uid,name));out.collections[name]=q.docs.map(d=>({id:d.id,data:d.data()}));
     }
     if(session!==generation)return;
