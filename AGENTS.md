@@ -6,7 +6,7 @@ Every public page must include the shared licence-link and official /licenses/cc
 
 ## Curriculum publication and development
 
-- Preserve Degree > Stage > Module > Unit > Lesson. Modules integrate multiple traditional courses; the complete approved Unit-level outline must be available for preview before enrolment.
+- Preserve Degree > Stage > Module > Block > Unit > Lesson. Modules integrate multiple traditional courses; the complete approved Unit-level outline must be available for preview before enrolment.
 - Before unit design, review the learner's read-only OU Data Science reference folder when supplied. Keep its files private; learn from organisation and pedagogy without reproducing proprietary materials.
 - Cross-check undergraduate physics coverage against two reputable research-university curricula using authoritative sources. Maintain a dated mapping from traditional subjects/outcomes to modules and units, with prerequisites, core/elective status, gaps and intentional revisits. Titles alone do not prove coverage. Distinguish required breadth from specialist electives.
 - Work stage by stage and one module at a time, reviewing with the learner before moving to the next. Do not generate all unit outlines or lesson materials in bulk.
@@ -47,3 +47,7 @@ Every public page must include the shared licence-link and official /licenses/cc
 
 - Old LU-M101 foundations is now LU-M100; old maths I becomes LU-M101 and old maths II becomes LU-M102. Never interpret saved legacy LU-M101 records as the new degree mathematics module.
 - Planner schema 2 uses current active codes plus retiredPlans. Explicitly reviewed migration preserves bridge dates under M100 and retains withdrawn A101 dates as private history, excluded from active calendars. No automatic persistence or destructive overwrite. Preserve local drafts, immutable history, stale-write checks and exports/backups. Test migration and emulator persistence/security on changes.
+
+## Blocks confirmed — 24 September 2026
+
+Hierarchy: Degree > Stage > Module > Block > Unit > Lesson. Blocks are coherent groups of units within a module, not separate enrolments, awards or additional credits. M100 remains outside the degree and uses Module > Block > Unit > Lesson. Its three groups are B01 U01–U04 Calculate and express relationships; B02 U05–U08 Understand functions and models; B03 U09–U12 Investigate and explain. Preserve stable unit IDs, saved dates and chronological assessment placement. Later module blocks must be designed individually, not invented in bulk.

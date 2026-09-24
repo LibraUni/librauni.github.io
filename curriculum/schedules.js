@@ -9,7 +9,7 @@ export const modules=[{
  durationNote:'30 study weeks, using the documented MU123 pattern as the foundation-module reference. OU lengths vary by presentation; this is an original LibraUni timetable, not a copy of an OU calendar. No holiday dates are assumed: add breaks by moving remaining work.',
  events:[
   {id:'orientation',type:'support',title:'Orientation & computing setup',startWeek:1,endWeek:1,hours:6,requires:[],description:'Set up study tools and organise your files.',available:false},
-  ...m100.units.map((u,i)=>({...u,type:'unit',startWeek:ranges[i][0],endWeek:ranges[i][1],description:u.scope,available:false,outline:'#'+u.id})),
+  ...m100.units.map((u,i)=>({...u,block:m100.blocks.find(b=>b.units.includes(u.id)),type:'unit',startWeek:ranges[i][0],endWeek:ranges[i][1],description:u.scope,available:false,outline:'#'+u.id})),
   assessment('TMA01','TMA 01 · Numbers and algebra','TMA',9,9,6,['U01','U02','U03','U04'],'Tutor-marked assignment. Explain calculations, algebra and checks; handwritten work may be scanned to PDF.'),
   assessment('TMA02','TMA 02 · Functions and graphs','TMA',17,17,6,['U05','U06','U07'],'Tutor-marked assignment assessing reasoning and mathematical communication.'),
   assessment('TMA03','TMA 03 · Geometry, functions and vectors','TMA',25,25,6,['U08','U09','U10'],'Tutor-marked assignment with explained methods and conclusions.'),

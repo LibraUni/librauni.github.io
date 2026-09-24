@@ -41,3 +41,11 @@ test('integrated computing fits within every unit without adding to credit workl
  assert.equal(computing.reduce((sum,row)=>sum+row[1],0),48);
  assert.ok(m100.assessment.find(a=>a.name==='TMA 02').outcomes.includes('O6'));
 });
+
+test('blocks partition units in teaching order without duplicate workload or orphaned outcomes',()=>{
+ assert.deepEqual(m100.blocks.flatMap(b=>b.units),m100.units.map(u=>u.id));
+ assert.equal(new Set(m100.blocks.map(b=>b.id)).size,m100.blocks.length);
+ const outcomes=new Set(m100.outcomes.map(o=>o[0]));
+ for(const [, , ids] of m100.exitStandard)for(const id of ids)assert.ok(outcomes.has(id));
+ for(const id of outcomes)assert.ok(m100.exitStandard.some(row=>row[2].includes(id)));
+});

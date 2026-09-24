@@ -1,10 +1,108 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m100 = {
-  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '0.6', date: '24 September 2026', credits: 30,
+  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '0.7', date: '24 September 2026', credits: 30,
   status: 'Optional bridge · outside the degree · specifications awaiting review',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
   exit: 'Prepare for Stage 1: M101 Mathematics for physics I alongside P101, followed by M102 alongside A101. This optional 30-credit bridge is outside the 360-credit degree. Take the full module only if needed; targeted preparation requires its own scope and does not earn the full module credit. Completion is not assumed.',
+  blocks: [
+  {
+    "id": "B01",
+    "title": "Calculate and express relationships",
+    "units": [
+      "U01",
+      "U02",
+      "U03",
+      "U04"
+    ],
+    "purpose": "Build reliable calculation and algebra, alongside learner-written Python calculations, conditions, loops and checks."
+  },
+  {
+    "id": "B02",
+    "title": "Understand functions and models",
+    "units": [
+      "U05",
+      "U06",
+      "U07",
+      "U08"
+    ],
+    "purpose": "Connect graphs, functions and geometry; handle small datasets, write functions and tests, and begin critically reviewing assistance."
+  },
+  {
+    "id": "B03",
+    "title": "Investigate and explain",
+    "units": [
+      "U09",
+      "U10",
+      "U11",
+      "U12"
+    ],
+    "purpose": "Combine exponential, vector and data reasoning in reproducible investigations, with controlled assistance and independent explanations."
+  }
+],
+  exitStandard: [
+  [
+    "E1",
+    "Reliable quantitative reasoning",
+    [
+      "O1",
+      "O5"
+    ],
+    "Estimate, calculate with fractions and powers, convert compound units and use scientific notation. Explain precision and recognise an implausible result.",
+    "A fresh hand-worked calculation and dimensional/order-of-magnitude check."
+  ],
+  [
+    "E2",
+    "Algebra and functions",
+    [
+      "O2",
+      "O3"
+    ],
+    "Rearrange formulas, solve linear and quadratic equations, track excluded values, and connect a function to its table and graph. Explain an inverse and its domain.",
+    "Unseen short problems with written reasoning, substitution checks and graph interpretation."
+  ],
+  [
+    "E3",
+    "Geometry, change and direction",
+    [
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "Use radians and trigonometry, resolve a two-dimensional vector, and interpret exponential/logarithmic relationships with appropriate units and restrictions.",
+    "A labelled diagram and an explained solution using an appropriate representation."
+  ],
+  [
+    "E4",
+    "Independent scientific Python",
+    [
+      "O6"
+    ],
+    "Write a small function and loop, use conditions and arrays, load a documented small dataset, produce a labelled plot and repair a simple error.",
+    "A learner-written task without generated code, with documentation allowed; predict results and test ordinary and edge cases."
+  ],
+  [
+    "E5",
+    "Model, verify and communicate",
+    [
+      "O5",
+      "O6",
+      "O7"
+    ],
+    "Use a supplied physical relationship to investigate a bounded question, state assumptions, check results independently and explain limitations.",
+    "A clean-rerun notebook, handwritten mathematical reasoning and a short explanation of modelling choices."
+  ],
+  [
+    "E6",
+    "Control computational assistance",
+    [
+      "O6",
+      "O7"
+    ],
+    "Specify a bounded change, inspect proposed code and file changes, test independently, reject faulty output and restore an earlier version.",
+    "An explained review and correction of a supplied change. Hands-on agent operation must be recorded separately from critique of a supplied trace."
+  ]
+],
   outcomes: [
     ['O1', 'Calculate and estimate reliably', 'Use signed numbers, fractions, powers, scientific notation and appropriate precision; detect implausible results.'],
     ['O2', 'Manipulate mathematical statements', 'Simplify expressions, rearrange formulas, solve equations and inequalities, and state restrictions that make the steps valid.'],

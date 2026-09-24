@@ -46,7 +46,7 @@ Use proper mathematical typesetting with accessible underlying notation for comp
 
 Spacing scale: 4, 8, 12, 16, 24, 32, 48, 64px. Main page max width 1500px; lesson prose remains narrower. Corners mostly square or 3–6px; shadows rare. Separate sections with space and hairlines.
 
-Hierarchy: Degree > Stage > Module > Unit > Lesson. Breadcrumbs above titles; lesson context in sidebar; local lesson sections within reach. On mobile collapse side navigation into a labelled, keyboard-accessible menu. No hover-only actions.
+Hierarchy: Degree > Stage > Module > Block > Unit > Lesson. Breadcrumbs above titles; lesson context in sidebar; local lesson sections within reach. On mobile collapse side navigation into a labelled, keyboard-accessible menu. No hover-only actions.
 
 Lesson pattern: title and purpose; prerequisites and estimated effort; explanation; worked examples; figures or simulations; practice; summary and next step. These are layout conventions, not an approved curriculum. Keep the core lesson free of promotional distractions.
 
