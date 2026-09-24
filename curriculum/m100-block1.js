@@ -1,6 +1,6 @@
 // Original design proposal; no lessons, answers or learner records.
 export const block1 = {
- status:'Design proposal · awaiting review',
+ status:'Scope and TMA 01 Python component approved · detailed materials pending',
  purpose:'Calculate reliably, express relationships precisely and check short programs independently before moving to graphs and functions.',
  workloadLabels:['Explanation & worked examples','Mathematical practice','Python practice','Physical application','Retrieval & checkpoints'],
  units:[
@@ -37,7 +37,7 @@ export const block1 = {
    visuals:'Balance interpretation of equivalent operations; interval/number-line diagrams; two independent relations represented as labelled information constraints. Graphical solution follows in U05.',
    forward:'U05 represents the same linear relationships graphically. TMA 01 samples independent calculation, algebra, interpretation and short code before that transition.'},
  ],
- assessment:'Retain iCMA 41 after U02 within its hours. Proposed TMA 01 budget remains six hours: 4.5 hours written reasoning, 1 hour of short learner-written Python and 0.5 hours preparing/checking submission files. The Python task replaces part of the existing workload; it is not an extra assignment. It samples calculations, conditions and checking, not functions, arrays or plotting that have not yet been taught. Documentation is allowed; generated solutions are excluded from this independent evidence. Exact questions and scoring remain to be authored.',
+ assessment:'Retain iCMA 41 after U02 within its hours. Agreed TMA 01 design retains six hours: 4.5 hours written reasoning, 1 hour of short learner-written Python and 0.5 hours preparing/checking submission files. The Python task replaces part of the existing workload; it is not an extra assignment. It samples calculations, conditions and checking, not functions, arrays or plotting that have not yet been taught. Documentation is allowed; generated solutions are excluded from this independent evidence. Exact questions and scoring remain to be authored.',
  readiness:'Use a short retrieval task inside each unit’s existing checkpoint budget. Confident performance can justify a tutor-agreed shorter refresher path; it does not automatically award full-module credit or mark units complete. Required practice is purposeful and finite; clearly labelled backup exercises address specific gaps. Record extra remedial time honestly if needed. No separate diagnostic or timed speed test is introduced by this proposal.',
  coherence:'Block 1 provides the calculation and algebra base for Block 2. It begins exit capabilities E1, E2 and E4 and rehearses E5 communication/checking; it does not complete the whole exit standard. AI/agent operation remains later work, after learner-written foundations. M100 prepares entry to M101/P101 but is outside degree credits and cannot replace their required outcomes.',
  limitations:'These are original workload estimates, not an exact OU timetable or measured learner timings. The retained calendar places U01–U04 in reference weeks 1–9. Their 80 hours plus 6 hours orientation and 6 hours TMA 01 total 92 hours in that window; feedback has a separate existing allocation in week 10. Assessment boundaries need not coincide exactly with block boundaries. No schedule version, saved dates or module total changes.',

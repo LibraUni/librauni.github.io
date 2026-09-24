@@ -1,6 +1,6 @@
 # M100 B01 design review — 24 September 2026
 
-Status: proposal for learner review. No lessons, solutions or assessment questions produced. Sources: curriculum/m100-block1.js, m100.js and m100-computing.js. Public proposal contains no learner biography.
+Status: learner approved the scope and TMA 01 independent Python component on 24 September 2026. Detailed workload allocations remain estimates; full-module design and assessment rubrics remain open. No lessons, solutions or assessment questions produced. Sources: curriculum/m100-block1.js, m100.js and m100-computing.js. Public proposal contains no learner biography.
 
 ## Purpose and immediate fit
 
