@@ -46,3 +46,22 @@ test('invalid or changed private records fail safely instead of being overwritte
  assert.throws(()=>validatePlan(m,{...newPlan(m,'2026-10-03'),scheduleVersion:0}));
  const p=newPlan(m,'2026-10-03');p.overrides.U01={start:'2026-11-01',end:'2026-10-03'};assert.throws(()=>validatePlan(m,p));
 });
+
+test('M101 has one EMA, no separate exam, and retains the original final weekly budgets',()=>{
+ assert.equal(m.events.filter(e=>e.type==='EMA').length,1);
+ assert.equal(m.events.filter(e=>e.type==='exam').length,0);
+ const ema=m.events.find(e=>e.type==='EMA');assert.equal(ema.hours,18);assert.deepEqual(ema.weeklyHours,{29:10,30:8});
+ for(const [week,total] of [[29,14],[30,8]]){
+ assert.equal(m.events.filter(e=>e.startWeek<=week&&e.endWeek>=week&&!e.includedInUnitHours).reduce((sum,e)=>sum+(e.weeklyHours?.[week]??e.hours/(e.endWeek-e.startWeek+1)),0),total);
+ }
+});
+test('EMA migration is a non-mutating preview preserving personal dates and unrelated overrides',async()=>{
+ const {previewScheduleUpdate}=await import('../src/schedule.js');
+ const p={...newPlan(m,'2026-10-03'),scheduleVersion:1};
+ p.overrides={TMA01:{start:'2026-11-28',end:'2026-12-05'},EMA01:{start:'2027-04-20',end:'2027-04-28'},EXAM:{start:'2027-05-02',end:'2027-05-08'}};
+ const old={schemaVersion:1,plans:{'LU-M101':p}},next=previewScheduleUpdate(old,modules);
+ assert.equal(p.scheduleVersion,1);assert.ok(p.overrides.EXAM);
+ assert.deepEqual(next.plans['LU-M101'].overrides['EMA-FINAL'],{start:'2027-04-20',end:'2027-05-08'});
+ assert.deepEqual(next.plans['LU-M101'].overrides.TMA01,p.overrides.TMA01);
+ assert.equal(previewScheduleUpdate(next,modules),null);
+});

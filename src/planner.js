@@ -1,5 +1,5 @@
 import {modules} from '../curriculum/schedules.js';
-import {schedule,newPlan,validatePlan,validateStore,warnings,shiftRemaining,combined,today,addDays,dateValue,eventState,DAY} from './schedule.js';
+import {schedule,newPlan,validatePlan,validateStore,previewScheduleUpdate,warnings,shiftRemaining,combined,today,addDays,dateValue,eventState,DAY} from './schedule.js';
 import {auth,onAuthStateChanged,signIn,logOut,isOwner,loadPlanner,savePlanner} from './planner-store.js';
 import './planner.css';
 const root=document.querySelector('[data-planner]');
@@ -8,7 +8,7 @@ const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt
 const fmt=s=>s?new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(dateValue(s))):'';
 let data={schemaVersion:1,plans:{}},revision=0,user=null,loaded=false,authReady=false,dirty=false,saving=false,blocked=false,session=0,timer,month='',showPlanned=false,expanded=new Set();
 const draftKey=uid=>'librauni:planner:'+uid;
-root.innerHTML=`<div class="planner-heading"><div><p class="eyebrow">YOUR STUDY TIMETABLE</p><h2>${module?'Module planner':'Degree calendar'}</h2></div><button id="planner-auth">Sign in with GitHub</button></div><p id="planner-status" role="status">Sign in to save your personal timetable privately.</p><p id="planner-message" role="alert" hidden></p><div class="planner-tools"><button id="planner-retry" hidden>Retry saving</button><button id="planner-load" hidden>Load saved timetable</button><button id="planner-download">Download timetable data</button></div><div id="planner-content"></div>`;
+root.innerHTML=`<div class="planner-heading"><div><p class="eyebrow">YOUR STUDY TIMETABLE</p><h2>${module?'Module planner':'Degree calendar'}</h2></div><button id="planner-auth">Sign in with GitHub</button></div><p id="planner-status" role="status">Sign in to save your personal timetable privately.</p><p id="planner-message" role="alert" hidden></p><div class="planner-tools"><button id="planner-migrate" hidden>Accept combined EMA timetable</button><button id="planner-retry" hidden>Retry saving</button><button id="planner-load" hidden>Load saved timetable</button><button id="planner-download">Download timetable data</button></div><div id="planner-content"></div>`;
 const $=id=>document.getElementById(id);
 function message(s=''){ $('planner-message').textContent=s;$('planner-message').hidden=!s; }
 function status(s){$('planner-status').textContent=s;}
@@ -29,7 +29,16 @@ async function save(){
 }
 async function load(){
  if(!user)return;const s=session;loaded=false;render();status('Loading private timetable…');
- try{const result=await loadPlanner(user.uid);if(s!==session)return;validateStore(result.data,modules);data=result.data;revision=result.revision;dirty=false;blocked=false;
+ try{const result=await loadPlanner(user.uid);if(s!==session)return;const updated=previewScheduleUpdate(result.data,modules);
+ if(updated){
+  let draft=null;try{draft=JSON.parse(localStorage.getItem(draftKey(user.uid))||'null');}catch{}
+  data=draft?previewScheduleUpdate(draft.data,modules)||validateStore(draft.data,modules):updated;
+  revision=result.revision;dirty=!!draft;blocked=true;loaded=true;
+  if(draft&&draft.revision!==revision){message('A local draft and the online timetable differ. Download this draft before loading the saved timetable for review.');status('Changes need review');$('planner-load').hidden=false;render();return;}
+  message('Timetable update preview: the notebook EMA and separate examination become one 18-hour EMA. Other dates and weekly hours stay unchanged. If you adjusted either old item, the new EMA spans both adjusted windows and uses the later deadline. Your saved timetable is unchanged until you accept.');
+  status('Review timetable update · not saved');$('planner-migrate').hidden=false;render();openHash();return;
+ }
+ validateStore(result.data,modules);data=result.data;revision=result.revision;dirty=false;blocked=false;
  let draft;try{draft=JSON.parse(localStorage.getItem(draftKey(user.uid))||'null');}catch{}
  if(draft&&JSON.stringify(draft.data)!==JSON.stringify(data)){validateStore(draft.data,modules);data=draft.data;dirty=true;blocked=draft.revision!==revision;}
  loaded=true;status(dirty?'Recovered a local draft':'Saved timetable loaded · private');
@@ -71,7 +80,7 @@ function render(){
  ${calendar(rows)}
  <h3>Study sequence & assessment deadlines</h3><div class="planner-tools"><button data-expand="yes">Expand all</button><button data-expand="no">Hide all</button></div>
  <div class="study-sequence">${rows.map(r=>`<details class="study-item ${r.type==='unit'?'':'assessment-item'}" id="plan-${e(r.id)}" ${expanded.has(r.id)?'open':''}><summary><span class="eyebrow">${e(r.type==='unit'?r.id:r.type)} · reference week ${r.startWeek}${r.endWeek!==r.startWeek?'–'+r.endWeek:''}</span><strong>${e(r.title)}</strong><span>${e(range(r))} · ${r.hours} h${r.includedInUnitHours?' (already in unit budget)':''}</span><span class="small">${e(eventState(r))}${r.start&&!r.available?' · materials pending':''}</span></summary><div class="study-item-body"><p>${e(r.description)}</p><p><strong>Prepare first:</strong> ${(r.requires||[]).map(id=>`<a href="#plan-${e(id)}">${e(id)}</a>`).join(', ')||'No earlier units required.'}</p><p>${contentLinks(r)}</p>${plan?`<p class="small">Original dates: ${fmt(r.baselineStart)} – ${fmt(r.baselineEnd)}${r.start!==r.baselineStart||r.end!==r.baselineEnd?' · personally adjusted':''}</p><form class="planner-form event-dates" data-event="${e(r.id)}"><label>${r.type==='unit'?'Study from':'Work from'}<input type="date" name="start" value="${r.start}" required></label><label>${r.type==='unit'?'Finish by':'Due by'}<input type="date" name="end" value="${r.end}" required></label><button ${!edit?'disabled':''}>Save dates</button></form>`:''}${r.type==='unit'?`<label><input type="checkbox" data-complete="${e(r.id)}" ${r.completed?'checked':''} ${!edit||!r.available||plan?.status!=='enrolled'?'disabled':''}> Mark unit studied</label>`:''}</div></details>`).join('')}</div>
- <details><summary>Weekly workload · original timetable</summary><ul>${Array.from({length:module.weeks},(_,i)=>{const w=i+1,h=module.events.filter(r=>r.startWeek<=w&&r.endWeek>=w&&!r.includedInUnitHours).reduce((s,r)=>s+r.hours/(r.endWeek-r.startWeek+1),0);return `<li>Week ${w}: approximately ${h.toFixed(1)} hours</li>`;}).join('')}</ul><p>Evenly distributed within each work window for planning. Personal changes may concentrate work; the total stays ${module.credits*10} hours.</p></details>
+ <details><summary>Weekly workload · original timetable</summary><ul>${Array.from({length:module.weeks},(_,i)=>{const w=i+1,h=module.events.filter(r=>r.startWeek<=w&&r.endWeek>=w&&!r.includedInUnitHours).reduce((s,r)=>s+(r.weeklyHours?.[w]??r.hours/(r.endWeek-r.startWeek+1)),0);return `<li>Week ${w}: approximately ${h.toFixed(1)} hours</li>`;}).join('')}</ul><p>Uses explicit weekly allocations where specified, otherwise an even distribution within each work window for planning. These are LibraUni estimates, not verified OU week-by-week hours; assessment peaks are retained and not reduced to fit personal availability. Personal changes may concentrate work; the total stays ${module.credits*10} hours.</p></details>
  `:`<p>All enrolled modules share this calendar. Unit study windows and assessment dates link back to the module planner.</p><label><input id="show-planned" type="checkbox" ${showPlanned?'checked':''}> Include planned modules (not yet enrolled)</label><p>${modules.filter(m=>data.plans[m.code]?.status==='enrolled').length} enrolled modules. ${modules.filter(m=>data.plans[m.code]?.status==='planned').length} saved plans.</p>${rows.length?calendar(rows):'<p>No enrolled module dates to show yet. A saved draft plan appears when you select “Include planned modules”.</p>'}<ul>${modules.map(m=>`<li><a href="${m.path}#study-planner">${e(m.code+' · '+m.title)}</a>${data.plans[m.code]?` · ${e(data.plans[m.code].status)} · ${fmt(data.plans[m.code].start)}`:' · no personal dates yet'}</li>`).join('')}</ul><p class="small">The calendar reads the same private dates as each module. Refresh this page to load changes saved in another tab.</p>`;
  bind(edit);
 }
@@ -91,9 +100,10 @@ function bind(edit){
 }
 $('planner-auth').addEventListener('click',async()=>{try{if(auth.currentUser){if(dirty||saving){message('Save or download your timetable changes before signing out.');return;}await logOut();}else await signIn();}catch(err){message('Sign-in could not finish. '+(err.code||err.message));}});
 $('planner-retry').addEventListener('click',save);
+$('planner-migrate').addEventListener('click',()=>{if(user&&loaded&&blocked){blocked=false;$('planner-migrate').hidden=true;message();mark();}});
 $('planner-load').addEventListener('click',()=>{if(!dirty||confirm('Replace this draft with the online timetable? Download this draft first to keep it.')){try{localStorage.removeItem(draftKey(user.uid));}catch{}message();$('planner-load').hidden=true;load();}});
 $('planner-download').addEventListener('click',download);
-onAuthStateChanged(auth,async u=>{authReady=true;session++;clearTimeout(timer);user=null;loaded=false;blocked=false;dirty=false;data={schemaVersion:1,plans:{}};expanded.clear();$('planner-auth').textContent=u?'Sign out':'Sign in with GitHub';message();$('planner-load').hidden=true;$('planner-retry').hidden=true;render();if(!u){status('Sign in to save your personal timetable privately. Dates entered while signed out are a temporary preview and reset on sign-in or reload.');return;}if(!isOwner(u)){status('This account does not have access to the private planner.');return;}user=u;await load();});
+onAuthStateChanged(auth,async u=>{authReady=true;session++;clearTimeout(timer);user=null;loaded=false;blocked=false;dirty=false;data={schemaVersion:1,plans:{}};expanded.clear();$('planner-auth').textContent=u?'Sign out':'Sign in with GitHub';message();$('planner-load').hidden=true;$('planner-retry').hidden=true;$('planner-migrate').hidden=true;render();if(!u){status('Sign in to save your personal timetable privately. Dates entered while signed out are a temporary preview and reset on sign-in or reload.');return;}if(!isOwner(u)){status('This account does not have access to the private planner.');return;}user=u;await load();});
 window.addEventListener('beforeunload',ev=>{if(user&&(dirty||saving)){stash();ev.preventDefault();ev.returnValue='';}});
 window.addEventListener('online',()=>{if(user&&loaded&&!blocked)save();});
 function openHash(){const id=location.hash.slice(1);if(id.startsWith('plan-')){const el=document.getElementById(id);if(el){el.open=true;el.scrollIntoView({block:'start'});}}}

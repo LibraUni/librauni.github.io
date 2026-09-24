@@ -1,6 +1,6 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m101 = {
-  code: 'LU-M101', title: 'Mathematical foundations', version: '0.2', date: '24 September 2026', credits: 30,
+  code: 'LU-M101', title: 'Mathematical foundations', version: '0.3', date: '24 September 2026', credits: 30,
   status: 'Unit outline proposed · awaiting review · not open for study',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
@@ -103,9 +103,8 @@ export const m101 = {
   additionalWork: [
     {name:'Orientation and study/computing setup',hours:6,detail:'Navigation, accessible tools, file organisation and an initial non-graded readiness conversation. No diagnostic is administered by this preview.'},
     {name:'Three tutor-marked assignments (TMAs)',hours:18,detail:'Six hours each after U04, U07 and U10. Scope: quantitative/algebraic reasoning; functions/graphs; geometry/trigonometry/exponentials/vectors. Pre-scheduled cut-offs in the module planner; personal changes remain possible.'},
-    {name:'EMA: independent modelling notebook and explanation',hours:10,detail:'After U12: assess reproducibility, interpretation and data/model limitations as well as calculations. Separate from guided practice.'},
+    {name:'EMA: written mathematics, modelling notebook and explanation',hours:18,detail:'One end-of-module assessment after U12, with one submission deadline. Component A: independent Python modelling notebook (10 hours). Component B: handwritten mathematical work (4 hours) and scanning/checking its PDF (1 hour). Component C: notebook interpretation (2 hours) and a tutor discussion (1 hour). These are work budgets, not a separate timed examination.'},
     {name:'Cumulative revision',hours:12,detail:'Spaced mixed practice across units, with a targeted plan based on earlier feedback.'},
-    {name:'Final examination and follow-up',hours:8,detail:'Four hours of handwritten problems plus one hour to scan, check and submit a PDF; two hours interpreting a notebook and one hour discussing reasoning. Exact sitting arrangements are agreed before release.'},
     {name:'Feedback review and targeted corrections',hours:6,detail:'Review feedback, explain corrections and revisit identified misconceptions. Additional reassessment needs, if any, will be recorded separately rather than disguised within the estimate.'},
   ],
   assessment: [
@@ -115,7 +114,6 @@ export const m101 = {
     {name:'TMA 01',units:['U01','U02','U03','U04'],outcomes:['O1','O2','O5','O7']},
     {name:'TMA 02',units:['U05','U06','U07'],outcomes:['O2','O3','O7']},
     {name:'TMA 03',units:['U08','U09','U10'],outcomes:['O1','O2','O3','O4','O5','O7']},
-    {name:'EMA · Independent notebook',units:['U11','U12'],outcomes:['O1','O3','O5','O6','O7']},
-    {name:'Final examination and follow-up',units:['U01','U02','U03','U04','U05','U06','U07','U08','U09','U10','U11','U12'],outcomes:['O1','O2','O3','O4','O5','O6','O7']},
+    {name:'EMA · Written mathematics, notebook and explanation',units:['U01','U02','U03','U04','U05','U06','U07','U08','U09','U10','U11','U12'],outcomes:['O1','O2','O3','O4','O5','O6','O7']},
   ],
 };

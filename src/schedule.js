@@ -55,3 +55,21 @@ export function validateStore(data,modules){
  if(JSON.stringify(data).length>100000)throw Error('Planner exceeds the supported size.');
  return data;
 }
+
+// Explicitly reviewed update only. Never write migrated records automatically.
+export function previewScheduleUpdate(data,modules){
+ const next=structuredClone(data);let changed=false;
+ for(const [code,p] of Object.entries(next.plans||{})){
+  const module=modules.find(m=>m.code===code);
+  if(code==='LU-M101'&&p.scheduleVersion===1&&module?.scheduleVersion===2){
+   if(p.overrides.EMA01||p.overrides.EXAM){
+    const notebook=p.overrides.EMA01||{start:addDays(p.start,28*7),end:addDays(p.start,29*7-1)};
+    const written=p.overrides.EXAM||{start:addDays(p.start,29*7),end:addDays(p.start,30*7-1)};
+    p.overrides['EMA-FINAL']={start:[notebook.start,written.start].sort()[0],end:[notebook.end,written.end].sort().at(-1)};
+   }
+   delete p.overrides.EMA01;delete p.overrides.EXAM;p.scheduleVersion=2;changed=true;
+  }
+ }
+ if(!changed)return null;
+ validateStore(next,modules);return next;
+}
