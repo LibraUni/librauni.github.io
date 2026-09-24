@@ -10,7 +10,7 @@ export const sources = [
 
 // Proposed destinations, not assertions that content or lessons already exist.
 export const coverage = [
-  ['C01','Precalculus readiness','MIT-C1; OU-F','M101 U01–U10; M102 entry','Outlined','Algebra, functions, geometry and trigonometry have an explicit first home. M102 should diagnose/retrieve these tools rather than repeat their full teaching.'],
+  ['C01','Precalculus readiness','MIT-C1; OU-F','M101 U01–U10; M102 entry','Reviewed outline','Algebra, functions, geometry and trigonometry have an explicit first home. M102 should diagnose/retrieve these tools rather than repeat their full teaching.'],
   ['C02','Calculus, series and mathematical reasoning','MIT-C1','M102 → M103','Pending','Allocate limits, differentiation, integration, approximation and series, with demonstrable problem-solving outcomes. M101 intentionally stops before calculus.'],
   ['C03','Linear algebra and multivariable methods','MIT-C2; MIT-S (8.05)','M102/M103 → M201','Pending','Allocate matrices, eigenproblems, inner products, partial derivatives, multiple integrals and vector calculus. M101 U10 is only geometric preparation.'],
   ['C04','Differential equations and transform methods','MIT-D (18.03); IC-D','M103 → M201 → P201/P301','Pending','Track ODEs, boundary/initial conditions, Fourier methods and introductory PDEs; establish when physics units may use them.'],

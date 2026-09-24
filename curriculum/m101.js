@@ -1,7 +1,7 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m101 = {
-  code: 'LU-M101', title: 'Mathematical foundations', version: '0.3', date: '24 September 2026', credits: 30,
-  status: 'Unit outline proposed · awaiting review · not open for study',
+  code: 'LU-M101', title: 'Mathematical foundations', version: '0.4', date: '24 September 2026', credits: 30,
+  status: 'Design review complete · timetable verification open · not open for study',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
   exit: 'Prepare for LU-M102 Mathematics for physics I and support the introductory LU-P101 physics module. Completion establishes a precalculus foundation, not completion of university calculus or mechanics.',
@@ -102,7 +102,7 @@ export const m101 = {
   ],
   additionalWork: [
     {name:'Orientation and study/computing setup',hours:6,detail:'Navigation, accessible tools, file organisation and an initial non-graded readiness conversation. No diagnostic is administered by this preview.'},
-    {name:'Three tutor-marked assignments (TMAs)',hours:18,detail:'Six hours each after U04, U07 and U10. Scope: quantitative/algebraic reasoning; functions/graphs; geometry/trigonometry/exponentials/vectors. Pre-scheduled cut-offs in the module planner; personal changes remain possible.'},
+    {name:'Three tutor-marked assignments (TMAs)',hours:18,detail:'Six hours each after U04, U07 and U10. Scope: quantitative/algebraic reasoning; functions/graphs including a short explained Python notebook; geometry/trigonometry/exponentials/vectors. TMA 02 allocates four hours to written reasoning and two to the notebook, including a clean rerun and independent hand check; this replaces part of its task load rather than adding hours. Pre-scheduled cut-offs in the module planner; personal changes remain possible.'},
     {name:'EMA: written mathematics, modelling notebook and explanation',hours:18,detail:'One end-of-module assessment after U12, with one submission deadline. Component A: independent Python modelling notebook (10 hours). Component B: handwritten mathematical work (4 hours) and scanning/checking its PDF (1 hour). Component C: notebook interpretation (2 hours) and a tutor discussion (1 hour). These are work budgets, not a separate timed examination.'},
     {name:'Cumulative revision',hours:12,detail:'Spaced mixed practice across units, with a targeted plan based on earlier feedback.'},
     {name:'Feedback review and targeted corrections',hours:6,detail:'Review feedback, explain corrections and revisit identified misconceptions. Additional reassessment needs, if any, will be recorded separately rather than disguised within the estimate.'},
@@ -112,7 +112,7 @@ export const m101 = {
     {name:'iCMA 42',units:['U05','U06','U07'],outcomes:['O2','O3']},
     {name:'iCMA 43',units:['U09','U10','U11'],outcomes:['O3','O4','O5']},
     {name:'TMA 01',units:['U01','U02','U03','U04'],outcomes:['O1','O2','O5','O7']},
-    {name:'TMA 02',units:['U05','U06','U07'],outcomes:['O2','O3','O7']},
+    {name:'TMA 02',units:['U05','U06','U07'],outcomes:['O2','O3','O6','O7']},
     {name:'TMA 03',units:['U08','U09','U10'],outcomes:['O1','O2','O3','O4','O5','O7']},
     {name:'EMA · Written mathematics, notebook and explanation',units:['U01','U02','U03','U04','U05','U06','U07','U08','U09','U10','U11','U12'],outcomes:['O1','O2','O3','O4','O5','O6','O7']},
   ],
