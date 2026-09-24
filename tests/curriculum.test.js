@@ -24,3 +24,23 @@ test('coverage decisions and reference anchors cannot become orphaned',()=>{
   const refs=new Set(sources.map(s=>s.id));
   for(const row of coverage)for(const id of row[2].match(/MIT-C1|MIT-C2|MIT-D|MIT-S|IC-D|IC-P|OU-F/g)||[])assert.ok(refs.has(id));
 });
+
+import {stage1Modules, stage1Routes} from '../curriculum/stage1.js';
+import {computing} from '../curriculum/m101-computing.js';
+test('each Stage 1 route retains core physics and mathematics within 120 credits',()=>{
+ const modules=new Map(stage1Modules.map(m=>[m.code,m]));
+ for(const route of stage1Routes){
+  assert.equal(new Set(route.codes).size,route.codes.length);
+  for(const core of ['LU-M102','LU-M103','LU-P101'])assert.ok(route.codes.includes(core));
+  assert.equal(route.codes.reduce((sum,id)=>sum+modules.get(id).credits,0),120);
+ }
+ const astronomy=stage1Routes.find(r=>r.id==='astronomy');
+ assert.ok(astronomy.codes.includes('LU-A101'));assert.ok(!astronomy.codes.includes('LU-M101'));
+});
+test('integrated computing fits within every unit without adding to credit workload',()=>{
+ const units=new Map(m101.units.map(u=>[u.id,u]));
+ assert.equal(new Set(computing.map(row=>row[0])).size,m101.units.length);
+ for(const [id,hours] of computing){assert.ok(units.has(id));assert.ok(hours>0&&hours<units.get(id).hours);}
+ assert.equal(computing.reduce((sum,row)=>sum+row[1],0),48);
+ assert.ok(m101.assessment.find(a=>a.name==='TMA 02').outcomes.includes('O6'));
+});

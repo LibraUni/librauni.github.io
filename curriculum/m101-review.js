@@ -5,7 +5,7 @@ export const evidence = [
   ['O3', 'TMA 02; EMA A/B', 'Connect a formula, labelled graph and interpretation; explain an inverse or transformation.'],
   ['O4', 'TMA 03; EMA B', 'Construct a labelled triangle/vector diagram, use radians consistently and verify components or a projection.'],
   ['O5', 'TMA 01/03; EMA A/B', 'State units and assumptions, interpret descriptive variation and calculate a finite-event probability. The EMA must include the U11 evidence explicitly.'],
-  ['O6', 'TMA 02; EMA A/C', 'Submit a cleanly rerunnable notebook, explain a modified function or plot, and check a result independently by hand or a known case.'],
+  ['O6', 'TMA 02; EMA A/C', 'Write and debug a short calculation; submit a cleanly rerunnable notebook, explain a modified function or plot, and check a result independently. In the EMA review a supplied code change and justify acceptance or rejection; this requirement is part of the revised remit awaiting workload review.'],
   ['O7', 'All TMAs; EMA A/B/C', 'Present a connected argument and defend method choices in a bounded unfamiliar context; state limitations and assistance used.'],
 ];
 export const review = [

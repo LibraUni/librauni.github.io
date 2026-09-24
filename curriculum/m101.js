@@ -1,17 +1,17 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m101 = {
-  code: 'LU-M101', title: 'Mathematical foundations', version: '0.4', date: '24 September 2026', credits: 30,
-  status: 'Design review complete · timetable verification open · not open for study',
+  code: 'LU-M101', title: 'Mathematical foundations', version: '0.5', date: '24 September 2026', credits: 30,
+  status: 'Revised maths/Python remit · outline review · not open for study',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
-  exit: 'Prepare for LU-M102 Mathematics for physics I and support the introductory LU-P101 physics module. Completion establishes a precalculus foundation, not completion of university calculus or mechanics.',
+  exit: 'Prepare for LU-M102 Mathematics for physics I and support LU-P101 and the computational readiness needed by LU-A101. On the astronomy route this is optional preparation outside the degree allocation; on the foundation route it counts within Stage 1. Completion establishes a precalculus foundation, not completion of university calculus or mechanics.',
   outcomes: [
     ['O1', 'Calculate and estimate reliably', 'Use signed numbers, fractions, powers, scientific notation and appropriate precision; detect implausible results.'],
     ['O2', 'Manipulate mathematical statements', 'Simplify expressions, rearrange formulas, solve equations and inequalities, and state restrictions that make the steps valid.'],
     ['O3', 'Connect functions and representations', 'Translate between tables, graphs, formulas and descriptions; interpret parameters, domains, transformations and inverse relationships.'],
     ['O4', 'Reason about shape and direction', 'Use geometry, radians, elementary trigonometry and two-dimensional vector components with stated conventions.'],
     ['O5', 'Build and question elementary models', 'Use units, proportionality, elementary data summaries and probability to compare a model with information and explain its limits.'],
-    ['O6', 'Use Python transparently', 'Run and modify short calculations and plots, explain what the code does, check it independently and preserve a reproducible notebook.'],
+    ['O6', 'Use Python transparently', 'Write, debug and organise short Python calculations and plots; check them independently, preserve a reproducible notebook, and explain, test and accept or reject AI-suggested changes. Distinguish reviewing an agent trace from operating an agent yourself.'],
     ['O7', 'Communicate and connect reasoning', 'Write a coherent solution, explain assumptions and checks, and combine methods in an unfamiliar but bounded problem.'],
   ],
   units: [

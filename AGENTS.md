@@ -37,3 +37,12 @@ Every public page must include the shared licence-link and official /licenses/cc
 ## Work sequence confirmed — 24 September 2026
 
 Finish M101 design review, then design M102, M103 and P101 through Unit level one module at a time. After Stage 1 is coherent, assess readiness and begin M101 materials incrementally as authorised by the learner. This supersedes the earlier requirement to wait for a separate explicit enrolment before authoring. Enrolment and an actual start date still require the learner’s choice. Do not call the current M101 draft timetable an exact OU match: presentation reconciliation remains a pre-launch gate.
+
+## Entry routes and revised programming remit — 24 September 2026
+
+- Programme blueprint 0.2 retains two 120-credit Stage 1 routes: astronomy (A101, M102, M103, P101) and foundation (M101, M102, M103, P101). The astronomy route is the current working direction. M101 is optional full/selective preparation outside its degree allocation; readiness requirements remain mandatory. No enrolment, start date or exemption is inferred.
+- Full M101 plus astronomy-route Stage 1 is 1,500 notional hours. Selected refreshers do not earn the full 30 credits; an additional module must not count twice towards degree awards.
+- Current sequence supersedes earlier M102-next instructions: review revised M101 maths/Python remit, then design A101 units, followed by M102, M103 and P101 individually. Reconcile all dependencies and Stage 1 coverage before teaching release.
+- M101 version 0.5 proposes 48 integrated mathematical computing hours within its 240 unit hours, retaining 60 module-wide hours and 300 total. This is a revised allocation requiring workload review, not additional work or empirically validated timing. Preserve abstract practice and use physics where relevant.
+- Scientific programming progresses from learner-written foundations/debugging to AI-change review and bounded agent workflows. Preserve learner understanding, specifications, diff review, independent checks, reproducibility and ability to undo changes. Agent-trace critique does not demonstrate hands-on agent operation. Verify current free tools at authoring; no paid AI access required.
+- A101 currently has only a public boundary brief, not a unit outline or approved schedule. It applies physics to astronomical evidence; P101 owns first physical-law explanations, M101 owns preparation, and later astrophysics owns deeper theory. Exact prerequisite units and all 300 hours must be allocated before approval.
