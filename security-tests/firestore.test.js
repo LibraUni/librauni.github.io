@@ -37,7 +37,7 @@ test('exercise attempts are append-only and notes have bounded size',async()=>{
 
 test('private planner requires bounded versioned writes with immutable history',async()=>{
  const db=env.authenticatedContext('planner-owner',claims).firestore(),ref=doc(db,'users/planner-owner/planner/main');
- const first={payload:JSON.stringify({schemaVersion:1,plans:{}}),revision:1,updatedAt:serverTimestamp()};
+ const first={payload:JSON.stringify({schemaVersion:2,plans:{},retiredPlans:[]}),revision:1,updatedAt:serverTimestamp()};
  await assertFails(setDoc(ref,first));
  await assertSucceeds(runTransaction(db,async tx=>{await tx.get(ref);tx.set(ref,first);tx.set(doc(db,'users/planner-owner/plannerHistory/1'),first);}));
  await assertFails(setDoc(ref,first));
@@ -59,11 +59,11 @@ test('planner adapter round-trips dates and refuses a second-device stale overwr
  const assert=(await import('node:assert/strict')).default;
  const uid='planner-roundtrip',db=env.authenticatedContext(uid,claims).firestore();
  const empty=await loadPlanner(uid,db);assert.equal(empty.revision,0);
- const data={schemaVersion:1,plans:{'LU-M101':newPlan(modules[0],'2026-10-03')}};
+ const data={schemaVersion:2,plans:{'LU-M100':newPlan(modules[0],'2026-10-03')},retiredPlans:[{module:'LU-A101',reason:'Withdrawn timetable',plan:{start:'2026-10-03',scheduleVersion:1,status:'planned',overrides:{},completed:[]}}]};
  await savePlanner(uid,data,0,db);
  const deviceA=await loadPlanner(uid,db),deviceB=await loadPlanner(uid,db);
  assert.deepEqual(deviceA.data,data);
- deviceA.data.plans['LU-M101']=shiftRemaining(modules[0],data.plans['LU-M101'],'2026-12-01',7);
+ deviceA.data.plans['LU-M100']=shiftRemaining(modules[0],data.plans['LU-M100'],'2026-12-01',7);
  await savePlanner(uid,deviceA.data,deviceA.revision,db);
  await assert.rejects(savePlanner(uid,deviceB.data,deviceB.revision,db),/PLANNER_CONFLICT/);
  const reloaded=await loadPlanner(uid,db);assert.deepEqual(reloaded.data,deviceA.data);

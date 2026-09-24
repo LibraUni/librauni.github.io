@@ -1,10 +1,10 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
-export const m101 = {
-  code: 'LU-M101', title: 'Mathematical foundations', version: '0.5', date: '24 September 2026', credits: 30,
-  status: 'Revised maths/Python remit · outline review · not open for study',
+export const m100 = {
+  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '0.6', date: '24 September 2026', credits: 30,
+  status: 'Optional bridge · outside the degree · specifications awaiting review',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
-  exit: 'Prepare for LU-M102 Mathematics for physics I and support LU-P101 and the computational readiness needed by LU-A101. On the astronomy route this is optional preparation outside the degree allocation; on the foundation route it counts within Stage 1. Completion establishes a precalculus foundation, not completion of university calculus or mechanics.',
+  exit: 'Prepare for Stage 1: M101 Mathematics for physics I alongside P101, followed by M102 alongside A101. This optional 30-credit bridge is outside the 360-credit degree. Take the full module only if needed; targeted preparation requires its own scope and does not earn the full module credit. Completion is not assumed.',
   outcomes: [
     ['O1', 'Calculate and estimate reliably', 'Use signed numbers, fractions, powers, scientific notation and appropriate precision; detect implausible results.'],
     ['O2', 'Manipulate mathematical statements', 'Simplify expressions, rearrange formulas, solve equations and inequalities, and state restrictions that make the steps valid.'],
@@ -42,7 +42,7 @@ export const m101 = {
       computing:'Use Boolean comparisons to check candidates, alongside a written algebraic argument.',
       context:'Infer two unknown quantities from two supplied measurement relations.',
       evidence:'An independently explained formula rearrangement, system of equations and inequality.',
-      boundary:'General matrix solution methods belong to M102/M103. Nonlinear root-finding algorithms are deferred.'},
+      boundary:'General matrix solution methods belong to M101/M102. Nonlinear root-finding algorithms are deferred.'},
     {id:'U05',title:'Coordinates, graphs & linear models',hours:20,requires:['U02','U04'],outcomes:['O3','O5','O6','O7'],
       scope:'Axes, scales and units; ordered pairs; slope and intercept; line equations and intersections; piecewise linear graphs; secant slopes and average rates; interpolation versus extrapolation.',
       can:'Recover and interpret a linear relationship from a graph or table and identify when a visual presentation is misleading.',
@@ -56,7 +56,7 @@ export const m101 = {
       computing:'Define a small Python function, generate values and check behaviour against a sketch and known cases.',
       context:'Convert between a sensor reading and a modelled physical quantity.',
       evidence:'A function interpreted in three representations and an inverse with a justified domain.',
-      boundary:'Limits and continuity become explicit concepts in M102; no hidden calculus requirement here.'},
+      boundary:'Limits and continuity become explicit concepts in M101; no hidden calculus requirement here.'},
     {id:'U07',title:'Quadratic & rational relationships',hours:22,requires:['U04','U06'],outcomes:['O2','O3','O7'],
       scope:'Polynomial arithmetic at elementary level; quadratic factorisation, completing the square and quadratic formula; discriminants and real roots; parabolas; rational expressions, excluded inputs and qualitative asymptotes.',
       can:'Select a suitable quadratic method and connect its solutions to a graph, while checking the original equation.',
@@ -84,7 +84,7 @@ export const m101 = {
       computing:'Represent vectors as small arrays and compare component calculations with a labelled diagram.',
       context:'Displacement and vector quantities in a supplied model; physical laws are taught in P101.',
       evidence:'A diagram, component solution and independent magnitude/direction check.',
-      boundary:'Three-dimensional cross products, vector spaces, eigenvectors and vector calculus belong to M102/M103/M201.'},
+      boundary:'Three-dimensional cross products, vector spaces, eigenvectors and vector calculus belong to M101/M102/M201.'},
     {id:'U11',title:'Data, variation & elementary probability',hours:14,requires:['U02','U05','U06'],outcomes:['O1','O5','O6','O7'],
       scope:'Data types; mean, median and descriptive spread including standard deviation; simple distributions and plots; samples versus populations; systematic versus random effects; finite sample spaces, complements and simple independent events.',
       can:'Describe a small dataset honestly, distinguish precision from accuracy and interpret a simple probability without claiming certainty.',

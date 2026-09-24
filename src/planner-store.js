@@ -8,7 +8,7 @@ export {onAuthStateChanged};
 export const signIn=()=>signInWithPopup(auth,new GithubAuthProvider());
 export const logOut=()=>signOut(auth);
 export const isOwner=user=>user?.providerData.some(p=>p.providerId==='github.com'&&p.uid==='332598033');
-export async function loadPlanner(uid,connection=db){const d=await getDocFromServer(doc(connection,'users',uid,'planner','main'));return d.exists()?{revision:d.data().revision,data:JSON.parse(d.data().payload)}:{revision:0,data:{schemaVersion:1,plans:{}}};}
+export async function loadPlanner(uid,connection=db){const d=await getDocFromServer(doc(connection,'users',uid,'planner','main'));return d.exists()?{revision:d.data().revision,data:JSON.parse(d.data().payload)}:{revision:0,data:{schemaVersion:2,plans:{},retiredPlans:[]}};}
 export async function savePlanner(uid,data,revision,connection=db){
  const ref=doc(connection,'users',uid,'planner','main');
  await runTransaction(connection,async tx=>{

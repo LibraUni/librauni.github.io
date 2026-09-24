@@ -50,7 +50,9 @@ export function eventState(e,now=today()){
  return 'Upcoming';
 }
 export function validateStore(data,modules){
- if(!data||data.schemaVersion!==1||!data.plans||Array.isArray(data.plans)||typeof data.plans!=='object')throw Error('Unrecognised planner format.');
+ if(!data||data.schemaVersion!==2||!data.plans||Array.isArray(data.plans)||typeof data.plans!=='object')throw Error('Unrecognised planner format.');
+ if(!Array.isArray(data.retiredPlans))throw Error('Missing retained timetable history.');
+ for(const item of data.retiredPlans){if(item.module!=='LU-A101'||!item.plan||typeof item.reason!=='string')throw Error('Invalid retained timetable history.');}
  for(const [code,p] of Object.entries(data.plans)){const m=modules.find(m=>m.code===code);if(!m)throw Error('Unknown module in saved planner.');validatePlan(m,p);}
  if(JSON.stringify(data).length>100000)throw Error('Planner exceeds the supported size.');
  return data;
@@ -58,19 +60,27 @@ export function validateStore(data,modules){
 
 // Explicitly reviewed update only. Never write migrated records automatically.
 export function previewScheduleUpdate(data,modules){
- const next=structuredClone(data);let changed=false;
- for(const [code,p] of Object.entries(next.plans||{})){
-  const module=modules.find(m=>m.code===code);
-  if(code==='LU-M101'&&p.scheduleVersion===1&&module?.scheduleVersion===2){
-   if(p.overrides.EMA01||p.overrides.EXAM){
-    const notebook=p.overrides.EMA01||{start:addDays(p.start,28*7),end:addDays(p.start,29*7-1)};
-    const written=p.overrides.EXAM||{start:addDays(p.start,29*7),end:addDays(p.start,30*7-1)};
-    p.overrides['EMA-FINAL']={start:[notebook.start,written.start].sort()[0],end:[notebook.end,written.end].sort().at(-1)};
+ if(data?.schemaVersion===2){validateStore(data,modules);return null;}
+ if(data?.schemaVersion!==1||!data.plans||Array.isArray(data.plans))throw Error('Unrecognised planner format.');
+ const next={...structuredClone(data),schemaVersion:2,plans:{},retiredPlans:[]};
+ for(const [code,original] of Object.entries(data.plans)){
+  const p=structuredClone(original);
+  if(code==='LU-M101'){
+   if(![1,2].includes(p.scheduleVersion))throw Error('Unknown legacy bridge timetable version.');
+   if(p.scheduleVersion===1){
+    if(p.overrides.EMA01||p.overrides.EXAM){
+     const notebook=p.overrides.EMA01||{start:addDays(p.start,28*7),end:addDays(p.start,29*7-1)};
+     const written=p.overrides.EXAM||{start:addDays(p.start,29*7),end:addDays(p.start,30*7-1)};
+     p.overrides['EMA-FINAL']={start:[notebook.start,written.start].sort()[0],end:[notebook.end,written.end].sort().at(-1)};
+    }
+    delete p.overrides.EMA01;delete p.overrides.EXAM;p.scheduleVersion=2;
    }
-   delete p.overrides.EMA01;delete p.overrides.EXAM;p.scheduleVersion=2;changed=true;
-  }
+   next.plans['LU-M100']=p;
+  }else if(code==='LU-A101'){
+   if(p.scheduleVersion!==1)throw Error('Unknown legacy A101 timetable version.');
+   next.retiredPlans.push({module:code,reason:'First-module pairing withdrawn; A101 now belongs to Semester 2. Saved dates retained for reference only.',plan:p});
+  }else throw Error('Unknown module in legacy timetable; review before migrating.');
  }
- if(!changed)return null;
  validateStore(next,modules);return next;
 }
 

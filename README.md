@@ -28,9 +28,7 @@ Daily backup automation runs in the private study repository with short-lived, r
 
 ## Curriculum sources
 
-Edit `curriculum/m101.js` and `curriculum/coverage.js` for structured outlines and the dated source/coverage register. `scripts/render-curriculum.mjs` generates their HTML pages during `pnpm build`; change templates there rather than editing generated pages. Commit generated source pages alongside their data. Tests check workload totals, prerequisite order, outcome/assessment references and audit source references. These checks validate structure, not academic sufficiency.
-
-M101 preview 0.1 is awaiting learner review. The initial MIT/Imperial comparison is a subject-level register with documented evidence limits and unresolved gaps; it is not a completed degree equivalence audit. Develop no next module before review, and no lessons before explicit enrolment.
+Edit structured curriculum in `curriculum/`; `scripts/render-curriculum.mjs` generates module, bridge and coverage pages and the Stage 1 section during build. Commit generated pages with source. M100 is the optional bridge outside the degree. Stage 1 is fixed: M101 + P101, then M102 + A101. Next work is M100 specifications. A101’s retained subject outline needs revision for Semester 2; its former 31-week pairing is withdrawn. Other Stage 1 modules have role pages, not invented unit outlines.
 
 ## Module planners and degree calendar
 
@@ -39,3 +37,5 @@ M101 preview 0.1 is awaiting learner review. The initial MIT/Imperial comparison
 `src/schedule.js` provides shared civil-date logic for module and degree views. `src/planner.js` mounts on a `data-planner` region. The degree calendar defaults to enrolled modules; planned modules are opt-in. Public undated previews need no sign-in. Dates can be previewed anonymously but reset on sign-in/reload. Signed-in plans auto-save to owner-only Firestore `planner/main` with matching immutable `plannerHistory/{revision}` documents, optimistic revision checks, local draft recovery and explicit conflict handling. Date changes never create attainment or marks. The desk export includes both collections; the existing recursive daily backup includes them automatically. A downloaded JSON is a portable recovery copy; a tutor can validate/restore it through the private recovery process (no import UI yet).
 
 Do not change a schedule silently after enrolment: increment `scheduleVersion`, retain stable IDs, and design a reviewed migration for stored plans. A version mismatch blocks overwrite. Keep original baseline dates visible. Run `pnpm test`, `pnpm test:rules` with the local emulator, and `pnpm build`; the Pages workflow also runs emulator security and persistence checks before deploying. Rules deploy separately with Firebase CLI. Recheck module/degree views, expanded items, date changes, availability, mobile layout and private persistence when modifying planner behaviour.
+
+Planner schema 2 prevents module-code reuse from relabelling saved study. On explicit acceptance, legacy LU-M101 becomes LU-M100 with its dates preserved; the former A101 first-module plan is retained in retiredPlans and excluded from active calendars. Export includes this history. New degree M101 receives none of the old bridge records. Degree module timetables will be added after coordinated semester design.

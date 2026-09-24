@@ -2,31 +2,28 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {a101} from '../curriculum/a101.js';
 import {modules} from '../curriculum/schedules.js';
-import {newPlan,crossModuleWarnings,referenceWeeklyHours,combined,shiftRemaining} from '../src/schedule.js';
-const maths=modules.find(m=>m.code==='LU-M101'),astro=modules.find(m=>m.code==='LU-A101');
-const plans=()=>Object.fromEntries([maths,astro].map(m=>[m.code,newPlan(m,'2026-10-03')]));
-test('A101 has a complete 240-hour unit map with independent evidence for each outcome',()=>{
+import {newPlan,previewScheduleUpdate,validateStore,combined} from '../src/schedule.js';
+test('A101 retains subject evidence but no obsolete first-module timetable or bridge gates',()=>{
  assert.equal(a101.units.reduce((s,u)=>s+u.hours,0),240);
- const seen=new Set(),outcomes=new Set(a101.outcomes.map(([id])=>id));
- for(const u of a101.units){for(const dep of u.requires)assert.ok(seen.has(dep));seen.add(u.id);for(const dep of u.external)assert.ok(maths.events.some(e=>e.id===dep&&e.endWeek<u.startWeek));for(const id of u.outcomes)assert.ok(outcomes.has(id));}
- for(const a of a101.assessments){for(const id of a.requires)assert.ok(seen.has(id));for(const id of a.outcomes)assert.ok(outcomes.has(id));}
- for(const id of outcomes){assert.ok(a101.units.some(u=>u.outcomes.includes(id)));assert.ok(a101.assessments.some(a=>a.type==='TMA'&&a.outcomes.includes(id)));assert.ok(a101.assessments.some(a=>a.type==='EMA'&&a.outcomes.includes(id)));}
+ assert.equal(a101.weeks,undefined);assert.ok(!modules.some(m=>m.code==='LU-A101'));
+ const seen=new Set();for(const u of a101.units){for(const id of u.requires)assert.ok(seen.has(id));seen.add(u.id);assert.equal(u.startWeek,undefined);assert.equal(u.external,undefined);}
+ for(const a of a101.assessments){assert.equal(a.week,undefined);for(const id of a.requires)assert.ok(seen.has(id));}
+ for(const [id] of a101.outcomes){assert.ok(a101.units.some(u=>u.outcomes.includes(id)));assert.ok(a101.assessments.some(a=>a.type==='TMA'&&a.outcomes.includes(id)));assert.ok(a101.assessments.some(a=>a.type==='EMA'&&a.outcomes.includes(id)));}
 });
-test('same-start pairing is ordered, changes warn without altering private plans',()=>{
- const p=plans(),snapshot=structuredClone(p);assert.deepEqual(crossModuleWarnings(modules,p),[]);assert.deepEqual(p,snapshot);
- p['LU-M101']=shiftRemaining(maths,p['LU-M101'],'2026-10-03',14);
- assert.ok(crossModuleWarnings(modules,p,'LU-A101').some(s=>s.includes('U02')));
- assert.deepEqual(p['LU-A101'],snapshot['LU-A101']);
- assert.ok(crossModuleWarnings(modules,{'LU-A101':snapshot['LU-A101']}).some(s=>s.includes('no LU-M101')));
- assert.deepEqual(crossModuleWarnings(modules,{'LU-M101':snapshot['LU-M101']}),[]);
+test('legacy bridge dates are renamed, never inherited by the new M101',()=>{
+ const old={schemaVersion:1,plans:{'LU-M101':newPlan(modules[0],'2026-10-03')}};
+ old.plans['LU-M101'].overrides.TMA01={start:'2026-12-01',end:'2026-12-05'};
+ const before=structuredClone(old),next=previewScheduleUpdate(old,modules);
+ assert.deepEqual(old,before);assert.deepEqual(next.plans['LU-M100'],old.plans['LU-M101']);
+ assert.equal(next.plans['LU-M101'],undefined);assert.equal(next.schemaVersion,2);
+ assert.equal(previewScheduleUpdate(next,modules),null);
+ assert.throws(()=>validateStore({schemaVersion:2,plans:{'LU-M101':old.plans['LU-M101']},retiredPlans:[]},modules));
 });
-test('pairing shows all 600 hours, separate EMA deadlines and both real modules',()=>{
- const p=plans();assert.equal(combined(modules,p).length,0);
- const rows=combined(modules,p,true);assert.equal(rows.length,maths.events.length+astro.events.length);
- assert.equal(rows.filter(r=>!r.includedInUnitHours).reduce((s,r)=>s+r.hours,0),600);
- const total=Array.from({length:31},(_,i)=>referenceWeeklyHours(maths,i+1)+referenceWeeklyHours(astro,i+1)).reduce((s,h)=>s+h,0);
- assert.ok(Math.abs(total-600)<1e-8);
- assert.equal(maths.events.find(e=>e.type==='EMA').endWeek,30);assert.equal(astro.events.find(e=>e.type==='EMA').endWeek,31);
- assert.equal(astro.events.filter(e=>e.type==='TMA').length,3);assert.equal(astro.events.filter(e=>e.type==='iCMA').length,3);
- assert.equal(astro.enrollable,false);
+test('withdrawn A101 dates are preserved exactly as history, excluded from active calendars',()=>{
+ const plan={start:'2026-10-03',status:'planned',scheduleVersion:1,overrides:{TMA01:{start:'2026-10-26',end:'2026-11-02'}},completed:[]};
+ const old={schemaVersion:1,plans:{'LU-A101':plan}},next=previewScheduleUpdate(old,modules);
+ assert.deepEqual(next.retiredPlans[0].plan,plan);assert.deepEqual(old.plans['LU-A101'],plan);
+ assert.deepEqual(next.plans,{});assert.deepEqual(combined(modules,next.plans,true),[]);
+ assert.equal(previewScheduleUpdate(next,modules),null);
+ assert.throws(()=>previewScheduleUpdate({schemaVersion:1,plans:{'LU-A101':{...plan,scheduleVersion:99}}},modules));
 });

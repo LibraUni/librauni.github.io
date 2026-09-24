@@ -42,12 +42,12 @@ test('completion, publication and enrolment remain separate from dates and maste
  assert.equal(shiftRemaining(published,complete,'2026-10-03',7).overrides.U01,undefined);
 });
 test('invalid or changed private records fail safely instead of being overwritten',()=>{
- assert.throws(()=>validateStore({schemaVersion:2,plans:{}},modules));assert.throws(()=>validateStore({schemaVersion:1,plans:{unknown:newPlan(m,'2026-10-03')}},modules));
+ assert.throws(()=>validateStore({schemaVersion:3,plans:{}},modules));assert.throws(()=>validateStore({schemaVersion:2,plans:{unknown:newPlan(m,'2026-10-03')},retiredPlans:[]},modules));
  assert.throws(()=>validatePlan(m,{...newPlan(m,'2026-10-03'),scheduleVersion:0}));
  const p=newPlan(m,'2026-10-03');p.overrides.U01={start:'2026-11-01',end:'2026-10-03'};assert.throws(()=>validatePlan(m,p));
 });
 
-test('M101 has one EMA, no separate exam, and retains the original final weekly budgets',()=>{
+test('M100 has one EMA, no separate exam, and retains the original final weekly budgets',()=>{
  assert.equal(m.events.filter(e=>e.type==='EMA').length,1);
  assert.equal(m.events.filter(e=>e.type==='exam').length,0);
  const ema=m.events.find(e=>e.type==='EMA');assert.equal(ema.hours,18);assert.deepEqual(ema.weeklyHours,{29:10,30:8});
@@ -61,7 +61,7 @@ test('EMA migration is a non-mutating preview preserving personal dates and unre
  p.overrides={TMA01:{start:'2026-11-28',end:'2026-12-05'},EMA01:{start:'2027-04-20',end:'2027-04-28'},EXAM:{start:'2027-05-02',end:'2027-05-08'}};
  const old={schemaVersion:1,plans:{'LU-M101':p}},next=previewScheduleUpdate(old,modules);
  assert.equal(p.scheduleVersion,1);assert.ok(p.overrides.EXAM);
- assert.deepEqual(next.plans['LU-M101'].overrides['EMA-FINAL'],{start:'2027-04-20',end:'2027-05-08'});
- assert.deepEqual(next.plans['LU-M101'].overrides.TMA01,p.overrides.TMA01);
+ assert.deepEqual(next.plans['LU-M100'].overrides['EMA-FINAL'],{start:'2027-04-20',end:'2027-05-08'});
+ assert.deepEqual(next.plans['LU-M100'].overrides.TMA01,p.overrides.TMA01);
  assert.equal(previewScheduleUpdate(next,modules),null);
 });
