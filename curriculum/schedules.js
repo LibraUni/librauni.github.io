@@ -1,3 +1,4 @@
+import {a101} from './a101.js';
 import {m101} from './m101.js';
 // Stable IDs are private-record keys. Never reuse an ID for different work.
 const ranges=[[1,2],[3,4],[5,6],[7,9],[10,11],[12,14],[15,16],[18,20],[21,22],[23,24],[25,26],[27,28]];
@@ -17,5 +18,17 @@ export const modules=[{
   ...[['ICMA41','iCMA 41',4,['U01','U02']],['ICMA42','iCMA 42',16,['U05','U06','U07']],['ICMA43','iCMA 43',26,['U09','U10','U11']]].map(([id,title,week,requires])=>({...assessment(id,title,'iCMA',week,week,1,requires,'Interactive computer-marked assignment. Questions, feedback and grading policy will be prepared before release.'),includedInUnitHours:true})),
   ...[[17,2],[25,2],[28,4],[29,4]].map(([w,h],i)=>({id:'revision'+i,title:'Cumulative revision',type:'revision',startWeek:w,endWeek:w,hours:h,requires:[],description:'Mixed practice and preparation based on earlier feedback.',available:false})),
   ...[10,18,26].map((w,i)=>({id:'feedback'+i,title:'TMA feedback & corrections',type:'support',startWeek:w,endWeek:w,hours:2,requires:[],description:'Read tutor feedback, explain corrections and revisit difficulties.',available:false})),
+ ]
+},{
+ code:a101.code,title:a101.title,path:'/programme/stage-1/lu-a101/',credits:30,
+ scheduleVersion:1,weeks:31,enrollable:false,
+ durationSource:'https://www.open.ac.uk/courses/qualifications/details/s284/',
+ durationNote:'Provisional 31-study-week horizon, anchored to the published S284 assessment in study week 31. A101 is an introductory original design, not an S284 equivalent. Full OU calendar and weekly workload fidelity remain unverified; no holidays are assumed. Pairing is checked against the current M101 draft and must be rechecked if it changes.',
+ events:[
+  {id:'orientation',type:'support',title:'Orientation & data workspace',startWeek:1,endWeek:1,hours:6,requires:[],description:'Module orientation, data provenance and access checks. Coordinate general computing setup with M101; spend this allocation on astronomy-specific preparation.',available:false},
+  ...a101.units.map(u=>({...u,type:'unit',description:u.scope,available:false,outline:'#'+u.id,crossRequires:u.external.map(id=>({module:'LU-M101',id}))})),
+  ...a101.assessments.map(a=>({...assessment(a.id,a.name,a.type,a.type==='EMA'?29:a.week,a.week,a.hours,a.requires,a.evidence),includedInUnitHours:!!a.included})),
+  ...[[11,2],[18,2],[26,2],[29,2],[30,2],[31,2]].map(([w,h],i)=>({id:'revision'+i,type:'revision',title:'Cumulative revision',startWeek:w,endWeek:w,hours:h,requires:[],description:'Spaced interpretation and method checks using tutor feedback.',available:false})),
+  ...[5,15,24].map((w,i)=>({id:'feedback'+i,type:'support',title:'TMA feedback & corrections',startWeek:w,endWeek:w,hours:2,requires:[],description:'Explain corrections and plan targeted repair.',available:false})),
  ]
 }];

@@ -73,3 +73,22 @@ export function previewScheduleUpdate(data,modules){
  if(!changed)return null;
  validateStore(next,modules);return next;
 }
+
+// Dates indicate scheduled preparation, never proven mastery. No records are mutated.
+export function crossModuleWarnings(modules,plans,targetCode){
+ const messages=[];
+ for(const target of modules.filter(m=>(!targetCode||m.code===targetCode)&&plans[m.code])){
+  const missing=new Set();
+  for(const row of schedule(target,plans[target.code]))for(const dep of row.crossRequires||[]){
+   const source=modules.find(m=>m.code===dep.module);
+   if(!source||!plans[dep.module]){missing.add(dep.module);continue;}
+   const prior=schedule(source,plans[dep.module]).find(r=>r.id===dep.id);
+   if(!prior||prior.end>=row.start)messages.push(`${target.code} ${row.id}: ${dep.module} ${dep.id} must finish before this unit starts, or equivalent readiness must be demonstrated. Review these dates with your tutor.`);
+  }
+  for(const code of missing)messages.push(`${target.code}: no ${code} preparation timetable is saved. Confirm equivalent readiness or plan the companion module before relying on this sequence.`);
+ }
+ return messages;
+}
+export function referenceWeeklyHours(module,week){
+ return module.events.filter(r=>r.startWeek<=week&&r.endWeek>=week&&!r.includedInUnitHours).reduce((sum,r)=>sum+(r.weeklyHours?.[week]??r.hours/(r.endWeek-r.startWeek+1)),0);
+}
