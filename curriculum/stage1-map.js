@@ -1,5 +1,5 @@
-// Original module-level proposal, not approved blocks, units or teaching.
-export const stage1Map={version:'0.1',date:'26 September 2026',status:'Proposed for review · architecture unchanged',
+// Module-level scope approved 26 September 2026; blocks, units and teaching require separate review.
+export const stage1Map={version:'1.0',date:'26 September 2026',status:'Module-level scope approved · detailed design pending',
  stages:[
  ['Stage 1 · 120 credits / 1,200 hours','Use elementary calculus, vector/matrix methods, complex numbers and introductory ODEs; solve bounded introductory physics problems and conduct a reproducible small data investigation.','M101/P101 then M102/A101; quantitative foundations before formal field, quantum and statistical methods.'],
  ['Stage 2 · 120 credits / 1,200 hours','Connect core physical theories, more advanced mathematical methods and validated experimental/computational investigations.','Provisional P201/M201/X201. Explicit compulsory homes and capacity remain to be settled for analytical mechanics, thermal/statistical depth, solid-state and nuclear/particle foundations.'],
