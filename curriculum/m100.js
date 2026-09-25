@@ -1,8 +1,8 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m100 = {
-  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '0.9', date: '24 September 2026', credits: 30,
-  status: 'Optional bridge · outside the degree · specifications awaiting review',
-  purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and short Python calculations.',
+  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '1.0', date: '25 September 2026', credits: 30,
+  status: 'Optional bridge · outside the degree · block scopes approved · assessment rubric pending',
+  purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and reproducible Python investigations, progressing from independent foundations to controlled computational assistance.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
   exit: 'Prepare for Stage 1: M101 Mathematics for physics I alongside P101, followed by M102 alongside A101. This optional 30-credit bridge is outside the 360-credit degree. Take the full module only if needed; targeted preparation requires its own scope and does not earn the full module credit. Completion is not assumed.',
   blocks: [
@@ -100,7 +100,7 @@ export const m100 = {
       "O7"
     ],
     "Specify a bounded change, inspect proposed code and file changes, test independently, reject faulty output and restore an earlier version.",
-    "An explained review and correction of a supplied change. Hands-on agent operation must be recorded separately from critique of a supplied trace."
+    "An explained review and correction of a supplied change. U12 also records hands-on operation, independent checks and rollback separately from trace critique; EMA C checks independent judgement."
   ]
 ],
   outcomes: [
@@ -155,14 +155,14 @@ export const m100 = {
       context:'Convert between a sensor reading and a modelled physical quantity.',
       evidence:'A function interpreted in three representations and an inverse with a justified domain.',
       boundary:'Limits and continuity become explicit concepts in M101; no hidden calculus requirement here.'},
-    {id:'U07',title:'Quadratic & rational relationships',hours:20,requires:['U04','U06'],outcomes:['O2','O3','O7'],
+    {id:'U07',title:'Quadratic & rational relationships',hours:20,requires:['U04','U06'],outcomes:['O2','O3','O6','O7'],
       scope:'Polynomial arithmetic at elementary level; quadratic factorisation, completing the square and quadratic formula; discriminants and real roots; parabolas; rational expressions, excluded inputs and qualitative asymptotes.',
       can:'Select a suitable quadratic method and connect its solutions to a graph, while checking the original equation.',
       computing:'Compare a plot with analytical roots and investigate a plotting artefact near an excluded input.',
       context:'Geometric constraints and supplied trajectory formulas; no mechanics derivation is assumed.',
       evidence:'A quadratic problem solved and checked in two representations; a rational-domain explanation.',
       boundary:'Complex roots, general polynomial theory and partial fractions are later work. Asymptotes are qualitative here.'},
-    {id:'U08',title:'Geometry, angles & trigonometric relationships',hours:28,requires:['U02','U06','U07'],outcomes:['O3','O4','O5','O7'],
+    {id:'U08',title:'Geometry, angles & trigonometric relationships',hours:28,requires:['U02','U06','U07'],outcomes:['O3','O4','O5','O6','O7'],
       scope:'Similarity and Pythagoras; circle, area and volume formulas; degrees and radians; unit-circle sine, cosine and tangent; triangle methods including sine/cosine rules; basic identities; periodic graphs; inverse trig and elementary trig equations on stated intervals.',
       can:'Choose a geometric construction, resolve a triangle and interpret a periodic graph with a correct angle convention.',
       computing:'Plot periodic functions using radians and check special angles and period against hand reasoning.',
@@ -193,7 +193,7 @@ export const m100 = {
     {id:'U12',title:'From a question to a defensible model',hours:16,requires:['U07','U08','U09','U10','U11'],outcomes:['O1','O2','O3','O4','O5','O6','O7'],
       scope:'Combine existing tools to define a question, select representations, state assumptions, compare model and supplied observations, test limiting cases and explain limitations. No new mathematical topic is introduced.',
       can:'Explain why a model is suitable, what its results mean and what the available evidence cannot establish.',
-      computing:'Organise a small notebook with headings, readable calculations, labelled figures and a clean rerun; record source and units of supplied data.',
+      computing:'Organise a small notebook with headings, readable calculations, labelled figures and a clean rerun; record source and units of supplied data. Preserve a learner-written baseline and practise a bounded agent change, diff review, independent checks and rollback in a disposable copy.',
       context:'A guided geometric or scaling investigation linking a concrete observation with an abstract relationship.',
       evidence:'A formative model review and oral or written explanation of method choices.',
       boundary:'This rehearses integration; the independently assessed notebook has its own separate workload allocation.'},
@@ -201,7 +201,7 @@ export const m100 = {
   additionalWork: [
     {name:'Orientation and study/computing setup',hours:6,detail:'Navigation, accessible tools, file organisation and an initial non-graded readiness conversation. No diagnostic is administered by this preview.'},
     {name:'Three tutor-marked assignments (TMAs)',hours:18,detail:'Six hours each after U04, U07 and U10. Agreed TMA 01 split: written reasoning 4.5 hours, short independent Python 1 hour, submission preparation/checks 0.5 hours; no extra workload. Scope: quantitative/algebraic reasoning; functions/graphs including a short explained Python notebook; geometry/trigonometry/exponentials/vectors. TMA 02 allocates four hours to written reasoning and two to the notebook, including a clean rerun and independent hand check; this replaces part of its task load rather than adding hours. Pre-scheduled cut-offs in the module planner; personal changes remain possible.'},
-    {name:'EMA: written mathematics, modelling notebook and explanation',hours:18,detail:'One end-of-module assessment after U12, with one submission deadline. Component A: independent Python modelling notebook (10 hours). Component B: handwritten mathematical work (4 hours) and scanning/checking its PDF (1 hour). Component C: notebook interpretation (2 hours) and a tutor discussion (1 hour). These are work budgets, not a separate timed examination.'},
+    {name:'EMA: written mathematics, modelling notebook and explanation',hours:18,detail:'One end-of-module assessment after U12, with one submission deadline. Component A: independent Python modelling notebook (10 hours). Component B: handwritten mathematical work (4 hours) and scanning/checking its PDF (1 hour). Component C: interpretation and independent critique of a supplied AI/code change (2 hours) and a tutor discussion (1 hour). Documentation and declared taught library references are allowed for A; generated solutions, agent-written implementations and answer-producing tutor help are not. C assesses independent judgement of supplied code and needs no live AI service. These are work budgets, not a separate timed examination.'},
     {name:'Cumulative revision',hours:12,detail:'Spaced mixed practice across units, with a targeted plan based on earlier feedback.'},
     {name:'Feedback review and targeted corrections',hours:6,detail:'Review feedback, explain corrections and revisit identified misconceptions. Additional reassessment needs, if any, will be recorded separately rather than disguised within the estimate.'},
   ],
