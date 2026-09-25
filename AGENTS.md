@@ -58,7 +58,7 @@ Hierarchy: Degree > Stage > Module > Block > Unit > Lesson. Blocks are coherent 
 2. Assess independent mathematics/Python separately from controlled assistance. Documentation is allowed for independent Python tasks, generated solutions are not; other work explicitly declares permitted assistance.
 3. Gather evidence through the existing TMAs and combined EMA within 300 hours, with no additional final examination.
 
-Detailed capability descriptors, rubrics, thresholds and reassessment arrangements remain to be finalised; agreement to principles is not evidence of learner mastery.
+M100’s detailed completion rubric and reassessment policy were approved 25 September 2026: follow website/curriculum/m100-rubric.js (curriculum/m100-rubric.js within the website repository). All18 essential indicators require demonstrated evidence; no compensating percentage average or reassessment penalty. Task-specific marking guides remain to be prepared. Policy approval is not evidence of learner mastery.
 
 ## Inside-out coherence review — agreed 24 September 2026
 

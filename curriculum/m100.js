@@ -1,7 +1,7 @@
 // Original LibraUni outline. No lesson content or learner records belong here.
 export const m100 = {
-  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '1.0', date: '25 September 2026', credits: 30,
-  status: 'Optional bridge · outside the degree · block scopes approved · assessment rubric pending',
+  code: 'LU-M100', title: 'Mathematics & Python bridge', version: '1.1', date: '25 September 2026', credits: 30,
+  status: 'Optional bridge · outside the degree · scope and completion policy approved · teaching in preparation',
   purpose: 'Rebuild the mathematical language needed to begin calculus and quantitative physics: move confidently between words, symbols, numbers, graphs and reproducible Python investigations, progressing from independent foundations to controlled computational assistance.',
   entry: 'No calculus or programming is assumed. Recognising basic arithmetic operations and reading a simple table is sufficient to begin; fractions, signed numbers and algebra are rebuilt. A readiness conversation will identify any additional support. Existing qualifications do not automatically establish readiness or earn exemption.',
   exit: 'Prepare for Stage 1: M101 Mathematics for physics I alongside P101, followed by M102 alongside A101. This optional 30-credit bridge is outside the 360-credit degree. Take the full module only if needed; targeted preparation requires its own scope and does not earn the full module credit. Completion is not assumed.',

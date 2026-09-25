@@ -1,7 +1,7 @@
-// Proposed policy only: does not grade, enrol or alter learner records.
+// Approved policy; task-level marking guides remain to be written: does not grade, enrol or alter learner records.
 export const rubric = {
- status:'Proposal for discussion · 25 September 2026',
- principle:'Recommend criterion-based completion for this optional bridge: demonstrate every essential capability, rather than combine assignment percentages into a compensating average. Marks may later support feedback, but no weighting, percentage pass threshold or distinction classification is proposed here.',
+ status:'Approved · 25 September 2026',
+ principle:'Use criterion-based completion for this optional bridge: demonstrate every essential capability, rather than combine assignment percentages into a compensating average. Marks may later support feedback, but no weighted average, percentage pass threshold or distinction classification applies to this bridge.',
  levels:[
  ['Not yet evidenced','No suitable evidence is available, the task did not sample the criterion, or the conditions do not establish independent work. This is not a judgement of inability.'],
  ['Developing','The approach is partly sound, but a significant misconception, unexplained result or answer-producing help prevents a dependable demonstration. Record the specific gap.'],
@@ -48,10 +48,10 @@ export const rubric = {
  ],
  completion:[
  'Every listed essential indicator must reach Demonstrated or Secure transfer, using a traceable body of evidence across the existing work. A capability is not averaged from its indicators. Missing sampling is a task-design gap to resolve, not a learner failure.',
- 'Complete and review the three TMAs and the three embedded iCMAs, and submit the single EMA with A, B and C. iCMAs guide feedback and retrieval; they do not independently establish the full exit standard or carry a proposed percentage gate.',
+ 'Complete and review the three TMAs and the three embedded iCMAs, and submit the single EMA with A, B and C. iCMAs guide feedback and retrieval; they do not independently establish the full exit standard or carry a percentage gate.',
  'Use the EMA to check integrated, independent work and any outstanding concerns. Do not require a duplicate final test of every earlier indicator. If later work contradicts earlier evidence, discuss the specific criterion and seek a focused fresh demonstration.',
  'Record E6a/b during the existing U12 formative exercise: feedback and practice are allowed, but the final demonstration must show the learner controlling the workflow. The tutor may clarify instructions, not supply each action being judged. No extra examination is added.',
- 'Only a reviewed complete evidence record supports full-module completion and any future non-accredited bridge certificate. Page ticks, elapsed weeks, prior degrees or completing selected refreshers do not award the full 30 internal credits. This proposal does not issue an award.'
+ 'Only a reviewed complete evidence record supports full-module completion and any future non-accredited bridge certificate. Page ticks, elapsed weeks, prior degrees or completing selected refreshers do not award the full 30 internal credits. This policy does not issue an award.'
  ],
  assistance:[
  ['Independent mathematics','Explain the reasoning. Use only aids declared in the task; a calculator or Python check must not replace algebraic steps being assessed. Each task will state whether formula/reference sheets are allowed before release.'],
@@ -64,11 +64,11 @@ export const rubric = {
  'Return feedback by indicator: what is established, the specific gap, an example from the work, and an achievable next action. Separate a conceptual error from an isolated slip or a missing submission.',
  'Use the existing feedback and revision allowances first for planned corrections and practice. A corrected copy with the answer already explained is learning evidence; it is not by itself a fresh independent demonstration.',
  'Reassess only the affected indicators with a different but equivalent problem, dataset or code fault. Preserve the same scope and assistance conditions, and provide accessible conditions where needed. Do not automatically repeat the whole assignment or module.',
- 'Keep every attempt and its feedback privately; record the current judgement and the evidence that superseded an earlier gap. No proposed mark cap or penalty applies for needing more practice.',
+ 'Keep every attempt and its feedback privately; record the current judgement and the evidence that superseded an earlier gap. No mark cap or penalty applies for needing more practice.',
  'After two focused reassessments of the same unresolved indicator, review prerequisites and teaching together before another attempt. This is a support trigger, not an exclusion or a limit on learning.',
  'Record extra practice/reassessment time honestly when it exceeds the planned 300-hour workload. Agree any deadline change with the learner; never move dates automatically, inflate credit or disguise extra work as already budgeted.',
  'For an unclear or disputed judgement, point to the criterion and work, reconsider the explanation and offer a fresh equivalent demonstration if needed. A single tutor’s judgement is not external moderation; do not claim independent accreditation.'
  ],
- record:'Proposed private evidence record: assessment/task reference, criterion ID, evidence location, assistance conditions, judgement with reasons, feedback, attempt/date and follow-up. Preserve earlier attempts. Store no answers or grades in public course files. No grading or submission system is implemented by this policy page.',
+ record:'Private evidence record specification: assessment/task reference, criterion ID, evidence location, assistance conditions, judgement with reasons, feedback, attempt/date and follow-up. Preserve earlier attempts. Store no answers or grades in public course files. No grading or submission system is implemented by this policy page.',
  release:'Before any assessed task is released, map its parts to these indicators, publish its assistance rules and expected workload, and prepare a checked marking guide with acceptable alternatives. Verify that the complete assessment set samples every indicator within the existing budgets. Detailed questions and marking schemes remain unwritten; approval of this rubric alone does not establish assessment quality or permit automatic grading.'
 };

@@ -1,6 +1,6 @@
 # M100 completion rubric review — 25 September 2026
 
-Status: proposal awaiting learner review. Source curriculum/m100-rubric.js, public anchor #completion-rubric. No grades, enrolments, dates, submission system or awards changed.
+Status: approved by learner 25 September 2026. Source curriculum/m100-rubric.js, public anchor #completion-rubric. No grades, enrolments, dates, submission system or awards changed.
 
 ## Immediate fit
 
@@ -18,4 +18,4 @@ Optional M100 remains outside degree credits. Full completion requires the compl
 
 ## Forward handover
 
-After policy review, reconcile approved status across preview and durable records. Before task release prepare criterion-to-question mapping, checked marking guides, acceptable alternatives, assistance declarations and workload calibration. Free agent tool feasibility and broader Stage1/module readiness gates remain open. Do not bulk-author lessons or infer attainment. These are original LibraUni policy proposals, not copied OU regulations or a claim of external moderation.
+Approved status is reconciled across the preview and durable records. Before task release prepare criterion-to-question mapping, checked marking guides, acceptable alternatives, assistance declarations and workload calibration. Free agent tool feasibility and broader Stage1/module readiness gates remain open. Do not bulk-author lessons or infer attainment. These are original LibraUni policy proposals, not copied OU regulations or a claim of external moderation.

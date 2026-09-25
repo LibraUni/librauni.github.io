@@ -17,7 +17,7 @@ export const audit = {
  ['Degree boundary','M100 remains optional and outside the degree. Its physical relations are supplied. Calculus, full linear algebra, mechanics and statistical inference retain later homes; degree-level computing cannot depend solely on taking this optional bridge.']
  ],
  open:[
- ['Assessment rubric and reassessment','A detailed proposal is now available in the Completion rubric section: observable indicators for E1–E6, targeted reassessment and separate U12 practical evidence. It awaits learner review. No pass percentages or grade weights have yet been approved. Keep additional support/reassessment hours visible.'],
+ ['Assessment task design','The completion rubric and targeted reassessment policy are approved. Map actual task parts to its 18 indicators, prepare checked marking guides and calibrate workload before release. Keep additional support/reassessment hours visible.'],
  ['Readiness and duration validation','The retained 30-study-week pattern is an original OU-informed allocation, not a verified copy. Validate representative exercises and dense U08/U11 timings during authoring. Diagnose actual entry readiness before selecting full or targeted preparation.'],
  ['Free practical workflow','Verify tools, machine requirements, setup time, reproducibility and genuinely free agent access before authoring/releasing U12. If infeasible, revisit the approved design explicitly.'],
  ['Wider coverage','The existing MIT/Imperial comparison is preliminary; the Imperial full specification remains incompletely retrieved. C13 statistics and degree-level C14 computing need explicit compulsory homes in later module design. M100 approval does not close those gaps.'],
