@@ -93,3 +93,32 @@ test('profile adapter preserves text and photo, requires history and prevents st
   await assertFails(setDoc(doc(other,'users',uid,'profile','main'),{payload:'{}',revision:3,updatedAt:serverTimestamp()}));
  }
 });
+
+test('academic journal saves append-only entries, retries idempotently and denies foreign access',async()=>{
+ const {appendEntries,loadRecords}=await import('../src/journal-store.js');
+ const assert=(await import('node:assert/strict')).default;
+ const uid='journal-test',db=env.authenticatedContext(uid,claims).firestore();
+ const entry={schemaVersion:1,category:'skills',title:'Practice',body:'Test evidence',area:'E1',evidence:'Test task',nextSteps:'Practice',source:'Learner',occurredAt:'',corrects:''};
+ await appendEntries(uid,[entry],'test-batch',db);await appendEntries(uid,[entry],'test-batch',db);
+ const records=await loadRecords(uid,db);assert.equal(records.journal.length,1);assert.ok(records.journal[0].data.recordedAt.toDate());
+ await assert.rejects(appendEntries(uid,[{...entry,body:'Overwrite'}],'test-batch',db));
+ const ref=doc(db,'users',uid,'journal','test-batch-0');await assertFails(deleteDoc(ref));await assertFails(setDoc(ref,{...entry,recordedAt:serverTimestamp()}));
+ await appendEntries(uid,[{...entry,corrects:'journal/test-batch-0',body:'Correction'}],'correction',db);
+ await assertFails(setDoc(doc(db,'users',uid,'journal','bad'),{...entry,category:'profile',recordedAt:serverTimestamp()}));
+ await assertFails(setDoc(doc(db,'users',uid,'journal','forged-time'),{...entry,recordedAt:new Date(0)}));
+ await assertFails(setDoc(doc(db,'users',uid,'journal','oversize'),{...entry,body:'x'.repeat(20001),recordedAt:serverTimestamp()}));
+ for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('other',claims).firestore(),env.authenticatedContext(uid,{firebase:{sign_in_provider:'github.com',identities:{'github.com':['other']}}}).firestore()]){
+ await assertFails(getDocs(collection(other,'users',uid,'journal')));await assertFails(setDoc(doc(other,'users',uid,'journal','foreign'),{...entry,recordedAt:serverTimestamp()}));
+ }
+});
+
+
+test('journal pagination returns more than one page without dropping entries',async()=>{
+ const {appendEntries,loadRecords}=await import('../src/journal-store.js');
+ const assert=(await import('node:assert/strict')).default;
+ const uid='journal-pagination',db=env.authenticatedContext(uid,claims).firestore();
+ const entry={schemaVersion:1,category:'reflection',title:'Test record',body:'Synthetic pagination fixture',area:'',evidence:'',nextSteps:'',source:'Test',occurredAt:'',corrects:''};
+ await appendEntries(uid,Array.from({length:110},()=>entry),'page-a',db);
+ await appendEntries(uid,Array.from({length:95},()=>entry),'page-b',db);
+ const rows=(await loadRecords(uid,db)).journal;assert.equal(rows.length,205);assert.equal(new Set(rows.map(r=>r.id)).size,205);
+});

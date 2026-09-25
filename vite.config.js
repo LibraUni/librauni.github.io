@@ -5,6 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        journal: fileURLToPath(new URL('./journal/index.html', import.meta.url)),
         profile: fileURLToPath(new URL('./profile/index.html', import.meta.url)),
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         license: fileURLToPath(new URL('./license/index.html', import.meta.url)),

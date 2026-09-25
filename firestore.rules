@@ -73,6 +73,22 @@ service cloud.firestore {
       allow create: if owner(uid) && profileShape() && version == string(request.resource.data.revision)
         && getAfter(/databases/$(database)/documents/users/$(uid)/profile/main).data == request.resource.data;
     }
+    match /users/{uid}/journal/{entry} {
+      allow create: if owner(uid)
+        && request.resource.data.keys().hasOnly(['schemaVersion','category','title','body','area','evidence','nextSteps','source','occurredAt','corrects','recordedAt'])
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.category in ['knowledge','skills','difficulties','feedback','assessment','milestone','reflection','conversation','activity']
+        && request.resource.data.title is string && request.resource.data.title.size() > 0 && request.resource.data.title.size() <= 200
+        && request.resource.data.body is string && request.resource.data.body.size() > 0 && request.resource.data.body.size() <= 20000
+        && request.resource.data.area is string && request.resource.data.area.size() <= 300
+        && request.resource.data.evidence is string && request.resource.data.evidence.size() <= 2000
+        && request.resource.data.nextSteps is string && request.resource.data.nextSteps.size() <= 2000
+        && request.resource.data.source is string && request.resource.data.source.size() <= 200
+        && request.resource.data.occurredAt is string && request.resource.data.occurredAt.size() <= 30
+        && request.resource.data.corrects is string && request.resource.data.corrects.size() <= 200
+        && request.resource.data.recordedAt == request.time;
+      // Append only: corrections refer to the earlier entry; no rewriting history.
+    }
     // Planner payload is owner-authored scheduling data, never assessed attainment.
     // Assessments, backup metadata, and all other writes are server-managed.
   }
