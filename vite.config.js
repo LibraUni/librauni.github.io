@@ -5,6 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        stage1Map: fileURLToPath(new URL('./programme/stage-1/map/index.html', import.meta.url)),
         constructionPolicy: fileURLToPath(new URL('./programme/construction-policy/index.html', import.meta.url)),
         journal: fileURLToPath(new URL('./journal/index.html', import.meta.url)),
         profile: fileURLToPath(new URL('./profile/index.html', import.meta.url)),
