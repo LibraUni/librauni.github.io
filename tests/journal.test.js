@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {validateEntry,transcriptParts,timeline,filterEntries,markdown} from '../src/journal-data.js';
+import {validateEntry,transcriptParts,timeline,filterEntries,markdown,readableJournal,collections} from '../src/journal-data.js';
 const row={schemaVersion:1,category:'skills',title:'Algebra check',body:'Explained reasoning',area:'E2',evidence:'Task1',nextSteps:'More practice',source:'Tutor observation (reported)',occurredAt:'2026-09-25T23:30:00+02:00',corrects:''};
 test('academic records reject administrative categories, excessive text and invalid dates',()=>{assert.equal(validateEntry(row).area,'E2');for(const v of [{...row,category:'profile'},{...row,body:'x'.repeat(20001)},{...row,occurredAt:'yesterday'}])assert.throws(()=>validateEntry(v));});
 test('large transcripts preserve every character and ordering without fabricated timestamps',()=>{const text='Tutor: α\nStudent: test\n'.repeat(2000);const parts=transcriptParts(text,{title:'Tutorial'});assert.equal(parts.map(p=>p.body).join(''),text);assert.ok(parts.length>1);assert.ok(parts.every(p=>p.occurredAt===''&&p.category==='conversation'));});
@@ -8,3 +8,5 @@ test('academic timeline excludes admin and exposes only planner completion chang
 test('UTC date filters are inclusive, handle unknown times, and text export retains evidence',()=>{const rows=timeline({journal:[{id:'a',data:{...row,recordedAt:{seconds:2000}}},{id:'b',data:{...row,occurredAt:'',recordedAt:null}}]});assert.equal(filterEntries(rows,{from:'2026-09-25',to:'2026-09-25'}).length,1);assert.equal(filterEntries(rows).length,2);assert.equal(filterEntries(rows,{search:'more practice'}).length,2);assert.throws(()=>filterEntries(rows,{from:'2026-09-26',to:'2026-09-25'}));assert.match(markdown(rows),/Task1/);});
 
 test('same-time transcript parts retain numeric part order',()=>{const rows=timeline({journal:[10,2,0,1].map(i=>({id:'batch-'+i,data:{...row,occurredAt:'',recordedAt:'2026-09-25T10:00:00Z'}}))});assert.deepEqual(rows.map(r=>r.id),['journal/batch-0','journal/batch-1','journal/batch-2','journal/batch-10']);});
+
+test('readable academic downloads contain meaningful text, not raw backup payloads',()=>{const rows=timeline({journal:[{id:'entry1',data:{...row,recordedAt:'2026-09-25T10:00:00Z'}}],progress:[{id:'U01',data:{completed:true,updatedAt:'2026-09-25T10:00:00Z'}}]});const text=readableJournal(rows);assert.match(text,/Evidence \/ changes observed/);assert.match(text,/More practice/);assert.match(text,/completed: Yes/);assert.ok(!text.includes('"schemaVersion"'));assert.ok(!text.includes('"seconds"'));assert.ok(!collections.includes('profile'));assert.ok(!collections.includes('notes'));});

@@ -1,5 +1,5 @@
 export const categories=['knowledge','skills','difficulties','feedback','assessment','milestone','reflection','conversation','activity'];
-export const collections=['journal','notes','noteHistory','progress','attempts','assessments','bookmarks','planner','plannerHistory','profile','profileHistory'];
+export const collections=['journal','progress','attempts','assessments','plannerHistory'];
 export function iso(value){if(value?.toDate)return value.toDate().toISOString();if(value?.seconds!=null)return new Date(value.seconds*1000+(value.nanoseconds||0)/1e6).toISOString();if(typeof value==='string'&&Number.isFinite(Date.parse(value)))return new Date(value).toISOString();return null;}
 export function validateEntry(v){
  if(!v||v.schemaVersion!==1||!categories.includes(v.category))throw Error('Choose a valid category.');
@@ -29,7 +29,7 @@ export function timeline(records){
   // Academic journal excludes administrative history and general private notes.
   if(!['progress','attempts','assessments'].includes(name))continue;
   const category=name.startsWith('note')?'notebook':name.startsWith('planner')?'planning':name.startsWith('profile')?'profile':name==='assessments'||name==='attempts'?'assessment':'activity';
-  let body=d.text??d.answer??d.payload??JSON.stringify(d,null,2);
+  let body=d.text??d.answer??d.payload??readableFields(d);
   if(name.startsWith('profile')){try{const p=JSON.parse(body);if(p.photo)p.photo='[Photo omitted from readable journal; retained in full records JSON]';body=JSON.stringify(p,null,2);}catch{}}
   out.push({id:`${name}/${id}`,category,title:`${name} · ${id}`,body,area:d.lessonId||'',evidence:'Saved website record; activity and edits do not establish mastery.',nextSteps:'',source:'Website record',recordedAt:iso(d.updatedAt||d.createdAt),occurredAt:null,corrects:'',raw:d});
  }
@@ -40,3 +40,11 @@ export function filterEntries(entries,{category='',from='',to='',search=''}={}){
  return entries.filter(e=>{const day=(e.occurredAt||e.recordedAt||'').slice(0,10);return (!category||e.category===category)&&(!from||(day&&day>=from))&&(!to||(day&&day<=to))&&(!search||[e.title,e.body,e.area,e.evidence,e.nextSteps].join(' ').toLowerCase().includes(search.toLowerCase()));});
 }
 export function markdown(entries){return '# LibraUni private learning journal\n\nExported '+new Date().toISOString()+'\n\n'+entries.map(e=>`## ${e.title}\n\nCategory: ${e.category}\nArea: ${e.area||'Unspecified'}\nSource: ${e.source}\nEvent time: ${e.occurredAt||'Not supplied'}\nRecorded: ${e.recordedAt||'Unknown in original record'}\nReference: ${e.id}\nCorrects: ${e.corrects||'None'}\n\n${e.body}\n\nEvidence: ${e.evidence||'Not supplied'}\n\nNext steps: ${e.nextSteps||'None recorded'}\n`).join('\n---\n\n');}
+
+function readableFields(data){return Object.entries(data).filter(([k])=>!['updatedAt','createdAt'].includes(k)).map(([k,v])=>`${k.replace(/([a-z])([A-Z])/g,'$1 $2')}: ${v===true?'Yes':v===false?'No':v==null?'Not recorded':typeof v==='object'?Array.isArray(v)?v.map(x=>typeof x==='object'?readableFields(x):String(x)).join('; '):readableFields(v):String(v)}`).join('\n');}
+export function readableJournal(entries){
+ const date=value=>value?new Date(value).toLocaleString('en-GB',{timeZone:'UTC',dateStyle:'long',timeStyle:'short'})+' UTC':'Not recorded';
+ return 'LIBRAUNI — PRIVATE ACADEMIC JOURNAL\nExported: '+date(new Date().toISOString())+'\nEntries: '+entries.length+'\n\n'+(entries.length?entries.map(e=>[
+ e.title,date(e.occurredAt||e.recordedAt),`Category: ${e.category}`,e.area&&`Area: ${e.area}`,e.source&&`Source: ${e.source}`,e.occurredAt&&e.recordedAt&&`Saved: ${date(e.recordedAt)}`,e.corrects&&`Correction to: ${e.corrects}`,'',e.body,e.evidence&&'\nEvidence / changes observed\n'+e.evidence,e.nextSteps&&'\nNext steps\n'+e.nextSteps
+ ].filter(x=>x!==false&&x!==null&&x!==undefined).join('\n')).join('\n\n'+'—'.repeat(48)+'\n\n'):'No academic entries match this selection.\n');
+}
