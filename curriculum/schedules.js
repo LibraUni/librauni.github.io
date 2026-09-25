@@ -6,7 +6,7 @@ export const modules=[{
  code:m100.code,title:m100.title,path:'/programme/bridge/lu-m100/',credits:30,
  scheduleVersion:2,weeks:30,enrollable:false,outsideDegree:true,
  durationSource:'https://www.open.ac.uk/library/digital-archive/module/xcri:MU123/',
- durationNote:'30 study weeks, using the documented MU123 pattern as the foundation-module reference. OU lengths vary by presentation; this is an original LibraUni timetable, not a copy of an OU calendar. No holiday dates are assumed: add breaks by moving remaining work.',
+ durationNote:'30 study weeks, using the documented MU123 pattern as the foundation-module reference. OU lengths vary by presentation; this is an original LibraUni timetable, not a copy of an OU calendar. No holiday dates are assumed: add breaks by moving remaining work. Block 2 workload estimates updated 25 September 2026: U06 22h, U07 20h, U08 28h; event IDs and all date windows are unchanged.',
  events:[
   {id:'orientation',type:'support',title:'Orientation & computing setup',startWeek:1,endWeek:1,hours:6,requires:[],description:'Set up study tools and organise your files.',available:false},
   ...m100.units.map((u,i)=>({...u,block:m100.blocks.find(b=>b.units.includes(u.id)),type:'unit',startWeek:ranges[i][0],endWeek:ranges[i][1],description:u.scope,available:false,outline:'#'+u.id})),

@@ -1,6 +1,6 @@
 // Original design proposal. Proposed budgets do not alter the saved timetable.
 export const block2={
- status:'Design proposal · awaiting review',
+ status:'Scope and redistribution approved · 25 September 2026',
  workloadLabels:['Explanation & worked examples','Mathematical practice','Python practice','Physical application','Retrieval & checkpoints'],
  units:[
  {id:'U05',hours:[5,6,5,3,1],
@@ -36,8 +36,8 @@ export const block2={
  visuals:'Arc-length/radius explanation of radians; unit circle connected to a sine graph; possible ambiguous triangles; side-by-side period and amplitude changes.',
  forward:'U10 uses these ideas for vector components and direction. Trigonometric calculus and complex-exponential methods remain in degree mathematics. U08 evidence feeds TMA 03 after U09–U10, not TMA 02. AI critique stays one bounded exercise within the three Python hours; no new tool setup or extra agent workflow is introduced here.'}
  ],
- budget:'Propose U05 20h, U06 22h, U07 20h and U08 28h, replacing 20/24/22/24. This transfers four hours to U08 without changing Block 2’s 90 unit-hours or M100’s 300 hours. Python remains 5/6/3/3 = 17 hours inside the unit totals. Allocations are estimates for review, not observed learner timings. If practice demonstrates that a reduced unit is too dense, revisit scope/allocation rather than hide required extra work.',
+ budget:'Approved allocation: U05 20h, U06 22h, U07 20h and U08 28h, replacing 20/24/22/24. This transfers four hours to U08 without changing Block 2’s 90 unit-hours or M100’s 300 hours. Python remains 5/6/3/3 = 17 hours inside the unit totals. Allocations remain design estimates, not observed learner timings. If practice demonstrates that a reduced unit is too dense, revisit scope/allocation rather than hide required extra work.',
  assessment:'Retain iCMA 42 within U07 and TMA 02 after U07: four written hours plus two notebook hours, including checking and submission preparation. It assesses graphs, functions and quadratics using learner-written code; library documentation is allowed, generated solutions are not. It does not assess U08 trigonometry. U08 is assessed later in TMA 03 and the EMA. Tutoring and AI-review practice remain separate from independent evidence.',
- timing:'The active planner still uses the existing 20/24/22/24-hour allocation until this redistribution is approved. Reference weeks remain U05 10–11, U06 12–14, U07 15–16, revision/TMA 02 in week 17, U08 18–20. With the proposed allocation, unit work90h + TMA026h + existing feedback4h + week17 revision2h =102h across weeks10–20. No credit, start date, deadline, completion record or personal override changes in this proposal.',
+ timing:'The module outline and planner now use the approved 20/22/20/28-hour allocation. Reference weeks remain U05 10–11, U06 12–14, U07 15–16, revision/TMA 02 in week 17, U08 18–20. With this allocation, unit work90h + TMA026h + existing feedback4h + week17 revision2h =102h across weeks10–20. No credit, start date, deadline, completion record or personal override changes with this estimate update.',
  coherence:'B01 supplies algebra, units and short learner-written programs. B02 connects these to representations, functions and geometry, advancing E2/E3/E4 and rehearsal of modelling/communication. B03 receives reusable functions, graph-reading, domain checks and trigonometric fluency for exponentials, vectors and a reproducible investigation. M101/P101 receive preparation, not substituted degree teaching. Required mastery is still assessed across the whole module.',
 };
