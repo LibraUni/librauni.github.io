@@ -2,7 +2,7 @@
 export const blueprint = {
  date:'26 September 2026',
  inventory:[
- ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','All19 B01 lessons and six L01 sections approved; S01 teaching published. Review first release, then author S02. B02/B03 handovers retained.'],
+ ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','All19 B01 lessons and six L01 sections approved; S01–S02 teaching published. Review the latest section, then author S03. B02/B03 handovers retained.'],
  ['M101 · Semester 1','Module-level map and four blocks approved; complete 13-unit blueprint approved. Lessons absent.','Logical P101 handovers agreed; reconcile calendar timing before release.'],
  ['P101 · Semester 1','Role and credits confirmed; module-level outcome/boundary/workload map approved. Four blocks approved; complete 13-unit blueprint and logical pair prerequisite check approved.','Move to M102. Calendar reconciliation remains pending. Allocate required computing and measurement foundations even for learners who do not take M100.'],
  ['M102 · Semester 2','Role and credits confirmed; module-level outcome/boundary/workload map approved. Five blocks approved; complete14-unit blueprint approved.','Revise A101 blocks/units and check Semester 2 interfaces.'],

@@ -127,3 +127,7 @@ This turn records teaching preferences and discusses process; it does not author
 Actual teaching lives under /learn/, separately from /programme/ blueprints. Preserve expandable/collapsible Degree > Stage > Module > Block > Unit > Lesson > Section navigation; M100 is /learn/preparation/m100/ outside degree stages. Use native details and accessible controls; curriculum Expand all must not reveal exercise feedback. Every published teaching page requires valid Vite entry, shared branding/licence/disclaimer, breadcrumbs and honest availability. Public reading requires no enrolment. Do not infer progress from reading or expose private notes.
 
 Opening six-section plan approved as1.0. S01 is published at /learn/preparation/m100/b01/u01/l01/#S01 with three retrieval activities and feedback. Source content/m100-u01-l01-s01.html; release review docs/m100-first-section-release.md. S02–S06 forthcoming; planner enrolment and whole-unit availability unchanged. Next: review the first release, then author S02. Whole-lesson/unit integration reviews remain required.
+
+## Teaching release checkpoint — Section 2, 26 September 2026
+
+M100 U01-L01 S01–S02 are published (20+40minutes). S02 source content/m100-u01-l01-s02.html; review docs/m100-second-section-release.md. Includes original accessible SVG number lines, signed order/absolute value, practice and feedback. Next after review: author S03 under the approved plan. Enrolment/unit completion remain closed; no learner attainment inferred. Verify diagrams using production-built CSS when development previews are stale.
