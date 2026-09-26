@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "node scripts/render-curriculum.mjs && vite build",
+    "build": "node scripts/render-curriculum.mjs && node scripts/render-evidence-release.mjs && vite build",
     "test": "node --test tests/*.test.js",
     "test:rules": "node --test security-tests/*.test.js"
   },

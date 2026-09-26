@@ -20,7 +20,7 @@ OpenZeppelin StandardMerkleTree encoding. Each leaf is an exact string containin
 canonical JSON. Fields are committed as whole journal entries or file manifests.
 Original files use SHA-256 over their exact bytes and are backed up privately,
 not just hashed. A manifest commits preparation time, counts and previous root.
-Snapshot chain continuity is linkage, not proof that no history was omitted.
+The manifest also commits the site release SHA and SHA-256 digests of public teaching/curriculum sources available at capture time; it does not backdate the version used in earlier work. Snapshot chain continuity is linkage, not proof that no history was omitted.
 Full historic snapshots remain necessary for earlier file recovery.
 
 Browser signatures bind the exact root, format, wallet and mainnet chain. This
@@ -81,3 +81,5 @@ Implementation note: SDK 2.10.0's root ESM entry has a lodash named-export issue
 Node24. eas-private.js selects its supported CommonJS entry for Node; Vite builds
 the browser ESM branch. Tests exercise the same SDK encoding, not a copied hash
 algorithm. Dependencies are pinned by the committed lockfile.
+
+Publication check: pnpm11 requires explicit decisions for optional native build scripts. keccak and secp256k1 scripts are disabled; tested JavaScript paths are used.

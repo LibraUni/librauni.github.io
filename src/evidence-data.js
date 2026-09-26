@@ -13,11 +13,11 @@ export function canonical(v){
 export const digest=text=>sha256(new TextEncoder().encode(text));
 export const walletMessage=(root,address)=>`LibraUni personal evidence\nFormat: ${FORMAT}\nRoot: ${root}\nWallet: ${address.toLowerCase()}\nChain: Ethereum mainnet (1)\nThis signature links wallet control to this record. It is not an assessment or accredited credential.`;
 export function verifyLink(root,link){return !!link&&verifyMessage(walletMessage(root,link.address),link.signature).toLowerCase()===link.address.toLowerCase();}
-export function buildSnapshot(entries,files=[],previousRoot=null,createdAt=new Date().toISOString()){
+export function buildSnapshot(entries,files=[],previousRoot=null,createdAt=new Date().toISOString(),teachingRelease=null){
  if(previousRoot!==null&&!hex32(previousRoot))throw Error('Invalid predecessor.');
  const records=entries.map(e=>Object.fromEntries(['id','category','title','body','area','evidence','nextSteps','source','occurredAt','recordedAt','corrects'].map(k=>[k,e[k]??null]))).sort((a,b)=>a.id.localeCompare(b.id));
  if(new Set(records.map(r=>r.id)).size!==records.length)throw Error('Duplicate academic record IDs.');
- const manifest={format:FORMAT,kind:'manifest',createdAt,previousRoot,scope:'All academic entries returned by the journal at snapshot time, plus the explicitly attached files. Earlier attachments remain in earlier snapshots. No claim of complete external-chat capture.',recordCount:records.length,fileCount:files.length};
+ const manifest={format:FORMAT,kind:'manifest',createdAt,previousRoot,teachingRelease,scope:'All academic entries returned by the journal at snapshot time, plus the explicitly attached files. Earlier attachments remain in earlier snapshots. No claim of complete external-chat capture.',recordCount:records.length,fileCount:files.length};
  const values=[{type:'string',name:'manifest',value:canonical(manifest)},...records.map(r=>({type:'string',name:'record:'+r.id,value:canonical({kind:'academic',...r})})),...files.map((f,i)=>({type:'string',name:'file:'+i,value:canonical({kind:'file',name:f.name,size:f.size,sha256:f.sha256})}))];
  const tree=new PrivateData(values).getFullTree();
  const result={format:FORMAT,kind:'snapshot',tree,files};
