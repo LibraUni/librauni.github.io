@@ -1,10 +1,10 @@
-# Incremental archive and formal submissions
+# Tutorial intake, formal submissions and periodic full proofs
 
-User requirements agreed 26 September 2026. This is the next implementation
-contract, not a claim that the controls described below are already deployed.
-Current v2 generates cumulative snapshots and full downloads with predecessor
-links. Dedicated formal file-submission controls and incremental downloads are
-not yet implemented. Preserve the existing full snapshot and all its proofs.
+Updated after the final user decision on 26 September 2026. The incremental
+proposal is withdrawn; the existing cumulative snapshots and full downloads with
+predecessor links are the chosen behaviour. This filename is retained for existing
+references. Dedicated formal submission controls remain planned, not deployed.
+Preserve all existing snapshots and proofs.
 
 ## Two academic intake routes
 
@@ -46,48 +46,25 @@ button automatically starts an AI marking session or grants background access.
 Do not open formal submissions before assessment and enrolment release gates pass.
 Keep owner-only access and the existing free-study constraint.
 
-## One growing archive, incremental monthly batches
+## Final decision: periodic full snapshots
 
-- Treat the existing full snapshot as the initial baseline. Do not reissue it,
-  change its root, discard its proofs or falsely backdate later anchors.
-- Use a persistent archive identifier, sequential batch number and a committed
-  predecessor root. Every new batch commits new/revised academic records plus
-  its link to the preceding batch. Preserve all historical versions.
-- Compare stable record identities and normalised content hashes, not newly
-  generated salts, snapshot dates or incidental property order. Grade corrections,
-  feedback additions and reclassifications are appended revisions with links to
-  their predecessors. Missing/deleted source records must never silently erase
-  previously archived material.
-- Routine generation downloads only new material and appended corrections since
-  the last successful archived batch, together with proofs and compact linkage
-  metadata. Reuse immutable original blobs by content hash: do not repeatedly
-  download an unchanged notebook/PDF because a new feedback record refers to it.
-- If no academic content changed, report that fact. Do not generate an empty
-  monthly proof, duplicate the archive or suggest paying an unnecessary fee.
-- A separate Download complete archive action reconstructs every batch and all
-  original bytes/history into one organised archive with a readable overview.
-  Month boundaries are revisions of one archive, not unrelated portfolios.
-- Individual/category selected exports remain self-contained: include the chosen
-  original bytes and needed proofs even if those bytes were first archived in an
-  earlier batch. Recipients must not need unrelated private records. Chain-link
-  proofs may expose necessary archive linkage; do not expose unrelated fields.
-- Distinguish batch continuity verification from item verification. Check missing,
-  reordered, substituted and conflicting batches when verifying a complete archive.
-  An isolated item may verify while the supplied history is incomplete; say which
-  property was checked. Never label an incomplete reconstruction complete.
-- A saved proof batch and a paid Ethereum anchor are different events. One can
-  generate/download without paying. Optional later anchoring may commit the latest
-  chain head, which transitively commits earlier batch roots; it does not invent
-  earlier independent timestamps for batches not previously anchored.
+The user withdrew the incremental proposal on 26 September 2026 and explicitly
+chose the existing behaviour for its simplicity. Do not implement incremental
+batches, delta downloads or a separate baseline-reconstruction workflow.
 
-## Required implementation checks
+Every generation preserves and downloads the full saved academic inventory and
+archived originals again. Keep successive immutable snapshots, predecessor links,
+original files, correction history and independently verifiable selective exports.
+The learner can generate snapshots periodically and choose which to anchor.
+Generation/download and optional wallet-approved paid anchoring remain separate.
+No calendar automation or paid transaction is authorised by this preference.
 
-Legacy baseline migration without loss or false changes; stable identity and
-cross-runtime timestamp/value normalisation; unchanged re-generation; new and
-corrected entries; identical original deduplication; preserved past versions;
-restoration after device loss from baseline plus deltas; complete export; selective
-proofs with originals from older batches; missing/broken/forked batch chains;
-failed/interrupted upload and generation; idempotent receipt/save retry; stale-head
-conflicts; private reads and bounded submission writes; independent verifier
-compatibility; backup coverage; and truthful UI availability. Do not call the
-feature complete until these paths and actual publication have been checked.
+Successive on-chain anchors establish that successive committed record states
+existed by their inclusion times. They support a dated history of recorded work;
+they do not establish continuous observation, independently assessed mastery or
+the truth of every claimed event time. Preserve existing verification wording.
+
+The proactive tutorial-intake and dedicated formal submission requirements above
+remain in force. Formal submission controls still need implementation, with
+receipt, upload verification, privacy, retry/resubmission, source-version and
+backup checks. Existing assessment/enrolment release gates remain unchanged.
