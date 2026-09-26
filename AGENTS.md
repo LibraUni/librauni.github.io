@@ -111,3 +111,13 @@ Wider progression map accepted as1.0; its capacity estimates remain provisional.
 ## Opening lesson checkpoint — 26 September 2026
 
 M100B01 all19 lesson blueprints approved as1.0. Complete six-section U01-L01 plan0.1 awaits review at /programme/bridge/lu-m100/#opening-sections, canonical curriculum/m100-opening-sections.js. Preserves240 minutes and every parent budget category. Next after review: author S01 and perform actual release checks, then proceed section by section. No new whole-programme planning pass is needed unless a specific dependency fails.
+
+## Enrichment and authoring scale — 26 September 2026
+
+Learner requests occasional interactive animations alongside meaningful diagrams/captions, historical context about scientific figures, scientific curiosities and precisely selected free external articles/resources. Use these selectively when they deepen understanding or curiosity; avoid a quota, decorative distraction or compulsory detours disguised as optional extras. Necessary captions/explanations are core teaching. Clearly label genuine enrichment and its estimated time; required interactions and explanations fit the existing credit budget. Optional material must never contain an untaught prerequisite needed later.
+
+Interactive elements should let the learner predict, change a meaningful parameter and interpret the result. Verify the model and limiting cases; provide keyboard access, reduced-motion support where applicable and a static/text equivalent. Historical anecdotes and external references require factual/source and rights checks when authored. These are future material standards, not a claim that animations exist already.
+
+Recommended authoring workflow discussed with the learner: section as the default drafting increment, with a small related section group or short complete lesson possible when prerequisites and review scope are manageable. Existing recursive gates always apply. Review the complete lesson for notation, transitions, progression and workload after its sections are drafted, and conduct a whole-unit integration pass for narrative, cumulative practice, assessment preparation, gaps and repetition. Revise earlier parts where needed. Blueprinting guides coherence but does not guarantee it. Whole-unit review is distinct from generating an entire unit in one pass. Avoid requiring learner approval for every paragraph; retain meaningful review milestones and existing authorisation.
+
+This turn records teaching preferences and discusses process; it does not author teaching or constitute an academic progress event.
