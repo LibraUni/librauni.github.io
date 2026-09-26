@@ -119,3 +119,14 @@ concurrent inventory changes, snapshot predecessor conflict, server persistence,
 catalogue pagination, browser write denial and foreign read denial. Maintain
 private backup/restore coverage. Automated tests establish software properties,
 not academic completeness or credibility of awarded marks.
+
+
+## Required completion certificates and private archival — 26 September 2026
+
+Certificate issuance is a required tutor-managed completion step, not an optional learner upload. After checking the published assessment and completion criteria, issue a designed LibraUni certificate for every completed module (including full M100, outside degree credit), each completed stage, the full 360-credit programme, and every additional completed Stage 3 specialist module. Selected bridge refreshers do not earn a full M100 certificate. Stage awards retain the programme's cumulative requirements; additional options earn separate certificates without double-counting degree credits.
+
+The final programme certificate records completion of the BSc (Hons)-level Physics programme, clearly as an independent, non-accredited LibraUni award, not a recognised BSc degree. Stage 1 uses Certificate in the Foundations of Physics; Stage 2 uses Diploma in Physics. Final typography/design and any classification require approved criteria before issuance, never invented marks or third-party endorsement.
+
+For each award: verify supporting assessment evidence; create a branded PDF with learner name, award/module title, scope, internal credits, actual completion and issue dates, unique award ID, issuer and version, and grade/classification only when applicable and evidenced. Privately archive the original PDF and a structured award record under `certificates`, link its assessment/transcript evidence, verify byte-for-byte restoration, and add the substantive award milestone to the academic journal. Include both certificate bytes and record fields in subsequent full proof snapshots and selective exports. Do not alter older snapshots or automatically pay for anchoring. Corrections/reissues preserve originals and link superseding/revoked status and reason.
+
+Before the first eligible completion, implement and verify the issuance/template/status workflow with clearly non-issued fixtures. Existing archive and proof support is not a completed certificate issuer. Completion close-out must check certificate generation, private archival, restore verification and inclusion in the next proof; do not wait for the learner to ask. An empty certificates category is correct until actual issuance. This policy update is administrative and is not an academic journal event.
