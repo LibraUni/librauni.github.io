@@ -20,6 +20,10 @@ A full snapshot cannot capture an unsaved external conversation or an original
 that the tutor has not archived. The deterministic web button does not summon an
 AI tutor or perform grading: tutoring and archival happen before generation.
 
+## Record quality
+
+Before preparing any entry, apply the [recipient-usefulness gate](academic-record-quality.md). Category names are a content contract: records must be evidence-based, intelligible and useful for the sharing purposes described on the evidence page. This is a substantive tutor review, not merely schema validation.
+
 ## Tutor procedure
 
 1. Preserve original bytes outside public Git, in the private study repository.

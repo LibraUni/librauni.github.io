@@ -1,3 +1,4 @@
+// Before archival, apply docs/academic-record-quality.md to the private input; schema validation does not assess educational value.
 // Connected-tutor archival tool. Input files must remain OUTSIDE the public repository.
 // Usage: FIREBASE_AUTH_MODULE=/absolute/path/firebase-tools/lib/auth.js node scripts/archive-academic-session.mjs /private/path/session.json [--write]
 // Input: array of journal entries following src/journal-data.js; use transcriptParts for long verbatim text.

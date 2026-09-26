@@ -1,3 +1,4 @@
+// Before archival, apply docs/academic-record-quality.md to the private input; schema validation does not assess educational value.
 // Tutor-managed archival. Never place the input manifest or originals in public Git.
 // FIREBASE_AUTH_MODULE=... node scripts/archive-student-records.mjs /private/manifest.json [--write]
 import fs from 'node:fs';
