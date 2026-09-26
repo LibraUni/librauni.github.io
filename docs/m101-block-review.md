@@ -13,3 +13,7 @@ MIT18.01SC and18.02SC historical syllabi rechecked26 September2026; the formerâ€
 Capacity risks: B01 packs geometric vectors and small-system matrix methods into54h; retain entry retrieval without rebuilding M100. B04 must teach validation rather than duplicate revision. Representative tasks will calibrate estimates during unit/lesson design. No changed credits, learner attainment, timetable or enrolment.
 
 Construction disposition: block proposal ready for user review; unit construction awaits this review. Release disposition: no teaching release. Next handover: complete M101 unit map within these block budgets after agreement, using exact P101 and M102 prerequisite links; never mass-author lessons.
+
+## Subsequent decision â€” 26 September 2026
+
+The learner approved the four blocks and allocations. Canonical block status is now v1.0 approved. The separate complete unit proposal v0.1 awaits review; see m101-unit-review.md. Earlier proposal findings above are retained as history.

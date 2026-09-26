@@ -30,3 +30,27 @@ test('M101 proposed blocks fit the approved study budget and outcome/prerequisit
  assert.equal(m101Blocks.blocks.reduce((n,b)=>n+b.pythonHours,0),30);
  assert.deepEqual([...covered].sort(),[...known].sort());
 });
+
+import {m101Units} from '../curriculum/m101-units.js';
+test('M101 complete unit proposal reconciles each parent budget and has ordered prerequisites and evidence',()=>{
+ const seen=new Set();
+ for(const u of m101Units.units){
+  assert.ok(!seen.has(u.id));
+  for(const prior of u.requires)assert.ok(seen.has(prior),`${u.id} requires missing/later ${prior}`);
+  seen.add(u.id);
+  const parent=m101Blocks.blocks.find(b=>b.id===u.block);
+  assert.ok(parent);
+  for(const id of u.outcomes)assert.ok(parent.outcomes.includes(id));
+  assert.ok(u.pythonHours>=0 && u.pythonHours<=u.hours);
+  for(const key of ['purpose','scope','boundary','python','evidence','handover'])assert.ok(u[key]?.length,`${u.id} missing ${key}`);
+ }
+ for(const b of m101Blocks.blocks){
+  const children=m101Units.units.filter(u=>u.block===b.id);
+  assert.ok(children.length);
+  assert.equal(children.reduce((n,u)=>n+u.hours,0),b.hours);
+  assert.equal(children.reduce((n,u)=>n+u.pythonHours,0),b.pythonHours);
+  assert.deepEqual([...new Set(children.flatMap(u=>u.outcomes))].sort(),[...b.outcomes].sort());
+ }
+ const assessed=new Set(m101Units.units.filter(u=>['B01','B02','B03'].includes(u.block)).flatMap(u=>u.outcomes));
+ assert.deepEqual([...assessed].sort(),stage1Map.modules.find(m=>m.code==='LU-M101').outcomes.map(([id])=>id).sort());
+});

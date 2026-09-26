@@ -1,5 +1,5 @@
-// Complete block-level proposal; no unit/lesson outlines or schedule IDs.
-export const m101Blocks={version:'0.1',date:'26 September 2026',status:'Block structure proposed for review',
+// Approved block blueprint; unit proposal is maintained separately.
+export const m101Blocks={version:'1.0',date:'26 September 2026',status:'Block structure approved',
  blocks:[
  {id:'B01',title:'Vectors and linear relationships',hours:54,pythonHours:4,requires:[],outcomes:['M101-O3','M101-O4','M101-O6'],
  purpose:'Express direction and simultaneous relationships precisely, providing mathematical tools for early P101 mechanics.',
@@ -38,11 +38,11 @@ export const m101Blocks={version:'0.1',date:'26 September 2026',status:'Block st
  ['TMA 01','After B01','M101-O3/O4/O6','6 hours'],
  ['TMA 02','After B02','M101-O1/O5/O6','6 hours'],
  ['TMA 03','After B03','M101-O2/O5/O6, with stated cumulative items','6 hours'],
- ['Embedded iCMAs/checkpoints','Within block practice; exact placement follows unit design','Retrieval, feedback and B04 transfer','Included in 240 study hours'],
+ ['Embedded iCMAs/checkpoints','Within U03, U07 and U11 practice; U13 formative synthesis','Retrieval, feedback and B04 transfer','Included in 240 study hours'],
  ['Final written examination','After B04 and revision','All six outcomes through written reasoning and supplied-code interpretation; practical execution remains in TMAs','18-hour final-assessment envelope, not an 18-hour sitting'],
  ],
  sources:[
  ['MIT 18.01SC syllabus','https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/syllabus/','Historical 2010 syllabus revisited 26 September 2026. Differentiation, accumulation, fundamental theorem, applications and numerical checks inform B02/B03. Its further integration/improper-integral/series scope spans our M101/M102 boundary; this proposal is not the full MIT course or an equal-hours claim.'],
  ['MIT 18.02SC syllabus','https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/','Historical 2010 syllabus revisited 26 September 2026 to distinguish introductory vector/matrix geometry from later multivariable methods. B01 does not claim multivariable calculus coverage.'],
- ['Stage 1 reference audit','/programme/stage-1/map/#sources','OU module descriptions and the limited Imperial indexed references are retained with their retrieval limits. Detailed OU content and fuller Imperial module evidence must be examined during unit design; no second-university equivalence audit is claimed here.'],
+ ['Stage 1 reference audit','/programme/stage-1/map/#sources','OU module descriptions and the limited Imperial indexed references are retained with their retrieval limits. Private OU guide and sample coordinate-geometry unit organisation reviewed for the unit proposal; fuller Imperial module evidence remains outstanding. No second-university equivalence audit is claimed here.'],
  ]};
