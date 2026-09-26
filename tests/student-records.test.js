@@ -19,7 +19,7 @@ test('field-level proof shares one grade without feedback, journal, context coun
 test('full ZIP restores all originals and readable fields; category and single file independently verify',()=>{
  const p=build(),indexes=p.tree.values.map((_,i)=>i),archive=archiveEntries(p,files,indexes,null,{full:true});
  const zip=makeArchive(p,files,indexes,null,{full:true});assert.equal(unpackArchive(zip).files.get(id).toString(),bytes.toString());
- assert.ok(archive['private-recovery.json']);const category=JSON.parse(strFromU8(archive['assessments/CATEGORY-PROOF.json']));assert.equal(verifyStudentProof(category).length,3);
+ assert.ok(archive['private-recovery.json']);assert.ok(strFromU8(archive['READABLE-RECORDS.txt']).includes('Synthetic TMA'));assert.ok(strFromU8(archive['READABLE-RECORDS.txt']).includes('grade: 72'));const category=JSON.parse(strFromU8(archive['assessments/CATEGORY-PROOF.json']));assert.equal(verifyStudentProof(category).length,3);
  const item=JSON.parse(p.tree.values.at(-1).value),proof=JSON.parse(strFromU8(archive[itemPath(item)+'.proof.json']));assert.equal(verifyOriginals(verifyStudentProof(proof),files),1);
  const restored=JSON.parse(strFromU8(archive['private-recovery.json'])).snapshot;assert.equal(validateStudentSnapshot(restored).files,1);
  const selected=archiveEntries(restored,files,[p.tree.values.length-1]);assert.ok(!selected['private-recovery.json']);assert.ok(!Object.keys(selected).some(k=>k.startsWith('assessments/')));
@@ -30,6 +30,7 @@ test('missing or altered originals, altered readable text and altered proof all 
  const a=archiveEntries(p,files,all),v=JSON.parse(p.tree.values.at(-1).value);a[itemPath(v)]=strToU8('tampered');assert.throws(()=>unpackArchive(zipSync(a)),/altered/);
  const b=archiveEntries(p,files,all),field=JSON.parse(p.tree.values[1].value);b[itemPath(field)]=strToU8('forged');assert.throws(()=>unpackArchive(zipSync(b)),/Readable/);
  const proof=studentDisclosure(p,[1]);proof.proof.leaves[0].value='{}';assert.throws(()=>verifyStudentProof(proof));
+ const report=archiveEntries(p,files,all);report['READABLE-RECORDS.txt']=strToU8('forged overview');assert.throws(()=>unpackArchive(zipSync(report)),/overview/);
  const unsafe={...archiveEntries(p,files,all),'../escape':bytes};assert.throws(()=>unpackArchive(zipSync(unsafe)),/Unsafe/);
 });
 test('original bytes are external to immutable index, removing the previous 3 MB snapshot attachment limit',()=>{

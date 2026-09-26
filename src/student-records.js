@@ -62,11 +62,17 @@ export function verifyOriginals(values,files){
  for(const v of originals){const bytes=files.get(v.id);if(!bytes||bytes.length!==v.size||sha256(bytes)!==v.sha256)throw Error('Missing or altered original: '+v.name);}
  return originals.length;
 }
+export function readableRecords(values){
+ const cmp=(a,b)=>a<b?-1:a>b?1:0,groups=new Map();
+ for(const v of values.filter(v=>v.kind!=='context')){const key=[v.category,v.module,v.recordId].join(' / ');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(v);}
+ return 'LIBRAUNI — ACADEMIC RECORDS\n\n'+[...groups].sort(([a],[b])=>cmp(a,b)).map(([key,rows])=>{const title=rows.find(v=>v.kind==='field'&&v.field==='title')?.value||rows.find(v=>v.kind==='file')?.name||'Academic record';return String(title)+'\n'+key+'\n\n'+rows.sort((a,b)=>cmp(a.field||a.name,b.field||b.name)).map(v=>v.kind==='file'?`Original: ${v.name} (${v.size} bytes)`:v.field==='title'?'':`${v.field.replace(/([a-z])([A-Z])/g,'$1 $2')}: ${typeof v.value==='string'?v.value:JSON.stringify(v.value,null,2)}`).filter(Boolean).join('\n\n');}).join('\n\n'+'—'.repeat(48)+'\n\n')+'\n';
+}
 export function archiveEntries(p,files,indexes,anchor=null,{full=false}={}){
  validateStudentSnapshot(p);const tree=new PrivateData(p.tree.values),selected=[...new Set(indexes)],proof=studentDisclosure(p,selected,anchor,tree),values=verifyStudentProof(proof);verifyOriginals(values,files);
  const out=Object.create(null),categories=new Map();
  out['proof.json']=strToU8(JSON.stringify(proof));
- out['README.txt']=strToU8('LIBRAUNI — '+(full?'FULL SAVED ACADEMIC RECORDS':'SELECTED ACADEMIC RECORDS')+'\n\nThe full archive and private-recovery.json contain private records and proof salts. Share only the intended subset.\n\nOriginal files and readable fields are organised by category, module and record. Each item has a .proof.json companion; each category has CATEGORY-PROOF.json. To share, use the website to download any selected subset as one ZIP, or send a category folder/item with its proof. A verifier can select the ZIP or the proof JSON plus original file(s). A file without its companion proof is not independently anchored evidence.\n\nUpload verification: https://librauni.github.io/evidence/\nIndependent verifier: https://librauni.github.io/evidence/verify.cjs\nIntegrity and blockchain timing are distinct from academic correctness and accreditation.\n');
+ out['READABLE-RECORDS.txt']=strToU8(readableRecords(values));
+ out['README.txt']=strToU8('LIBRAUNI — '+(full?'FULL SAVED ACADEMIC RECORDS':'SELECTED ACADEMIC RECORDS')+'\n\nThe full archive and private-recovery.json contain private records and proof salts. Share only the intended subset.\n\nStart with READABLE-RECORDS.txt for the complete readable selection. Original files and readable fields are organised by category, module and record. Each item has a .proof.json companion; each category has CATEGORY-PROOF.json. To share, use the website to download any selected subset as one ZIP, or send a category folder/item with its proof. A verifier can select the ZIP or the proof JSON plus original file(s). A file without its companion proof is not independently anchored evidence.\n\nUpload verification: https://librauni.github.io/evidence/\nIndependent verifier: https://librauni.github.io/evidence/verify.cjs\nIntegrity and blockchain timing are distinct from academic correctness and accreditation.\n');
  if(full)out['private-recovery.json']=strToU8(JSON.stringify({snapshot:p,anchor}));
  selected.forEach(i=>{const v=JSON.parse(p.tree.values[i].value);if(v.kind==='context'){out['snapshot-context.json']=strToU8(JSON.stringify(v,null,2));return;}
   const path=itemPath(v);if(out[path])throw Error('Archive path collision.');out[path]=v.kind==='file'?files.get(v.id):strToU8(fieldText(v));
@@ -84,5 +90,5 @@ export function unpackArchive(bytes){
  const root=data['proof.json'];if(!root)throw Error('Choose a generated ZIP containing proof.json, or select a category/item proof JSON with its original files.');
  const p=JSON.parse(strFromU8(root)),values=verifyStudentProof(p),files=new Map();
  for(const v of values.filter(v=>v.kind==='file'))files.set(v.id,data[itemPath(v)]);
- verifyOriginals(values,files);for(const v of values.filter(v=>v.kind==='field'))if(!data[itemPath(v)]||strFromU8(data[itemPath(v)])!==fieldText(v))throw Error('Readable field differs from its proof: '+v.field);return {proof:p,values,files};
+ verifyOriginals(values,files);if(data['READABLE-RECORDS.txt']&&strFromU8(data['READABLE-RECORDS.txt'])!==readableRecords(values))throw Error('Readable overview differs from the proof.');for(const v of values.filter(v=>v.kind==='field'))if(!data[itemPath(v)]||strFromU8(data[itemPath(v)])!==fieldText(v))throw Error('Readable field differs from its proof: '+v.field);return {proof:p,values,files};
 }

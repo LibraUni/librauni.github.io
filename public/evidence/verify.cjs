@@ -3,6 +3,11 @@ const fs=require('node:fs');
 const {unzipSync,strFromU8,strToU8}=require('fflate');
 const {PrivateData}=require('@ethereum-attestation-service/eas-sdk');
 const {JsonRpcProvider,Contract,Interface,sha256,verifyMessage}=require('ethers');
+function readableRecords(values){
+ const cmp=(a,b)=>a<b?-1:a>b?1:0,groups=new Map();
+ for(const v of values.filter(v=>v.kind!=='context')){const key=[v.category,v.module,v.recordId].join(' / ');if(!groups.has(key))groups.set(key,[]);groups.get(key).push(v);}
+ return 'LIBRAUNI — ACADEMIC RECORDS\n\n'+[...groups].sort(([a],[b])=>cmp(a,b)).map(([key,rows])=>{const title=rows.find(v=>v.kind==='field'&&v.field==='title')?.value||rows.find(v=>v.kind==='file')?.name||'Academic record';return String(title)+'\n'+key+'\n\n'+rows.sort((a,b)=>cmp(a.field||a.name,b.field||b.name)).map(v=>v.kind==='file'?`Original: ${v.name} (${v.size} bytes)`:v.field==='title'?'':`${v.field.replace(/([a-z])([A-Z])/g,'$1 $2')}: ${typeof v.value==='string'?v.value:JSON.stringify(v.value,null,2)}`).filter(Boolean).join('\n\n');}).join('\n\n'+'—'.repeat(48)+'\n\n')+'\n';
+}
 (async()=>{
  const raw=fs.readFileSync(process.argv[2]);if(raw.length>250000000)throw Error('Package too large');
  let archive=null,p;
@@ -10,6 +15,7 @@ const {JsonRpcProvider,Contract,Interface,sha256,verifyMessage}=require('ethers'
  if(!['librauni-evidence-v1','librauni-student-records-v2'].includes(p.format)||p.kind!=='disclosure'||!p.proof?.leaves?.length||Buffer.byteLength(JSON.stringify(p))>8000000)throw Error('Wrong or oversized proof format');
  if(!PrivateData.verifyMultiProof(p.root,p.proof))throw Error('Merkle proof does not match');
  const values=p.proof.leaves.map(v=>JSON.parse(v.value));
+ if(archive?.['READABLE-RECORDS.txt']&&strFromU8(archive['READABLE-RECORDS.txt'])!==readableRecords(values))throw Error('Readable overview differs from proof');
  if(p.format==='librauni-evidence-v1'){
   const manifests=p.proof.leaves.filter(v=>v.name==='manifest');if(manifests.length!==1||JSON.parse(manifests[0].value).format!==p.format)throw Error('Missing manifest');
   const files=p.proof.leaves.filter(v=>v.name.startsWith('file:')).map(v=>JSON.parse(v.value));if(files.length!==p.files.length)throw Error('Attachment count mismatch');

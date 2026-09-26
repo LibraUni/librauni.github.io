@@ -5,7 +5,7 @@ import {validateSnapshot,disclosure,verifyDisclosure,walletMessage,verifyLink,MA
 import {listSnapshots,saveSnapshot,loadSnapshot,saveAnchor,loadAnchors} from './evidence-store.js';
 import {BrowserProvider,JsonRpcProvider,Contract,sha256,formatEther} from 'ethers';
 import {EAS_ADDRESS,ABI,mainnet,checkAnchor} from './evidence-chain.js';
-import {STUDENT_FORMAT,ARCHIVE_LIMIT,inventorySignature,recordCategories,buildStudentSnapshot,makeArchive,unpackArchive,verifyOriginals} from './student-records.js';
+import {STUDENT_FORMAT,ARCHIVE_LIMIT,readableRecords,inventorySignature,recordCategories,buildStudentSnapshot,makeArchive,unpackArchive,verifyOriginals} from './student-records.js';
 import {loadAcademicCatalogue,loadOriginal} from './academic-store.js';
 import './profile.css';
 import './journal.css';
@@ -63,7 +63,7 @@ $('generate-full').onclick=()=>act(async check=>{
 });
 $('open-snapshot').onclick=()=>act(async check=>{const p=await loadSnapshot(user.uid,$('snapshot-list').value);check();const anchors=await loadAnchors(user.uid,p.tree.root),files=await restoreOriginals(p,check);check();snapshot=p;originals=files;saved=true;anchor=anchors.at(-1)||null;showSnapshot();message('Saved snapshot and all referenced original bytes restored and verified.');});
 $('download-snapshot').onclick=()=>act(async()=>fullDownload());
-$('download-reading').onclick=()=>{if(snapshot.format===STUDENT_FORMAT){const text=snapshot.tree.values.slice(1).map(v=>JSON.parse(v.value)).map(r=>`${r.category} · ${r.module} · ${r.recordId}\n${fieldLabel(r)}`).join('\n\n');download('librauni-academic-records.txt','LIBRAUNI — PRIVATE ACADEMIC RECORDS\n\n'+text,'text/plain;charset=utf-8');}else {const entries=snapshot.tree.values.filter(v=>v.name.startsWith('record:')).map(v=>JSON.parse(v.value));download('librauni-academic-evidence.txt',readableJournal(entries),'text/plain;charset=utf-8');}};
+$('download-reading').onclick=()=>{if(snapshot.format===STUDENT_FORMAT){const text=readableRecords(snapshot.tree.values.slice(1).map(v=>JSON.parse(v.value)));download('librauni-academic-records.txt',text,'text/plain;charset=utf-8');}else {const entries=snapshot.tree.values.filter(v=>v.name.startsWith('record:')).map(v=>JSON.parse(v.value));download('librauni-academic-evidence.txt',readableJournal(entries),'text/plain;charset=utf-8');}};
 $('export-proof').onclick=()=>act(async()=>{const indexes=Array.from(document.querySelectorAll('#evidence-selection input:checked'),e=>Number(e.value));if(snapshot.format===STUDENT_FORMAT){download('librauni-selected-records.zip',makeArchive(snapshot,originals,indexes,anchor),'application/zip');message('Selected fields and original files downloaded with their proofs. Unselected records, snapshot counts and predecessor context are excluded.');}else {download('librauni-selected-proof.json',JSON.stringify(disclosure(snapshot,indexes,anchor),null,2));message('Legacy selected proof downloaded. Its manifest also discloses snapshot counts and the previous root.');}});
 $('select-all-evidence').onclick=()=>{for(const c of document.querySelectorAll('#evidence-selection input'))c.checked=true;};
 $('select-none-evidence').onclick=()=>{for(const c of document.querySelectorAll('#evidence-selection input'))c.checked=false;};
