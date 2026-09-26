@@ -103,3 +103,7 @@ For every new or materially revised component, record policy version, applicable
 ## Planning checkpoint — 26 September 2026
 
 All four Stage1 block/unit maps are approved, including A1011.0. Later-stage progression/capacity proposal0.1 is in curriculum/later-stage-audit.js and /programme/#later-stage-audit. Its allocations are provisional, not approved blocks; do not treat budget reconciliation as proof of academic depth. Review it next, then resume M100B01 lesson blueprinting under the existing gates. Preserve G01–G04 and the P201/P302 capacity risks. No telescope requirement or academic-log event follows from this planning.
+
+## M100 lesson planning checkpoint — 26 September 2026
+
+Wider progression map accepted as1.0; its capacity estimates remain provisional. M100 B01 complete19-lesson blueprint0.1 now awaits review at /programme/bridge/lu-m100/#block-1-lessons; canonical curriculum/m100-block1-lessons.js. Preserves80unit hours and14included Python hours, all five approved workload categories and existing assessment/schedule IDs. Next after review: all sections of U01-L01, then incremental teaching authoring. Do not assume published blueprint means available teaching or learner completion.

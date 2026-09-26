@@ -27,3 +27,7 @@ Read MIT current Course8 degree chart and subject catalogue on26September2026. U
 ## Recursive record
 
 Gate: programme-wide progression review supporting later module-block planning and the stronger M100 starting gate. Parent: three-stage architecture; peer scope: all Stage2/3 modules and six alternative options; prior foundation: approved Stage1 units. Budget:120credits per stage;360overall; M100excluded. Construction: exploratory module/capacity proposal ready for review. Release: no later-stage teaching released. Open:G01–G04, detailed problem-level depth, schedules, apparatus/collaboration, source/assessment verification. Handover: review this proposal, then M100B01 all-lesson blueprint, followed by opening-lesson sections. No enrolment, student mastery or academic-journal event.
+
+## Wider-map acceptance — 26 September 2026
+
+The wider progression map was accepted. Canonical version1.0 records that decision; capacity sketches remain provisional and G01–G04 remain open. Next authorised planning step: all lessons in M100B01, not full later-stage block/unit production.

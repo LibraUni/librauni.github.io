@@ -1,8 +1,8 @@
 // Original capacity hypotheses, not approved blocks or teaching.
 export const laterAudit = {
-  "version": "0.1",
+  "version": "1.0",
   "date": "26 September 2026",
-  "status": "Provisional progression and capacity proposal — awaiting review",
+  "status": "Wider progression map accepted; capacity allocations remain provisional",
   "modules": [
     {
       "code": "M201",
