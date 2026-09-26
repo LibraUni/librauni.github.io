@@ -27,3 +27,7 @@ Original number-line and expression-structure diagrams will have meaningful capt
 Each section supports its successor and the L01 outcome set. L02 receives signed arithmetic and explicit grouping for fractions and named values. U02 receives numerical fluency for powers/units. U03/U04 later formalise algebra/solving. B02/B03 and Stage1 maps are unchanged. TMA01 eventually provides independent evidence; neither planning nor learner approval establishes attainment.
 
 Construction disposition: all six sections proposed for review, no teaching released. After approval, author S01 incrementally and perform release checks; do not restart whole-programme planning or bypass feedback/answer validation. Keep any future learner evidence private. No enrolment, timetable change or academic log event created.
+
+## Approval and first release — 26 September 2026
+
+Complete six-section plan approved as1.0. S01 is authored and release-checked separately in m100-first-section-release.md. S02–S06 remain forthcoming.

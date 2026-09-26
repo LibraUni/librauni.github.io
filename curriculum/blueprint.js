@@ -2,11 +2,11 @@
 export const blueprint = {
  date:'26 September 2026',
  inventory:[
- ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','All19 B01 lessons approved; complete six-section U01-L01 plan proposed. Review it, then author S01. B02/B03 handovers retained.'],
+ ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','All19 B01 lessons and six L01 sections approved; S01 teaching published. Review first release, then author S02. B02/B03 handovers retained.'],
  ['M101 · Semester 1','Module-level map and four blocks approved; complete 13-unit blueprint approved. Lessons absent.','Logical P101 handovers agreed; reconcile calendar timing before release.'],
  ['P101 · Semester 1','Role and credits confirmed; module-level outcome/boundary/workload map approved. Four blocks approved; complete 13-unit blueprint and logical pair prerequisite check approved.','Move to M102. Calendar reconciliation remains pending. Allocate required computing and measurement foundations even for learners who do not take M100.'],
  ['M102 · Semester 2','Role and credits confirmed; module-level outcome/boundary/workload map approved. Five blocks approved; complete14-unit blueprint approved.','Revise A101 blocks/units and check Semester 2 interfaces.'],
- ['A101 · Semester 2','Four blocks approved; complete revised ten-unit blueprint approved with reconciled hours and Semester 1 prerequisites.','Wider progression map accepted; review the opening lesson section plan next. Joint calendars and detailed source verification remain pending.'],
+ ['A101 · Semester 2','Four blocks approved; complete revised ten-unit blueprint approved with reconciled hours and Semester 1 prerequisites.','Wider progression map accepted; first M100 teaching section now available. Joint calendars and detailed source verification remain pending.'],
  ['Stage 2','Proposed P201 (60), M201 (30), X201 (30): 120 credits. Provisional subject-capacity and prerequisite audit published.','Wider map accepted; capacity sketches remain provisional. Detailed depth and evidence must be checked before later module approval.'],
  ['Stage 3','Proposed P301, P302, one specialist option and R300: 30 credits each. Six candidate options; provisional prerequisites and core capacity audit published.','Wider map accepted; retain provisional capacities and prerequisite gates. Options are alternatives, not cumulative compulsory content.'],
  ],

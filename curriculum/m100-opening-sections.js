@@ -1,8 +1,8 @@
 // Section plans only; no lesson text or learner evidence is released.
 export const openingSections = {
-  "version": "0.1",
+  "version": "1.0",
   "date": "26 September 2026",
-  "status": "Opening lesson section blueprint — proposed for review",
+  "status": "Opening lesson section blueprint — approved",
   "lesson": "U01-L01",
   "minutes": 240,
   "sections": [

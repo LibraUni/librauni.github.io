@@ -1,0 +1,37 @@
+import fs from 'node:fs';
+import {m100} from '../curriculum/m100.js';
+import {block1Lessons} from '../curriculum/m100-block1-lessons.js';
+import {openingSections} from '../curriculum/m100-opening-sections.js';
+import {stage1Modules} from '../curriculum/stage1.js';
+export function renderLearning({root,shell,link,e}) {
+ const base='/learn/preparation/m100/';
+ const unitPath=id=>base+'b01/'+id.toLowerCase()+'/';
+ const lessonPath=unitPath('U01')+'l01/';
+ const controls='<div class="tree-controls" hidden><button type="button" data-tree-action="expand">Expand all</button><button type="button" data-tree-action="collapse" class="secondary">Collapse all</button></div>';
+ const tree=body=>`<div class="learning-tree">${controls}${body}</div>`;
+ const branch=(title,body,id)=>`<details class="curriculum-branch" ${id?`id="${id}"`:''}><summary>${title}</summary><div class="branch-body">${body}</div></details>`;
+ const pending='<span class="availability">Forthcoming</span>';
+ const blockTrees=m100.blocks.map(b=>branch(e(b.id+' · '+b.title),b.units.map(id=>{
+  const u=m100.units.find(u=>u.id===id);
+  const ls=block1Lessons.lessons.filter(l=>l.unit===id);
+  return branch(e(id+' · '+u.title),`<p>${e(u.can)}</p>${b.id==='B01'?`<p>${link(unitPath(id),'Unit overview')}</p>`:''}${ls.length?ls.map(l=>branch(e(l.title),l.id==='U01-L01'?`<p>${link(lessonPath,'Open lesson')} · Section 1 available; lesson in progress.</p><ul>${openingSections.sections.map((s,i)=>`<li>${i===0?link(lessonPath+'#S01',s.title):e(s.title)+' · '+pending}</li>`).join('')}</ul>`:`<p>${pending} · ${l.hours} planned study hours.</p>`)).join(''):`<p>${pending} · ${link('/programme/bridge/lu-m100/#'+id,'Read the unit blueprint')}</p>`}`);
+ }).join(''),b.id));
+ const unitBranches=blockTrees.join('');
+ const degreeBranches=[1,2,3].map(n=>branch('Stage '+n,`<p>${link('/learn/physics/stage-'+n+'/','Stage overview')}</p>${n===1?stage1Modules.map(m=>branch(e(m.code+' · '+m.title),`<p>${pending} · ${link(m.path,'Module blueprint')}</p>`)).join(''):`<p>Teaching is forthcoming. ${link('/programme/#stage-'+n,'View proposed modules and pathways')}.</p>`}`)).join('');
+ const intro=(title,text)=>`<section class="intro"><p class="eyebrow">LEARNING MATERIALS</p><h1>${title}</h1><p class="lead">${text}</p></section>`;
+ const crumbs=[link('/learn/','Learning materials'),link('/learn/preparation/','Preparatory study'),link(base,'M100'),link(base+'b01/','Block 1')];
+ const pages=[
+ ['/learn/','Learning materials',[link('/','Study desk'),'<span aria-current="page">Learning materials</span>'],intro('A place to study.','Explore the teaching as it becomes available. Read freely, without enrolling.')+`<p>Expand a branch to explore. Available teaching has a link; forthcoming items are plans, not completed lessons. Enrolment and private progress are separate from reading.</p>${tree(branch('Preparatory study',`<p>Optional preparation outside degree credits. ${link('/learn/preparation/','Overview')}</p>`+branch('M100 · Mathematics & Python bridge',`<p>${link(base,'Module overview')}</p>`+unitBranches))+branch('Physics · Degree',`<p>${link('/learn/physics/','Degree learning overview')}</p>`+degreeBranches))}<p>${link('/programme/','Programme blueprint')} explains the planned curriculum, coverage and construction commitments.</p>`],
+ ['/learn/preparation/','Preparatory study',[link('/learn/','Learning materials'),'<span aria-current="page">Preparatory study</span>'],intro('Preparatory study','Build the foundations you need before starting the degree.')+`<p>M100 is optional and outside the 360-credit degree. ${link(base,'Explore M100 teaching')}.</p>`+tree(branch('M100 · Mathematics & Python bridge',unitBranches))],
+ [base,m100.title,[link('/learn/','Learning materials'),link('/learn/preparation/','Preparatory study'),'<span aria-current="page">M100</span>'],intro(m100.title,'Calculate, explain and check—then connect mathematics with transparent Python work.')+`<p>Optional bridge · 30 internal credits / 300 hours for the full module. First section available; the rest is being developed. Enrolment remains closed.</p><p>${link(lessonPath+'#S01','Start with the first teaching section')} · ${link('/programme/bridge/lu-m100/','Full module blueprint and assessment plan')}</p>`+tree(unitBranches)],
+ [base+'b01/','Calculate and express relationships',[...crumbs.slice(0,3),'<span aria-current="page">Block 1</span>'],intro('Calculate and express relationships','Four units build reliable arithmetic, algebra and short learner-written programs.')+`<p>80 unit study hours, including 14 Python hours. Assessment and orientation have separate allocations in the module blueprint.</p>`+tree(blockTrees[0])],
+ ['/learn/physics/','Physics degree learning',[link('/learn/','Learning materials'),'<span aria-current="page">Physics degree</span>'],intro('Physics degree','Three stages, from foundations to independent investigation.')+`<p>Degree teaching is forthcoming. The optional M100 bridge has its own ${link('/learn/preparation/','preparatory study area')}.</p>`+tree(degreeBranches)],
+ ];
+ for(const n of [1,2,3])pages.push(['/learn/physics/stage-'+n+'/',`Stage ${n}`,[link('/learn/','Learning materials'),link('/learn/physics/','Physics degree'),`<span aria-current="page">Stage ${n}</span>`],intro('Stage '+n,'Teaching materials will appear here as they are released.')+`<p>${link('/programme/#stage-'+n,'Stage curriculum blueprint')} · No stage teaching is published yet.</p>`+(n===1?tree(stage1Modules.map(m=>branch(e(m.code+' · '+m.title),`<p>${pending} · ${link(m.path,'Module blueprint')}</p>`)).join('')):'' )]);
+ for(const u of m100.units.slice(0,4))pages.push([unitPath(u.id),u.title,[...crumbs,`<span aria-current="page">${u.id}</span>`],intro(u.title,e(u.can))+`<p>${u.hours} planned study hours · ${link('/programme/bridge/lu-m100/#'+u.id,'Unit blueprint')}.</p>`+tree(block1Lessons.lessons.filter(l=>l.unit===u.id).map(l=>branch(e(l.id+' · '+l.title),`<p>${e(l.purpose)}</p><p>${l.id==='U01-L01'?link(lessonPath,'Open lesson · first section available'):pending}</p>`)).join(''))]);
+ pages.push([lessonPath,'Signed quantities and ordered calculations',[...crumbs,link(unitPath('U01'),'Unit 1'),'<span aria-current="page">Lesson 1</span>'],intro('Signed quantities and ordered calculations','Start with familiar arithmetic, then build a dependable way of explaining and checking it.')+`<p>Full lesson: 4 hours · Available now: Section 1, about 20 minutes.</p><nav aria-label="Lesson contents">${tree(branch('Lesson contents',`<ol>${openingSections.sections.map((s,i)=>`<li>${i===0?link('#S01',s.title):e(s.title)+' · '+pending}</li>`).join('')}</ol>`))}</nav>`+fs.readFileSync(root+'content/m100-u01-l01-s01.html','utf8')+`<nav class="lesson-pagination" aria-label="Previous and next"><a href="${unitPath('U01')}">← Unit overview</a><span>Next section: forthcoming</span></nav><p class="small">Original LibraUni teaching · Published 26 September 2026. ${link('/programme/bridge/lu-m100/#opening-sections','Lesson design and section blueprint')}.</p>`]);
+ for(const [path,title,crumb,body] of pages){
+  let html=shell(title,crumb,body).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script></body>');
+  fs.mkdirSync(root+path.slice(1),{recursive:true});fs.writeFileSync(root+path.slice(1)+'index.html',html);
+ }
+}
