@@ -1,0 +1,6 @@
+#evidence-selection {display:grid;gap:.6rem;max-height:28rem;overflow:auto;padding:.75rem;border:1px solid var(--line,#aaa)}
+#evidence-selection label{display:flex;gap:.7rem;align-items:flex-start;font-weight:400}
+#evidence-selection input{width:auto;flex:none;margin-top:.35rem}
+#verified-content pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}
+#snapshot-summary,#wallet-result,#verification-result{overflow-wrap:anywhere}
+.evidence-steps{line-height:1.8}

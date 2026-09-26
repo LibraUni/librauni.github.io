@@ -1,0 +1,50 @@
+LIBRAUNI — INDEPENDENT EVIDENCE VERIFICATION
+
+For most readers: open https://librauni.github.io/evidence/ and load the
+selected-proof JSON in “Verify a shared proof”. No account or wallet is needed.
+This convenient page is operated by LibraUni. It is not an independent assessor.
+
+For verification without relying on LibraUni's website:
+1. Install Node.js from its official website and make a fresh working folder.
+2. Install the independent, open-source dependencies:
+   npm install @ethereum-attestation-service/eas-sdk@2.10.0 ethers@6.17.0
+3. Download and inspect https://librauni.github.io/evidence/verify.cjs
+4. Run:
+   node verify.cjs selected-proof.json
+   Optionally pass your own Ethereum node's HTTPS RPC address as the third argument.
+
+The script runs locally. Only public transaction/root queries go to the Ethereum
+node provider. It neither sends a transaction nor uploads your academic files.
+Its code is MIT-licensed and can be inspected or replaced. The underlying
+multiproof is the EAS PrivateData format, independently implemented by EAS and
+OpenZeppelin—not a proprietary LibraUni hash format.
+
+Independent source/reference:
+https://github.com/ethereum-attestation-service/eas-sdk#using-the-privatedata-class
+https://github.com/ethereum-attestation-service/eas-contracts#ethereum
+https://etherscan.io/address/0xA1207F3BBa224E2c9c3c6D5aF63D0eb1582Ce587
+
+Checks: Merkle inclusion of the disclosed records; exact original file bytes;
+wallet signature on the root; successful timestamp(bytes32) transaction to the
+Ethereum mainnet EAS contract from that wallet; canonical block and finality;
+EAS timestamp existence. Preparation/event dates inside records are reported
+metadata. The independently established date is the blockchain commitment date.
+
+Interpretation: “Matches an earlier commitment” does not mean “the claims are
+true”. It does not establish independent authorship, correct answers, assessed
+mastery, a person's real-world identity, accreditation or a complete record of
+all learning. A wallet-linked timestamp is a personal record, not an externally
+issued university credential. Omitted evidence cannot be assessed.
+
+Selective disclosure reveals whole chosen entries/files plus a manifest showing
+preparation time, counts and previous root. The rest stays private. A predecessor
+root links snapshots but does not, by itself, demonstrate that all history was
+included. Earlier snapshots and their original files must be retained.
+
+This is NOT a Blockcerts file and must not be advertised as accepted by the
+Blockcerts Universal Verifier. Future module credentials need a separate issuance,
+issuer-identity, assessment and revocation design.
+
+Private snapshot downloads contain every file and secret proof salt. Do not share
+that full recovery package when you intend selective disclosure. Back up originals
+and proofs: Ethereum stores only a commitment, never a recoverable copy of files.

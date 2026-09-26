@@ -122,3 +122,19 @@ test('journal pagination returns more than one page without dropping entries',as
  await appendEntries(uid,Array.from({length:95},()=>entry),'page-b',db);
  const rows=(await loadRecords(uid,db)).journal;assert.equal(rows.length,205);assert.equal(new Set(rows.map(r=>r.id)).size,205);
 });
+
+test('evidence snapshots restore exactly, reject stale chains and remain owner-only and append-only',async()=>{
+ const assert=(await import('node:assert/strict')).default;
+ const {buildSnapshot}=await import('../src/evidence-data.js');
+ const {saveSnapshot,loadSnapshot,listSnapshots,saveAnchor}=await import('../src/evidence-store.js');
+ const uid='evidence-owner',db=env.authenticatedContext(uid,claims).firestore();
+ const p=buildSnapshot([{id:'test',title:'Synthetic',body:'x'.repeat(140000)}]);
+ assert.deepEqual(await saveSnapshot(uid,p,db),p);assert.deepEqual(await saveSnapshot(uid,p,db),p);
+ assert.deepEqual(await loadSnapshot(uid,p.tree.root.slice(2),db),p);assert.equal((await listSnapshots(uid,db)).length,1);
+ await assert.rejects(saveSnapshot(uid,buildSnapshot([]),db),/newer snapshot/);
+ const next=buildSnapshot([],[],p.tree.root);await saveSnapshot(uid,next,db);
+ const ref=doc(db,'users',uid,'evidence',p.tree.root.slice(2));await assertFails(deleteDoc(ref));await assertFails(setDoc(ref,{root:p.tree.root}));
+ const part=doc(db,'users',uid,'evidence',p.tree.root.slice(2),'parts','0');await assertFails(setDoc(part,{payload:'rewrite'}));
+ for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('intruder').firestore()]){await assertFails(getDoc(doc(other,'users',uid,'evidence',p.tree.root.slice(2))));await assertFails(getDoc(doc(other,'users',uid,'evidence',p.tree.root.slice(2),'parts','0')));}
+ await assertFails(setDoc(doc(db,'users',uid,'evidenceState','main'),{root:p.tree.root,sequence:3,updatedAt:serverTimestamp()}));
+});
