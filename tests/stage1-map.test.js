@@ -115,3 +115,20 @@ test('M101/P101 prerequisite graph has no circular teaching dependency',()=>{
   assert.ok(start(source,sid)+source.find(u=>u.id===sid).hours<=start(target,tid));
  }
 });
+
+import {m102Blocks} from '../curriculum/m102-blocks.js';
+test('M102 blocks reserve full probability coverage within the unchanged budget',()=>{
+ const expected=stage1Map.modules.find(m=>m.code==='LU-M102').outcomes.map(([id])=>id);
+ const seen=new Set(),covered=new Set();
+ for(const b of m102Blocks.blocks){
+  assert.ok(!seen.has(b.id));for(const id of b.requires)assert.ok(seen.has(id));seen.add(b.id);
+  assert.ok(b.pythonHours>=0 && b.pythonHours<=b.hours);
+  for(const id of b.outcomes){assert.ok(expected.includes(id));covered.add(id);}
+  for(const key of ['purpose','scope','boundary','python','evidence','handover'])assert.ok(b[key]?.length);
+ }
+ assert.equal(m102Blocks.blocks.reduce((n,b)=>n+b.hours,0),240);
+ assert.equal(m102Blocks.blocks.reduce((n,b)=>n+b.pythonHours,0),34);
+ assert.deepEqual([...covered].sort(),expected.sort());
+ assert.equal(m102Blocks.blocks.find(b=>b.outcomes.includes('M102-O6')).hours,42);
+ assert.ok(m102Blocks.assessments.find(row=>row[0]==='Final written examination')[2].includes('O6 explicitly required'));
+});

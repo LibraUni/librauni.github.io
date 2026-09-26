@@ -33,3 +33,7 @@ OU SM123, MIT historical mechanics and limited Imperial indexed references remai
 ## Forward work
 
 Review complete P101 unit proposal and the logical pair map. Then M102 blocks and units, followed by A101 revision and later-stage progression audit. Evidence-based OU calendar reference and assessment-week coordination remain outstanding before timetable release. Stronger initial M100 lesson gate remains in force.
+
+## Subsequent decision — 26 September 2026
+
+Learner approved the complete P101 unit map and logical pair check. Canonical version1.0 approved. Calendar scheduling and teaching remain pending. Prior proposal review retained as history.
