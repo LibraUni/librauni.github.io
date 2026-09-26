@@ -4,12 +4,12 @@ const ranges=[[1,2],[3,4],[5,6],[7,9],[10,11],[12,14],[15,16],[18,20],[21,22],[2
 const assessment=(id,title,type,startWeek,endWeek,hours,requires,description)=>({id,title,type,startWeek,endWeek,hours,requires,description,available:false});
 export const modules=[{
  code:m100.code,title:m100.title,path:'/programme/bridge/lu-m100/',credits:30,
- scheduleVersion:2,weeks:30,enrollable:false,outsideDegree:true,
+ scheduleVersion:2,weeks:30,enrollable:true,outsideDegree:true,
  durationSource:'https://www.open.ac.uk/library/digital-archive/module/xcri:MU123/',
  durationNote:'30 study weeks, using the documented MU123 pattern as the foundation-module reference. OU lengths vary by presentation; this is an original LibraUni timetable, not a copy of an OU calendar. No holiday dates are assumed: add breaks by moving remaining work. Block 2 workload estimates updated 25 September 2026: U06 22h, U07 20h, U08 28h; event IDs and all date windows are unchanged.',
  events:[
   {id:'orientation',type:'support',title:'Orientation & computing setup',startWeek:1,endWeek:1,hours:6,requires:[],description:'Guided VS Code/Python/Jupyter setup (3h), first notebook and save/reopen/clean rerun/backup practice (1h), study navigation and files (1h), non-graded readiness (1h). Only very basic Python familiarity is assumed.',available:false},
-  ...m100.units.map((u,i)=>({...u,block:m100.blocks.find(b=>b.units.includes(u.id)),type:'unit',startWeek:ranges[i][0],endWeek:ranges[i][1],description:u.scope,available:false,outline:'#'+u.id})),
+  ...m100.units.map((u,i)=>({...u,block:m100.blocks.find(b=>b.units.includes(u.id)),type:'unit',startWeek:ranges[i][0],endWeek:ranges[i][1],description:u.scope,available:false,resources:u.id==='U01'?[{title:'Lesson 1 · all six sections',href:'/learn/preparation/m100/b01/u01/l01/',available:true}]:[],outline:'#'+u.id})),
   assessment('TMA01','TMA 01 · Numbers and algebra','TMA',9,9,6,['U01','U02','U03','U04'],'Tutor-marked assignment. Explain calculations, algebra and checks; handwritten work may be scanned to PDF.'),
   assessment('TMA02','TMA 02 · Functions and graphs','TMA',17,17,6,['U05','U06','U07'],'Tutor-marked assignment assessing reasoning and mathematical communication.'),
   assessment('TMA03','TMA 03 · Geometry, functions and vectors','TMA',25,25,6,['U08','U09','U10'],'Tutor-marked assignment with explained methods and conclusions.'),

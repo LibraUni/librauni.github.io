@@ -188,3 +188,8 @@ M100 U01-L01 S01–S03 are published (105 minutes total). S03 source content/m10
 ## Complete Lesson 1 release — 26 September 2026
 
 User authorised S04–S06 together, followed by whole-lesson review. All six M100 U01-L01 sections are now published (240 minutes), with downloadable public blank practice notebook /notebooks/m100-u01-l01-arithmetic.ipynb. Review: website/docs/m100-lesson1-release.md (docs/ within website). Sources: content/m100-u01-l01-s01.html through s06.html. Unit1 and subsequent lessons remain incomplete. Next review enrolment readiness separately before opening the formal start; no automatic enrolment or learner records. The curriculum next step is the full L02 section blueprint under existing gates. The logging pause remains until actual academic activity begins.
+
+
+## M100 enrolment opened — 27 September 2026
+
+Following the learner's request after complete Lesson1 publication, LU-M100 is enrollable in the existing private planner. Start-date selection and final Enrol action belong to the learner; none was chosen by the tutor. Incremental-release status is explicit: Lesson1 ready, later teaching and assessment tasks forthcoming. U01 links Lesson1 as an available resource while its whole-unit available/completion gate stays false. Full30-week/300-hour baseline, IDs, assessment windows and schema remain unchanged. Calendar targets for unpublished work can be adjusted manually. Academic logging resumes only for actual learning, not enrolment setup. No learner record or academic log is created by this configuration change.
