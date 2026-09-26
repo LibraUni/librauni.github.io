@@ -9,3 +9,7 @@
 .ethereum-feature img{display:block;width:100%;height:auto}
 .ethereum-feature figcaption{font-size:.75rem;line-height:1.4;margin-top:.5rem;color:var(--muted)}
 @media(max-width:600px){.ethereum-feature{grid-template-columns:1fr}.ethereum-feature figure{width:112px;justify-self:center}}
+
+.evidence-category-guide{margin:1rem 0}
+.evidence-category-guide dt{font-weight:700;margin-top:1rem}
+.evidence-category-guide dd{margin:.25rem 0 .75rem;line-height:1.6}
