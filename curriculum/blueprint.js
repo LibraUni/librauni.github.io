@@ -3,8 +3,8 @@ export const blueprint = {
  date:'25 September 2026',
  inventory:[
  ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','Map every lesson across B01 U01–U04, then every section of its opening lesson. Preserve B02/B03 unit outlines and review their handovers.'],
- ['M101 · Semester 1','Module-level map and four blocks approved; complete 13-unit proposal published. Lessons absent.','Review M101 units, then define P101 and reconcile named handovers and timing.'],
- ['P101 · Semester 1','Role and credits confirmed; module-level outcome/boundary/workload map approved. Blocks and units absent.','Define after the first M101 proposal; reconcile the pair before approval. Allocate required computing and measurement foundations even for learners who do not take M100.'],
+ ['M101 · Semester 1','Module-level map and four blocks approved; complete 13-unit blueprint approved. Lessons absent.','Define P101 and reconcile named handovers and timing.'],
+ ['P101 · Semester 1','Role and credits confirmed; module-level outcome/boundary/workload map approved. Four blocks proposed; units absent.','Review P101 blocks, then define its units and reconcile the pair. Allocate required computing and measurement foundations even for learners who do not take M100.'],
  ['M102 · Semester 2','Role and credits confirmed; module-level outcome/boundary/workload map approved. Blocks and units absent.','Define mathematical progression from M101 and co-requisites needed by A101 and Stage 2.'],
  ['A101 · Semester 2','Ten provisional units; module-level handovers and boundaries approved; detailed units remain draft. 240 unit hours plus 60 other hours; no defined blocks.','Review inherited scopes for Semester 2 depth, add blocks, replace general entry statements with outcome-level dependencies and reconcile with M102.'],
  ['Stage 2','Proposed P201 (60), M201 (30), X201 (30): 120 credits. Broad module roles only.','Map provisional prerequisites, core subject ownership and assessment roles. Sketch blocks where needed to test capacity and resolve coverage gaps.'],

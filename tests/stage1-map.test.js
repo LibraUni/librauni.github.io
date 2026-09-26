@@ -54,3 +54,20 @@ test('M101 complete unit proposal reconciles each parent budget and has ordered 
  const assessed=new Set(m101Units.units.filter(u=>['B01','B02','B03'].includes(u.block)).flatMap(u=>u.outcomes));
  assert.deepEqual([...assessed].sort(),stage1Map.modules.find(m=>m.code==='LU-M101').outcomes.map(([id])=>id).sort());
 });
+
+import {p101Blocks} from '../curriculum/p101-blocks.js';
+test('P101 block proposal preserves workload, ordered prerequisites and all approved outcomes',()=>{
+ const expected=stage1Map.modules.find(m=>m.code==='LU-P101').outcomes.map(([id])=>id);
+ const seen=new Set(),covered=new Set();
+ for(const b of p101Blocks.blocks){
+  assert.ok(!seen.has(b.id));
+  for(const id of b.requires)assert.ok(seen.has(id));
+  seen.add(b.id);
+  assert.ok(b.pythonHours>=0 && b.pythonHours<=b.hours);
+  for(const id of b.outcomes){assert.ok(expected.includes(id));covered.add(id);}
+  for(const k of ['purpose','scope','boundary','python','practical','evidence','handover'])assert.ok(b[k]?.length);
+ }
+ assert.equal(p101Blocks.blocks.reduce((n,b)=>n+b.hours,0),240);
+ assert.equal(p101Blocks.blocks.reduce((n,b)=>n+b.pythonHours,0),48);
+ assert.deepEqual([...covered].sort(),expected.sort());
+});

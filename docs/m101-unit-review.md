@@ -39,3 +39,7 @@ Capacity concerns: B01 is dense and must remain elementary; U05/U09 require enou
 ## Forward handover
 
 Review the complete M101 unit proposal with the learner. Then design P101 blocks and units and reconcile the concurrent pair. Later proceed M102, A101 and later-stage progression review, then M100 B01 lessons and opening-lesson sections. No enrolment, calendar, private progress or academic log is changed by this design work.
+
+## Subsequent decision — 26 September 2026
+
+The learner approved the complete unit proposal. Canonical unit blueprint is now v1.0 approved. Teaching remains unreleased; P101 pair sequencing and later blueprint gates remain open. Proposal review above is retained as history.
