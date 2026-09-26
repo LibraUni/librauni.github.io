@@ -1,5 +1,5 @@
-// Proposed blocks; no units, lessons, schedules or enrolments are created here.
-export const p101Blocks={version:'0.1',date:'26 September 2026',status:'Block structure proposed for review',
+// Approved blocks; complete unit proposal maintained separately.
+export const p101Blocks={version:'1.0',date:'26 September 2026',status:'Block structure approved',
  blocks:[
  {id:'B01',title:'Measure, model and compute',hours:60,pythonHours:20,requires:[],outcomes:['P101-O1','P101-O5','P101-O6','P101-O7'],
  purpose:'Establish how a physical claim is constructed, measured and tested, while supplying the shared degree computing foundation.',

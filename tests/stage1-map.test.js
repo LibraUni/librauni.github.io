@@ -71,3 +71,47 @@ test('P101 block proposal preserves workload, ordered prerequisites and all appr
  assert.equal(p101Blocks.blocks.reduce((n,b)=>n+b.pythonHours,0),48);
  assert.deepEqual([...covered].sort(),expected.sort());
 });
+
+import {p101Units} from '../curriculum/p101-units.js';
+test('P101 units reconcile blocks, outcomes and assessment envelopes',()=>{
+ const seen=new Set(),knownMath=new Set(m101Units.units.map(u=>u.id));
+ for(const u of p101Units.units){
+  assert.ok(!seen.has(u.id));
+  for(const id of u.requires)assert.ok(seen.has(id));
+  for(const id of u.mathRequires)assert.ok(knownMath.has(id));
+  seen.add(u.id);
+  const parent=p101Blocks.blocks.find(b=>b.id===u.block);assert.ok(parent);
+  for(const id of u.outcomes)assert.ok(parent.outcomes.includes(id));
+  assert.ok(u.pythonHours>=0 && u.pythonHours<=u.hours);
+  for(const key of ['scope','python','practical','evidence','boundary','handover'])assert.ok(u[key]?.length);
+ }
+ for(const b of p101Blocks.blocks){
+  const us=p101Units.units.filter(u=>u.block===b.id);
+  assert.equal(us.reduce((n,u)=>n+u.hours,0),b.hours);
+  assert.equal(us.reduce((n,u)=>n+u.pythonHours,0),b.pythonHours);
+  assert.deepEqual([...new Set(us.flatMap(u=>u.outcomes))].sort(),[...b.outcomes].sort());
+ }
+ const outcomes=stage1Map.modules.find(m=>m.code==='LU-P101').outcomes.map(([id])=>id);
+ for(const a of p101Units.assessments){
+  assert.ok(seen.has(a.after));for(const id of a.units)assert.ok(seen.has(id));
+  for(const id of a.outcomes)assert.ok(outcomes.includes(id));
+ }
+ assert.equal(p101Units.assessments.filter(a=>a.id.startsWith('TMA')).reduce((n,a)=>n+a.hours,0),18);
+ assert.equal(p101Units.ema.reduce((n,[,h])=>n+h,0),p101Units.assessments.find(a=>a.id==='EMA').hours);
+ assert.deepEqual([...p101Units.assessments.find(a=>a.id==='EMA').outcomes].sort(),outcomes.sort());
+});
+test('M101/P101 prerequisite graph has no circular teaching dependency',()=>{
+ const graph=new Map();
+ for(const [prefix,us] of [['M',m101Units.units],['P',p101Units.units]])for(const u of us){
+  graph.set(prefix+u.id,[...u.requires.map(id=>prefix+id),...(u.mathRequires||[]).map(id=>'M'+id)]);
+ }
+ for(const id of ['U02','U03','U04'])graph.get('M'+id).push('PU01');
+ for(const id of ['U05','U06','U11'])graph.get('M'+id).push('PU03');
+ const visiting=new Set(),done=new Set();
+ function visit(id){assert.ok(graph.has(id));assert.ok(!visiting.has(id),`Dependency cycle at ${id}`);if(done.has(id))return;visiting.add(id);graph.get(id).forEach(visit);visiting.delete(id);done.add(id);}
+ for(const id of graph.keys())visit(id);
+ const start=(us,id)=>us.slice(0,us.findIndex(u=>u.id===id)).reduce((n,u)=>n+u.hours,0);
+ for(const [source,sid,target,tid] of [[p101Units.units,'U01',m101Units.units,'U02'],[p101Units.units,'U03',m101Units.units,'U05'],[m101Units.units,'U02',p101Units.units,'U04'],[m101Units.units,'U05',p101Units.units,'U07'],[m101Units.units,'U09',p101Units.units,'U11']]){
+  assert.ok(start(source,sid)+source.find(u=>u.id===sid).hours<=start(target,tid));
+ }
+});

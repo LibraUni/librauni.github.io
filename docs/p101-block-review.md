@@ -27,3 +27,7 @@ Each block names an investigation, deliverable and validation. Free documented d
 ## Handover
 
 Learner review of four blocks and budgets, then complete P101 unit blueprint and concurrent-pair checks. M101 unit approval recorded separately; no lesson, enrolment, calendar or academic progress event created. Tests verify structural references and budgets, not educational completeness.
+
+## Subsequent decision — 26 September 2026
+
+Learner approved all four blocks and allocations. Canonical block version1.0 is approved; complete unit proposal0.1 awaits review. See p101-unit-review.md; prior proposal review retained as history.
