@@ -1,8 +1,8 @@
 // Original lesson blueprint; no teaching sections or assessed questions released.
 export const block1Lessons = {
-  "version": "0.1",
+  "version": "1.0",
   "date": "26 September 2026",
-  "status": "Complete Block 1 lesson blueprint — proposed for review",
+  "status": "Complete Block 1 lesson blueprint — approved",
   "block": "B01",
   "hours": 80,
   "pythonHours": 14,

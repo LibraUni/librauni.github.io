@@ -35,3 +35,7 @@ The learner-approved programme architecture and published MIT/Imperial coverage 
 ## Disposition
 
 Complete lesson blueprint proposed for review. Sections and actual teaching remain uncreated. Dense areas to watch during section design: U02-L04 scaling plus checkpoint; U03-L04 condition syntax; U04-L05 inequalities plus loops. If required practice does not fit, revise visibly within parent budgets before release. Next: after review, all sections of U01-L01, then incremental authoring with verified feedback and visuals.
+
+## Approval — 26 September 2026
+
+All19 B01 lesson blueprints approved as version1.0. Budgets and handovers are unchanged. The complete opening-lesson section plan is now proposed; actual teaching remains pending.
