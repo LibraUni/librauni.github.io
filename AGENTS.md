@@ -183,3 +183,8 @@ Correction from the learner: the intended threshold is M100 Lesson 1 (U01-L01), 
 ## Teaching release checkpoint — Section 3, 26 September 2026
 
 M100 U01-L01 S01–S03 are published (105 minutes total). S03 source content/m100-u01-l01-s03.html; review docs/m100-third-section-release.md. Next author S04 under the approved six-section plan. Lesson integration remains due after S06; enrolment readiness is to be reviewed when Lesson1 is fully populated, without waiting for all of Unit1. Whole-unit integration still applies as its remaining lessons are authored. Follow the explicit learner logging pause above.
+
+
+## Complete Lesson 1 release — 26 September 2026
+
+User authorised S04–S06 together, followed by whole-lesson review. All six M100 U01-L01 sections are now published (240 minutes), with downloadable public blank practice notebook /notebooks/m100-u01-l01-arithmetic.ipynb. Review: website/docs/m100-lesson1-release.md (docs/ within website). Sources: content/m100-u01-l01-s01.html through s06.html. Unit1 and subsequent lessons remain incomplete. Next review enrolment readiness separately before opening the formal start; no automatic enrolment or learner records. The curriculum next step is the full L02 section blueprint under existing gates. The logging pause remains until actual academic activity begins.
