@@ -169,3 +169,28 @@ test('A101 revised blocks preserve unit identities and total budget without trea
  assert.equal(a101Blocks.blocks.reduce((n,b)=>n+b.pythonHours,0),78);
  assert.deepEqual([...outcomes].sort(),[...known].sort());
 });
+
+test('A101 revised units fit approved blocks, use completed Semester 1 prerequisites and preserve assessment placement',()=>{
+ const prior={M101:new Set(m101Units.units.map(u=>u.id)),P101:new Set(p101Units.units.map(u=>u.id))};
+ const seen=new Set();
+ for(const u of a101.units){
+  assert.ok(!seen.has(u.id));for(const id of u.requires)assert.ok(seen.has(id));seen.add(u.id);
+  const b=a101Blocks.blocks.find(b=>b.id===u.block);assert.ok(b.units.includes(u.id));
+  for(const id of u.outcomes)assert.ok(b.outcomes.includes(id));
+  for(const ref of u.entryUnits){const [code,id]=ref.split(':');assert.ok(prior[code]?.has(id),ref);}
+  assert.ok(u.pythonHours>0 && u.pythonHours<u.hours);
+  assert.ok(u.validation && u.handover);
+ }
+ for(const b of a101Blocks.blocks){
+  const units=a101.units.filter(u=>u.block===b.id);
+  assert.equal(units.reduce((n,u)=>n+u.hours,0),b.hours);
+  assert.equal(units.reduce((n,u)=>n+u.pythonHours,0),b.pythonHours);
+  assert.deepEqual([...new Set(units.flatMap(u=>u.outcomes))].sort(),[...b.outcomes].sort());
+ }
+ const tma3=a101.assessments.find(a=>a.id==='TMA03');assert.ok(tma3.requires.includes('U08'));assert.ok(!tma3.requires.includes('U09'));
+ assert.equal(a101.assessments.filter(a=>!a.included).reduce((n,a)=>n+a.hours,0),36);
+ assert.equal(a101.assessments.filter(a=>a.included).reduce((n,a)=>n+a.hours,0),3);
+ assert.equal(m101Units.units.length+p101Units.units.length+m102Units.units.length+a101.units.length,50);
+ assert.equal([...m101Units.units,...p101Units.units,...m102Units.units,...a101.units].reduce((n,u)=>n+u.hours,0),960);
+ assert.equal([...m101Units.units,...p101Units.units,...m102Units.units,...a101.units].reduce((n,u)=>n+u.pythonHours,0),190);
+});

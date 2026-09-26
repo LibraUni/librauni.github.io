@@ -1,84 +1,509 @@
-// Original design preview; no assessment questions or learner records.
-export const a101={code:'LU-A101',title:'Exploring astronomy through computation',version:'0.2',credits:30,
- purpose:'Learn how astronomical observations become evidence: investigate images, spectra, changing brightness and stellar catalogues through reproducible, critically checked computation.',
- entry:'Semester 2, alongside M102 Mathematics for physics II. Build on the mathematical, Python and physical reasoning developed in Semester 1 M101 and P101. Exact prerequisite outcomes and any M102 co-requisites will be mapped when those modules are designed. M100 is optional preparation before Stage 1, not a compulsory module or concurrent partner.',
- outcomes:[
- ['A1','Place observations in context','Distinguish object, distance, look-back time, apparent position and a physical interpretation; explain the limits of a sky view.'],
- ['A2','Understand a measurement','Explain how detectors, passbands, background, sampling and selection affect an image, spectrum or light curve.'],
- ['A3','Use introductory astronomical models','Apply supplied relations for flux, spectral shift, transit depth, parallax and magnitude with units, assumptions and plausibility checks.'],
- ['A4','Investigate astronomical data','Form a bounded question, select and document data, compare representations or model predictions, and distinguish evidence from a stronger unsupported claim.'],
- ['A5','Own the computation','Modify and explain a small Python investigation, validate results independently, rerun it cleanly and audit any AI assistance.'],
- ['A6','Communicate limits and implications','Present labelled figures, justified conclusions and sources; discuss uncertainty, selection effects and responsible use of observations.'],
- ],
- units:[
- {id:'U01',title:'Reading the sky as evidence',hours:18,requires:[],outcomes:['A1','A2','A6'],
- scope:'Objects and apparent patterns; Solar System, stars and galaxies; observation versus explanation; apparent daily motion and a qualitative Earth–sky model; images as processed measurements. Introduce observation logs, provenance and claims supported by evidence.',
- activity:'Compare a small supplied set of sky views and annotated observations; construct an evidence log distinguishing observation, interpretation and unanswered questions.',
- computing:'Orient to the astronomical dataset and notebook structure; apply established Python skills to a small provenance check.',
- evidence:'Annotated evidence log and explanation of why a photograph is not a map of physical distances.',boundary:'No spherical trigonometry, telescope ownership or physical observing requirement. Historical changes in sky models support evidence reasoning, not a survey of all astronomy.'},
- {id:'U02',title:'Scales, signals and astronomical records',hours:18,requires:['U01'],outcomes:['A1','A2','A5','A6'],
- scope:'How a catalogue record describes an observation: identifiers, quantities, units, missing information and provenance. Contrast an angular view with physical size using diagrams and supplied conversion tables. Separate signal, instrument and interpretation.',
- activity:'Audit a small table of observations and compare numerical scales using a provided unit legend; flag unsupported comparisons and trace each value to a source.',
- computing:'Audit identifiers, units and missing values using readable Python; independently check selected conversions and numerical scales.',
- evidence:'A reproducible arithmetic check and a short data-provenance audit.',boundary:'Introduce astronomical data conventions without repeating elementary arithmetic or Python foundations. Magnitudes are developed with their physical interpretation in U09.'},
- {id:'U03',title:'Light, colour and the information we receive',hours:26,requires:['U02'],outcomes:['A1','A2','A3','A6'],
- scope:'Wavelength, frequency and the electromagnetic spectrum; photons as a qualitative model; passbands and false colour; continuum versus lines; what absorption and emission can indicate. Explain the supplied c = wavelength × frequency relation and its scope without deriving electromagnetism.',
- activity:'Compare a few supplied multi-band images and spectra; calculate selected wavelengths/frequencies and separate measured colour from an inferred temperature.',
- computing:'Compare wavelength and frequency representations with scalar and array calculations; explain the relation to passbands and check units.',
- evidence:'A wavelength calculation, annotated spectrum and justified comparison across passbands.',boundary:'No Planck-law derivation, quantum transitions calculation or black-body fitting. P101 and later thermal/quantum study own the deeper explanation.'},
- {id:'U04',title:'Positions, images and observing choices',hours:28,requires:['U03'],outcomes:['A1','A2','A4','A6'],
- scope:'Reading right ascension and declination as labelled coordinates; epoch and field of view; pixels, image scale, background, saturation and resolution; exposure choices and selection bias. Distinguish angular separation from physical distance.',
- activity:'Compare small image cutouts with provided scale bars and metadata; plan an observation to answer a question and explain which instrument limitations matter.',
- computing:'Inspect small image arrays and metadata using established Python tools; connect pixel scale and display choices to a measurement plan.',
- evidence:'A measurement plan, an image-scale calculation and a critique of a misleading display.',boundary:'No coordinate transformations, spherical geometry or hands-on instrument certification. Observatory location, access and environmental effects are discussed within the unit hours.'},
- {id:'U05',title:'From detector counts to a defensible graph',hours:28,requires:['U04'],outcomes:['A2','A3','A4','A5','A6'],
- scope:'Small tables and image arrays; source and background counts; supplied calibration factors; exposure normalisation; uncertainty as a stated range and quality flags. Teach an elementary aperture-sum model and its assumptions.',
- activity:'Measure a source from a tiny image cutout or equivalent pixel table, change the background region, and explain the effect on the reported signal.',
- computing:'NumPy arrays, supplied CSV files and labelled Matplotlib plots; compare an array sum with a hand calculation on a small subset. Inspect a curated FITS header through provided support, without needing to write a FITS reader.',
- evidence:'A calibration notebook with independent arithmetic checks, figures and a limitations paragraph.',boundary:'No error propagation, least-squares theory or automated source-extraction pipeline. The data are small enough for local study; raw full survey processing is unnecessary.'},
- {id:'U06',title:'Spectra as measurements of change',hours:30,requires:['U05'],outcomes:['A2','A3','A4','A5','A6'],
- scope:'Line identification from supplied references; wavelength calibration; observed versus reference wavelength; the small-shift Doppler approximation with explicit assumptions. Compare line locations and test how sampling or a mistaken line identity changes the answer.',
- activity:'Measure shifts in curated spectra, compare two plausible identifications and explain what extra evidence would distinguish them.',
- computing:'Functions for scalar or array calculations, simple tests, plots and supplied measurement ranges. Introduce selected Astropy units only as an explicit checking aid after hand calculations.',
- evidence:'An explained spectral-shift notebook with a limiting-case check and a defended interpretation.',boundary:'No relativistic derivation, stellar-atmosphere modelling or claim that every redshift is a local Doppler velocity. Galactic dynamics and cosmology remain later work.'},
- {id:'U07',title:'Changing light: variability and transits',hours:20,requires:['U06'],outcomes:['A2','A3','A4','A5','A6'],
- scope:'Time stamps, cadence, gaps, repeated features and normalised brightness. Infer a period from identifiable repeated events; use a supplied box-transit model and radius-ratio relation with stated idealisations. Compare a transit candidate with alternative explanations.',
- activity:'Investigate a small curated TESS light curve, inspect the effect of a gap or flagged point and test whether the observations support the proposed interpretation.',
- computing:'Plot and modify a simple box model using functions and conditionals; check depth and period against selected data by hand. AI suggestions may be reviewed after an independent attempt, with changes and checks recorded.',
- evidence:'A light-curve argument with a reproducible plot, model assumptions and at least one plausible confounder.',boundary:'Periodogram theory, advanced orbital integration and a claim to have confirmed a new planet are outside this introductory investigation.'},
- {id:'U08',title:'Distance from geometry',hours:22,requires:['U07'],outcomes:['A1','A3','A4','A5','A6'],
- scope:'Parallax geometry, arcseconds, parsecs and inverse distance; proper motion versus parallax. Explain when inverse-parallax estimates are useful and why noisy, zero or negative measurements cannot be blindly inverted.',
- activity:'Compare a geometry simulation with a small high-quality Gaia subset; test scale and limiting behaviour, then inspect deliberately unsuitable records.',
- computing:'Use radians and triangle reasoning before a supplied catalogue conversion; annotate rejection criteria. Check library conversions against a hand-worked case.',
- evidence:'A labelled parallax diagram, distance estimate and explanation of selection effects.',boundary:'No Bayesian distance inference, full astrometric solution or three-dimensional orbital reconstruction. Logarithmic distance modulus waits until U09.'},
- {id:'U09',title:'Stellar populations: patterns and explanations',hours:30,requires:['U08'],outcomes:['A1','A2','A3','A4','A5','A6'],
- scope:'Flux versus luminosity, inverse-square scaling, apparent and absolute magnitude, distance modulus and colour–magnitude diagrams. Teach the supplied magnitude definitions. Compare selected nearby/cluster samples; introduce extinction, binaries and completeness as confounders. Relate observed populations to qualitative stellar evolution.',
- activity:'Construct a colour–magnitude diagram from curated Gaia data, vary a documented quality cut and compare the result with a supplied reference population.',
- computing:'Logarithms, clean catalogue tables and labelled plots; test selected magnitude differences by hand. Review a proposed code change against scientific and data-selection requirements.',
- evidence:'A population-comparison notebook with reproducible selection, checks and qualified conclusions.',boundary:'A colour–magnitude diagram is not automatically a theoretical HR diagram. No independent derivation of stellar structure, ages or detailed evolutionary tracks; those belong to A301.'},
- {id:'U10',title:'A small investigation with a defensible conclusion',hours:20,requires:['U09'],outcomes:['A1','A2','A3','A4','A5','A6'],
- scope:'Synthesis of existing tools: formulate a bounded question, compare observations with a supplied model, describe variation and limitations, and justify a reproducible workflow. Place the result in the wider astronomical picture, distinguishing established evidence from open questions.',
- activity:'Rehearse a small investigation using one previously studied data family and peer-style tutor critique. Discuss how observational constraints relate to questions about stars, planetary systems and galaxies without adding new technical cosmology.',
- computing:'Clean rerun, source and dependency record, labelled figures and an assistance log. A bounded agent may suggest a refactor; the learner must inspect and verify it. No paid agent is required.',
- evidence:'Formative investigation plan and method defence, distinct from the separately budgeted EMA.',boundary:'Use the earlier A101 investigations and Semester 1 preparation. This formative synthesis is distinct from the separately budgeted EMA.'},
- ],
- assessments:[
- {id:'ICMA41',name:'iCMA 41',type:'iCMA',hours:1,included:true,requires:['U01','U02'],outcomes:['A1','A2'],evidence:'Classify observation versus inference and interpret a catalogue record; feedback explains errors.'},
- {id:'TMA01',name:'TMA 01 · Observation and evidence',type:'TMA',hours:6,requires:['U01','U02'],outcomes:['A1','A2','A5','A6'],evidence:'Evidence log, provenance critique and a learner-written numerical check.'},
- {id:'ICMA42',name:'iCMA 42',type:'iCMA',hours:1,included:true,requires:['U03','U04','U05'],outcomes:['A2','A3'],evidence:'Interpret wavelength, image scale and calibration choices.'},
- {id:'TMA02',name:'TMA 02 · Measuring light',type:'TMA',hours:6,requires:['U03','U04','U05'],outcomes:['A2','A3','A4','A5','A6'],evidence:'Four-hour calibration notebook plus two-hour written interpretation, including an independent hand check.'},
- {id:'TMA03',name:'TMA 03 · Signals and distance',type:'TMA',hours:6,requires:['U06','U07','U08'],outcomes:['A1','A2','A3','A4','A5','A6'],evidence:'Short spectrum/light-curve critique and parallax calculation; two hours for notebook evidence and four for reasoned responses. U09 material is not assessed here.'},
- {id:'ICMA43',name:'iCMA 43',type:'iCMA',hours:1,included:true,requires:['U09'],outcomes:['A1','A3','A6'],evidence:'Interpret a magnitude difference and population diagram without overstating the evidence.'},
- {id:'EMA-FINAL',name:'EMA · Astronomical investigation and defence',type:'EMA',hours:18,requires:['U01','U02','U03','U04','U05','U06','U07','U08','U09','U10'],outcomes:['A1','A2','A3','A4','A5','A6'],evidence:'One submission: reproducible investigation notebook (10h), written interpretation and handwritten/scanned mathematical checks (5h, including scan checks), then preparation and tutor defence (3h). Include a short transfer/check task so a chosen project cannot conceal an unassessed outcome.'},
- ],
+// Revised Semester 2 proposal; IDs retained, no teaching or schedules released.
+export const a101={
+  "code": "LU-A101",
+  "title": "Exploring astronomy through computation",
+  "version": "0.3",
+  "credits": 30,
+  "purpose": "Learn how astronomical observations become evidence: investigate images, spectra, changing brightness and stellar catalogues through reproducible, critically checked computation.",
+  "entry": "Semester 2 alongside M102. Required work builds on M101 and P101: unit-specific links below identify mathematical, measurement, light and computing readiness. No required activity depends on unfinished M102 material. M100 remains optional preparation outside the degree.",
+  "outcomes": [
+    [
+      "A1",
+      "Place observations in context",
+      "Distinguish object, distance, look-back time, apparent position and a physical interpretation; explain the limits of a sky view."
+    ],
+    [
+      "A2",
+      "Understand a measurement",
+      "Explain how detectors, passbands, background, sampling and selection affect an image, spectrum or light curve."
+    ],
+    [
+      "A3",
+      "Use introductory astronomical models",
+      "Apply supplied relations for flux, spectral shift, transit depth, parallax and magnitude with units, assumptions and plausibility checks."
+    ],
+    [
+      "A4",
+      "Investigate astronomical data",
+      "Form a bounded question, select and document data, compare representations or model predictions, and distinguish evidence from a stronger unsupported claim."
+    ],
+    [
+      "A5",
+      "Own the computation",
+      "Modify and explain a small Python investigation, validate results independently, rerun it cleanly and audit any AI assistance."
+    ],
+    [
+      "A6",
+      "Communicate limits and implications",
+      "Present labelled figures, justified conclusions and sources; discuss uncertainty, selection effects and responsible use of observations."
+    ]
+  ],
+  "units": [
+    {
+      "id": "U01",
+      "title": "Reading the sky as evidence",
+      "hours": 14,
+      "requires": [],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A5",
+        "A6"
+      ],
+      "scope": "Objects and apparent patterns; Solar System, stars and galaxies; observation versus explanation; apparent daily motion and a qualitative Earth–sky model; images as processed measurements. Introduce observation logs, provenance and claims supported by evidence.",
+      "activity": "Compare a small supplied set of sky views and annotated observations; construct an evidence log distinguishing observation, interpretation and unanswered questions.",
+      "computing": "Apply established notebook skills to a small source/provenance comparison; save reproducible links and metadata. No Python installation or beginner tutorial.",
+      "evidence": "Annotated evidence log and explanation of why a photograph is not a map of physical distances.",
+      "boundary": "No spherical trigonometry, telescope ownership or physical observing requirement. Historical changes in sky models support evidence reasoning, not a survey of all astronomy.",
+      "pythonHours": 3,
+      "block": "B01",
+      "entryUnits": [
+        "P101:U01",
+        "P101:U02",
+        "P101:U03"
+      ],
+      "validation": "Classify each claim as observation or interpretation; check that a sky image does not determine physical depth. Deliver a brief annotated evidence log.",
+      "handover": "Provides observation/inference conventions for U02–U10; TMA01 samples A1/A2/A6."
+    },
+    {
+      "id": "U02",
+      "title": "Scales, signals and astronomical records",
+      "hours": 16,
+      "requires": [
+        "U01"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A5",
+        "A6"
+      ],
+      "scope": "Catalogue identifiers, quantities, units, missing values, epochs and provenance. Relate angular and physical scale with diagrams, explicit small-angle assumptions and checked conversions; distinguish source, instrument and interpretation.",
+      "activity": "Audit a small table of observations and compare numerical scales using a provided unit legend; flag unsupported comparisons and trace each value to a source.",
+      "computing": "Audit identifiers, units and missing values using readable Python; independently check selected conversions and numerical scales.",
+      "evidence": "A reproducible arithmetic check and a short data-provenance audit.",
+      "boundary": "Introduce astronomical data conventions without repeating elementary arithmetic or Python foundations. Magnitudes are developed with their physical interpretation in U09.",
+      "pythonHours": 5,
+      "block": "B01",
+      "entryUnits": [
+        "M101:U01",
+        "P101:U03"
+      ],
+      "validation": "Check units and one conversion by hand, trace a record to its source and test missing/invalid entries. Deliver a catalogue audit and reproducible notebook.",
+      "handover": "Provides provenance conventions for all investigations; iCMA41 is included here (1h). TMA01 follows U02."
+    },
+    {
+      "id": "U03",
+      "title": "Light, colour and the information we receive",
+      "hours": 22,
+      "requires": [
+        "U02"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A3",
+        "A5",
+        "A6"
+      ],
+      "scope": "Retrieve P101 wavelength/frequency and photon-energy relations, then develop astronomical passbands, false colour, continuum versus lines, absorption/emission interpretation and observational limits. Explain why colour alone does not uniquely determine temperature.",
+      "activity": "Compare a few supplied multi-band images and spectra; calculate selected wavelengths/frequencies and separate measured colour from an inferred temperature.",
+      "computing": "Compare wavelength and frequency representations with scalar and array calculations; explain the relation to passbands and check units.",
+      "evidence": "A wavelength calculation, annotated spectrum and justified comparison across passbands.",
+      "boundary": "No Planck-law derivation, quantum transitions calculation or black-body fitting. P101 and later thermal/quantum study own the deeper explanation.",
+      "pythonHours": 6,
+      "block": "B02",
+      "entryUnits": [
+        "P101:U10",
+        "P101:U13"
+      ],
+      "validation": "Check a wavelength/frequency/photon-energy case against P101 reasoning; compare passband labels before interpreting colours. Deliver annotated multi-band/spectral figures.",
+      "handover": "Provides passband/spectral interpretation for imaging U04/U05 and spectra U06; TMA02 includes physical interpretation."
+    },
+    {
+      "id": "U04",
+      "title": "Positions, images and observing choices",
+      "hours": 24,
+      "requires": [
+        "U03"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Reading right ascension and declination as labelled coordinates; epoch and field of view; pixels, image scale, background, saturation and resolution; exposure choices and selection bias. Distinguish angular separation from physical distance.",
+      "activity": "Compare small image cutouts with provided scale bars and metadata; plan an observation to answer a question and explain which instrument limitations matter.",
+      "computing": "Inspect small arrays, FITS headers and labelled coordinate/epoch metadata with explained Astropy helpers. Compare display choices and physical pixel scale; use a supplied pixel-table fallback for access.",
+      "evidence": "A measurement plan, an image-scale calculation and a critique of a misleading display.",
+      "boundary": "No coordinate transformations, spherical geometry or hands-on instrument certification. Observatory location, access and environmental effects are discussed within the unit hours.",
+      "pythonHours": 7,
+      "block": "B02",
+      "entryUnits": [
+        "M101:U01",
+        "M101:U02",
+        "P101:U02",
+        "P101:U10"
+      ],
+      "validation": "Check pixel-to-angle scale manually; vary display stretch and explain why the measured quantity must not change with cosmetic choices. Deliver image metadata audit and observation plan.",
+      "handover": "Provides measurement choices for aperture work U05; later practical modules deepen instrument handling."
+    },
+    {
+      "id": "U05",
+      "title": "From detector counts to a defensible graph",
+      "hours": 32,
+      "requires": [
+        "U04"
+      ],
+      "outcomes": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Source/background counts, exposure normalisation and supplied calibration factors. Develop an elementary aperture-sum model with assumptions; compare quality flags, repeated values and sensitivity to chosen regions. Distinguish descriptive uncertainty, a supplied measurement range and a formally propagated error.",
+      "activity": "Measure a source from a tiny image cutout or equivalent pixel table, change the background region, and explain the effect on the reported signal.",
+      "computing": "NumPy arrays, supplied CSV files and labelled Matplotlib plots; compare an array sum with a hand calculation on a small subset. Inspect a curated FITS header through provided support, without needing to write a FITS reader.",
+      "evidence": "A calibration notebook with independent arithmetic checks, figures and a limitations paragraph.",
+      "boundary": "No error propagation, least-squares theory or automated source-extraction pipeline. The data are small enough for local study; raw full survey processing is unnecessary.",
+      "pythonHours": 11,
+      "block": "B02",
+      "entryUnits": [
+        "M101:U08",
+        "M101:U11",
+        "P101:U02",
+        "P101:U03"
+      ],
+      "validation": "Compare a tiny hand-summed aperture/background subset with code; vary the background region and report sensitivity separately from a claimed statistical error bar. Deliver calibration notebook and limitations.",
+      "handover": "Provides calibrated-signal reasoning for U06/U07 and catalogue selection U09; iCMA42 included here (1h), then TMA02."
+    },
+    {
+      "id": "U06",
+      "title": "Spectra as measurements of change",
+      "hours": 28,
+      "requires": [
+        "U05"
+      ],
+      "outcomes": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Line identification from supplied references; wavelength calibration; observed versus reference wavelength; the small-shift Doppler approximation with explicit assumptions. Compare line locations and test how sampling or a mistaken line identity changes the answer.",
+      "activity": "Measure shifts in curated spectra, compare two plausible identifications and explain what extra evidence would distinguish them.",
+      "computing": "Use functions and selected Astropy units to check a spectral-shift measurement, after a hand-worked case. Compare plausible line identities and document wavelength frame/calibration assumptions; no unexplained automated fitting.",
+      "evidence": "An explained spectral-shift notebook with a limiting-case check and a defended interpretation.",
+      "boundary": "No relativistic derivation, stellar-atmosphere modelling or claim that every redshift is a local Doppler velocity. Galactic dynamics and cosmology remain later work.",
+      "pythonHours": 10,
+      "block": "B03",
+      "entryUnits": [
+        "P101:U10",
+        "P101:U13",
+        "M101:U07"
+      ],
+      "validation": "Check zero shift and a hand-worked line; compare two identifications and wavelength sampling effects. Deliver spectral-shift notebook with a qualified physical interpretation.",
+      "handover": "Prepares cross-evidence reasoning in U07 and TMA03 after U08. M102 phase enrichment is optional after M102 U02 only."
+    },
+    {
+      "id": "U07",
+      "title": "Changing light: variability and transits",
+      "hours": 28,
+      "requires": [
+        "U06"
+      ],
+      "outcomes": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Time stamps, cadence, gaps, repeated features and normalised brightness. Infer a period from identifiable repeated events; use a supplied box-transit model and radius-ratio relation with stated idealisations. Compare a transit candidate with alternative explanations.",
+      "activity": "Investigate a small curated TESS light curve, inspect the effect of a gap or flagged point and test whether the observations support the proposed interpretation.",
+      "computing": "Plot, mask and compare a small light curve with a transparent box model. Check cadence, period and depth by hand and show how flags/gaps change the claim. Critique optional AI suggestions only after independent work, recording changes and checks.",
+      "evidence": "A light-curve argument with a reproducible plot, model assumptions and at least one plausible confounder.",
+      "boundary": "Periodogram theory, advanced orbital integration and a claim to have confirmed a new planet are outside this introductory investigation.",
+      "pythonHours": 12,
+      "block": "B03",
+      "entryUnits": [
+        "P101:U08",
+        "M101:U07"
+      ],
+      "validation": "Check a repeated-event interval and depth manually; change a quality mask and inject a known simple model into a labelled synthetic example. Deliver a candidate-versus-confounder argument, not a discovery claim.",
+      "handover": "Provides time-series evidence for TMA03 and the later investigation. M102 numerical-orbit/ODE work is not required; no default enrichment adds hours."
+    },
+    {
+      "id": "U08",
+      "title": "Distance from geometry",
+      "hours": 24,
+      "requires": [
+        "U07"
+      ],
+      "outcomes": [
+        "A1",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Parallax geometry, arcseconds, parsecs and inverse distance; proper motion versus parallax. Explain when inverse-parallax estimates are useful and why noisy, zero or negative measurements cannot be blindly inverted.",
+      "activity": "Compare a geometry simulation with a small high-quality Gaia subset; test scale and limiting behaviour, then inspect deliberately unsuitable records.",
+      "computing": "Use radians and triangle reasoning before a supplied catalogue conversion; annotate rejection criteria. Check library conversions against a hand-worked case.",
+      "evidence": "A labelled parallax diagram, distance estimate and explanation of selection effects.",
+      "boundary": "No Bayesian distance inference, full astrometric solution or three-dimensional orbital reconstruction. Logarithmic distance modulus waits until U09.",
+      "pythonHours": 7,
+      "block": "B04",
+      "entryUnits": [
+        "M101:U01",
+        "M101:U07",
+        "P101:U02"
+      ],
+      "validation": "Check geometric scale and an inverse-parallax example; inspect unsuitable negative/low-quality records and explain why naive inversion fails. Deliver a diagram, selected estimates and selection rationale.",
+      "handover": "Provides distance estimates for U09; TMA03 follows U08 and does not assess U09 population material."
+    },
+    {
+      "id": "U09",
+      "title": "Stellar populations: patterns and explanations",
+      "hours": 32,
+      "requires": [
+        "U08"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Flux versus luminosity, inverse-square scaling, apparent and absolute magnitude, distance modulus and colour–magnitude diagrams. Teach the supplied magnitude definitions. Compare selected nearby/cluster samples; introduce extinction, binaries and completeness as confounders. Relate observed populations to qualitative stellar evolution.",
+      "activity": "Construct a colour–magnitude diagram from curated Gaia data, vary a documented quality cut and compare the result with a supplied reference population.",
+      "computing": "Use established logarithms and arrays to build a colour–magnitude diagram, record source-release identifiers and quality cuts, and inspect a proposed code change against scientific requirements. Supplied background ranges support sensitivity checks without hidden formal inference.",
+      "evidence": "A population-comparison notebook with reproducible selection, checks and qualified conclusions.",
+      "boundary": "A colour–magnitude diagram is not automatically a theoretical HR diagram. No independent derivation of stellar structure, ages or detailed evolutionary tracks; those belong to A301.",
+      "pythonHours": 10,
+      "block": "B04",
+      "entryUnits": [
+        "P101:U10",
+        "M101:U04",
+        "M101:U07"
+      ],
+      "validation": "Check a magnitude difference and distance modulus by hand; vary a documented quality cut and distinguish selection effects from population physics. Deliver reproducible colour–magnitude comparison.",
+      "handover": "Provides a population-data family for U10/EMA; iCMA43 included here (1h). Statistical inference beyond descriptive comparisons belongs later."
+    },
+    {
+      "id": "U10",
+      "title": "A small investigation with a defensible conclusion",
+      "hours": 20,
+      "requires": [
+        "U09"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "scope": "Synthesis of existing tools: formulate a bounded question, compare observations with a supplied model, describe variation and limitations, and justify a reproducible workflow. Place the result in the wider astronomical picture, distinguishing established evidence from open questions.",
+      "activity": "Rehearse a small investigation using one previously studied data family and peer-style tutor critique. Discuss how observational constraints relate to questions about stars, planetary systems and galaxies without adding new technical cosmology.",
+      "computing": "Reproduce a bounded investigation from clean input to labelled figures; record source release, environment, assumptions and assistance. A tutor-supplied refactor suggestion can be audited without access to an AI service; any actual agent use stays optional and controlled.",
+      "evidence": "Formative investigation plan and method defence, distinct from the separately budgeted EMA.",
+      "boundary": "Use the earlier A101 investigations and Semester 1 preparation. This formative synthesis is distinct from the separately budgeted EMA.",
+      "pythonHours": 7,
+      "block": "B04",
+      "entryUnits": [
+        "M101:U12",
+        "M101:U13",
+        "P101:U13"
+      ],
+      "validation": "Rerun from a clean kernel; trace all data and dependencies; defend a model assumption and an alternative explanation. Deliver formative plan, notebook rehearsal and tutor critique, not the submitted EMA.",
+      "handover": "Prepares X201 and later astronomy/project work. EMA follows, with its own 18-hour budget. A bounded refactor critique is possible; no paid agent or unverified autonomous analysis is required."
+    }
+  ],
+  "assessments": [
+    {
+      "id": "ICMA41",
+      "name": "iCMA 41",
+      "type": "iCMA",
+      "hours": 1,
+      "included": true,
+      "requires": [
+        "U01",
+        "U02"
+      ],
+      "outcomes": [
+        "A1",
+        "A2"
+      ],
+      "evidence": "Classify observation versus inference and interpret a catalogue record; feedback explains errors."
+    },
+    {
+      "id": "TMA01",
+      "name": "TMA 01 · Observation and evidence",
+      "type": "TMA",
+      "hours": 6,
+      "requires": [
+        "U01",
+        "U02"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A5",
+        "A6"
+      ],
+      "evidence": "Evidence log, provenance critique and a learner-written numerical check."
+    },
+    {
+      "id": "ICMA42",
+      "name": "iCMA 42",
+      "type": "iCMA",
+      "hours": 1,
+      "included": true,
+      "requires": [
+        "U03",
+        "U04",
+        "U05"
+      ],
+      "outcomes": [
+        "A2",
+        "A3"
+      ],
+      "evidence": "Interpret wavelength, image scale and calibration choices."
+    },
+    {
+      "id": "TMA02",
+      "name": "TMA 02 · Measuring light",
+      "type": "TMA",
+      "hours": 6,
+      "requires": [
+        "U03",
+        "U04",
+        "U05"
+      ],
+      "outcomes": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "evidence": "Four-hour calibration notebook plus two-hour written interpretation, including an independent hand check."
+    },
+    {
+      "id": "TMA03",
+      "name": "TMA 03 · Signals and distance",
+      "type": "TMA",
+      "hours": 6,
+      "requires": [
+        "U06",
+        "U07",
+        "U08"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "evidence": "Short spectrum/light-curve critique and parallax calculation; two hours for notebook evidence and four for reasoned responses. U09 material is not assessed here."
+    },
+    {
+      "id": "ICMA43",
+      "name": "iCMA 43",
+      "type": "iCMA",
+      "hours": 1,
+      "included": true,
+      "requires": [
+        "U09"
+      ],
+      "outcomes": [
+        "A1",
+        "A3",
+        "A6"
+      ],
+      "evidence": "Interpret a magnitude difference and population diagram without overstating the evidence."
+    },
+    {
+      "id": "EMA-FINAL",
+      "name": "EMA · Astronomical investigation and defence",
+      "type": "EMA",
+      "hours": 18,
+      "requires": [
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U07",
+        "U08",
+        "U09",
+        "U10"
+      ],
+      "outcomes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6"
+      ],
+      "evidence": "One submission: reproducible investigation notebook (10h), written interpretation and handwritten/scanned mathematical checks (5h, including scan checks), then preparation and tutor defence (3h). Include a short transfer/check task so a chosen project cannot conceal an unassessed outcome."
+    }
+  ],
+  "date": "26 September 2026",
+  "status": "Complete revised unit proposal — awaiting review",
+  "independentAssessment": "TMAs require independent reasoning and learner-written code; documentation is allowed, generated solutions are excluded. EMA uses independent core analysis, with any permitted assistance explicitly scoped in the released brief and defended. Formative assistance critiques never substitute for evidence of independent ability."
 };
 export const a101Sources=[
- ['OU timing and scope','https://www.open.ac.uk/courses/qualifications/details/s284/','Accessed 24 September 2026. Observational astronomy scope reference. S284’s duration and assessment scheme are not adopted as the Semester 2 timetable. A101’s presentation will be designed with M102 and the common semester duration.'],
- ['MIT astronomy benchmark','https://ocw.mit.edu/courses/8-282j-introduction-to-astronomy-spring-2006/pages/syllabus/','Historical 2006 syllabus, checked 24 September 2026. It expects mechanics and calculus. Compare observational themes here; defer orbital dynamics, stellar structure and cosmology derivations to later modules. No equivalence claim.'],
- ['Imperial astrophysics benchmark','https://www.imperial.ac.uk/media/imperial-college/faculty-of-natural-sciences/department-of-physics/public/students/current-students/course-list/PHYS60014-Astrophysics2023-24.pdf','Historical 2023–24 specification available through official indexed text, not a full direct-PDF review. Compact objects, interstellar matter and galactic dynamics are later-depth checks; A101 does not cover this entire module.'],
- ['Imperial current elective listing','https://www.imperial.ac.uk/physics/students/current-students/undergraduates/degree-programmes-modules-and-timetables/undergraduate-electives/','Official indexed 2026–27 listing checked 24 September 2026. Confirms advanced astrophysics and computational options; does not provide a complete outcome-level audit.'],
- ['Gaia archive','https://gea.esac.esa.int/archive/','Public astrometry and photometry support U08–U09. Select a documented, small release-pinned subset before teaching; record query, fields, filters, acknowledgements and known limitations.'],
- ['TESS public data downloads','https://archive.stsci.edu/tess/bulk_downloads/bulk_downloads_ffi-tp-lc-dv.html','MAST provides light-curve products. Use small curated subsets for U07; inspect quality flags and document product/version. Do not require bulk downloads.'],
- ['Astropy licence','https://docs.astropy.org/en/stable/license.html','Open-source BSD-3-Clause astronomy tools; selected units, table and FITS helpers are candidates, introduced with explanation.'],
- ['Matplotlib licence','https://matplotlib.org/stable/project/license.html','Freely usable plotting software under its published licence. Required work uses a local Python/notebook workflow; pinned compatible versions and a tested setup will be supplied before release.'],
+  [
+    "OU timing and scope",
+    "https://www.open.ac.uk/courses/qualifications/details/s284/",
+    "Accessed 24 September 2026. Observational astronomy scope reference. S284’s duration and assessment scheme are not adopted as the Semester 2 timetable. A101’s presentation will be designed with M102 and the common semester duration."
+  ],
+  [
+    "MIT astronomy benchmark",
+    "https://ocw.mit.edu/courses/8-282j-introduction-to-astronomy-spring-2006/pages/syllabus/",
+    "Historical 2006 syllabus, checked 24 September 2026. It expects mechanics and calculus. Compare observational themes here; defer orbital dynamics, stellar structure and cosmology derivations to later modules. No equivalence claim."
+  ],
+  [
+    "Imperial astrophysics benchmark",
+    "https://www.imperial.ac.uk/media/imperial-college/faculty-of-natural-sciences/department-of-physics/public/students/current-students/course-list/PHYS60014-Astrophysics2023-24.pdf",
+    "Historical 2023–24 specification available through official indexed text, not a full direct-PDF review. Compact objects, interstellar matter and galactic dynamics are later-depth checks; A101 does not cover this entire module."
+  ],
+  [
+    "Imperial current elective listing",
+    "https://www.imperial.ac.uk/physics/students/current-students/undergraduates/degree-programmes-modules-and-timetables/undergraduate-electives/",
+    "Official indexed 2026–27 listing checked 24 September 2026. Confirms advanced astrophysics and computational options; does not provide a complete outcome-level audit."
+  ],
+  [
+    "Gaia archive",
+    "https://gea.esac.esa.int/archive/",
+    "Public astrometry and photometry support U08–U09. Select a documented, small release-pinned subset before teaching; record query, fields, filters, acknowledgements and known limitations."
+  ],
+  [
+    "TESS public data downloads",
+    "https://archive.stsci.edu/tess/bulk_downloads/bulk_downloads_ffi-tp-lc-dv.html",
+    "MAST provides light-curve products. Use small curated subsets for U07; inspect quality flags and document product/version. Do not require bulk downloads."
+  ],
+  [
+    "Astropy licence",
+    "https://docs.astropy.org/en/stable/license.html",
+    "Open-source BSD-3-Clause astronomy tools; selected units, table and FITS helpers are candidates, introduced with explanation."
+  ],
+  [
+    "Matplotlib licence",
+    "https://matplotlib.org/stable/project/license.html",
+    "Freely usable plotting software under its published licence. Required work uses a local Python/notebook workflow; pinned compatible versions and a tested setup will be supplied before release."
+  ]
 ];

@@ -21,3 +21,7 @@ MIT historical astronomy syllabus rechecked https://ocw.mit.edu/courses/8-282j-i
 ## Next
 
 Review four blocks, then revise all ten inherited units, exact Semester1 prerequisite links, assessment preparation and individual hour allocations. Reconcile M102/A101 timing; later-stage audit and M100 lesson gates remain before teaching production.
+
+## Subsequent decision — 26 September 2026
+
+Learner approved four blocks and allocations; canonical1.0. Revised a101.js version0.3 replaces historical unit hours with a complete proposal pending review. See a101-unit-review.md.
