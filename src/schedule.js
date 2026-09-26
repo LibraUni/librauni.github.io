@@ -1,3 +1,4 @@
+import {studyNodes} from './study-tree.js';
 // Pure date and schedule logic. Dates are civil dates, never elapsed local-time days.
 export const DAY=86400000;
 export function dateValue(s){
@@ -21,6 +22,11 @@ export function validatePlan(module,p){
  if(!['planned','enrolled'].includes(p.status)||p.status==='enrolled'&&!module.enrollable)throw Error('This module is not open for enrolment yet.');
  if(p.scheduleVersion!==module.scheduleVersion)throw Error('The module timetable has changed. Review the new timetable with your tutor before saving.');
  if(!p.overrides||Array.isArray(p.overrides)||typeof p.overrides!=='object'||!Array.isArray(p.completed))throw Error('Invalid planner record.');
+ if(p.studied!==undefined){
+ if(!Array.isArray(p.studied)||new Set(p.studied).size!==p.studied.length||p.studied.length>10000)throw Error('Invalid study completion record.');
+ for(const id of p.studied)if(module.code!=='LU-M100'||!studyNodes.some(n=>n.id===id&&n.kind==='section'&&n.available))throw Error('Only published sections can be marked studied.');
+ if(p.studied.length&&p.status!=='enrolled')throw Error('Enrol before recording study completion.');
+ }
  const ids=new Set(module.events.map(e=>e.id));
  for(const [id,o] of Object.entries(p.overrides)){
  if(!ids.has(id)||!o||Object.keys(o).some(k=>!['start','end'].includes(k)))throw Error('Unknown timetable item.');

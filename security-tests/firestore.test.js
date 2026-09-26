@@ -60,6 +60,7 @@ test('planner adapter round-trips dates and refuses a second-device stale overwr
  const uid='planner-roundtrip',db=env.authenticatedContext(uid,claims).firestore();
  const empty=await loadPlanner(uid,db);assert.equal(empty.revision,0);
  const data={schemaVersion:2,plans:{'LU-M100':newPlan(modules[0],'2026-10-03')},retiredPlans:[{module:'LU-A101',reason:'Withdrawn timetable',plan:{start:'2026-10-03',scheduleVersion:1,status:'planned',overrides:{},completed:[]}}]};
+ data.plans['LU-M100'].status='enrolled';data.plans['LU-M100'].studied=['U01-L01-S01'];
  await savePlanner(uid,data,0,db);
  const deviceA=await loadPlanner(uid,db),deviceB=await loadPlanner(uid,db);
  assert.deepEqual(deviceA.data,data);

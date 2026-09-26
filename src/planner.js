@@ -2,6 +2,7 @@ import {modules} from '../curriculum/schedules.js';
 import {crossModuleWarnings,schedule,newPlan,validatePlan,validateStore,previewScheduleUpdate,warnings,shiftRemaining,combined,today,addDays,dateValue,eventState,DAY} from './schedule.js';
 import {auth,onAuthStateChanged,signIn,logOut,isOwner,loadPlanner,savePlanner} from './planner-store.js';
 import './planner.css';
+import {ready,setStudied} from './study-tree.js';
 const root=document.querySelector('[data-planner]');
 const module=modules.find(m=>m.code===root.dataset.planner);
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -91,12 +92,12 @@ function render(){
 }
 function change(action){const previous=structuredClone(data);try{if(action()===false)return;validateStore(data,modules);message();mark();}catch(err){data=previous;message(err.message);}}
 function bind(edit){
- $('plan-start')?.addEventListener('submit',ev=>{ev.preventDefault();const start=new FormData(ev.target).get('start');change(()=>{const old=data.plans[module.code];if(old&&Object.keys(old.overrides).length&&!confirm('Changing the start date rebuilds the timetable and removes your date overrides. Continue?'))return false;const next=newPlan(module,start);if(old){next.status=old.status;next.completed=old.completed;}data.plans[module.code]=next;month='';});});
+ $('plan-start')?.addEventListener('submit',ev=>{ev.preventDefault();const start=new FormData(ev.target).get('start');change(()=>{const old=data.plans[module.code];if(old&&Object.keys(old.overrides).length&&!confirm('Changing the start date rebuilds the timetable and removes your date overrides. Continue?'))return false;const next=newPlan(module,start);if(old){next.status=old.status;next.completed=old.completed;if(old.studied)next.studied=old.studied;}data.plans[module.code]=next;month='';});});
  $('plan-shift')?.addEventListener('submit',ev=>{ev.preventDefault();if(!edit)return;const f=new FormData(ev.target);change(()=>{data.plans[module.code]=shiftRemaining(module,data.plans[module.code],f.get('from'),Number(f.get('days')));});});
  $('plan-reset')?.addEventListener('click',()=>{if(edit&&confirm('Restore the original timetable dates? Your study completion stays unchanged.'))change(()=>{data.plans[module.code].overrides={};});});
  $('plan-enrol')?.addEventListener('click',()=>{if(edit&&user&&confirm('Enrol with this start date and assessment timetable?'))change(()=>{data.plans[module.code].status='enrolled';});});
  root.querySelectorAll('.event-dates').forEach(form=>form.addEventListener('submit',ev=>{ev.preventDefault();if(!edit)return;const f=new FormData(form);change(()=>{const next=structuredClone(data.plans[module.code]);next.overrides[form.dataset.event]={start:f.get('start'),end:f.get('end')};validatePlan(module,next);data.plans[module.code]=next;});}));
- root.querySelectorAll('[data-complete]').forEach(input=>input.addEventListener('change',()=>{if(!edit)return;change(()=>{const p=data.plans[module.code];p.completed=p.completed.filter(x=>x!==input.dataset.complete);if(input.checked)p.completed.push(input.dataset.complete);});}));
+ root.querySelectorAll('[data-complete]').forEach(input=>input.addEventListener('change',()=>{if(!edit)return;change(()=>{const p=data.plans[module.code];if(module.code==='LU-M100'&&ready(input.dataset.complete)){data.plans[module.code]=setStudied(p,input.dataset.complete,input.checked);return;}p.completed=p.completed.filter(x=>x!==input.dataset.complete);if(input.checked)p.completed.push(input.dataset.complete);});}));
  root.querySelectorAll('.study-item').forEach(d=>d.addEventListener('toggle',()=>{const id=d.id.slice(5);if(d.open)expanded.add(id);else expanded.delete(id);}));
  root.querySelectorAll('[data-expand]').forEach(b=>b.addEventListener('click',()=>{root.querySelectorAll('.study-item').forEach(d=>{d.open=b.dataset.expand==='yes';});}));
  root.querySelectorAll('[data-month]').forEach(b=>b.addEventListener('click',()=>{const d=new Date(dateValue(month+'-01'));d.setUTCMonth(d.getUTCMonth()+Number(b.dataset.month));month=d.toISOString().slice(0,7);render();}));

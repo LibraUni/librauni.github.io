@@ -193,3 +193,12 @@ User authorised S04–S06 together, followed by whole-lesson review. All six M10
 ## M100 enrolment opened — 27 September 2026
 
 Following the learner's request after complete Lesson1 publication, LU-M100 is enrollable in the existing private planner. Start-date selection and final Enrol action belong to the learner; none was chosen by the tutor. Incremental-release status is explicit: Lesson1 ready, later teaching and assessment tasks forthcoming. U01 links Lesson1 as an available resource while its whole-unit available/completion gate stays false. Full30-week/300-hour baseline, IDs, assessment windows and schema remain unchanged. Calendar targets for unpublished work can be adjusted manually. Academic logging resumes only for actual learning, not enrolment setup. No learner record or academic log is created by this configuration change.
+
+
+## Personal study overview and completion — 27 September 2026
+
+The Study desk first panel uses the shared private planner for each enrolled module's next unfinished unit and all TMA/iCMA/EMA/exam deadlines from today through 30 days ahead. Respect personal date overrides. Red means an unfinished unit has passed its finish date; green means the next unfinished unit is in the future after earlier unit completion; neutral means upcoming or within its window. Do not infer daily pace, assessment submission or mastery.
+
+Teaching completion is explicit, reversible, self-reported and owner-only. Store stable section IDs in optional plan.studied inside existing schema2 planner/main; use the same transaction/revision/immutable plannerHistory and backup/export routes. Preserve these marks on date changes, shifts and migrations. Section completion rolls up to lessons, units and blocks only when all required peers are published and marked. Parent buttons apply to all descendant sections with confirmation. M100 U01-L01 is available; U01 and blocks remain incomplete because later material is unpublished.
+
+On future releases update src/study-tree.js, required descendants, available flags and schedule whole-unit availability consistently; add controls to the corresponding teaching pages. Extend module-specific trees/validation before publishing other modules. Test rollup, undo, calendar boundaries, private persistence and stale writes. Explicit study actions appear as grouped, labelled self-report activity through existing history; reading/site development never creates academic records. No actual learner progress was changed during this implementation.

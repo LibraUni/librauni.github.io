@@ -1,3 +1,4 @@
+import {studyNodes} from './study-tree.js';
 export const categories=['knowledge','skills','difficulties','feedback','assessment','milestone','reflection','conversation','activity'];
 export const collections=['journal','progress','attempts','assessments','plannerHistory'];
 export function iso(value){if(value?.toDate)return value.toDate().toISOString();if(value?.seconds!=null)return new Date(value.seconds*1000+(value.nanoseconds||0)/1e6).toISOString();if(typeof value==='string'&&Number.isFinite(Date.parse(value)))return new Date(value).toISOString();return null;}
@@ -19,6 +20,10 @@ export function timeline(records){
  let previous={};
  for(const {id,data:d} of history){let plans;try{plans=JSON.parse(d.payload).plans||{};}catch{continue;}
  for(const code of new Set([...Object.keys(previous),...Object.keys(plans)])){
+ const oldSections=new Set(previous[code]?.studied||[]),newSections=new Set(plans[code]?.studied||[]);
+ const added=[...newSections].filter(x=>!oldSections.has(x)),removed=[...oldSections].filter(x=>!newSections.has(x));
+ const describe=ids=>ids.map(id=>{const n=studyNodes.find(n=>n.id===id);return id+(n?' · '+n.title:'');}).join('; ');
+ if(added.length||removed.length)out.push({id:`plannerHistory/${id}/${code}/sections`,category:'activity',title:`${code} · study completion updated`,body:[added.length?'Marked studied: '+describe(added)+'.':'',removed.length?'Completion marks removed: '+describe(removed)+'.':'','Learner-reported engagement with the named teaching sections; no answers or assessment evidence are implied.'].filter(Boolean).join('\n'),area:code,evidence:'Saved planner revision '+id+'; section identifiers link to the teaching sequence.',nextSteps:'',source:'Explicit learner completion controls',recordedAt:iso(d.updatedAt),occurredAt:null,corrects:''});
  const before=new Set(previous[code]?.completed||[]),after=new Set(plans[code]?.completed||[]);
  for(const event of new Set([...before,...after]))if(before.has(event)!==after.has(event))out.push({id:`plannerHistory/${id}/${code}/${event}`,category:'activity',title:`${code} · ${event} · ${after.has(event)?'marked complete':'completion mark removed'}`,body:'Learner-reported study activity; this does not establish assessed mastery.',area:code+' · '+event,evidence:'Planner revision '+id,nextSteps:'',source:'Website planner activity',recordedAt:iso(d.updatedAt),occurredAt:null,corrects:''});
  }previous=plans;
