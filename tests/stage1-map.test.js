@@ -132,3 +132,24 @@ test('M102 blocks reserve full probability coverage within the unchanged budget'
  assert.equal(m102Blocks.blocks.find(b=>b.outcomes.includes('M102-O6')).hours,42);
  assert.ok(m102Blocks.assessments.find(row=>row[0]==='Final written examination')[2].includes('O6 explicitly required'));
 });
+
+import {m102Units} from '../curriculum/m102-units.js';
+test('M102 complete units preserve parent budgets, prerequisites and assessed probability',()=>{
+ const seen=new Set();
+ for(const u of m102Units.units){
+  assert.ok(!seen.has(u.id));for(const id of u.requires)assert.ok(seen.has(id));seen.add(u.id);
+  const b=m102Blocks.blocks.find(b=>b.id===u.block);assert.ok(b);
+  for(const id of u.outcomes)assert.ok(b.outcomes.includes(id));
+  assert.ok(u.pythonHours>=0 && u.pythonHours<=u.hours);
+  for(const k of ['scope','boundary','python','evidence','handover'])assert.ok(u[k]?.length);
+ }
+ for(const b of m102Blocks.blocks){
+  const us=m102Units.units.filter(u=>u.block===b.id);
+  assert.equal(us.reduce((n,u)=>n+u.hours,0),b.hours);
+  assert.equal(us.reduce((n,u)=>n+u.pythonHours,0),b.pythonHours);
+  assert.deepEqual([...new Set(us.flatMap(u=>u.outcomes))].sort(),[...b.outcomes].sort());
+ }
+ for(const a of m102Units.assessments)assert.ok(seen.has(a.after));
+ assert.equal(m102Units.assessments.filter(a=>a.id.startsWith('TMA')).reduce((n,a)=>n+a.hours,0),18);
+ assert.deepEqual([...m102Units.assessments.at(-1).outcomes].sort(),stage1Map.modules.find(m=>m.code==='LU-M102').outcomes.map(([id])=>id).sort());
+});

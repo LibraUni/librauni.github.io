@@ -21,3 +21,7 @@ OU MST125 page https://www.open.ac.uk/courses/modules/mst125/ read26September202
 ## Forward work
 
 Review five blocks and budgets; then blueprint every M102 unit and reconcile assessment coverage/capacity. Next A101 block/unit revision, later-stage progression audit and existing M100 lesson gates. Plans are not learner attainment.
+
+## Subsequent decision — 26 September 2026
+
+Learner approved the five blocks and allocations; canonical version1.0. Complete unit proposal0.1 is reviewed separately in m102-unit-review.md. Historical proposal findings retained.
