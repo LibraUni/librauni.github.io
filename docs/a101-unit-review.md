@@ -25,3 +25,7 @@ Private OU organisation reviewed earlier informs explicit prerequisites, worked 
 M10113 + P10113 + M10214 + A10110 =50 units. Four modules each240study+60other=300; Stage1120credits/1200h. Python30+48+34+78=190 included. A101 units await approval; other unit maps approved. All stage blocks now approved. This is blueprint completeness at the stated level, not proof of teaching quality or mastery.
 
 Remaining before teaching: A101 review; referenced OU presentation calendars and paired assessment timing; later-stage progression/core-depth/source audit; all M100B01 lessons and opening-lesson sections; detailed assessment rubrics and data/tool/activity release validation. Existing analytical mechanics, matter/nuclear, inference, physical apparatus and teamwork gaps remain. No automatic leap to lesson production.
+
+## Approval — 26 September 2026
+
+The complete revised ten-unit blueprint was approved. Canonical version1.0 preserves the proposed budgets, prerequisites and assessment scope. All50 Stage1 units are now approved at blueprint level; teaching, calendars and assessment task briefs remain unreleased. Next: bounded later-stage progression and capacity review.

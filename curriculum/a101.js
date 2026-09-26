@@ -2,7 +2,7 @@
 export const a101={
   "code": "LU-A101",
   "title": "Exploring astronomy through computation",
-  "version": "0.3",
+  "version": "1.0",
   "credits": 30,
   "purpose": "Learn how astronomical observations become evidence: investigate images, spectra, changing brightness and stellar catalogues through reproducible, critically checked computation.",
   "entry": "Semester 2 alongside M102. Required work builds on M101 and P101: unit-specific links below identify mathematical, measurement, light and computing readiness. No required activity depends on unfinished M102 material. M100 remains optional preparation outside the degree.",
@@ -462,7 +462,7 @@ export const a101={
     }
   ],
   "date": "26 September 2026",
-  "status": "Complete revised unit proposal — awaiting review",
+  "status": "Complete revised unit blueprint — approved",
   "independentAssessment": "TMAs require independent reasoning and learner-written code; documentation is allowed, generated solutions are excluded. EMA uses independent core analysis, with any permitted assistance explicitly scoped in the released brief and defended. Formative assistance critiques never substitute for evidence of independent ability."
 };
 export const a101Sources=[

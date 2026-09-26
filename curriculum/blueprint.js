@@ -1,14 +1,14 @@
 // Curriculum inventory, not new module approvals or learner progress.
 export const blueprint = {
- date:'25 September 2026',
+ date:'26 September 2026',
  inventory:[
  ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','Map every lesson across B01 U01–U04, then every section of its opening lesson. Preserve B02/B03 unit outlines and review their handovers.'],
  ['M101 · Semester 1','Module-level map and four blocks approved; complete 13-unit blueprint approved. Lessons absent.','Logical P101 handovers agreed; reconcile calendar timing before release.'],
  ['P101 · Semester 1','Role and credits confirmed; module-level outcome/boundary/workload map approved. Four blocks approved; complete 13-unit blueprint and logical pair prerequisite check approved.','Move to M102. Calendar reconciliation remains pending. Allocate required computing and measurement foundations even for learners who do not take M100.'],
  ['M102 · Semester 2','Role and credits confirmed; module-level outcome/boundary/workload map approved. Five blocks approved; complete14-unit blueprint approved.','Revise A101 blocks/units and check Semester 2 interfaces.'],
- ['A101 · Semester 2','Four blocks approved; complete revised ten-unit proposal with reconciled hours and Semester 1 prerequisites.','Review A101 units, then later-stage progression/core audit and the M100 lesson-blueprint gates. Joint calendars and detailed source verification remain pending.'],
- ['Stage 2','Proposed P201 (60), M201 (30), X201 (30): 120 credits. Broad module roles only.','Map provisional prerequisites, core subject ownership and assessment roles. Sketch blocks where needed to test capacity and resolve coverage gaps.'],
- ['Stage 3','Proposed P301, P302, one specialist option and R300: 30 credits each. Six candidate options.','Map prerequisites, core versus optional outcomes and project readiness. Options are alternatives, not cumulative compulsory content.'],
+ ['A101 · Semester 2','Four blocks approved; complete revised ten-unit blueprint approved with reconciled hours and Semester 1 prerequisites.','Review the published later-stage progression/capacity proposal, then the M100 lesson-blueprint gates. Joint calendars and detailed source verification remain pending.'],
+ ['Stage 2','Proposed P201 (60), M201 (30), X201 (30): 120 credits. Provisional subject-capacity and prerequisite audit published.','Map provisional prerequisites, core subject ownership and assessment roles. Sketch blocks where needed to test capacity and resolve coverage gaps.'],
+ ['Stage 3','Proposed P301, P302, one specialist option and R300: 30 credits each. Six candidate options; provisional prerequisites and core capacity audit published.','Map prerequisites, core versus optional outcomes and project readiness. Options are alternatives, not cumulative compulsory content.'],
  ],
  dependencies:[
  ['M100 → M101/P101 entry','Bridge completion is not compulsory. Specify demonstrable entry skills and a targeted refresher route; prior qualifications alone do not prove them.'],
