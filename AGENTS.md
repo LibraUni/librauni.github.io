@@ -173,3 +173,13 @@ Before the first eligible completion, implement and verify the issuance/template
 ## Recipient-usefulness gate for academic records — 26 September 2026
 
 Before logging any future academic entry, the tutor must apply `website/docs/academic-record-quality.md` (within the website repository: `docs/academic-record-quality.md`). Categories must match the public sharing guide. An entry must identify a concrete academic event, the evidence supporting its claim, and what a recipient could usefully understand from it without access to this conversation. Include sufficient task/module context, source and dates, assistance/attempt status and relevant evidence links; distinguish observed performance from interpretation and reported experience. Reject generic praise, repeated status, unsupported mastery claims and administrative chatter. Keep meaningful difficulties, unsuccessful attempts and corrections when they explain learning or feedback: usefulness does not require success. Preserve supplied academic originals as already required, but group related work into concise meaningful records rather than logging every turn. Do not discard originals or rewrite historical/anchored records under this prospective quality rule. This is a tutor review obligation, not a claim that automated schema checks can judge educational value.
+
+
+## Material creation and logging pause — 26 September 2026
+
+The learner will enrol only after M100 Unit 1 is fully populated. Until Unit 1 is complete and the learner chooses to enrol, do not create new learner records, academic journal entries or tutorial logs. Preserve existing records. Continue teaching publication incrementally under the recursive gates; maintain curriculum release reviews and project instructions as development documentation, not learner progress. Do not infer enrolment or study from previews. This explicit pause takes precedence over proactive academic logging instructions.
+
+
+## Teaching release checkpoint — Section 3, 26 September 2026
+
+M100 U01-L01 S01–S03 are published (105 minutes total). S03 source content/m100-u01-l01-s03.html; review docs/m100-third-section-release.md. Next author S04 under the approved six-section plan. Lesson/unit integration remains due; Unit1 is not yet fully populated and enrolment stays closed. Follow the explicit learner logging pause above.
