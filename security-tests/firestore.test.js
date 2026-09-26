@@ -76,7 +76,7 @@ test('profile adapter preserves text and photo, requires history and prevents st
  const {emptyProfile}=await import('../src/profile-data.js');
  const assert=(await import('node:assert/strict')).default;
  const uid='profile-test',db=env.authenticatedContext(uid,claims).firestore();
- const p={...emptyProfile(),name:'Test learner',academic:'Test qualification',work:'Test work',photo:'data:image/jpeg;base64,YWJj'};
+ const p={...emptyProfile(),name:'Test learner',surname:'Example',academic:'Test qualification',work:'Test work',photo:'data:image/jpeg;base64,YWJj'};
  const ref=doc(db,'users',uid,'profile','main');
  await assertFails(setDoc(ref,{payload:JSON.stringify(p),revision:1,updatedAt:serverTimestamp()}));
  assert.equal((await loadProfile(uid,db)).revision,0);
@@ -137,4 +137,21 @@ test('evidence snapshots restore exactly, reject stale chains and remain owner-o
  const part=doc(db,'users',uid,'evidence',p.tree.root.slice(2),'parts','0');await assertFails(setDoc(part,{payload:'rewrite'}));
  for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('intruder').firestore()]){await assertFails(getDoc(doc(other,'users',uid,'evidence',p.tree.root.slice(2))));await assertFails(getDoc(doc(other,'users',uid,'evidence',p.tree.root.slice(2),'parts','0')));}
  await assertFails(setDoc(doc(db,'users',uid,'evidenceState','main'),{root:p.tree.root,sequence:3,updatedAt:serverTimestamp()}));
+});
+
+test('legacy profile loads without a write and saves surname in a new immutable revision',async()=>{
+ const {loadProfile,saveProfile}=await import('../src/profile-store.js');
+ const {emptyProfile}=await import('../src/profile-data.js');
+ const assert=(await import('node:assert/strict')).default;
+ const uid='profile-migration',db=env.authenticatedContext(uid,claims).firestore();
+ const {surname,...base}=emptyProfile(),legacy={...base,schemaVersion:1,pronouns:'they/them',academic:'Existing background'};
+ const ref=doc(db,'users',uid,'profile','main'),history=doc(db,'users',uid,'profileHistory','1');
+ const first={payload:JSON.stringify(legacy),revision:1,updatedAt:serverTimestamp()};
+ await assertSucceeds(runTransaction(db,async tx=>{await tx.get(ref);tx.set(ref,first);tx.set(history,first);}));
+ const loaded=await loadProfile(uid,db);
+ assert.equal(loaded.revision,1);assert.equal(loaded.data.surname,'');assert.equal(loaded.data.academic,legacy.academic);
+ assert.deepEqual(JSON.parse((await getDoc(ref)).data().payload),legacy);
+ await saveProfile(uid,{...loaded.data,surname:'Example'},loaded.revision,db);
+ assert.equal((await loadProfile(uid,db)).data.surname,'Example');
+ assert.deepEqual(JSON.parse((await getDoc(history)).data().payload),legacy);
 });

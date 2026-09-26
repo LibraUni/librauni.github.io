@@ -1,6 +1,6 @@
 import {auth,onAuthStateChanged,signIn,logOut,isOwner} from './planner-store.js';
 import {loadProfile,saveProfile} from './profile-store.js';
-import {fields,emptyProfile,validateProfile,tutorBrief} from './profile-data.js';
+import {fields,emptyProfile,validateProfile,tutorBrief,readProfile} from './profile-data.js';
 import './profile.css';
 const $=id=>document.getElementById(id);
 let user=null,data=emptyProfile(),revision=0,loaded=false,dirty=false,busy=false,blocked=false,generation=0,timer;
@@ -24,6 +24,7 @@ async function load(){
  if(!user)return;const s=generation,uid=user.uid;$('profile-fields').disabled=true;loaded=false;status('Opening your private profile…');
  try{const result=await loadProfile(uid);if(s!==generation)return;data=result.data;revision=result.revision;blocked=false;dirty=false;
  let draft;try{draft=JSON.parse(localStorage.getItem(key(uid))||'null');}catch{}
+ if(draft)draft.data=readProfile(draft.data);
  if(draft&&JSON.stringify(draft.data)!==JSON.stringify(data)){validateProfile(draft.data);data=draft.data;dirty=true;blocked=draft.revision!==revision;}
  loaded=true;$('profile-fields').disabled=false;paint();status(blocked?'Changes need review':dirty?'Recovered an unsaved draft':revision?'Saved profile loaded':'Ready · all fields are optional');
  if(blocked)message('Your local draft differs from a newer online profile. Download it before loading the saved version.');else if(dirty)timer=setTimeout(save,1100);
