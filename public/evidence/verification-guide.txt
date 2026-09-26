@@ -1,50 +1,55 @@
-LIBRAUNI — INDEPENDENT EVIDENCE VERIFICATION
+LIBRAUNI — VERIFYING SHARED STUDENT RECORDS
 
-For most readers: open https://librauni.github.io/evidence/ and load the
-selected-proof JSON in “Verify a shared proof”. No account or wallet is needed.
-This convenient page is operated by LibraUni. It is not an independent assessor.
+A full private ZIP includes readable fields and original submission bytes,
+organised by category / module / record. Keep it private. For selective sharing,
+open its saved snapshot on the Learning evidence page, select any category,
+fields or files, and download a selected ZIP. No new paid anchor is needed for
+a different selection from an already anchored snapshot.
 
-For verification without relying on LibraUni's website:
-1. Install Node.js from its official website and make a fresh working folder.
-2. Install the independent, open-source dependencies:
-   npm install @ethereum-attestation-service/eas-sdk@2.10.0 ethers@6.17.0
-3. Download and inspect https://librauni.github.io/evidence/verify.cjs
-4. Run:
-   node verify.cjs selected-proof.json
-   Optionally pass your own Ethereum node's HTTPS RPC address as the third argument.
+Every item also has a .proof.json companion. Every category has a
+CATEGORY-PROOF.json. Send a file together with its proof, or a category folder
+with its category proof and originals. Field-only proofs contain the committed
+value; a separate text summary is not authoritative unless checked against it.
 
-The script runs locally. Only public transaction/root queries go to the Ethereum
-node provider. It neither sends a transaction nor uploads your academic files.
-Its code is MIT-licensed and can be inspected or replaced. The underlying
-multiproof is the EAS PrivateData format, independently implemented by EAS and
-OpenZeppelin—not a proprietary LibraUni hash format.
+WEB VERIFICATION
+Open https://librauni.github.io/evidence/ without signing in. Choose the shared
+ZIP. Alternatively choose an individual/category proof JSON and select its
+original files under “Verifying a separate category or file proof?”. Read the
+verified values displayed from the proof. Files stay in the recipient's browser;
+only public transaction/root queries are sent to the Ethereum node provider.
 
-Independent source/reference:
-https://github.com/ethereum-attestation-service/eas-sdk#using-the-privatedata-class
-https://github.com/ethereum-attestation-service/eas-contracts#ethereum
-https://etherscan.io/address/0xA1207F3BBa224E2c9c3c6D5aF63D0eb1582Ce587
+INDEPENDENT VERIFICATION
+The format uses standard salted Ethereum Attestation Service PrivateData
+multiproofs. It does not require the LibraUni website or a LibraUni account.
+Use Node.js with the official packages in a separate directory:
 
-Checks: Merkle inclusion of the disclosed records; exact original file bytes;
-wallet signature on the root; successful timestamp(bytes32) transaction to the
-Ethereum mainnet EAS contract from that wallet; canonical block and finality;
-EAS timestamp existence. Preparation/event dates inside records are reported
-metadata. The independently established date is the blockchain commitment date.
+npm install @ethereum-attestation-service/eas-sdk@2.10.0 ethers@6.17.0 fflate@0.8.3
 
-Interpretation: “Matches an earlier commitment” does not mean “the claims are
-true”. It does not establish independent authorship, correct answers, assessed
-mastery, a person's real-world identity, accreditation or a complete record of
-all learning. A wallet-linked timestamp is a personal record, not an externally
-issued university credential. Omitted evidence cannot be assessed.
+Download https://librauni.github.io/evidence/verify.cjs to that directory.
+Inspect the short verifier and run one of:
 
-Selective disclosure reveals whole chosen entries/files plus a manifest showing
-preparation time, counts and previous root. The rest stays private. A predecessor
-root links snapshots but does not, by itself, demonstrate that all history was
-included. Earlier snapshots and their original files must be retained.
+node verify.cjs selected-records.zip
+node verify.cjs grade.proof.json
+node verify.cjs original.pdf.proof.json original.pdf
+node verify.cjs CATEGORY-PROOF.json original-one.pdf original-two.ipynb
 
-This is NOT a Blockcerts file and must not be advertised as accepted by the
-Blockcerts Universal Verifier. Future module credentials need a separate issuance,
-issuer-identity, assessment and revocation design.
+For another Ethereum node, set ETHEREUM_RPC in the environment. No wallet,
+private key or paid transaction is required to verify. Legacy v1 selected JSON
+packages remain supported; their originals are embedded as base64.
 
-Private snapshot downloads contain every file and secret proof salt. Do not share
-that full recovery package when you intend selective disclosure. Back up originals
-and proofs: Ethereum stores only a commitment, never a recoverable copy of files.
+A valid local proof establishes that the supplied fields and original bytes
+match the supplied commitment. Without an independently checked anchor, it does
+not establish an independent date. When an anchor is supplied, verification
+checks Ethereum mainnet, the exact EAS contract and timestamp(root) transaction,
+its successful canonical receipt, linked wallet signature, and finalized block.
+An unavailable network check is not a successful blockchain verification.
+
+An anchor establishes existence by the inclusion time, not the truth of earlier
+reported dates, academic correctness, independent authorship, real-world
+identity, accreditation, or completeness of undisclosed history. Wallet-linked
+claims remain personal records, not independently issued tutor credentials.
+The package is not a Blockcerts certificate.
+
+The full ZIP contains private-recovery.json with all snapshot fields and salts.
+Selective ZIPs do not. Do not send the full recovery package when sharing only
+one item. Keep a safe copy: blockchain stores the root, not recoverable files.

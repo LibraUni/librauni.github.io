@@ -1,85 +1,121 @@
-# Personal learning evidence — release 1, 26 September 2026
+# Tutor-managed student records and selective proof
 
-## Scope and decision
+Release contract, 26 September 2026. The v2 workflow supersedes manual v1
+attachments and separate Prepare/Save steps. Legacy snapshots remain readable.
 
-Owner-only snapshot management, actual file preservation, selective disclosure,
-and optional wallet-approved Ethereum mainnet anchoring. No additional learner
-accounts, accreditation, certificates or autonomous payments. Paid anchoring was
-explicitly accepted as an optional exception to free required study resources.
+## Responsibility and scope
 
-Existing journal automation remains tutor-owned. A snapshot is an explicit copy
-of the academic timeline currently returned by the journal plus attached files;
-it cannot capture absent external conversations. Enrolment stays closed until
-teaching/assessment release readiness. Opening the page or creating a snapshot
-is not academic completion, assessment or enrolment.
+The tutor preserves each supplied academic original privately, reviews and
+corrects the work, records an actual mark/rubric when applicable, and adds the
+academic journal entry. Learners are not responsible for routine archival.
+Never infer grades, mastery, completion or awards from a page visit or from
+archiving a file. Certificates enter the archive only when actually issued
+under the applicable assessment policy; this feature itself issues none.
 
-## Protocol
+Keep submissions, activities, assessment records, feedback, skills, milestones,
+certificates, journal entries and academic tutorials categorised. Administrative
+conversation, profile data and general private notes are excluded. Preserve
+available academic transcripts as originals when available; label gaps honestly.
+A full snapshot cannot capture an unsaved external conversation or an original
+that the tutor has not archived. The deterministic web button does not summon an
+AI tutor or perform grading: tutoring and archival happen before generation.
 
-EAS SDK PrivateData 2.10.0 generates independently salted leaves, using the SDK's
-OpenZeppelin StandardMerkleTree encoding. Each leaf is an exact string containing
-canonical JSON. Fields are committed as whole journal entries or file manifests.
-Original files use SHA-256 over their exact bytes and are backed up privately,
-not just hashed. A manifest commits preparation time, counts and previous root.
-The manifest also commits the site release SHA and SHA-256 digests of public teaching/curriculum sources available at capture time; it does not backdate the version used in earlier work. Snapshot chain continuity is linkage, not proof that no history was omitted.
-Full historic snapshots remain necessary for earlier file recovery.
+## Tutor procedure
 
-Browser signatures bind the exact root, format, wallet and mainnet chain. This
-proves control of a wallet, not independent learner identity. A separate explicit
-action calls timestamp(bytes32) with zero ETH value on the existing mainnet EAS
-0.26 deployment 0xA1207F3BBa224E2c9c3c6D5aF63D0eb1582Ce587. Network fees apply.
-No new contract, schema registration, token approval, or automatic transaction.
-Only the root and public transaction metadata leave private storage. Secret salts
-and personal information are never placed on-chain.
+1. Preserve original bytes outside public Git, in the private study repository.
+   Retain earlier versions; do not replace an already assessed submission.
+2. Prepare a private JSON manifest for `scripts/archive-student-records.mjs`:
+   `files` contains ref, path (relative to manifest), category, module, activity,
+   source and optional occurredAt. `records` contains category, module, fields
+   and optional fileRefs referring to those refs. Store marks, criteria, feedback,
+   assistance conditions, assessment version, event dates and corrections as
+   distinct meaningful fields. Include references to relevant journal entries.
+   Never invent missing dates, transcripts or evidence.
+3. Run the official-CLI-authenticated uploader with --write. It uses immutable,
+   content-derived identifiers, verifies existing data on retries, writes original
+   chunks, restores/checks all bytes, then publishes each file in the catalogue.
+   Incomplete uploads are not listed. Register records publish after their files.
+4. Use the existing `archive-academic-session.mjs` for the substantive learning
+   entry. Keep transcripts distinct from summaries. Verify upload and preserve
+   private copies in Git. Correction records link prior IDs; no destructive edits.
+5. Confirm the recursive private backup includes catalogue, register, original
+   chunks, journal, snapshots and anchors. Do not log website work as learning.
 
-Transaction references are downloaded immediately and saved privately. Verification
-checks mainnet, exact contract/calldata/root, signer, zero value, successful receipt,
-canonical block, EAS timestamp and finalized block height. Included but unfinalized,
-network failures, missing transactions and mismatches have distinct honest outcomes.
-No “verified academic correctness” result exists. A downloadable standalone verifier
-uses official EAS/ethers libraries and an independently chosen Ethereum RPC. The
-public web verifier is a LibraUni convenience interface, not an external verifier.
-This is explicitly not Blockcerts; formal credential issuance remains future work.
+The manifest and original data must never be committed to this public repo.
+The public uploader contains no credentials. It requires an existing authorised
+Firebase CLI login, FIREBASE_AUTH_MODULE pointing to that CLI's auth module, and
+its configured XDG_CONFIG_HOME where applicable. Client browser writes to
+academicFiles and academicRecords remain denied; owner-only reads are allowed.
 
-## Storage and recovery
+## One-button generation
 
-Immutable users/{uid}/evidence/{rootWithout0x} manifests; bounded parts subcollection;
-immutable anchors subcollection; transactional evidenceState/main head. Normal
-browser writes preserve sequencing; concurrent stale preparation is rejected. Saved
-payloads are restored, hashed, reconstructed and files verified before success is
-reported. Snapshots have an 8 MB serialized UTF-8 cap, 100,000-character chunks,
-maximum 80 chunks; attachments up to 3 MB per snapshot. Larger archives require a
-future streaming/batching extension; failures are explicit, never truncated.
+“Generate proof of full student records” loads all pages of academic journal /
+progress / attempt / assessment / academic planner-completion history, the tutor
+register and original catalogue. It verifies every original and rereads inventory
+to detect concurrent changes. It builds and verifies a complete ZIP, saves the
+immutable commitment and restores it from Firestore before offering download.
+No optional attachment picker or separate manual save remains in routine use.
+A failure stops generation instead of silently issuing a partial full package.
 
-Firestore security preserves the existing owner identity restriction, prohibits
-snapshot/part/anchor replacement and deletion, and protects the chain head. Receipt
-payloads are user-authored and must be independently checked, not trusted as facts.
-The existing recursive private backup traverses new subcollections automatically.
-No profile, administrative snapshots or website-planning conversations enter the
-academic package. Downloads expose secrets only to the downloading owner; selective
-exports omit unselected records, files and salts but disclose manifest metadata.
+“All” means the saved academic inventory at generation time, including correction
+history. It does not assert completeness of all learning outside the system.
+Current source-release hashes describe the current public teaching release, not
+necessarily the teaching version used in an older activity. A snapshot never
+enrols the learner or awards credit; M100 enrolment remains closed.
 
-## Verification performed
+## v2 format and privacy
 
-51 application tests including proof interoperability, hidden-leaf exclusion,
-file tampering, JSON restore, predecessor commitment and wallet/transaction checks.
-10 local Firestore emulator tests including multi-part evidence round-trip,
-idempotent retries, stale-head rejection and foreign-access/write rejection.
-Production build and browser public verification tested with synthetic valid and
-altered packages: valid unanchored data remains explicitly unanchored; corruption
-fails. No paid live Ethereum transaction performed. User wallet signing/broadcast
-and first real mainnet confirmation remain live acceptance steps controlled by the
-owner. No testnet or synthetic record is inserted into the private academic journal.
+`librauni-student-records-v2` uses official EAS PrivateData salted Merkle trees.
+Each academic record field is an independently provable leaf. Original file
+leaves commit the SHA-256 digest of exact bytes and classified metadata. Fields
+carry module, category and stable record identity; no real-world learner profile
+is added. Structured website assessment fields are retained separately as well
+as their readable journal representation. Files are held separately from the
+compact immutable snapshot index and restored by immutable asset ID.
 
-## Sources checked
+ZIPs have proof.json plus category/module/record folders with readable fields
+and original bytes. Every item has a .proof.json; every category has a
+CATEGORY-PROOF.json. Full ZIPs also contain private-recovery.json (all fields,
+salts and snapshot context). Selected exports omit recovery data and unselected
+leaves. The context leaf is not automatically disclosed: a single grade need not
+reveal journal text, feedback, counts, previous root or other salts. Select extra
+context fields deliberately when needed to interpret a grade or record.
 
-- https://github.com/ethereum-attestation-service/eas-sdk (PrivateData, timestamp)
-- https://github.com/ethereum-attestation-service/eas-contracts (mainnet deployment)
-- https://github.com/blockchain-certificates/cert-verifier-js (separate credential format)
-- https://ethereum.org/developers/docs/gas/ (transaction fees)
+A single field or file, whole category, or arbitrary selection verifies against
+the same root. A file must travel with its proof. The web verifier accepts a ZIP,
+or a JSON proof with accompanying originals, and fails on missing/altered bytes.
+ZIP readable fields must match committed values. JSON field proofs display the
+committed values; do not treat an unverified separate summary as authoritative.
+The separately runnable verify.cjs uses official packages and no LibraUni backend.
 
-Implementation note: SDK 2.10.0's root ESM entry has a lodash named-export issue in
-Node24. eas-private.js selects its supported CommonJS entry for Node; Vite builds
-the browser ESM branch. Tests exercise the same SDK encoding, not a copied hash
-algorithm. Dependencies are pinned by the committed lockfile.
+Current safeguards: 150 MB per original, 250 MB ZIP, 8 MB snapshot/proof index,
+80 index chunks. These are explicit bounds, not unlimited archive claims.
+Oversized work requires a reviewed split/streaming extension, never truncation.
+Firestore free quotas and backup Git size need review as real volume grows;
+required study must remain free. No new paid storage service is enabled here.
 
-Publication check: pnpm11 requires explicit decisions for optional native build scripts. keccak and secp256k1 scripts are disabled; tested JavaScript paths are used.
+## Optional Ethereum timestamp
+
+The user accepts optional mainnet transaction fees. The browser signs a message
+binding wallet, format and root, estimates fees, and requests a separate explicit
+wallet-approved transaction to the existing mainnet EAS timestamp(bytes32)
+contract 0xA1207F3BBa224E2c9c3c6D5aF63D0eb1582Ce587. No new contract or schema is
+deployed. Private text, originals and salts stay off-chain. Receipts are saved
+and downloaded immediately after broadcast; uncertain submission must not trigger
+an automatic paid retry. Receipt recovery checks the existing transaction.
+
+An anchor proves integrity and existence by chain inclusion, not the truth of
+academic claims, authorship, identity beyond wallet control, an accredited award,
+or completeness of undisclosed records. Verification checks successful exact
+calldata, sender, contract, chain, canonical receipt, EAS timestamp and finality.
+Unavailable network checks are unconfirmed. This is not Blockcerts or an
+independently issued tutor credential. No paid transaction belongs in testing.
+
+## Validation
+
+Test v1 compatibility, per-field privacy, original and readable-content tampering,
+ZIP restoration, independent category/file verification, oversized/missing inputs,
+concurrent inventory changes, snapshot predecessor conflict, server persistence,
+catalogue pagination, browser write denial and foreign read denial. Maintain
+private backup/restore coverage. Automated tests establish software properties,
+not academic completeness or credibility of awarded marks.

@@ -155,3 +155,20 @@ test('legacy profile loads without a write and saves surname in a new immutable 
  assert.equal((await loadProfile(uid,db)).data.surname,'Example');
  assert.deepEqual(JSON.parse((await getDoc(history)).data().payload),legacy);
 });
+
+test('tutor catalogue paginates and restores private originals; browser writes and foreign reads are denied',async()=>{
+ const assert=(await import('node:assert/strict')).default;
+ const {sha256}=await import('ethers');
+ const {loadAcademicCatalogue,loadOriginal}=await import('../src/academic-store.js');
+ const {buildStudentSnapshot}=await import('../src/student-records.js');
+ const {saveSnapshot,loadSnapshot}=await import('../src/evidence-store.js');
+ const uid='academic-catalogue',db=env.authenticatedContext(uid,claims).firestore(),id='a'.repeat(64),bytes=new TextEncoder().encode('synthetic original');
+ const asset={category:'submissions',module:'LU-M100',activity:'synthetic',name:'answer.txt',parts:1,size:bytes.length,sha256:sha256(bytes)};
+ await env.withSecurityRulesDisabled(async context=>{const admin=context.firestore();await setDoc(doc(admin,'users',uid,'academicFiles',id),asset);await setDoc(doc(admin,'users',uid,'academicFiles',id,'parts','0'),{base64:btoa('synthetic original')});
+ for(let i=0;i<201;i++)await setDoc(doc(admin,'users',uid,'academicRecords',String(i)),{payload:JSON.stringify({category:'assessments',module:'LU-M100',fields:{title:'Synthetic',fileIds:[id]}})});
+ });
+ const catalogue=await loadAcademicCatalogue(uid,db);assert.equal(catalogue.register.length,201);assert.equal(catalogue.assets.length,1);assert.deepEqual(await loadOriginal(uid,catalogue.assets[0],db),bytes);
+ const p=buildStudentSnapshot([],catalogue.register,catalogue.assets);assert.deepEqual(await saveSnapshot(uid,p,db),p);assert.deepEqual(await loadSnapshot(uid,p.tree.root.slice(2),db),p);
+ for(const path of [['academicFiles',id],['academicFiles',id,'parts','0'],['academicRecords','0']]){await assertFails(setDoc(doc(db,'users',uid,...path),{payload:'forged'}));await assertFails(deleteDoc(doc(db,'users',uid,...path)));for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('other',claims).firestore()])await assertFails(getDoc(doc(other,'users',uid,...path)));}
+ await env.withSecurityRulesDisabled(async c=>{await deleteDoc(doc(c.firestore(),'users',uid,'academicFiles',id));});await assert.rejects(loadAcademicCatalogue(uid,db),/missing archived file/);
+});

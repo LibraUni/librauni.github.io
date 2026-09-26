@@ -1,3 +1,4 @@
+import {STUDENT_FORMAT,validateStudentSnapshot,studentDisclosure,verifyStudentProof} from './student-records.js';
 import {PrivateData} from './eas-private.js';
 import {sha256,verifyMessage} from 'ethers';
 export const FORMAT='librauni-evidence-v1';
@@ -11,8 +12,8 @@ export function canonical(v){
  throw Error('Unsupported evidence value.');
 }
 export const digest=text=>sha256(new TextEncoder().encode(text));
-export const walletMessage=(root,address)=>`LibraUni personal evidence\nFormat: ${FORMAT}\nRoot: ${root}\nWallet: ${address.toLowerCase()}\nChain: Ethereum mainnet (1)\nThis signature links wallet control to this record. It is not an assessment or accredited credential.`;
-export function verifyLink(root,link){return !!link&&verifyMessage(walletMessage(root,link.address),link.signature).toLowerCase()===link.address.toLowerCase();}
+export const walletMessage=(root,address,format=FORMAT)=>`LibraUni personal evidence\nFormat: ${format}\nRoot: ${root}\nWallet: ${address.toLowerCase()}\nChain: Ethereum mainnet (1)\nThis signature links wallet control to this record. It is not an assessment or accredited credential.`;
+export function verifyLink(root,link){return !!link&&verifyMessage(walletMessage(root,link.address,link.format||FORMAT),link.signature).toLowerCase()===link.address.toLowerCase();}
 export function buildSnapshot(entries,files=[],previousRoot=null,createdAt=new Date().toISOString(),teachingRelease=null){
  if(previousRoot!==null&&!hex32(previousRoot))throw Error('Invalid predecessor.');
  const records=entries.map(e=>Object.fromEntries(['id','category','title','body','area','evidence','nextSteps','source','occurredAt','recordedAt','corrects'].map(k=>[k,e[k]??null]))).sort((a,b)=>a.id.localeCompare(b.id));
@@ -34,6 +35,7 @@ function checkFiles(values,files){
  }
 }
 export function validateSnapshot(p){
+ if(p?.format===STUDENT_FORMAT)return validateStudentSnapshot(p);
  if(new TextEncoder().encode(JSON.stringify(p)).length>MAX_BYTES||p?.format!==FORMAT||p.kind!=='snapshot'||!hex32(p.tree?.root)||!Array.isArray(p.tree.values)||!p.tree.values.length||!Array.isArray(p.files))throw Error('Invalid or oversized snapshot.');
  if(p.tree.values.some(v=>v.type!=='string'||!hex32(v.salt))||new Set(p.tree.values.map(v=>v.name)).size!==p.tree.values.length)throw Error('Invalid tree leaves.');
  if(PrivateData.verifyFullTree(p.tree)!==p.tree.root)throw Error('Evidence root does not match.');
@@ -42,6 +44,7 @@ export function validateSnapshot(p){
  checkFiles(p.tree.values,p.files);return m;
 }
 export function disclosure(p,indexes,anchor=null){
+ if(p?.format===STUDENT_FORMAT)return studentDisclosure(p,indexes,anchor);
  validateSnapshot(p);
  const selected=[...new Set([0,...indexes])].sort((a,b)=>a-b);
  if(selected.length<2||selected.some(i=>!Number.isInteger(i)||i<0||i>=p.tree.values.length))throw Error('Select at least one academic record or file.');
@@ -51,6 +54,7 @@ export function disclosure(p,indexes,anchor=null){
  const out={format:FORMAT,kind:'disclosure',root:p.tree.root,proof,files,anchor};verifyDisclosure(out);return out;
 }
 export function verifyDisclosure(p){
+ if(p?.format===STUDENT_FORMAT)return verifyStudentProof(p);
  if(new TextEncoder().encode(JSON.stringify(p)).length>MAX_BYTES||p?.format!==FORMAT||p.kind!=='disclosure'||!hex32(p.root)||!p.proof?.leaves?.length||!Array.isArray(p.files))throw Error('Invalid proof package.');
  if(p.proof.leaves.some(v=>v.type!=='string'||!hex32(v.salt))||!PrivateData.verifyMultiProof(p.root,p.proof))throw Error('Evidence does not match its cryptographic proof.');
  const manifests=p.proof.leaves.filter(v=>v.name==='manifest');
