@@ -153,3 +153,19 @@ test('M102 complete units preserve parent budgets, prerequisites and assessed pr
  assert.equal(m102Units.assessments.filter(a=>a.id.startsWith('TMA')).reduce((n,a)=>n+a.hours,0),18);
  assert.deepEqual([...m102Units.assessments.at(-1).outcomes].sort(),stage1Map.modules.find(m=>m.code==='LU-M102').outcomes.map(([id])=>id).sort());
 });
+
+import {a101Blocks} from '../curriculum/a101-blocks.js';
+import {a101} from '../curriculum/a101.js';
+test('A101 revised blocks preserve unit identities and total budget without treating inherited hours as revised',()=>{
+ const seen=new Set(),ids=[],outcomes=new Set(),known=new Set(a101.outcomes.map(([id])=>id));
+ for(const b of a101Blocks.blocks){
+  assert.ok(!seen.has(b.id));for(const id of b.requires)assert.ok(seen.has(id));seen.add(b.id);
+  ids.push(...b.units);assert.ok(b.pythonHours>=0 && b.pythonHours<=b.hours);
+  for(const id of b.outcomes){assert.ok(known.has(id));outcomes.add(id);}
+  for(const k of ['purpose','scope','boundary','python','practical','evidence','handover'])assert.ok(b[k]?.length);
+ }
+ assert.deepEqual(ids,a101.units.map(u=>u.id));
+ assert.equal(a101Blocks.blocks.reduce((n,b)=>n+b.hours,0),240);
+ assert.equal(a101Blocks.blocks.reduce((n,b)=>n+b.pythonHours,0),78);
+ assert.deepEqual([...outcomes].sort(),[...known].sort());
+});

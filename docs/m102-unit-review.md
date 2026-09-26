@@ -30,3 +30,7 @@ Previously inspected private OU organisation informs dependencies and practice/f
 ## Handover
 
 Review complete M102 units, then revise A101 blocks/units and reconcile Semester2. Later-stage core depth, inference/propagation, full multivariable/transform work and apparatus/teamwork remain open. Preserve M100 lesson-production gate and academic-log separation.
+
+## Subsequent decision — 26 September 2026
+
+Learner approved complete M102 units; canonical1.0. Teaching and calendar remain pending; next A101 block/unit revision. Historical review retained.

@@ -1,7 +1,7 @@
 export const m102Units = {
-  "version": "0.1",
+  "version": "1.0",
   "date": "26 September 2026",
-  "status": "Complete unit proposal — awaiting review",
+  "status": "Complete unit blueprint approved",
   "units": [
     {
       "id": "U01",
