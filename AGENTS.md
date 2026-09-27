@@ -236,3 +236,5 @@ Module and descendant learning pages use the same wide sticky sidebar: module bl
 Learning tree titles link directly to available child learning pages; disclosure arrows expand/collapse independently. Unpublished items without learning pages remain plain titles. Expand/collapse-all controls are small text buttons aligned at the top right.
 
 All hierarchy navigation must link directly to child learning pages, never to parent-page fragments or programme substitutes. Generate labelled outline pages for defined unpublished children; do not invent lessons or sections. Only section links within a lesson use anchors. Apply to all modules through the shared hierarchy renderer.
+
+Hierarchy pages list their children directly: do not wrap a block page in its own block entry or link its title back to itself. Module lists blocks; block lists units; unit lists lessons.
