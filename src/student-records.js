@@ -11,10 +11,10 @@ export function recordCategory(c){return ({conversation:'tutorials',assessment:'
 export function academicFields(entries,register){
  const items=[];
  for(const e of entries){
-  for(const key of ['category','title','body','area','evidence','nextSteps','source','occurredAt','recordedAt','corrects'])if(e[key]!==null&&e[key]!==undefined&&e[key]!=='')items.push({kind:'field',category:recordCategory(e.category),module:(e.area||'').match(/LU-[A-Z]\d{3}/)?.[0]||'general',recordId:e.id,field:key,value:e[key]});
+  for(const key of ['category','title','body','area','evidence','nextSteps','source','occurredAt','recordedAt','corrects'])if(e[key]!==null&&e[key]!==undefined&&e[key]!=='')items.push({kind:'field',category:recordCategory(e.category),module:(e.area||'').match(/\b(?:LU-)?[A-Z]\d{3}\b/)?.[0]||'general',recordId:e.id,field:key,value:e[key]});
  }
  for(const e of entries)if(e.raw&&!e.id.startsWith('journal/')){
-  const walk=(v,key)=>{if(v&&typeof v==='object'&&!Array.isArray(v)){for(const [k,x]of Object.entries(v))walk(x,key?key+'.'+k:k);}else if(v!==undefined)items.push({kind:'field',category:recordCategory(e.category),module:(e.area||'').match(/LU-[A-Z]\d{3}/)?.[0]||'general',recordId:e.id,field:'saved.'+key,value:v});};
+  const walk=(v,key)=>{if(v&&typeof v==='object'&&!Array.isArray(v)){for(const [k,x]of Object.entries(v))walk(x,key?key+'.'+k:k);}else if(v!==undefined)items.push({kind:'field',category:recordCategory(e.category),module:(e.area||'').match(/\b(?:LU-)?[A-Z]\d{3}\b/)?.[0]||'general',recordId:e.id,field:'saved.'+key,value:v});};
   walk(e.raw,'');
  }
  for(const r of register){

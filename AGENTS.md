@@ -207,3 +207,8 @@ On future releases update src/study-tree.js, required descendants, available fla
 ## Completion controls simplified — 27 September 2026
 
 Use a bare checkbox immediately after the text of every block, unit, lesson and section title in the Learning materials tree and corresponding teaching headings. No completion panels, explanatory text or action buttons. Retain accessible labels, disabled-state tooltips, partial parent state, reversible private saving and existing rollup rules. No confirmation dialog is needed for reversible parent ticks. Show a clear error only if saving fails. This supersedes the earlier parent-button presentation.
+
+
+## Short module names and concise Study desk — 27 September 2026
+
+Use M100, M101, P101 etc. in all new internal discussion, authoring and user-facing module names; do not add the LU- prefix. Legacy persisted keys, immutable evidence and existing URLs retain their exact identifiers for compatibility, not as display names. Apply module-label.js at presentation boundaries. The Next steps panel has no extra heading, visible schedule-status label, unit resource links, forthcoming-unit warning, explanatory colour paragraph or routine saved-online message. Colour the unit/date line; retain accessible status and useful error messages.

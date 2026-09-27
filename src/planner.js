@@ -1,3 +1,4 @@
+import {moduleLabel} from './module-label.js';
 import {modules} from '../curriculum/schedules.js';
 import {crossModuleWarnings,schedule,newPlan,validatePlan,validateStore,previewScheduleUpdate,warnings,shiftRemaining,combined,today,addDays,dateValue,eventState,DAY} from './schedule.js';
 import {auth,onAuthStateChanged,signIn,logOut,isOwner,loadPlanner,savePlanner} from './planner-store.js';
@@ -5,7 +6,7 @@ import './planner.css';
 import {ready,setStudied} from './study-tree.js';
 const root=document.querySelector('[data-planner]');
 const module=modules.find(m=>m.code===root.dataset.planner);
-const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const e=s=>moduleLabel(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=s=>s?new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(dateValue(s))):'';
 let data={schemaVersion:2,plans:{},retiredPlans:[]},revision=0,user=null,loaded=false,authReady=false,dirty=false,saving=false,blocked=false,session=0,timer,month='',showPlanned=false,expanded=new Set();
 const draftKey=uid=>'librauni:planner:'+uid;
