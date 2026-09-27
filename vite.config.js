@@ -5,6 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
+        ...Object.fromEntries(['m101','p101','m102','a101'].map(code=>[code+'Home',fileURLToPath(new URL('./learn/physics/stage-1/'+code+'/index.html',import.meta.url))])),
         ...Object.fromEntries(['','preparation/','preparation/m100/','preparation/m100/b01/','preparation/m100/b01/u01/','preparation/m100/b01/u02/','preparation/m100/b01/u03/','preparation/m100/b01/u04/','preparation/m100/b01/u01/l01/','physics/','physics/stage-1/','physics/stage-2/','physics/stage-3/'].map((p,i)=>['learning'+i,fileURLToPath(new URL('./learn/'+p+'index.html',import.meta.url))])),
         stage1Map: fileURLToPath(new URL('./programme/stage-1/map/index.html', import.meta.url)),
         constructionPolicy: fileURLToPath(new URL('./programme/construction-policy/index.html', import.meta.url)),

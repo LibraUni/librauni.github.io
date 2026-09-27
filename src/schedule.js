@@ -14,7 +14,7 @@ export function schedule(module,plan){
  return module.events.map(e=>{
  const baselineStart=plan?.start?addDays(plan.start,(e.startWeek-1)*7):null;
  const baselineEnd=plan?.start?addDays(plan.start,e.endWeek*7-1):null;
- return {...e,module:module.code,path:module.path,baselineStart,baselineEnd,start:plan?.overrides?.[e.id]?.start||baselineStart,end:plan?.overrides?.[e.id]?.end||baselineEnd,completed:plan?.completed?.includes(e.id)||false};
+ return {...e,module:module.code,path:module.path,blueprintPath:module.blueprintPath||module.path,baselineStart,baselineEnd,start:plan?.overrides?.[e.id]?.start||baselineStart,end:plan?.overrides?.[e.id]?.end||baselineEnd,completed:plan?.completed?.includes(e.id)||false};
  }).sort((a,b)=>(a.end&&b.end?a.end.localeCompare(b.end):a.endWeek-b.endWeek)||(a.type==='unit'?-1:b.type==='unit'?1:0)||a.id.localeCompare(b.id));
 }
 export function validatePlan(module,p){

@@ -214,3 +214,8 @@ Use a bare checkbox immediately after the text of every block, unit, lesson and 
 Use M100, M101, P101 etc. in all new internal discussion, authoring and user-facing module names; do not add the LU- prefix. Legacy persisted keys, immutable evidence and existing URLs retain their exact identifiers for compatibility, not as display names. Apply module-label.js at presentation boundaries. The Next steps panel has no extra heading, visible schedule-status label, forthcoming-unit warning, explanatory colour paragraph or routine saved-online message. Colour only the dates; keep the unit title in its normal colour; retain accessible status and useful error messages.
 
 Keep “Open unit in planner” and available lesson resource links beneath the next unit dates; their removal was withdrawn by the learner.
+
+
+## Module homes — 27 September 2026
+
+Learning Materials and stage/preparation indexes stop at clickable module names. M100's home is /learn/preparation/m100/, containing its private planner/calendar followed by expandable teaching materials with trailing completion checkboxes. Stage 1 module homes use /learn/physics/stage-1/{short-code}/; no unpublished teaching or timetable is invented. Programme pages remain curriculum previews. Schedule paths point to module homes while blueprintPath preserves outline destinations. Old M100 #plan-* and #study-planner bookmarks redirect to its home. Preserve saved keys, dates, enrolment and completion history. Same-page completion saves refresh an idle planner without losing unsaved edits.

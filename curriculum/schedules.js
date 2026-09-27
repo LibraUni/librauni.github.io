@@ -3,7 +3,7 @@ import {m100} from './m100.js';
 const ranges=[[1,2],[3,4],[5,6],[7,9],[10,11],[12,14],[15,16],[18,20],[21,22],[23,24],[25,26],[27,28]];
 const assessment=(id,title,type,startWeek,endWeek,hours,requires,description)=>({id,title,type,startWeek,endWeek,hours,requires,description,available:false});
 export const modules=[{
- code:m100.code,title:m100.title,path:'/programme/bridge/lu-m100/',credits:30,
+ code:m100.code,title:m100.title,path:'/learn/preparation/m100/',blueprintPath:'/programme/bridge/lu-m100/',credits:30,
  scheduleVersion:2,weeks:30,enrollable:true,outsideDegree:true,
  durationSource:'https://www.open.ac.uk/library/digital-archive/module/xcri:MU123/',
  durationNote:'30 study weeks, using the documented MU123 pattern as the foundation-module reference. OU lengths vary by presentation; this is an original LibraUni timetable, not a copy of an OU calendar. No holiday dates are assumed: add breaks by moving remaining work. Block 2 workload estimates updated 25 September 2026: U06 22h, U07 20h, U08 28h; event IDs and all date windows are unchanged.',

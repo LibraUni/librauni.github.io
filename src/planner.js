@@ -29,7 +29,7 @@ async function save(){
  status('Not saved online');
  }finally{saving=false;}
 }
-async function load(){
+async function load(reveal=true){
  if(!user)return;const s=session;loaded=false;render();status('Loading private timetable…');
  try{const result=await loadPlanner(user.uid);if(s!==session)return;const updated=previewScheduleUpdate(result.data,modules);
  if(updated){
@@ -46,10 +46,10 @@ async function load(){
  loaded=true;status(dirty?'Recovered a local draft':'Saved timetable loaded · private');
  if(blocked){message('Your draft and the online timetable differ. Download the draft before loading the saved version.');$('planner-load').hidden=false;}
  else if(dirty)timer=setTimeout(save,400);
- month='';render();openHash();
+ month='';render();if(reveal)openHash();
  }catch(err){if(s!==session)return;blocked=true;message('Cannot load the saved timetable: '+err.message+' Your online records have not been changed.');status('Timetable unavailable');$('planner-load').hidden=false;}
 }
-function contentLinks(r){return `${r.outline?`<a href="${e(r.path+r.outline)}">Unit outline</a> · `:''}${r.available&&r.href?`<a href="${e(r.href)}">Open ${r.type==='unit'?'study materials':'assessment'}</a>`:`<span>${(r.resources||[]).some(x=>x.available)?'Unit materials partially available':'Materials not yet published'}</span>`}${(r.resources||[]).filter(x=>x.available).map(x=>` · <a href="${e(x.href)}">${e(x.title)}</a>`).join('')}`;}
+function contentLinks(r){return `${r.outline?`<a href="${e(r.blueprintPath+r.outline)}">Unit outline</a> · `:''}${r.available&&r.href?`<a href="${e(r.href)}">Open ${r.type==='unit'?'study materials':'assessment'}</a>`:`<span>${(r.resources||[]).some(x=>x.available)?'Unit materials partially available':'Materials not yet published'}</span>`}${(r.resources||[]).filter(x=>x.available).map(x=>` · <a href="${e(x.href)}">${e(x.title)}</a>`).join('')}`;}
 function range(r){return r.start?`${fmt(r.start)} – ${fmt(r.end)}`:`Week ${r.startWeek}${r.endWeek!==r.startWeek?'–'+r.endWeek:''}`;}
 function download(){const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='librauni-timetable.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function calendar(rows){
@@ -116,3 +116,5 @@ window.addEventListener('online',()=>{if(user&&loaded&&!blocked)save();});
 function openHash(){const id=location.hash.slice(1);if(id.startsWith('plan-')){const el=document.getElementById(id);if(el){el.open=true;el.scrollIntoView({block:'start'});}}}
 window.addEventListener('hashchange',openHash);
 render();openHash();
+
+window.addEventListener('study-progress-saved',()=>{if(user&&!dirty&&!saving)load(false);});
