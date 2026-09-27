@@ -40,9 +40,10 @@ export function renderLearning({root,shell,link,e}) {
  pages.push([lessonPath,'Signed quantities and ordered calculations',[...crumbs,link(unitPath('U01'),'Unit 1'),'<span aria-current="page">Lesson 1</span>'],intro('Signed quantities and ordered calculations','Start with familiar arithmetic, then build a dependable way of explaining and checking it.')+`<p>Full lesson: 4 hours · All six sections available, including a downloadable Python practice notebook.</p><nav aria-label="Lesson contents">${tree(branch('Lesson contents',`<ol>${openingSections.sections.map((s,i)=>`<li>${published.includes(sectionId(s))?link('#'+sectionId(s),s.title):e(s.title)+' · '+pending}${check(s.id)}</li>`).join('')}</ol>`))}</nav>`+published.map(id=>fs.readFileSync(root+'content/m100-u01-l01-'+id.toLowerCase()+'.html','utf8')).join('')+`<nav class="lesson-pagination" aria-label="Previous and next"><a href="${unitPath('U01')}">← Unit overview</a><span>Lesson 2: forthcoming</span></nav><p class="small">Original LibraUni teaching · Published 26 September 2026. ${link('/programme/bridge/lu-m100/#opening-sections','Lesson design and section blueprint')}.</p>`]);
  for(const [path,title,crumb,body] of pages){
   let learningBody=body;
-  const headingId=path===lessonPath?'U01-L01':path===base+'b01/'?'B01':m100.units.slice(0,4).find(u=>path===unitPath(u.id))?.id;
-  if(headingId)learningBody=learningBody.replace('</h1>',check(headingId)+'</h1>');
-  if(path===lessonPath)for(const id of published)learningBody=learningBody.replace(new RegExp('(<section id="'+id+'"[\\s\\S]*?<h2[^>]*>[\\s\\S]*?)(</h2>)'),'$1'+check('U01-L01-'+id)+'$2');
+  if(path===lessonPath){
+   learningBody=learningBody.replace(/<input[^>]*data-study-id="[^"]*"[^>]*>/g,'');
+   for(const id of published)learningBody=learningBody.replace(new RegExp('(<section id="'+id+'"[\\s\\S]*?)(</section>)'),'$1<p class="section-read"><label>Mark section as read'+check('U01-L01-'+id)+'</label></p>$2');
+  }
   let html=shell(title,crumb,learningBody).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script><script type="module" src="/src/study-ui.js"></script></body>');
   if(path===base)html=html.replace('</body>','<script type="module" src="/src/planner.js"></script></body>');
   fs.mkdirSync(root+path.slice(1),{recursive:true});fs.writeFileSync(root+path.slice(1)+'index.html',html);

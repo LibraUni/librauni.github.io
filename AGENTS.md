@@ -219,3 +219,8 @@ Keep “Open unit in planner” and available lesson resource links beneath the 
 ## Module homes — 27 September 2026
 
 Learning Materials and stage/preparation indexes stop at clickable module names. M100's home is /learn/preparation/m100/, containing its private planner/calendar followed by expandable teaching materials with trailing completion checkboxes. Stage 1 module homes use /learn/physics/stage-1/{short-code}/; no unpublished teaching or timetable is invented. Programme pages remain curriculum previews. Schedule paths point to module homes while blueprintPath preserves outline destinations. Old M100 #plan-* and #study-planner bookmarks redirect to its home. Preserve saved keys, dates, enrolment and completion history. Same-page completion saves refresh an idle planner without losing unsaved edits.
+
+
+## Completion control placement — 27 September 2026
+
+Teaching-page headings and lesson contents have no checkboxes. Each teaching section ends with “Mark section as read” followed by its checkbox. Module materials trees retain bare trailing title checkboxes. In the planner study sequence, put a bare checkbox immediately after each unit title inside its summary; remove the old bottom “Mark unit studied” control. Checkbox clicks must not toggle the disclosure. Private completion semantics and availability gates remain unchanged.
