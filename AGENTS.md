@@ -211,6 +211,6 @@ Use a bare checkbox immediately after the text of every block, unit, lesson and 
 
 ## Short module names and concise Study desk — 27 September 2026
 
-Use M100, M101, P101 etc. in all new internal discussion, authoring and user-facing module names; do not add the LU- prefix. Legacy persisted keys, immutable evidence and existing URLs retain their exact identifiers for compatibility, not as display names. Apply module-label.js at presentation boundaries. The Next steps panel has no extra heading, visible schedule-status label, forthcoming-unit warning, explanatory colour paragraph or routine saved-online message. Colour the unit/date line; retain accessible status and useful error messages.
+Use M100, M101, P101 etc. in all new internal discussion, authoring and user-facing module names; do not add the LU- prefix. Legacy persisted keys, immutable evidence and existing URLs retain their exact identifiers for compatibility, not as display names. Apply module-label.js at presentation boundaries. The Next steps panel has no extra heading, visible schedule-status label, forthcoming-unit warning, explanatory colour paragraph or routine saved-online message. Colour only the dates; keep the unit title in its normal colour; retain accessible status and useful error messages.
 
 Keep “Open unit in planner” and available lesson resource links beneath the next unit dates; their removal was withdrawn by the learner.
