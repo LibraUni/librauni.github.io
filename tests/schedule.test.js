@@ -35,7 +35,7 @@ test('degree calendar merges two modules with independent dates and excludes dra
  const all=combined([a,b],{[a.code]:pa,[b.code]:pb},true);assert.equal(all.length,a.events.length*2);assert.ok(all.some(r=>r.module==='TEST-M202'&&r.path==='/test/'));assert.ok(all.every((r,i)=>!i||all[i-1].end<=r.end));
 });
 test('completion, publication and enrolment remain separate from dates and mastery',()=>{
- const p=newPlan(m,'2026-10-03');assert.throws(()=>validatePlan({...m,enrollable:false},{...p,status:'enrolled'}));validatePlan(m,{...p,status:'enrolled'});assert.throws(()=>validatePlan(m,{...p,status:'enrolled',completed:['U01']}));assert.ok(m.events.find(e=>e.id==='U01').resources.some(r=>r.available));assert.throws(()=>validatePlan(m,{...p,completed:['U01']}));
+ const p=newPlan(m,'2026-10-03');assert.throws(()=>validatePlan({...m,enrollable:false},{...p,status:'enrolled'}));validatePlan(m,{...p,status:'enrolled'});assert.throws(()=>validatePlan(m,{...p,status:'enrolled',completed:['U05']}));assert.ok(m.events.find(e=>e.id==='U01').resources.some(r=>r.available));assert.throws(()=>validatePlan(m,{...p,completed:['U05']}));
  assert.equal(eventState({start:'2026-01-01',end:'2026-01-10',type:'unit'},'2026-02-01'),'Study window passed');
  assert.equal(eventState({completed:true}),'Studied · self-reported');
  const published={...m,enrollable:true,events:m.events.map(r=>({...r,available:true}))};const complete={...p,status:'enrolled',completed:['U01']};validatePlan(published,complete);

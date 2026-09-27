@@ -1,0 +1,82 @@
+{
+  "lesson": "U02-L02",
+  "sections": [
+    {
+      "explanation": "Scientific notation writes a non-zero number as a×10ⁿ, with 1≤|a|<10 and integer n. The coefficient carries the leading digits; the exponent carries scale. Moving the decimal point left to form the coefficient requires a positive exponent; a small positive number requires a negative exponent. A negative quantity has a negative coefficient, not necessarily a negative exponent. Zero has no normalised representation under this rule.",
+      "worked": "45000=4.5×10⁴;0.00072=7.2×10⁻⁴;−3200=−3.2×10³. Check by multiplying or dividing by ten the stated number of times. Writing 45×10³ gives the right value but is not normalised scientific notation.",
+      "tasks": [
+        "Normalise 680000,0.0034,−0.000081 and 12×10⁴.",
+        "Write 3.2×10⁻³ and −6×10² as ordinary decimals.",
+        "Explain the different roles of the two minus signs in −4×10⁻².",
+        "Which is larger:9×10⁴ or 1.1×10⁵?"
+      ],
+      "feedback": [
+        "6.8×10⁵;3.4×10⁻³;−8.1×10⁻⁵;1.2×10⁵.",
+        "0.0032 and −600.",
+        "The coefficient is negative; the exponent denotes division by 100.",
+        "1.1×10⁵=110000 exceeds 90000."
+      ]
+    },
+    {
+      "explanation": "For multiplication, multiply coefficients and add exponents; for division, divide coefficients and subtract exponents. Renormalise afterwards. For addition or subtraction, first use the same power of ten. “Order of magnitude” has more than one convention. Here use the exponent n in normalised notation as the decade label for a positive magnitude: values from 10ⁿ up to, but not including,10ⁿ⁺¹ share a decade. We are not using the nearest-power-of-ten convention. Significant figures describe retained digits, not the decade.",
+      "worked": "(3×10⁵)(4×10⁻²)=12×10³=1.2×10⁴. For addition,3×10⁵+4×10⁴=3×10⁵+0.4×10⁵=3.4×10⁵. Under our convention 8×10³ lies in decade 3, even though it is nearer 10⁴ than 10³.",
+      "tasks": [
+        "Compute(6×10⁷)/(2×10³).",
+        "Compute(8×10⁻³)(5×10²).",
+        "Add 2.5×10⁴ and 7×10³.",
+        "Give the decade labels of 0.009,999 and 1000.",
+        "Does 1.230×10⁵ carry the same stated significant figures as 1.23×10⁵?"
+      ],
+      "feedback": [
+        "3×10⁴.",
+        "4=4×10⁰.",
+        "3.2×10⁴.",
+        "−3,2,3.",
+        "No: four versus three significant figures, although the numerical values agree."
+      ]
+    },
+    {
+      "explanation": "Python’s e notation means “times ten to the power”: 3e4 is 30000.0, not 3 raised to 4. It creates a floating-point value. Use names to keep units visible, such as distance_m. Those names are reminders for humans, not an automatic unit system. Retain the computed value while deciding separately how to report it. A decimal display in e notation has not changed the underlying physical quantity.",
+      "worked": "distance_m=6e8 and speed_m_per_s=3e8 give time_s=2.0. The exponents cancel in the ratio. With 6e9 the time becomes 20.0: changing the distance by a factor of ten changes time by ten at fixed speed.",
+      "tasks": [
+        "Type the example and predict its result.",
+        "Change distance_m to 9e7, recompute and check the exponent by hand.",
+        "Explain the difference between 3e4 and 3**4.",
+        "Write a text-cell answer reporting the units alongside the stored number."
+      ],
+      "feedback": [
+        "2.0 s.",
+        "0.3 s:9/3×10⁻¹.",
+        "30000.0 versus 81.",
+        "The number represents a model travel time in seconds because metres divided by metres per second gives seconds."
+      ],
+      "code": "distance_m = 6e8\nspeed_m_per_s = 3e8\ntime_s = distance_m / speed_m_per_s\nprint(time_s)"
+    },
+    {
+      "explanation": "Use the supplied constant-speed model time=distance/speed. For these exercises take a model light speed of 3.0×10⁸ m/s. This is a rounded model input, not a new measurement. The calculation describes travel over a specified distance at constant speed; it does not incorporate changing geometry or other effects. Estimating the exponent before calculation catches misplaced decimal points.",
+      "worked": "For a supplied distance 1.5×10¹¹ m, time=(1.5/3.0)×10³ s=500 s. Since 60 s=1 min, this is about 8.3 min. The scale check is 10¹¹/10⁸=10³ s, modified by a coefficient of 0.5.",
+      "tasks": [
+        "Calculate travel times for 3.0×10⁶ m and 9.0×10⁹ m.",
+        "A proposed answer for 1.5×10¹¹ m is 0.0005 s. Explain the exponent error.",
+        "If distance triples at the same speed, predict the time without recalculating.",
+        "Report the model result and one assumption in a short paragraph."
+      ],
+      "feedback": [
+        "0.010 s and 30 s.",
+        "The exponent difference is 11−8=3, not −3; the answer is 500 s.",
+        "Time triples.",
+        "State supplied distance, rounded constant speed and units; do not claim to have measured the speed or distance."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Write 0.00056 in scientific notation.",
+      "Calculate (8 × 10⁶)/(4 × 10²)."
+    ],
+    "feedback": [
+      "5.6 × 10⁻⁴.",
+      "2 × 10⁴; coefficient 8/4 and exponent 6−2."
+    ]
+  }
+}

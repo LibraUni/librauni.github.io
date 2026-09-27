@@ -1,0 +1,100 @@
+{
+  "lesson": "U04-L05",
+  "sections": [
+    {
+      "explanation": "An inequality describes a range rather than necessarily one value. Adding the same number to both sides preserves order. Multiplication or division by a positive number preserves it; by a negative number reverses it. For example 2 < 5 becomes −2 > −5 after multiplication by −1: reflection reverses left and right on the number line. Strict bounds exclude the endpoint; non-strict bounds include it.",
+      "worked": "−2x + 3 < 9 gives −2x < 6, then x > −3 after division by −2. At x = 0 the original is true; at x = −4 it is false; at x = −3 equality holds, so the strict inequality excludes it.",
+      "tasks": [
+        "Solve 3x + 2 ≤ 11.",
+        "Solve −4x ≥ 8, explaining the reversal.",
+        "Check the boundary in x > −3 using the original worked inequality.",
+        "Explain the difference between x < 2 and x ≤ 2."
+      ],
+      "feedback": [
+        "x ≤ 3.",
+        "x ≤ −2, because division by −4 reverses order.",
+        "At −3 the two sides are both 9, so it is excluded.",
+        "Only the second includes 2."
+      ]
+    },
+    {
+      "explanation": "Interval notation records a set compactly. Parentheses exclude an endpoint; square brackets include it. Thus −1 ≤ x < 3 is [−1, 3). Infinity is not a real endpoint to include, so use a parenthesis there: x > 2 is (2, ∞). A double inequality means both bounds hold. Apply an operation to all three parts when it preserves order. A number-line sketch should label endpoints and show whether they are open or closed.",
+      "worked": "−1 ≤ 2x + 1 < 7. Subtract 1 throughout: −2 ≤ 2x < 6. Divide by 2: −1 ≤ x < 3, or [−1, 3). The left endpoint qualifies and the right does not.",
+      "tasks": [
+        "Solve 5 − 2x > 1 and write interval notation.",
+        "Solve −3 ≤ x + 2 < 5.",
+        "Write x ≤ −2 in interval notation.",
+        "Test one interior value, both endpoints and one outside value for [−1, 3).",
+        "Explain why infinity never receives a square bracket."
+      ],
+      "feedback": [
+        "x < 2, or (−∞, 2).",
+        "−5 ≤ x < 3, or [−5, 3).",
+        "(−∞, −2].",
+        "For example 0 qualifies, −1 qualifies, 3 does not, and 4 does not.",
+        "It is not a real number that could belong as an endpoint."
+      ]
+    },
+    {
+      "explanation": "A Python list stores an ordered sequence of values inside square brackets, separated by commas. A for loop visits them in order. In “for x in candidates:”, x takes each listed value in turn; the indented body runs once for each. The colon and indentation matter as in if. Start with explicit candidates, especially boundaries. Finite checks illustrate an inequality but cannot establish every real solution.",
+      "worked": "The code visits −4, −3, 0 and 2. It prints each value followed by whether −2x + 3 < 9 holds. The expected Booleans are False, False, True, True, matching the derived interval x > −3.",
+      "tasks": [
+        "Type the loop and predict every line before running.",
+        "Replace the list with [−3, −2, 5] and predict the three results.",
+        "Write a loop testing 3x + 2 <= 11 at x = 2, 3, 4.",
+        "Explain why the loop does not prove the full solution interval.",
+        "Explain what x contains immediately after the first iteration and after the final one."
+      ],
+      "feedback": [
+        "−4 False; −3 False; 0 True; 2 True.",
+        "False, True, True.",
+        "True, True, False.",
+        "Only finitely many candidates were tested; algebra establishes the complete set.",
+        "In the original list x is −4 after the first iteration and 2 after the final one."
+      ],
+      "code": "candidates = [-4, -3, 0, 2]\nfor x in candidates:\n    print(x, -2 * x + 3 < 9)"
+    },
+    {
+      "explanation": "A physical bound must be combined with the model’s domain. Suppose a supplied coordinate model is s = 2 + 3t, in metres with time in seconds, for t ≥ 0. Requiring s ≤ 14 gives t ≤ 4. Combined with non-negative elapsed time, the permitted interval is 0 ≤ t ≤ 4. Reporting only t ≤ 4 would include negative times outside this experiment.",
+      "worked": "For a supplied cooling model T = 20 − 2t valid for 0 ≤ t ≤ 8 minutes, T > 10 gives t < 5. The model and requirement together give 0 ≤ t < 5 minutes. The boundary t = 5 is excluded because T = 10 exactly.",
+      "tasks": [
+        "For s = 2 + 3t, find times when s < 14 with t ≥ 0.",
+        "For T = 20 − 2t, find T ≥ 10 within the stated model interval.",
+        "Check one endpoint in each answer by substitution.",
+        "Why must the validity interval accompany the algebraic inequality?"
+      ],
+      "feedback": [
+        "0 ≤ t < 4 s.",
+        "0 ≤ t ≤ 5 min.",
+        "At t = 4, s = 14 fails the strict bound; at t = 5, T = 10 satisfies the non-strict bound.",
+        "The formula has only been supplied as valid within that interval; algebra alone does not extend its physical authority."
+      ]
+    },
+    {
+      "explanation": "A complete inequality solution has reversible reasoning, a clearly stated set and a boundary check. Use a test point to catch a reversed sign error, but use algebra to justify the entire set. If the context imposes another bound, take only values satisfying both.",
+      "worked": "For −3x + 1 ≤ 7, obtain −3x ≤ 6, so x ≥ −2. The interval is [−2, ∞); at −2 equality qualifies, while −3 gives 10 ≤ 7, which is false.",
+      "tasks": [
+        "Solve 2 − 5x < 12.",
+        "Solve 0 ≤ 3x + 3 ≤ 9.",
+        "Describe the loop you would use to inspect the boundary of the first answer.",
+        "Explain in one sentence why negative multiplication reverses order."
+      ],
+      "feedback": [
+        "x > −2.",
+        "−1 ≤ x ≤ 2.",
+        "Try −3, −2 and −1 and compare the original inequality, expecting False, False, True.",
+        "Multiplying by a negative reflects positions on the number line and reverses their order."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Solve −3x<9 and write the interval.",
+      "Solve 1≤x+2≤6."
+    ],
+    "feedback": [
+      "x>−3, interval(−3,∞); reverse the sign on division by −3.",
+      "−1≤x≤4, interval[−1,4]."
+    ]
+  }
+}

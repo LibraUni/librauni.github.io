@@ -1,0 +1,98 @@
+{
+  "lesson": "U02-L03",
+  "sections": [
+    {
+      "explanation": "A physical quantity is represented by a numerical value and a unit. One metre and 100 centimetres describe the same length. A conversion factor is a ratio of equal quantities, so multiplying by it changes the representation without changing the quantity. Use the orientation that cancels the old unit. Prefixes denote powers of ten: kilo 10³, centi 10⁻², milli 10⁻³ and micro 10⁻⁶. A prefix belongs to the unit symbol, not to the physical kind of quantity.",
+      "worked": "Convert 250 cm to m:250 cm×(1 m/100 cm)=2.5 m. The centimetres cancel. Using 100 cm/1 m instead would leave cm²/m, revealing a wrong orientation. Convert 3 ms to s:3×10⁻³ s=0.003 s.",
+      "tasks": [
+        "Convert 4.2 km to m,75 mm to m and 3200 microseconds to seconds.",
+        "Convert 0.45 m to cm.",
+        "Write the cancelling-unit chain for 180 min to hours using 60 min=1 h.",
+        "Explain why the numerical value changes but the length does not."
+      ],
+      "feedback": [
+        "4200 m;0.075 m;0.0032 s.",
+        "45 cm.",
+        "180 min×1 h/(60 min)=3 h.",
+        "A larger unit requires fewer units to describe the same length."
+      ]
+    },
+    {
+      "explanation": "When a unit is squared, square the entire conversion factor. Since 1 cm=0.01 m,1 cm²=(0.01 m)²=0.0001 m². A square with sides 1 cm has area one ten-thousandth of a square metre, not one hundredth. For compound units, convert numerator and denominator separately. Keep parentheses around factors so their powers are explicit.",
+      "worked": "72 km/h×(1000 m/km)×(1 h/3600 s)=20 m/s. For area,2500 cm²×(1 m/100 cm)²=0.25 m². A separate geometric check: a50 cm square has side 0.5 m and area 0.25 m².",
+      "tasks": [
+        "Convert 900 cm² to m².",
+        "Convert 2 m² to cm².",
+        "Convert 36 km/h to m/s and 15 m/s to km/h.",
+        "A learner says 1 mm³=0.001 m³. Correct the factor.",
+        "Explain why multiplying by 3.6 converts m/s to km/h but division by 3.6 converts back."
+      ],
+      "feedback": [
+        "0.09 m².",
+        "20000 cm².",
+        "10 m/s and 54 km/h.",
+        "(10⁻³)³=10⁻⁹, so 1 mm³=10⁻⁹ m³.",
+        "The reverse conversion uses the reciprocal factor;60×60/1000=3.6."
+      ]
+    },
+    {
+      "explanation": "Ordinary Python arithmetic does not know that a number represents kilometres, hours or metres. You must perform conversions explicitly and document the convention. A correctly executed calculation with mismatched units can be physically wrong. Put unit conversion before combining quantities, and compare with a hand-calculated result.",
+      "worked": "The example converts 72 km/h to 20 m/s. Multiplying only by 1000 would give 72000 with the old “per hour” still unresolved. A result labelled m/s after that incomplete conversion would be mislabelled.",
+      "tasks": [
+        "Type the example and check it against the cancelling-unit chain.",
+        "Adapt it to 90 km/h.",
+        "Write a calculation converting 1600 cm² to m²; make the square of the factor visible.",
+        "Explain a units mistake that would run without a Python error."
+      ],
+      "feedback": [
+        "20.0 m/s.",
+        "25.0 m/s.",
+        "1600*(0.01**2)=0.16 m².",
+        "Adding a number of metres to a number of centimetres without conversion is valid numeric syntax but an invalid representation of the intended sum."
+      ],
+      "code": "speed_km_per_h = 72\nspeed_m_per_s = speed_km_per_h * 1000 / 3600\nprint(speed_m_per_s)"
+    },
+    {
+      "explanation": "To compare journeys, express distance and time consistently before taking their ratio. Average speed is total distance divided by elapsed time in this supplied model. It does not reveal how the speed varied within the journey. Converting after calculating is possible, but mixing unmatched units partway through a calculation makes mistakes harder to spot.",
+      "worked": "Journey A covers 600 m in 2 min:2 min=120 s, so its average speed is 5 m/s. Journey B covers 0.9 km in 150 s:900/150=6 m/s. B has the higher average speed. This comparison says nothing about either journey’s maximum speed.",
+      "tasks": [
+        "Compare 1.2 km in 4 min with 800 m in 200 s.",
+        "Express both speeds in km/h.",
+        "For a supplied constant average speed 5 m/s, calculate distance in 3 min.",
+        "Write a report distinguishing average speed from a claim of constant instantaneous speed."
+      ],
+      "feedback": [
+        "5 m/s versus 4 m/s.",
+        "18 km/h and 14.4 km/h.",
+        "900 m using 180 s.",
+        "The ratio summarises the whole interval; it does not establish that every moment had the same speed."
+      ]
+    },
+    {
+      "explanation": "A conversion checkpoint should test the factor as well as the arithmetic. Keep the unit symbols on paper even when the notebook stores only numeric values. If an answer seems too large, ask whether changing to a larger unit should increase or decrease its numerical value.",
+      "worked": "A square area recorded as 400 cm² becomes 0.04 m², because 400×10⁻⁴=0.04. The square could have side 20 cm=0.2 m;0.2²=0.04 confirms the result by another route.",
+      "tasks": [
+        "Correct 400 cm²=4 m².",
+        "Convert 0.08 m² to cm².",
+        "Convert 108 km/h to m/s.",
+        "Explain why 1 m/s² is not converted like 1 m²/s."
+      ],
+      "feedback": [
+        "The length factor was not squared; correct value 0.04 m².",
+        "800 cm².",
+        "30 m/s.",
+        "The first squares the time unit in the denominator; the second squares the length unit in the numerator. Their dimensions differ."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Convert 450 cm² to m².",
+      "Convert 12 m/s to km/h."
+    ],
+    "feedback": [
+      "450/10000 = 0.045 m².",
+      "12 × 3600/1000 = 43.2 km/h."
+    ]
+  }
+}

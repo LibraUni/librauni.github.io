@@ -186,3 +186,21 @@ test('opening a minimal profile leaves its stored revision and data untouched',a
  const stored=(await getDoc(doc(db,'users',uid,'profile','main'))).data();
  assert.equal(stored.revision,12);assert.deepEqual(stored.data,data);
 });
+
+test('formal submissions preserve originals, retry once, append attempts and reject overwrites/foreign access',async()=>{
+ const assert=(await import('node:assert/strict')).default;
+ const {submitAssessment}=await import('../src/assessment-store.js');
+ const {loadAcademicCatalogue}=await import('../src/academic-store.js');
+ const uid='formal-submission-test',db=env.authenticatedContext(uid,claims).firestore();
+ const files=[new File(['synthetic answers'],'answers.pdf'),new File(['{"cells":[]}'],'work.ipynb')];
+ const release=async()=>({ok:true,json:async()=>({commit:'a'.repeat(40)})});
+ const first=await submitAssessment(uid,'attempt-one','tma01',files,'',db,release);
+ assert.equal(first.fields.status,'submitted');assert.ok(first.submittedAt);assert.equal(first.fields.teachingCommit,'a'.repeat(40));
+ await submitAssessment(uid,'attempt-one','tma01',files,'',db,release);
+ let c=await loadAcademicCatalogue(uid,db);assert.equal(c.register.length,1);assert.equal(c.assets.length,2);
+ await submitAssessment(uid,'attempt-two','tma01',files,'',db,release);c=await loadAcademicCatalogue(uid,db);assert.equal(c.register.length,2);assert.equal(c.assets.length,2);
+ await assert.rejects(submitAssessment(uid,'attempt-one','tma01',[new File(['changed'],'answers.pdf'),files[1]],'',db,release),/different files/);
+ await assertFails(deleteDoc(doc(db,'users',uid,'academicRecords','attempt-one')));
+ await assertFails(setDoc(doc(db,'users',uid,'academicRecords','fake-grade'),{submission:true,payload:JSON.stringify({category:'certificates',module:'M100',fields:{title:'Forged'}}),recordedAt:serverTimestamp()}));
+ for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('other',claims).firestore()])await assertFails(getDoc(doc(other,'users',uid,'academicRecords','attempt-one')));
+});

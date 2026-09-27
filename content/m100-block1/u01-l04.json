@@ -1,0 +1,100 @@
+{
+  "lesson": "U01-L04",
+  "sections": [
+    {
+      "explanation": "A trustworthy calculation is a short argument. State what is given, what is sought and the relation you intend to use. Estimate before detailed arithmetic; show enough intermediate work to expose the order of operations. Finish with units, an interpretation and a check that could reveal a particular mistake. A check has a scope: an estimate catches a gross scale error, but might not distinguish 9.8 from 10.2.",
+      "worked": "Suppose a supplied model says a process takes three intervals of 2.5 s plus a 1.5 s delay. The expression is 3×2.5 +1.5, not 3×(2.5+1.5). Estimate three intervals near 3 s plus a small delay: around 10 s. Calculate 7.5+1.5 =9.0 s. Summing the intervals explicitly, 2.5+2.5+2.5+1.5, checks the grouping.",
+      "tasks": [
+        "Explain why 12 s would answer a different model.",
+        "Create a record for four intervals of 1.25 s plus a 0.5 s delay.",
+        "Identify the input, relation and interpretation in your record.",
+        "Name an error your estimate would probably catch and one it might miss."
+      ],
+      "feedback": [
+        "12 s includes the delay three times.",
+        "4×1.25+0.5 =5.5 s.",
+        "Inputs are interval and delay; relation sums four intervals and one delay; result is total model time.",
+        "A result of 55 s is implausible; a small arithmetic discrepancy may survive a coarse estimate."
+      ]
+    },
+    {
+      "explanation": "Independence of a check concerns its reasoning, not the device used. Entering the same wrong expression into a calculator repeats the same modelling error. Inverse operations, a second representation and limiting cases can expose different faults. Preserve the first attempt when correcting it so the reason for the correction is visible.",
+      "worked": "For 3/4 −1/6, a common-denominator calculation gives 9/12−2/12=7/12. Adding 1/6 back gives 9/12=3/4. This inverse check tests the subtraction. A decimal estimate near 0.58 provides a separate magnitude check.",
+      "tasks": [
+        "Calculate −2 + 3/4 and check by reversing the addition.",
+        "Correct the claim (1/2+1/3)×6 =1+1=2.",
+        "Calculate 5/6 ÷ 5/3 and check by multiplication.",
+        "Explain why “Python agrees” is insufficient if the same incorrect relation was entered twice."
+      ],
+      "feedback": [
+        "−5/4; subtracting 3/4 returns −2.",
+        "The sum is 5/6, so the product is 5. The factors of 6 must be applied correctly to both fractions.",
+        "1/2; (1/2)(5/3)=5/6.",
+        "Agreement verifies execution of the entered expression, not that it represents the intended problem."
+      ]
+    },
+    {
+      "explanation": "A reproducible notebook records the complete route from inputs to interpretation. Put assumptions and predictions in text cells, then type the code. Use meaningful variable names and print quantities with labels. To check reproducibility, save, restart the kernel and run cells from top to bottom. If a later cell depends on an earlier definition, the earlier cell must be part of the notebook. Saving a file does not itself make an off-device backup.",
+      "worked": "The code below computes a model duration using named inputs. Its output is 5.5. A text cell should still say that the assumed model contains four equal intervals and one additional delay. The bare number cannot communicate that model by itself.",
+      "tasks": [
+        "Type the example from a blank cell; write your prediction first.",
+        "Change the interval count to 6 and predict the new result.",
+        "Move an input definition below its use, restart and run: explain the error, then restore the correct order.",
+        "Save and reopen the notebook. Check that explanations and outputs remain."
+      ],
+      "feedback": [
+        "5.5 s under the stated model.",
+        "8.0 s.",
+        "The input is undefined at the point of use in a clean session. Put definitions before dependent calculations.",
+        "A complete record includes input definitions, code, output and interpretation, not merely a screenshot of a number."
+      ],
+      "code": "interval_count = 4\ninterval_s = 1.25\ndelay_s = 0.5\ntotal_s = interval_count * interval_s + delay_s\nprint(total_s)"
+    },
+    {
+      "explanation": "Physical timescales are useful comparisons even before studying the mechanisms that produce them. Here the durations are supplied model values, not experimental observations. A ratio cancels seconds; a difference does not. State which comparison answers the question. No new physics law is required.",
+      "worked": "A short model process takes 0.25 s; a long one takes 120 s. The long process takes 120/0.25 =480 times as long. Their difference is 119.75 s. Reporting “480 seconds longer” confuses a ratio with a difference.",
+      "tasks": [
+        "Compare 0.5 s and 90 s in both directions.",
+        "Calculate their difference.",
+        "If both durations doubled, what would happen to the ratio and difference? Predict before calculating.",
+        "Write a short notebook-supported report, including the fact that the values were supplied."
+      ],
+      "feedback": [
+        "90/0.5=180; 0.5/90=1/180.",
+        "89.5 s.",
+        "The ratio remains 180; the difference doubles to 179 s.",
+        "The report must distinguish dimensionless comparison from elapsed-time difference and avoid claiming an experiment was performed."
+      ]
+    },
+    {
+      "explanation": "Attempt this checkpoint before reading the feedback. A useful outcome is a precise account of what you can explain and what needs revisiting. It is formative practice, not a TMA or an automatic award of mastery. If a task is difficult, identify the source idea and revisit only that part before trying a fresh example.",
+      "worked": "A correction can be concise: “I used 120 as the base, but the question asked for change relative to 100. Replacing the denominator gives 20%, not 16.7%.” This states both the error and the repair.",
+      "tasks": [
+        "Evaluate −3/4 +5/6 exactly.",
+        "Evaluate 2+(3−7)/2 and explain the order.",
+        "A duration increases from 40 s to 50 s. State the difference and percentage increase.",
+        "Round 0.006782 to three significant figures.",
+        "Explain the difference between a Python assignment and an equation.",
+        "Write one independent check for one of your answers; then choose one topic to revisit or explain why you are ready to continue."
+      ],
+      "feedback": [
+        "1/12.",
+        "0: brackets give −4, division gives −2, then add 2.",
+        "10 s and 25%.",
+        "0.00678.",
+        "Assignment associates a name with an evaluated value; an equation asserts equality or poses a condition to solve.",
+        "Use an inverse calculation or distinct representation. If fractions caused difficulty return to L02; base/rounding issues belong to L03."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Five intervals of 0.75 s plus one 0.25 s delay: write and check the total.",
+      "Compare 2 s and 50 s as a ratio and a difference."
+    ],
+    "feedback": [
+      "5 × 0.75 + 0.25 = 4 s; repeated addition checks the grouping.",
+      "The longer is 25 times the shorter; the difference is 48 s."
+    ]
+  }
+}

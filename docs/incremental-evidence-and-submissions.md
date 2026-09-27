@@ -68,3 +68,8 @@ The proactive tutorial-intake and dedicated formal submission requirements above
 remain in force. Formal submission controls still need implementation, with
 receipt, upload verification, privacy, retry/resubmission, source-version and
 backup checks. Existing assessment/enrolment release gates remain unchanged.
+
+
+## Implementation update — 27 September 2026
+
+Dedicated M100 iCMA41 and TMA01 Submit controls now implement the formal route above. Source: src/assessment.js and assessment-store.js. Atomic original/receipt creation, retained retry ID, new resubmission IDs, server time, teaching commit and hash-verified restoration are covered by emulator tests. The existing private catalogue, full proof generation and backup collections include submitted originals. Browser marking feedback is not an independently reviewed tutor result. The tutor must retrieve the queue during tutoring; no background marking session is implied. Earlier “planned” statements describe the previous state.

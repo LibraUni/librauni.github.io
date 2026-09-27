@@ -100,6 +100,32 @@ service cloud.firestore {
         && request.resource.data.recordedAt == request.time;
       // Append only: corrections refer to the earlier entry; no rewriting history.
     }
+    // Owner-only, append-only formal submission originals. No client grading authority.
+    match /users/{uid}/academicRecords/{record} {
+      allow create: if owner(uid) && request.resource.data.submission == true
+        && request.resource.data.keys().hasOnly(['payload','recordedAt','submission'])
+        && request.resource.data.payload is string && request.resource.data.payload.size() <= 30000
+        && request.resource.data.payload.matches('^\\{"category":"submissions","module":"M100","fields":.*')
+        && request.resource.data.recordedAt == request.time;
+    }
+    match /users/{uid}/academicFiles/{file} {
+      allow create: if owner(uid) && file.matches('[a-f0-9]{64}')
+        && request.resource.data.keys().hasOnly(['name','size','sha256','parts','category','module','activity','source','recordedAt'])
+        && request.resource.data.name is string && request.resource.data.name.size() <= 200
+        && request.resource.data.size is int && request.resource.data.size >= 0 && request.resource.data.size <= 6000000
+        && request.resource.data.sha256 == '0x' + file
+        && request.resource.data.parts is int && request.resource.data.parts >= 1 && request.resource.data.parts <= 25
+        && request.resource.data.category == 'submissions' && request.resource.data.module == 'M100'
+        && request.resource.data.activity in ['icma41','tma01']
+        && request.resource.data.source is string && request.resource.data.source.size() <= 200
+        && request.resource.data.recordedAt == request.time;
+      match /parts/{part} {
+        allow create: if owner(uid) && part.matches('[0-9]{1,2}')
+          && request.resource.data.keys().hasOnly(['base64'])
+          && request.resource.data.base64 is string && request.resource.data.base64.size() <= 320000
+          && getAfter(/databases/$(database)/documents/users/$(uid)/academicFiles/$(file)).data.recordedAt == request.time;
+      }
+    }
     // Personal evidence is immutable recovery data, not assessed attainment.
     match /users/{uid}/evidence/{snapshot} {
       allow create: if owner(uid)

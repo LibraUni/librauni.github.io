@@ -1,0 +1,82 @@
+{
+  "lesson": "U01-L02",
+  "sections": [
+    {
+      "explanation": "A fraction a/b describes a divided by b, with b ≠ 0. The denominator names the size of each equal part; the numerator counts those parts. Thus 3/4 means three quarter-sized parts. Multiplying numerator and denominator by the same non-zero number leaves the value unchanged: 3/4 = 6/8. We have changed the description, not the quantity. To add fractions, first express them using the same-sized parts. A common denominator need not be the smallest possible, but a smaller one usually makes arithmetic easier. Reduce a fraction by dividing both entries by a common factor. A negative sign may be attached to the numerator or placed before the whole fraction; two negative entries give a positive value.",
+      "worked": "Add 3/4 + 1/6. Twelfths are a common unit: 3/4 = 9/12 and 1/6 = 2/12, so the sum is 11/12. It should lie between 3/4 and 1: 1/6 is positive but smaller than the missing quarter. This estimate checks the result. Adding numerators and denominators would give 4/10, smaller than 3/4, so it fails even this simple check.",
+      "tasks": [
+        "Draw equal-length strips divided into fourths and eighths; shade 3/4 and 6/8. Explain the equality.",
+        "Reduce 18/24 and −15/35.",
+        "Calculate 2/3 + 1/4 and 5/6 − 3/4.",
+        "A learner says 1/2 + 1/3 = 2/5. Give both a correct calculation and a magnitude argument against it."
+      ],
+      "feedback": [
+        "The shaded lengths agree; eighths are half as large but twice as numerous.",
+        "3/4 and −3/7.",
+        "8/12 + 3/12 = 11/12; 10/12 − 9/12 = 1/12.",
+        "The sum is 5/6. Adding a positive number to 1/2 cannot produce 2/5, which is smaller than 1/2."
+      ]
+    },
+    {
+      "explanation": "Multiplication of fractions combines the numerators and denominators: (a/b)(c/d) = ac/(bd). For positive fractions, “a fraction of a fraction” gives a useful area interpretation. Division asks which factor would undo multiplication. Dividing by a non-zero fraction c/d is multiplication by its reciprocal d/c. Keep all non-zero restrictions visible. A decimal can be exact: 0.25 = 1/4. A finite displayed decimal can also be a rounded approximation: 1/3 ≈ 0.3333. Use = for equal values and ≈ for approximations. For a reduced fraction, only denominators composed of factors 2 and 5 have terminating decimal expansions. Other rational fractions recur; this is not random numerical noise.",
+      "worked": "Compute (2/3) ÷ (4/5): (2/3)(5/4) = 10/12 = 5/6. Check by multiplying 5/6 by 4/5: the result is 2/3. By contrast (2/3)(4/5) = 8/15. Dividing by a positive number smaller than one increases a positive value. Also, 5/6 ≈ 0.8333; the fraction remains the exact answer.",
+      "tasks": [
+        "Calculate (3/5)(10/9), (−2/7)(21/4), and (5/8) ÷ (15/16).",
+        "Evaluate 1/2 + (3/4)(2/3), retaining exact fractions.",
+        "Convert 3/8 to a decimal; express 0.125 as a reduced fraction.",
+        "Which of 1/6 and 7/20 has a terminating decimal? Explain.",
+        "Explain why dividing by 0/5 is forbidden."
+      ],
+      "feedback": [
+        "2/3; −3/2; 2/3. Cancelling common factors before multiplication can reduce the work.",
+        "1: multiplication gives 1/2, then add 1/2.",
+        "0.375; 1/8.",
+        "7/20 terminates because 20 = 2²×5; 1/6 has a factor 3 in its reduced denominator.",
+        "0/5 is zero and has no multiplicative reciprocal."
+      ]
+    },
+    {
+      "explanation": "A Python name is a label attached to a value. In elapsed = 12, Python evaluates the right-hand side and assigns its value to the name on the left. This is an instruction, not an equation to solve. Later elapsed = 15 replaces the value associated with that name. Integers such as 12 have type int; decimal literals such as 12.0 have type float. Ordinary / division produces a float, even when the mathematical quotient is an integer. print(...) explicitly displays a value; a notebook also normally displays the final expression in a cell. Choose names that convey meaning and use an underscore for spaces. A notebook remembers previous execution, so run cells in order when checking your work.",
+      "worked": "With numerator = 5 and denominator = 6, ratio = numerator / denominator stores an approximate float. print(ratio) displays a decimal approximation to 5/6. Changing numerator afterwards does not recalculate ratio automatically: assignment stored the earlier result. Run the ratio assignment again to recompute it.",
+      "tasks": [
+        "Type the code below, predicting every line of output first.",
+        "Change numerator to 10 after ratio has been calculated. Print ratio before and after recomputing it. Explain the difference.",
+        "Write a new calculation for 7/8 using meaningful names and print its value.",
+        "In a text cell state the exact value of 1/3 and explain why a finite decimal output is not that exact fraction."
+      ],
+      "feedback": [
+        "The first result is approximately 0.8333333333333334; 8/4 gives 2.0.",
+        "Before recomputation ratio still holds the earlier value; afterwards it is approximately 1.6666666666666667.",
+        "For example parts = 7; total_parts = 8; fraction = parts / total_parts; print(fraction), giving 0.875.",
+        "The exact value is 1/3. A float uses finite binary storage, so the displayed decimal is a representation of an approximation. Detailed numerical-error analysis comes later."
+      ],
+      "code": "numerator = 5\ndenominator = 6\nratio = numerator / denominator\nprint(ratio)\nprint(8 / 4)"
+    },
+    {
+      "explanation": "A ratio compares quantities of the same kind. Dividing 45 seconds by 120 seconds cancels the unit and gives a dimensionless ratio. Write the units in your hand calculation even though Python does not carry them automatically. Decide which quantity is the reference: reversing a ratio answers a different question. Keep an exact fraction until the final reporting step when possible. The word “times” is useful only if the direction of comparison is explicit.",
+      "worked": "A model event lasts 45 s and a reference event lasts 120 s. The first duration is 45/120 = 3/8 = 0.375 of the reference. The reference lasts 120/45 = 8/3 ≈ 2.67 times as long. Both descriptions are valid, but they answer opposite comparisons.",
+      "tasks": [
+        "For durations 18 s and 48 s, express the first as a fraction of the second and the second as a multiple of the first.",
+        "Two runs take 75 s and 100 s. Find the difference and its fraction of the 100 s reference.",
+        "Write three sentences distinguishing the difference, the ratio and the reciprocal ratio for the first pair.",
+        "Create a notebook calculation for both directions. Predict whether each output is above or below one."
+      ],
+      "feedback": [
+        "3/8 and 8/3.",
+        "25 s; 1/4 of the reference duration.",
+        "The difference is 30 s; 18/48 = 3/8 is dimensionless; 48/18 = 8/3 reverses the reference.",
+        "0.375 is below one; approximately 2.6667 is above one. Retain the exact fractions in the explanation."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Calculate 1/4 + 2/3 exactly.",
+      "Calculate (3/7) ÷ (6/5)."
+    ],
+    "feedback": [
+      "3/12 + 8/12 = 11/12.",
+      "(3/7)(5/6) = 5/14; multiplying by 6/5 restores 3/7."
+    ]
+  }
+}

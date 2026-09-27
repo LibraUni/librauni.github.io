@@ -7,7 +7,7 @@ export async function readAll(uid,name,connection=db){const rows=[];let last;do{
 export async function loadAcademicCatalogue(uid,connection=db){
  const [assetRows,raw]=await Promise.all([readAll(uid,'academicFiles',connection),readAll(uid,'academicRecords',connection)]);
  const assets=assetRows.map(a=>({...a,recordedAt:iso(a.recordedAt)}));
- const register=raw.map(r=>{const p=JSON.parse(r.payload);return {id:r.id,...p,fields:{...p.fields,archiveRecordedAt:iso(r.recordedAt)}};});
+ const register=raw.map(r=>{const p=JSON.parse(r.payload);return {id:r.id,...p,...(r.submission?{category:'submissions',module:'M100'}:{}),fields:{...p.fields,archiveRecordedAt:iso(r.recordedAt)}};});
  // A missing referenced file must stop full-proof generation, never silently omit evidence.
  const available=new Set(assets.map(a=>a.id));for(const r of register)for(const id of r.fields.fileIds||[])if(!available.has(id))throw Error('An academic record references a missing archived file. Ask your tutor to repair the archive.');
  return {assets,register};

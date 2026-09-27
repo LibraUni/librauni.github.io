@@ -1,0 +1,84 @@
+{
+  "lesson": "U03-L05",
+  "sections": [
+    {
+      "explanation": "An identity is true for every permitted input, for example 2(x + 3) = 2x + 6. An equation asks which inputs make a statement true, for example 2x + 3 = 7. A numerical coincidence is agreement at a particular input without general equivalence. The domain matters: x/x = 1 is an identity only for x ≠ 0. One permitted counterexample disproves a universal claim; many agreeing examples do not prove it.",
+      "worked": "x² = x is true at x = 0 and x = 1, but false at x = 2 because 4 ≠ 2. Two successful tests did not establish an identity. By contrast, distributing 3(x − 2) gives 3x − 6 for all real x.",
+      "tasks": [
+        "Classify 4(x + 1) = 4x + 4, 4x = 12 and x² = 4 as identities or equations.",
+        "Give a counterexample to (x + 1)² = x² + 1.",
+        "State the domain of (x − 2)/(x − 2) = 1.",
+        "Explain why an excluded input cannot be used as a counterexample within a claim’s stated domain."
+      ],
+      "feedback": [
+        "The first is an identity; the others restrict the input and are equations.",
+        "x = 1 gives 4 versus 2.",
+        "All real x except 2.",
+        "The claim was not made for that input; both validity and agreement must be checked."
+      ]
+    },
+    {
+      "explanation": "To establish an identity, transform one side using valid algebraic laws until it matches the other, retaining restrictions. Avoid assuming the equality you are trying to establish. To reject a proposed identity, show one permitted input with unequal results. Choose inputs strategically: zero may erase the very terms that differ, so a non-zero value can be more informative.",
+      "worked": "Claim: 2(x − 3) + x = 3x − 6. Expanding the left gives 2x − 6 + x = 3x − 6, proving it. Claim: (x + 2)² = x² + 4. At x = 1, 9 ≠ 5, disproving it.",
+      "tasks": [
+        "Prove 5(x + 2) − 2x = 3x + 10.",
+        "Disprove 3(x − 1) = 3x − 1.",
+        "Explain why x = 0 fails to expose the missing term in (x + 2)² = x² + 4.",
+        "Prove (2x² + 6x)/(2x) = x + 3 on its stated domain."
+      ],
+      "feedback": [
+        "5x + 10 − 2x = 3x + 10.",
+        "At x = 0 the values are −3 and −1.",
+        "The missing cross-term 4x vanishes at zero.",
+        "Factor 2x(x + 3), cancel 2x for x ≠ 0."
+      ]
+    },
+    {
+      "explanation": "Use code to explore a claim, while keeping the distinction between testing and proof explicit. Assign one input at a time and evaluate both expressions. The comparison == returns a Boolean. Here use small integers so arithmetic is exact. Floating-point equality is not a general test of numerical accuracy; we will return to that limitation later. Do not introduce a loop yet: make each chosen example intentional.",
+      "worked": "The code tests the false claim x² = x at x = 2. It prints 4, 2 and False. Reassigning x = 1 and rerunning makes the comparison True without changing the status of the universal claim.",
+      "tasks": [
+        "Run at x = 0, 1 and 2, predicting first.",
+        "Test (x + 2)² and x² + 4 at x = 0 and 3.",
+        "Write an algebraic explanation of their difference.",
+        "Save a conclusion that does not overstate the force of numerical testing."
+      ],
+      "feedback": [
+        "True, True and False.",
+        "They agree at 0 (both 4) but differ at 3 (25 versus 13).",
+        "The difference is 4x, from the two cross-products.",
+        "For example: the counterexample disproves the identity; agreeing tests alone would not prove one."
+      ],
+      "code": "x = 2\nleft = x ** 2\nright = x\nprint(left)\nprint(right)\nprint(left == right)"
+    },
+    {
+      "explanation": "Retrieve the ideas without looking back first. A complete answer should state the claim, domain, method and conclusion. If you miss a task, identify whether the issue is distribution, cancellation, restriction, code syntax or the logic of evidence. Return to that specific lesson and attempt a fresh example. This is practice for a checkable mathematical argument, not a requirement to work quickly.",
+      "worked": "For (x² − x)/x = x − 1, write x ≠ 0 first, factor x(x − 1), and cancel. A numerical check at x = 3 yields 2 in both forms. The factorisation establishes equivalence on the domain.",
+      "tasks": [
+        "Simplify 3(2x − 1) − (x + 4).",
+        "Simplify (x² + 2x)/x with restriction.",
+        "Disprove (a + b)² = a² + b² using non-zero a and b.",
+        "Describe an appropriate guard for division by x − 2.",
+        "Explain why three agreeing numerical cases do not establish an identity.",
+        "Write a fresh identity and justify it by distribution."
+      ],
+      "feedback": [
+        "5x − 7.",
+        "x + 2, x ≠ 0.",
+        "a = b = 1 gives 4 versus 2.",
+        "Only divide when x != 2; otherwise explain the invalid input.",
+        "A different permitted input may fail; a general algebraic argument is needed.",
+        "For example 2(y + 4) = 2y + 8 follows by multiplying both terms by 2."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Prove 2(x+5)+x=3x+10.",
+      "Disprove x²=2x as an identity."
+    ],
+    "feedback": [
+      "Distribution gives 2x+10+x=3x+10 for all realx.",
+      "x=1 gives 1 versus 2; one permitted counterexample suffices."
+    ]
+  }
+}

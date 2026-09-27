@@ -1,0 +1,65 @@
+{
+  "lesson": "U04-L03",
+  "sections": [
+    {
+      "explanation": "One linear relation involving two unknowns usually leaves many possibilities. A second independent relation can determine a unique pair. Substitution uses one equation to express an unknown and inserts that expression into the other. The recovered pair must satisfy both original equations. Keep names and units consistent so that the second relation really refers to the same quantities.",
+      "worked": "Solve x + y = 7 and 2x − y = 2. From the first, y = 7 − x. Substitute: 2x − (7 − x) = 2, so 3x = 9 and x = 3. Then y = 4. Checks: 3 + 4 = 7 and 6 − 4 = 2.",
+      "tasks": [
+        "Solve x + y = 9 and x − y = 1 by substitution.",
+        "Solve y = 2x + 1 and x + y = 10.",
+        "List two different pairs satisfying x + y = 7 alone.",
+        "Explain why satisfying only the first equation is insufficient."
+      ],
+      "feedback": [
+        "x = 5, y = 4.",
+        "3x + 1 = 10, so x = 3, y = 7.",
+        "For example (0, 7) and (2, 5).",
+        "The solution must lie in the set satisfying both constraints, not just one."
+      ]
+    },
+    {
+      "explanation": "Elimination adds or subtracts suitable multiples of equations to remove one unknown. Multiplying an entire equation by a non-zero number preserves its solutions. Choose a multiple that makes one pair of coefficients opposite, then add. After finding one unknown, substitute into an original equation for the other. Substitution and elimination are alternative routes to the same pair; choose the route that keeps arithmetic manageable.",
+      "worked": "For 2x + 3y = 13 and 3x − 2y = 0, multiply the first by 2 and the second by 3: 4x + 6y = 26 and 9x − 6y = 0. Add: 13x = 26, so x = 2. Then y = 3. Both originals check.",
+      "tasks": [
+        "Solve 2x + y = 8 and x − y = 1 by elimination.",
+        "Solve 3x + 2y = 16 and x − 2y = 0.",
+        "Solve 2x + 3y = 1 and 4x − 3y = 11.",
+        "For y = 3x − 2 and 2x + y = 8, explain which method is convenient and solve.",
+        "Explain why multiplying only the left side of an equation is invalid."
+      ],
+      "feedback": [
+        "3x = 9, so x = 3, y = 2.",
+        "4x = 16, so x = 4, y = 2.",
+        "6x = 12, so x = 2, y = −1.",
+        "Substitution is convenient because y is isolated; 5x − 2 = 8 gives x = 2, y = 4.",
+        "It changes the constraint rather than preserving equality."
+      ]
+    },
+    {
+      "explanation": "Two supplied measurements can determine the two parameters of a simple model. Treat the values as exact for this exercise; real measurement uncertainty would need additional analysis. In s = s₀ + vt, an observation at each of two different times gives two equations for s₀ and v. Subtracting removes the offset and isolates the change over the elapsed time.",
+      "worked": "At t = 1 s, s = 7 m; at t = 3 s, s = 11 m. Thus s₀ + v × 1 s = 7 m and s₀ + v × 3 s = 11 m. Subtract: v × 2 s = 4 m, so v = 2 m/s and s₀ = 5 m.",
+      "tasks": [
+        "Use observations (2 s, 9 m) and (5 s, 18 m) to recover v and s₀.",
+        "Check both measurements using your recovered parameters.",
+        "Predict s at 4 s under the same model.",
+        "Why would two measurements at the same time fail to determine a velocity uniquely?"
+      ],
+      "feedback": [
+        "Subtracting gives v = 3 m/s; s₀ = 3 m.",
+        "3 + 3 × 2 = 9 and 3 + 3 × 5 = 18, in metres.",
+        "15 m.",
+        "They provide no time separation: identical values repeat one constraint, while differing exact values contradict the model."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Solve x+y=6 and x−y=2.",
+      "Solve 2x+y=7 and x+y=5."
+    ],
+    "feedback": [
+      "Adding gives 2x=8, hence x=4,y=2.",
+      "Subtracting givesx=2, hence y=3. Check both originals."
+    ]
+  }
+}

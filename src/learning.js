@@ -21,3 +21,5 @@ function revealTarget(){
 revealTarget();
 window.addEventListener('hashchange',revealTarget);
 
+
+for(const input of document.querySelectorAll("[data-scale-input]")){input.addEventListener("input",()=>{const k=Number(input.value);input.closest(".scaling-lab").querySelector("[data-scale-output]").textContent=`Input ×${k}; direct output ×${k}; inverse output ×${(1/k).toPrecision(3)}; inverse-square output ×${(1/k**2).toPrecision(3)}.`;});}

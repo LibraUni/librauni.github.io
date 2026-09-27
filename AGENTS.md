@@ -271,3 +271,10 @@ not be automatically uploaded.
 ## M100 Block 1 complete detailed blueprint — 27 September 2026
 
 All four units and 19 lessons retain their approved scope; remaining lesson section plans and iCMA41/TMA01 specifications are now defined in curriculum/m100-block1-sections.js and curriculum/m100-block1-assessments.js. Public /learn/preparation/m100/b01/design/ and lesson outline pages expose the plans. Review docs/m100-block1-section-review.md before authoring. Only U01-L01 is released teaching. Preserve 80h/14h Python, embedded1h iCMA41 and separate6h TMA01. Live questions/rubrics remain to be authored and checked. This design work creates no academic records or completion.
+
+
+## M100 Block 1 actual teaching release — 27 September 2026
+
+The learner explicitly corrected the request to create and publish all remaining Block 1 teaching, authorising this 18-lesson batch despite the default incremental authoring rule. All 19 lessons / 82 sections now have actual teaching, practice and feedback; 15 additional Python notebooks accompany the new lessons. Source: content/m100-block1/*.json, rendered by scripts/render-block1-teaching.mjs. Review docs/m100-block1-teaching-release.md. Unit/block completion availability is now true for B01/U01–U04; B02/B03 stay unpublished. Preserve learner dates, marks and enrolment. Workload remains 80 unit hours including 14 Python hours and iCMA41; TMA01 adds its existing6hours.
+
+iCMA41/TMA01 pages expose explicit owner-only Submit controls. Original files and immutable dated receipts enter existing private academicFiles/academicRecords collections and full proofs. A receipt is submission evidence, not attainment. Computer feedback is shown for iCMA; assessed tutor results/feedback must be appended after review. When tutoring resumes, inspect submissions and restore/check their originals. Never execute untrusted submitted code automatically. The private marking key is in private-study/study/marking/m100-block1-v1.md, never publish it. No learner record is created by this teaching release. The normal recursive gates continue to apply to later content.

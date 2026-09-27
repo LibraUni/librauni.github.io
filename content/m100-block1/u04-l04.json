@@ -1,0 +1,98 @@
+{
+  "lesson": "U04-L04",
+  "sections": [
+    {
+      "explanation": "Two equations do not automatically provide two independent pieces of information. Elimination can lead to a non-zero coefficient times an unknown, a contradiction such as 0 = 1, or an identity such as 0 = 0. These indicate a unique solution, no solution, or a remaining free choice respectively in the simple systems here. Interpret the resulting statement instead of trying to divide by zero.",
+      "worked": "x + y = 4 and 2x + 2y = 8 repeat the same constraint. Let x be any real number; then y = 4 − x. Replacing the second right side by 9 produces 0 = 1 after subtraction, so there is no pair satisfying both.",
+      "tasks": [
+        "Classify x + y = 3 with 2x + 2y = 6.",
+        "Classify x + y = 3 with 2x + 2y = 7.",
+        "Classify x + y = 3 with x − y = 1 and solve.",
+        "Explain why 0 = 0 does not mean x = y = 0."
+      ],
+      "feedback": [
+        "Infinitely many pairs: y = 3 − x.",
+        "No solution: subtracting twice the first gives 0 = 1.",
+        "Unique pair x = 2, y = 1.",
+        "The eliminated equation imposes no new restriction; the original remaining constraint still matters."
+      ]
+    },
+    {
+      "explanation": "A free parameter describes an entire family without listing infinitely many pairs. For 2x + y = 5, write x = r and y = 5 − 2r, with r any real number. Substitution verifies the family. When a system is inconsistent, demonstrate the contradiction directly. A failed trial pair alone does not prove that no other pair works.",
+      "worked": "For 2x + y = 5 and 6x + 3y = 15, the second is three times the first. The family (r, 5 − 2r) satisfies both. With right side 16 in the second equation, subtracting three times the first gives 0 = 1, proving inconsistency.",
+      "tasks": [
+        "Describe all solutions of x − 2y = 4 and 2x − 4y = 8.",
+        "Give two distinct pairs in that family and check both equations.",
+        "Show that x − 2y = 4 and 2x − 4y = 9 are inconsistent.",
+        "A student tests (0, 0), finds it fails, and declares no solution. Explain the logical gap.",
+        "For a unique system, what should the final substitution check contain?"
+      ],
+      "feedback": [
+        "Let y = r; then x = 4 + 2r for every real r.",
+        "For example (4, 0) and (6, 1); both give 4 and 8 in the respective equations.",
+        "Subtract twice the first from the second: 0 = 1.",
+        "One failed candidate excludes only that pair; a contradiction of the constraints is needed.",
+        "Both values substituted into both original equations."
+      ]
+    },
+    {
+      "explanation": "Code can check candidate pairs but does not classify an infinite solution set by itself. Evaluate each constraint separately and print its truth value. Use small integer values here for exact comparison. For a dependent system, test two different pairs from the derived family; for an inconsistent one, let algebra establish that no pair can work.",
+      "worked": "At x = 1, y = 3, both equations 2x + y = 5 and 6x + 3y = 15 hold. At x = 2, y = 1 they also hold, illustrating two members of the family.",
+      "tasks": [
+        "Run the example for both listed pairs.",
+        "Change the second right side to 16 and observe the result.",
+        "Test x = 0, y = 0 and explain why its failure does not classify the system.",
+        "Write the algebraic family in a Markdown cell."
+      ],
+      "feedback": [
+        "Both comparisons are True for each pair.",
+        "The second comparison is False.",
+        "It is merely one pair outside the solution family.",
+        "x = r, y = 5 − 2r for real r; substitution verifies the family."
+      ],
+      "code": "x = 1\ny = 3\nprint(2 * x + y == 5)\nprint(6 * x + 3 * y == 15)"
+    },
+    {
+      "explanation": "In an exact model, repeated information is different from conflicting information. Observing the same position at the same time twice adds no independent equation for a constant-velocity model. Reporting two different exact positions at that time contradicts it. Real noisy measurements need a treatment of uncertainty rather than an automatic claim that nature is inconsistent; here we deliberately use exact supplied constraints.",
+      "worked": "At t = 2 s, both records give s = 9 m. Both say s₀ + 2v = 9 in compatible numerical units, leaving one parameter free. If one instead gives 10 m, subtracting gives 0 = 1 m: no exact model fits both.",
+      "tasks": [
+        "Give two parameter pairs fitting s = 9 m at t = 2 s.",
+        "What extra kind of observation would distinguish those pairs?",
+        "Explain the exact contradiction if the second simultaneous position is 10 m.",
+        "State why rounded experimental readings would require more cautious interpretation."
+      ],
+      "feedback": [
+        "For example s₀ = 5 m, v = 2 m/s and s₀ = 3 m, v = 3 m/s.",
+        "A position at a different time, under the constant-velocity assumption.",
+        "The identical left sides would have to equal different right sides.",
+        "The reported values may represent intervals of uncertainty, not incompatible exact constraints."
+      ]
+    },
+    {
+      "explanation": "Use elimination to classify first, then give the appropriate answer: a pair, a family, or a contradiction. Do not force every system into a single numerical result. This distinction is a foundation for later modelling: more measurements help only when they contribute useful independent information.",
+      "worked": "x + y = 6 and x − y = 2 give x = 4, y = 2. The same first equation paired with 2x + 2y = 12 leaves a family; paired with 2x + 2y = 13 gives none.",
+      "tasks": [
+        "Classify 3x + y = 7 and 6x + 2y = 14.",
+        "Classify 3x + y = 7 and 6x + 2y = 15.",
+        "Solve 3x + y = 7 and x + y = 3.",
+        "Explain the meaning of a free parameter without using a graph."
+      ],
+      "feedback": [
+        "Family y = 7 − 3x.",
+        "No solution: 0 = 1.",
+        "Subtract: 2x = 4, so x = 2, y = 1.",
+        "One value can be chosen freely, and the other is then determined by the remaining constraint."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Classify x+y=5 and 2x+2y=10.",
+      "Classify x+y=5 and 2x+2y=11."
+    ],
+    "feedback": [
+      "Dependent: x=r,y=5−r for any realr.",
+      "Inconsistent: subtracting twice the first gives 0=1."
+    ]
+  }
+}

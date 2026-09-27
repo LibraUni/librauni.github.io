@@ -1,0 +1,96 @@
+{
+  "lesson": "U03-L04",
+  "sections": [
+    {
+      "explanation": "A guard checks a condition before a calculation that requires it. Begin with the mathematical restriction: for 12/t, t must not be zero. The condition is a statement that is either true or false. The symbols < and > mean strictly less/greater; ≤ and ≥ include equality; ≠ means not equal. Mathematical validity is only one layer: if t represents a duration, your model may require t > 0. State which rule you are enforcing.",
+      "worked": "For t = −2, the expression 12/t is mathematically defined, giving −6. If t is an elapsed duration in seconds, it is outside the physical model. The guard t > 0 protects that model more appropriately than t ≠ 0.",
+      "tasks": [
+        "State the arithmetic restriction for 8/(x − 3).",
+        "State a suitable physical restriction for time in speed = distance/time.",
+        "Which statements are true: −2 < 0, 3 ≤ 3, 4 > 4, 5 ≠ 0?",
+        "For a sensor validated from 0 to 10 inclusive, are −1, 0, 10 and 11 valid?"
+      ],
+      "feedback": [
+        "x ≠ 3.",
+        "time > 0 for a positive elapsed interval.",
+        "True, true, false, true.",
+        "Invalid, valid, valid, invalid."
+      ]
+    },
+    {
+      "explanation": "A boundary value deserves its own test. A condition x > 3 rejects 3; x ≥ 3 accepts it. These two rules may differ at only one point, but that point can cause division by zero or violate a strict limit. Select a value below the boundary, at it, and above it before writing any code. For a single denominator restriction, test the excluded value and one permitted value on each side.",
+      "worked": "For 8/(x − 3), try x = 2, 3, 4. The outputs are −8, undefined, 8. A guard x > 3 would reject the mathematically valid x = 2, so it is too restrictive unless the physical model additionally requires x > 3.",
+      "tasks": [
+        "Design three test inputs for 1/(t − 5).",
+        "Compare the accepted values of x > 0 and x ≥ 0 using −1, 0, 1.",
+        "A rule permits a reading no greater than 20. Write the mathematical condition.",
+        "Explain why checking only x = 4 would miss a boundary error in 8/(x − 3)."
+      ],
+      "feedback": [
+        "For example 4, 5, 6, producing −1, undefined, 1.",
+        "The first accepts only 1; the second accepts 0 and 1.",
+        "reading ≤ 20.",
+        "It never exercises the excluded input or the negative side."
+      ]
+    },
+    {
+      "explanation": "Python Boolean values are True and False. Comparisons use == for equality, != for inequality, and <, >, <=, >=. A single = assigns a value; it does not compare. An if line ends with a colon. The indented statements run only when its condition is true. An else line, also ending with a colon, selects the other branch. Use four spaces consistently. The protected calculation must be inside the valid branch, not before it.",
+      "worked": "The code below computes a speed only for positive time. At time_s = 0 it prints the explanation and performs no division. The else branch prevents an invalid result rather than trying to repair one afterwards.",
+      "tasks": [
+        "Type the code and run with time_s = 3, 0 and −1. Predict the chosen branch first.",
+        "Print 3 == 3 and 3 != 3 in another cell.",
+        "Write a guard for 8/(x − 3), using x != 3. Test 2, 3, 4.",
+        "Explain what would happen if the division were placed above the if statement."
+      ],
+      "feedback": [
+        "The first prints 4.0; the others print the invalid-duration message.",
+        "True and False.",
+        "The valid branch computes the quotient; the other prints an explanation. Expected valid outputs −8.0 and 8.0.",
+        "At zero time Python would fail before reaching the guard."
+      ],
+      "code": "distance_m = 12\ntime_s = 3\nif time_s > 0:\n    speed_m_s = distance_m / time_s\n    print(speed_m_s)\nelse:\n    print(\"Duration must be positive\")"
+    },
+    {
+      "explanation": "A calibration with y = (x − b)/a requires a non-zero scale factor. If a = 0, the model cannot recover y by division. Printing a helpful explanation is better than inventing a replacement number. Keep the model’s restrictions in the written account, not only in the program. A guard establishes that an operation is allowed; it does not show that the supplied calibration is accurate.",
+      "worked": "For x = 11, b = 3 and a = 2, y = 4. With a = 0 the inverse formula is undefined. The original relation x = ay + b would instead say x = b, which might hold for many y or none; we will study such cases in U04.",
+      "tasks": [
+        "Write and test a guarded calculation for a = 2 and a = 0.",
+        "What result follows from a = −2 with the other inputs unchanged?",
+        "Does a != 0 establish that a sensor is calibrated correctly? Explain.",
+        "Add a Markdown sentence stating the roles of x, a and b."
+      ],
+      "feedback": [
+        "4.0 for a = 2; an explanatory message for a = 0 without division.",
+        "−4.0; a negative scale is algebraically valid unless the model excludes it.",
+        "No. It establishes a denominator restriction only; calibration needs supporting measurement evidence.",
+        "x is the reading, a the scale parameter and b the offset."
+      ]
+    },
+    {
+      "explanation": "Trace a conditional by writing the input, the truth value of the condition, and the selected branch. Then compare the trace with execution. If a result appears unexpectedly, check whether it is stale output from an earlier run. Restart and run all cells to ensure the displayed notebook represents the current inputs.",
+      "worked": "At t = 0, t > 0 is False, so only the else branch runs. A number still displayed in an earlier cell is not a new valid speed.",
+      "tasks": [
+        "Trace the example for t = 6.",
+        "Explain the difference between x = 3 and x == 3.",
+        "Explain why indentation is part of Python’s meaning.",
+        "Write one valid/invalid input pair and the expected outputs for your calibration guard."
+      ],
+      "feedback": [
+        "The condition is True and the result is 2.0 m/s.",
+        "The first assigns; the second evaluates an equality comparison.",
+        "It determines which statements belong to the conditional branch.",
+        "For example a = 2 yields 4.0, a = 0 yields a restriction message with no quotient."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Write the condition guarding 10/(x+1). Test a value on each side and the boundary.",
+      "Explain what if time_s >= 0 would incorrectly permit when dividing by time_s."
+    ],
+    "feedback": [
+      "Use x != −1; x=−2 gives −10, x=−1 is excluded, x=0 gives 10.",
+      "It permits zero, causing division by zero; use time_s > 0 for a duration."
+    ]
+  }
+}

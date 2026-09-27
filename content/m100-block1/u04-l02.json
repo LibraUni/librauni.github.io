@@ -1,0 +1,82 @@
+{
+  "lesson": "U04-L02",
+  "sections": [
+    {
+      "explanation": "Changing the subject expresses one symbol in terms of the others. The operations are the same as equation solving, but a divisor may now be a parameter that could equal zero. Record the non-zero condition before division and examine the exceptional case in the original relation. A formula valid when a ≠ 0 is not a solution of the a = 0 case.",
+      "worked": "From y = ax + b, subtract b: y − b = ax. If a ≠ 0, x = (y − b)/a. If a = 0, the original says y = b: every x works when y = b, and no x works when y ≠ b.",
+      "tasks": [
+        "Make t the subject of s = s₀ + vt, with restriction.",
+        "Make b the subject of y = ax + b.",
+        "Make x the subject of p = qx − r, with restriction.",
+        "For y = ax + b, classify a = 0, y = 3, b = 3 and a = 0, y = 4, b = 3."
+      ],
+      "feedback": [
+        "t = (s − s₀)/v for v ≠ 0.",
+        "b = y − ax; no division restriction is introduced.",
+        "x = (p + r)/q, q ≠ 0.",
+        "Every x in the first case; no x in the second."
+      ]
+    },
+    {
+      "explanation": "If the target appears in several terms, collect and factor it before dividing. Check every denominator in the original formula as well as any new divisor. Some operations are not reversible: squaring equal numbers preserves equality, but equal squares do not imply equal originals. Therefore a candidate obtained through an irreversible step must be checked in the original statement. We are learning this safeguard, not beginning a general method for nonlinear equations.",
+      "worked": "From p = ax + bx, factor: p = (a + b)x. Thus x = p/(a + b) if a + b ≠ 0. When a + b = 0, the relation requires p = 0. Separately, x = −3 implies x² = 9, but the squared statement also admits x = 3, which fails the original.",
+      "tasks": [
+        "Make x the subject of p = ax + c − bx.",
+        "State the exceptional cases when a = b in that relation.",
+        "Make v the subject of t = d/v, retaining the original restriction and any new one.",
+        "Show explicitly that x = 3 passes x² = 9 but fails x = −3.",
+        "Explain why substituting into the final transformed equation alone can miss an added candidate."
+      ],
+      "feedback": [
+        "x = (p − c)/(a − b), a ≠ b.",
+        "If p = c every x works; otherwise none.",
+        "v = d/t for t ≠ 0, with v ≠ 0 from the original; the t = 0 case must be considered separately (then d = 0 and any non-zero v works).",
+        "3² = 9, but 3 ≠ −3.",
+        "The transformed equation may have a larger solution set than the original."
+      ]
+    },
+    {
+      "explanation": "Translate the restriction into a guard before evaluating a rearranged formula. The else branch need not solve every exceptional case automatically; it can explain that a separate analysis is required. Compare the recovered value with the original relation by substituting it back. Small exact integer examples make the logic clear without introducing rounding tolerances yet.",
+      "worked": "For y = 11, a = 2, b = 3, the recovered x is 4. Substitution gives 2 × 4 + 3 = 11. At a = 0 the program should report the exceptional case rather than divide.",
+      "tasks": [
+        "Run the example, then change a to 0 and predict the branch.",
+        "For a = 0, analyse y = 3 and y = 11 by hand with b = 3.",
+        "Use y = −5, a = −2, b = 3; predict x before running.",
+        "Explain what the printed reconstructed y checks and what it does not check."
+      ],
+      "feedback": [
+        "4.0 and 11.0, then a message when a = 0.",
+        "All x for y = 3; none for y = 11.",
+        "x = 4, reconstructing −5.",
+        "It checks this numerical substitution; it does not establish that the physical calibration model is appropriate."
+      ],
+      "code": "y = 11\na = 2\nb = 3\nif a != 0:\n    x = (y - b) / a\n    print(x)\n    print(a * x + b)\nelse:\n    print(\"Zero scale: analyse y = b separately\")"
+    },
+    {
+      "explanation": "A useful inverse formula must retain a physical interpretation. In s = s₀ + vt, the v = 0 case describes a stationary object. If the target coordinate equals s₀ it is occupied throughout the modelled interval; otherwise it is never reached. This is not merely a software error. Restrictions often encode meaningful special cases.",
+      "worked": "For s₀ = 5 m and v = 0, the question “when is s = 5 m?” has every time in the model interval as an answer. The question “when is s = 8 m?” has no answer. The quotient (s − 5)/0 must not be used.",
+      "tasks": [
+        "Explain the two stationary cases in your own words.",
+        "For s = 17 m, s₀ = 5 m, v = 3 m/s, calculate and check t.",
+        "For the same target with v = −3 m/s, interpret the candidate when only t ≥ 0 is allowed.",
+        "State why “undefined quotient” alone is an incomplete physical explanation."
+      ],
+      "feedback": [
+        "At the starting coordinate all model times qualify; at another coordinate none do.",
+        "t = 4 s; 5 + 3 × 4 = 17 m.",
+        "t = −4 s, so no future arrival within the specified model.",
+        "The original equation can still determine whether there are no solutions or many, even though the rearranged quotient is unavailable."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Make x the subject of q=cx −d.",
+      "When c=0, classify q=−d and q≠−d."
+    ],
+    "feedback": [
+      "x=(q+d)/c for c≠0.",
+      "Every x in the first case; no x in the second."
+    ]
+  }
+}

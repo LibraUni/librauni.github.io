@@ -1,0 +1,96 @@
+{
+  "lesson": "U02-L04",
+  "sections": [
+    {
+      "explanation": "Direct proportionality means y=kx with fixed k: doubling x doubles y. Inverse proportionality means y=k/x, for non-zero x: doubling x halves y. Inverse-square dependence means y=k/x²: doubling x divides y by four. These statements require other parameters to remain fixed. “Increases with” does not by itself mean direct proportionality; y=x+5 increases with x but does not preserve y/x.",
+      "worked": "For supplied travel time t=d/v at fixed d, replacing v by 3v gives t/3. At fixed v, replacing d by 3d gives 3t. For supplied intensity I=k/r², increasing r from 2 to 6 multiplies distance by 3 and intensity by 1/9.",
+      "tasks": [
+        "For y=4x, predict the factor in y when x is multiplied by 5.",
+        "For y=12/x, predict the factor when x is halved.",
+        "For y=k/r², predict the factor when r is halved.",
+        "Explain why the fixed quantity must be named in a travel-time comparison."
+      ],
+      "feedback": [
+        "5.",
+        "2.",
+        "4.",
+        "Changing both distance and speed could increase, decrease or preserve the time; the ratio argument needs its conditions."
+      ]
+    },
+    {
+      "explanation": "Dimensions identify kinds of quantity: write L for length and T for time. Speed has dimensions L/T; area has L². Terms added or equated must have compatible dimensions. A dimensionless numerical constant does not change dimensions. Dimensional compatibility is necessary for a physical equation written in ordinary quantities, but it cannot determine every numerical coefficient or establish a physical law.",
+      "worked": "The model d=vt is dimensionally compatible because(L/T)T=L. So is d=2vt. Dimensions cannot choose between them. But d=v+t attempts to add L/T to T, so it is incompatible. This is a structural error before any values are substituted.",
+      "tasks": [
+        "Check t=d/v and t=dv dimensionally.",
+        "Can length be added to area?",
+        "If A is area and r is length, are A=r² and A=7r² both dimensionally compatible?",
+        "Give a dimensionally compatible equation that is not the supplied distance model."
+      ],
+      "feedback": [
+        "d/v has T;dv has L²/T, so only the first fits time.",
+        "No, not as physical quantities in a valid sum.",
+        "Yes; dimensions cannot determine the coefficient.",
+        "d=3vt is compatible but differs from the specified d=vt relation."
+      ]
+    },
+    {
+      "explanation": "Use code to evaluate stated scenarios after predicting their ratio. This separates understanding of the dependence from arithmetic execution. Name the fixed inputs explicitly. Compare outputs through a ratio as well as their individual values. Keep the original scenario visible so that the ratio has a clearly defined reference.",
+      "worked": "For distance 120 m, speeds 4 and 12 m/s give times 30 and 10 s. The speed ratio is 3 and the time ratio is 1/3. Agreement with this prediction is a useful check, but does not validate the physical assumptions of the model.",
+      "tasks": [
+        "Type both time calculations using named inputs.",
+        "At fixed speed 4 m/s, replace distance 120 m by 60 m; predict and calculate.",
+        "Use I=100/r² at r=2 and r=4; predict before running.",
+        "Write one sentence stating what your code check establishes and one stating what it does not."
+      ],
+      "feedback": [
+        "30.0 and 10.0 s.",
+        "15.0 s, half the time.",
+        "25 and 6.25; the latter is one quarter.",
+        "It checks the numeric evaluation against a scaling prediction; it does not demonstrate that a real source obeys this law."
+      ],
+      "code": "distance_m = 120\ntime_a_s = distance_m / 4\ntime_b_s = distance_m / 12\nprint(time_a_s)\nprint(time_b_s)\nprint(time_b_s / time_a_s)"
+    },
+    {
+      "explanation": "A model makes a conditional prediction. Inverse-square examples here assume a fixed source and a supplied law; we do not derive that law or infer its universal validity. Keep the difference between a predicted ratio and an observed result visible. An observation would require data and information about how it was obtained.",
+      "worked": "A supplied model gives I=80 at r=3 in consistent units. At r=9, the distance triples and the model predicts I=80/9≈8.89. The exact ratio 1/9 is clearer than the rounded output. Changing the source strength at the same time would invalidate this particular comparison.",
+      "tasks": [
+        "Predict intensity at r=6 and r=1.5 relative to the given 80 at r=3.",
+        "For t=d/v, compare d=200,v=5 with d=300,v=10.",
+        "Explain why neither time alone can be ranked from distance alone in the second task.",
+        "State one condition that would have to hold before applying the inverse-square comparison to observations."
+      ],
+      "feedback": [
+        "20 and 320.",
+        "40 s and 30 s.",
+        "Both distance and speed changed; the ratios must be combined.",
+        "The supplied source parameter and applicable geometry/model conditions must remain fixed."
+      ]
+    },
+    {
+      "explanation": "Use the first 30 minutes of this section to review your Unit 1 and Unit 2 work. Locate one corrected calculation, one unit conversion and one scaling explanation. Then attempt iCMA 41 using its dedicated assessment page. The assessment occupies the remaining 60 minutes already allocated here; it is not additional homework. Follow its instructions about permitted tools and submission. A self-check is useful practice, but a saved formal attempt must go through the submission route.",
+      "worked": "A useful readiness explanation is: “In a centimetre-squared to metre-squared conversion I square the length factor because area contains two length factors.” A rule recalled without its reason is a prompt to revisit the diagram, not a reason to panic.",
+      "tasks": [
+        "Without notes, explain one difference between an exact fraction and a rounded output.",
+        "Write a conversion chain for 50 cm² to m².",
+        "State a direct and an inverse scaling example, naming fixed quantities.",
+        "Open iCMA 41, read its cover and complete the attempt."
+      ],
+      "feedback": [
+        "An exact fraction retains the rational value; a rounded display deliberately discards digits.",
+        "50×10⁻⁴=0.005 m².",
+        "At fixed speed time is direct in distance; at fixed distance time is inverse in speed.",
+        "Assessment feedback belongs to the assessment page. Use any identified gap to select bounded practice, not to repeat the whole unit automatically."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "At fixed distance, speed is halved. What happens to travel time?",
+      "At fixed k in I=k/r², r increases by a factor 4. What happens to I?"
+    ],
+    "feedback": [
+      "It doubles: dividing by half the speed doubles d/v.",
+      "It is multiplied by 1/16 because 4²=16."
+    ]
+  }
+}

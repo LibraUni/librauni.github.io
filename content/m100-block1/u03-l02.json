@@ -1,0 +1,82 @@
+{
+  "lesson": "U03-L02",
+  "sections": [
+    {
+      "explanation": "Like terms have exactly the same variable part: 3x and −5x combine, whereas 3x and 3x² do not. Distribution says a(b + c) = ab + ac. Every term inside the brackets is multiplied by the outside factor. Subtraction of a bracket means multiplication by −1, so every sign inside changes. Equivalent expressions have the same value for every input where the original expressions are defined. Simplifying changes the form, not the value.",
+      "worked": "3(2x − 1) − 2(x + 4) = 6x − 3 − 2x − 8 = 4x − 11. At x = 2 both forms give −3. That example is a useful error check; the distributive steps justify equivalence generally.",
+      "tasks": [
+        "Simplify 7x − 2x + 4 − 9.",
+        "Expand −3(2x − 5).",
+        "Simplify 5 − (2x − 3).",
+        "Explain why 2x + 3x² cannot become 5x³. Test x = 2."
+      ],
+      "feedback": [
+        "5x − 5.",
+        "−6x + 15: both terms receive the factor −3.",
+        "8 − 2x.",
+        "The variable parts differ. At x = 2 the original is 16 and the proposed form is 40."
+      ]
+    },
+    {
+      "explanation": "For nested brackets work carefully from an inner group outward, or distribute one complete group at a time. Keep intermediate lines rather than doing several sign changes mentally. Products of brackets can be expanded by distributing each term of one bracket across the other. This is an application of the same law, not a new rule to memorise. Check an expansion at zero and at a non-zero input: these tests often expose different mistakes, although they are not a proof.",
+      "worked": "2[3x − (x − 4)] − x = 2(2x + 4) − x = 4x + 8 − x = 3x + 8. Also (x + 2)(x + 3) = x(x + 3) + 2(x + 3) = x² + 5x + 6. The middle terms do not disappear.",
+      "tasks": [
+        "Simplify 4x − [2x − (3 − x)].",
+        "Expand (x + 1)(x − 2), checking x = 0 and 3.",
+        "Simplify 2(3a − b) + 3(b − a).",
+        "Find and correct the error in −(x − 4) = −x − 4.",
+        "Expand (a + b)² and explain the extra term compared with a² + b²."
+      ],
+      "feedback": [
+        "x + 3: the square bracket is 3x − 3.",
+        "x² − x − 2; values −2 and 4 in both forms.",
+        "3a + b.",
+        "It should be −x + 4, since −1 × −4 = +4.",
+        "a² + 2ab + b². The two cross-products ab and ba add to 2ab."
+      ]
+    },
+    {
+      "explanation": "Python requires explicit multiplication and ordinary parentheses. Assign an input, evaluate the original expression, then evaluate your simplified form separately. Compare the printed results with your handwritten result. When changing an input, rerun every dependent calculation. Do not silently change both expressions until they agree: preserve the original claim and locate the algebraic mistake.",
+      "worked": "At x = −2, 3(2x − 1) − 2(x + 4) and 4x − 11 both equal −19. Type each calculation independently, rather than copying an already computed result into a second name.",
+      "tasks": [
+        "Type and run the example at x = −2, then x = 0 and x = 5. Predict first.",
+        "Test the incorrect simplification 4x + 5 at x = 0.",
+        "Explain why the text 4x is invalid Python syntax.",
+        "Save a Markdown explanation of the distributive steps that establish the correct identity."
+      ],
+      "feedback": [
+        "Outputs −19, −11 and 9 for both correct forms.",
+        "The original gives −11; the incorrect form gives 5.",
+        "Python needs 4 * x; mathematical juxtaposition is not multiplication syntax.",
+        "Your explanation should distribute both factors, including the negative sign, then collect 6x − 2x and −3 − 8."
+      ],
+      "code": "x = -2\noriginal = 3 * (2 * x - 1) - 2 * (x + 4)\nsimplified = 4 * x - 11\nprint(original)\nprint(simplified)"
+    },
+    {
+      "explanation": "The order of a scale correction and an offset matters. Multiplying a corrected reading by a scale factor is a(x − b); scaling the raw reading and then subtracting an offset is ax − b. Their difference is not merely typography. Expand the first expression to find which offset is actually applied. Use units and the verbal description to select the right model.",
+      "worked": "A reading x = 10 has an offset b = 2 that must be removed before applying a dimensionless scale a = 3. The result is 3(10 − 2) = 24. Applying 3 × 10 − 2 gives 28 and represents a different procedure.",
+      "tasks": [
+        "Expand a(x − b) and compare it with ax − b.",
+        "Use x = 8, b = 1 and a = 2 for both procedures.",
+        "Give one parameter choice for which the procedures coincide for every x.",
+        "Write an unambiguous instruction for a calibration that uses 2x + 3 rather than 2(x + 3)."
+      ],
+      "feedback": [
+        "ax − ab versus ax − b; the offset differs by a factor a.",
+        "14 versus 15.",
+        "a = 1, or b = 0, makes them coincide.",
+        "Double the raw reading, then add 3 in the output units."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Simplify 2(x−4)−(3x−1).",
+      "Expand (x+2)(x−1)."
+    ],
+    "feedback": [
+      "2x−8−3x+1=−x−7.",
+      "x²+x−2."
+    ]
+  }
+}

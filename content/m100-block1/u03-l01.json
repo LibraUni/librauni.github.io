@@ -1,0 +1,65 @@
+{
+  "lesson": "U03-L01",
+  "sections": [
+    {
+      "explanation": "A symbol stands for a quantity or number. An expression such as 3x + 2 has a value once x is specified; it makes no claim of equality. In one experiment a variable changes between observations, a parameter is held fixed but could differ in another experiment, and a constant has a fixed value in the stated context. These are roles, not properties of particular letters. Write multiplication explicitly when ambiguity is possible. Substitution means replacing every occurrence of a symbol by the same value, with brackets around a negative replacement.",
+      "worked": "In y = ax + b, take a = 2, b = 5 and x = −3. Then y = 2(−3) + 5 = −1. Here x varies, a and b are model parameters, and y is the resulting quantity. The equals sign relates the two sides; it is not a command to store a value.",
+      "tasks": [
+        "Evaluate 4x − 3 for x = 2, 0 and −2, showing substitutions.",
+        "Explain the difference between 2x + 1 and 2x + 1 = 7.",
+        "For a rectangle of fixed width w and varying length l, identify the roles in A = wl.",
+        "Translate “three less than twice n” and “twice the difference between n and three”. Test n = 4."
+      ],
+      "feedback": [
+        "5, −3 and −11 respectively: for the last, 4(−2) − 3 = −11.",
+        "The first is an expression; the second is an equation restricting x.",
+        "l is the variable input, w a fixed parameter, and A varies as a consequence.",
+        "2n − 3 and 2(n − 3); at n = 4 they give 5 and 2. The wording changes the grouping."
+      ]
+    },
+    {
+      "explanation": "Before substituting, identify the outermost operation: what happens last? In (p + q)/r, addition forms the numerator and division comes last. In p + q/r, only q is divided by r. A fraction bar groups its whole numerator and denominator. Juxtaposition, such as ab, means multiplication in algebra; in Python it would be a single name, so write a * b. A restriction accompanies any denominator: it cannot be zero. An expression can be meaningful for some inputs and undefined for others.",
+      "worked": "Evaluate (2a − b)/(a + b) for a = −1, b = 3. The numerator is −2 − 3 = −5; the denominator is 2; the result is −5/2. The restriction a + b ≠ 0 is satisfied. Substituting a = −3 instead would make the expression undefined.",
+      "tasks": [
+        "Evaluate (x + 2)/(x − 1) at x = 3 and x = −2. State the excluded value.",
+        "Translate “the sum of p and q, divided by their difference”. State its restriction.",
+        "Evaluate a − bc and (a − b)c at a = 8, b = 3, c = 2.",
+        "A student replaces x = −2 in x² by −2². Explain and repair the error.",
+        "Write a sentence distinguishing a numerical value from a quantity with units."
+      ],
+      "feedback": [
+        "5/2 and 0; x = 1 is excluded.",
+        "(p + q)/(p − q), with p ≠ q.",
+        "2 and 10; multiplication happens before subtraction in the first expression.",
+        "The replacement must be bracketed: (−2)² = 4. Without brackets, −2² = −4.",
+        "For example, the quantity is a length of 3 m; its numerical value in metres is 3, but in centimetres it is 300."
+      ]
+    },
+    {
+      "explanation": "A calibration model translates a sensor reading into a reported quantity. Use the supplied model y = ax + b without assuming every real sensor is linear. If x and y are both lengths in metres, a is dimensionless and b has units of metres. Each term added to produce y must have the same dimensions. The model also needs a stated range of validity; correct substitution outside that range does not establish a reliable measurement.",
+      "worked": "For a = 1.02, b = −0.04 m and x = 2.00 m, y = 1.02 × 2.00 m − 0.04 m = 2.00 m. The scale correction and offset happen to cancel at this input; that does not mean the sensor needs no correction at every input.",
+      "tasks": [
+        "Using the same model, find y for x = 1.00 m and x = 3.00 m.",
+        "Identify the scale correction and offset separately at x = 1.00 m.",
+        "If the validated input range is 0–4 m, what can you conclude from calculating y at x = 10 m?",
+        "In s = s₀ + vt, state units for s₀ and v if s is in metres and t in seconds. Evaluate s₀ = 5 m, v = −2 m/s, t = 3 s."
+      ],
+      "feedback": [
+        "0.98 m and 3.02 m.",
+        "Scaling adds 0.02 m relative to x; the offset subtracts 0.04 m, giving a net −0.02 m.",
+        "The formula returns 10.16 m, but the supplied validation does not support treating it as a reliable corrected measurement.",
+        "s₀ is in m and v in m/s. s = 5 − 6 = −1 m; a negative coordinate is not a negative distance."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Evaluate 2a − b at a=−3,b=4.",
+      "Translate “half the sum of p and q”."
+    ],
+    "feedback": [
+      "2(−3)−4=−10.",
+      "(p+q)/2; the whole sum is divided by 2."
+    ]
+  }
+}

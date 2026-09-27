@@ -1,0 +1,98 @@
+{
+  "lesson": "U03-L03",
+  "sections": [
+    {
+      "explanation": "Factorisation reverses distribution: identify a factor multiplying every term and put it outside brackets. Cancellation is division of the whole numerator and denominator by a common non-zero factor. It does not remove selected terms from a sum. An excluded input remains excluded after simplification, even if the simplified formula happens to have a value there. Retain that restriction alongside your answer.",
+      "worked": "(6x + 9)/3 = 3(2x + 3)/3 = 2x + 3. In contrast, (x² + 3x)/x = x(x + 3)/x = x + 3 only for x ≠ 0. The original fraction does not acquire a value at zero through cancellation.",
+      "tasks": [
+        "Factor 8x + 12 and 6a² − 9a.",
+        "Simplify (10x + 15)/5.",
+        "Simplify (x² − 4x)/x and retain its restriction.",
+        "Why is (x + 2)/x not generally 2? Give a permitted counterexample."
+      ],
+      "feedback": [
+        "4(2x + 3) and 3a(2a − 3).",
+        "2x + 3.",
+        "x − 4, x ≠ 0.",
+        "At x = 2 the original is 2, so that test happens to agree; at x = 1 it is 3, disproving the general claim. Only factors cancel."
+      ]
+    },
+    {
+      "explanation": "To add algebraic fractions, use a common denominator exactly as with numerical fractions. Multiply the numerator as well as the denominator when changing a fraction’s form. State restrictions from the original denominators first. For products, factor before cancelling. A numerator becoming zero is usually allowed; a denominator becoming zero is not. Keep these different cases separate.",
+      "worked": "1/x + 2/(3x) = 3/(3x) + 2/(3x) = 5/(3x), x ≠ 0. Also (2x + 4)/(x + 2) = 2(x + 2)/(x + 2) = 2 for x ≠ −2. The restriction survives even though the final expression looks constant.",
+      "tasks": [
+        "Simplify 3/x − 1/(2x), giving restrictions.",
+        "Simplify (4x + 8)/(2x + 4), giving restrictions.",
+        "Simplify (3x/4) × (8/(9x)), giving restrictions.",
+        "At which input is (x − 2)/(x + 2) zero, and at which is it undefined?",
+        "Explain the error in (a + b)/(a + c) = b/c. Test a = 1, b = 2, c = 3."
+      ],
+      "feedback": [
+        "5/(2x), x ≠ 0.",
+        "2, x ≠ −2.",
+        "2/3, x ≠ 0.",
+        "Zero at x = 2; undefined at x = −2.",
+        "There is no common factor a to cancel. The values are 3/4 and 2/3."
+      ]
+    },
+    {
+      "explanation": "ZeroDivisionError reports an attempted division by zero. It identifies an invalid arithmetic operation, not an instruction to ignore the restriction. First evaluate both forms at permitted inputs. Then deliberately try an excluded value in a separate cell, read the last line of the error, and explain it. Remove or comment out that deliberate error before your final clean run. A comment starts with # and is ignored by Python.",
+      "worked": "For (x² + 3x)/x and x + 3, x = 2 gives 5 in both forms. With x = 0 the original raises ZeroDivisionError, while the simplified expression alone gives 3. That difference is why the domain is part of the equivalence statement.",
+      "tasks": [
+        "Run at x = 2 and −3; predict both outputs.",
+        "In a separate cell try x = 0 in the original expression. Identify the denominator responsible.",
+        "Explain why replacing the failed result with 3 would change the defined problem.",
+        "Restore a permitted input and restart/run the notebook in order."
+      ],
+      "feedback": [
+        "5 and 0 respectively, with agreement at both permitted values.",
+        "The divisor x is zero; the calculation is undefined.",
+        "The original rule excludes zero. Assigning a value there defines an extension, which has not been requested or justified by cancellation.",
+        "A reproducible notebook should run without unintended errors and state x ≠ 0."
+      ],
+      "code": "x = 2\noriginal = (x ** 2 + 3 * x) / x\nsimplified = x + 3\nprint(original)\nprint(simplified)"
+    },
+    {
+      "explanation": "Average speed in a supplied constant-speed model is distance divided by elapsed time. If distance is written vt, then vt/t = v for t ≠ 0. In the physical interval model we normally require t > 0 as well. An algebraic restriction and a physical restriction can differ: negative time intervals may be allowed algebraically but excluded by the meaning of a particular experiment.",
+      "worked": "At v = 4 m/s and t = 3 s, distance is 12 m and distance/time is 4 m/s. At t = 0, the quotient is 0/0 and undefined. The simplified symbol v does not make that quotient defined.",
+      "tasks": [
+        "Evaluate vt/t for v = 6 m/s and t = 2 s.",
+        "State the algebraic and physical restrictions on t.",
+        "A fixed delay gives total distance v(t − τ). Simplify v(t − τ)/t without cancelling terms across subtraction.",
+        "For v = 6 m/s, t = 4 s, τ = 1 s, evaluate the last expression."
+      ],
+      "feedback": [
+        "6 m/s.",
+        "Algebraically t ≠ 0; as a positive elapsed observation interval t > 0.",
+        "v − vτ/t, t ≠ 0.",
+        "4.5 m/s; the delay reduces the average over the whole interval."
+      ]
+    },
+    {
+      "explanation": "A useful simplification record contains the original expression, the factored form, the final expression and the original restrictions. Use a fresh numerical input to catch errors, then identify the algebraic law that justifies each step. If cancellation is tempting, point to the common factor of the whole numerator and denominator before doing it.",
+      "worked": "(5x − 10)/(x − 2) = 5(x − 2)/(x − 2) = 5, x ≠ 2. A check at x = 3 gives 5, but the written factorisation is the justification.",
+      "tasks": [
+        "Simplify (7x + 14)/(x + 2) completely, with domain.",
+        "Find a counterexample to (x + 5)/x = 5.",
+        "Simplify 1/(2x) + 1/(4x), with domain.",
+        "Explain in one sentence why a zero numerator and a zero denominator play different roles."
+      ],
+      "feedback": [
+        "7, x ≠ −2.",
+        "At x = 1 the left side is 6, not 5.",
+        "3/(4x), x ≠ 0.",
+        "Zero divided by a non-zero number is zero; division by zero is undefined."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Simplify (4x²+8x)/(4x), with restrictions.",
+      "Simplify 1/(3x)+1/(6x), with restrictions."
+    ],
+    "feedback": [
+      "x+2 for x≠0; factor 4x before cancelling.",
+      "1/(2x), x≠0; use denominator 6x."
+    ]
+  }
+}
