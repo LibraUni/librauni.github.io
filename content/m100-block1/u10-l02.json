@@ -1,0 +1,60 @@
+{
+  "lesson": "U10-L02",
+  "sections": [
+    {
+      "explanation": "The dot product a·b=aₓbₓ+aᵧbᵧ also equals |a||b|cosθ. It is a scalar. The signed projection of a onto a unit direction u is a·u; the vector projection is (a·u)u. NumPy arrays support component operations, np.dot computes the dot product and np.linalg.norm the magnitude. Check numerical results against a simple diagram and an exact calculation.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "Predict the sum, magnitude and dot product before execution. Project a onto horizontal unit direction(1,0). Explain the sign of the dot product for opposite vectors.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "import numpy as np\na = np.array([3.0, 4.0])\nb = np.array([-1.0, 2.0])\nprint(a + b)\nprint(np.linalg.norm(a))\nprint(np.dot(a, b))\nprint(np.degrees(np.arctan2(a[1], a[0])))"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "For a=(3,4) and b=(−1,2), a+b=(2,6), a−b=(4,2), and |a|=5. The unit direction of a is(3/5,4/5). A displacement magnitude is not the sum of component magnitudes.",
+      "tasks": [
+        "Find the magnitude of(−5,12).",
+        "Resolve magnitude10 at30° into components.",
+        "Explain why(−1,1) and(1,−1) cannot have the same direction despite equal y/x."
+      ],
+      "feedback": [
+        "13.",
+        "(5√3,5).",
+        "They lie in different quadrants; the ratio alone loses that information."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "Predict the sum, magnitude and dot product before execution. Project a onto horizontal unit direction(1,0). Explain the sign of the dot product for opposite vectors.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Find the magnitude of(−5,12).",
+      "Resolve magnitude10 at30° into components.",
+      "Explain why(−1,1) and(1,−1) cannot have the same direction despite equal y/x."
+    ],
+    "feedback": [
+      "13.",
+      "(5√3,5).",
+      "They lie in different quadrants; the ratio alone loses that information."
+    ]
+  }
+}

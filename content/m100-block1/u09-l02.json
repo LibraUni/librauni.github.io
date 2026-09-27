@@ -1,0 +1,60 @@
+{
+  "lesson": "U09-L02",
+  "sections": [
+    {
+      "explanation": "np.exp evaluates e to a power; np.log is natural logarithm. semilogy changes only the vertical scale; loglog changes both. Positive values are required on logarithmic axes. A straight-looking plot is not proof of a physical mechanism. Before accepting a suggested refactor, specify input meaning, domain, expected outputs and boundary tests. Reject a refactor that changes those properties even if its code is shorter.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "Compare ordinary and semilog plots. A proposed refactor replaces 2**(-t/3) with exp(-t/3). Test t=3 and explain why it changes the half-life. State a correct exp equivalent.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nt = np.array([0, 3, 6, 9])\nfraction = 2.0 ** (-t / 3)\nplt.semilogy(t, fraction, \"o-\")\nplt.xlabel(\"Time / s\")\nplt.ylabel(\"N / N0 (dimensionless)\")\nplt.show()\nprint(-3 * np.log(0.1) / np.log(2))"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "N/N₀=2^(−t/3) gives half-life3 time units. At t=6 the fraction is1/4. To reach1/10, t=−3 ln(0.1)/ln2≈9.97. For y/y₀=exp(kt), ln(y/y₀)=kt: a semilog representation is straight. For y/y₀=(x/x₀)^p, a log–log representation has slopep.",
+      "tasks": [
+        "Solve2^t=16.",
+        "Simplify ln(a²/b) for a,b>0.",
+        "For y=3x², what is the output factor if x triples? Contrast doubling time in an exponential."
+      ],
+      "feedback": [
+        "t=4.",
+        "2ln a−ln b.",
+        "Factor9; exponential change is characterised by equal time increments, not generally by multiplying time."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "Compare ordinary and semilog plots. A proposed refactor replaces 2**(-t/3) with exp(-t/3). Test t=3 and explain why it changes the half-life. State a correct exp equivalent.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Solve2^t=16.",
+      "Simplify ln(a²/b) for a,b>0.",
+      "For y=3x², what is the output factor if x triples? Contrast doubling time in an exponential."
+    ],
+    "feedback": [
+      "t=4.",
+      "2ln a−ln b.",
+      "Factor9; exponential change is characterised by equal time increments, not generally by multiplying time."
+    ]
+  }
+}

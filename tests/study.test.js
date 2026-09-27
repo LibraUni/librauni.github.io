@@ -7,9 +7,9 @@ import {studyOverview} from '../src/study-dashboard.js';
 import {timeline} from '../src/journal-data.js';
 const m=modules[0],plan=()=>({...newPlan(m,'2026-10-01'),status:'enrolled'});
 test('all sections complete a lesson; unmarked peers prevent unit/block completion; clearing reverses rollup',()=>{
- let p=setStudied(plan(),'U01-L01',true);assert.equal(p.studied.length,6);assert.ok(studied('U01-L01',p));assert.equal(studied('U01',p),false);assert.equal(ready('B01'),true);assert.equal(ready('B02'),false);assert.deepEqual(p.completed,[]);validatePlan(m,p);
+ let p=setStudied(plan(),'U01-L01',true);assert.equal(p.studied.length,6);assert.ok(studied('U01-L01',p));assert.equal(studied('U01',p),false);assert.equal(ready('B01'),true);assert.equal(ready('B02'),true);assert.deepEqual(p.completed,[]);validatePlan(m,p);
  p=setStudied(p,'U01-L01-S03',false);assert.equal(studied('U01-L01',p),false);assert.equal(p.studied.length,5);
- assert.ok(studied('U01',setStudied(p,'U01',true)));assert.throws(()=>setStudied(p,'B02',true));assert.throws(()=>setStudied(newPlan(m,'2026-10-01'),'U01-L01',true));assert.throws(()=>validatePlan(m,{...p,studied:['made-up']}));
+ assert.ok(studied('U01',setStudied(p,'U01',true)));assert.throws(()=>setStudied(p,'unknown',true));assert.throws(()=>setStudied(newPlan(m,'2026-10-01'),'U01-L01',true));assert.throws(()=>validatePlan(m,{...p,studied:['made-up']}));
 });
 test('overview uses enrolled modules and personal dates with accurate ahead/late boundaries',()=>{
  const p=plan();assert.equal(studyOverview([m],{[m.code]:p},'2026-09-30').next[0].state,'upcoming');assert.equal(studyOverview([m],{[m.code]:p},'2026-10-14').next[0].state,'on-track');assert.equal(studyOverview([m],{[m.code]:p},'2026-10-15').next[0].state,'behind');

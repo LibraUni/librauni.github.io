@@ -1,3 +1,4 @@
+import {prototypeLessons,prototypePlans} from '../curriculum/m100-prototype.js';
 import {block1Sections} from '../curriculum/m100-block1-sections.js';
 import {m100} from '../curriculum/m100.js';
 import {block1Lessons} from '../curriculum/m100-block1-lessons.js';
@@ -6,13 +7,13 @@ import {openingSections} from '../curriculum/m100-opening-sections.js';
 // whole-unit completion from just the currently published lesson.
 export const studyNodes=[];
 for(const b of m100.blocks){
- studyNodes.push({id:b.id,kind:'block',title:b.title,parent:null,available:b.id==='B01'});
+ studyNodes.push({id:b.id,kind:'block',title:b.title,parent:null,available:true});
  for(const uid of b.units){
   const u=m100.units.find(u=>u.id===uid);
-  studyNodes.push({id:uid,kind:'unit',title:u.title,parent:b.id,available:b.id==='B01'});
-  for(const l of block1Lessons.lessons.filter(l=>l.unit===uid)){
+  studyNodes.push({id:uid,kind:'unit',title:u.title,parent:b.id,available:true});
+  for(const l of [...block1Lessons.lessons,...prototypeLessons].filter(l=>l.unit===uid)){
    studyNodes.push({id:l.id,kind:'lesson',title:l.title,parent:uid,available:true});
-   for(const s of (l.id==='U01-L01'?openingSections.sections:block1Sections.lessons.find(p=>p.id===l.id).sections))studyNodes.push({id:s.id,kind:'section',title:s.title,parent:l.id,available:true});
+   for(const s of (l.id==='U01-L01'?openingSections.sections:[...block1Sections.lessons,...prototypePlans].find(p=>p.id===l.id).sections))studyNodes.push({id:s.id,kind:'section',title:s.title,parent:l.id,available:true});
   }
  }
 }

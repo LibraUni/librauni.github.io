@@ -11,7 +11,7 @@ onAuthStateChanged(auth,u=>{generation++;user=isOwner(u)?u:null;enrolled=false;a
 document.getElementById('assessment-auth').onclick=()=>signIn().catch(e=>{status.textContent=e.message;});
 form.onsubmit=async event=>{event.preventDefault();if(busy||!user||!enrolled)return;const uid=user.uid,g=generation,k=key();const data=new FormData(form);busy=true;controls();try{
 let files,marks;
- if(assessment==='icma41'){const answers=Array.from({length:10},(_,i)=>String(data.get('q'+i)||''));marks=markIcma(answers);files=[new File([JSON.stringify({assessment:'ICMA41',version:1,answers},null,2)],'M100-iCMA41-responses.json',{type:'application/json'})];}
+ if(assessment.startsWith('icma')){const answers=Array.from({length:10},(_,i)=>String(data.get('q'+i)||''));marks=markIcma(answers,assessment);files=[new File([JSON.stringify({assessment:assessment.toUpperCase(),version:1,answers},null,2)],'M100-'+assessment+'-responses.json',{type:'application/json'})];}
  else files=[...document.getElementById('submission-files').files];
  attempt=attempt||localStorage.getItem(k)||crypto.randomUUID();localStorage.setItem(k,attempt);status.textContent='Saving originals and verifying your private receipt…';
  const receipt=await submitAssessment(uid,attempt,assessment,files,String(data.get('assistance')||''));if(g!==generation)return;localStorage.removeItem(k);attempt=null;

@@ -1,0 +1,59 @@
+{
+  "lesson": "U10-L01",
+  "sections": [
+    {
+      "explanation": "A vector has magnitude and direction; a scalar has magnitude without direction. Add and subtract vectors component by component. For (x,y), magnitude is √(x²+y²). A vector of magnitude r at angleθ has components (r cosθ,r sinθ). Unit vectors have magnitude1; divide a non-zero vector by its magnitude to obtain its direction unit vector. The zero vector has no unique direction. Use atan2(y,x), rather than arctan(y/x), to preserve quadrant information.",
+      "worked": "For a=(3,4) and b=(−1,2), a+b=(2,6), a−b=(4,2), and |a|=5. The unit direction of a is(3/5,4/5). A displacement magnitude is not the sum of component magnitudes.",
+      "tasks": [
+        "Find the magnitude of(−5,12).",
+        "Resolve magnitude10 at30° into components.",
+        "Explain why(−1,1) and(1,−1) cannot have the same direction despite equal y/x."
+      ],
+      "feedback": [
+        "13.",
+        "(5√3,5).",
+        "They lie in different quadrants; the ratio alone loses that information."
+      ]
+    },
+    {
+      "explanation": "Choose a representation before calculating. Draw or tabulate the quantities, show intermediate steps, and keep domains and units alongside the result. Numerical agreement is useful, but distinguish a checked example from a general argument.",
+      "worked": "For a=(3,4) and b=(−1,2), a+b=(2,6), a−b=(4,2), and |a|=5. The unit direction of a is(3/5,4/5). A displacement magnitude is not the sum of component magnitudes.",
+      "tasks": [
+        "Redo the first problem with a labelled diagram or table.",
+        "Explain one likely mistake and how your check would detect it.",
+        "Change one input in the worked example; predict the direction of change before calculating."
+      ],
+      "feedback": [
+        "The representation must preserve the given quantities and units. Compare it with your original result.",
+        "Use the worked reasoning to identify a specific sign, domain, scale or interpretation error.",
+        "State the changed input explicitly and check by substitution; ask your tutor if the alternative result is unclear."
+      ]
+    },
+    {
+      "explanation": "Finish by explaining the central relationship without reading the example. These compact prototype pages demonstrate the study flow; the original unit workload remains a planning estimate, not a claim that reading these pages takes that many hours.",
+      "worked": "For a=(3,4) and b=(−1,2), a+b=(2,6), a−b=(4,2), and |a|=5. The unit direction of a is(3/5,4/5). A displacement magnitude is not the sum of component magnitudes.",
+      "tasks": [
+        "Write a short account of the method and its restrictions.",
+        "Identify one physical situation where the model would need an additional assumption.",
+        "Prepare one question for a tutorial if anything remains unclear."
+      ],
+      "feedback": [
+        "Include definitions, an intermediate step and a check.",
+        "Distinguish supplied mathematical relationships from experimentally established behaviour.",
+        "A specific uncertain step is more useful than a general statement that the topic is difficult."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Find the magnitude of(−5,12).",
+      "Resolve magnitude10 at30° into components.",
+      "Explain why(−1,1) and(1,−1) cannot have the same direction despite equal y/x."
+    ],
+    "feedback": [
+      "13.",
+      "(5√3,5).",
+      "They lie in different quadrants; the ratio alone loses that information."
+    ]
+  }
+}

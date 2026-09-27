@@ -1,0 +1,60 @@
+{
+  "lesson": "U11-L02",
+  "sections": [
+    {
+      "explanation": "np.mean and np.median summarise an array. np.std defaults to population divisor n; ddof=1 selects n−1. A dot plot or histogram should identify units and sample size. Do not label observed SD as the uncertainty of a mean without further assumptions and analysis. Preserve data provenance: the values here are supplied synthetic observations for practice, not measurements you performed.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "Calculate the mean by hand and compare. Add0.2 to every value: predict the effect on mean and SD, then check. Explain why neither dataset proves instrument accuracy.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nreadings_m = np.array([1.01, 0.99, 1.00, 1.02, 0.98])\nprint(np.mean(readings_m))\nprint(np.std(readings_m, ddof=1))\nplt.plot(np.arange(1, 6), readings_m, \"o\")\nplt.xlabel(\"Observation number\")\nplt.ylabel(\"Reading / m\")\nplt.show()"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "For values1,2,3 the mean and median are2. Squared departures1,0,1 sum to2. Population SD is√(2/3); sample SD is1. For a fair six-sided die, P(even)=3/6=1/2. Complements satisfy P(not A)=1−P(A). Independent event probabilities multiply; independence must be justified, not assumed from different names.",
+      "tasks": [
+        "Find mean, median and range of2,3,3,8.",
+        "For two independent fair coin tosses, find P(two heads) and P(at least one head).",
+        "Can repeated readings all0.2 m too large still have small scatter?"
+      ],
+      "feedback": [
+        "Mean4, median3, range6.",
+        "1/4 and3/4, using complement of no heads.",
+        "Yes; a systematic offset can coexist with good repeatability."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "Calculate the mean by hand and compare. Add0.2 to every value: predict the effect on mean and SD, then check. Explain why neither dataset proves instrument accuracy.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Find mean, median and range of2,3,3,8.",
+      "For two independent fair coin tosses, find P(two heads) and P(at least one head).",
+      "Can repeated readings all0.2 m too large still have small scatter?"
+    ],
+    "feedback": [
+      "Mean4, median3, range6.",
+      "1/4 and3/4, using complement of no heads.",
+      "Yes; a systematic offset can coexist with good repeatability."
+    ]
+  }
+}

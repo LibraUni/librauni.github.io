@@ -1,0 +1,60 @@
+{
+  "lesson": "U07-L02",
+  "sections": [
+    {
+      "explanation": "np.linspace creates evenly spaced points. Plot separate intervals on either side of an excluded input so a connecting line does not invent values there. Debug by stating the expected result, isolating the smallest failing calculation, changing one thing and checking again. Before editing, save a baseline copy. If Git is already available, git init, git add and git commit record a local snapshot; git diff shows changes. Practise only in a disposable folder, never in the website repository. A manual baseline/diff exercise is sufficient for this prototype.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "Plot x²−7x+12 and identify the analytical roots. Save a baseline, deliberately change −7 to +7 in a copy, inspect the changed line and restore the baseline. Explain why a plot alone is not an exact root calculation.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\nfor x in [np.linspace(-2, 0.9, 80), np.linspace(1.1, 4, 80)]:\n    plt.plot(x, 1 / (x - 1))\nplt.xlabel(\"x (dimensionless)\")\nplt.ylabel(\"1/(x - 1) (dimensionless)\")\nplt.show()"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "x²−4x+1=0 gives x=2±√3. For 1/(x−1), x=1 is excluded and the magnitude grows without bound as x approaches 1. The curve approaches zero for large |x|. This is a qualitative asymptote description, not a formal limit proof.",
+      "tasks": [
+        "Solve x²−7x+12=0 and check both roots.",
+        "Classify the real roots of x²+2x+1 and x²+1.",
+        "A supplied trajectory h=6+5t−t² is valid for t≥0 until h=0. Find that ending time."
+      ],
+      "feedback": [
+        "(x−3)(x−4)=0; roots3,4.",
+        "D=0 gives repeated root−1; D=−4 gives no real roots.",
+        "t²−5t−6=(t−6)(t+1); choose6 s, rejecting−1 s."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "Plot x²−7x+12 and identify the analytical roots. Save a baseline, deliberately change −7 to +7 in a copy, inspect the changed line and restore the baseline. Explain why a plot alone is not an exact root calculation.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Solve x²−7x+12=0 and check both roots.",
+      "Classify the real roots of x²+2x+1 and x²+1.",
+      "A supplied trajectory h=6+5t−t² is valid for t≥0 until h=0. Find that ending time."
+    ],
+    "feedback": [
+      "(x−3)(x−4)=0; roots3,4.",
+      "D=0 gives repeated root−1; D=−4 gives no real roots.",
+      "t²−5t−6=(t−6)(t+1); choose6 s, rejecting−1 s."
+    ]
+  }
+}

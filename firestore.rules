@@ -116,7 +116,7 @@ service cloud.firestore {
         && request.resource.data.sha256 == '0x' + file
         && request.resource.data.parts is int && request.resource.data.parts >= 1 && request.resource.data.parts <= 25
         && request.resource.data.category == 'submissions' && request.resource.data.module == 'M100'
-        && request.resource.data.activity in ['icma41','tma01']
+        && request.resource.data.activity in ['icma41','icma42','icma43','tma01','tma02','tma03','ema-final']
         && request.resource.data.source is string && request.resource.data.source.size() <= 200
         && request.resource.data.recordedAt == request.time;
       match /parts/{part} {

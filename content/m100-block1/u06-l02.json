@@ -1,0 +1,60 @@
+{
+  "lesson": "U06-L02",
+  "sections": [
+    {
+      "explanation": "A def statement defines a function; the indented body runs when it is called. Arguments supply inputs; return sends a result back to the caller. print only displays something. A local name belongs to that call. A docstring is a quoted description at the start. Test ordinary, zero and negative inputs with expected results chosen independently. A test is evidence about those cases, not a proof for every real input.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "Write the inverse calibration as a second function. Check inverse(corrected(x)) at x=0,2,−3. Explain why return is needed to use one result inside another calculation.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "def corrected(reading):\n    \"\"\"Return the supplied calibration 2x + 3.\"\"\"\n    result = 2 * reading + 3\n    return result\n\nassert corrected(0) == 3\nassert corrected(-2) == -1\nprint(corrected(4))"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "For f(x)=2x+3 and g(x)=x², f(g(2))=11 while g(f(2))=49. The inverse of f is (y−3)/2. The square function has no inverse on all real numbers: ±2 both give 4. Restricting to x≥0 gives inverse √y, with y≥0.",
+      "tasks": [
+        "For h(x)=(x−2)²+1, identify its vertex and minimum.",
+        "Find the inverse of y=3x−6.",
+        "State domain and range of |x| on the real line; explain why it is not one-to-one."
+      ],
+      "feedback": [
+        "Vertex (2,1); minimum 1.",
+        "x=(y+6)/3.",
+        "Domain all real numbers, range [0,∞); opposite non-zero inputs share an output."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "Write the inverse calibration as a second function. Check inverse(corrected(x)) at x=0,2,−3. Explain why return is needed to use one result inside another calculation.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "For h(x)=(x−2)²+1, identify its vertex and minimum.",
+      "Find the inverse of y=3x−6.",
+      "State domain and range of |x| on the real line; explain why it is not one-to-one."
+    ],
+    "feedback": [
+      "Vertex (2,1); minimum 1.",
+      "x=(y+6)/3.",
+      "Domain all real numbers, range [0,∞); opposite non-zero inputs share an output."
+    ]
+  }
+}

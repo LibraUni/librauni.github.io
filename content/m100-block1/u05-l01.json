@@ -1,0 +1,59 @@
+{
+  "lesson": "U05-L01",
+  "sections": [
+    {
+      "explanation": "Coordinates describe quantities, not a picture of the object’s path. Label both axes and units. For a straight line y = mx + c, c is the vertical intercept and m = (y₂ − y₁)/(x₂ − x₁). A horizontal position–time segment is stationary; a negative slope means decreasing position. Average rate over an interval is a secant slope, not an instantaneous derivative. Interpolation estimates between observations; extrapolation assumes the relationship continues beyond them.",
+      "worked": "Positions 3, 7 and 11 m at times 0, 2 and 4 s give slope (11 − 3)/4 = 2 m/s and s = 3 + 2t. At 3 s interpolation gives 9 m. Predicting 23 m at 10 s is extrapolation and needs the constant-rate assumption.",
+      "tasks": [
+        "Find the line through (1, 5) and (3, 11).",
+        "A position record is 0 m at 0 s, 4 m at 2 s and 4 m at 5 s. Find each segment’s slope.",
+        "Explain why stretching the vertical axis changes visual steepness but not a correctly calculated slope."
+      ],
+      "feedback": [
+        "m = 3 and c = 2, so y = 3x + 2.",
+        "2 m/s, then 0 m/s.",
+        "The numerical coordinate differences and units remain the same."
+      ]
+    },
+    {
+      "explanation": "Choose a representation before calculating. Draw or tabulate the quantities, show intermediate steps, and keep domains and units alongside the result. Numerical agreement is useful, but distinguish a checked example from a general argument.",
+      "worked": "Positions 3, 7 and 11 m at times 0, 2 and 4 s give slope (11 − 3)/4 = 2 m/s and s = 3 + 2t. At 3 s interpolation gives 9 m. Predicting 23 m at 10 s is extrapolation and needs the constant-rate assumption.",
+      "tasks": [
+        "Redo the first problem with a labelled diagram or table.",
+        "Explain one likely mistake and how your check would detect it.",
+        "Change one input in the worked example; predict the direction of change before calculating."
+      ],
+      "feedback": [
+        "The representation must preserve the given quantities and units. Compare it with your original result.",
+        "Use the worked reasoning to identify a specific sign, domain, scale or interpretation error.",
+        "State the changed input explicitly and check by substitution; ask your tutor if the alternative result is unclear."
+      ]
+    },
+    {
+      "explanation": "Finish by explaining the central relationship without reading the example. These compact prototype pages demonstrate the study flow; the original unit workload remains a planning estimate, not a claim that reading these pages takes that many hours.",
+      "worked": "Positions 3, 7 and 11 m at times 0, 2 and 4 s give slope (11 − 3)/4 = 2 m/s and s = 3 + 2t. At 3 s interpolation gives 9 m. Predicting 23 m at 10 s is extrapolation and needs the constant-rate assumption.",
+      "tasks": [
+        "Write a short account of the method and its restrictions.",
+        "Identify one physical situation where the model would need an additional assumption.",
+        "Prepare one question for a tutorial if anything remains unclear."
+      ],
+      "feedback": [
+        "Include definitions, an intermediate step and a check.",
+        "Distinguish supplied mathematical relationships from experimentally established behaviour.",
+        "A specific uncertain step is more useful than a general statement that the topic is difficult."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Find the line through (1, 5) and (3, 11).",
+      "A position record is 0 m at 0 s, 4 m at 2 s and 4 m at 5 s. Find each segment’s slope.",
+      "Explain why stretching the vertical axis changes visual steepness but not a correctly calculated slope."
+    ],
+    "feedback": [
+      "m = 3 and c = 2, so y = 3x + 2.",
+      "2 m/s, then 0 m/s.",
+      "The numerical coordinate differences and units remain the same."
+    ]
+  }
+}

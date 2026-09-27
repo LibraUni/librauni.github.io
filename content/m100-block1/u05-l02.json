@@ -1,0 +1,60 @@
+{
+  "lesson": "U05-L02",
+  "sections": [
+    {
+      "explanation": "NumPy arrays store numerical sequences and apply arithmetic element by element. import introduces a library; as gives it a short name. Matplotlib plots corresponding x/y values; labels and units are part of the result. np.loadtxt reads a simple numeric CSV: delimiter names the separator and skiprows=1 skips its header. A[:, 0] selects all rows of the first column; indexing begins at zero. Use the supplied CSV beside your notebook. If libraries are missing, install numpy and matplotlib in the selected notebook environment, then restart the kernel.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "Plot the supplied three points. Replot with a different vertical limit and explain why the inferred numerical slope is unchanged. Write one interpolation and one extrapolation with their assumptions.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "import numpy as np\nimport matplotlib.pyplot as plt\ndata = np.loadtxt(\"position.csv\", delimiter=\",\", skiprows=1)\ntime_s = data[:, 0]\nposition_m = data[:, 1]\nplt.plot(time_s, position_m, \"o-\")\nplt.xlabel(\"Time / s\")\nplt.ylabel(\"Position / m\")\nplt.show()"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "Positions 3, 7 and 11 m at times 0, 2 and 4 s give slope (11 − 3)/4 = 2 m/s and s = 3 + 2t. At 3 s interpolation gives 9 m. Predicting 23 m at 10 s is extrapolation and needs the constant-rate assumption.",
+      "tasks": [
+        "Find the line through (1, 5) and (3, 11).",
+        "A position record is 0 m at 0 s, 4 m at 2 s and 4 m at 5 s. Find each segment’s slope.",
+        "Explain why stretching the vertical axis changes visual steepness but not a correctly calculated slope."
+      ],
+      "feedback": [
+        "m = 3 and c = 2, so y = 3x + 2.",
+        "2 m/s, then 0 m/s.",
+        "The numerical coordinate differences and units remain the same."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "Plot the supplied three points. Replot with a different vertical limit and explain why the inferred numerical slope is unchanged. Write one interpolation and one extrapolation with their assumptions.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Find the line through (1, 5) and (3, 11).",
+      "A position record is 0 m at 0 s, 4 m at 2 s and 4 m at 5 s. Find each segment’s slope.",
+      "Explain why stretching the vertical axis changes visual steepness but not a correctly calculated slope."
+    ],
+    "feedback": [
+      "m = 3 and c = 2, so y = 3x + 2.",
+      "2 m/s, then 0 m/s.",
+      "The numerical coordinate differences and units remain the same."
+    ]
+  }
+}

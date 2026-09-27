@@ -1,0 +1,60 @@
+{
+  "lesson": "U12-L02",
+  "sections": [
+    {
+      "explanation": "A reproducible notebook contains the question, data/source, assumptions, code, labelled figures, checks and limitations. Restart and run it in order. An agent is software that can propose or execute multi-step actions; a suggestion is not evidence of correctness. In a disposable copy, permit one bounded change such as adding axis labels, inspect the diff, run independent tests and reject or roll back any change to data or model. For this free prototype, use the supplied simulated patch rather than installing or paying for an agent. This rehearses review, not proficiency with a live agent.",
+      "worked": "Read the example one line at a time. Identify the inputs, predict the displayed quantities, then type and run it in your selected notebook kernel. Library calls are explained in this section; preserve your own prediction before execution.",
+      "tasks": [
+        "A simulated assistant changes predicted_m = 2 + 3*t to predicted_m = 2 + 3*t + 0.1 while claiming only to improve labels. Inspect the changed line, test t=0, reject the out-of-scope edit and restore the baseline. Write a concise model report with limitations.",
+        "Identify every input and its units.",
+        "Restart, run in order and save your explanation with the outputs."
+      ],
+      "feedback": [
+        "Compare with the hand-worked relationship from the preceding lesson and state any discrepancy.",
+        "Unit labels belong in names, plot labels and explanatory text; ordinary arrays do not enforce units.",
+        "A clean rerun should reproduce results without hidden state. This is practice, not a formal submission."
+      ],
+      "code": "import numpy as np\nt = np.array([0.0, 1.0, 2.0])\nobserved_m = np.array([2.0, 5.1, 7.9])\npredicted_m = 2 + 3 * t\nresidual_m = observed_m - predicted_m\nprint(residual_m)\nassert np.allclose(predicted_m, [2, 5, 8])"
+    },
+    {
+      "explanation": "Verification should target a possible failure. Check an ordinary input, a boundary or excluded input where relevant, and a result you can obtain independently by hand. Do not execute an unknown proposed program merely because it is described as helpful.",
+      "worked": "For a supplied constant-speed model s=2+3t and synthetic observations(0,2),(1,5.1),(2,7.9), predictions are2,5,8 m and residuals0,0.1,−0.1 m. These small discrepancies describe fit to three supplied values; they do not prove constant velocity outside the interval or reveal measurement uncertainty.",
+      "tasks": [
+        "Calculate the predicted position at3 s and state the extrapolation assumption.",
+        "What changes if every observed position has a systematic+1 m offset?",
+        "List one dimensional, one boundary and one numerical check for this model."
+      ],
+      "feedback": [
+        "11 m, assuming the same relationship continues.",
+        "Residuals shift by+1 m; an offset can be confused with a changed intercept.",
+        "For example vt has metres; t=0 gives2 m; at t=2 the formula gives8 m."
+      ]
+    },
+    {
+      "explanation": "A brief conclusion connects the output with the question, states assumptions and identifies limitations. Preserve the original attempt and explain corrections. The module assessment is separate from these formative activities; completion ticks record study, not demonstrated mastery.",
+      "worked": "A simulated assistant changes predicted_m = 2 + 3*t to predicted_m = 2 + 3*t + 0.1 while claiming only to improve labels. Inspect the changed line, test t=0, reject the out-of-scope edit and restore the baseline. Write a concise model report with limitations.",
+      "tasks": [
+        "Write a three-sentence conclusion: result, check, limitation.",
+        "Explain one code line without referring to its output.",
+        "Review the relevant assignment from the module planner."
+      ],
+      "feedback": [
+        "The conclusion should be specific to the supplied example, not a generic claim that the code worked.",
+        "Describe what the line computes and why it is appropriate.",
+        "Follow the assignment’s independent-work instructions; practice files are not automatically submitted."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Calculate the predicted position at3 s and state the extrapolation assumption.",
+      "What changes if every observed position has a systematic+1 m offset?",
+      "List one dimensional, one boundary and one numerical check for this model."
+    ],
+    "feedback": [
+      "11 m, assuming the same relationship continues.",
+      "Residuals shift by+1 m; an offset can be confused with a changed intercept.",
+      "For example vt has metres; t=0 gives2 m; at t=2 the formula gives8 m."
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "lesson": "U11-L01",
+  "sections": [
+    {
+      "explanation": "The mean is sum divided by count; the median is the middle ordered value, averaging the two middle values for an even count. Range is maximum minus minimum. Population standard deviation is the square root of the average squared departure from the mean; the sample convention divides by n−1 instead. State which convention you use. Random variation creates scatter; a systematic offset can shift all readings together. Low scatter does not establish accuracy. A sample is not automatically representative of its population.",
+      "worked": "For values1,2,3 the mean and median are2. Squared departures1,0,1 sum to2. Population SD is√(2/3); sample SD is1. For a fair six-sided die, P(even)=3/6=1/2. Complements satisfy P(not A)=1−P(A). Independent event probabilities multiply; independence must be justified, not assumed from different names.",
+      "tasks": [
+        "Find mean, median and range of2,3,3,8.",
+        "For two independent fair coin tosses, find P(two heads) and P(at least one head).",
+        "Can repeated readings all0.2 m too large still have small scatter?"
+      ],
+      "feedback": [
+        "Mean4, median3, range6.",
+        "1/4 and3/4, using complement of no heads.",
+        "Yes; a systematic offset can coexist with good repeatability."
+      ]
+    },
+    {
+      "explanation": "Choose a representation before calculating. Draw or tabulate the quantities, show intermediate steps, and keep domains and units alongside the result. Numerical agreement is useful, but distinguish a checked example from a general argument.",
+      "worked": "For values1,2,3 the mean and median are2. Squared departures1,0,1 sum to2. Population SD is√(2/3); sample SD is1. For a fair six-sided die, P(even)=3/6=1/2. Complements satisfy P(not A)=1−P(A). Independent event probabilities multiply; independence must be justified, not assumed from different names.",
+      "tasks": [
+        "Redo the first problem with a labelled diagram or table.",
+        "Explain one likely mistake and how your check would detect it.",
+        "Change one input in the worked example; predict the direction of change before calculating."
+      ],
+      "feedback": [
+        "The representation must preserve the given quantities and units. Compare it with your original result.",
+        "Use the worked reasoning to identify a specific sign, domain, scale or interpretation error.",
+        "State the changed input explicitly and check by substitution; ask your tutor if the alternative result is unclear."
+      ]
+    },
+    {
+      "explanation": "Finish by explaining the central relationship without reading the example. These compact prototype pages demonstrate the study flow; the original unit workload remains a planning estimate, not a claim that reading these pages takes that many hours.",
+      "worked": "For values1,2,3 the mean and median are2. Squared departures1,0,1 sum to2. Population SD is√(2/3); sample SD is1. For a fair six-sided die, P(even)=3/6=1/2. Complements satisfy P(not A)=1−P(A). Independent event probabilities multiply; independence must be justified, not assumed from different names.",
+      "tasks": [
+        "Write a short account of the method and its restrictions.",
+        "Identify one physical situation where the model would need an additional assumption.",
+        "Prepare one question for a tutorial if anything remains unclear."
+      ],
+      "feedback": [
+        "Include definitions, an intermediate step and a check.",
+        "Distinguish supplied mathematical relationships from experimentally established behaviour.",
+        "A specific uncertain step is more useful than a general statement that the topic is difficult."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Find mean, median and range of2,3,3,8.",
+      "For two independent fair coin tosses, find P(two heads) and P(at least one head).",
+      "Can repeated readings all0.2 m too large still have small scatter?"
+    ],
+    "feedback": [
+      "Mean4, median3, range6.",
+      "1/4 and3/4, using complement of no heads.",
+      "Yes; a systematic offset can coexist with good repeatability."
+    ]
+  }
+}

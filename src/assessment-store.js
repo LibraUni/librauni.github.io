@@ -5,7 +5,7 @@ import {loadOriginal} from './academic-store.js';
 const CHUNK=240000;
 export function validateSubmissionFiles(files,assessment){
  if(!files.length||files.length>6||files.reduce((n,f)=>n+f.size,0)>6000000)throw Error('Choose up to six files totalling no more than 6 MB.');
- if(assessment==='tma01'&&(!files.some(f=>f.name.toLowerCase().endsWith('.pdf'))||!files.some(f=>f.name.toLowerCase().endsWith('.ipynb'))||files.some(f=>!(/\.(pdf|ipynb)$/i.test(f.name)))))throw Error('Choose a mathematics PDF and an .ipynb notebook.');
+ if(!assessment.startsWith('icma')&&(!files.some(f=>f.name.toLowerCase().endsWith('.pdf'))||!files.some(f=>f.name.toLowerCase().endsWith('.ipynb'))||files.some(f=>!(/\.(pdf|ipynb)$/i.test(f.name)))))throw Error('Choose a mathematics PDF and an .ipynb notebook.');
 }
 export async function submitAssessment(uid,id,assessment,files,assistance,connection=db,releaseLoader=()=>fetch('/evidence/teaching-release.json')){
  validateSubmissionFiles(files,assessment);

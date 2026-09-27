@@ -1,0 +1,59 @@
+{
+  "lesson": "U06-L01",
+  "sections": [
+    {
+      "explanation": "A function assigns exactly one output to each permitted input. Its domain is the permitted input set; its range is the set of resulting outputs. f(x) names an output, not multiplication. Composition f(g(x)) applies g first. For f(x)=x², f(x−a)+b shifts the graph right by a and up by b. Absolute value |x| equals x for x≥0 and −x otherwise. An inverse reverses the input/output mapping; it requires a one-to-one domain and is not the reciprocal 1/f(x).",
+      "worked": "For f(x)=2x+3 and g(x)=x², f(g(2))=11 while g(f(2))=49. The inverse of f is (y−3)/2. The square function has no inverse on all real numbers: ±2 both give 4. Restricting to x≥0 gives inverse √y, with y≥0.",
+      "tasks": [
+        "For h(x)=(x−2)²+1, identify its vertex and minimum.",
+        "Find the inverse of y=3x−6.",
+        "State domain and range of |x| on the real line; explain why it is not one-to-one."
+      ],
+      "feedback": [
+        "Vertex (2,1); minimum 1.",
+        "x=(y+6)/3.",
+        "Domain all real numbers, range [0,∞); opposite non-zero inputs share an output."
+      ]
+    },
+    {
+      "explanation": "Choose a representation before calculating. Draw or tabulate the quantities, show intermediate steps, and keep domains and units alongside the result. Numerical agreement is useful, but distinguish a checked example from a general argument.",
+      "worked": "For f(x)=2x+3 and g(x)=x², f(g(2))=11 while g(f(2))=49. The inverse of f is (y−3)/2. The square function has no inverse on all real numbers: ±2 both give 4. Restricting to x≥0 gives inverse √y, with y≥0.",
+      "tasks": [
+        "Redo the first problem with a labelled diagram or table.",
+        "Explain one likely mistake and how your check would detect it.",
+        "Change one input in the worked example; predict the direction of change before calculating."
+      ],
+      "feedback": [
+        "The representation must preserve the given quantities and units. Compare it with your original result.",
+        "Use the worked reasoning to identify a specific sign, domain, scale or interpretation error.",
+        "State the changed input explicitly and check by substitution; ask your tutor if the alternative result is unclear."
+      ]
+    },
+    {
+      "explanation": "Finish by explaining the central relationship without reading the example. These compact prototype pages demonstrate the study flow; the original unit workload remains a planning estimate, not a claim that reading these pages takes that many hours.",
+      "worked": "For f(x)=2x+3 and g(x)=x², f(g(2))=11 while g(f(2))=49. The inverse of f is (y−3)/2. The square function has no inverse on all real numbers: ±2 both give 4. Restricting to x≥0 gives inverse √y, with y≥0.",
+      "tasks": [
+        "Write a short account of the method and its restrictions.",
+        "Identify one physical situation where the model would need an additional assumption.",
+        "Prepare one question for a tutorial if anything remains unclear."
+      ],
+      "feedback": [
+        "Include definitions, an intermediate step and a check.",
+        "Distinguish supplied mathematical relationships from experimentally established behaviour.",
+        "A specific uncertain step is more useful than a general statement that the topic is difficult."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "For h(x)=(x−2)²+1, identify its vertex and minimum.",
+      "Find the inverse of y=3x−6.",
+      "State domain and range of |x| on the real line; explain why it is not one-to-one."
+    ],
+    "feedback": [
+      "Vertex (2,1); minimum 1.",
+      "x=(y+6)/3.",
+      "Domain all real numbers, range [0,∞); opposite non-zero inputs share an output."
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "lesson": "U07-L01",
+  "sections": [
+    {
+      "explanation": "Factorisation can reveal quadratic roots: x²−5x+6=(x−2)(x−3). A product is zero when at least one factor is zero. Completing the square gives x²−4x+1=(x−2)²−3, identifying vertex (2,−3). For ax²+bx+c=0 with a≠0, roots are (−b±√(b²−4ac))/(2a). The discriminant D=b²−4ac distinguishes two, one repeated, or no real roots. A rational expression remains undefined where its original denominator is zero; plotted lines must not bridge that gap.",
+      "worked": "x²−4x+1=0 gives x=2±√3. For 1/(x−1), x=1 is excluded and the magnitude grows without bound as x approaches 1. The curve approaches zero for large |x|. This is a qualitative asymptote description, not a formal limit proof.",
+      "tasks": [
+        "Solve x²−7x+12=0 and check both roots.",
+        "Classify the real roots of x²+2x+1 and x²+1.",
+        "A supplied trajectory h=6+5t−t² is valid for t≥0 until h=0. Find that ending time."
+      ],
+      "feedback": [
+        "(x−3)(x−4)=0; roots3,4.",
+        "D=0 gives repeated root−1; D=−4 gives no real roots.",
+        "t²−5t−6=(t−6)(t+1); choose6 s, rejecting−1 s."
+      ]
+    },
+    {
+      "explanation": "Choose a representation before calculating. Draw or tabulate the quantities, show intermediate steps, and keep domains and units alongside the result. Numerical agreement is useful, but distinguish a checked example from a general argument.",
+      "worked": "x²−4x+1=0 gives x=2±√3. For 1/(x−1), x=1 is excluded and the magnitude grows without bound as x approaches 1. The curve approaches zero for large |x|. This is a qualitative asymptote description, not a formal limit proof.",
+      "tasks": [
+        "Redo the first problem with a labelled diagram or table.",
+        "Explain one likely mistake and how your check would detect it.",
+        "Change one input in the worked example; predict the direction of change before calculating."
+      ],
+      "feedback": [
+        "The representation must preserve the given quantities and units. Compare it with your original result.",
+        "Use the worked reasoning to identify a specific sign, domain, scale or interpretation error.",
+        "State the changed input explicitly and check by substitution; ask your tutor if the alternative result is unclear."
+      ]
+    },
+    {
+      "explanation": "Finish by explaining the central relationship without reading the example. These compact prototype pages demonstrate the study flow; the original unit workload remains a planning estimate, not a claim that reading these pages takes that many hours.",
+      "worked": "x²−4x+1=0 gives x=2±√3. For 1/(x−1), x=1 is excluded and the magnitude grows without bound as x approaches 1. The curve approaches zero for large |x|. This is a qualitative asymptote description, not a formal limit proof.",
+      "tasks": [
+        "Write a short account of the method and its restrictions.",
+        "Identify one physical situation where the model would need an additional assumption.",
+        "Prepare one question for a tutorial if anything remains unclear."
+      ],
+      "feedback": [
+        "Include definitions, an intermediate step and a check.",
+        "Distinguish supplied mathematical relationships from experimentally established behaviour.",
+        "A specific uncertain step is more useful than a general statement that the topic is difficult."
+      ]
+    }
+  ],
+  "backup": {
+    "tasks": [
+      "Solve x²−7x+12=0 and check both roots.",
+      "Classify the real roots of x²+2x+1 and x²+1.",
+      "A supplied trajectory h=6+5t−t² is valid for t≥0 until h=0. Find that ending time."
+    ],
+    "feedback": [
+      "(x−3)(x−4)=0; roots3,4.",
+      "D=0 gives repeated root−1; D=−4 gives no real roots.",
+      "t²−5t−6=(t−6)(t+1); choose6 s, rejecting−1 s."
+    ]
+  }
+}
