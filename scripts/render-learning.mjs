@@ -99,6 +99,24 @@ export function renderLearning({root,shell,link,e}) {
    extraRails.set(page[0],{title:'In this lesson',items:plan.sections.map(s=>({title:s.title,href:'#'+s.id})),back:unitPath(plan.unit)});
   }
  }
+ // One breadcrumb rule for every module, block, unit and lesson, including future pages.
+ for(const page of pages){
+  const module=modules.find(m=>page[0].startsWith(m.base));
+  if(!module)continue;
+  const rootCrumbs=module.base===base
+   ? [link('/learn/','Learning materials'),link('/learn/preparation/','Preparatory study')]
+   : [link('/learn/','Learning materials'),link('/learn/physics/','Physics degree'),link('/learn/physics/stage-1/','Stage 1')];
+  const code=module.base.split('/').filter(Boolean).at(-1).toUpperCase();
+  const parts=page[0].slice(module.base.length).split('/').filter(Boolean);
+  const chain=[{href:module.base,label:code}];
+  let href=module.base;
+  for(const part of parts){
+   href+=part+'/';
+   const kind={b:'Block',u:'Unit',l:'Lesson'}[part[0]];
+   chain.push({href,label:kind&&/^[bul]\d+$/.test(part)?kind+' '+Number(part.slice(1)):part[0].toUpperCase()+part.slice(1)});
+  }
+  page[2]=[...rootCrumbs,...chain.map((item,i)=>i===chain.length-1?`<span aria-current="page">${e(item.label)}</span>`:link(item.href,item.label))];
+ }
  for(const [path,title,crumb,body] of pages){
   let learningBody=body;
   if(path===lessonPath){
@@ -107,10 +125,6 @@ export function renderLearning({root,shell,link,e}) {
   }
   let railTitle,railItems,back;
   if(path===lessonPath){railTitle='In this lesson';railItems=openingSections.sections.map(s=>({title:s.title,href:'#'+sectionId(s)}));back=unitPath('U01');}
-  else if(path===base){railTitle='Module blocks';railItems=m100.blocks.map(b=>({title:b.title,href:b.id==='B01'?base+'b01/':'#'+b.id}));back='/learn/preparation/';}
-  else if(path===base+'b01/'){railTitle='Block units';railItems=m100.blocks[0].units.map(id=>({title:m100.units.find(u=>u.id===id).title,href:unitPath(id)}));back=base;}
-  else if(m100.units.some(u=>path===unitPath(u.id))){const u=m100.units.find(u=>path===unitPath(u.id));railTitle='Unit lessons';railItems=lessons.filter(l=>l.unit===u.id).map(l=>({title:l.title,href:l.id==='U01-L01'?lessonPath:'#'+l.id}));back=base+'b01/';}
-  else {const m=stage1Modules.find(m=>home(m)===path);if(m){railTitle='Module blocks';railItems=stageBlocks[m.code].map(b=>({title:b.title,href:m.path+'#'+b.id}));back='/learn/physics/stage-1/';}}
   if(extraRails.has(path)){const rail=extraRails.get(path);railTitle=rail.title;railItems=rail.items;back=rail.back;}
   if(railItems)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary>${railTitle}<span data-current-section></span></summary><nav aria-label="${railTitle}"><h2>${railTitle}</h2><ol>${railItems.map((item,i)=>`<li><a href="${item.href}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(item.title)}</span></a></li>`).join('')}</ol>${railItems.length?'':'<p class="small">Not yet published.</p>'}<a class="lesson-back" href="${back}">← ${path===lessonPath?'Unit overview':'Up one level'}</a></nav></details></aside><article class="lesson-reading">${learningBody}</article></div>`;
 
