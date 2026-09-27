@@ -14,7 +14,10 @@ export function renderLearning({root,shell,link,e}) {
  const unitPath=id=>base+'b01/'+id.toLowerCase()+'/';
  const lessonPath=unitPath('U01')+'l01/';
  const check=id=>`<input type="checkbox" class="study-check" data-study-id="${e(id)}" aria-label="Mark ${e(id)} completed" disabled>`;
- const titled=(id,title)=>e(title)+check(id);
+ const titled=(id,title)=>{
+  const href=id==='B01'?base+'b01/':id==='U01-L01'?lessonPath:/^U0[1-4]$/.test(id)?unitPath(id):null;
+  return (href?link(href,title):`<span>${e(title)}</span>`)+check(id);
+ };
  const controls='<div class="tree-controls" hidden><button type="button" data-tree-action="expand">Expand all</button><button type="button" data-tree-action="collapse" class="secondary">Collapse all</button></div>';
  const tree=body=>`<div class="learning-tree">${controls}${body}</div>`;
  const branch=(title,body,id)=>`<details class="curriculum-branch" ${id?`id="${id}"`:''}><summary>${title}</summary><div class="branch-body">${body}</div></details>`;

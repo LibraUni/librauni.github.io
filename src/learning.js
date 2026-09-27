@@ -20,3 +20,6 @@ function revealTarget(){
 }
 revealTarget();
 window.addEventListener('hashchange',revealTarget);
+
+// A title link navigates; the native disclosure marker remains independently operable.
+for(const a of document.querySelectorAll(".curriculum-branch > summary > a"))a.addEventListener("click",event=>event.stopPropagation());
