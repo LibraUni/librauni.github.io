@@ -251,3 +251,18 @@ background, interests, goals or coaching context to GitHub, Firebase or evidence
 Local tutoring context may be used selectively when available; it is not guaranteed
 assistant memory and must not be synced. This supersedes earlier profile-history
 and six-file sync instructions. Preserve academic work and learning records.
+
+
+## Optional profile fields restored — 27 September 2026
+
+The learner restored optional About me, Academic background, Work experience,
+Other experience, Interests, Goals, Study preferences, photo and personalisation
+controls alongside the four basic identity fields. Pronouns remain removed.
+Schema4 adds blank optional fields when reading schema3; opening the page must
+not write or alter saved records. Never prefill from deleted records or local
+tutoring context. Only an explicit student edit saves new information. A saved
+photo appears beside the preferred name on the main Study desk after sign-in.
+Keep the current-only save model and existing backup exclusions. Do not alter
+past records or repository history. This supersedes the earlier prohibition on
+student-entered extended profile information; local tutoring records still must
+not be automatically uploaded.

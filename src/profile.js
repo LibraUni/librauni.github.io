@@ -1,6 +1,6 @@
 import {auth,onAuthStateChanged,signIn,logOut,isOwner} from './planner-store.js';
 import {loadProfile,saveProfile} from './profile-store.js';
-import {fields,emptyProfile,validateProfile,readProfile,clearLegacyProfileDrafts} from './profile-data.js';
+import {fields,emptyProfile,validateProfile,tutorBrief,readProfile,clearLegacyProfileDrafts} from './profile-data.js';
 import './profile.css';
 const $=id=>document.getElementById(id);
 let user=null,data=emptyProfile(),revision=0,loaded=false,dirty=false,busy=false,blocked=false,generation=0,timer;
@@ -10,7 +10,8 @@ const status=s=>{$('profile-status').textContent=s;$('profile-save-status').text
 function message(s=''){$('profile-message').textContent=s;$('profile-message').hidden=!s;}
 function download(text,name,type){const url=URL.createObjectURL(new Blob([text],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function stash(){if(user&&loaded&&dirty)try{localStorage.setItem(key(user.uid),JSON.stringify({revision,data}));}catch{message('Your browser could not retain a draft. Download your profile or keep this page open until saved online.');}}
-function paint(){for(const k of Object.keys(fields))$(k).value=data[k];}
+function paint(){for(const k of Object.keys(fields))$(k).value=data[k];$('personalisation').checked=data.personalisation;photo();}
+function photo(){$('portrait').hidden=!data.photo;$('portrait-placeholder').hidden=!!data.photo;if(data.photo)$('portrait').src=data.photo;else $('portrait').removeAttribute('src');$('photo-remove').disabled=!data.photo;}
 function changed(){try{validateProfile(data);}catch(e){message(e.message);return;}dirty=true;stash();status(blocked?'Changes need review':'Unsaved changes · saving shortly…');clearTimeout(timer);if(!blocked)timer=setTimeout(save,1100);}
 async function save(){
  clearTimeout(timer);if(!user||!loaded||!dirty||busy||blocked)return;
@@ -35,8 +36,19 @@ onAuthStateChanged(auth,async u=>{generation++;clearTimeout(timer);user=null;loa
  if(!u){status('Sign in to view and edit your private profile.');return;}if(!isOwner(u)){status('This account cannot access this private profile.');return;}
  user=u;$('private-profile').hidden=false;await load();});
 for(const k of Object.keys(fields))$(k).addEventListener('input',()=>{if(!loaded)return;data[k]=$(k).value;changed();});
+$('personalisation').addEventListener('change',()=>{data.personalisation=$('personalisation').checked;changed();});
 $('profile-save').addEventListener('click',save);
 $('profile-reload').addEventListener('click',async()=>{if(busy){message('Wait for the current save to finish.');return;}if(dirty&&!confirm('Replace this unsaved draft with the saved profile? Download the draft first if you want to keep it.'))return;if(user){localStorage.removeItem(key(user.uid));message();await load();}});
 $('profile-export').addEventListener('click',()=>download(JSON.stringify(data,null,2),'librauni-profile.json','application/json'));
+$('profile-brief').addEventListener('click',()=>download(tutorBrief(data),'librauni-tutor-profile.txt','text/plain'));
+$('photo-remove').addEventListener('click',()=>{data.photo='';photo();changed();});
+$('photo-file').addEventListener('change',async ev=>{
+ const file=ev.target.files[0];if(!file)return;const s=generation;
+ try{if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>10000000)throw Error('Choose a JPEG, PNG or WebP photo under 10 MB.');
+ const bitmap=await createImageBitmap(file);if(s!==generation||!loaded){bitmap.close();return;}
+ const canvas=document.createElement('canvas'),scale=Math.min(1,320/Math.max(bitmap.width,bitmap.height));canvas.width=Math.max(1,Math.round(bitmap.width*scale));canvas.height=Math.max(1,Math.round(bitmap.height*scale));const ctx=canvas.getContext('2d');ctx.fillStyle='#f7f4ed';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);bitmap.close();
+ const result=canvas.toDataURL('image/jpeg',.8);validateProfile({...data,photo:result});data.photo=result;photo();changed();
+ }catch(e){message(e.message||'This photo could not be opened. Try a JPEG, PNG or WebP file.');}finally{ev.target.value='';}
+});
 window.addEventListener('online',()=>{if(user){if(!loaded)load();else save();}});
 window.addEventListener('beforeunload',e=>{if(dirty||busy){stash();e.preventDefault();e.returnValue='';}});

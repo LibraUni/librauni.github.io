@@ -22,25 +22,33 @@ if(actions){
  actions.append(account);
  const theme=actions.querySelector('#theme-toggle');
  if(theme)actions.append(theme);
+ const showPhoto=location.pathname==='/'||location.pathname==='/index.html';
+ function paintProfile(profile){
+  const name=profile?.name?.trim()||'';
+  link.replaceChildren();
+  if(showPhoto&&profile?.photo){
+   const portrait=document.createElement('img');
+   portrait.className='header-portrait';portrait.src=profile.photo;
+   portrait.alt='';portrait.width=36;portrait.height=36;
+   link.append(portrait);
+  }
+  const label=document.createElement('span');label.textContent=name||'My profile';link.append(label);
+  link.setAttribute('aria-label',name?name+' · My profile':'My profile');
+ }
  let unsubscribe;
  onAuthStateChanged(auth,user=>{
   unsubscribe?.();unsubscribe=null;
   link.hidden=!user;
-  link.textContent='My profile';
-  link.setAttribute('aria-label','My profile');
+  paintProfile(null);
   authButton.hidden=!user&&!existingAuth;
   authButton.classList.toggle('header-signout',!!user);
   if(!user||!isOwner(user))return;
   unsubscribe=onSnapshot(doc(db,'users',user.uid,'profile','main'),snapshot=>{
    if(auth.currentUser?.uid!==user.uid)return;
    try{
-    const name=snapshot.exists()?readProfile(snapshot.data().data??JSON.parse(snapshot.data().payload)).name.trim():'';
-    link.textContent=name||'My profile';
-    link.setAttribute('aria-label',name?name+' · My profile':'My profile');
-   }catch{
-    link.textContent='My profile';
-    link.setAttribute('aria-label','My profile');
-   }
+    const profile=snapshot.exists()?readProfile(snapshot.data().data??JSON.parse(snapshot.data().payload)):null;
+    paintProfile(profile);
+   }catch{paintProfile(null);}
   },()=>{ /* Keep the profile link usable when the private name is unavailable. */ });
  });
 }

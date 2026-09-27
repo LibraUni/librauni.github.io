@@ -31,3 +31,5 @@ header .header-signout{padding:.5rem 0;min-height:44px;border:0;border-radius:0;
 header .header-signout:hover{filter:none;color:var(--blue)}
 @media(max-width:460px){.header-actions{justify-content:flex-end}.header-account{margin-right:auto}}
 @media(prefers-reduced-motion:reduce){.theme-thumb,.theme-button svg{transition:none}}
+
+.header-profile{gap:.55rem}.header-portrait{width:36px;height:36px;flex-shrink:0;object-fit:cover;border-radius:50%;border:1px solid var(--line)}

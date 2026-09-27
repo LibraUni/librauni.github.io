@@ -72,12 +72,12 @@ test('planner adapter round-trips dates and refuses a second-device stale overwr
  const history=await getDoc(doc(db,'users',uid,'plannerHistory','1'));assert.deepEqual(JSON.parse(history.data().payload),data);
 });
 
-test('minimal profile saves only current details and rejects extra fields, history and stale writes',async()=>{
+test('optional profile fields and photo round-trip privately without history or stale writes',async()=>{
  const {loadProfile,saveProfile}=await import('../src/profile-store.js');
  const {emptyProfile}=await import('../src/profile-data.js');
  const assert=(await import('node:assert/strict')).default;
  const uid='profile-test',db=env.authenticatedContext(uid,claims).firestore();
- const p={...emptyProfile(),name:'Test learner',surname:'Example'};
+ const p={...emptyProfile(),name:'Test learner',surname:'Example',academic:'Synthetic context',photo:'data:image/jpeg;base64,YWJj'};
  const ref=doc(db,'users',uid,'profile','main');
  assert.equal((await loadProfile(uid,db)).revision,0);
  await saveProfile(uid,p,0,db);assert.deepEqual((await loadProfile(uid,db)).data,p);
@@ -86,7 +86,7 @@ test('minimal profile saves only current details and rejects extra fields, histo
  assert.equal((await loadProfile(uid,db)).data.name,'Updated');
  assert.equal((await getDoc(doc(db,'users',uid,'profileHistory','1'))).exists(),false);
  const write=data=>setDoc(ref,{data,revision:3,updatedAt:serverTimestamp()});
- for(const extra of [{photo:''},{academic:'No longer collected'},{personalisation:true},{about:'No longer collected'}])await assertFails(write({...p,...extra}));
+ for(const extra of [{photo:'https://example.org/image.jpg'},{academic:'x'.repeat(6001)},{personalisation:'yes'},{unknown:'extra'},{photo:'data:image/svg+xml;base64,YWJj'}])await assertFails(write({...p,...extra}));
  await assertFails(write({...p,name:'x'.repeat(121)}));
  await assertFails(write({...p,schemaVersion:2}));
  await assertFails(setDoc(ref,{payload:JSON.stringify(p),revision:3,updatedAt:serverTimestamp()}));
@@ -172,4 +172,17 @@ test('tutor catalogue paginates and restores private originals; browser writes a
  const p=buildStudentSnapshot([],catalogue.register,catalogue.assets);assert.deepEqual(await saveSnapshot(uid,p,db),p);assert.deepEqual(await loadSnapshot(uid,p.tree.root.slice(2),db),p);
  for(const path of [['academicFiles',id],['academicFiles',id,'parts','0'],['academicRecords','0']]){await assertFails(setDoc(doc(db,'users',uid,...path),{payload:'forged'}));await assertFails(deleteDoc(doc(db,'users',uid,...path)));for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('other',claims).firestore()])await assertFails(getDoc(doc(other,'users',uid,...path)));}
  await env.withSecurityRulesDisabled(async c=>{await deleteDoc(doc(c.firestore(),'users',uid,'academicFiles',id));});await assert.rejects(loadAcademicCatalogue(uid,db),/missing archived file/);
+});
+
+test('opening a minimal profile leaves its stored revision and data untouched',async()=>{
+ const {loadProfile}=await import('../src/profile-store.js');
+ const assert=(await import('node:assert/strict')).default;
+ const uid='minimal-profile-preserved',db=env.authenticatedContext(uid,claims).firestore();
+ const data={schemaVersion:3,name:'Example',surname:'',location:'',languages:''};
+ await env.withSecurityRulesDisabled(async context=>{
+  await setDoc(doc(context.firestore(),'users',uid,'profile','main'),{data,revision:12,updatedAt:serverTimestamp()});
+ });
+ const loaded=await loadProfile(uid,db);assert.equal(loaded.revision,12);assert.equal(loaded.data.schemaVersion,4);assert.equal(loaded.data.photo,'');
+ const stored=(await getDoc(doc(db,'users',uid,'profile','main'))).data();
+ assert.equal(stored.revision,12);assert.deepEqual(stored.data,data);
 });

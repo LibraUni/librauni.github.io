@@ -60,12 +60,22 @@ service cloud.firestore {
     function profileShape() {
       let p = request.resource.data.data;
       return request.resource.data.keys().hasOnly(['data','revision','updatedAt'])
-        && p is map && p.keys().hasOnly(['schemaVersion','name','surname','location','languages'])
-        && p.schemaVersion == 3
+        && p is map && p.keys().hasOnly(['schemaVersion','name','surname','location','languages','about','academic','work','experience','interests','goals','study','photo','personalisation'])
+        && p.schemaVersion == 4
         && p.name is string && p.name.size() <= 120
         && p.surname is string && p.surname.size() <= 120
         && p.location is string && p.location.size() <= 160
         && p.languages is string && p.languages.size() <= 300
+        && p.about is string && p.about.size() <= 3000
+        && p.academic is string && p.academic.size() <= 6000
+        && p.work is string && p.work.size() <= 6000
+        && p.experience is string && p.experience.size() <= 6000
+        && p.interests is string && p.interests.size() <= 3000
+        && p.goals is string && p.goals.size() <= 3000
+        && p.study is string && p.study.size() <= 3000
+        && p.personalisation is bool
+        && p.photo is string && p.photo.size() <= 160000
+        && (p.photo == '' || p.photo.matches('data:image/jpeg;base64,[A-Za-z0-9+/]+=*'))
         && request.resource.data.revision is int && request.resource.data.revision > 0
         && request.resource.data.updatedAt == request.time;
     }
