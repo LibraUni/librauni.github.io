@@ -206,4 +206,4 @@ On future releases update src/study-tree.js, required descendants, available fla
 
 ## Completion controls simplified — 27 September 2026
 
-Use a bare checkbox beside every block, unit, lesson and section title in the Learning materials tree and corresponding teaching headings. No completion panels, explanatory text or action buttons. Retain accessible labels, disabled-state tooltips, partial parent state, reversible private saving and existing rollup rules. No confirmation dialog is needed for reversible parent ticks. Show a clear error only if saving fails. This supersedes the earlier parent-button presentation.
+Use a bare checkbox immediately after the text of every block, unit, lesson and section title in the Learning materials tree and corresponding teaching headings. No completion panels, explanatory text or action buttons. Retain accessible labels, disabled-state tooltips, partial parent state, reversible private saving and existing rollup rules. No confirmation dialog is needed for reversible parent ticks. Show a clear error only if saving fails. This supersedes the earlier parent-button presentation.
