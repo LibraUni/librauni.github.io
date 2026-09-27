@@ -15,14 +15,17 @@ function render(){
  for(const el of controls){
   const id=el.dataset.studyId,node=studyNodes.find(n=>n.id===id);if(!node)continue;
   const available=ready(id),done=studied(id,plan),count=leaves(id).filter(n=>(plan?.studied||[]).includes(n.id)).length;
-  el.innerHTML=`<p><strong>${esc(node.kind[0].toUpperCase()+node.kind.slice(1))} · ${esc(node.id)}:</strong> ${done?'Studied':count?count+' section(s) studied':'Not marked studied'}${!available?' · further material forthcoming':''}</p><button type="button" ${!user||!data||busy||!available||plan?.status!=='enrolled'?'disabled':''}>${done?'Mark as not completed':'Mark '+node.kind+' completed'}</button><p class="small" role="status">${esc(message)}${data&&plan?.status!=='enrolled'?' Enrol through the module planner to save progress.':''}</p>${!user?'<a href="/">Sign in at your Study desk</a>':data&&plan?.status!=='enrolled'?'<a href="/programme/bridge/lu-m100/#study-planner">Open enrolment and planner</a>':''}`;
-  el.querySelector('button').onclick=async()=>{
-   if(!user||!data||busy)return;
-   if(node.kind!=='section'&&!confirm(`${done?'Clear':'Mark'} all required sections in this ${node.kind}? This is your study record, not an assessment result.`))return;
+  el.checked=done;el.indeterminate=!done&&count>0;
+  el.disabled=!user||!data||busy||!available||plan?.status!=='enrolled';
+  el.setAttribute('aria-label',`${node.title}: completed`);
+  el.title=!available?'Further material forthcoming':!user?'Sign in at your Study desk':!data?message:plan?.status!=='enrolled'?'Enrol to save progress':busy?'Saving…':done?'Completed — untick to undo':'Mark completed';
+  el.onclick=event=>event.stopPropagation();
+  el.onchange=async()=>{
+   if(!user||!data||busy){render();return;}
    const token=epoch,next=structuredClone(data);next.plans['LU-M100']=setStudied(plan,id,!done);validateStore(next,modules);
    busy=true;message='Saving privately…';render();
    try{const saved=await savePlanner(user.uid,next,revision);if(token!==epoch)return;if(revision<=saved){data=next;revision=saved;}message='Saved online · self-reported study, not assessed mastery.';}
-   catch(err){if(token!==epoch)return;message=err.message==='PLANNER_CONFLICT'?'The timetable changed in another tab. Review the refreshed progress, then try again.':'Not saved. Your completion mark was not confirmed; reconnect and try again.';}
+   catch(err){if(token!==epoch)return;message=err.message==='PLANNER_CONFLICT'?'The timetable changed in another tab. Review the refreshed progress, then try again.':'Not saved. Your completion mark was not confirmed; reconnect and try again.';alert(message);}
    finally{if(token===epoch){busy=false;render();}}
   };
  }

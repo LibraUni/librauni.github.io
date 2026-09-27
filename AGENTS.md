@@ -202,3 +202,8 @@ The Study desk first panel uses the shared private planner for each enrolled mod
 Teaching completion is explicit, reversible, self-reported and owner-only. Store stable section IDs in optional plan.studied inside existing schema2 planner/main; use the same transaction/revision/immutable plannerHistory and backup/export routes. Preserve these marks on date changes, shifts and migrations. Section completion rolls up to lessons, units and blocks only when all required peers are published and marked. Parent buttons apply to all descendant sections with confirmation. M100 U01-L01 is available; U01 and blocks remain incomplete because later material is unpublished.
 
 On future releases update src/study-tree.js, required descendants, available flags and schedule whole-unit availability consistently; add controls to the corresponding teaching pages. Extend module-specific trees/validation before publishing other modules. Test rollup, undo, calendar boundaries, private persistence and stale writes. Explicit study actions appear as grouped, labelled self-report activity through existing history; reading/site development never creates academic records. No actual learner progress was changed during this implementation.
+
+
+## Completion controls simplified — 27 September 2026
+
+Use a bare checkbox beside every block, unit, lesson and section title in the Learning materials tree and corresponding teaching headings. No completion panels, explanatory text or action buttons. Retain accessible labels, disabled-state tooltips, partial parent state, reversible private saving and existing rollup rules. No confirmation dialog is needed for reversible parent ticks. Show a clear error only if saving fails. This supersedes the earlier parent-button presentation.
