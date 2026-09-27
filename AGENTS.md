@@ -285,3 +285,10 @@ The learner explicitly requested rapid, low-cost completion of Blocks2/3 as a de
 
 ## Consistent learning navigation
 Generate breadcrumbs from the full learning hierarchy for every module and descendant: learning materials, preparation or degree/stage, module, block, unit, lesson. Link all ancestors and mark only the current page. Sidebars link directly to child pages at module/block/unit level; only lesson sections use in-page anchors. Never use generic “Parent page” breadcrumbs or block-specific fallback links. Keep tests/learning-navigation.test.js passing when adding modules.
+
+
+## Unit revision sheets — standing requirement, 27 September 2026
+
+Every future completed teaching unit must end with a concise, readable on-page reference table and a downloadable, print-friendly LibraUni PDF compiled from that unit's actual teaching. Include essential formulae, definitions, notation, units, basic methods and conditions of validity; use short examples where useful. Explicitly distinguish facts/formulae to recall fluently from results to understand/derive and information to consult. Do not label everything as rote memorisation. For example, exponent rules must state applicable domain conditions and exclude zero denominators. Avoid unqualified identities and unintroduced material.
+
+Link the PDF from the unit home and closing review, with the corresponding table available on the web. Allocate revision within the existing unit workload. Use clear typography, accessible tables, unit/module identification, version/date and the applicable licence. Keep web and PDF content synchronised when teaching changes. Generate and visually inspect the PDF using the PDF skill before release. Add this to every unit release review: a unit is not editorially complete until both resources are present and checked. This is a future publication requirement; existing M100 prototype units still lack these sheets and must not be described as already having them. Recording this policy is project administration, not academic progress.
