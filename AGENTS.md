@@ -234,3 +234,5 @@ Use a sticky left section navigator on lesson pages instead of the expandable le
 Module and descendant learning pages use the same wide sticky sidebar: module blocks, block units, unit lessons, lesson sections. Link published child pages or existing outlines; never invent available teaching. Keep future pages consistent with this hierarchy.
 
 Learning tree titles link directly to available child learning pages; disclosure arrows expand/collapse independently. Unpublished items without learning pages remain plain titles. Expand/collapse-all controls are small text buttons aligned at the top right.
+
+All hierarchy navigation must link directly to child learning pages, never to parent-page fragments or programme substitutes. Generate labelled outline pages for defined unpublished children; do not invent lessons or sections. Only section links within a lesson use anchors. Apply to all modules through the shared hierarchy renderer.

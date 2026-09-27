@@ -1,3 +1,7 @@
+import {a101 as a101Units} from '../curriculum/a101.js';
+import {p101Units} from '../curriculum/p101-units.js';
+import {m102Units} from '../curriculum/m102-units.js';
+import {m101Units} from '../curriculum/m101-units.js';
 import {a101Blocks} from '../curriculum/a101-blocks.js';
 import {m102Blocks} from '../curriculum/m102-blocks.js';
 import {p101Blocks} from '../curriculum/p101-blocks.js';
@@ -11,11 +15,15 @@ export function renderLearning({root,shell,link,e}) {
  const base='/learn/preparation/m100/';
  const stageBlocks={ 'LU-M101':m101Blocks.blocks,'LU-P101':p101Blocks.blocks,'LU-M102':m102Blocks.blocks,'LU-A101':a101Blocks.blocks };
 
- const unitPath=id=>base+'b01/'+id.toLowerCase()+'/';
+ const blockPath=id=>base+id.toLowerCase()+'/';
+ const unitPath=id=>blockPath(m100.blocks.find(b=>b.units.includes(id)).id)+id.toLowerCase()+'/';
+ const lessonUrl=l=>unitPath(l.unit)+l.id.split('-').at(-1).toLowerCase()+'/';
+ const extraRails=new Map();
  const lessonPath=unitPath('U01')+'l01/';
  const check=id=>`<input type="checkbox" class="study-check" data-study-id="${e(id)}" aria-label="Mark ${e(id)} completed" disabled>`;
  const titled=(id,title)=>{
-  const href=id==='B01'?base+'b01/':id==='U01-L01'?lessonPath:/^U0[1-4]$/.test(id)?unitPath(id):null;
+  const lesson=block1Lessons.lessons.find(l=>l.id===id);
+  const href=m100.blocks.some(b=>b.id===id)?blockPath(id):lesson?lessonUrl(lesson):m100.units.some(u=>u.id===id)?unitPath(id):null;
   return (href?link(href,title):`<span>${e(title)}</span>`)+check(id);
  };
  const controls='<div class="tree-controls" hidden><button type="button" data-tree-action="expand">Expand all</button><button type="button" data-tree-action="collapse" class="secondary">Collapse all</button></div>';
@@ -47,6 +55,26 @@ export function renderLearning({root,shell,link,e}) {
  for(const n of [1,2,3])pages.push(['/learn/physics/stage-'+n+'/',`Stage ${n}`,[link('/learn/','Learning materials'),link('/learn/physics/','Physics degree'),`<span aria-current="page">Stage ${n}</span>`],intro('Stage '+n,'Teaching materials will appear here as they are released.')+`<p>${link('/programme/#stage-'+n,'Stage curriculum blueprint')} · No stage teaching is published yet.</p>`+(n===1?tree(stage1Modules.map(moduleLink).join('')):'' )]);
  for(const u of m100.units.slice(0,4))pages.push([unitPath(u.id),u.title,[...crumbs,`<span aria-current="page">${u.id}</span>`],intro(u.title,e(u.can))+`<p>${u.hours} planned study hours · ${link('/programme/bridge/lu-m100/#'+u.id,'Unit blueprint')}.</p>`+tree(block1Lessons.lessons.filter(l=>l.unit===u.id).map(l=>branch(titled(l.id,l.id+' · '+l.title),`<p>${e(l.purpose)}</p><p>${l.id==='U01-L01'?link(lessonPath,'Open lesson · All six sections available'):pending}</p>`)).join(''))]);
  pages.push([lessonPath,'Signed quantities and ordered calculations',[...crumbs,link(unitPath('U01'),'Unit 1'),'<span aria-current="page">Lesson 1</span>'],intro('Signed quantities and ordered calculations','Start with familiar arithmetic, then build a dependable way of explaining and checking it.')+`<p>Full lesson: 4 hours · All six sections available, including a downloadable Python practice notebook.</p>`+published.map(id=>fs.readFileSync(root+'content/m100-u01-l01-'+id.toLowerCase()+'.html','utf8')).join('')+`<nav class="lesson-pagination" aria-label="Previous and next"><a href="${unitPath('U01')}">← Unit overview</a><span>Lesson 2: forthcoming</span></nav><p class="small">Original LibraUni teaching · Published 26 September 2026. ${link('/programme/bridge/lu-m100/#opening-sections','Lesson design and section blueprint')}.</p>`]);
+ // Generate navigation destinations from the approved hierarchy, without inventing teaching.
+ const modules=[{base,blocks:m100.blocks,units:m100.units,lessons:block1Lessons.lessons,blueprint:'/programme/bridge/lu-m100/'},...stage1Modules.map(m=>({base:home(m),blocks:stageBlocks[m.code],units:({'LU-M101':m101Units,'LU-M102':m102Units,'LU-P101':p101Units,'LU-A101':a101Units}[m.code]).units,lessons:[],blueprint:m.path}))];
+ const addPage=(path,title,parent,items,label,description)=>{
+  extraRails.set(path,{title:label,items,back:parent});
+  if(pages.some(p=>p[0]===path))return;
+  pages.push([path,title,[link('/learn/','Learning materials'),link(parent,'Parent page'),e(title)],intro(e(title),e(description||'Teaching materials are forthcoming.'))+`<p class="availability">Teaching materials forthcoming · This is a curriculum outline.</p>`+items.map(item=>`<p>${link(item.href,item.title)}</p>`).join('')]);
+ };
+ for(const m of modules){
+  extraRails.set(m.base,{title:'Module blocks',items:m.blocks.map(b=>({title:b.title,href:m.base+b.id.toLowerCase()+'/'})),back:m.base===base?'/learn/preparation/':'/learn/physics/stage-1/'});
+  for(const b of m.blocks){
+   const bp=m.base+b.id.toLowerCase()+'/';
+   const units=m.units.filter(u=>u.block===b.id||b.units?.includes(u.id));
+   addPage(bp,b.title,m.base,units.map(u=>({title:u.title,href:bp+u.id.toLowerCase()+'/'})),'Block units',b.purpose);
+   for(const u of units){
+    const up=bp+u.id.toLowerCase()+'/';const lessons=m.lessons.filter(l=>l.unit===u.id);
+    addPage(up,u.title,bp,lessons.map(l=>({title:l.title,href:up+l.id.split('-').at(-1).toLowerCase()+'/'})),'Unit lessons',u.can||u.purpose);
+    for(const l of lessons){const lp=up+l.id.split('-').at(-1).toLowerCase()+'/';if(lp!==lessonPath)addPage(lp,l.title,up,[],'Lesson sections',l.purpose);}
+   }
+  }
+ }
  for(const [path,title,crumb,body] of pages){
   let learningBody=body;
   if(path===lessonPath){
@@ -59,7 +87,8 @@ export function renderLearning({root,shell,link,e}) {
   else if(path===base+'b01/'){railTitle='Block units';railItems=m100.blocks[0].units.map(id=>({title:m100.units.find(u=>u.id===id).title,href:unitPath(id)}));back=base;}
   else if(m100.units.slice(0,4).some(u=>path===unitPath(u.id))){const u=m100.units.find(u=>path===unitPath(u.id));railTitle='Unit lessons';railItems=block1Lessons.lessons.filter(l=>l.unit===u.id).map(l=>({title:l.title,href:l.id==='U01-L01'?lessonPath:'#'+l.id}));back=base+'b01/';}
   else {const m=stage1Modules.find(m=>home(m)===path);if(m){railTitle='Module blocks';railItems=stageBlocks[m.code].map(b=>({title:b.title,href:m.path+'#'+b.id}));back='/learn/physics/stage-1/';}}
-  if(railItems)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary>${railTitle}<span data-current-section></span></summary><nav aria-label="${railTitle}"><h2>${railTitle}</h2><ol>${railItems.map((item,i)=>`<li><a href="${item.href}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(item.title)}</span></a></li>`).join('')}</ol><a class="lesson-back" href="${back}">← ${path===lessonPath?'Unit overview':'Up one level'}</a></nav></details></aside><article class="lesson-reading">${learningBody}</article></div>`;
+  if(extraRails.has(path)){const rail=extraRails.get(path);railTitle=rail.title;railItems=rail.items;back=rail.back;}
+  if(railItems)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary>${railTitle}<span data-current-section></span></summary><nav aria-label="${railTitle}"><h2>${railTitle}</h2><ol>${railItems.map((item,i)=>`<li><a href="${item.href}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(item.title)}</span></a></li>`).join('')}</ol>${railItems.length?'':'<p class="small">Not yet published.</p>'}<a class="lesson-back" href="${back}">← ${path===lessonPath?'Unit overview':'Up one level'}</a></nav></details></aside><article class="lesson-reading">${learningBody}</article></div>`;
 
   let html=shell(title,crumb,learningBody).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script><script type="module" src="/src/study-ui.js"></script></body>');
   if(railItems)html=html.replace('class="programme-page"','class="programme-page lesson-page"').replace('</body>','<script type="module" src="/src/lesson-navigation.js"></script></body>');
