@@ -24,10 +24,10 @@ export function renderLearning({root,shell,link,e}) {
  const published=['S01','S02','S03','S04','S05','S06'];
  const sectionId=s=>s.id.split('-').at(-1);
  const pending='<span class="availability">Forthcoming</span>';
- const blockTrees=m100.blocks.map(b=>branch(titled(b.id,b.id+' · '+b.title),(b.id==='B01'?`<p>${link(base+'b01/','Block overview')}</p>`:'')+b.units.map(id=>{
+ const blockTrees=m100.blocks.map(b=>branch(titled(b.id,b.id+' · '+b.title),b.units.map(id=>{
   const u=m100.units.find(u=>u.id===id);
   const ls=block1Lessons.lessons.filter(l=>l.unit===id);
-  return branch(titled(id,id+' · '+u.title),`<p>${e(u.can)}</p>${b.id==='B01'?`<p>${link(unitPath(id),'Unit overview')}</p>`:''}${ls.length?ls.map(l=>branch(titled(l.id,l.title),l.id==='U01-L01'?`<p>${link(lessonPath,'Open lesson')} · All six sections available.</p><ul>${openingSections.sections.map((s,i)=>`<li>${published.includes(sectionId(s))?link(lessonPath+'#'+sectionId(s),s.title):e(s.title)+' · '+pending}${check(s.id)}</li>`).join('')}</ul>`:`<p>${pending} · ${l.hours} planned study hours.</p>`)).join(''):`<p>${pending} · ${link('/programme/bridge/lu-m100/#'+id,'Read the unit blueprint')}</p>`}`,id);
+  return branch(titled(id,id+' · '+u.title),`<p>${e(u.can)}</p>${ls.length?ls.map(l=>branch(titled(l.id,l.title),l.id==='U01-L01'?`<p>${link(lessonPath,'Open lesson')} · All six sections available.</p><ul>${openingSections.sections.map((s,i)=>`<li>${published.includes(sectionId(s))?link(lessonPath+'#'+sectionId(s),s.title):e(s.title)+' · '+pending}${check(s.id)}</li>`).join('')}</ul>`:`<p>${pending} · ${l.hours} planned study hours.</p>`)).join(''):`<p>${pending} · ${link('/programme/bridge/lu-m100/#'+id,'Read the unit blueprint')}</p>`}`,id);
  }).join(''),b.id));
  const unitBranches=blockTrees.join('');
  const home=m=>'/learn/physics/stage-1/'+m.code.slice(3).toLowerCase()+'/';
