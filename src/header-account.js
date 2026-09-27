@@ -1,4 +1,4 @@
-import {auth,db,onAuthStateChanged,isOwner} from './planner-store.js';
+import {auth,db,onAuthStateChanged,isOwner,logOut} from './planner-store.js';
 import {doc,onSnapshot} from 'firebase/firestore';
 import {readProfile} from './profile-data.js';
 
@@ -8,26 +8,27 @@ if(actions){
  link.className='header-profile';
  link.href='/profile/';
  link.hidden=true;
- actions.append(link);
- const authButton=actions.querySelector('#auth-button, #profile-auth, #journal-auth, #evidence-auth');
- const originalPosition=authButton?document.createComment('Account control'):null;
- if(authButton)authButton.before(originalPosition);
- const accountActions=document.createElement('div');
- accountActions.className='account-actions';
- accountActions.hidden=true;
- const main=document.querySelector('main');
- if(authButton)main.insertBefore(accountActions,main.querySelector('footer'));
+ const existingAuth=actions.querySelector('#auth-button, #profile-auth, #journal-auth, #evidence-auth');
+ const authButton=existingAuth||document.createElement('button');
+ if(!existingAuth){
+  authButton.type='button';
+  authButton.textContent='Sign out';
+  authButton.addEventListener('click',()=>logOut().catch(()=>alert('Could not sign out. Please try again.')));
+ }
+ const account=document.createElement('span');
+ account.className='header-account';
+ account.append(link,authButton);
+ actions.append(account);
+ const theme=actions.querySelector('#theme-toggle');
+ if(theme)actions.append(theme);
  let unsubscribe;
  onAuthStateChanged(auth,user=>{
   unsubscribe?.();unsubscribe=null;
   link.hidden=!user;
   link.textContent='My profile';
   link.setAttribute('aria-label','My profile');
-  if(authButton){
-   accountActions.hidden=!user;
-   if(user)accountActions.append(authButton);
-   else originalPosition.after(authButton);
-  }
+  authButton.hidden=!user&&!existingAuth;
+  authButton.classList.toggle('header-signout',!!user);
   if(!user||!isOwner(user))return;
   unsubscribe=onSnapshot(doc(db,'users',user.uid,'profile','main'),snapshot=>{
    if(auth.currentUser?.uid!==user.uid)return;
