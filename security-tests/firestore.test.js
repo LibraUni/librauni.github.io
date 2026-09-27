@@ -72,26 +72,28 @@ test('planner adapter round-trips dates and refuses a second-device stale overwr
  const history=await getDoc(doc(db,'users',uid,'plannerHistory','1'));assert.deepEqual(JSON.parse(history.data().payload),data);
 });
 
-test('profile adapter preserves text and photo, requires history and prevents stale overwrites or foreign access',async()=>{
+test('minimal profile saves only current details and rejects extra fields, history and stale writes',async()=>{
  const {loadProfile,saveProfile}=await import('../src/profile-store.js');
  const {emptyProfile}=await import('../src/profile-data.js');
  const assert=(await import('node:assert/strict')).default;
  const uid='profile-test',db=env.authenticatedContext(uid,claims).firestore();
- const p={...emptyProfile(),name:'Test learner',surname:'Example',academic:'Test qualification',work:'Test work',photo:'data:image/jpeg;base64,YWJj'};
+ const p={...emptyProfile(),name:'Test learner',surname:'Example'};
  const ref=doc(db,'users',uid,'profile','main');
- await assertFails(setDoc(ref,{payload:JSON.stringify(p),revision:1,updatedAt:serverTimestamp()}));
  assert.equal((await loadProfile(uid,db)).revision,0);
  await saveProfile(uid,p,0,db);assert.deepEqual((await loadProfile(uid,db)).data,p);
- await saveProfile(uid,{...p,photo:'',name:'Updated'},1,db);
+ await saveProfile(uid,{...p,name:'Updated'},1,db);
  await assert.rejects(saveProfile(uid,p,1,db),/PROFILE_CONFLICT/);
- const latest=await loadProfile(uid,db);assert.equal(latest.data.photo,'');assert.equal(latest.data.name,'Updated');
- const history=doc(db,'users',uid,'profileHistory','1');assert.deepEqual(JSON.parse((await getDoc(history)).data().payload),p);
- await assertFails(setDoc(history,{payload:'{}',revision:1,updatedAt:serverTimestamp()}));
- await assertFails(deleteDoc(ref));
- await assertFails(runTransaction(db,async tx=>{await tx.get(ref);const oversized={payload:'x'.repeat(250001),revision:3,updatedAt:serverTimestamp()};tx.set(ref,oversized);tx.set(doc(db,'users',uid,'profileHistory','3'),oversized);}));
+ assert.equal((await loadProfile(uid,db)).data.name,'Updated');
+ assert.equal((await getDoc(doc(db,'users',uid,'profileHistory','1'))).exists(),false);
+ const write=data=>setDoc(ref,{data,revision:3,updatedAt:serverTimestamp()});
+ for(const extra of [{photo:''},{academic:'No longer collected'},{personalisation:true},{about:'No longer collected'}])await assertFails(write({...p,...extra}));
+ await assertFails(write({...p,name:'x'.repeat(121)}));
+ await assertFails(write({...p,schemaVersion:2}));
+ await assertFails(setDoc(ref,{payload:JSON.stringify(p),revision:3,updatedAt:serverTimestamp()}));
+ await assertFails(setDoc(doc(db,'users',uid,'profileHistory','3'),{data:p,revision:3,updatedAt:serverTimestamp()}));
  for(const other of [env.unauthenticatedContext().firestore(),env.authenticatedContext('not-owner',claims).firestore(),env.authenticatedContext(uid,{firebase:{sign_in_provider:'github.com',identities:{'github.com':['other']}}}).firestore()]){
-  await assertFails(getDoc(doc(other,'users',uid,'profile','main')));await assertFails(getDoc(doc(other,'users',uid,'profileHistory','1')));
-  await assertFails(setDoc(doc(other,'users',uid,'profile','main'),{payload:'{}',revision:3,updatedAt:serverTimestamp()}));
+  await assertFails(getDoc(doc(other,'users',uid,'profile','main')));
+  await assertFails(setDoc(doc(other,'users',uid,'profile','main'),{data:p,revision:3,updatedAt:serverTimestamp()}));
  }
 });
 
@@ -140,21 +142,19 @@ test('evidence snapshots restore exactly, reject stale chains and remain owner-o
  await assertFails(setDoc(doc(db,'users',uid,'evidenceState','main'),{root:p.tree.root,sequence:3,updatedAt:serverTimestamp()}));
 });
 
-test('legacy profile loads without a write and saves surname in a new immutable revision',async()=>{
+test('legacy stored profiles read as blank and cannot be rewritten by an old client',async()=>{
  const {loadProfile,saveProfile}=await import('../src/profile-store.js');
  const {emptyProfile}=await import('../src/profile-data.js');
  const assert=(await import('node:assert/strict')).default;
  const uid='profile-migration',db=env.authenticatedContext(uid,claims).firestore();
- const {surname,...base}=emptyProfile(),legacy={...base,schemaVersion:1,pronouns:'they/them',academic:'Existing background'};
- const ref=doc(db,'users',uid,'profile','main'),history=doc(db,'users',uid,'profileHistory','1');
- const first={payload:JSON.stringify(legacy),revision:1,updatedAt:serverTimestamp()};
- await assertSucceeds(runTransaction(db,async tx=>{await tx.get(ref);tx.set(ref,first);tx.set(history,first);}));
- const loaded=await loadProfile(uid,db);
- assert.equal(loaded.revision,1);assert.equal(loaded.data.surname,'');assert.equal(loaded.data.academic,legacy.academic);
- assert.deepEqual(JSON.parse((await getDoc(ref)).data().payload),legacy);
- await saveProfile(uid,{...loaded.data,surname:'Example'},loaded.revision,db);
- assert.equal((await loadProfile(uid,db)).data.surname,'Example');
- assert.deepEqual(JSON.parse((await getDoc(history)).data().payload),legacy);
+ const ref=doc(db,'users',uid,'profile','main');
+ await env.withSecurityRulesDisabled(async context=>{
+  await setDoc(doc(context.firestore(),'users',uid,'profile','main'),{payload:JSON.stringify({schemaVersion:2,academic:'Retired biography'}),revision:8,updatedAt:serverTimestamp()});
+ });
+ const loaded=await loadProfile(uid,db);assert.deepEqual(loaded.data,emptyProfile());assert.equal(loaded.revision,8);
+ await saveProfile(uid,loaded.data,8,db);
+ const saved=(await getDoc(ref)).data();assert.ok(!('payload' in saved));assert.deepEqual(saved.data,emptyProfile());
+ await assertFails(setDoc(ref,{payload:'{}',revision:10,updatedAt:serverTimestamp()}));
 });
 
 test('tutor catalogue paginates and restores private originals; browser writes and foreign reads are denied',async()=>{

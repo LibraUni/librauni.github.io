@@ -238,3 +238,16 @@ Learning tree titles link directly to available child learning pages; disclosure
 All hierarchy navigation must link directly to child learning pages, never to parent-page fragments or programme substitutes. Generate labelled outline pages for defined unpublished children; do not invent lessons or sections. Only section links within a lesson use anchors. Apply to all modules through the shared hierarchy renderer.
 
 Hierarchy pages list their children directly: do not wrap a block page in its own block entry or link its title back to itself. Module lists blocks; block lists units; unit lists lessons.
+
+
+## Profile data minimisation — 27 September 2026
+
+The learner requested deletion of extended profile information from online storage.
+Only optional Preferred name, Surname, Location / time zone and Languages remain in
+the website profile; all four were reset to empty. Profile schema3 is a bounded map,
+current-value only, with no profileHistory writes. Both profile collections are
+excluded from backups and legacy restore. Never upload biography, photos, personal
+background, interests, goals or coaching context to GitHub, Firebase or evidence.
+Local tutoring context may be used selectively when available; it is not guaranteed
+assistant memory and must not be synced. This supersedes earlier profile-history
+and six-file sync instructions. Preserve academic work and learning records.

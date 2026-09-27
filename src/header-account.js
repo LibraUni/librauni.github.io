@@ -1,7 +1,8 @@
 import {auth,db,onAuthStateChanged,isOwner,logOut} from './planner-store.js';
 import {doc,onSnapshot} from 'firebase/firestore';
-import {readProfile} from './profile-data.js';
+import {readProfile,clearLegacyProfileDrafts} from './profile-data.js';
 
+try{clearLegacyProfileDrafts(localStorage);}catch{}
 const actions=document.querySelector('.header-actions');
 if(actions){
  const link=document.createElement('a');
@@ -33,7 +34,7 @@ if(actions){
   unsubscribe=onSnapshot(doc(db,'users',user.uid,'profile','main'),snapshot=>{
    if(auth.currentUser?.uid!==user.uid)return;
    try{
-    const name=snapshot.exists()?readProfile(JSON.parse(snapshot.data().payload)).name.trim():'';
+    const name=snapshot.exists()?readProfile(snapshot.data().data??JSON.parse(snapshot.data().payload)).name.trim():'';
     link.textContent=name||'My profile';
     link.setAttribute('aria-label',name?name+' · My profile':'My profile');
    }catch{

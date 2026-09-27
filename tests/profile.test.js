@@ -1,27 +1,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {emptyProfile,validateProfile,tutorBrief,readProfile} from '../src/profile-data.js';
-test('profile allows optional fields, bounds data and rejects active image content',()=>{
+import {fields,emptyProfile,validateProfile,readProfile,clearLegacyProfileDrafts} from '../src/profile-data.js';
+test('profile accepts only the four optional bounded fields',()=>{
  const p=emptyProfile();assert.equal(validateProfile(p),p);
- for(const bad of [{...p,name:'x'.repeat(121)},{...p,photo:'https://example.org/tracker'},{...p,photo:'data:image/svg+xml,<svg/>'},{...p,personalisation:'yes'},{...p,extra:'unknown'}])assert.throws(()=>validateProfile(bad));
- assert.equal(validateProfile({...p,photo:'data:image/jpeg;base64,YWJj'}).photo,'data:image/jpeg;base64,YWJj');
+ assert.deepEqual(Object.keys(fields),['name','surname','location','languages']);
+ for(const bad of [{...p,name:'x'.repeat(121)},{...p,surname:'x'.repeat(121)},{...p,photo:''},{...p,academic:''},{...p,personalisation:true},{...p,extra:'unknown'}])assert.throws(()=>validateProfile(bad));
+ assert.equal(validateProfile({...p,surname:'Example'}).surname,'Example');
 });
-test('tutor summary contains supplied context and preference but excludes photograph',()=>{
- const p={...emptyProfile(),academic:'Example qualification',photo:'data:image/jpeg;base64,YWJj',personalisation:false};
- const text=tutorBrief(p);assert.ok(text.includes(p.academic));assert.ok(text.includes('Do not use'));assert.ok(!text.includes(p.photo));
+test('retired profiles never reintroduce deleted information',()=>{
+ for(const schemaVersion of [1,2]){
+  assert.deepEqual(readProfile({schemaVersion,name:'Old name',about:'Deleted biography',photo:'old photo'}),emptyProfile());
+ }
+ assert.throws(()=>readProfile({schemaVersion:99}));
 });
-
-test('legacy profiles and recovered drafts keep context while removing pronouns',()=>{
- const {surname,...base}=emptyProfile();
- const legacy={...base,schemaVersion:1,name:'Test learner',pronouns:'they/them',academic:'Existing background'};
- const migrated=readProfile(legacy);
- assert.equal(migrated.surname,'');assert.equal(migrated.academic,legacy.academic);
- assert.equal(migrated.schemaVersion,2);assert.ok(!('pronouns' in migrated));
- assert.equal(legacy.pronouns,'they/them');assert.equal(legacy.schemaVersion,1);
- assert.throws(()=>readProfile({...legacy,extra:'unexpected'}));
- assert.throws(()=>readProfile({...legacy,pronouns:42}));
- const current={...migrated,surname:'Example'};
- assert.equal(readProfile(current),current);
- assert.match(tutorBrief(current),/Surname\nExample/);
- assert.throws(()=>validateProfile({...current,surname:'x'.repeat(121)}));
+test('old or invalid browser drafts are purged without removing current drafts or study records',()=>{
+ const values=new Map([['librauni:profile:old',JSON.stringify({data:{schemaVersion:2,academic:'Deleted'}})],['librauni:profile:broken','{'],['librauni:profile:current',JSON.stringify({data:emptyProfile()})],['librauni:note:test','Study note']]);
+ const storage={get length(){return values.size},key:i=>[...values.keys()][i],getItem:k=>values.get(k),removeItem:k=>values.delete(k)};
+ clearLegacyProfileDrafts(storage);
+ assert.deepEqual([...values.keys()],['librauni:profile:current','librauni:note:test']);
 });

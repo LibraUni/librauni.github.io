@@ -58,21 +58,22 @@ service cloud.firestore {
         && getAfter(/databases/$(database)/documents/users/$(uid)/planner/main).data == request.resource.data;
     }
     function profileShape() {
-      return request.resource.data.keys().hasOnly(['payload','revision','updatedAt'])
-        && request.resource.data.payload is string && request.resource.data.payload.size() <= 250000
+      let p = request.resource.data.data;
+      return request.resource.data.keys().hasOnly(['data','revision','updatedAt'])
+        && p is map && p.keys().hasOnly(['schemaVersion','name','surname','location','languages'])
+        && p.schemaVersion == 3
+        && p.name is string && p.name.size() <= 120
+        && p.surname is string && p.surname.size() <= 120
+        && p.location is string && p.location.size() <= 160
+        && p.languages is string && p.languages.size() <= 300
         && request.resource.data.revision is int && request.resource.data.revision > 0
         && request.resource.data.updatedAt == request.time;
     }
     match /users/{uid}/profile/main {
-      allow create: if owner(uid) && profileShape() && request.resource.data.revision == 1
-        && getAfter(/databases/$(database)/documents/users/$(uid)/profileHistory/1).data == request.resource.data;
-      allow update: if owner(uid) && profileShape() && request.resource.data.revision == resource.data.revision + 1
-        && getAfter(/databases/$(database)/documents/users/$(uid)/profileHistory/$(string(request.resource.data.revision))).data == request.resource.data;
+      allow create: if owner(uid) && profileShape() && request.resource.data.revision == 1;
+      allow update: if owner(uid) && profileShape() && request.resource.data.revision == resource.data.revision + 1;
     }
-    match /users/{uid}/profileHistory/{version} {
-      allow create: if owner(uid) && profileShape() && version == string(request.resource.data.revision)
-        && getAfter(/databases/$(database)/documents/users/$(uid)/profile/main).data == request.resource.data;
-    }
+    // Retired profileHistory accepts no client writes.
     match /users/{uid}/journal/{entry} {
       allow create: if owner(uid)
         && request.resource.data.keys().hasOnly(['schemaVersion','category','title','body','area','evidence','nextSteps','source','occurredAt','corrects','recordedAt'])
