@@ -224,3 +224,8 @@ Learning Materials and stage/preparation indexes stop at clickable module names.
 ## Completion control placement — 27 September 2026
 
 Teaching-page headings and lesson contents have no checkboxes. Each teaching section ends with “Mark section as read” followed by its checkbox. Module materials trees retain bare trailing title checkboxes. In the planner study sequence, put a bare checkbox immediately after each unit title inside its summary; remove the old bottom “Mark unit studied” control. Checkbox clicks must not toggle the disclosure. Private completion semantics and availability gates remain unchanged.
+
+
+## Lesson reading navigation — 27 September 2026
+
+Use a sticky left section navigator on lesson pages instead of the expandable lesson-contents box and its expand/collapse buttons. Section links scroll to their destination and highlight the current section as the reader scrolls. Use a compact sticky disclosure on small screens, keyboard-accessible links, reduced-motion support and hide the rail in print. Reading position is navigation only: never infer completion or create academic records from scrolling. Reuse this pattern for future lessons.
