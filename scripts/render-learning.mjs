@@ -1,3 +1,5 @@
+import {block1Sections} from '../curriculum/m100-block1-sections.js';
+import {block1Assessments} from '../curriculum/m100-block1-assessments.js';
 import {a101 as a101Units} from '../curriculum/a101.js';
 import {p101Units} from '../curriculum/p101-units.js';
 import {m102Units} from '../curriculum/m102-units.js';
@@ -75,6 +77,15 @@ export function renderLearning({root,shell,link,e}) {
     for(const l of lessons){const lp=up+l.id.split('-').at(-1).toLowerCase()+'/';if(lp!==lessonPath)addPage(lp,l.title,up,[],'Lesson sections',l.purpose);}
    }
   }
+ }
+ const designPath=base+'b01/design/';
+ const allPlans=[{id:'U01-L01',unit:'U01',title:block1Lessons.lessons[0].title,minutes:240,sections:openingSections.sections},...block1Sections.lessons];
+ const sectionPlan=s=>`<section class="unit-card" id="${s.id}"><p class="eyebrow">${e(s.id)} · ${s.minutes} MINUTES · BLUEPRINT</p><h3>${e(s.title)}</h3><p>${e(s.scope)}</p><dl>${[['Practice / assignment',s.activity||s.practice],['Expected evidence',s.deliverable||'Explained working and corrections; published formative practice.'],['Feedback',s.feedback],['Visual support',s.visuals],['Handover',s.handover]].map(([k,v])=>`<dt>${k}</dt><dd>${e(v)}</dd>`).join('')}</dl><p class="small">Prerequisites: ${e(s.requires.join(', ')||'Guided orientation')}. Allocation in minutes (explanation / mathematics / Python / application / review): ${s.allocationMinutes.join(' / ')}.</p></section>`;
+ pages.push([designPath,'Block 1 · Complete teaching and assessment blueprint',[link(base,'M100'),link(base+'b01/','Block 1'),'Design'],intro('Block 1: the complete route','Four units, 19 lessons, section plans and assessment specifications.')+`<p>80 unit hours, including 14 Python hours and iCMA 41. TMA 01 adds its existing six hours. These are plans, not newly released teaching or learner records. Lesson 1 remains the only complete published lesson. All other sections require answer/code verification, accessible figures, workload review and lesson integration before release.</p><p>Each practice task is formative unless labelled iCMA or TMA. Practice evidence may be brought to a tutorial; it is not an extra formal submission. Optional targeted backup replaces comparable practice where appropriate; extra remediation is recorded honestly. Existing personal calendar dates are unchanged.</p>`+`<h2>Units and workload</h2><ul>${m100.units.slice(0,4).map(u=>`<li>${link(unitPath(u.id),u.id+' · '+u.title)} · ${u.hours} hours · ${allPlans.filter(l=>l.unit===u.id).length} lessons</li>`).join('')}</ul>`+allPlans.map(l=>`<details class="curriculum-branch" id="${l.id}"><summary>${e(l.id+' · '+l.title)} · ${l.minutes/60} hours</summary><div class="branch-body">${l.sections.map(sectionPlan).join('')}</div></details>`).join('')+`<h2>Formal assignments</h2>`+block1Assessments.map(a=>`<section class="unit-card" id="${a.id}"><h3>${e(a.title)}</h3><p>${e(a.status)}. Baseline deadline: week ${a.week}; your personal planner controls actual dates.</p><p>${e(a.includedIn)}.</p><p>${e(a.format)}</p>${a.parts.map(([name,marks,topic,evidence,source])=>`<h4>${e(name+' · '+topic+' · '+marks+' marks')}</h4><p>${e(evidence)} Preparation: ${e(source)}.</p>`).join('')}<h4>Submission</h4><p>${e(a.submission)}</p><h4>Marking and feedback</h4><p>${e(a.marking)}</p><h4>Independent work</h4><p>${e(a.independence)}</p></section>`).join('')]);
+ for(const page of pages){
+  if(page[0]===base+'b01/')page[3]+=`<p>${link(designPath,'Complete section and assignment blueprint')}</p>`;
+  const plan=block1Sections.lessons.find(l=>lessonUrl(block1Lessons.lessons.find(x=>x.id===l.id))===page[0]);
+  if(plan){page[3]+=`<h2>Planned sections</h2><p>These section specifications guide future authoring. Teaching and practice questions are not yet released.</p>`+plan.sections.map(sectionPlan).join('');extraRails.set(page[0],{title:'Planned sections',items:plan.sections.map(s=>({title:s.title,href:'#'+s.id})),back:unitPath(plan.unit)});}
  }
  for(const [path,title,crumb,body] of pages){
   let learningBody=body;

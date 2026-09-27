@@ -266,3 +266,8 @@ Keep the current-only save model and existing backup exclusions. Do not alter
 past records or repository history. This supersedes the earlier prohibition on
 student-entered extended profile information; local tutoring records still must
 not be automatically uploaded.
+
+
+## M100 Block 1 complete detailed blueprint — 27 September 2026
+
+All four units and 19 lessons retain their approved scope; remaining lesson section plans and iCMA41/TMA01 specifications are now defined in curriculum/m100-block1-sections.js and curriculum/m100-block1-assessments.js. Public /learn/preparation/m100/b01/design/ and lesson outline pages expose the plans. Review docs/m100-block1-section-review.md before authoring. Only U01-L01 is released teaching. Preserve 80h/14h Python, embedded1h iCMA41 and separate6h TMA01. Live questions/rubrics remain to be authored and checked. This design work creates no academic records or completion.
