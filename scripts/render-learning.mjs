@@ -1,3 +1,7 @@
+import {a101Blocks} from '../curriculum/a101-blocks.js';
+import {m102Blocks} from '../curriculum/m102-blocks.js';
+import {p101Blocks} from '../curriculum/p101-blocks.js';
+import {m101Blocks} from '../curriculum/m101-blocks.js';
 import fs from 'node:fs';
 import {m100} from '../curriculum/m100.js';
 import {block1Lessons} from '../curriculum/m100-block1-lessons.js';
@@ -5,6 +9,8 @@ import {openingSections} from '../curriculum/m100-opening-sections.js';
 import {stage1Modules} from '../curriculum/stage1.js';
 export function renderLearning({root,shell,link,e}) {
  const base='/learn/preparation/m100/';
+ const stageBlocks={ 'LU-M101':m101Blocks.blocks,'LU-P101':p101Blocks.blocks,'LU-M102':m102Blocks.blocks,'LU-A101':a101Blocks.blocks };
+
  const unitPath=id=>base+'b01/'+id.toLowerCase()+'/';
  const lessonPath=unitPath('U01')+'l01/';
  const check=id=>`<input type="checkbox" class="study-check" data-study-id="${e(id)}" aria-label="Mark ${e(id)} completed" disabled>`;
@@ -15,10 +21,10 @@ export function renderLearning({root,shell,link,e}) {
  const published=['S01','S02','S03','S04','S05','S06'];
  const sectionId=s=>s.id.split('-').at(-1);
  const pending='<span class="availability">Forthcoming</span>';
- const blockTrees=m100.blocks.map(b=>branch(titled(b.id,b.id+' · '+b.title),b.units.map(id=>{
+ const blockTrees=m100.blocks.map(b=>branch(titled(b.id,b.id+' · '+b.title),(b.id==='B01'?`<p>${link(base+'b01/','Block overview')}</p>`:'')+b.units.map(id=>{
   const u=m100.units.find(u=>u.id===id);
   const ls=block1Lessons.lessons.filter(l=>l.unit===id);
-  return branch(titled(id,id+' · '+u.title),`<p>${e(u.can)}</p>${b.id==='B01'?`<p>${link(unitPath(id),'Unit overview')}</p>`:''}${ls.length?ls.map(l=>branch(titled(l.id,l.title),l.id==='U01-L01'?`<p>${link(lessonPath,'Open lesson')} · All six sections available.</p><ul>${openingSections.sections.map((s,i)=>`<li>${published.includes(sectionId(s))?link(lessonPath+'#'+sectionId(s),s.title):e(s.title)+' · '+pending}${check(s.id)}</li>`).join('')}</ul>`:`<p>${pending} · ${l.hours} planned study hours.</p>`)).join(''):`<p>${pending} · ${link('/programme/bridge/lu-m100/#'+id,'Read the unit blueprint')}</p>`}`);
+  return branch(titled(id,id+' · '+u.title),`<p>${e(u.can)}</p>${b.id==='B01'?`<p>${link(unitPath(id),'Unit overview')}</p>`:''}${ls.length?ls.map(l=>branch(titled(l.id,l.title),l.id==='U01-L01'?`<p>${link(lessonPath,'Open lesson')} · All six sections available.</p><ul>${openingSections.sections.map((s,i)=>`<li>${published.includes(sectionId(s))?link(lessonPath+'#'+sectionId(s),s.title):e(s.title)+' · '+pending}${check(s.id)}</li>`).join('')}</ul>`:`<p>${pending} · ${l.hours} planned study hours.</p>`)).join(''):`<p>${pending} · ${link('/programme/bridge/lu-m100/#'+id,'Read the unit blueprint')}</p>`}`,id);
  }).join(''),b.id));
  const unitBranches=blockTrees.join('');
  const home=m=>'/learn/physics/stage-1/'+m.code.slice(3).toLowerCase()+'/';
@@ -44,9 +50,16 @@ export function renderLearning({root,shell,link,e}) {
    learningBody=learningBody.replace(/<input[^>]*data-study-id="[^"]*"[^>]*>/g,'');
    for(const id of published)learningBody=learningBody.replace(new RegExp('(<section id="'+id+'"[\\s\\S]*?)(</section>)'),'$1<p class="section-read"><label>Mark section as read'+check('U01-L01-'+id)+'</label></p>$2');
   }
-  if(path===lessonPath)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary>In this lesson <span data-current-section>01 / 06</span></summary><nav aria-label="Lesson sections"><p class="eyebrow">M100 · UNIT 1 · LESSON 1</p><h2>In this lesson</h2><ol>${openingSections.sections.map((s,i)=>`<li><a href="#${sectionId(s)}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(s.title)}</span></a></li>`).join('')}</ol><a class="lesson-back" href="${unitPath('U01')}">← Unit overview</a></nav></details></aside><article class="lesson-reading">${learningBody}</article></div>`;
+  let railTitle,railItems,back;
+  if(path===lessonPath){railTitle='In this lesson';railItems=openingSections.sections.map(s=>({title:s.title,href:'#'+sectionId(s)}));back=unitPath('U01');}
+  else if(path===base){railTitle='Module blocks';railItems=m100.blocks.map(b=>({title:b.title,href:'#'+b.id}));back='/learn/preparation/';}
+  else if(path===base+'b01/'){railTitle='Block units';railItems=m100.blocks[0].units.map(id=>({title:m100.units.find(u=>u.id===id).title,href:unitPath(id)}));back=base;}
+  else if(m100.units.slice(0,4).some(u=>path===unitPath(u.id))){const u=m100.units.find(u=>path===unitPath(u.id));railTitle='Unit lessons';railItems=block1Lessons.lessons.filter(l=>l.unit===u.id).map(l=>({title:l.title,href:'#'+l.id}));back=base+'b01/';}
+  else {const m=stage1Modules.find(m=>home(m)===path);if(m){railTitle='Module blocks';railItems=stageBlocks[m.code].map(b=>({title:b.title,href:m.path+'#'+b.id}));back='/learn/physics/stage-1/';}}
+  if(railItems)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary>${railTitle}<span data-current-section></span></summary><nav aria-label="${railTitle}"><h2>${railTitle}</h2><ol>${railItems.map((item,i)=>`<li><a href="${item.href}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(item.title)}</span></a></li>`).join('')}</ol><a class="lesson-back" href="${back}">← ${path===lessonPath?'Unit overview':'Up one level'}</a></nav></details></aside><article class="lesson-reading">${learningBody}</article></div>`;
+
   let html=shell(title,crumb,learningBody).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script><script type="module" src="/src/study-ui.js"></script></body>');
-  if(path===lessonPath)html=html.replace('class="programme-page"','class="programme-page lesson-page"').replace('</body>','<script type="module" src="/src/lesson-navigation.js"></script></body>');
+  if(railItems)html=html.replace('class="programme-page"','class="programme-page lesson-page"').replace('</body>','<script type="module" src="/src/lesson-navigation.js"></script></body>');
   if(path===base)html=html.replace('</body>','<script type="module" src="/src/planner.js"></script></body>');
   fs.mkdirSync(root+path.slice(1),{recursive:true});fs.writeFileSync(root+path.slice(1)+'index.html',html);
  }

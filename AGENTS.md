@@ -229,3 +229,6 @@ Teaching-page headings and lesson contents have no checkboxes. Each teaching sec
 ## Lesson reading navigation — 27 September 2026
 
 Use a sticky left section navigator on lesson pages instead of the expandable lesson-contents box and its expand/collapse buttons. Section links scroll to their destination and highlight the current section as the reader scrolls. Use a compact sticky disclosure on small screens, keyboard-accessible links, reduced-motion support and hide the rail in print. Reading position is navigation only: never infer completion or create academic records from scrolling. Reuse this pattern for future lessons.
+
+
+Module and descendant learning pages use the same wide sticky sidebar: module blocks, block units, unit lessons, lesson sections. Link published child pages or existing outlines; never invent available teaching. Keep future pages consistent with this hierarchy.

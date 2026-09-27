@@ -1,7 +1,7 @@
 // Reading position is navigation only; it never writes completion or learner records.
 const panel=document.querySelector('.lesson-navigation');
 const list=panel.querySelector('ol');
-const links=[...list.querySelectorAll('a')];
+const links=[...list.querySelectorAll('a')].filter(a=>a.pathname===location.pathname&&a.hash&&document.getElementById(a.hash.slice(1)));
 const sections=links.map(a=>document.getElementById(a.hash.slice(1)));
 const compact=matchMedia('(max-width: 900px)');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
@@ -10,6 +10,7 @@ function responsive(){panel.open=!compact.matches;}
 responsive();compact.addEventListener('change',responsive);
 function update(){
  scheduled=false;
+ if(!links.length)return;
  const line=compact.matches?100:160;
  let index=0;
  sections.forEach((section,i)=>{if(section.getBoundingClientRect().top<=line)index=i;});
@@ -24,9 +25,10 @@ function queue(){if(!scheduled){scheduled=true;requestAnimationFrame(update);}}
 links.forEach(a=>a.addEventListener('click',event=>{
  event.preventDefault();const target=document.getElementById(a.hash.slice(1));
  if(compact.matches)panel.open=false;
+ for(let p=target;p;p=p.parentElement)if(p.matches('details.curriculum-branch'))p.open=true;
  history.pushState(null,'',a.hash);
  target.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'});
- const heading=target.querySelector('h2');heading.tabIndex=-1;heading.focus({preventScroll:true});
+ const heading=target.querySelector('h2,summary');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
  queue();
 }));
 addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);addEventListener('hashchange',queue);
