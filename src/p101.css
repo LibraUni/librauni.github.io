@@ -12,3 +12,14 @@
 
 /* Lesson introductions must not inherit the site banner's flex layout. */
 .p101-reading #lesson-opening{display:block;min-height:0;padding:0;margin:0;border:0;background:transparent;color:inherit;text-align:left}
+
+/* Keep every published image beside its related prose, with captions attached. */
+.p101-reading .image-passage{display:flow-root}
+.p101-reading figure.reading-float{float:right;display:block;width:43%;max-width:410px;margin:4px 0 22px 28px}
+.p101-reading figure.reading-float.science-photo{width:34%;max-width:310px}
+.p101-reading .reading-float figcaption{margin:12px 0 0;padding:0;border:0}
+.p101-reading .reading-float img{width:100%;height:auto;max-height:none;object-fit:contain}
+.p101-reading .reading-float svg text{font-size:25px}
+.p101-reading #p101-u01-figure-03.reading-float svg text{font-size:28px}
+@media(max-width:1100px){.p101-reading figure.reading-float,.p101-reading figure.reading-float.science-photo{float:none;width:100%;max-width:410px;margin:20px auto}.p101-reading figure.reading-float.science-photo{max-width:310px}}
+@media print{.p101-reading figure.reading-float,.p101-reading figure.reading-float.science-photo{float:none;width:100%;margin:18px auto}}
