@@ -34,3 +34,7 @@ links.forEach(a=>a.addEventListener('click',event=>{
 addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);addEventListener('hashchange',queue);
 new ResizeObserver(queue).observe(document.querySelector('.lesson-reading'));
 update();
+
+// Keep the current page visible within the continuous navigation tree.
+const pageLink=panel.querySelector('[aria-current="page"]');
+if(pageLink&&list.contains(pageLink))list.scrollTop=Math.max(0,pageLink.offsetTop-list.offsetTop-list.clientHeight/3);

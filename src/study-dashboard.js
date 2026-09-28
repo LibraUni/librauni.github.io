@@ -1,6 +1,6 @@
 import {schedule,addDays} from './schedule.js';
 export function studyOverview(modules,plans,now){
- const enrolled=modules.filter(m=>plans[m.code]?.status==='enrolled');
+ const enrolled=modules.filter(m=>!m.archived&&plans[m.code]?.status==='enrolled');
  const next=enrolled.map(m=>{
   const rows=schedule(m,plans[m.code]),units=rows.filter(r=>r.type==='unit').sort((a,b)=>a.start.localeCompare(b.start)||a.id.localeCompare(b.id));
   const pending=units.filter(r=>!r.completed),late=pending.find(r=>r.end<now),row=late||pending[0];

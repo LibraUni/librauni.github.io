@@ -1,0 +1,9 @@
+# Prototype retirement and degree navigation — 28 September 2026
+
+M100 is retired from the student catalogue. Its original teaching and assessment questions are preserved at `/programme/archive/m100/`, reachable from Programme blueprint. Archive pages provide no enrolment, completion or submission controls. The previous `/learn/preparation/` tree is removed from the build. Historical curriculum data and stable identifiers remain available for reference; M100 is not enrollable or included in active student calendars.
+
+Learning materials now lists all 16 degree modules by stage without collapsed catalogue branches. Stage 3 identifies its six specialist options. Later-stage pages expose existing module names and provisional status, without inventing lessons, units or timetables. One degree sidebar remains across the catalogue, stages, modules, blocks, units, lessons and sections. It expands the active ancestor path, retains sibling and other-stage navigation, marks the current page and tracks lesson sections without recording study. It becomes a keyboard-operable disclosure on small screens and is hidden in print.
+
+Verification: generated-page checks cover every degree page for absence of M100/preparatory references and valid sidebar destinations. Archive checks exclude study and submission scripts. Existing content, schedule, profile and evidence tests remain. Desktop and 390-pixel browser checks confirm readable layout, no horizontal overflow, keyboard menu operation and module continuity. Published M101 prose and media are unchanged.
+
+A one-time client migration discards retired study drafts while preserving profile/theme preferences and subsequent drafts. Private reset execution and inventories are kept outside this public repository. This change does not create academic activity or attainment.

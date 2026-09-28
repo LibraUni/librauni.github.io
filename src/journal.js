@@ -1,3 +1,4 @@
+import './study-reset.js';
 import {auth,onAuthStateChanged,signIn,logOut,isOwner} from './planner-store.js';
 import {loadRecords,appendEntries} from './journal-store.js';
 import {categories,validateEntry,transcriptParts,timeline,filterEntries,readableJournal} from './journal-data.js';

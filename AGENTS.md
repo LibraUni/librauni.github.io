@@ -296,3 +296,8 @@ Link the PDF from the unit home and closing review, with the corresponding table
 
 ## Student-facing simplicity
 Keep teaching materials, upcoming work and student navigation prominent. Blueprints, construction policies and authoring processes are secondary reference information, not primary student flows or sidebar destinations. On the study desk, the programme blueprint lives in the footer; omit the private-notebook and Learning Journey panels and their navigation links. Removing these panels must preserve existing private saved records and export/recovery access. Apply this principle to future degree interfaces.
+
+
+## M100 retired and study reset — 28 September 2026
+
+The learner explicitly requested a blank study record and retirement of M100 as a test. This supersedes older M100 enrolment and record-preservation instructions for this reset. No active enrolment or prior study/attainment is to be inferred. Do not restore pre-reset snapshots or study records. M100 is a read-only prototype archive under /programme/archive/m100/, linked from Programme blueprint, and must not appear anywhere under /learn/. The Learning materials catalogue is an always-expanded list of all degree modules by stage. Use a continuous degree sidebar through modules, blocks, units, lessons and sections. Later-stage modules remain provisional outlines; no teaching or timetables are invented.

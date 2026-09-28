@@ -19,11 +19,12 @@ test('every generated module descendant has complete ancestor breadcrumbs and di
   assert.ok(!crumb.includes('Parent page'),route);
   if(parts.length){const last=parts.at(-1);assert.ok(crumb.includes(`>${{b:'Block',u:'Unit',l:'Lesson'}[last[0]]} ${Number(last.slice(1))}</span>`),route);}
   const sidebar=html.match(/<aside class="lesson-sidebar">(.*?)<\/aside>/s)?.[1];assert.ok(sidebar,route);
-  const items=sidebar.match(/<ol>(.*?)<\/ol>/s)?.[1]||'';
-  for(const [,href] of items.matchAll(/href="([^"]+)"/g)){
-   if(parts.at(-1)?.startsWith('l'))assert.ok(href.startsWith('#')&&html.includes(`id="${href.slice(1)}"`),route);
-   else {assert.ok(href.startsWith(route)&&href!==route&&!href.includes('#'),`${route} child ${href}`);assert.ok(fs.existsSync(new URL('.'+href+'index.html',root)),href);}
+  assert.ok(sidebar.includes('Learning materials'),route);
+  for(const [,href] of sidebar.matchAll(/href="([^"]+)"/g)){
+   if(href.startsWith('#'))assert.ok(html.includes(`id="${href.slice(1)}"`),route);
+   else assert.ok(fs.existsSync(new URL('.'+href+'index.html',root)),href);
   }
+  assert.ok(sidebar.includes('/learn/physics/stage-3/p303/'),route);
   checked++;
  }
  assert.ok(checked>50);

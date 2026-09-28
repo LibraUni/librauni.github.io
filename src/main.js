@@ -1,3 +1,4 @@
+import './study-reset.js';
 import {initializeApp} from 'firebase/app';
 import {getAuth, GithubAuthProvider, signInWithPopup, signOut, onAuthStateChanged} from 'firebase/auth';
 import {getFirestore, getDocsFromServer, collection} from 'firebase/firestore';

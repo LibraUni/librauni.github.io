@@ -55,7 +55,8 @@ test('private planner requires bounded versioned writes with immutable history',
 test('planner adapter round-trips dates and refuses a second-device stale overwrite',async()=>{
  const {loadPlanner,savePlanner}=await import('../src/planner-store.js');
  const {newPlan,shiftRemaining,combined}=await import('../src/schedule.js');
- const {modules}=await import('../curriculum/schedules.js');
+ const {modules:registered}=await import('../curriculum/schedules.js');
+ const modules=registered.map(m=>({...m,enrollable:true,archived:false})); // Synthetic active timetable fixture.
  const assert=(await import('node:assert/strict')).default;
  const uid='planner-roundtrip',db=env.authenticatedContext(uid,claims).firestore();
  const empty=await loadPlanner(uid,db);assert.equal(empty.revision,0);

@@ -5,7 +5,7 @@ import {newPlan,validatePlan} from '../src/schedule.js';
 import {studied,setStudied,ready} from '../src/study-tree.js';
 import {studyOverview} from '../src/study-dashboard.js';
 import {timeline} from '../src/journal-data.js';
-const m=modules[0],plan=()=>({...newPlan(m,'2026-10-01'),status:'enrolled'});
+const m={...modules[0],enrollable:true,archived:false},plan=()=>({...newPlan(m,'2026-10-01'),status:'enrolled'});
 test('all sections complete a lesson; unmarked peers prevent unit/block completion; clearing reverses rollup',()=>{
  let p=setStudied(plan(),'U01-L01',true);assert.equal(p.studied.length,6);assert.ok(studied('U01-L01',p));assert.equal(studied('U01',p),false);assert.equal(ready('B01'),true);assert.equal(ready('B02'),true);assert.deepEqual(p.completed,[]);validatePlan(m,p);
  p=setStudied(p,'U01-L01-S03',false);assert.equal(studied('U01-L01',p),false);assert.equal(p.studied.length,5);
