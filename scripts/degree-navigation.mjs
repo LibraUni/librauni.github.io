@@ -34,5 +34,5 @@ export function degreeSidebar(path,hierarchy,rails,e){
    return '<li>'+anchor(bp,'Block '+Number(b.id.slice(1))+' · '+b.title)+nested+'</li>';
   }).join('')+'</ol>';
  }
- return `<details class="lesson-navigation degree-navigation" open><summary>Learning materials<span data-current-section></span></summary><nav aria-label="Learning materials"><h2>${anchor('/learn/','Learning materials')}</h2><ol class="degree-navigation-tree">${[1,2,3].map(n=>`<li class="navigation-stage">${anchor('/learn/physics/stage-'+n+'/','Stage '+n)}<ol>${degreeModules.filter(m=>m.stage===n).map(m=>'<li>'+anchor(m.href,m.code+' · '+m.title)+children(m)+'</li>').join('')}</ol></li>`).join('')}</ol></nav></details>`;
+ return `<details class="lesson-navigation degree-navigation" open><summary><span class="sidebar-toggle-label"><span class="sidebar-show">Show sidebar</span><span class="sidebar-hide">Hide sidebar</span></span><span data-current-section></span></summary><nav aria-label="Learning materials"><h2>${anchor('/learn/','Learning materials')}</h2><ol class="degree-navigation-tree">${[1,2,3].map(n=>`<li class="navigation-stage">${anchor('/learn/physics/stage-'+n+'/','Stage '+n)}<ol>${degreeModules.filter(m=>m.stage===n).map(m=>'<li>'+anchor(m.href,m.code+' · '+m.title)+children(m)+'</li>').join('')}</ol></li>`).join('')}</ol></nav></details>`;
 }

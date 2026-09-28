@@ -152,3 +152,8 @@
 @media(max-width:650px){.teaching-reading .scale-panels{grid-template-columns:1fr}.teaching-reading .scale-panels svg{max-height:240px}.teaching-reading .vector-lab{padding:10px}}
 @media print{.teaching-reading .vector-lab fieldset{display:none}}
 .teaching-reading .scale-panels svg .scale-text{font-size:24px}
+/* A wider, centred reading area when desktop navigation is hidden. */
+@media(min-width:901px){
+ .lesson-layout:has(>.lesson-sidebar>.lesson-navigation:not([open])) .teaching-reading{max-width:1200px}
+ .lesson-layout:has(>.lesson-sidebar>.lesson-navigation:not([open])) .teaching-reading :is(.chapter>p,.important,.example,.activity,.exercise,.exercise-section>p,.vector-lab,details p){max-width:none}
+}

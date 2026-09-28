@@ -6,7 +6,20 @@ const sections=links.map(a=>document.getElementById(a.hash.slice(1)));
 const compact=matchMedia('(max-width: 900px)');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let current=-1,scheduled=false;
-function responsive(){panel.open=!compact.matches;}
+// Remember only the display preference for this browser session, separately
+// for wide and narrow screens. This is unrelated to study progress.
+const preferenceKey=()=>compact.matches?'librauni-sidebar-compact':'librauni-sidebar-wide';
+function responsive(){
+ let saved=null;
+ try{saved=sessionStorage.getItem(preferenceKey());}catch{}
+ panel.open=saved===null?!compact.matches:saved==='open';
+}
+panel.querySelector('summary').addEventListener('click',()=>{
+ try{sessionStorage.setItem(preferenceKey(),panel.open?'closed':'open');}catch{}
+});
+panel.addEventListener('toggle',()=>{
+ try{sessionStorage.setItem(preferenceKey(),panel.open?'open':'closed');}catch{}
+});
 responsive();compact.addEventListener('change',responsive);
 function update(){
  scheduled=false;
