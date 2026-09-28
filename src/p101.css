@@ -9,3 +9,6 @@
 @media(max-width:650px){.p101-reading svg text{font-size:27px}.p101-reading #p101-u01-figure-03 svg text{font-size:30px}.p101-reading #p101-u01-figure-01 svg text{font-size:25px}}
 
 .p101-reading .science-photo img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;background:#fff}.p101-reading .science-photo{margin:32px 0}.p101-reading .media-credit{display:block;margin-top:8px;font-size:.85em}.p101-reading .science-photo figcaption{line-height:1.65}
+
+/* Lesson introductions must not inherit the site banner's flex layout. */
+.p101-reading #lesson-opening{display:block;min-height:0;padding:0;margin:0;border:0;background:transparent;color:inherit;text-align:left}
