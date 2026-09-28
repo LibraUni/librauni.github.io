@@ -138,7 +138,7 @@ export function renderLearning({root,shell,link,e}) {
 
   let html=shell(title,crumb,learningBody).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script><script type="module" src="/src/study-ui.js"></script></body>');
   if(railItems||path.startsWith('/learn/'))html=html.replace('class="programme-page"','class="programme-page lesson-page"').replace('</body>','<script type="module" src="/src/lesson-navigation.js"></script></body>');
-  if(m101TeachingPaths.includes(path)||p101TeachingPaths.includes(path))html=html.replace('</head>','<link rel="stylesheet" href="/src/teaching.css"></head>').replace('<script type="module" src="/src/study-ui.js"></script>','');
+  if(m101TeachingPaths.includes(path)||p101TeachingPaths.includes(path))html=html.replace('</body>','<script type="module" src="/src/teaching-code.js"></script></body>').replace('</head>','<link rel="stylesheet" href="/src/teaching.css"></head>').replace('<script type="module" src="/src/study-ui.js"></script>','');
   if(path==='/learn/physics/stage-1/m101/b01/u01/l02/')html=html.replace('</body>','<script type="module" src="/src/m101-vector-lab.js"></script></body>');
   if(path==='/learn/physics/stage-1/m101/b01/u01/l01/')html=html.replace('</body>','<script src="/m101-legacy-links.js"></script></body>');
   if(path.startsWith('/learn/physics/stage-1/p101/'))html=html.replace('<script type="module" src="/src/study-ui.js"></script>','').replace('</head>','<link rel="stylesheet" href="/src/p101.css"></head>');

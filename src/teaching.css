@@ -157,3 +157,9 @@
  .lesson-layout:has(>.lesson-sidebar>.lesson-navigation:not([open])) .teaching-reading{max-width:1200px}
  .lesson-layout:has(>.lesson-sidebar>.lesson-navigation:not([open])) .teaching-reading :is(.chapter>p,.important,.example,.activity,.exercise,.exercise-section>p,.vector-lab,details p){max-width:none}
 }
+
+.teaching-reading .code-copy-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;margin:18px 0 6px;font:14px/1.5 system-ui}
+.teaching-reading .code-copy-controls button{font:inherit;color:inherit;background:transparent;border:1px solid currentColor;border-radius:5px;padding:7px 12px;cursor:pointer;min-height:36px}
+.teaching-reading .code-copy-controls button:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.teaching-reading .code-copy-controls + pre{margin-top:6px}
+@media print{.teaching-reading .code-copy-controls{display:none}}
