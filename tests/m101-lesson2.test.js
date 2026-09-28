@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const base='learn/physics/stage-1/m101/b01/u01/';
+test('Lesson 2 is integrated as complete teaching, with sequential figures and practice',()=>{
+ const html=read(base+'l02/index.html');
+ assert.doesNotMatch(html,/Teaching materials forthcoming|__\w+__|data-study-id|src="\/src\/study-ui.js"/);
+ for(let i=1;i<=7;i++)assert.ok(html.includes(`id="M101-U01-L02-S0${i}"`));
+ for(let i=10;i<=16;i++)assert.ok(html.includes(`id="m101-u01-fig-${i}"`));
+ assert.equal((html.match(/class="activity"/g)||[]).length,9);
+ assert.equal((html.match(/class="example"/g)||[]).length,7);
+ assert.doesNotMatch(html,/class="exercise"/);
+ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(new Set(ids).size,ids.length);
+ for(const [,hash] of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(hash),hash);
+ assert.match(html,/m101-vector-lab.js/);
+ assert.match(html,/Static alternative for Figure 1.16/);
+ assert.match(html,/9 minutes 51 seconds/);
+ assert.match(read(base+'index.html'),/Lessons 1–2 are available. Lessons 3–5/);
+ assert.match(read(base+'l01/index.html'),/Next: Adding and scaling vectors/);
+ assert.match(read(base+'l03/index.html'),/Teaching materials forthcoming/);
+ for(const [,asset] of html.matchAll(/src="(\/teaching\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)));
+});

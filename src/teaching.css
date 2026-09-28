@@ -138,3 +138,17 @@
 .teaching-reading .chapter{display:flow-root}.teaching-reading .margin-figure figcaption b{display:inline;margin:0}.teaching-reading .margin-figure figcaption>b:first-child{display:block;margin-bottom:5px}.teaching-reading table{width:100%;border-collapse:collapse;font:16px/1.55 system-ui;margin:25px 0}.teaching-reading caption{text-align:left;font:13px/1.5 system-ui;color:#53666c;margin-bottom:12px}.teaching-reading td,.teaching-reading th{padding:10px 12px;border-bottom:1px solid #dce3df;text-align:left;vertical-align:top}.teaching-reading th{font-weight:600}.teaching-reading thead{background:#edf2ef}.teaching-reading svg text{font-size:18px}.teaching-reading .references{overflow-wrap:anywhere}.legacy-anchor{display:block;scroll-margin-top:100px}.teaching-reading details p{max-width:70ch}
 [data-theme="dark"] .teaching-reading thead{background:#203e35}[data-theme="dark"] .teaching-reading caption{color:#b9cacd}
 @media(max-width:650px){.teaching-reading table{font-size:13px}.teaching-reading td,.teaching-reading th{padding:9px 7px}.teaching-reading svg text{font-size:20px}.teaching-reading .equation{font-size:18px}}
+/* The lesson's small exploration has an equivalent static table. */
+.teaching-reading .scale-panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.teaching-reading .vector-lab{max-width:760px;border:1px solid #9cbbbf;padding:18px;margin:24px 0}
+.teaching-reading .vector-lab svg{max-height:480px}
+.teaching-reading .vector-lab fieldset{min-width:0;border:0;padding:10px 0 0;margin:0;font:15px/1.5 system-ui}
+.teaching-reading .vector-lab legend{font-weight:600}
+.teaching-reading .vector-lab label{display:block}
+.teaching-reading .vector-lab input{display:block;width:100%;min-height:44px;accent-color:#266d98}
+.teaching-reading .vector-lab button{padding:10px 14px;background:#e7eef8;color:#25333a;border:1px solid #62737a;border-radius:4px;font:inherit;cursor:pointer}
+.teaching-reading .vector-lab :focus-visible{outline:3px solid #266d98;outline-offset:3px}
+.teaching-reading .vector-lab [role=status]{font-weight:600}
+@media(max-width:650px){.teaching-reading .scale-panels{grid-template-columns:1fr}.teaching-reading .scale-panels svg{max-height:240px}.teaching-reading .vector-lab{padding:10px}}
+@media print{.teaching-reading .vector-lab fieldset{display:none}}
+.teaching-reading .scale-panels svg .scale-text{font-size:24px}
