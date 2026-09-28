@@ -158,8 +158,14 @@
  .lesson-layout:has(>.lesson-sidebar>.lesson-navigation:not([open])) .teaching-reading :is(.chapter>p,.important,.example,.activity,.exercise,.exercise-section>p,.vector-lab,details p){max-width:none}
 }
 
-.teaching-reading .code-copy-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;margin:18px 0 6px;font:14px/1.5 system-ui}
-.teaching-reading .code-copy-controls button{font:inherit;color:inherit;background:transparent;border:1px solid currentColor;border-radius:5px;padding:7px 12px;cursor:pointer;min-height:36px}
-.teaching-reading .code-copy-controls button:focus-visible{outline:3px solid currentColor;outline-offset:3px}
-.teaching-reading .code-copy-controls + pre{margin-top:6px}
-@media print{.teaching-reading .code-copy-controls{display:none}}
+.teaching-reading .copyable-code{position:relative;margin:22px 0}
+.teaching-reading .copyable-code pre{margin:0;min-height:60px;box-sizing:border-box;padding-right:66px;border:1px solid #9aa7ad55;border-radius:12px}
+.teaching-reading .code-copy-controls{position:absolute;top:8px;right:8px;font:13px/1.4 system-ui}
+.teaching-reading .code-copy-controls button{display:grid;place-items:center;width:40px;height:40px;padding:8px;border:0;border-radius:6px;color:#647780;background:transparent;cursor:pointer}
+.teaching-reading .code-copy-controls button:hover{background:#82959c22;color:inherit}
+.teaching-reading .code-copy-controls button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.teaching-reading .code-copy-controls button svg{display:block;width:22px;height:22px;margin:0;background:transparent;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.teaching-reading .code-copy-controls [role=status]:not(:empty){position:absolute;right:0;top:44px;width:max-content;max-width:200px;padding:5px 9px;border:1px solid #82959c66;border-radius:5px;background:#fff;color:#253b46;box-shadow:0 2px 5px #0001;z-index:1}
+:root[data-theme=dark] .teaching-reading .code-copy-controls button{color:#bac8cf}
+:root[data-theme=dark] .teaching-reading .code-copy-controls [role=status]:not(:empty){background:#20323c;color:#edf3f6}
+@media print{.teaching-reading .code-copy-controls{display:none}.teaching-reading .copyable-code pre{padding-right:20px}}

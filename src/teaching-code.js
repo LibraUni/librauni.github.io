@@ -5,16 +5,22 @@ document.querySelectorAll('.teaching-reading pre > code.language-python').forEac
   controls.className = 'code-copy-controls';
   const button = document.createElement('button');
   button.type = 'button';
-  button.textContent = 'Copy code';
+  const copyIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="1.5"/><path d="M16 4H4v13"/></svg>';
+  button.innerHTML = copyIcon;
+  button.title = 'Copy code';
   button.setAttribute('aria-label', `Copy Python code block ${index + 1}`);
   const status = document.createElement('span');
   status.setAttribute('role', 'status');
   controls.append(button, status);
-  pre.before(controls);
+  const box = document.createElement('div');
+  box.className = 'copyable-code';
+  pre.before(box);
+  box.append(pre, controls);
   let reset;
   button.addEventListener('click', async () => {
     clearTimeout(reset);
     status.textContent = '';
+    button.innerHTML = copyIcon;
     const text = code.textContent;
     let copied = false;
     try {
@@ -33,7 +39,9 @@ document.querySelectorAll('.teaching-reading pre > code.language-python').forEac
     }
     if (copied) {
       status.textContent = 'Copied';
-      reset = setTimeout(() => { status.textContent = ''; }, 3000);
+      button.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>';
+      button.title = 'Copied';
+      reset = setTimeout(() => { status.textContent = ''; button.innerHTML = copyIcon; button.title = 'Copy code'; }, 3000);
     } else {
       const selection = window.getSelection();
       const range = document.createRange();
