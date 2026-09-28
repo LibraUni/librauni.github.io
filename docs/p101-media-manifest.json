@@ -1,0 +1,67 @@
+{
+  "reviewed": "2026-09-28",
+  "standard": "1.6",
+  "scope": "P101 opening; all four supplied originals inspected; no image alterations",
+  "items": [
+    {
+      "page": "module",
+      "id": "p101-photo-earth",
+      "file": "earth-moon.jpg",
+      "number": "M1",
+      "credit": "NASA",
+      "source": "https://science.nasa.gov/resource/the-earth-moon-system/",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "alt": "Partly illuminated Earth and Moon against black space, with the Moon above and to the left of Earth.",
+      "caption": "Earth and the Moon recorded by Galileo on 16 December 1992. This view combines images through three filters, including infrared, with enhanced colour and contrast. It is an observation made with an instrument, not a scale drawing of the distance between the two bodies.",
+      "purpose": "Connect astronomical observation with interpretation and the limits of an image.",
+      "width": 1571,
+      "height": 1580,
+      "sha256": "11878d03796b760f10c71a7ef07a28134e33632b7c56939252aba3219b676d48"
+    },
+    {
+      "page": "unit",
+      "id": "p101-photo-mass",
+      "file": "mass.jpg",
+      "number": "1.1",
+      "credit": "NIST",
+      "source": "https://www.nist.gov/image/17pml009two-kilograms-stackedcroppedhrjpg",
+      "terms": "https://www.nist.gov/copyrights-disclaimers",
+      "alt": "Two shiny cylindrical masses stacked at the centre of a metal balance apparatus.",
+      "caption": "Two kilogram masses inside the NIST Kibble balance, photographed in 2017 during work to measure Planck\u2019s constant. The metal objects are physical things; their mass is a quantity expressed using a shared unit. Their appearance alone cannot establish that mass.",
+      "purpose": "Make the distinction between object, quantity and unit tangible.",
+      "width": 1635,
+      "height": 1713,
+      "sha256": "29ec2f45e3e345df61dc194c0d462551e2d4009298fe4619189fdbb80702c087"
+    },
+    {
+      "page": "lesson",
+      "id": "p101-photo-clock",
+      "file": "atomic-clock.jpg",
+      "number": "1.3",
+      "credit": "NIST",
+      "source": "https://www.nist.gov/image/f2atomicclockjpg",
+      "terms": "https://www.nist.gov/copyrights-disclaimers",
+      "alt": "Two researchers work beside the tall metal tubes, cables and optical equipment of the NIST-F2 atomic clock.",
+      "caption": "Researchers Steve Jefferts (foreground) and Tom Heavner with the NIST-F2 atomic clock in 2014. A shared definition of time must be realised by a physical apparatus. The complexity here is a useful reminder that writing a time in seconds and measuring it accurately are different achievements.",
+      "purpose": "Connect the SI context with real instruments and people.",
+      "width": 1200,
+      "height": 857,
+      "sha256": "899afef83724de18659409245ddfb6e2a5af95faa460ef41e2bf235dbca8aa07"
+    },
+    {
+      "page": "lesson",
+      "id": "p101-photo-micro",
+      "file": "trichome.png",
+      "number": "1.6",
+      "credit": "NIST",
+      "source": "https://www.nist.gov/image/trichome-leaf",
+      "terms": "https://www.nist.gov/copyrights-disclaimers",
+      "alt": "Branching hairlike structures rise from a leaf surface in a colourised electron microscope image, shown in orange and yellow against purple.",
+      "caption": "Hairlike structures called trichomes on a leaf, imaged with a scanning electron microscope and colourised. There is no scale bar in this supplied image, so its displayed size does not tell us the structures\u2019 physical lengths. Colour here is also part of the presentation, rather than a record of their appearance to the unaided eye.",
+      "purpose": "Explain why a scientific image needs scale information without inventing a measurement.",
+      "width": 1024,
+      "height": 882,
+      "sha256": "1258fdf8c2c66df21da50bb92042f2d76f8a5d95fdee31c34814082de3c4e01c"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+import fs from 'node:fs';
+import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
+export const p101Home='/learn/physics/stage-1/p101/';
+const unit=p101Home+'b01/u01/';
+const lesson=unit+'l01/';
+export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson];
+export function addP101Teaching({root,pages,extraRails,link}){
+ const read=name=>'<div class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
+ const notice='';
+ const nav=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
+ const module=pages.find(p=>p[0]===p101Home);
+ module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
+ const u=pages.find(p=>p[0]===unit);
+ u[3]=notice+read('unit')+nav(link(p101Home,'← Module introduction'),link(lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U01').map((l,i)=>'<p>'+link(unit+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i===0?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>The complete unit exercise set, conclusion and reference resources will follow with Lesson 6.</p></section>';
+ const l=pages.find(p=>p[0]===lesson);l[3]=notice+read('lesson')+nav(link(unit,'← Unit introduction'),link(unit+'l02/','Next lesson plan →'));
+ const fragment=fs.readFileSync(root+'content/p101/lesson.html','utf8');
+ const sections=[...fragment.matchAll(/<section class="chapter" id="(P101-U01-L01-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
+ extraRails.set(lesson,{title:'In this lesson',back:unit,items:[...sections,{href:'#references',title:'Further reading and context'}]});
+ pages.push([p101Home+'orientation/','P101 · Practical orientation',[],notice+read('orientation')+nav(link(p101Home,'← Module introduction'),link(unit,'Unit 1 →'))]);
+ extraRails.set(p101Home+'orientation/',{title:'Practical orientation',back:p101Home,items:[]});
+ const block=pages.find(p=>p[0]===p101Home+'b01/');
+ block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+['U01','U02','U03'].map((id,i)=>'<p>'+link(p101Home+'b01/'+id.toLowerCase()+'/',`Unit ${i+1} · ${['Physical quantities and executable models','Measurement, variation and justified precision','Motion graphs and reproducible data work'][i]}`)+(i===0?' · Introduction and first lesson available':' · Outline')+'</p>').join('');
+ for(const planned of p101Block1Lessons.lessons){
+  const path=p101Home+'b01/'+planned.unit.toLowerCase()+'/'+planned.id.split('-').at(-1).toLowerCase()+'/';
+  if(path===lesson)continue;
+  const page=pages.find(p=>p[0]===path);
+  page[3]=notice+'<p class="eyebrow">P101 · Block 1 · '+planned.unit+' · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned hours, including '+planned.pythonHours+' hours of Python. Teaching is in preparation.</p>'+nav(link(p101Home+'b01/'+planned.unit.toLowerCase()+'/','← Unit outline'),'');
+ }
+}

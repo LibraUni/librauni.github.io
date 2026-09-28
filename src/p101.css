@@ -1,0 +1,11 @@
+.p101-preview-notice{font:13px/1.5 system-ui;color:var(--muted);padding:8px 0;margin:0 0 16px;border-bottom:1px solid var(--line)}
+.p101-reading pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf2ef;color:#25333a;padding:18px;border-left:3px solid #9cbbbf;font:14px/1.7 ui-monospace,monospace}
+.p101-reading code{font-size:.85em;overflow-wrap:anywhere}
+.p101-reading .equation{overflow-wrap:anywhere}
+.p101-reading svg text{font:18px Georgia,serif}
+[data-theme="dark"] .p101-reading pre{background:#20343c;color:#e5ece9}
+@media(max-width:650px){.p101-reading svg text{font-size:19px}.p101-reading pre{font-size:12px;padding:12px}.p101-reading table{font-size:12px}.p101-reading td,.p101-reading th{padding:8px 4px}}
+
+@media(max-width:650px){.p101-reading svg text{font-size:27px}.p101-reading #p101-u01-figure-03 svg text{font-size:30px}.p101-reading #p101-u01-figure-01 svg text{font-size:25px}}
+
+.p101-reading .science-photo img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;background:#fff}.p101-reading .science-photo{margin:32px 0}.p101-reading .media-credit{display:block;margin-top:8px;font-size:.85em}.p101-reading .science-photo figcaption{line-height:1.65}
