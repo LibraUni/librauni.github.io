@@ -17,7 +17,7 @@ for (const lab of document.querySelectorAll('[data-vector-lab]')) {
     scaled.style.display = k === 0 ? 'none' : '';
     const label = lab.querySelector('[data-scaled-label]');
     label.setAttribute('x', 45 + ((2 + x) / 2 + 1) * 39 + 10);
-    label.setAttribute('y', 35 + (6 - (1 + y) / 2) * 39);
+    label.setAttribute('y', 35 + (6 - (1 + y) / 2) * 39 + (k === 0 ? 22 : 0));
     label.textContent = k === 0 ? 'k b = 0' : 'k b';
     const sumLabel = lab.querySelector('[data-resultant-label]');
     sumLabel.setAttribute('x', px + 12);
