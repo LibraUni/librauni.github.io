@@ -1,3 +1,4 @@
+import {addM101Sample,samplePath} from './m101-sample.mjs';
 import {prototypeLessons,prototypePlans} from '../curriculum/m100-prototype.js';
 import {renderAssessments} from './render-block1-assessments.mjs';
 import {teaching} from './render-block1-teaching.mjs';
@@ -99,6 +100,7 @@ export function renderLearning({root,shell,link,e}) {
    extraRails.set(page[0],{title:'In this lesson',items:plan.sections.map(s=>({title:s.title,href:'#'+s.id})),back:unitPath(plan.unit)});
   }
  }
+ addM101Sample({root,pages,extraRails,link});
  // One breadcrumb rule for every module, block, unit and lesson, including future pages.
  for(const page of pages){
   const module=modules.find(m=>page[0].startsWith(m.base));
@@ -130,6 +132,7 @@ export function renderLearning({root,shell,link,e}) {
 
   let html=shell(title,crumb,learningBody).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script><script type="module" src="/src/study-ui.js"></script></body>');
   if(railItems)html=html.replace('class="programme-page"','class="programme-page lesson-page"').replace('</body>','<script type="module" src="/src/lesson-navigation.js"></script></body>');
+  if(path===samplePath)html=html.replace('</head>','<meta name="robots" content="noindex"><link rel="stylesheet" href="/src/teaching-sample.css"></head>').replace('<script type="module" src="/src/study-ui.js"></script>','');
   if(path===base)html=html.replace('</body>','<script type="module" src="/src/planner.js"></script></body>');
   fs.mkdirSync(root+path.slice(1),{recursive:true});fs.writeFileSync(root+path.slice(1)+'index.html',html);
  }
