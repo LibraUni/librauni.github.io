@@ -10,6 +10,7 @@ export default defineConfig({
         ...Object.fromEntries(readdirSync(new URL('./programme/archive/',import.meta.url),{recursive:true}).filter(p=>p.endsWith('index.html')).map((p,i)=>['archive'+i,fileURLToPath(new URL('./programme/archive/'+p,import.meta.url))])),
         stage1Map: fileURLToPath(new URL('./programme/stage-1/map/index.html', import.meta.url)),
         constructionPolicy: fileURLToPath(new URL('./programme/construction-policy/index.html', import.meta.url)),
+        enjoy: fileURLToPath(new URL('./enjoy/index.html', import.meta.url)),
         evidence: fileURLToPath(new URL('./evidence/index.html', import.meta.url)),
         journal: fileURLToPath(new URL('./journal/index.html', import.meta.url)),
         profile: fileURLToPath(new URL('./profile/index.html', import.meta.url)),

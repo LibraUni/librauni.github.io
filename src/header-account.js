@@ -1,3 +1,4 @@
+import {guestWelcomeTarget} from './guest-welcome.js';
 import {auth,db,onAuthStateChanged,isOwner,logOut,signIn} from './planner-store.js';
 import {doc,onSnapshot} from 'firebase/firestore';
 import {readProfile,clearLegacyProfileDrafts} from './profile-data.js';
@@ -62,7 +63,16 @@ if(actions){
  let unsubscribe;
  onAuthStateChanged(auth,user=>{
   unsubscribe?.();unsubscribe=null;
+  const owner=isOwner(user);
+  let session;
+  try{session=sessionStorage;}catch{}
+  const target=guestWelcomeTarget(user,owner,location.pathname,session);
+  if(target){location.replace(target);return;}
+  const guestNotice=document.getElementById('guest-welcome');
+  if(guestNotice)guestNotice.hidden=!user||owner;
   link.hidden=!user;
+  link.href=owner?'/profile/':'/enjoy/';
+  link.textContent=owner?'My profile':'Enjoy the full experience';
   paintProfile(null);
   menu.hidden=!user;
   menu.open=false;
