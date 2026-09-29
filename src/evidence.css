@@ -13,3 +13,6 @@
 .evidence-category-guide{margin:1rem 0}
 .evidence-category-guide dt{font-weight:700;margin-top:1rem}
 .evidence-category-guide dd{margin:.25rem 0 .75rem;line-height:1.6}
+
+/* Native file pickers must fit the available reading width on phones. */
+input[type="file"],#evidence-selection,select{max-width:100%;min-width:0}

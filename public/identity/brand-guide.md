@@ -1,6 +1,6 @@
 # LibraUni — visual identity
 
-23 September 2026. Name, balanced academic/contemporary character, warm light default and optional dark mode confirmed. The black-hole logo with subtly integrated L and U is approved and adopted on the study desk.
+23 September 2026. Name, balanced academic/contemporary character, warm light default and optional dark mode confirmed. The black-hole logo with subtly integrated L and U is approved and adopted on the Student Home.
 
 ## Purpose and character
 
@@ -72,7 +72,7 @@ The specimen is a review artefact, not the full learning application. Its theme 
 
 ## Applications
 
-Study desk: compact wordmark, clear task hierarchy, subdued progress indicators. Lesson pages: spacious light reading surface and precise figures. Module covers: subject title and one relevant diagram, generous margins, restrained colour. Reference sheets: white print background, ink wordmark, compact equation hierarchy, visible version/date. Social/share cards: midnight field, ivory title, small brass symbol, no faux university credentials.
+Student Home: compact wordmark, clear task hierarchy, subdued progress indicators. Lesson pages: spacious light reading surface and precise figures. Module covers: subject title and one relevant diagram, generous margins, restrained colour. Reference sheets: white print background, ink wordmark, compact equation hierarchy, visible version/date. Social/share cards: midnight field, ivory title, small brass symbol, no faux university credentials.
 
 ## Licence marking
 

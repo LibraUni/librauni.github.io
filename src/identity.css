@@ -33,3 +33,17 @@ header .header-signout:hover{filter:none;color:var(--blue)}
 @media(prefers-reduced-motion:reduce){.theme-thumb,.theme-button svg{transition:none}}
 
 .header-profile{gap:.55rem}.header-portrait{width:36px;height:36px;flex-shrink:0;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
+
+.header-account{flex-wrap:wrap;column-gap:.8rem;row-gap:.25rem;max-width:100%}
+.header-account [hidden]{display:none!important}
+
+.header-account-menu{position:relative}
+.header-account-menu>summary{display:flex;align-items:center;gap:.55rem;cursor:pointer;min-height:44px;list-style:none}
+.header-account-menu>summary::-webkit-details-marker{display:none}
+.header-account-menu>summary:focus-visible{outline:3px solid var(--focus,#b79860);outline-offset:4px}
+.header-account-options{position:absolute;right:0;top:100%;z-index:100;display:grid;gap:.4rem;min-width:160px;padding:.8rem 1rem;border:1px solid var(--line);border-radius:4px;background:var(--surface,var(--paper));box-shadow:0 5px 15px #0002}
+.header-account-options .header-profile{font-size:.9rem;font-weight:400}
+.header-account-options button{text-align:left;margin:0}
+.header-portrait{width:36px;height:36px;flex-shrink:0;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
+
+@media(max-width:460px){.header-account-options{left:0;right:auto}}

@@ -1,3 +1,4 @@
+import {unitLink} from './unit-link.mjs';
 import fs from 'node:fs';
 import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
 export const p101Home='/learn/physics/stage-1/p101/';
@@ -19,7 +20,7 @@ export function addP101Teaching({root,pages,extraRails,link}){
  pages.push([p101Home+'orientation/','P101 · Practical orientation',[],notice+read('orientation')+nav(link(p101Home,'← Module introduction'),link(unit,'Unit 1 →'))]);
  extraRails.set(p101Home+'orientation/',{title:'Practical orientation',back:p101Home,items:[]});
  const block=pages.find(p=>p[0]===p101Home+'b01/');
- block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+['U01','U02','U03'].map((id,i)=>'<p>'+link(p101Home+'b01/'+id.toLowerCase()+'/',`Unit ${i+1} · ${['Physical quantities and executable models','Measurement, variation and justified precision','Motion graphs and reproducible data work'][i]}`)+(i===0?' · Introduction and first two lessons available':' · Outline')+'</p>').join('');
+ block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+extraRails.get(p101Home+'b01/').items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(item.unitId==='U01'?' · Introduction and first two lessons available':' · Outline')+'</p>').join('');
  const lesson2=unit+'l02/';
  const secondFragment=fs.readFileSync(root+'content/p101/lesson2.html','utf8');
  pages.find(p=>p[0]===lesson2)[3]=read('lesson2')+nav(link(lesson,'← Lesson 1'),link(unit+'l03/','Next lesson plan →'));

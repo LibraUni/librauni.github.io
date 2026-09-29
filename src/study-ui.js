@@ -19,7 +19,7 @@ function render(){
   el.checked=done;el.indeterminate=!done&&count>0;
   el.disabled=!user||!data||busy||!available||plan?.status!=='enrolled';
   el.setAttribute('aria-label',`${node.title}: completed`);
-  el.title=!available?'Further material forthcoming':!user?'Sign in at your Study desk':!data?message:plan?.status!=='enrolled'?'Enrol to save progress':busy?'Saving…':done?'Completed — untick to undo':'Mark completed';
+  el.title=!available?'Further material forthcoming':!user?'Sign in at your Student Home':!data?message:plan?.status!=='enrolled'?'Enrol to save progress':busy?'Saving…':done?'Completed — untick to undo':'Mark completed';
   el.onclick=event=>event.stopPropagation();
   el.onchange=async()=>{
    if(!user||!data||busy){render();return;}

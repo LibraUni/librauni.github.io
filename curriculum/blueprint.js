@@ -1,14 +1,14 @@
 // Curriculum inventory, not new module approvals or learner progress.
 export const blueprint = {
- date:'26 September 2026',
+ date:'29 September 2026',
  inventory:[
- ['M100 · optional bridge','Approved: 3 blocks, 12 units, scope and completion policy; 300 hours.','All19 B01 lessons and six L01 sections approved; All six opening-lesson sections published and integrated. Review enrolment readiness separately; blueprint L02 sections before authoring them. B02/B03 handovers retained.'],
- ['M101 · Semester 1','Module-level map and four blocks approved; complete 13-unit blueprint approved. Lessons absent.','Logical P101 handovers agreed; reconcile calendar timing before release.'],
- ['P101 · Semester 1','Role and credits confirmed; module-level outcome/boundary/workload map approved. Four blocks approved; complete 13-unit blueprint and logical pair prerequisite check approved.','Move to M102. Calendar reconciliation remains pending. Allocate required computing and measurement foundations even for learners who do not take M100.'],
- ['M102 · Semester 2','Role and credits confirmed; module-level outcome/boundary/workload map approved. Five blocks approved; complete14-unit blueprint approved.','Revise A101 blocks/units and check Semester 2 interfaces.'],
- ['A101 · Semester 2','Four blocks approved; complete revised ten-unit blueprint approved with reconciled hours and Semester 1 prerequisites.','Wider progression map accepted; first M100 teaching section now available. Joint calendars and detailed source verification remain pending.'],
- ['Stage 2','Proposed P201 (60), M201 (30), X201 (30): 120 credits. Provisional subject-capacity and prerequisite audit published.','Wider map accepted; capacity sketches remain provisional. Detailed depth and evidence must be checked before later module approval.'],
- ['Stage 3','Proposed P301, P302, one specialist option and R300: 30 credits each. Six candidate options; provisional prerequisites and core capacity audit published.','Wider map accepted; retain provisional capacities and prerequisite gates. Options are alternatives, not cumulative compulsory content.'],
+ ['M100 · retired prototype','Former bridge: 3 blocks, 12 units and prototype teaching preserved in the programme archive.','Historical reference only; enrolment and assessment submissions are closed.'],
+ ['M101 · Semester 1','Four blocks and complete 13-unit blueprint approved. Module and Unit 1 introductions and Unit 1 Lessons 1–2 available.','Later lessons remain outlines. Continue incremental authoring and review; joint calendar timing and formal assessment release remain pending.'],
+ ['P101 · Semester 1','Four blocks and complete 13-unit blueprint approved. Module and Unit 1 introductions, practical orientation and Unit 1 Lessons 1–2 available.','Further teaching remains in preparation. Preserve mathematical and computing prerequisites; joint calendar timing and formal assessment release remain pending.'],
+ ['M102 · Semester 2','Five blocks and complete 14-unit blueprint approved. Teaching not yet released.','Plan and author lessons within the approved scope; check Semester 2 interfaces and joint timing.'],
+ ['A101 · Semester 2','Four blocks and complete revised ten-unit blueprint approved, with reconciled hours and Semester 1 prerequisites. Teaching not yet released.','Lesson production, joint calendars and detailed source verification remain pending.'],
+ ['Stage 2','P201 (60), M201 (30), X201 (30): 120 credits. Wider progression map accepted; subject-capacity estimates remain provisional.','Detailed depth and evidence must be checked before later module approval.'],
+ ['Stage 3','P301, P302, one specialist option and R300: 30 credits each. Six candidate options; wider progression map accepted with provisional capacities.','Retain prerequisite gates. Options are alternatives, not cumulative compulsory content.'],
  ],
  dependencies:[
  ['M100 → M101/P101 entry','Bridge completion is not compulsory. Specify demonstrable entry skills and a targeted refresher route; prior qualifications alone do not prove them.'],
@@ -19,9 +19,9 @@ export const blueprint = {
  ['P201/M201/X201 → Stage 3','Check advanced field, quantum, specialist and project prerequisites. Preserve compulsory thermal/statistical, solid-state and nuclear/particle foundations across every path.'],
  ],
  gates:[
- 'Complete Stage 1 block-and-unit previews one module at a time: M101, P101, M102, then A101 revision. Reconcile each concurrent pair, hours and assessment timing.',
- 'Review Stage 2/3 provisional progression and coverage decisions at module level, adding block sketches where a prerequisite or capacity question requires them. Keep unresolved depth visible.',
- 'Map all lessons in M100 Block 1 with purpose, outcomes, prerequisites, hours, practice, Python contribution and forward links; review the remaining M100 unit handovers.',
- 'Map all sections of the opening lesson; check the agreed parent outline and relevant assessment preparation. Only then author the first teaching section.',
+ 'All four Stage 1 block-and-unit maps are approved. Preserve their scope, prerequisites and hour budgets as teaching develops.',
+ 'The wider Stage 2/3 progression map is accepted; capacity sketches and detailed coverage remain provisional and require further review.',
+ 'Continue degree teaching incrementally. Before authoring, check the required surrounding lesson and section blueprints under the construction policy; M100 is a retired archive, not the next production step.',
+ 'Each teaching release requires its own correctness, reader, visual, accessibility and integration checks. Available lessons do not imply complete units, open enrolment or learner attainment.',
  ],
 };

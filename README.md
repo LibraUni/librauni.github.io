@@ -1,6 +1,6 @@
 # LibraUni
 
-Public website for an independent physics education. The curriculum and full visual identity are still being developed. This initial release provides a private study desk, notebook, account connection and progress infrastructure.
+Public website for an independent physics education. The curriculum and full visual identity are still being developed. This initial release provides a private Student Home, notebook, account connection and progress infrastructure.
 
 ## Develop
 

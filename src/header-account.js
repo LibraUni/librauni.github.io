@@ -1,10 +1,16 @@
-import {auth,db,onAuthStateChanged,isOwner,logOut} from './planner-store.js';
+import {auth,db,onAuthStateChanged,isOwner,logOut,signIn} from './planner-store.js';
 import {doc,onSnapshot} from 'firebase/firestore';
 import {readProfile,clearLegacyProfileDrafts} from './profile-data.js';
 
 try{clearLegacyProfileDrafts(localStorage);}catch{}
 const actions=document.querySelector('.header-actions');
 if(actions){
+ // A header destination should not link back to the page already open.
+ const currentPath=location.pathname.replace(/index\.html$/,'').replace(/\/$/,'')||'/';
+ for(const destination of actions.querySelectorAll('a[href]')){
+  const url=new URL(destination.href,location.href);
+  if(url.origin===location.origin&&(url.pathname.replace(/index\.html$/,'').replace(/\/$/,'')||'/')===currentPath&&!url.hash)destination.remove();
+ }
  const link=document.createElement('a');
  link.className='header-profile';
  link.href='/profile/';
@@ -13,34 +19,57 @@ if(actions){
  const authButton=existingAuth||document.createElement('button');
  if(!existingAuth){
   authButton.type='button';
-  authButton.textContent='Sign out';
-  authButton.addEventListener('click',()=>logOut().catch(()=>alert('Could not sign out. Please try again.')));
+  authButton.textContent='Checking sign-in…';
+  authButton.disabled=true;
+  authButton.addEventListener('click',async()=>{
+   authButton.disabled=true;
+   try{await (auth.currentUser?logOut():signIn());}
+   catch{alert(auth.currentUser?'Could not sign out. Please try again.':'Could not sign in. Please allow the sign-in window and try again.');}
+   finally{authButton.disabled=false;}
+  });
  }
  const account=document.createElement('span');
  account.className='header-account';
- account.append(link,authButton);
+ const menu=document.createElement('details');
+ menu.className='header-account-menu';
+ const summary=document.createElement('summary');
+ summary.className='header-profile';
+ summary.setAttribute('aria-label','Account menu');
+ const options=document.createElement('div');
+ options.className='header-account-options';
+ link.textContent='My profile';
+ options.append(link);
+ menu.append(summary,options);
+ menu.hidden=true;
+ account.append(menu,authButton);
+ document.addEventListener('click',event=>{if(!menu.contains(event.target))menu.open=false;});
+ menu.addEventListener('keydown',event=>{if(event.key==='Escape'){menu.open=false;summary.focus();}});
  actions.append(account);
- const theme=actions.querySelector('#theme-toggle');
+ const theme=actions.querySelector('#theme-toggle, #theme');
  if(theme)actions.append(theme);
- const showPhoto=location.pathname==='/'||location.pathname==='/index.html';
  function paintProfile(profile){
-  const name=profile?.name?.trim()||'';
-  link.replaceChildren();
-  if(showPhoto&&profile?.photo){
+  const name=profile?.name?.trim()||auth.currentUser?.displayName?.trim()||'My profile';
+  summary.replaceChildren();
+  if(profile?.photo){
    const portrait=document.createElement('img');
    portrait.className='header-portrait';portrait.src=profile.photo;
    portrait.alt='';portrait.width=36;portrait.height=36;
-   link.append(portrait);
+   summary.append(portrait);
   }
-  const label=document.createElement('span');label.textContent=name||'My profile';link.append(label);
-  link.setAttribute('aria-label',name?name+' · My profile':'My profile');
+  const label=document.createElement('span');label.textContent=name||'My profile';summary.append(label);
+  summary.setAttribute('aria-label',name+' · Account menu');
  }
  let unsubscribe;
  onAuthStateChanged(auth,user=>{
   unsubscribe?.();unsubscribe=null;
   link.hidden=!user;
   paintProfile(null);
-  authButton.hidden=!user&&!existingAuth;
+  menu.hidden=!user;
+  menu.open=false;
+  if(user)options.append(authButton);else account.append(authButton);
+  authButton.hidden=false;
+  authButton.disabled=false;
+  authButton.textContent=user?'Sign out':'Sign in with GitHub';
   authButton.classList.toggle('header-signout',!!user);
   if(!user||!isOwner(user))return;
   unsubscribe=onSnapshot(doc(db,'users',user.uid,'profile','main'),snapshot=>{

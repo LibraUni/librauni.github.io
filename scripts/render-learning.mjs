@@ -1,3 +1,4 @@
+import {unitLink,assertBlockUnitLabels} from './unit-link.mjs';
 import {addP101Teaching,p101TeachingPaths} from './p101-teaching.mjs';
 import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
 import {degreeModules,degreeSidebar,stageList} from './degree-navigation.mjs';
@@ -37,7 +38,8 @@ export function renderLearning({root,shell,link,e}) {
  const titled=(id,title)=>{
   const lesson=lessons.find(l=>l.id===id);
   const href=m100.blocks.some(b=>b.id===id)?blockPath(id):lesson?lessonUrl(lesson):m100.units.some(u=>u.id===id)?unitPath(id):null;
-  return (href?link(href,title):`<span>${e(title)}</span>`)+check(id);
+  const unit=m100.units.find(u=>u.id===id);
+  return (unit?unitLink({id:unit.id,title:unit.title,href},link):href?link(href,title):`<span>${e(title)}</span>`)+check(id);
  };
  const controls='<div class="tree-controls" hidden><button type="button" data-tree-action="expand">Expand all</button><button type="button" data-tree-action="collapse" class="secondary">Collapse all</button></div>';
  const tree=body=>`<div class="learning-tree">${controls}${body}</div>`;
@@ -59,7 +61,7 @@ export function renderLearning({root,shell,link,e}) {
  const intro=(title,text)=>`<section class="intro"><p class="eyebrow">LEARNING MATERIALS</p><h1>${title}</h1><p class="lead">${text}</p></section>`;
  const crumbs=[link('/programme/','Programme blueprint'),link('/programme/archive/m100/','Prototype archive'),link(base,'M100'),link(base+'b01/','Block 1')];
  const pages=[
- ['/learn/','Learning materials',[link('/','Study desk'),'<span aria-current="page">Learning materials</span>'],intro('Learning materials','Physics, from foundations to independent investigation.')+stageList(degreeModules,e)],
+ ['/learn/','Learning materials',[link('/','Student Home'),'<span aria-current="page">Learning materials</span>'],intro('Learning materials','Physics, from foundations to independent investigation.')+stageList(degreeModules,e)],
  [base,m100.title,[link('/programme/','Programme blueprint'),'<span aria-current="page">M100 archive</span>'],intro('M100 · Prototype archive','An early experiment, preserved to show how the teaching has developed.')+`<p>This retired test module is outside the degree. Browse its original teaching and assessment questions as a historical reference.</p><p>${link('/programme/bridge/lu-m100/','Original module blueprint')}</p><section id="materials"><h2>Archived materials</h2>${tree(unitBranches)}</section><section><h2>Archived assessments</h2><ul>${['icma41','tma01','icma42','tma02','icma43','tma03','ema-final'].map(id=>`<li>${link(base+'assessments/'+id+'/',id.toUpperCase())}</li>`).join('')}</ul></section>`],
  [base+'b01/','Calculate and express relationships',[...crumbs.slice(0,3),'<span aria-current="page">Block 1</span>'],intro('Calculate and express relationships','Four units build reliable arithmetic, algebra and short learner-written programs.')+`<p>80 unit study hours, including 14 Python hours and the one-hour iCMA 41. TMA 01 has a separate six-hour allocation.</p>`+tree(blockContents[0])],
  ['/learn/physics/','Physics degree learning',[link('/learn/','Learning materials'),'<span aria-current="page">Physics degree</span>'],intro('Physics degree','Three stages, from foundations to independent investigation.')+stageList(degreeModules,e)],
@@ -74,14 +76,14 @@ export function renderLearning({root,shell,link,e}) {
  const addPage=(path,title,parent,items,label,description)=>{
   extraRails.set(path,{title:label,items,back:parent});
   if(pages.some(p=>p[0]===path))return;
-  pages.push([path,title,[link('/learn/','Learning materials'),link(parent,'Parent page'),e(title)],intro(e(title),e(description||'Teaching materials are forthcoming.'))+`<p class="availability">Teaching materials forthcoming · This is a curriculum outline.</p>`+items.map(item=>`<p>${link(item.href,item.title)}</p>`).join('')]);
+  pages.push([path,title,[link('/learn/','Learning materials'),link(parent,'Parent page'),e(title)],intro(e(title),e(description||'Teaching materials are forthcoming.'))+`<p class="availability">Teaching materials forthcoming · This is a curriculum outline.</p>`+items.map(item=>`<p>${item.unitId?unitLink({id:item.unitId,...item},link):link(item.href,item.title)}</p>`).join('')]);
  };
  for(const m of modules){
   extraRails.set(m.base,{title:'Module blocks',items:m.blocks.map(b=>({title:b.title,href:m.base+b.id.toLowerCase()+'/'})),back:m.base===base?'/programme/':'/learn/physics/stage-1/'});
   for(const b of m.blocks){
    const bp=m.base+b.id.toLowerCase()+'/';
    const units=m.units.filter(u=>u.block===b.id||b.units?.includes(u.id));
-   addPage(bp,b.title,m.base,units.map(u=>({title:u.title,href:bp+u.id.toLowerCase()+'/'})),'Block units',b.purpose);
+   addPage(bp,b.title,m.base,units.map(u=>({unitId:u.id,title:u.title,href:bp+u.id.toLowerCase()+'/'})),'Block units',b.purpose);
    for(const u of units){
     const up=bp+u.id.toLowerCase()+'/';const lessons=m.lessons.filter(l=>l.unit===u.id);
     addPage(up,u.title,bp,lessons.map(l=>({title:l.title,href:up+l.id.split('-').at(-1).toLowerCase()+'/'})),'Unit lessons',u.can||u.purpose);
@@ -125,6 +127,7 @@ export function renderLearning({root,shell,link,e}) {
   page[2]=[...rootCrumbs,...chain.map((item,i)=>i===chain.length-1?`<span aria-current="page">${e(item.label)}</span>`:link(item.href,item.label))];
  }
  for(const [path,title,crumb,body] of pages){
+  assertBlockUnitLabels(path,body);
   let learningBody=body;
   if(path===lessonPath){
    learningBody=learningBody.replace(/<input[^>]*data-study-id="[^"]*"[^>]*>/g,'');
@@ -142,6 +145,7 @@ export function renderLearning({root,shell,link,e}) {
   if(path==='/learn/physics/stage-1/m101/b01/u01/l02/')html=html.replace('</body>','<script type="module" src="/src/m101-vector-lab.js"></script></body>');
   if(path==='/learn/physics/stage-1/m101/b01/u01/l01/')html=html.replace('</body>','<script src="/m101-legacy-links.js"></script></body>');
   if(path.startsWith('/learn/physics/stage-1/p101/'))html=html.replace('<script type="module" src="/src/study-ui.js"></script>','').replace('</head>','<link rel="stylesheet" href="/src/p101.css"></head>');
+  if(path==='/learn/')html=html.replace('<a class="button-link" href="/learn/">Learning materials</a>','');
   if(path.startsWith(base))html=html.replace(/<script type="module" src="\/src\/study-ui.js"><\/script>/g,'').replaceAll('LEARNING MATERIALS','PROTOTYPE ARCHIVE').replace(/<p class="section-read">[\s\S]*?<\/p>/g,'');
   fs.mkdirSync(root+path.slice(1),{recursive:true});fs.writeFileSync(root+path.slice(1)+'index.html',html);
  }

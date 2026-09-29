@@ -2,7 +2,7 @@ LIBRAUNI — VERIFYING SHARED STUDENT RECORDS
 
 A full private ZIP includes readable fields and original submission bytes,
 organised by category / module / record. Keep it private. For selective sharing,
-open its saved snapshot on the Learning evidence page, select any category,
+open its saved snapshot on the On-chain certificate page, select any category,
 fields or files, and download a selected ZIP. No new paid anchor is needed for
 a different selection from an already anchored snapshot.
 

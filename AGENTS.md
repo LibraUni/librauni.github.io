@@ -305,3 +305,13 @@ The learner explicitly requested a blank study record and retirement of M100 as 
 ## P101 opening publication — 28 September 2026
 
 The learner approved the corrected illustrated P101 opening and explicitly authorised publication with the module introduction heading “Finding out how the universe works”. Release includes the module introduction, practical orientation/notebook, Unit 1 introduction and complete U01-L01; later Block 1 lessons remain plans. Preserve natural P101/M101 progression without strict pairing. No enrolment or attainment is inferred. Current canonical local teaching standard is v1.8: written teaching carries the main intellectual work, all media/caption standards remain required, no reduction without explicit learner instruction, and this applies to all future units/modules/stages. See docs/p101-opening-review.md and docs/p101-release.md for checks and handover.
+
+
+## Block-page unit labels — 29 September 2026
+
+On every block learning page, list units as `Unit N: <linked unit title>`, with the prefix outside the link. Use scripts/unit-link.mjs and canonical module-wide unit IDs, including custom teaching renderers and future modules; do not restart numbering within a block.
+
+
+## Student navigation and records — 29 September 2026
+
+The top-left LibraUni brand always links to `/` (Student Home), including Our identity. Student Home focuses on next study steps. Academic Journal is the place to browse and download the academic record; do not restore the redundant home backup panel or private GitHub repository links. Existing private backup processes remain separate. On-chain certificate retains optional proof generation.
