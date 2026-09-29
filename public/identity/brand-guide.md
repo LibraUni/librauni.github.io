@@ -79,3 +79,7 @@ Student Home: compact wordmark, clear task hierarchy, subdued progress indicator
 Future public course materials should carry the standard LibraUni notice unless a specific page states otherwise: course materials are CC BY-NC-SA 4.0; website code is MIT; the LibraUni name, logo, black-hole mark, wordmark and visual identity are reserved and excluded from those licences. Third-party media, readings, videos, simulations and data keep their own licences and must be marked with source and reuse information where applicable.
 
 On every public page, pair “Licence & reuse” with the official CC BY-NC-SA badge at `/licenses/cc-by-nc-sa.svg`, using the shared `licence-link` class. The badge covers course materials; the stated brand and other exclusions still apply.
+
+## Official motto — confirmed 29 September 2026
+
+The official LibraUni motto is **KNOWLEDGE PURSUED FREELY**, with this exact wording and capitalisation. Use it consistently in branding, certificate templates and branded study PDFs, and identify it consistently in licensing/reuse documentation. It supersedes earlier notes that the motto was unconfirmed; “A place for deeper understanding” and “Your daily cup of science” are editorial headings, not alternative mottos. “PHYSICS” is a subject label, not part of the motto. Retain existing licence terms and award disclosures; the motto does not imply accreditation or broaden reuse permissions. Do not alter previously issued records retroactively.

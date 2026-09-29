@@ -27,7 +27,7 @@ async function act(fn){if(busy)return;busy=true;controls();const g=generation;tr
 function fieldLabel(r){return r.kind==='file'?r.name:r.kind==='field'?`${r.field}: ${typeof r.value==='string'?r.value:JSON.stringify(r.value)}`:r.title||'Record';}
 function showSnapshot(){
  ready=null;$('wallet-result').textContent='';$('evidence-selection').replaceChildren();
- if(!snapshot){$('snapshot-summary').textContent='No snapshot selected.';controls();return;}
+ if(!snapshot){const hint=document.createElement('p');hint.className='small';hint.textContent='Generate or open a saved snapshot to choose which records to share.';$('evidence-selection').append(hint);$('snapshot-summary').textContent='No snapshot selected. Generate your records above, or open a saved snapshot.';controls();return;}
  const m=validateSnapshot(snapshot);$('snapshot-summary').textContent=`${saved?'Saved privately':'Prepared; not yet saved'} · ${m.recordCount} ${snapshot.format===STUDENT_FORMAT?'record fields':'academic entries'} · ${m.fileCount} original files · prepared ${m.createdAt}. ${anchor?'An Ethereum reference is saved; check confirmation before sharing.':'No Ethereum anchor recorded for this snapshot.'}`;
  const groups=new Map();
  snapshot.tree.values.forEach((v,i)=>{if(!i)return;const r=JSON.parse(v.value),category=r.category||'journal';
@@ -43,9 +43,15 @@ async function restoreOriginals(p,check){
  return files;
 }
 function fullDownload(){if(snapshot.format===STUDENT_FORMAT)download('librauni-full-student-records-'+snapshot.tree.root.slice(2,12)+'.zip',makeArchive(snapshot,originals,snapshot.tree.values.map((_,i)=>i),anchor,{full:true}),'application/zip');else download('librauni-private-evidence.json',JSON.stringify({snapshot,anchor},null,2));}
-async function refreshList(check){const list=await listSnapshots(user.uid);check();rows=list;$('snapshot-list').replaceChildren(...rows.slice().reverse().map(r=>new Option(`#${r.sequence} · ${r.createdAt}`,r.id)));}
+async function refreshList(check){const list=await listSnapshots(user.uid);check();rows=list;$('snapshot-list').replaceChildren(...rows.slice().reverse().map(r=>new Option(`#${r.sequence} · ${r.createdAt}`,r.id)));if(!rows.length)$('snapshot-summary').textContent='No saved snapshots yet. Generate your records to create the first one.';controls();}
 $('evidence-auth').onclick=()=>act(async()=>{if(auth.currentUser)await logOut();else {await signIn();if(user)await refreshList(()=>{});}});
-onAuthStateChanged(auth,u=>{generation++;user=isOwner(u)?u:null;rows=[];snapshot=null;saved=false;anchor=null;ready=null;$('evidence-private').hidden=!user;$('evidence-auth').textContent=u?'Sign out':'Sign in with GitHub';originals=new Map();$('snapshot-list').replaceChildren();showSnapshot();message(user?'Your evidence is private. Generate your full records or open an earlier snapshot.':'Sign in to manage your own evidence. Verification below does not require an account.');if(user)act(refreshList);});
+onAuthStateChanged(auth,u=>{generation++;user=isOwner(u)?u:null;rows=[];snapshot=null;saved=false;anchor=null;ready=null;$('evidence-private').hidden=!user;$('evidence-auth').textContent=u?'Sign out':'Sign in with GitHub';originals=new Map();$('snapshot-list').replaceChildren();showSnapshot();message(user?'Your evidence is private. Generate your full records or open an earlier snapshot.':'Sign in to manage your own evidence. Verification below does not require an account.');if(!u){
+ const link=document.createElement('button');
+ link.type='button';link.className='text-button evidence-signin';
+ link.textContent='Sign in to manage your own evidence.';
+ link.addEventListener('click',()=>act(async()=>{await signIn();}));
+ $('evidence-status').replaceChildren(link,document.createTextNode(' Verification below does not require an account.'));
+}if(user)act(refreshList);});
 $('generate-full').onclick=()=>act(async check=>{
  message('Collecting all saved academic records and the tutor-managed file catalogue…');
  await refreshList(check);const records=await loadRecords(user.uid),catalogue=await loadAcademicCatalogue(user.uid);check();

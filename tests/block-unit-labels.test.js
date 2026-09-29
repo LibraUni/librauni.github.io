@@ -10,7 +10,7 @@ test('every existing module and archive block labels its unit links',()=>{
  for(const file of [...walk(root+'learn'),...walk(root+'programme/archive')]){
   if(!/\/b\d+\/index.html$/.test(file))continue;
   const route='/'+path.relative(root,file).replace(/index.html$/,'');
-  const body=fs.readFileSync(file,'utf8').match(/<article class="lesson-reading">([\s\S]*?)<\/article>/)?.[1];
+  const body=fs.readFileSync(file,'utf8').match(/<article class="lesson-reading"[^>]*>([\s\S]*?)<\/article>/)?.[1];
   assert.ok(body,route);assertBlockUnitLabels(route,body);blocks++;
  }
  assert.ok(blocks>=20);

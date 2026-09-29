@@ -315,3 +315,7 @@ On every block learning page, list units as `Unit N: <linked unit title>`, with 
 ## Student navigation and records — 29 September 2026
 
 The top-left LibraUni brand always links to `/` (Student Home), including Our identity. Student Home focuses on next study steps. Academic Journal is the place to browse and download the academic record; do not restore the redundant home backup panel or private GitHub repository links. Existing private backup processes remain separate. On-chain certificate retains optional proof generation.
+
+## Official motto — confirmed 29 September 2026
+
+The official LibraUni motto is **KNOWLEDGE PURSUED FREELY**, with this exact wording and capitalisation. Use it consistently in branding, certificate templates and branded study PDFs, and identify it consistently in licensing/reuse documentation. It supersedes earlier notes that the motto was unconfirmed; “A place for deeper understanding” and “Your daily cup of science” are editorial headings, not alternative mottos. “PHYSICS” is a subject label, not part of the motto. Retain existing licence terms and award disclosures; the motto does not imply accreditation or broaden reuse permissions. Do not alter previously issued records retroactively.

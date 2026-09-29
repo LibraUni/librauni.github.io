@@ -6,7 +6,7 @@ import {degreeModules} from '../scripts/degree-navigation.mjs';
 import {studyOverview} from '../src/study-dashboard.js';
 const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
 test('degree catalogue lists every module by stage without collapsed content or prototype references',()=>{
- const index=read('learn/index.html');const content=index.split('<article class="lesson-reading">')[1].split('</article>')[0];
+ const index=read('learn/index.html');const content=index.split(/<article class="lesson-reading"[^>]*>/)[1].split('</article>')[0];
  assert.ok(!content.includes('<details'));assert.ok(!index.includes('data-study-id'));
  for(const m of degreeModules){assert.ok(content.includes('href="'+m.href+'"'));assert.ok(existsSync(new URL('..'+m.href+'index.html',import.meta.url)));}
  for(const file of readdirSync(new URL('../learn/',import.meta.url),{recursive:true}).filter(f=>f.endsWith('.html'))){const html=read('learn/'+file);assert.doesNotMatch(html,/M100|preparatory|\/preparation\//i,file);assert.ok(html.includes('degree-navigation'),file);}

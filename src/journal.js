@@ -20,13 +20,26 @@ function render(){
  let rows;try{rows=selected();}catch(e){message(e.message);return;}
  $('journal-count').textContent=`${rows.length} matching academic entries · ${entries.length} total. Downloads include every match, not only the visible entries.`;
  $('journal-list').replaceChildren();
+ if(!rows.length){
+  const empty=document.createElement('p');empty.className='empty-state';
+  empty.textContent=entries.length?'No entries match these filters. Try a different search or clear the filters.':'Your learning story starts with your next tutorial. Ask your tutor to save a session record here, or add your own observation below.';
+  if(!entries.length){const next=document.createElement('a');next.href='/learn/';next.textContent='Explore learning materials →';empty.append(document.createElement('br'),next);}
+  $('journal-list').append(empty);
+ }
  for(const row of rows.slice(0,shown)){
- const d=document.createElement('details'),s=document.createElement('summary');s.textContent=`${row.occurredAt||row.recordedAt||'Time unknown'} · ${row.category} · ${row.title}`;d.append(s);
+ const d=document.createElement('details'),s=document.createElement('summary');
+ d.className='journal-entry';
+ const rawDate=row.occurredAt||row.recordedAt;
+ const date=new Date(rawDate),meta=document.createElement('span'),title=document.createElement('span'),preview=document.createElement('span');
+ meta.className='journal-entry-meta';meta.textContent=(rawDate&&!Number.isNaN(date.valueOf())?new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(date):'Date unknown')+' · '+row.category+(row.area?' · '+row.area:'');
+ title.className='journal-entry-title';title.textContent=row.title;
+ preview.className='journal-entry-preview';preview.textContent=row.body.length>170?row.body.slice(0,170)+'…':row.body;
+ s.append(meta,title,preview);d.append(s);
  for(const [label,text] of [['Reference',row.id],['Recorded online',row.recordedAt||'Unknown'],['Event time',row.occurredAt||'Not supplied'],['Area',row.area],['Reported source',row.source],['Corrects',row.corrects],['Record',row.body],['Evidence',row.evidence],['Next steps',row.nextSteps]])if(text){const h=document.createElement('strong'),p=document.createElement('p');h.textContent=label;p.textContent=text;d.append(h,p);}
  $('journal-list').append(d);
  }$('show-more').hidden=rows.length<=shown;
 }
-async function refresh(){if(!user||busy)return;const uid=user.uid,g=generation;busy=true;controls();status('Loading private academic records…');try{const next=await loadRecords(uid);if(g!==generation)return;records=next;entries=timeline(records);loaded=true;render();status('Loaded from online records · '+new Date().toLocaleTimeString());}catch{if(g===generation){message('Could not refresh online records. Previously loaded entries remain downloadable; they may not include later saves.');status(loaded?'Showing previously loaded records':'Records unavailable · reconnect and retry');}}finally{busy=false;controls();$('refresh').disabled=!user;}}
+async function refresh(){if(!user||busy)return;const uid=user.uid,g=generation;busy=true;controls();status('Opening your academic journal…');$('journal-list').setAttribute('aria-busy','true');try{const next=await loadRecords(uid);if(g!==generation)return;records=next;entries=timeline(records);loaded=true;render();status('Loaded from online records · '+new Date().toLocaleTimeString());}catch{if(g===generation){message('Could not refresh online records. Previously loaded entries remain downloadable; they may not include later saves.');status(loaded?'Showing previously loaded records':'Records unavailable · reconnect and retry');}}finally{$('journal-list').removeAttribute('aria-busy');busy=false;controls();$('refresh').disabled=!user;}}
 for(const id of ['filter-category','entry-category']){if(id==='filter-category')$(id).add(new Option('All academic categories',''));for(const c of categories)$(id).add(new Option(c,c));}
 $('entry-category').value='reflection';
 $('journal-auth').onclick=async()=>{try{if(auth.currentUser){if(busy||dirty()||importPending){message('Save or download your draft and finish pending imports before signing out.');return;}await logOut();}else await signIn();}catch(e){message('Sign-in could not finish: '+(e.code||e.message));}};
@@ -37,6 +50,7 @@ $('entry-form').onsubmit=async e=>{e.preventDefault();if(!user||busy)return;cons
 $('download-draft').onclick=()=>download('librauni-academic-draft.txt',Object.entries(draft()).map(([k,v])=>k+': '+v).join('\n\n'),'text/plain;charset=utf-8');
 $('refresh').onclick=refresh;
 for(const id of ['filter-category','filter-from','filter-to','filter-search'])$(id).addEventListener('input',()=>{shown=50;render();});
+$('clear-filters').onclick=()=>{for(const id of ['filter-category','filter-from','filter-to','filter-search'])$(id).value='';shown=50;render();};
 $('show-more').onclick=()=>{shown+=50;render();};
 function exporting(mode){if(!loaded)return;try{const rows=mode==='all'?entries:selected();download('librauni-academic-'+mode+'-'+new Date().toISOString().slice(0,10)+'.txt',readableJournal(rows),'text/plain;charset=utf-8');}catch(e){message(e.message);}}
 $('export-readable').onclick=()=>exporting('selected');$('export-all').onclick=()=>exporting('all');

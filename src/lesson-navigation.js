@@ -51,3 +51,9 @@ update();
 // Keep the current page visible within the continuous navigation tree.
 const pageLink=panel.querySelector('[aria-current="page"]');
 if(pageLink&&list.contains(pageLink))list.scrollTop=Math.max(0,pageLink.offsetTop-list.offsetTop-list.clientHeight/3);
+
+const returnLink=panel.querySelector('.current-lesson-link');
+returnLink?.addEventListener('click',()=>{
+ if(compact.matches)panel.open=false;
+ document.getElementById('lesson-start')?.focus({preventScroll:true});
+});

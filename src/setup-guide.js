@@ -1,7 +1,7 @@
-const button=document.getElementById('copy-brief');
-const brief=document.getElementById('setup-brief');
-const status=document.getElementById('copy-status');
-if(button&&navigator.clipboard){
+for(const button of document.querySelectorAll('[data-copy-brief]')){
+ const brief=document.getElementById(button.dataset.copyBrief);
+ const status=document.getElementById(button.dataset.copyStatus);
+ if(!brief||!status||!navigator.clipboard)continue;
  button.hidden=false;
  button.addEventListener('click',async()=>{
   try{await navigator.clipboard.writeText(brief.value);status.textContent='Copied. Paste this into your agent.';}

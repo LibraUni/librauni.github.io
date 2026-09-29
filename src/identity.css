@@ -47,3 +47,49 @@ header .header-signout:hover{filter:none;color:var(--blue)}
 .header-portrait{width:36px;height:36px;flex-shrink:0;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
 
 @media(max-width:460px){.header-account-options{left:0;right:auto}}
+
+/* Local visual refresh: calm spacing and small, useful feedback. */
+:root{--space-section:clamp(1.5rem,3vw,2.75rem)}
+main .intro{padding-block:var(--space-section);line-height:1.75}
+main .intro h1{line-height:1.12;text-wrap:balance}
+main .intro h2{margin-top:1.75rem}
+main .intro p{margin-block:.85rem}
+main .intro li{margin-block:.45rem}
+.panel{padding:clamp(1.25rem,2.4vw,2rem)}
+.panel h2{font-size:clamp(1.5rem,2.4vw,1.85rem)}
+.breadcrumb{line-height:1.6;flex-wrap:wrap}
+footer{margin-top:var(--space-section);border-top:1px solid var(--line);line-height:1.6}
+a,button,summary{ -webkit-tap-highlight-color:transparent }
+button,.button-link,aside nav a,summary{transition:background-color .16s ease,color .16s ease,border-color .16s ease,box-shadow .16s ease}
+a:hover{text-decoration-thickness:2px}
+aside nav a:hover{background:var(--tint);color:var(--ink)}
+button:hover:not(:disabled){filter:none;box-shadow:0 2px 6px #0001}
+button:active:not(:disabled),.button-link:active{box-shadow:inset 0 1px 3px #0002}
+summary{cursor:pointer;line-height:1.6;border-radius:3px}
+summary:hover{color:var(--blue)}
+:where(a,button,summary,input,select,textarea):focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.primary-action{background:var(--blue);border-color:var(--blue);color:var(--surface);gap:.9rem;font-weight:600}
+.primary-action:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.student-home{max-width:1160px;width:100%;padding-top:clamp(2rem,4vw,4rem)}
+.home-welcome{padding:0 0 var(--space-section);max-width:850px}
+.home-welcome h1{font-size:clamp(2.4rem,4.2vw,4rem);line-height:1.13;max-width:20ch;overflow-wrap:anywhere;text-wrap:balance}
+.home-welcome .lead{max-width:55ch;font-size:clamp(1.15rem,1.7vw,1.35rem)}
+.home-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.5rem;margin-top:1.75rem;line-height:1.6}
+.home-actions .primary-action{padding:.85rem 1.2rem}
+.home-next{border-top:3px solid var(--blue);max-width:900px}
+.home-next h3{font-size:.9rem;margin-top:1.75rem}
+.home-next .eyebrow{margin-bottom:1rem}
+.home-next p:last-child{margin-bottom:0}
+.home-next .study-next{padding-bottom:1rem;border-bottom:1px solid var(--line)}
+@media(prefers-reduced-motion:no-preference){details[open]>:not(summary){animation:disclosure-in .16s ease-out}@keyframes disclosure-in{from{opacity:.65}to{opacity:1}}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:650px){.home-actions{align-items:flex-start;flex-direction:column}.home-welcome h1{font-size:2.5rem}.student-home{padding-top:2rem}}
+
+.home-next .home-signin{display:inline;padding:0;border:0;font:inherit;line-height:inherit;vertical-align:baseline}
+/* Make account disclosure and secondary controls recognisable. */
+.header-account-menu>summary{border:1px solid var(--line);padding:.35rem .7rem;border-radius:5px}
+.header-account-menu>summary::after{content:'⌄';font-size:1rem;margin-left:.3rem;color:var(--muted)}
+.header-account-menu[open]>summary{background:var(--tint);border-color:var(--blue)}
+.header-account-menu[open]>summary::after{content:'⌃'}
+.header-account-options a,.header-account-options button{min-height:44px}
+button.secondary,.profile-actions>button:not([type="submit"]):not(.primary-action){border-color:var(--line)}

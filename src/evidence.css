@@ -16,3 +16,10 @@
 
 /* Native file pickers must fit the available reading width on phones. */
 input[type="file"],#evidence-selection,select{max-width:100%;min-width:0}
+
+#evidence-status .evidence-signin{display:inline;padding:0;border:0;font:inherit;line-height:inherit;text-align:left;vertical-align:baseline}
+#evidence-private>.panel,.evidence-step{margin:1.25rem 0}
+.evidence-step>summary{font:1.45rem/1.5 Georgia,serif;color:var(--ink);padding:.25rem 0}
+.evidence-step[open]>summary{margin-bottom:1.4rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+.evidence-explainer{margin:1.2rem 0}.evidence-explainer>summary{color:var(--blue);font-weight:600}
+#evidence-private button:not(#generate-full):not(#anchor-now){background:var(--surface);color:var(--blue)}

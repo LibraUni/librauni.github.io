@@ -1,3 +1,4 @@
+import {presentOverview,subjectFor} from './module-presentation.mjs';
 import {unitLink,assertBlockUnitLabels} from './unit-link.mjs';
 import {addP101Teaching,p101TeachingPaths} from './p101-teaching.mjs';
 import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
@@ -128,7 +129,7 @@ export function renderLearning({root,shell,link,e}) {
  }
  for(const [path,title,crumb,body] of pages){
   assertBlockUnitLabels(path,body);
-  let learningBody=body;
+  let learningBody=presentOverview(path,body,modules,e);
   if(path===lessonPath){
    learningBody=learningBody.replace(/<input[^>]*data-study-id="[^"]*"[^>]*>/g,'');
    for(const id of published)learningBody=learningBody.replace(new RegExp('(<section id="'+id+'"[\\s\\S]*?)(</section>)'),'$1<p class="section-read"><label>Mark section as read'+check('U01-L01-'+id)+'</label></p>$2');
@@ -136,8 +137,8 @@ export function renderLearning({root,shell,link,e}) {
   let railTitle,railItems,back;
   if(path===lessonPath){railTitle='In this lesson';railItems=openingSections.sections.map(s=>({title:s.title,href:'#'+sectionId(s)}));back=unitPath('U01');}
   if(extraRails.has(path)){const rail=extraRails.get(path);railTitle=rail.title;railItems=rail.items;back=rail.back;}
-  if(path.startsWith('/learn/'))learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar">${degreeSidebar(path,modules,extraRails,e)}</aside><article class="lesson-reading">${learningBody}</article></div>`;
-  else if(railItems)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary><span class="sidebar-toggle-label"><span class="sidebar-show">Show sidebar</span><span class="sidebar-hide">Hide sidebar</span></span><span data-current-section></span></summary><nav aria-label="${railTitle}"><h2>${railTitle}</h2><ol>${railItems.map((item,i)=>`<li><a href="${item.href}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(item.title)}</span></a></li>`).join('')}</ol>${railItems.length?'':'<p class="small">Not yet published.</p>'}<a class="lesson-back" href="${back}">← ${path===lessonPath?'Unit overview':'Up one level'}</a></nav></details></aside><article class="lesson-reading">${learningBody}</article></div>`;
+  if(path.startsWith('/learn/'))learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar">${degreeSidebar(path,modules,extraRails,e)}</aside><article class="lesson-reading" id="lesson-start" tabindex="-1" data-subject="${subjectFor(path.split('/')[4]?.toUpperCase()||'P')}">${learningBody}</article></div>`;
+  else if(railItems)learningBody=`<div class="lesson-layout"><aside class="lesson-sidebar"><details class="lesson-navigation" open><summary><span class="sidebar-toggle-label"><span class="sidebar-show">Show sidebar</span><span class="sidebar-hide">Hide sidebar</span></span><span data-current-section></span></summary><nav aria-label="${railTitle}"><h2>${railTitle}</h2><ol>${railItems.map((item,i)=>`<li><a href="${item.href}"><span class="section-number">${String(i+1).padStart(2,'0')}</span><span>${e(item.title)}</span></a></li>`).join('')}</ol>${railItems.length?'':'<p class="small">Not yet published.</p>'}<a class="lesson-back" href="${back}">← ${path===lessonPath?'Unit overview':'Up one level'}</a></nav></details></aside><article class="lesson-reading" id="lesson-start" tabindex="-1" data-subject="${subjectFor(path.split('/')[4]?.toUpperCase()||'P')}">${learningBody}</article></div>`;
 
   let html=shell(title,crumb,learningBody).replace('curriculum design and module preview.','learning materials.').replace('</head>','<link rel="stylesheet" href="/src/learning.css"></head>').replace('</body>','<script type="module" src="/src/learning.js"></script><script type="module" src="/src/study-ui.js"></script></body>');
   if(railItems||path.startsWith('/learn/'))html=html.replace('class="programme-page"','class="programme-page lesson-page"').replace('</body>','<script type="module" src="/src/lesson-navigation.js"></script></body>');

@@ -1,3 +1,4 @@
+import {moduleMotif,subjectFor} from './module-presentation.mjs';
 import {stage1Modules} from '../curriculum/stage1.js';
 // Later stages retain the existing programme blueprint, including its six options.
 const later=[
@@ -15,7 +16,28 @@ const later=[
  [3,'P303','Statistical physics & condensed matter',30,true],
 ];
 export const degreeModules=[...stage1Modules.map(m=>({code:m.code.slice(3),title:m.title,stage:1,credits:30})),...later.map(([stage,code,title,credits,option])=>({stage,code,title,credits,option}))].map(m=>({...m,href:`/learn/physics/stage-${m.stage}/${m.code.toLowerCase()}/`}));
-export function stageList(modules,e){return [1,2,3].filter(n=>modules.some(m=>m.stage===n)).map(n=>`<section class="module-stage" id="stage-${n}"><h2>Stage ${n}</h2>${n===3?'<p class="small">Three core modules and one specialist option.</p>':''}<ul class="module-list">${modules.filter(m=>m.stage===n).map(m=>`<li><a href="${m.href}"><span class="module-code">${m.code}</span><span>${e(m.title)}</span></a><span class="module-status">${m.option?'Specialist option · ':''}${m.code==='M101'?'Lessons 1–2 available':m.code==='P101'?'Introduction and Lessons 1–2 available':'Teaching forthcoming'}</span></li>`).join('')}</ul></section>`).join('');}
+// Short catalogue descriptions; Stage 1 uses the approved module purposes.
+const catalogueDescriptions={
+ P201:'Motion, matter and fields: the connected foundations of core physics.',
+ M201:'Mathematical tools for describing and solving physical problems.',
+ X201:'Investigate physical questions through experiments and computation.',
+ P301:'Explore electric and magnetic fields, waves and radiation.',
+ P302:'Explore quantum descriptions of the physical world and matter.',
+ R300:'Bring your learning together in an independent physics investigation.',
+ A301:'Investigate stars and planetary systems beyond our own.',
+ A302:'Explore the structure and evolution of the universe.',
+ C301:'Use computation to model and investigate physical systems.',
+ T301:'Explore dynamics, chaotic behaviour and random processes.',
+ T302:'Study matter and fluids through continuous models.',
+ P303:'Connect statistical descriptions with the properties of matter.'
+};
+export function stageList(modules,e){
+ return [1,2,3].filter(n=>modules.some(m=>m.stage===n)).map(n=>`<section class="module-stage" id="stage-${n}"><p class="eyebrow">${['','FOUNDATIONS','DEEPEN YOUR UNDERSTANDING','INDEPENDENT INVESTIGATION'][n]}</p><h2>Stage ${n}</h2>${n===3?'<p class="small">Three core modules and one specialist option.</p>':''}<ul class="module-list">${modules.filter(m=>m.stage===n).map(m=>{
+  const available=['M101','P101'].includes(m.code);
+  const description=stage1Modules.find(x=>x.code==='LU-'+m.code)?.purpose||catalogueDescriptions[m.code]||'';
+  return `<li><a class="module-card" data-subject="${subjectFor(m.code)}" href="${m.href}"><span class="module-code">${e(m.code)}${moduleMotif(m.code)}</span><span class="module-body"><strong class="module-title">${e(m.title)}</strong>${description?`<span class="module-description">${e(description)}</span>`:''}<span class="module-status${available?' available':''}">${m.option?'Specialist option · ':''}${available?'Introduction &amp; Unit 1 lessons 1–2 available':m.stage===1?'Module outline · Teaching forthcoming':'Provisional outline · Teaching forthcoming'}</span></span><span class="module-arrow" aria-hidden="true">→</span></a></li>`;
+ }).join('')}</ul></section>`).join('');
+}
 export function degreeSidebar(path,hierarchy,rails,e){
  const anchor=(href,label)=>`<a href="${href}"${href===path?' aria-current="page"':path.startsWith(href)&&href!=='/learn/'?' class="navigation-ancestor"':''}>${e(label)}</a>`;
  function children(m){
@@ -34,5 +56,5 @@ export function degreeSidebar(path,hierarchy,rails,e){
    return '<li>'+anchor(bp,'Block '+Number(b.id.slice(1))+' · '+b.title)+nested+'</li>';
   }).join('')+'</ol>';
  }
- return `<details class="lesson-navigation degree-navigation" open><summary><span class="sidebar-toggle-label"><span class="sidebar-show">Show sidebar</span><span class="sidebar-hide">Hide sidebar</span></span><span data-current-section></span></summary><nav aria-label="Learning materials"><h2>${anchor('/learn/','Learning materials')}</h2><ol class="degree-navigation-tree">${[1,2,3].map(n=>`<li class="navigation-stage">${anchor('/learn/physics/stage-'+n+'/','Stage '+n)}<ol>${degreeModules.filter(m=>m.stage===n).map(m=>'<li>'+anchor(m.href,m.code+' · '+m.title)+children(m)+'</li>').join('')}</ol></li>`).join('')}</ol></nav></details>`;
+ return `<details class="lesson-navigation degree-navigation" open><summary><span class="sidebar-toggle-label"><span class="sidebar-show">Show sidebar</span><span class="sidebar-hide">Hide sidebar</span></span><span data-current-section></span></summary><nav aria-label="Learning materials"><h2>${anchor('/learn/','Learning materials')}</h2>${path.match(/\/l\d+\/$/)?'<a class="current-lesson-link" href="#lesson-start">Back to this lesson ↑</a>':''}<ol class="degree-navigation-tree">${[1,2,3].map(n=>`<li class="navigation-stage">${anchor('/learn/physics/stage-'+n+'/','Stage '+n)}<ol>${degreeModules.filter(m=>m.stage===n).map(m=>'<li class="navigation-module'+(path.startsWith(m.href)?' is-current-module':'')+'">'+anchor(m.href,m.code+' · '+m.title)+children(m)+'</li>').join('')}</ol></li>`).join('')}</ol></nav></details>`;
 }

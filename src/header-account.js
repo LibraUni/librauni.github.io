@@ -50,6 +50,15 @@ if(actions){
  if(theme)actions.append(theme);
  function paintProfile(profile){
   const name=profile?.name?.trim()||auth.currentUser?.displayName?.trim()||'My profile';
+  const greeting=document.getElementById('home-greeting');
+  if(greeting){
+   const owner=isOwner(auth.currentUser);
+   greeting.textContent=owner?(name==='My profile'?'Welcome back.':`Welcome back, ${name}.`):'Your daily cup of science.';
+   document.getElementById('home-introduction').textContent=owner?'A little time, a good question. Choose your next lesson and pick up your learning.':'Explore physics, follow a question, and build your understanding at your own pace. The learning materials are open to everyone.';
+   const secondary=document.getElementById('home-secondary');
+   secondary.href=owner?'/journal/':'/enjoy/';
+   secondary.textContent=owner?'Open Academic Journal':'Discover the full experience';
+  }
   summary.replaceChildren();
   if(profile?.photo){
    const portrait=document.createElement('img');
