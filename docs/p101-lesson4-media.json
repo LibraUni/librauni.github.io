@@ -1,0 +1,12 @@
+{
+  "reviewed": "2026-09-30",
+  "source": "https://www.jpl.nasa.gov/images/pia24722-perseverances-first-autonav-drive/",
+  "asset": "/media/p101/perseverance-autonav.jpg",
+  "original": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24722.jpg",
+  "credit": "Courtesy NASA/JPL-Caltech",
+  "reuse": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+  "alterations": "None; source static paired image, proportions preserved.",
+  "sha256": "ce267f3f2eca8f48a75d376e43489eebc5290c135cc905a75ce672e30da54a96",
+  "purpose": "Paired observations as the input to a much richer navigation decision; explicit distinction from our scalar time-domain check.",
+  "inspection": "Actual1916x715image inspected: two navigation-camera views, not two times. JPL source identifies first AutoNav drive and obstacle avoidance. No measurements inferred. Educational use, no endorsement. Source animation not embedded or claimed to have been watched."
+}
