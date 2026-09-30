@@ -23,3 +23,17 @@
 @media print{.p101-reading figure.science-photo.reading-float{float:none;width:100%;margin:18px auto}}
 
 .p101-reading .image-right{float:right;width:43%;margin:0 0 22px 28px}.p101-reading .image-right img{max-height:none}.p101-reading #p101-u01-figure-09{clear:both}.p101-reading #p101-u01-figure-09 svg text,.p101-reading #p101-u01-figure-10 svg text,.p101-reading #p101-u01-figure-11 svg text{font-size:21px}@media(max-width:900px){.p101-reading .image-right{float:none;width:100%;margin:25px 0}}@media(max-width:650px){.p101-reading #p101-u01-figure-09 svg text,.p101-reading #p101-u01-figure-10 svg text,.p101-reading #p101-u01-figure-11 svg text{font-size:32px}}
+
+/* Lesson 3 only: keep earlier published teaching unchanged. */
+.p101-l3 math{font-size:1.08em}.p101-l3 .equation{overflow-x:auto;padding:12px 0}
+.p101-l3 .l3-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.p101-l3 .l3-stages>div{padding:18px;border:1px solid #a7babc;border-top:4px solid #668e98;border-radius:7px;background:#eef3f1;min-width:0}
+.p101-l3 .l3-stages strong{display:block;font:600 15px/1.5 system-ui;color:#24566a;margin-bottom:15px}
+.p101-l3 .l3-stages code{display:block;font:13px/1.7 ui-monospace,monospace;white-space:normal;overflow-wrap:anywhere}
+.p101-l3 .l3-stages p{font:15px/1.6 Georgia,serif;margin:13px 0 0}
+.p101-l3 .l3-photo{float:left;width:42%;margin:4px 25px 18px 0}
+.p101-l3 .l3-table-scroll{overflow-x:auto}.p101-l3 .l3-table-scroll table{margin:0;table-layout:fixed;width:100%}.p101-l3 .l3-table-scroll :is(th,td){overflow-wrap:anywhere}.p101-l3 .l3-table-scroll th:first-child{width:44%}
+.p101-l3 pre.l3-output{background:transparent;border:1px dashed #93a4aa;border-radius:6px;font-size:14px}
+[data-theme=dark] .p101-l3 .l3-stages>div{background:#20343c;border-color:#63828c;color:#e5ece9}
+[data-theme=dark] .p101-l3 .l3-stages strong{color:#b8dce9}
+@media(max-width:900px){.p101-l3 .l3-stages{grid-template-columns:1fr}.p101-l3 .l3-photo{float:none;width:100%;max-width:420px;margin:22px auto}}
