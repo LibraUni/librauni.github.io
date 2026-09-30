@@ -1,0 +1,143 @@
+{
+  "module": "M101",
+  "unit": "U01",
+  "lesson": "L04",
+  "standard": "1.9",
+  "date": "2026-09-30",
+  "authorization": "User explicitly requested creation and online publication of the next lesson.",
+  "scope": "Six sections 1.22\u20131.27; seven examples1.21\u20131.27; eight activities1.24\u20131.31; seven figures1.25\u20131.31; key ideas1.19\u20131.24. No Python, force equilibrium, dot product or spherical coordinates. Unit-end exercises/conclusion/PDF reserved for L05.",
+  "calibration": [
+    {
+      "sections": "1.22; Activity1.24",
+      "source": "OpenStax Precalculus2e \u00a75.1, angle/radian explanation, Example1 and TryIt1\u20132; OU MST124 Unit5 pp172\u2013173",
+      "fit": "Original rotation, conversion and arc-ratio tasks; supplementary retrieval needed because OU assumes its Unit4 trigonometry. Explicit calculator mode and units included."
+    },
+    {
+      "sections": "1.23; Activity1.25",
+      "source": "OU MST124 Unit5 pp175\u2013179, Example19 and Activities46\u201348; OpenStax University Physics1 \u00a72.2 component-form derivation and Example2.5",
+      "fit": "Original sign prediction, exact special-angle components, decimal case, axis case and swapped-component diagnosis. Derive first-quadrant ratios then extend via unit-circle coordinates; connect to prior normalisation."
+    },
+    {
+      "sections": "1.24; Activity1.26",
+      "source": "OU MST124 Unit5 p178 unit-circle derivation; Enrique Caliz GeoGebra QGYDPzJ2 actual applet and its written instructions",
+      "fit": "Inspected diagram, magnitude/angle controls, component calculations and angle toggle; changing toggle changed acute annotation from50 to40degrees for same vector. Our original implementation fixes standard reference, adds explicit zero-direction handling and paper/table equivalent. No source code or graphics copied. GeoGebra is an educator resource, not claimed as an institution-verified undergraduate curriculum."
+    },
+    {
+      "sections": "1.25; Activities1.27\u20131.28",
+      "source": "OU MST124 Unit5 pp173\u2013175, Example18, Activity44 and solution; OpenStax University Physics1 \u00a72.2 Example2.4 and CheckUnderstanding2.5",
+      "fit": "Original four-quadrant family plus axis/zero cases, wrong inverse-tangent diagnosis and round-trip rounding task. Angle ambiguity justified before rule. Rounding task is original synthesis, not a claim of an exact comparator match."
+    },
+    {
+      "sections": "1.26; Activity1.29",
+      "source": "OU MST124 Unit5 pp148\u2013151 bearings, pp175\u2013179 Activities45,47,48 and worked solutions; OpenStax University Physics1 \u00a72.2 Example2.5",
+      "fit": "Original comparison of standard and bearing conventions, directional wording, signs and reverse conversion. No force/velocity prerequisites imported; all physical examples are displacements."
+    },
+    {
+      "sections": "1.27; Activities1.30\u20131.31",
+      "source": "OU MST124 Unit5 pp179\u2013181 Example20 and Activity49; prior L03 three-dimensional magnitude and unit direction",
+      "fit": "Original two-stage route includes an independent perpendicular-stage length check; bearing-return task follows equivalent multi-stage demand. Final 3D task is an original synthesis of taught components, not spherical coordinates. No direct equivalent for the final underdetermination question is claimed."
+    }
+  ],
+  "subjectReview": {
+    "checks": [
+      "E21",
+      "A24",
+      "negative radian angle",
+      "A24 reverse conversion",
+      "E22",
+      "E22 magnitude",
+      "E23",
+      "A25a",
+      "A25b",
+      "A25 axis",
+      "swapped angle",
+      "A26 0",
+      "A26 90",
+      "A26 180",
+      "A26 270",
+      "A26 360",
+      "A26 30",
+      "A26 150",
+      "A26 210",
+      "A26 60",
+      "A26 halve",
+      "E24 angle",
+      "E24 length",
+      "A27 (3, 4)",
+      "A27 (-3, 4)",
+      "A27 (-3, -4)",
+      "A27 (3, -4)",
+      "A27 (-6, 0)",
+      "A27 (0, 2)",
+      "A27 (0, -2)",
+      "A28 components",
+      "A28 rounded angle",
+      "A28 length",
+      "E25",
+      "A29 bearing60",
+      "A29 std60",
+      "A29 westnorth",
+      "A29 bearingSW",
+      "E26 resultant",
+      "E26 length",
+      "E26 angle",
+      "A30 length",
+      "A30 bearing",
+      "A30 return",
+      "E27 horizontal",
+      "E27 norm",
+      "E27 unit",
+      "A31 horizontal",
+      "A31 norm",
+      "A31 unit"
+    ],
+    "passed": 50,
+    "method": "Independent Python trigonometry/hypot/atan2 and exact expected radicals; subject reasoning reviewed separately."
+  },
+  "readerReview": {
+    "reviewed": "Continuous lesson reread and separate prerequisite/reasoning pass; self-review, not independent human/student evaluation.",
+    "findingsAndRevisions": [
+      "Retrieved degrees/radians and right-triangle ratios explicitly rather than assuming OU Unit4 was already taught.",
+      "Explained inverse-tangent notation versus reciprocal and why the signed ratio loses half-turn information.",
+      "Stated local plane/north convention for bearings; distinguished angle turn from physical travel.",
+      "Explained special-angle ratios through triangle geometry and gave independent sign/magnitude checks.",
+      "Kept 3D horizontal projection length distinct from full magnitude and included a non-uniqueness question.",
+      "Preserved full derivation while splitting long calculations into meaningful aligned steps."
+    ],
+    "time": "75 explanation/examples +135 practice +30 feedback/retrieval minutes; four-hour planning estimate, unmeasured. Required explorer work has a paper equivalent; optional external sources not core workload."
+  },
+  "visualAndMathReview": {
+    "checks": "All seven figures visually inspected; desktop,900,390,320 widths; light/dark, hidden feedback, sidebar and section navigation. No page or equation overflow at tested widths. Full-span radical bars, stacked/nested fractions, scalable delimiters, upright units and aligned multi-step working. Native MathML works without JavaScript in website and embedded-image offline copy. 720px effective-width reflow checked as a 200%-zoom equivalent from1440px; not a claim of a separate assistive-technology or all-browser audit.",
+    "defectsAndFixes": [
+      "Initial inline chains overflowed mobile boxes: split expressions and align successive steps.",
+      "Converter did not implement aligned environment correctly: converted it to semantic MathML table rows, checked no raw ampersands/error elements.",
+      "Converter dropped upright-unit styling: emit unit labels as MathML text.",
+      "Set displaystyle on aligned tables to retain readable fractions.",
+      "Wait for lazy image decoding before final photograph inspection."
+    ],
+    "limitations": "Native mathematical markup is provided; screen-reader spoken output has not been manually audited. Automated checks support, not certify, teaching quality."
+  },
+  "interactiveReview": {
+    "source": "https://www.geogebra.org/m/QGYDPzJ2",
+    "scope": "Original displacement explorer with angle0\u2013360degrees and magnitude0\u20135m; no autoplay, records or physics simulation.",
+    "checks": "Unit tests across every integer angle and four magnitudes, plus independent special-angle checks. Browser tested cardinal axes,150degrees,zero,reset and keyboard arrows. Readout and SVG description update together; static diagram/table/feedback available without JavaScript. Reduced-motion browser preference used; no time animation."
+  },
+  "media": [
+    {
+      "file": "public/teaching/m101/apollo-sextant.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Sextant_from_Apollo_flight_AS-202.jpg",
+      "creator": "Steve Jurvetson",
+      "license": "CC BY2.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "None",
+      "sha256": "c44283e88d34463fd840dc1af76217d5989c051f76af38ae72b1e36044146543",
+      "inspection": "Photo and source/reuse record inspected; caption credits retained. Apollo context cross-checked against NASA guidance/navigation handbook pp205\u2013207.",
+      "contextSource": "https://www.nasa.gov/wp-content/uploads/static/history/alsj/CSM20_Guidance_%26_Navigation_pp205-222.pdf"
+    }
+  ],
+  "publicationReview": {
+    "tests": "85 site tests pass; structural media checker passes; production build passes with existing unrelated warnings.",
+    "preservation": "No earlier teaching fragments or shared math styles changed. Prior L03 pagination and catalogue availability change for the new release. P1011\u20134 remain published. No enrolment/progress/private records changes.",
+    "next": "Lesson5 unit review, cumulative exercise set, conclusion and compact unit PDF remain uncommissioned; do not begin automatically."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "module": "M101",
+  "unit": "U01",
+  "lesson": "L04",
+  "title": "Resolving and reconstructing components",
+  "standard": "1.9",
+  "status": "Authoring and publication explicitly commissioned",
+  "minutes": 240,
+  "allocation": [
+    75,
+    135,
+    30
+  ],
+  "sections": [
+    [
+      "1.22",
+      "Giving an angle meaning",
+      12,
+      15,
+      4
+    ],
+    [
+      "1.23",
+      "From a triangle to signed components",
+      16,
+      23,
+      5
+    ],
+    [
+      "1.24",
+      "Turning a vector through a circle",
+      10,
+      22,
+      4
+    ],
+    [
+      "1.25",
+      "Recovering direction from components",
+      14,
+      27,
+      6
+    ],
+    [
+      "1.26",
+      "The same direction, another convention",
+      11,
+      20,
+      4
+    ],
+    [
+      "1.27",
+      "Combining descriptions",
+      12,
+      28,
+      7
+    ]
+  ],
+  "prerequisites": "L01\u2013L03; retrieve sine/cosine, degrees/radians explicitly, no new physics assumptions",
+  "boundaries": "2D angles only; 3D components without spherical coordinates; no dot product, force equilibrium or Python; end-unit mixed exercises/PDF reserved for L05",
+  "visualPlan": "Angle arc/reference axis; right triangle; unit-circle explorer; opposite vectors inverse-tan pitfall; alternate-angle conventions; original route diagram; freely reusable sextant instrument photograph with optional context. Compare actual GeoGebra applet; include static alternative."
+}

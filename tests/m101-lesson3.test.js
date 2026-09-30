@@ -14,10 +14,10 @@ test('M101 Lesson 3 publishes by default with navigation, feedback and correctly
  assert.equal(new Set(ids).size,ids.length);
  for(const [,hash] of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(hash),hash);
  assert.match(html,/src\/teaching.css/);
- assert.match(html,/Next lesson outline: Resolving and reconstructing components/);
+ assert.match(html,/Next: Resolving and reconstructing components/);
  assert.match(read(base+'l02/index.html'),/Next: Magnitude and unit vectors/);
- assert.match(read(base+'index.html'),/Lessons 1–3 are available. Lessons 4–5/);
- assert.match(read('learn/index.html'),/Introduction &amp; Unit 1 lessons 1–3 available/);
- assert.match(read(base+'l04/index.html'),/Teaching materials forthcoming/);
+ assert.match(read(base+'index.html'),/Lessons 1–4 are available. Lesson 5/);
+ assert.match(read('learn/index.html'),/Introduction &amp; Unit 1 lessons 1–4 available/);
+ assert.match(read(base+'l05/index.html'),/Teaching materials forthcoming/);
  for(const [,asset] of html.matchAll(/src="(\/teaching\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)));
 });

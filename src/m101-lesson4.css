@@ -1,0 +1,23 @@
+/* Scoped to new Lesson 4; previously published mathematics is unchanged. */
+.m101-l04 math{font-family:math; color:inherit}
+.m101-l04 .equation{overflow-x:auto; padding:14px 4px; scrollbar-width:thin}
+.m101-l04 math[display="block"]{margin:.25em 0;font-size:1em}
+.m101-l04 .l04-table{overflow-x:auto;margin:22px 0}
+.m101-l04 .l04-table table{width:100%;border-collapse:collapse;font-size:17px}
+.m101-l04 th,.m101-l04 td{text-align:left;padding:12px;border-bottom:1px solid #aebcb7}
+.m101-l04 caption{text-align:left;font:14px/1.5 system-ui;margin-bottom:10px}
+.m101-l04 .figure-art svg text{font-size:20px}
+.m101-l04 .l04-label{paint-order:stroke;stroke:#fafaf6;stroke-width:5px;stroke-linejoin:round}
+.m101-l04 .l04-controls{padding:18px;background:#edf3ef}
+.m101-l04 .l04-controls label{display:block;font:16px/1.5 system-ui;margin:10px 0}
+.m101-l04 input[type="range"]{width:100%;accent-color:#267158;min-height:32px}
+.m101-l04 .l04-controls button{font:14px/1.5 system-ui;padding:9px 12px;border:1px solid #42665b;border-radius:5px;background:#fff;color:#25333a;cursor:pointer;margin-top:12px}
+.m101-l04 .l04-readout{font:15px/1.65 system-ui;padding:12px;min-height:90px}
+.m101-l04 .history::after{content:"";display:block;clear:both}
+.m101-l04 .float-figure{float:right;width:42%;margin:0 0 18px 24px}
+.m101-l04 .float-figure img{width:100%;height:auto;display:block}
+[data-theme="dark"] .m101-l04 .l04-controls{background:#263531}
+[data-theme="dark"] .m101-l04 .l04-controls button{background:#18251f;color:#edf3ef}
+@media(max-width:650px){.m101-l04 .float-figure{float:none;width:100%;margin:20px 0}.m101-l04 .equation{font-size:19px}.m101-l04 td,.m101-l04 th{padding:10px 7px}}
+
+.m101-l04 .math-vector{font-weight:700;font-style:normal}
