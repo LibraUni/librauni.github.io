@@ -1,0 +1,76 @@
+{
+  "module": "M101",
+  "unit": "U01",
+  "lesson": "L03",
+  "status": "Approved for publication 30 September 2026",
+  "standard": "1.8",
+  "minutes": 240,
+  "allocation": {
+    "explanation": 75,
+    "practice": 135,
+    "feedback": 30
+  },
+  "sections": [
+    [
+      "S01",
+      "1.15 From components to length",
+      12,
+      20,
+      4
+    ],
+    [
+      "S02",
+      "1.16 Length in three dimensions",
+      13,
+      20,
+      4
+    ],
+    [
+      "S03",
+      "1.17 What scaling does to magnitude",
+      10,
+      18,
+      4
+    ],
+    [
+      "S04",
+      "1.18 Keeping direction, removing scale",
+      14,
+      25,
+      5
+    ],
+    [
+      "S05",
+      "1.19 The coordinate unit vectors",
+      9,
+      18,
+      4
+    ],
+    [
+      "S06",
+      "1.20 Building a vector of a chosen length",
+      11,
+      20,
+      5
+    ],
+    [
+      "S07",
+      "1.21 One displacement, two descriptions",
+      6,
+      14,
+      4
+    ]
+  ],
+  "boundaries": "No trigonometry, dot products, general norms, coordinate rotations or Python. Unit vectors dimensionless; physical magnitude carries units. Unit 1 exercise set reserved for L05.",
+  "visualPlan": [
+    "signed right triangle and endpoint separation",
+    "exact square root contextual image of Babylonian tablet if verified reuse can be obtained",
+    "Astrobee photograph connected to genuine 3D navigation; invented numerical model clearly distinguished",
+    "two right triangles for 3D length, with perspective limitations explicit",
+    "opposite/equal-length arrows",
+    "normalisation shared-ray diagram",
+    "standard coordinate unit vectors",
+    "reconstruction comparison"
+  ],
+  "mediaDecision": "Evaluate sources first; no new interactive quota. Lesson2 already provides scalar manipulation, and the essential new work is deriving and checking length and normalisation. Consider purposeful static comparisons before adding another control."
+}

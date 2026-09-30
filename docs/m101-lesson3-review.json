@@ -1,0 +1,132 @@
+{
+  "status": "Approved by learner; publication authorised 30 September 2026",
+  "standard": "1.8; illustrated reference v0.4",
+  "reviewed": "2026-09-30",
+  "scope": "M101 B01 U01 L03; seven sections, seven worked examples, seven in-text activities, eight figures (six original diagrams and two sourced photographs). No new interactive or video: static constructions serve this lesson; scalar exploration already exists in L02. Unit-end mixed exercises and PDF remain due at unit completion.",
+  "calibration": [
+    {
+      "sections": "1.15",
+      "source": "OU MST124 Unit 5 pp138\u2013139, 171\u2013172; Activity43 and its solution",
+      "comparison": "Distinguish vector from scalar magnitude; derive with right triangle; exact square roots before decimals. Practice includes signed components, displacement from endpoints, and route versus separation; original prompts and numbers."
+    },
+    {
+      "sections": "1.16",
+      "source": "OU MST124 Unit5 pp171\u2013172, Activity43; OpenStax Calculus3 \u00a72.2 Example2.19",
+      "comparison": "Two right triangles precede 3D formula; include missing component with two signs, endpoint subtraction and a component lower-bound check. Source practice informs level, not wording."
+    },
+    {
+      "sections": "1.17",
+      "source": "OU MST124 Unit5 scalar-multiplication discussion pp144\u2013148; OpenStax Calculus3 \u00a72.1 vector operations",
+      "comparison": "Retrieve scaling, derive absolute-value magnitude rule, contrast sum of magnitudes with magnitude of sum. Original sign, zero and equal-length counterexamples."
+    },
+    {
+      "sections": "1.18\u20131.20",
+      "source": "OU MST124 Unit5 pp156\u2013157 (coordinate unit vectors); OpenStax Calculus3 \u00a72.1 Unit Vectors, Example2.7, Checkpoint2.8 and Example2.8; \u00a72.2 Example2.19",
+      "comparison": "OU excerpt supplies coordinate-basis presentation but is insufficient for arbitrary normalisation. OpenStax supplements same-direction unit vector and prescribed-length construction. Separate normalising, basis notation and reconstruction; explicitly treat zero, units, opposite direction and vectors shorter than one. Original examples/practice, including diagnostic incorrect answers."
+    },
+    {
+      "sections": "1.21",
+      "source": "OpenStax Calculus3 \u00a72.1 Example2.7/Checkpoint2.8; \u00a72.2 Example2.19",
+      "comparison": "Original cumulative endpoint/step problem combines component subtraction, length, unit direction and reconstruction. Does not introduce angle prerequisites or substitute for full-unit exercise set."
+    }
+  ],
+  "subjectReview": {
+    "arithmetic": {
+      "passed": [
+        "opening",
+        "E14",
+        "A17a1",
+        "A17a2",
+        "A17a3",
+        "3D construction",
+        "E15",
+        "A18a1",
+        "A18a2",
+        "A18a3",
+        "A18d",
+        "E16 sum",
+        "A17 endpoint",
+        "E15 endpoint",
+        "A18 missing square",
+        "A19 difference",
+        "A19 scale",
+        "E17 unit square",
+        "A20a1 unit square",
+        "A20a2 unit square",
+        "A20a3 unit square",
+        "A20b2 unit square",
+        "A20b3 unit square",
+        "E19 unit square",
+        "short vector",
+        "short normalised",
+        "E18 exact squared",
+        "E18 rounded squared",
+        "A20b1 not unit",
+        "A20c not unit",
+        "E20 endpoint",
+        "E20 opposite",
+        "A22a length square",
+        "A22b exact squared",
+        "A22c endpoint",
+        "A22d nonunit square",
+        "A22d rebuilt squared",
+        "A23 displacement",
+        "A23 length squared",
+        "A23 R",
+        "A23 remainder",
+        "A23 remainder squared",
+        "A23 sum",
+        "A23 S",
+        "A23 final squared"
+      ],
+      "decimalChecks": [
+        "8 sqrt(.72) rounds to 6.79",
+        "sexagesimal approximation rounds to 1.414213"
+      ],
+      "scope": "Independent arithmetic checks; geometric reasoning and derivations reviewed separately."
+    },
+    "reasoning": "Reviewed two-triangle derivation, negative components and absolute scale, dimensionless normalisation, zero exception, same/opposite direction, coordinate basis and endpoint versus displacement distinctions."
+  },
+  "readerReview": {
+    "revisions": [
+      "Added an explicit short-vector example: normalising can lengthen, not just shrink.",
+      "Restricted bare magnitude-one comparisons to dimensionless vectors.",
+      "Separated physical displacement units from dimensionless direction components in prose and figures.",
+      "Clarified exact square roots versus rounded unit-vector checks.",
+      "Clarified numerical model is invented, not a measurement inferred from the Astrobee photograph."
+    ],
+    "workload": "75 explanation/examples +135 practice +30 retrieval/feedback minutes =240. Estimates are unmeasured; no student timing study."
+  },
+  "visualReview": {
+    "revisions": [
+      "Corrected tablet description to modern numerical annotations, not coloured markings.",
+      "Split 3D construction into two responsive panels so labels remain legible on narrow screens; explicit different-scale caption."
+    ],
+    "checks": "All eight desktop figures and dark example inspected. Four-width overflow checks, image loading, keyboard feedback, sidebar and section navigation passed. Final mobile-panel and offline checks recorded separately. Final stacked mobile panels and standalone opening were visually inspected; offline embedded images and 320px layout pass. Hints and feedback work without JavaScript in both site and offline copy."
+  },
+  "integrationReview": {
+    "base": "e83223b",
+    "previewFlag": "Removed for release; Lesson 3 renders by default",
+    "default": "Lesson 3 is complete teaching; catalogues and adjacent lesson links updated. Lessons 4\u20135 remain outlines.",
+    "checks": "83 site tests, media structural checks and production build pass. Chrome checks pass at four widths with loaded images, unique IDs/anchors, keyboard feedback, section links, theme and 1200px hidden-sidebar reading width. Prior offline/no-JavaScript checks also passed."
+  },
+  "media": [
+    {
+      "file": "public/teaching/m101/astrobee.jpg",
+      "source": "https://www.nasa.gov/technology/robotics/nasa-seeks-input-for-astrobee-free-flying-space-robots/",
+      "reuse": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "credit": "NASA; ISS069-E-010815, 16 May 2023",
+      "sha256": "75ad4be707c27921ce64b50990c9e36b0b7a6ce2816a2fdcacffbbfd36e33e40",
+      "inspection": "Source, reuse statement and actual image inspected; downloaded unchanged."
+    },
+    {
+      "file": "public/teaching/m101/ybc-7289.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:YBC-7289-OBV-labeled.jpg",
+      "reuse": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "A. Urcia, Yale Peabody Museum; annotations Theodor Langhorne Franklin",
+      "sha256": "7f5267fd8fea82e61b8d2051cbb920592e3658d5820ca286434938227a37d64f",
+      "inspection": "Source, reuse statement and actual image inspected; downloaded unchanged."
+    }
+  ],
+  "limitations": "Author self-review and automated checks, not independent human/student validation. Private OU materials are calibration only and are not included in public lesson assets. Optional linked sources remain external. Lessons 4\u20135, unit-end exercises and unit PDF not part of this increment."
+}

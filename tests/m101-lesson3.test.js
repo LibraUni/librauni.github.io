@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
+const base='learn/physics/stage-1/m101/b01/u01/';
+test('M101 Lesson 3 publishes by default with navigation, feedback and correctly bounded availability',()=>{
+ const html=read(base+'l03/index.html');
+ assert.doesNotMatch(html,/Local draft|not published|Teaching materials forthcoming|__\w+__|data-study-id|src="\/src\/study-ui.js"/);
+ for(let i=1;i<=7;i++)assert.ok(html.includes(`id="M101-U01-L03-S0${i}"`));
+ for(let i=17;i<=24;i++)assert.ok(html.includes(`id="m101-u01-fig-${i}"`));
+ assert.equal((html.match(/class="activity"/g)||[]).length,7);
+ assert.equal((html.match(/class="example"/g)||[]).length,7);
+ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(new Set(ids).size,ids.length);
+ for(const [,hash] of html.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(hash),hash);
+ assert.match(html,/src\/teaching.css/);
+ assert.match(html,/Next lesson outline: Resolving and reconstructing components/);
+ assert.match(read(base+'l02/index.html'),/Next: Magnitude and unit vectors/);
+ assert.match(read(base+'index.html'),/Lessons 1–3 are available. Lessons 4–5/);
+ assert.match(read('learn/index.html'),/Introduction &amp; Unit 1 lessons 1–3 available/);
+ assert.match(read(base+'l04/index.html'),/Teaching materials forthcoming/);
+ for(const [,asset] of html.matchAll(/src="(\/teaching\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)));
+});

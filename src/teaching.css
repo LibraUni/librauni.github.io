@@ -169,3 +169,7 @@
 :root[data-theme=dark] .teaching-reading .code-copy-controls button{color:#bac8cf}
 :root[data-theme=dark] .teaching-reading .code-copy-controls [role=status]:not(:empty){background:#20323c;color:#edf3f6}
 @media print{.teaching-reading .code-copy-controls{display:none}.teaching-reading .copyable-code pre{padding-right:20px}}
+
+.teaching-reading .l03-comparison{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.teaching-reading #m101-u01-fig-20{clear:both}
+@media(max-width:650px){.teaching-reading .l03-comparison{grid-template-columns:1fr}}

@@ -1,5 +1,9 @@
 # LibraUni public website
 
+## M101 Lesson 3 approved release — 30 September 2026
+
+The learner explicitly approved and authorised publication of M101 U01-L03 “Magnitude and unit vectors”. It now renders by default, with catalogue/module/unit availability and adjacent lesson navigation updated. Read docs/m101-lesson3-review.json and docs/m101-lesson3-plan.json for calibration, source credits, reviews and workload. Seven sections, seven examples, seven activities and eight figures; standard 1.8 and approved reference v0.4 preserved. All 83 site tests, media checks, build and release browser checks pass. Lessons 4–5 remain outlines; full-unit exercises, conclusion and compact reference PDF remain due at unit completion. Preserve unrelated editorial drafts and P101 work. No enrolment or private records changed.
+
 This repository is public. Never add learner records, answers, marks, tutor notes, cloud credentials, or private backup contents. Firebase web configuration is public application configuration; privileged secrets are not. Use GitHub Pages. Keep study progress private in Firebase, with explicit owner-only access rules. Do not invent course content or learning achievements. Apply the agreed licensing policy to future publications: public course materials under CC BY-NC-SA 4.0, website source code under MIT, and the LibraUni name, logo, black-hole mark, wordmark and visual identity excluded from those licences. Run build and relevant tests before publishing.
 
 Every public page must include the shared licence-link and official /licenses/cc-by-nc-sa.svg badge beside “Licence & reuse”, with accessible text making clear that it covers course materials and exclusions apply. HTML pages that reference /src files must be Vite build entries, never unprocessed public copies.
