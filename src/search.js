@@ -1,5 +1,6 @@
 import './search.css';
 import {searchTitles} from './search-titles.js';
+import {filterContentResults} from './search-content.js';
 
 const actions=document.querySelector('.header-actions');
 if(actions)mountSearch(actions);
@@ -77,7 +78,7 @@ function mountSearch(actions){
    results.append(li);
   }
   shown+=data.length;more.hidden=shown>=allResults.length;
-  status.textContent=allResults.length?`${allResults.length} matching ${allResults.length===1?'page':'pages'}. Showing ${shown}.`:'No results. Try another word or phrase, or turn off Titles only.';
+  status.textContent=allResults.length?`${allResults.length} matching ${allResults.length===1?'page':'pages'}. Showing ${shown}.`:form.elements.titles.checked?'No results. Try another word or phrase, or turn off Titles only.':'No results. Try another word or phrase.';
  }
  async function search(){
   clearTimeout(timer);const token=++request;
@@ -104,6 +105,7 @@ function mountSearch(actions){
     const filters={status:'available'};
     if(module.value)filters.module=module.value;
     found=await api.search(query,{filters});
+    found.results=await filterContentResults(query,found.results,()=>token===request&&dialog.open);
    }
    if(token!==request||!dialog.open)return;
    allResults=found.results;await appendResults(token);

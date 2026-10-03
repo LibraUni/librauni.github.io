@@ -8,13 +8,13 @@ The normal publication build generates the index after Vite, so Pages publishes 
 
 Validation:
 
-- All 91 Node tests passed, including a real Pagefind rebuild fixture for additions, revisions and deletions, plus private-content/feedback/outline/archive exclusions and title-prefix matching, exact-first ranking and quoted-phrase restrictions.
+- All 95 Node tests passed, including a real Pagefind rebuild fixture for additions, revisions and deletions, plus private-content/feedback/outline/archive exclusions and title-prefix matching, exact-first ranking and quoted-phrase restrictions.
 - Production build passed and generated the index. Existing large-bundle advisory remains unrelated to search.
 - Local Chrome checks passed for results, pagination, module codes, title-only words and phrases, module filtering, exact-phrase no-results, section-link destinations, arrow keys, Enter/submit, Escape, focus return and Command-K.
 - Layout checks passed at 375, 768 and 1440 pixels; mobile and dark-mode screenshots were visually inspected.
 - A blocked-index request produced the retry message; teaching remained readable with JavaScript disabled. No page exceptions occurred during the normal browser checks.
 - Regenerated source HTML differs only by search-availability markers; original teaching and existing section IDs are preserved.
 
-Pagefind uses partial-word matching by default. Quotation marks request an exact phrase. Search is textual, not equation-aware. PDF/notebook contents require a future extraction step; their links and descriptions are searchable now. See README for authoring markers and local build/preview instructions.
+Pagefind supplies candidates, which are checked against indexed text to reject reverse-prefix/stem fallbacks such as quantum matching Q. Only forward prefixes count; snippets follow the same rule. Quotation marks require an exact phrase. Verified in the preview: quantum returns no results while vector still matches vectors. Search is textual, not equation-aware. PDF/notebook contents require a future extraction step; their links and descriptions are searchable now. See README for authoring markers and local build/preview instructions.
 
 Publication is separate from this implementation review. No production deployment was performed.
