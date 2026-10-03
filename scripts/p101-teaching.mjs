@@ -6,7 +6,7 @@ const unit=p101Home+'b01/u01/';
 const lesson=unit+'l01/';
 export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/'];
 export function addP101Teaching({root,pages,extraRails,link}){
- const read=name=>'<div class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
+ const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
  const nav=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
  const module=pages.find(p=>p[0]===p101Home);
@@ -28,22 +28,22 @@ export function addP101Teaching({root,pages,extraRails,link}){
  extraRails.set(lesson2,{title:'In this lesson',back:unit,items:[...secondSections,{href:'#references',title:'Further reading and context'}]});
  const lesson3=unit+'l03/';
  const thirdFragment=fs.readFileSync(root+'content/p101/lesson3.html','utf8');
- pages.find(p=>p[0]===lesson3)[3]='<div class="teaching-reading p101-reading p101-l3">'+thirdFragment+'</div>'+nav(link(lesson2,'← Lesson 2'),link(unit+'l04/','Lesson 4 →'));
+ pages.find(p=>p[0]===lesson3)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-l3">'+thirdFragment+'</div>'+nav(link(lesson2,'← Lesson 2'),link(unit+'l04/','Lesson 4 →'));
  const thirdSections=[...thirdFragment.matchAll(/<section class="chapter" id="(P101-U01-L03-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(lesson3,{title:'In this lesson',back:unit,items:[...thirdSections,{href:'#references',title:'Further reading and context'}]});
  const lesson4=unit+'l04/';
  const fourthFragment=fs.readFileSync(root+'content/p101/lesson4.html','utf8');
- pages.find(p=>p[0]===lesson4)[3]='<div class="teaching-reading p101-reading p101-l4">'+fourthFragment+'</div>'+nav(link(lesson3,'← Lesson 3'),link(unit+'l05/','Lesson 5 →'));
+ pages.find(p=>p[0]===lesson4)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-l4">'+fourthFragment+'</div>'+nav(link(lesson3,'← Lesson 3'),link(unit+'l05/','Lesson 5 →'));
  const fourthSections=[...fourthFragment.matchAll(/<section class="chapter" id="(P101-U01-L04-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(lesson4,{title:'In this lesson',back:unit,items:[...fourthSections,{href:'#references',title:'Further reading and context'}]});
  const lesson5=unit+'l05/';
  const fifthFragment=fs.readFileSync(root+'content/p101/lesson5.html','utf8');
- pages.find(p=>p[0]===lesson5)[3]='<div class="teaching-reading p101-reading p101-l5">'+fifthFragment+'</div>'+nav(link(lesson4,'← Lesson 4'),link(unit+'l06/','Lesson 6 · Unit review →'));
+ pages.find(p=>p[0]===lesson5)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-l5">'+fifthFragment+'</div>'+nav(link(lesson4,'← Lesson 4'),link(unit+'l06/','Lesson 6 · Unit review →'));
  const fifthSections=[...fifthFragment.matchAll(/<section class="chapter" id="(P101-U01-L05-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(lesson5,{title:'In this lesson',back:unit,items:[...fifthSections,{href:'#references',title:'Further reading and context'}]});
  const lesson6=unit+'l06/';
  const sixthFragment=fs.readFileSync(root+'content/p101/lesson6.html','utf8');
- pages.find(p=>p[0]===lesson6)[3]='<div class="teaching-reading p101-reading p101-l6">'+sixthFragment+'</div>'+nav(link(lesson5,'← Lesson 5'),link(p101Home+'b01/u02/','Next: Unit 2 outline →'));
+ pages.find(p=>p[0]===lesson6)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-l6">'+sixthFragment+'</div>'+nav(link(lesson5,'← Lesson 5'),link(p101Home+'b01/u02/','Next: Unit 2 outline →'));
  const sixthSections=[...sixthFragment.matchAll(/<section class="chapter" id="(P101-U01-L06-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(lesson6,{title:'In this lesson',back:unit,items:[...sixthSections,{href:'#references',title:'Further reading and context'}]});
  for(const planned of p101Block1Lessons.lessons){
