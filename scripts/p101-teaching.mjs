@@ -4,7 +4,7 @@ import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
 export const p101Home='/learn/physics/stage-1/p101/';
 const unit=p101Home+'b01/u01/';
 const lesson=unit+'l01/';
-export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/'];
+export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/'];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
@@ -12,7 +12,7 @@ export function addP101Teaching({root,pages,extraRails,link}){
  const module=pages.find(p=>p[0]===p101Home);
  module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
  const u=pages.find(p=>p[0]===unit);
- u[3]=notice+read('unit')+nav(link(p101Home,'← Module introduction'),link(lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U01').map((l,i)=>'<p>'+link(unit+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<4?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>The complete unit exercise set, conclusion and reference resources will follow with Lesson 6.</p></section>';
+ u[3]=notice+read('unit')+nav(link(p101Home,'← Module introduction'),link(lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U01').map((l,i)=>'<p>'+link(unit+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<5?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>The complete unit exercise set, conclusion and reference resources will follow with Lesson 6.</p></section>';
  const l=pages.find(p=>p[0]===lesson);l[3]=notice+read('lesson')+nav(link(unit,'← Unit introduction'),link(unit+'l02/','Lesson 2 →'));
  const fragment=fs.readFileSync(root+'content/p101/lesson.html','utf8');
  const sections=[...fragment.matchAll(/<section class="chapter" id="(P101-U01-L01-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
@@ -20,7 +20,7 @@ export function addP101Teaching({root,pages,extraRails,link}){
  pages.push([p101Home+'orientation/','P101 · Practical orientation',[],notice+read('orientation')+nav(link(p101Home,'← Module introduction'),link(unit,'Unit 1 →'))]);
  extraRails.set(p101Home+'orientation/',{title:'Practical orientation',back:p101Home,items:[]});
  const block=pages.find(p=>p[0]===p101Home+'b01/');
- block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+extraRails.get(p101Home+'b01/').items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(item.unitId==='U01'?' · Introduction and first four lessons available':' · Outline')+'</p>').join('');
+ block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+extraRails.get(p101Home+'b01/').items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(item.unitId==='U01'?' · Introduction and first five lessons available':' · Outline')+'</p>').join('');
  const lesson2=unit+'l02/';
  const secondFragment=fs.readFileSync(root+'content/p101/lesson2.html','utf8');
  pages.find(p=>p[0]===lesson2)[3]=read('lesson2')+nav(link(lesson,'← Lesson 1'),link(unit+'l03/','Lesson 3 →'));
@@ -33,12 +33,17 @@ export function addP101Teaching({root,pages,extraRails,link}){
  extraRails.set(lesson3,{title:'In this lesson',back:unit,items:[...thirdSections,{href:'#references',title:'Further reading and context'}]});
  const lesson4=unit+'l04/';
  const fourthFragment=fs.readFileSync(root+'content/p101/lesson4.html','utf8');
- pages.find(p=>p[0]===lesson4)[3]='<div class="teaching-reading p101-reading p101-l4">'+fourthFragment+'</div>'+nav(link(lesson3,'← Lesson 3'),link(unit+'l05/','Next lesson plan →'));
+ pages.find(p=>p[0]===lesson4)[3]='<div class="teaching-reading p101-reading p101-l4">'+fourthFragment+'</div>'+nav(link(lesson3,'← Lesson 3'),link(unit+'l05/','Lesson 5 →'));
  const fourthSections=[...fourthFragment.matchAll(/<section class="chapter" id="(P101-U01-L04-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(lesson4,{title:'In this lesson',back:unit,items:[...fourthSections,{href:'#references',title:'Further reading and context'}]});
+ const lesson5=unit+'l05/';
+ const fifthFragment=fs.readFileSync(root+'content/p101/lesson5.html','utf8');
+ pages.find(p=>p[0]===lesson5)[3]='<div class="teaching-reading p101-reading p101-l5">'+fifthFragment+'</div>'+nav(link(lesson4,'← Lesson 4'),link(unit+'l06/','Next lesson plan →'));
+ const fifthSections=[...fifthFragment.matchAll(/<section class="chapter" id="(P101-U01-L05-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
+ extraRails.set(lesson5,{title:'In this lesson',back:unit,items:[...fifthSections,{href:'#references',title:'Further reading and context'}]});
  for(const planned of p101Block1Lessons.lessons){
   const path=p101Home+'b01/'+planned.unit.toLowerCase()+'/'+planned.id.split('-').at(-1).toLowerCase()+'/';
-  if(path===lesson||path===lesson2||path===lesson3||path===lesson4)continue;
+  if(path===lesson||path===lesson2||path===lesson3||path===lesson4||path===lesson5)continue;
   const page=pages.find(p=>p[0]===path);
   page[3]=notice+'<p class="eyebrow">P101 · Block 1 · '+planned.unit+' · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned hours, including '+planned.pythonHours+' hours of Python. Teaching is in preparation.</p>'+nav(link(p101Home+'b01/'+planned.unit.toLowerCase()+'/','← Unit outline'),'');
  }

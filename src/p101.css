@@ -54,3 +54,16 @@
 [data-theme=dark] .p101-l4 :is(.l4-question,.l4-branches>div,.l4-index-strip>div){background:#20343c;color:#e5ece9;border-color:#63828c}
 [data-theme=dark] .p101-l4 .l4-index-strip strong{color:#b8dce9}
 @media(max-width:650px){.p101-l4 .l4-branches{grid-template-columns:1fr}.p101-l4 .l4-index-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Lesson 5: explicit input/output and local-scope diagrams. */
+.p101-l5 .l5-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.p101-l5 .l5-flow>div,.p101-l5 .l5-scope>div{border:1px solid var(--line);border-radius:10px;padding:18px;background:#eff3ef}
+.p101-l5 .l5-flow p,.p101-l5 .l5-scope p{font-size:.95em;margin:12px 0 0}
+.p101-l5 .l5-scope{display:grid;grid-template-columns:1fr 1.4fr;gap:18px}
+.p101-l5 .l5-table table{width:100%;table-layout:fixed;margin:0}.p101-l5 .l5-table :is(th,td){overflow-wrap:anywhere}
+.p101-l5 .l5-photo{float:right;width:43%;margin:0 0 22px 28px}.p101-l5 .l5-context{display:flow-root}
+.p101-l5 .l5-photo img{width:100%;height:auto;max-height:none}.p101-l5 .l5-photo figcaption{font-size:.82em}
+[data-theme="dark"] .p101-l5 .l5-flow>div,[data-theme="dark"] .p101-l5 .l5-scope>div{background:#20383d}
+@media(max-width:900px){.p101-l5 .l5-photo{float:none;width:100%;max-width:500px;margin:20px auto}.p101-l5 .l5-flow,.p101-l5 .l5-scope{grid-template-columns:1fr}}
+.p101-l5 pre code{font-size:1em}
+.p101-l5 .l5-table th:nth-child(1){width:20%}.p101-l5 .l5-table th:nth-child(2){width:26%}.p101-l5 .l5-table th:nth-child(3){width:18%}.p101-l5 .l5-table th:nth-child(4){width:36%}

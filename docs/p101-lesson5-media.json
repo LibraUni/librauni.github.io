@@ -1,0 +1,15 @@
+{
+  "checked": "2026-10-03",
+  "assets": [
+    {
+      "file": "public/media/p101/optimism-test-drive.jpg",
+      "figure": "1.24",
+      "source": "https://www.jpl.nasa.gov/images/pia23964-perseverance-test-rovers-first-drive/",
+      "download": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA23964.jpg",
+      "credit": "Courtesy NASA/JPL-Caltech",
+      "rights": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+      "inspection": "Actual image inspected: six-wheeled engineering rover indoors, engineers and test equipment. Earth test vehicle OPTIMISM, not Mars surface. Source dates test 1 September 2020. No crop or edits. Contextual educational use; no endorsement.",
+      "sha256": "ad32771e76d32db3c70a33d35b84f3cd531f619d2303098a56d85ff1ddfd5716"
+    }
+  ]
+}
