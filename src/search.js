@@ -16,7 +16,7 @@ function mountSearch(actions){
  const dialog=document.createElement('dialog');
  dialog.className='search-dialog';dialog.setAttribute('aria-labelledby','search-title');
  dialog.innerHTML=`<div class="search-heading"><h2 id="search-title">Search learning materials</h2><button type="button" class="search-close" aria-label="Close search">×</button></div>
- <form class="search-form" role="search"><label for="learning-search">Words, topics or module codes</label><div class="search-input-row"><input id="learning-search" type="search" placeholder="Try vectors or uncertainty" autocomplete="off" spellcheck="false" enterkeyhint="search"><button type="submit">Search</button></div>
+ <form class="search-form" role="search"><label for="learning-search">Words, topics or module codes</label><div class="search-input-row"><input id="learning-search" type="search" placeholder="Try vectors or uncertainty" autocomplete="off" spellcheck="false" enterkeyhint="search"></div>
  <div class="search-filters"><label><input type="checkbox" name="titles" aria-describedby="search-title-help"> Titles only</label><label class="search-module-label" for="search-module">Module <select id="search-module" aria-label="Module"><option value="">All modules</option></select></label></div><p class="search-help" id="search-title-help">Titles only searches lesson, unit and higher-level page titles. Word beginnings work too: vector finds vectors. Use quotation marks for an exact phrase.</p></form>
  <p class="search-status" role="status" aria-live="polite">Search available lessons and introductions.</p><ol class="search-results" aria-label="Search results"></ol><button type="button" class="search-more" hidden>Show more results</button>`;
  document.body.append(dialog);
@@ -110,7 +110,7 @@ function mountSearch(actions){
    if(token!==request||!dialog.open)return;
    allResults=found.results;await appendResults(token);
   }catch{
-   if(token===request)status.textContent='Search could not load. Check your connection and try Search again. You can still browse Learning materials.';
+   if(token===request)status.textContent='Search could not load. Check your connection and try typing again. You can still browse Learning materials.';
   }
  }
  input.addEventListener('input',()=>{clearTimeout(timer);request++;results.replaceChildren();more.hidden=true;status.textContent=input.value.trim()?'Searching…':'Search available lessons and introductions.';timer=setTimeout(search,180);});

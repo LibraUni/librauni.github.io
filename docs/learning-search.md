@@ -17,4 +17,4 @@ Validation:
 
 Pagefind supplies candidates, which are checked against indexed text to reject reverse-prefix/stem fallbacks such as quantum matching Q. Only forward prefixes count; snippets follow the same rule. Quotation marks require an exact phrase. Verified in the preview: quantum returns no results while vector still matches vectors. Search is textual, not equation-aware. PDF/notebook contents require a future extraction step; their links and descriptions are searchable now. See README for authoring markers and local build/preview instructions.
 
-Publication is separate from this implementation review. No production deployment was performed.
+Publication authorised by the user after preview review. The redundant submit button has been removed; typing updates results automatically and Enter still triggers an immediate search. The Pages workflow must pass security checks, tests and the build before deploying.
