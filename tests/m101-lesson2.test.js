@@ -17,8 +17,8 @@ test('Lesson 2 is integrated as complete teaching, with sequential figures and p
  assert.match(html,/m101-vector-lab.js/);
  assert.match(html,/Static alternative for Figure 1.16/);
  assert.match(html,/9 minutes 51 seconds/);
- assert.match(read(base+'index.html'),/Lessons 1–4 are available. Lesson 5/);
+ assert.match(read(base+'index.html'),/All five lessons, the complete unit exercise set/);
  assert.match(read(base+'l01/index.html'),/Next: Adding and scaling vectors/);
- assert.match(read(base+'l05/index.html'),/Teaching materials forthcoming/);
+ assert.match(read(base+'l05/index.html'),/Exercise 1.14/);
  for(const [,asset] of html.matchAll(/src="(\/teaching\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)));
 });

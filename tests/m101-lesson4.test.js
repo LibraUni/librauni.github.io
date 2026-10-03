@@ -17,9 +17,9 @@ test('Lesson 4 releases with semantic maths, accessible static practice and boun
  for(const element of ['math','msqrt','mfrac'])assert.match(html,new RegExp('<'+element));
  assert.match(html,/Discussion and static alternative/);
  assert.match(html,/m101-angle-lab.js/);
- assert.match(read(base+'index.html'),/Lessons 1–4 are available. Lesson 5/);
+ assert.match(read(base+'index.html'),/All five lessons, the complete unit exercise set/);
  assert.match(read(base+'l03/index.html'),/Next: Resolving and reconstructing components/);
- assert.match(read(base+'l05/index.html'),/Teaching materials forthcoming/);
+ assert.match(read(base+'l05/index.html'),/Exercise 1.14/);
  for(const [,asset] of html.matchAll(/src="(\/teaching\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)));
 });
 test('Angle explorer preserves signs, quadrants, magnitudes and zero cases',()=>{

@@ -1,0 +1,240 @@
+{
+  "module": "M101",
+  "unit": "U01",
+  "lesson": "U01-L05",
+  "date": "2026-10-03",
+  "standard": "1.9",
+  "disposition": "Approved for publication; live verification pending",
+  "scope": {
+    "sections": "1.28–1.33",
+    "examples": "1.28–1.29",
+    "activity": "1.32",
+    "exercises": "1.1–1.14",
+    "figures": "1.32–1.35",
+    "key": "1.25",
+    "resources": "Matching on-page reference and two-page PDF; durable offline reading copy"
+  },
+  "constructionGate": "Approved M101 module/unit map and B01 lesson blueprint checked; six-section plan written before detailed content. No untaught vector products, force laws or coding required. PDF compiles results from published L01–L04, not new theory.",
+  "calibration": [
+    {
+      "sections": "1.28,1.32",
+      "source": "Private supplied OU MST124 Unit5 section6.4 pp171–178; approved LibraUni v0.4 and current L01–L04",
+      "inspected": "Magnitude/component-direction exposition, Example18, green magnitude/component result boxes; fixed reference prose and existing lesson key results",
+      "fit": "The new lesson is an original synthesis, not a new explanation of trigonometry. Same emphasis on conditions, sign interpretation and connected prose. OU excludes full 3D direction here; our already-taught normalisation supports 3D exercises."
+    },
+    {
+      "sections": "1.29,1.31",
+      "source": "OU Unit5 Example18 p174, Activity44 p175 and solution p200; OpenStax University Physics1 §2.3 https://openstax.org/books/university-physics-volume-1/pages/2-3-algebra-of-vectors",
+      "inspected": "Sketch before inverse trigonometry; separate quadrant/axis reasoning; component arithmetic and interpretation of a check",
+      "fit": "Original error diagnosis and correction workflow. Numerical agreement explicitly distinguished from proof. No extra assessment."
+    },
+    {
+      "sections": "1.30",
+      "source": "OU Unit5 activities24,38–39,43–49 and solutions44–48; OpenStax Chapter2 Problems https://openstax.org/books/university-physics-volume-1/pages/2-problems (38–39,42–49,54,58) and Conceptual Questions https://openstax.org/books/university-physics-volume-1/pages/2-conceptual-questions (10–16,20)",
+      "inspected": "Component combinations, exact magnitudes, conversion in different angle conventions, multi-stage endpoint/return tasks, unit-vector construction, zero and equal-length distinctions",
+      "fit": "Representative practice calibrated for prerequisite, scaffolding and demand. Original questions and situations, not close paraphrases. Our 14 bounded questions interleave methods, include units/origin errors and a counterexample; we omit force laws, products and seven-leg navigation tasks. No numerical quota inferred from comparator."
+    },
+    {
+      "sections": "1.33",
+      "source": "Published M101 unit introduction; approved U02 outline; NASA Manhattan source https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/NewYorkCity.htm",
+      "inspected": "Opening question about distance without direction; image/source/limitations; U02 products/projections role",
+      "fit": "Original conclusion returns to that opening and previews U02 without requiring its methods."
+    }
+  ],
+  "exerciseCoverage": [
+    {
+      "n": 1,
+      "minutes": 4,
+      "coverage": [
+        "L01 line",
+        "L01 origin",
+        "units"
+      ]
+    },
+    {
+      "n": 2,
+      "minutes": 4,
+      "coverage": [
+        "L01 point/position/displacement",
+        "L02 equality/opposite"
+      ]
+    },
+    {
+      "n": 3,
+      "minutes": 5,
+      "coverage": [
+        "L02 units/addition",
+        "L03 magnitude/exact"
+      ]
+    },
+    {
+      "n": 4,
+      "minutes": 5,
+      "coverage": [
+        "L02 arithmetic/distribution",
+        "3D",
+        "unknown vector"
+      ]
+    },
+    {
+      "n": 5,
+      "minutes": 5,
+      "coverage": [
+        "L02 scaling",
+        "L03 scaling magnitude",
+        "normalisation"
+      ]
+    },
+    {
+      "n": 6,
+      "minutes": 6,
+      "coverage": [
+        "L01 3D/endpoints",
+        "L03 magnitude/unit vector"
+      ]
+    },
+    {
+      "n": 7,
+      "minutes": 6,
+      "coverage": [
+        "L03 normalise/scale",
+        "zero exception"
+      ]
+    },
+    {
+      "n": 8,
+      "minutes": 6,
+      "coverage": [
+        "L04 radians/degrees",
+        "L04 resolve/quadrants"
+      ]
+    },
+    {
+      "n": 9,
+      "minutes": 5,
+      "coverage": [
+        "L03 zero/magnitude",
+        "L04 reconstruct/axis"
+      ]
+    },
+    {
+      "n": 10,
+      "minutes": 6,
+      "coverage": [
+        "L04 bearings/convention"
+      ]
+    },
+    {
+      "n": 11,
+      "minutes": 6,
+      "coverage": [
+        "L02 sum/difference",
+        "L03 magnitude vs distance"
+      ]
+    },
+    {
+      "n": 12,
+      "minutes": 12,
+      "coverage": [
+        "L01 position/origin",
+        "L02 combine",
+        "L03 length",
+        "L04 bearing/mixed"
+      ]
+    },
+    {
+      "n": 13,
+      "minutes": 8,
+      "coverage": [
+        "L01 3D endpoints",
+        "L03 unit/magnitude",
+        "L04 horizontal components"
+      ]
+    },
+    {
+      "n": 14,
+      "minutes": 6,
+      "coverage": [
+        "L03 unit constraint",
+        "L02 cancellation",
+        "conceptual counterexample"
+      ]
+    }
+  ],
+  "subjectReview": {
+    "numericChecks": 105,
+    "results": "All independently computed checks passed: all numeric worked examples/activity/exercise results, quadrant/axis/zero reasoning, route endpoints and closing return, horizontal vs 3D length, reference quadrant cases. Source maths-review.json in authoring workspace. Qualitative answers separately reviewed.",
+    "units": "Coordinate basis notation included in E2; dimensionless unit vectors distinguished from lengths. E3 converts centimetres before adding. E6 net vertical change does not imply constant height."
+  },
+  "readerReview": {
+    "method": "Author self-review with preceding lessons and comparator; not independent human or student validation",
+    "changes": [
+      "Added coordinate-unit-vector notation to E2 to close a coverage gap.",
+      "Retained an explicit no-unique-direction answer for zero, not angle zero.",
+      "Separated horizontal length from full 3D magnitude in E13 and its schematic.",
+      "Kept all hints separate from full worked solutions, with exact return links.",
+      "Made all 14 exercises core, with an explicit midpoint break and honest time estimates; no hidden optional prerequisite.",
+      "Added a targeted return table linking exact previous teaching sections, not generic reread instructions."
+    ]
+  },
+  "visualReview": {
+    "media": "Three original SVGs plus deliberately revisited NASA Manhattan photograph from opening; image decoded and inspected. Figure labels/geometry checked; side-view right triangle uses matching 6:8 proportions. Desktop side captions, mobile stacked captions.",
+    "changes": [
+      "Split nine long display chains at meaningful equals signs rather than reduce equation size.",
+      "Moved the 30-degree label away from an axis number.",
+      "Narrow-screen diagrams preserve readable labels in focusable horizontal scrollers with visible guidance.",
+      "Reference table revised from equal columns to 26/74 proportions and stacks on mobile.",
+      "PDF initially spilled to a third page; spacing/font revised to two, then every final page rendered with Poppler and inspected."
+    ],
+    "maths": "Semantic MathML, radicals spanning complete sums, stacked fractions, sized delimiters and aligned steps. Underlying LaTeX authoring kept locally. 137 MathML expressions in lesson.",
+    "checks": "Chrome desktop/mobile widths1440,900,720,390,320; all opened solutions; light/dark, keyboard disclosures, sidebar1200px, links/anchors, image loading, offline/no-JS; 720px is a 200%-zoom-equivalent reflow check, not a complete assistive-technology audit."
+  },
+  "mediaRegister": [
+    {
+      "figure": "1.35",
+      "asset": "public/teaching-samples/m101/manhattan.jpg",
+      "creator": "NASA ISS Crew Earth Observations Facility / Earth Science and Remote Sensing Unit, JSC; ISS039-E-18538",
+      "source": "https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/NewYorkCity.htm",
+      "reuse": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "checked": "2026-10-03; source identifies 5 May2014 image and NASA processing; NASA media educational use guidance checked",
+      "changes": "Existing site resized image; NASA labels/processing retained. No new site annotation. Not redistributed in reference PDF.",
+      "purpose": "Revisit opening city grid to distinguish real image, mathematical coordinate system and route/endpoints."
+    },
+    {
+      "figures": "1.32–1.34",
+      "creator": "Original LibraUni SVGs",
+      "reuse": "Course licence CC BY-NC-SA4.0",
+      "purpose": "Representation comparison; mixed route; horizontal/vertical decomposition. No external graphic copied."
+    }
+  ],
+  "interactiveVideoDecision": "No new animation or video needed for independent unit synthesis. Existing L02/L04 interactives linked for targeted optional revision; static exercise diagrams and all teaching self-contained.",
+  "pdf": {
+    "path": "public/teaching/m101/M101-Unit-1-Reference.pdf",
+    "pages": 2,
+    "source": "Same reference entries as web table; compiled only from published L01–L04",
+    "render": "Native MathML browser print, tagged PDF; Poppler visual inspection of both pages, pdfplumber identity/text/image checks",
+    "identity": "Approved logo; M101 Mathematics for physics I; Unit1 Coordinates,vectors and components; exact KNOWLEDGE PURSUED FREELY; dated local review and page numbers",
+    "footer": "7pt grey reuse-only notice; CC BY-NC-SA4.0 and reserved name/logo; no accreditation disclaimer",
+    "limitations": "Tagging present, but PDF/UA and screen-reader equation reading not independently certified. Semantic HTML is the primary accessible reading version."
+  },
+  "workload": {
+    "explanationMinutes": 30,
+    "activityMinutes": 6,
+    "exerciseMinutes": 84,
+    "feedbackCorrectionMinutes": 30,
+    "referenceRetrievalMinutes": 30,
+    "totalMinutes": 180,
+    "unitHours": 18,
+    "status": "Unmeasured planning estimates, not observed student completion times. Longer remediation separately discussed rather than silently added."
+  },
+  "insideOut": "Sections retrieve taught prerequisites; lesson synthesises U01 outcomes; complete-unit exercise/reference/conclusion obligations covered; B01 U02 products/projections remains next outline. Module M101-O3 and Stage1 vector foundation retained. P101 may use components when evidence supports readiness, not merely because a page is available. Higher-stage programme structure unchanged.",
+  "integration": "Preview gated by M101_LESSON5_PREVIEW=1; default renderer retains published L05 outline and existing module availability. Previous source fragments and shared styles unchanged; preview changes only module/unit notices and L04 next label. 85 existing default site tests passed; preview build, media checker and browser checks passed. No remote push, deployment, enrolment or academic records.",
+  "remaining": "Verify deployment and live site. U02 authoring not commissioned.",
+  "releaseUpdate": {
+    "date": "2026-10-03",
+    "authorisation": "Learner approved local package and explicitly said publish.",
+    "base": "70d9890; P101 Lesson5 preserved",
+    "status": "Approved release; original local review evidence retained below",
+    "checks": "85 tests, build, media, local browser and publication PDF render; live verification pending"
+  }
+}

@@ -16,8 +16,8 @@ test('M101 Lesson 3 publishes by default with navigation, feedback and correctly
  assert.match(html,/src\/teaching.css/);
  assert.match(html,/Next: Resolving and reconstructing components/);
  assert.match(read(base+'l02/index.html'),/Next: Magnitude and unit vectors/);
- assert.match(read(base+'index.html'),/Lessons 1–4 are available. Lesson 5/);
- assert.match(read('learn/index.html'),/Introduction &amp; Unit 1 lessons 1–4 available/);
- assert.match(read(base+'l05/index.html'),/Teaching materials forthcoming/);
+ assert.match(read(base+'index.html'),/All five lessons, the complete unit exercise set/);
+ assert.match(read('learn/index.html'),/Introduction &amp; complete Unit 1 available/);
+ assert.match(read(base+'l05/index.html'),/Exercise 1.14/);
  for(const [,asset] of html.matchAll(/src="(\/teaching\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)));
 });

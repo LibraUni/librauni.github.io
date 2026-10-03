@@ -1,0 +1,26 @@
+/* Scoped to the local Unit 1 closing lesson. */
+.m101-l05 math{font-family:math;color:inherit}
+.m101-l05 .math-vector{font-weight:700;font-style:normal}
+.m101-l05 .equation{overflow-x:auto;padding:14px 4px;scrollbar-width:thin}
+.m101-l05 math[display="block"]{margin:.25em 0;font-size:1em}
+.m101-l05 .exercise{margin:35px 0;padding:24px;border:1px solid #aabbb5;border-left:3px solid #51786b;scroll-margin-top:25px}
+.m101-l05 .exercise h3{margin-top:0;font-size:23px}
+.m101-l05 .exercise-time{font:13px/1.5 system-ui;color:#526166}
+.m101-l05 .exercise details{padding:0 10px}
+.m101-l05 .l05-table{margin:25px 0;overflow-x:auto}
+.m101-l05 table{border-collapse:collapse;width:100%;font-size:16px}
+.m101-l05 caption{text-align:left;font:13px/1.5 system-ui;padding-bottom:14px}
+.m101-l05 th,.m101-l05 td{padding:15px 12px;text-align:left;border-bottom:1px solid #bdc9c3;vertical-align:top}
+.m101-l05 th{font-weight:600}.m101-l05 th small{display:block;font:12px/1.6 system-ui;margin-top:10px}
+.m101-l05 .reference-table{table-layout:fixed}
+.m101-l05 .reference-table th:first-child{width:26%}
+.m101-l05 .reference-table thead th:nth-child(2){width:74%}
+.m101-l05 .reference-table .equation{font-size:18px}
+.m101-l05 .figure-art svg text{font-size:21px}
+.m101-l05 .l05-download{display:inline-block;padding:10px 0}
+[data-theme="dark"] .m101-l05 .exercise-time{color:#c0ccc5}
+@media(max-width:650px){.m101-l05 .exercise{padding:17px 12px}.m101-l05 .equation{font-size:19px}.m101-l05 th,.m101-l05 td{padding:12px 7px}.m101-l05 .reference-table thead{display:none}.m101-l05 .reference-table tr,.m101-l05 .reference-table th,.m101-l05 .reference-table td{display:block;width:100%}.m101-l05 .reference-table th{padding-bottom:0;border:0}.m101-l05 .reference-table th small{margin-top:3px}.m101-l05 .exercise details{padding:0}}
+
+.m101-l05 .diagram-scroll{overflow-x:auto;scrollbar-width:thin}.m101-l05 .diagram-scroll:focus-visible{outline:2px solid #216b68;outline-offset:3px}.m101-l05 .scroll-note{display:none}
+@media(max-width:650px){.m101-l05 .diagram-scroll svg{min-width:400px}.m101-l05 .scroll-note{display:block;font:12px/1.5 system-ui;margin-top:7px}.m101-l05 .reference-table th:first-child{width:100%}}
+@media(max-width:650px){.m101-l05 .reference-table .equation{padding-inline:0}}

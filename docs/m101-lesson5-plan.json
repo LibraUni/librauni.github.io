@@ -1,0 +1,84 @@
+{
+  "module": "M101",
+  "unit": "U01",
+  "lesson": "U01-L05",
+  "title": "Vector fluency and unit review",
+  "status": "Approved for publication",
+  "standard": "1.9",
+  "base": "d198207",
+  "gate": {
+    "construction": "Passed: approved M101 unit map and full B01 lesson blueprint; six sections below specified before drafting",
+    "parent": "curriculum/m101-units.js U01,18h; local curriculum/m101-block1-lessons.js U01-L05,3h",
+    "boundary": "No new vector products, physical laws, programming or assessment; no change to prior teaching or private records",
+    "release": "Authorised by learner"
+  },
+  "minutes": {
+    "explanationAndExamples": 30,
+    "mathematicalPractice": 90,
+    "retrievalAndFeedback": 60,
+    "total": 180,
+    "unitTotalHours": 18,
+    "detail": "6 min activity + 84 min exercises; 30 min check/correct + 30 min recall/reference. Unmeasured estimates; not a timed test."
+  },
+  "sections": [
+    {
+      "id": "M101-U01-L05-S01",
+      "number": "1.28",
+      "title": "Choosing a useful description",
+      "purpose": "Distinguish position, displacement, magnitude and direction; choose representation",
+      "boundary": "Retrieve L01-L04 only",
+      "evidence": "Example 1.28; Figure 1.32",
+      "comparator": "OU MST124 Unit5 section6.4 pp171-178; original synthesis"
+    },
+    {
+      "id": "M101-U01-L05-S02",
+      "number": "1.29",
+      "title": "Checking more than the arithmetic",
+      "purpose": "Use independent qualitative and quantitative checks and repair errors",
+      "evidence": "Example1.29, Activity1.32 (6min)",
+      "comparator": "OU Unit5 Example18 pp174 and Activity44/solution pp175/200; OpenStax2.3 explanatory check stages"
+    },
+    {
+      "id": "M101-U01-L05-S03",
+      "number": "1.30",
+      "title": "Unit 1 exercises",
+      "purpose": "Independent interleaved practice covering all four lessons",
+      "evidence": "Exercises1.1-1.14,84min; hints and full solutions independently disclosed",
+      "comparator": "OU activities23-28,36-39,43-49; OpenStax chapter2 Problems35-39,42-49,54,58 and Conceptual Questions10-16,20. Original questions, not adaptations."
+    },
+    {
+      "id": "M101-U01-L05-S04",
+      "number": "1.31",
+      "title": "Learning from your solutions",
+      "purpose": "Diagnose first error, correct and reattempt",
+      "evidence": "30min feedback/correction; links to exact prior sections",
+      "comparator": "OU worked activity solutions; original diagnostic synthesis"
+    },
+    {
+      "id": "M101-U01-L05-S05",
+      "number": "1.32",
+      "title": "Unit 1 reference and revision",
+      "purpose": "Recall then consult compact reference with conditions",
+      "evidence": "30min retrieval including PDF use; original formula table compiled from publishedL01-L04",
+      "comparator": "OU Unit5 green result boxes pp171-178; no new prerequisite"
+    },
+    {
+      "id": "M101-U01-L05-S06",
+      "number": "1.33",
+      "title": "Unit conclusion",
+      "purpose": "Return to opening question and hand over to Unit2",
+      "evidence": "Manhattan photograph revisited with analytical caption",
+      "comparator": "Approved unit introduction and U02 blueprint"
+    }
+  ],
+  "visualPlan": "Three original SVGs: representation comparison, mixed route, 3D endpoint schematic; NASA Manhattan photo revisited from introduction with refreshed source and reuse check. Caption sequence1.32-1.35. No new animation/video: independent synthesis benefits from static figures; priorL02/L04 interactives linked for targeted revision.",
+  "pdf": "Compact reference only, compiled from publishedL01-L04. Correct module/unit title, approved logo, exact motto and tiny grey reuse-only footer. Local draft label. Match on-page reference. Inspect every page.",
+  "next": "U02-L01 remains uncommissioned.",
+  "releaseUpdate": {
+    "date": "2026-10-03",
+    "authorisation": "Learner approved local package and explicitly said publish.",
+    "base": "70d9890; P101 Lesson5 preserved",
+    "status": "Approved release; original local review evidence retained below",
+    "checks": "85 tests, build, media, local browser and publication PDF render; live verification pending"
+  }
+}

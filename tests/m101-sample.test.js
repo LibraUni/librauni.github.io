@@ -20,5 +20,6 @@ test('M101 production introductions and complete lesson replace the temporary sa
   for(const [,asset] of html.matchAll(/src="(\/teaching-samples\/[^\"]+)"/g))assert.ok(fs.existsSync(new URL('../public'+asset,import.meta.url)),asset);
  }
  for(const id of ['coordinates','m101-u01-s01','m101-u01-s01-01','m101-u01-s01-02','opening-conclusion','lesson-exercises'])assert.ok(lesson.includes(`id="${id}"`));
- for(let i=5;i<=5;i++)assert.match(read(home+`b01/u01/l0${i}/index.html`),/Teaching materials forthcoming/);
+ assert.match(read(home+'b01/u01/l05/index.html'),/Exercise 1.14/);
+ assert.match(read(home+'b01/u02/index.html'),/Teaching materials forthcoming/);
 });
