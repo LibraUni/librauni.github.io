@@ -1,4 +1,5 @@
 import './search.css';
+import {matchesTitle} from './search-titles.js';
 
 const actions=document.querySelector('.header-actions');
 if(actions)mountSearch(actions);
@@ -15,7 +16,7 @@ function mountSearch(actions){
  dialog.className='search-dialog';dialog.setAttribute('aria-labelledby','search-title');
  dialog.innerHTML=`<div class="search-heading"><h2 id="search-title">Search learning materials</h2><button type="button" class="search-close" aria-label="Close search">×</button></div>
  <form class="search-form" role="search"><label for="learning-search">Words, topics or module codes</label><div class="search-input-row"><input id="learning-search" type="search" placeholder="Try vectors or uncertainty" autocomplete="off" spellcheck="false" enterkeyhint="search"><button type="submit">Search</button></div>
- <div class="search-filters"><label><input type="checkbox" name="outlines"> Include outlines</label><label><input type="checkbox" name="archive"> Include M100 archive</label><label class="search-module-label" for="search-module">Module <select id="search-module" aria-label="Module"><option value="">All modules</option></select></label></div></form>
+ <div class="search-filters"><label><input type="checkbox" name="titles" aria-describedby="search-title-help"> Titles only</label><label class="search-module-label" for="search-module">Module <select id="search-module" aria-label="Module"><option value="">All modules</option></select></label></div><p class="search-help" id="search-title-help">Titles only matches a word or phrase in a lesson, unit or higher-level page title.</p></form>
  <p class="search-status" role="status" aria-live="polite">Search available lessons and introductions.</p><ol class="search-results" aria-label="Search results"></ol><button type="button" class="search-more" hidden>Show more results</button>`;
  document.body.append(dialog);
  const input=dialog.querySelector('input[type="search"]');
@@ -24,13 +25,20 @@ function mountSearch(actions){
  const results=dialog.querySelector('.search-results');
  const more=dialog.querySelector('.search-more');
  const module=dialog.querySelector('select');
- let enginePromise,timer,request=0,allResults=[],shown=0,returnFocus;
+ let enginePromise,cataloguePromise,timer,request=0,allResults=[],shown=0,returnFocus;
+ async function catalogue(){
+  if(!cataloguePromise)cataloguePromise=fetch('/pagefind/manifest.json',{cache:'no-cache'}).then(response=>{
+   if(!response.ok)throw new Error('Could not load titles');
+   return response.json();
+  }).catch(error=>{cataloguePromise=undefined;throw error;});
+  return cataloguePromise;
+ }
  async function engine(){
   if(!enginePromise){
    const path='/pagefind/pagefind.js';
    enginePromise=import(/* @vite-ignore */path).then(async api=>{
     const filters=await api.filters();
-    for(const name of Object.keys(filters.module||{}).sort()){
+    for(const name of Object.keys(filters.module||{}).sort().filter(name=>![...module.options].some(option=>option.value===name))){
      const option=document.createElement('option');option.value=name;option.textContent=name;module.append(option);
     }
     return api;
@@ -56,7 +64,7 @@ function mountSearch(actions){
   for(const page of data){
    const li=document.createElement('li');
    const context=document.createElement('p');context.className='search-result-context';
-   const label={available:'Available',outline:'Outline',archive:'M100 archive'}[page.meta.status]||'';
+   const label='Available';
    context.textContent=[page.meta.location,label].filter(Boolean).join(' · ');li.append(context);
    const title=document.createElement('a');title.href=safeUrl(page.url);title.textContent=page.meta.title;title.className='search-result-title';li.append(title);
    const sections=(page.sub_results||[]).filter(section=>section.url.includes('#')).slice(0,3);
@@ -69,7 +77,7 @@ function mountSearch(actions){
    results.append(li);
   }
   shown+=data.length;more.hidden=shown>=allResults.length;
-  status.textContent=allResults.length?`${allResults.length} matching ${allResults.length===1?'page':'pages'}. Showing ${shown}.`:'No results. Try a broader term or include outlines and the archive.';
+  status.textContent=allResults.length?`${allResults.length} matching ${allResults.length===1?'page':'pages'}. Showing ${shown}.`:'No results. Try another word or phrase, or turn off Titles only.';
  }
  async function search(){
   clearTimeout(timer);const token=++request;
@@ -78,14 +86,25 @@ function mountSearch(actions){
   if(!query){status.textContent='Search available lessons and introductions.';return;}
   status.textContent='Searching…';
   try{
-   const api=await engine();
-   if(token!==request||!dialog.open)return;
-   const scopes=['available'];
-   if(form.elements.outlines.checked)scopes.push('outline');
-   if(form.elements.archive.checked)scopes.push('archive');
-   const filters={status:{any:scopes}};
-   if(module.value)filters.module=module.value;
-   const found=await api.search(query,{filters});
+   const titlesOnly=form.elements.titles.checked;
+   // Load title metadata independently: title matching must not depend on body hits.
+   let found;
+   if(titlesOnly){
+    const records=await catalogue();
+    if(token!==request||!dialog.open)return;
+    if(module.options.length===1){
+     for(const name of [...new Set(records.map(record=>record.module))].sort()){
+      const option=document.createElement('option');option.value=name;option.textContent=name;module.append(option);
+     }
+    }
+    found={results:records.filter(record=>(!module.value||record.module===module.value)&&matchesTitle(query,record)).map(record=>({data:async()=>({url:record.url,meta:{...record,title:matchesTitle(query,{title:record.title})?record.title:record.pageTitle},excerpt:'',sub_results:[]})}))};
+   }else{
+    const api=await engine();
+    if(token!==request||!dialog.open)return;
+    const filters={status:'available'};
+    if(module.value)filters.module=module.value;
+    found=await api.search(query,{filters});
+   }
    if(token!==request||!dialog.open)return;
    allResults=found.results;await appendResults(token);
   }catch{
@@ -110,7 +129,7 @@ function mountSearch(actions){
 }
 function safeUrl(value){
  const url=new URL(value,location.origin);
- return url.origin===location.origin&&['/learn/','/programme/'].some(prefix=>url.pathname.startsWith(prefix))?url.pathname+url.search+url.hash:'/learn/';
+ return url.origin===location.origin&&url.pathname.startsWith('/learn/')&&!/\/m100\//i.test(url.pathname)?url.pathname+url.search+url.hash:'/learn/';
 }
 function excerpt(html=''){
  const p=document.createElement('p');p.className='search-excerpt';

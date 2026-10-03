@@ -28,7 +28,7 @@ export async function buildSearch(directory='dist'){
   if(!manifest.some(p=>p.status==='available'))throw new Error('Search index contains no available teaching');
   checked(await index.writeFiles({outputPath:resolve(root,'pagefind')}));
   await writeFile(resolve(root,'pagefind/manifest.json'),JSON.stringify(manifest,null,2)+'\n');
-  console.log(`Search: indexed ${manifest.length} public pages (${manifest.filter(p=>p.status==='available').length} available, ${manifest.filter(p=>p.status==='outline').length} outlines, ${manifest.filter(p=>p.status==='archive').length} archive).`);
+  console.log(`Search: indexed ${manifest.length} available learning pages.`);
  }finally{await index.deleteIndex();await pagefind.close();}
  return manifest;
 }

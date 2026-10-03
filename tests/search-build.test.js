@@ -19,16 +19,17 @@ test('real indexing excludes private/feedback text and rebuilds additions, edits
   await put('programme/archive/m100',page('available','archivetoken'));
   await put('journal',page('available','privatesentineltoken'));
   const first=await buildSearch(root);
-  assert.equal(first.length,3);assert.equal(first.filter(p=>p.status==='available').length,1);
+  assert.equal(first.length,1);assert.equal(first.filter(p=>p.status==='available').length,1);
+  assert.deepEqual(JSON.parse(await readFile(join(root,'pagefind/manifest.json'),'utf8')),first);
   let all=JSON.stringify(await fragments(root));
-  assert.match(all,/oldpassagetoken/);assert.match(all,/workedexamplesentinel/);assert.match(all,/setupinstructionsentinel/);assert.match(all,/futureoutlinetoken/);assert.match(all,/archivetoken/);
-  assert.doesNotMatch(all,/privatesentineltoken|secretfeedbacktoken/);
+  assert.match(all,/oldpassagetoken/);assert.match(all,/workedexamplesentinel/);assert.match(all,/setupinstructionsentinel/);assert.doesNotMatch(all,/futureoutlinetoken|archivetoken/);
+  assert.doesNotMatch(all,/privatesentineltoken|secretfeedbacktoken|archivetoken/);
   await put('learn/physics/stage-1/p101/b01/u01/l01',page('available','revisedpassagetoken'));
   await put('learn/physics/stage-1/p101/b01/u01/l02',page('available','newlessontoken'));
   await rm(join(root,'learn/physics/stage-1/p101/b01/u02'),{recursive:true});
   await buildSearch(root);
   all=JSON.stringify(await fragments(root));
   assert.match(all,/newlessontoken/);assert.match(all,/revisedpassagetoken/);
-  assert.doesNotMatch(all,/oldpassagetoken|futureoutlinetoken|privatesentineltoken|secretfeedbacktoken/);
+  assert.doesNotMatch(all,/oldpassagetoken|futureoutlinetoken|privatesentineltoken|secretfeedbacktoken|archivetoken/);
  }finally{await rm(root,{recursive:true,force:true});}
 });

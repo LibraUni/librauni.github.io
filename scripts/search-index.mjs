@@ -2,16 +2,14 @@ import {load} from 'cheerio';
 
 // This allowlist is deliberately independent of authentication and private stores.
 export function prepareSearchPage(html, url) {
- const archive=url.startsWith('/programme/archive/m100/');
- const learning=url.startsWith('/learn/');
- const programme=url.startsWith('/programme/');
- if(!learning&&!programme)return null;
+ if(!url.startsWith('/learn/')||/\/m100\//i.test(url))return null;
  const $=load(html);
  const body=$('.lesson-reading').first().length?$('.lesson-reading').first():$('main').first();
  if(!body.length)throw new Error(`Missing search content: ${url}`);
- const status=archive?'archive':programme?'outline':body.attr('data-search-status');
+ const status=body.attr('data-search-status');
  if(!['available','outline','archive'].includes(status))throw new Error(`Missing search availability: ${url}`);
- if(learning&&body.find('.teaching-reading').length&&status!=='available')throw new Error(`Teaching missing availability marker: ${url}`);
+ if(body.find('.teaching-reading').length&&status!=='available')throw new Error(`Teaching missing availability marker: ${url}`);
+ if(status!=='available')return null;
  const module=(url.match(/\/(?:lu-)?([mapcxrt]\d{3})\//i)?.[1]||'').toUpperCase();
  const unit=url.match(/\/u(\d+)\//)?.[1];
  const lesson=url.match(/\/l(\d+)\//)?.[1];
@@ -21,7 +19,8 @@ export function prepareSearchPage(html, url) {
  heading.find('br').replaceWith(' ');
  const title=heading.text().replace(/\s+/g,' ').trim()||$('title').text().replace(/\s*[|·]\s*LibraUni.*$/,'').trim();
  body.attr('data-pagefind-body','').attr('data-search-location',location).attr('data-pagefind-index-attrs','data-search-location');
- const metadata={title,location,kind,status,module:module||'Programme'};
+ const pageTitle=$('title').text().replace(/\s*[|·]\s*LibraUni.*$/,'').replace(/\s+/g,' ').trim();
+ const metadata={title,pageTitle,location,kind,status,module:module||'Programme'};
  $('meta[data-search-generated]').remove();
  for(const [name,value] of Object.entries(metadata)){
   const meta=$('<meta>').attr('data-search-generated','').attr('data-pagefind-meta',`${name}[content]`).attr('content',value);
