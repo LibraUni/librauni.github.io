@@ -75,3 +75,11 @@
 .p101-l6 pre code{font-size:1em}.p101-l6 .exercise{max-width:none}
 [data-theme="dark"] .p101-l6 .l6-chain>div{background:#20383d}
 @media(max-width:900px){.p101-l6 .l6-photo{float:none;width:100%;max-width:480px;margin:22px auto}.p101-l6 .l6-chain{grid-template-columns:1fr}}
+
+/* Compact Unit 1 reference: syntax panels stack at reading widths. */
+.p101-l6 .reference-physics dt { font-weight: 700; margin-top: .8rem; }
+.p101-l6 .reference-physics dd { margin: .25rem 0 .8rem; }
+.p101-l6 .reference-code-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.p101-l6 .reference-code-grid h4 { margin: .5rem 0; }
+.p101-l6 .reference-code-grid pre { margin-top: 0; }
+@media (max-width: 900px) { .p101-l6 .reference-code-grid { grid-template-columns: 1fr; } }

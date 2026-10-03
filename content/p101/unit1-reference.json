@@ -1,74 +1,48 @@
-[
-  [
-    "Recall",
-    "Physical value",
-    "Quantity + numerical value + unit; add reference choices and procedure when they affect meaning.",
-    "A position needs an origin and positive direction; a clock reading is not automatically a duration."
+{
+  "physics": [
+    [
+      "Recall · Units",
+      "1 km = 1000 m; 1 m = 100 cm = 1000 mm.<br/>1 s = 1000 ms; 1 min = 60 s; 1 kg = 1000 g."
+    ],
+    [
+      "Recall · Changes",
+      "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>Δ</mi><mi>t</mi><mo>=</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub><mo>;</mo><mspace width=\".4em\"/><mi>Δ</mi><mi>x</mi><mo>=</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></math>"
+    ],
+    [
+      "Understand · Model",
+      "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>v</mi><mo>(</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub><mo>)</mo></math><br/>Fixed origin and direction; constant signed rate v. Use consistent units. Forward-only cases: t ≥ t₀."
+    ],
+    [
+      "Understand · Checks",
+      "t = t₀ or v = 0 ⇒ x = x₀. Test negative rates and nonzero origins.<br/>Area: square the length factor; volume: cube it."
+    ]
   ],
-  [
-    "Recall",
-    "Common unit factors",
-    "1 km =1000 m; 1 m =100 cm =1000 mm; 1 s =1000 ms; 1 min =60 s; 1 kg =1000 g.",
-    "Convert before comparing. The quantity stays the same while its numerical value changes."
+  "python": [
+    {
+      "title": "Assignment and output",
+      "code": "x_m = 2.5         # metres\nx_m = x_m + 1.0\nprint(x_m)        # 3.5"
+    },
+    {
+      "title": "Lists (index from 0)",
+      "code": "values = [2.0, 4.0]\nvalues.append(6.0)\nprint(values[0])  # 2.0\nprint(len(values))  # 3"
+    },
+    {
+      "title": "Decision",
+      "code": "t_s = 8.0\nt0_s = 5.0\nif t_s >= t0_s:\n    print(t_s - t0_s)\nelse:\n    print(\"Before start\")"
+    },
+    {
+      "title": "Loop and stored results",
+      "code": "results = []\nfor t_s in [0.0, 2.0, 4.0]:\n    results.append(3.0 * t_s)\nprint(results)  # [0.0, 6.0, 12.0]"
+    },
+    {
+      "title": "Function and call",
+      "code": "def position(t, x0, v, t0):\n    return x0 + v * (t - t0)\n\nprint(position(8.0, 2.5, -0.4, 5.0))"
+    }
   ],
-  [
-    "Understand",
-    "Areas and ratios",
-    "Square a length conversion factor for area; cube it for volume. Ratios of like quantities become dimensionless in common units.",
-    "1 mm² =0.000001 m². Do not convert area as though it were length."
+  "notes": [
+    "Comparisons: ==  !=  <  <=  >  >=. Indent blocks consistently.",
+    "return supplies a result; print displays it. No return → None.",
+    "Pass dependencies as inputs. After edits: restart and run all cells."
   ],
-  [
-    "Recall",
-    "Changes",
-    "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>Δ</mi><mi>t</mi><mo>=</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub><mo>;</mo><mspace width=\".4em\"/><mi>Δ</mi><mi>x</mi><mo>=</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></math>",
-    "Initial position and time describe the same event. Negative coordinates/readings can give positive changes."
-  ],
-  [
-    "Understand",
-    "Constant-rate model",
-    "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>v</mi><mo>(</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub><mo>)</mo></math>",
-    "Fixed origin/direction and constant signed rate over the interval. Our forward-only cases require t ≥ t₀; the formula alone does not enforce that domain."
-  ],
-  [
-    "Understand",
-    "Discriminating checks",
-    "At t=t₀: x=x₀. With v=0: x=x₀. Include ordinary, negative-rate and nonzero-origin cases.",
-    "Use independent expected answers. Correct units and passing examples do not prove physical validity."
-  ],
-  [
-    "Consult",
-    "Assignment and execution",
-    "a = expression evaluates now and binds its result. Recalculate dependent results after changing inputs.",
-    "Editing a cell does not execute it. Restart, run from the top, inspect and save."
-  ],
-  [
-    "Consult",
-    "Decisions and lists",
-    "Comparisons: ==, !=, <, <=, >, >=. if/else chooses a path. Lists preserve order and repeats; indices start at 0.",
-    "A boundary test checks only its stated condition. Empty lists have no first item."
-  ],
-  [
-    "Consult",
-    "Loops and retention",
-    "for item in values: visits successive values. Initialise result lists before the loop; append paired values together.",
-    "A repeated request remains repeated. Do not reset a result list inside each iteration."
-  ],
-  [
-    "Consult",
-    "Functions",
-    "def name(parameters): defines an indented body. return value sends a result to the caller and ends the call.",
-    "print displays; it is not a substitute for return. Falling off the end returns None, not numerical zero."
-  ],
-  [
-    "Understand",
-    "Local working and inputs",
-    "Pass physical dependencies explicitly. Local numeric assignments do not reassign outside names.",
-    "Mutable input lists can still be changed. A docstring describes units and responsibilities; it does not enforce them."
-  ],
-  [
-    "Understand",
-    "Interpretation",
-    "Separate stipulated inputs, predictions and observations; report conventions, checks and limits.",
-    "A clean run checks reproducibility of execution. Evidence about real motion requires an observation procedure."
-  ]
-]
+  "reminder": "Predictions are not measurements; passing code checks does not validate a physical model."
+}
