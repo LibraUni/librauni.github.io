@@ -1,5 +1,5 @@
 import './search.css';
-import {matchesTitle} from './search-titles.js';
+import {searchTitles} from './search-titles.js';
 
 const actions=document.querySelector('.header-actions');
 if(actions)mountSearch(actions);
@@ -16,7 +16,7 @@ function mountSearch(actions){
  dialog.className='search-dialog';dialog.setAttribute('aria-labelledby','search-title');
  dialog.innerHTML=`<div class="search-heading"><h2 id="search-title">Search learning materials</h2><button type="button" class="search-close" aria-label="Close search">×</button></div>
  <form class="search-form" role="search"><label for="learning-search">Words, topics or module codes</label><div class="search-input-row"><input id="learning-search" type="search" placeholder="Try vectors or uncertainty" autocomplete="off" spellcheck="false" enterkeyhint="search"><button type="submit">Search</button></div>
- <div class="search-filters"><label><input type="checkbox" name="titles" aria-describedby="search-title-help"> Titles only</label><label class="search-module-label" for="search-module">Module <select id="search-module" aria-label="Module"><option value="">All modules</option></select></label></div><p class="search-help" id="search-title-help">Titles only matches a word or phrase in a lesson, unit or higher-level page title.</p></form>
+ <div class="search-filters"><label><input type="checkbox" name="titles" aria-describedby="search-title-help"> Titles only</label><label class="search-module-label" for="search-module">Module <select id="search-module" aria-label="Module"><option value="">All modules</option></select></label></div><p class="search-help" id="search-title-help">Titles only searches lesson, unit and higher-level page titles. Word beginnings work too: vector finds vectors. Use quotation marks for an exact phrase.</p></form>
  <p class="search-status" role="status" aria-live="polite">Search available lessons and introductions.</p><ol class="search-results" aria-label="Search results"></ol><button type="button" class="search-more" hidden>Show more results</button>`;
  document.body.append(dialog);
  const input=dialog.querySelector('input[type="search"]');
@@ -97,7 +97,7 @@ function mountSearch(actions){
       const option=document.createElement('option');option.value=name;option.textContent=name;module.append(option);
      }
     }
-    found={results:records.filter(record=>(!module.value||record.module===module.value)&&matchesTitle(query,record)).map(record=>({data:async()=>({url:record.url,meta:{...record,title:matchesTitle(query,{title:record.title})?record.title:record.pageTitle},excerpt:'',sub_results:[]})}))};
+    found={results:searchTitles(query,records,module.value).map(record=>({data:async()=>({url:record.url,meta:record,excerpt:'',sub_results:[]})}))};
    }else{
     const api=await engine();
     if(token!==request||!dialog.open)return;

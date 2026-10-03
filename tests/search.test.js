@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {matchesTitle} from '../src/search-titles.js';
+import {matchesTitle,searchTitles} from '../src/search-titles.js';
 import {load} from 'cheerio';
 import {prepareSearchPage} from '../scripts/search-index.mjs';
 const lesson='/learn/physics/stage-1/p101/b01/u01/l01/';
@@ -27,12 +27,29 @@ test('availability must be explicit and archives cannot become available teachin
  assert.throws(()=>prepareSearchPage(outline.replace('<h1>','<div class="teaching-reading"></div><h1>'),lesson),/Teaching missing availability/);
 });
 
-test('titles only matches whole words and contiguous phrases in a page heading or canonical title',()=>{
+test('titles only matches word prefixes and contiguous phrases in a page heading or canonical title',()=>{
  const lesson={title:'Lesson 2 Adding and scaling vectors',pageTitle:'Adding and scaling vectors',body:'uncertainty'};
- for(const term of ['vectors','SCALING VECTORS','"adding and scaling"'])assert.equal(matchesTitle(term,lesson),true);
- for(const term of ['vector','uncertainty','adding vectors','and scaling uncertainty'])assert.equal(matchesTitle(term,lesson),false);
+ for(const term of ['vector','vect','vectors','SCALING VECTORS','scal vect','"adding and scaling"'])assert.equal(matchesTitle(term,lesson),true);
+ for(const term of ['"vector"','uncertainty','adding vectors','and scaling uncertainty'])assert.equal(matchesTitle(term,lesson),false);
  for(const title of ['Unit 1: Coordinates and vectors','Block 1: Vectors and linear relationships','Mathematics for physics I','Stage 1: Foundations of physics'])assert.equal(matchesTitle(title,{pageTitle:title}),true);
  assert.equal(matchesTitle('mathematics for physics',{title:'Mathematics and the description of the world',pageTitle:'Mathematics for physics I'}),true);
  assert.equal(matchesTitle('cafe',{title:'Café'}),true);
  assert.equal(matchesTitle('  ',lesson),false);
+});
+
+test('title search ranks exact words and phrases before prefix matches',()=>{
+ const records=[{title:'Vectorisation methods',module:'M101'},{title:'Scaling vectors',module:'M101'},{title:'Vector fluency',module:'M101'}];
+ assert.deepEqual(searchTitles('vector',records).map(r=>r.title),['Vector fluency','Vectorisation methods','Scaling vectors']);
+ assert.deepEqual(searchTitles('"vector"',records).map(r=>r.title),['Vector fluency']);
+ assert.equal(matchesTitle('ion',{title:'Position and motion'}),false);
+ assert.equal(matchesTitle('unit vect',{title:'Magnitude and unit vectors'}),true);
+ assert.equal(matchesTitle('“unit vector”',{title:'Magnitude and unit vectors'}),false);
+ assert.equal(matchesTitle('"unit vectors"',{title:'Magnitude and unit vectors'}),true);
+ assert.equal(matchesTitle('vectors unit',{title:'Magnitude and unit vectors'}),false);
+ assert.equal(matchesTitle('unit vectors',{title:'Unit',pageTitle:'Vectors'}),false);
+ assert.equal(searchTitles('vector',records,'P101').length,0);
+ assert.equal(searchTitles('""',records).length,0);
+ const ranked=searchTitles('vector',[{title:'Vectorisation',pageTitle:'Vector methods'},{title:'Vectors'}]);
+ assert.equal(ranked[0].title,'Vector methods');
+ assert.deepEqual(searchTitles('unit vector',[{title:'Unit vectors'},{title:'Unit vector methods'}]).map(r=>r.title),['Unit vector methods','Unit vectors']);
 });

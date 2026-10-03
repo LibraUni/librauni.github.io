@@ -4,11 +4,11 @@ Implemented against main d30474b on 3 October 2026. This is a website feature an
 
 The shared header exposes a search control, opening a native modal with delayed live search, module filtering, a Titles only option, section links, paginated results, keyboard navigation, Escape, focus restoration and load-error recovery. The index is loaded only on the first query. Light/dark and compact mobile presentations use the existing site palette.
 
-The normal publication build generates the index after Vite, so Pages publishes content and search together. Only available learning pages enter the index. Current count: 16 available teaching pages. Outlines and M100 are always excluded, with no interface options to include them. Titles only checks the displayed heading and formal page title using whole-word/contiguous-phrase matching, independently of body-text results. Private pages and Firebase are not indexing sources. Feedback disclosures are ignored; worked examples, setup instructions and activity questions remain searchable.
+The normal publication build generates the index after Vite, so Pages publishes content and search together. Only available learning pages enter the index. Current count: 16 available teaching pages. Outlines and M100 are always excluded, with no interface options to include them. Titles only checks the displayed heading and formal page title using word-prefix matching over contiguous phrases, with exact matches ranked first and quoted queries requiring an exact phrase, independently of body-text results. Private pages and Firebase are not indexing sources. Feedback disclosures are ignored; worked examples, setup instructions and activity questions remain searchable.
 
 Validation:
 
-- All 90 Node tests passed, including a real Pagefind rebuild fixture for additions, revisions and deletions, plus private-content/feedback/outline/archive exclusions and precise title matching.
+- All 91 Node tests passed, including a real Pagefind rebuild fixture for additions, revisions and deletions, plus private-content/feedback/outline/archive exclusions and title-prefix matching, exact-first ranking and quoted-phrase restrictions.
 - Production build passed and generated the index. Existing large-bundle advisory remains unrelated to search.
 - Local Chrome checks passed for results, pagination, module codes, title-only words and phrases, module filtering, exact-phrase no-results, section-link destinations, arrow keys, Enter/submit, Escape, focus return and Command-K.
 - Layout checks passed at 375, 768 and 1440 pixels; mobile and dark-mode screenshots were visually inspected.
