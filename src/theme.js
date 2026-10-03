@@ -1,3 +1,4 @@
+import './search.js';
 import './study-reset.js';
 import './header-account.js';
 const control = document.querySelector('#theme-toggle');

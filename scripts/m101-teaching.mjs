@@ -9,7 +9,7 @@ export const m101Lesson4=m101Unit+'l04/';
 export const m101Lesson5=m101Unit+'l05/';
 export const m101TeachingPaths=[m101Home,m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5];
 export function addM101Teaching({root,pages,extraRails,link}){
- const reading=name=>'<div class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
+ const reading=name=>'<div data-search-status="available" class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
  const pagination=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
  const module=pages.find(p=>p[0]===m101Home);
  const blocks=extraRails.get(m101Home).items;

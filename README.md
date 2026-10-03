@@ -41,3 +41,15 @@ Do not change a schedule silently after enrolment: increment `scheduleVersion`, 
 Planner schema 2 prevents module-code reuse from relabelling saved study. On explicit acceptance, legacy LU-M101 becomes LU-M100 with its dates preserved; the former A101 first-module plan is retained in retiredPlans and excluded from active calendars. Export includes this history. New degree M101 receives none of the old bridge records. Degree module timetables will be added after coordinated semester design.
 
 Private profile: /profile/ stores optional biographical context and a browser-resized JPEG in owner-only Firestore profile/main with immutable profileHistory. Full-record export and recursive backups include both collections. Profile rules require atomic current/history writes. Run profile unit and Firestore adapter/security tests on changes. Tutor summaries omit the photo; no automatic chat integration is claimed.
+
+## Learning-material search
+
+The header search uses Pagefind, built locally from the final public HTML. `pnpm build` renders teaching, builds Vite assets, and then runs `scripts/build-search.mjs`; an indexing error fails the build before the Pages workflow can publish. The index is generated into `dist/pagefind/` and is never committed. Every clean build includes additions, edits and deletions in the same release as the pages.
+
+Use `pnpm build` followed by `pnpm preview` to test search locally. The plain Vite development server does not generate or serve the search index. Run `pnpm test` (including actual index rebuild tests) or `pnpm test:search` for the search tests alone.
+
+Only `/learn/` and `/programme/` pages are eligible. Available teaching is the default scope; outlines and the M100 archive are opt-in. Module, unit, lesson, status and content-type metadata are derived during the build. The M101/P101 teaching-fragment helpers mark actual teaching with `data-search-status="available"`; new teaching renderers must use that marker too. The shared learning renderer marks other pages as outlines. The build rejects a teaching-reading wrapper missing its available marker. Do not infer availability from a title, page count or existing URL.
+
+Search indexes the reading content, including explanations, worked examples, activity questions and code. It omits navigation, controls and feedback disclosures. New feedback disclosures should use the existing Hint/Discussion/Solution/Feedback summary conventions or an explicit `data-search-ignore` attribute. Setup instructions and optional practice remain searchable. Original section IDs are preserved, with additional heading anchors generated for search results. PDF/notebook links are searchable through their surrounding HTML; attachment contents and mathematical equivalence are not indexed.
+
+Private Firebase data, journal entries, profiles, submissions and evidence are never fetched by the indexer or search UI. Query text stays in memory and is not saved as study activity or sent to an external search service. The public manifest at `/pagefind/manifest.json` lists indexed routes and their classifications for release checks.
