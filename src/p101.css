@@ -67,3 +67,11 @@
 @media(max-width:900px){.p101-l5 .l5-photo{float:none;width:100%;max-width:500px;margin:20px auto}.p101-l5 .l5-flow,.p101-l5 .l5-scope{grid-template-columns:1fr}}
 .p101-l5 pre code{font-size:1em}
 .p101-l5 .l5-table th:nth-child(1){width:20%}.p101-l5 .l5-table th:nth-child(2){width:26%}.p101-l5 .l5-table th:nth-child(3){width:18%}.p101-l5 .l5-table th:nth-child(4){width:36%}
+
+/* Unit 1 closing lesson: synthesis and reference. */
+.p101-l6 .l6-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.p101-l6 .l6-chain>div{border:1px solid var(--line);background:#edf3ef;border-radius:10px;padding:16px}.p101-l6 .l6-chain p{font-size:.95em;margin:10px 0 0}
+.p101-l6 .l6-photo{float:left;width:43%;margin:0 24px 20px 0}.p101-l6 .l6-photo img{width:100%;height:auto;max-height:none}.p101-l6 .l6-context{display:flow-root}
+.p101-l6 table{table-layout:fixed;width:100%}.p101-l6 :is(td,th){overflow-wrap:anywhere}.p101-l6 .l6-reference th:first-child{width:18%}.p101-l6 .l6-reference th:nth-child(2){width:42%}
+.p101-l6 pre code{font-size:1em}.p101-l6 .exercise{max-width:none}
+[data-theme="dark"] .p101-l6 .l6-chain>div{background:#20383d}
+@media(max-width:900px){.p101-l6 .l6-photo{float:none;width:100%;max-width:480px;margin:22px auto}.p101-l6 .l6-chain{grid-template-columns:1fr}}

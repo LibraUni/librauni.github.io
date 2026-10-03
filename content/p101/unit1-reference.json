@@ -1,0 +1,74 @@
+[
+  [
+    "Recall",
+    "Physical value",
+    "Quantity + numerical value + unit; add reference choices and procedure when they affect meaning.",
+    "A position needs an origin and positive direction; a clock reading is not automatically a duration."
+  ],
+  [
+    "Recall",
+    "Common unit factors",
+    "1 km =1000 m; 1 m =100 cm =1000 mm; 1 s =1000 ms; 1 min =60 s; 1 kg =1000 g.",
+    "Convert before comparing. The quantity stays the same while its numerical value changes."
+  ],
+  [
+    "Understand",
+    "Areas and ratios",
+    "Square a length conversion factor for area; cube it for volume. Ratios of like quantities become dimensionless in common units.",
+    "1 mm² =0.000001 m². Do not convert area as though it were length."
+  ],
+  [
+    "Recall",
+    "Changes",
+    "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>Δ</mi><mi>t</mi><mo>=</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub><mo>;</mo><mspace width=\".4em\"/><mi>Δ</mi><mi>x</mi><mo>=</mo><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></math>",
+    "Initial position and time describe the same event. Negative coordinates/readings can give positive changes."
+  ],
+  [
+    "Understand",
+    "Constant-rate model",
+    "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>v</mi><mo>(</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>0</mn></msub><mo>)</mo></math>",
+    "Fixed origin/direction and constant signed rate over the interval. Our forward-only cases require t ≥ t₀; the formula alone does not enforce that domain."
+  ],
+  [
+    "Understand",
+    "Discriminating checks",
+    "At t=t₀: x=x₀. With v=0: x=x₀. Include ordinary, negative-rate and nonzero-origin cases.",
+    "Use independent expected answers. Correct units and passing examples do not prove physical validity."
+  ],
+  [
+    "Consult",
+    "Assignment and execution",
+    "a = expression evaluates now and binds its result. Recalculate dependent results after changing inputs.",
+    "Editing a cell does not execute it. Restart, run from the top, inspect and save."
+  ],
+  [
+    "Consult",
+    "Decisions and lists",
+    "Comparisons: ==, !=, <, <=, >, >=. if/else chooses a path. Lists preserve order and repeats; indices start at 0.",
+    "A boundary test checks only its stated condition. Empty lists have no first item."
+  ],
+  [
+    "Consult",
+    "Loops and retention",
+    "for item in values: visits successive values. Initialise result lists before the loop; append paired values together.",
+    "A repeated request remains repeated. Do not reset a result list inside each iteration."
+  ],
+  [
+    "Consult",
+    "Functions",
+    "def name(parameters): defines an indented body. return value sends a result to the caller and ends the call.",
+    "print displays; it is not a substitute for return. Falling off the end returns None, not numerical zero."
+  ],
+  [
+    "Understand",
+    "Local working and inputs",
+    "Pass physical dependencies explicitly. Local numeric assignments do not reassign outside names.",
+    "Mutable input lists can still be changed. A docstring describes units and responsibilities; it does not enforce them."
+  ],
+  [
+    "Understand",
+    "Interpretation",
+    "Separate stipulated inputs, predictions and observations; report conventions, checks and limits.",
+    "A clean run checks reproducibility of execution. Evidence about real motion requires an observation procedure."
+  ]
+]
