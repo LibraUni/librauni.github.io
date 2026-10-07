@@ -1,0 +1,19 @@
+{
+  "scope": "U02-L02, 7 October 2026",
+  "figure": "2.10",
+  "asset": "public/teaching/p101/u02/nist-mass-comparison.webp",
+  "source": "https://www.nist.gov/news-events/news/2016/11/disseminating-new-kilogram-international-dry-run",
+  "assetURL": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/2016/11/28/small_front_close-up-2000.jpg.webp?itok=m5qiQanO",
+  "credit": "NIST",
+  "rights": "Unmarked NIST public information permitted to copy/distribute with credit; source image has no separate copyright marking.",
+  "rightsURL": "https://www.nist.gov/copyrights-disclaimers",
+  "modification": "None; source web derivative retained at480x335",
+  "purpose": "Real controlled comparison of surface-area exposure effects, historically identified2016; not a ruler apparatus or current kilogram-definition account.",
+  "alternatives": "NIST mass-standard calibration page had a traceability diagram; other metrology stock photos marked third-party rejected.",
+  "originalFigures": [
+    "2.7 dots counted against L1 record",
+    "2.8 each original value shifted+2; common axes, no probability interpretation",
+    "2.9 controlled comparison schematic"
+  ],
+  "review": "Inspected source photograph and desktop rendered photo; alt/caption/credit supplied. Static diagram adequate; no interactive needed."
+}

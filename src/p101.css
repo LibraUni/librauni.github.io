@@ -107,3 +107,9 @@
 @media(max-width:900px){.p101-u2 .u2-flow{grid-template-columns:1fr}}
 @media(max-width:650px){.p101-u2 .u2-small-photo{float:none;margin:24px auto}.p101-u2 .u2-table table{font-size:14px}.p101-u2 .u2-diagram svg text{font-size:18px}}
 .p101-u2 .equation:focus-visible{outline:2px solid #216b68;outline-offset:4px}
+
+/* Unit 2 Lesson 2: local additions, isolated from published reading. */
+.p101-u2-l2 .l2-mass-photo{max-width:600px;margin:2rem auto}
+.p101-u2-l2 .l2-mass-photo img{display:block;width:100%;height:auto}
+.p101-u2-l2 .l2-table table{width:100%;table-layout:fixed}
+.p101-u2-l2 .l2-table th,.p101-u2-l2 .l2-table td{overflow-wrap:anywhere}

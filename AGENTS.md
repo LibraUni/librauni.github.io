@@ -1,5 +1,9 @@
 # LibraUni public website
 
+## P101 Unit 2 Lesson 2 prepared locally — 7 October 2026
+
+The learner commissioned U02-L02 and its notebook for local review. The complete draft is ready, UNPUBLISHED. Read docs/p101-u02-l02-plan.json, review.md and media.json. Six sections2.7–2.12; five worked examples; six activities with separate hints/feedback; four figures; Python notebook and companion. 4h/1hPython retained. All96site tests plus subject/code/media/browser/offline checks pass; limitations documented. Render with P101_U02_L02_PREVIEW=1; default L02 remains an outline. Preview dist served on8784. Reading copy and companions are in this chat's outputs. No publication, learner-record changes or later lesson commissioned. Reconcile remote before any future authorised release. This supersedes earlier statements that L02 is uncommissioned.
+
 ## P101 Unit 2 opening LIVE — 7 October 2026
 
 Release 4b6b67803e6492333accd614190c3d6ed8414664 is published. GitHub run37639712429 succeeded, including planner-security and publish. Live Chrome and HTTP checks verified both pages, layouts/themes, all3 exact copy buttons, media, links/downloads, no-JavaScript maths/feedback, 18search entries including the2 new pages, catalogue/module/block/adjacent navigation and exact notebook bytes. Supersedes all pending/local-only dispositions for this package. U02-L02 remains uncommissioned; no learner records changed. This checkpoint is local documentation after the deployed release.

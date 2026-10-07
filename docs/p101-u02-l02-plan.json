@@ -1,0 +1,78 @@
+{
+  "scope": "P101 U02-L02 local review; commissioned by proceed, 7 October 2026",
+  "standard": "1.9; fixed M101 v0.4 and OU Unit 2 printed117\u2013123 inspected in this session",
+  "hierarchy": "Degree > Stage 1 > P101 > B01 > U02 > L02 > six sections",
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "curriculum/p101-units.js",
+    "curriculum/p101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/construction-policy.js"
+  ],
+  "gate": "All B01 lessons blueprinted; all six sections recorded before drafting. Continuation of approved 22h/6h Python U02 in 60h/20h Python B01.",
+  "prerequisites": "U02-L01 operational definition, fresh repeats, raw records; U01 signed differences, lists, loops and functions.",
+  "outcomes": [
+    "P101-O5 procedure and limitations",
+    "P101-O6 preserve and check data",
+    "P101-O7 reasoned account"
+  ],
+  "minutes": {
+    "explanation": 60,
+    "written": 90,
+    "python": 60,
+    "feedback": 30
+  },
+  "sections": [
+    {
+      "id": "P101-U02-L02-S01",
+      "title": "2.7 What varies when we repeat?",
+      "purpose": "Repeatability conditions; distinguish variable readings from a diagnosed random cause",
+      "practice": "Activity2.8 12min",
+      "comparator": "VIM2.19,2.20; L1 card record; OpenStax1.3 exposition precision",
+      "requires": "preceding sections and stated lesson prerequisites"
+    },
+    {
+      "id": "P101-U02-L02-S02",
+      "title": "2.8 Scatter and a common shift",
+      "purpose": "Same scatter can accompany shifted readings; accuracy vs repeatability; coordinate cancellation",
+      "practice": "Activity2.9 14min",
+      "comparator": "VIM2.15,2.17,2.18; OpenStax1.3 precision distinction; OU worked reasoning121\u2013123",
+      "requires": "preceding sections and stated lesson prerequisites"
+    },
+    {
+      "id": "P101-U02-L02-S03",
+      "title": "2.9 Change the method fairly",
+      "purpose": "Control quantity/conditions; time/operator confounding; order retained",
+      "practice": "Activity2.10 18min",
+      "comparator": "NIST2016 vacuum-to-air comparison; original elementary design with advanced metrology excluded",
+      "requires": "preceding sections and stated lesson prerequisites"
+    },
+    {
+      "id": "P101-U02-L02-S04",
+      "title": "2.10 What a reference adds",
+      "purpose": "Calibration vs adjustment; correction sign and validity limits; one point cannot establish model",
+      "practice": "Activity2.11 16min",
+      "comparator": "VIM2.39; NIST calibration section2.3; original offset/scale model comparison",
+      "requires": "preceding sections and stated lesson prerequisites"
+    },
+    {
+      "id": "P101-U02-L02-S05",
+      "title": "2.11 Make the calculation inspectable",
+      "purpose": "Signed discrepancies and hypothetical correction in separate lists; independent checks",
+      "practice": "Activity2.12 60min Python",
+      "comparator": "OU table-to-working121\u2013123; P101U01/L1 coding prerequisites; original synthesis",
+      "requires": "preceding sections and stated lesson prerequisites"
+    },
+    {
+      "id": "P101-U02-L02-S06",
+      "title": "2.12 A conclusion the evidence can support",
+      "purpose": "Integrated audit, bounded claims, next measurement; L3 handover",
+      "practice": "Activity2.13 30min",
+      "comparator": "OpenStax1.3 conceptual comparison partial fit; original investigation",
+      "requires": "preceding sections and stated lesson prerequisites"
+    }
+  ],
+  "boundaries": "No formal mean/spread, inference, propagation or new Python libraries. No purchase required. No enrolment/attainment or publication.",
+  "handover": "L03 descriptive summaries with provenance. Unit cumulative exercises and reference PDF remain at L05. A101 later uses data provenance; M102/later modules own probability/inference.",
+  "media": "Original dot plots and controlled comparison schematic; actively sought NIST mass comparison photo. Static graphics sufficient: no interactive quota."
+}

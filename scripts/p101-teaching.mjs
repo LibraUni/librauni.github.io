@@ -5,7 +5,8 @@ export const p101Home='/learn/physics/stage-1/p101/';
 const unit=p101Home+'b01/u01/';
 const lesson=unit+'l01/';
 const unit2=p101Home+'b01/u02/';
-export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/'];
+const l2Preview=process.env.P101_U02_L02_PREVIEW==='1';
+export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',...(l2Preview?[unit2+'l02/']:[])];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
@@ -61,6 +62,14 @@ export function addP101Teaching({root,pages,extraRails,link}){
   const sectionFragment=fs.readFileSync(root+'content/p101/unit2-lesson1.html','utf8');
   const unit2Sections=[...sectionFragment.matchAll(/<section class="chapter" id="(P101-U02-L01-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
   extraRails.set(lessonPath,{title:'In this lesson',back:unit2,items:[...unit2Sections,{href:'#references',title:'Further reading and context'}]});
+ }
+
+ if(l2Preview){
+  const path=unit2+'l02/';
+  const fragment=fs.readFileSync(root+'content/p101/unit2-lesson2.html','utf8');
+  pages.find(p=>p[0]===path)[3]='<p class="p101-preview-notice">Local review draft · Not published</p><div data-search-status="draft" class="teaching-reading p101-reading p101-u2 p101-u2-l2">'+fragment+'</div>'+nav(link(unit2+'l01/','← Lesson 1'),link(unit2+'l03/','Lesson 3 plan →'));
+  const sections=[...fragment.matchAll(/<section class="chapter" id="(P101-U02-L02-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
+  extraRails.set(path,{title:'In this lesson',back:unit2,items:[...sections,{href:'#references',title:'Further reading and context'}]});
  }
 
 }
