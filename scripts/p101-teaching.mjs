@@ -4,7 +4,9 @@ import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
 export const p101Home='/learn/physics/stage-1/p101/';
 const unit=p101Home+'b01/u01/';
 const lesson=unit+'l01/';
-export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/'];
+const unit2=p101Home+'b01/u02/';
+const unit2Preview=process.env.P101_UNIT2_PREVIEW==='1';
+export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',...(unit2Preview?[unit2,unit2+'l01/']:[])];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
@@ -52,4 +54,15 @@ export function addP101Teaching({root,pages,extraRails,link}){
   const page=pages.find(p=>p[0]===path);
   page[3]=notice+'<p class="eyebrow">P101 · Block 1 · '+planned.unit+' · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned hours, including '+planned.pythonHours+' hours of Python. Teaching is in preparation.</p>'+nav(link(p101Home+'b01/'+planned.unit.toLowerCase()+'/','← Unit outline'),'');
  }
+ if(unit2Preview){
+  const draft='<p class="p101-preview-notice">Local review draft · Unit 2 teaching is not published</p>';
+  const wrap=name=>'<div data-search-status="draft" class="teaching-reading p101-reading p101-u2">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
+  const lessonPath=unit2+'l01/';
+  pages.find(p=>p[0]===unit2)[3]=draft+wrap('unit2')+nav(link(unit+'l06/','← Unit 1 closing lesson'),link(lessonPath,'Lesson 1 · Local review →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U02').map((l,i)=>'<p>'+link(unit2+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i===0?' · Local review draft':' · Lesson plan')+'</p>').join('')+'</section>';
+  pages.find(p=>p[0]===lessonPath)[3]=draft+wrap('unit2-lesson1')+nav(link(unit2,'← Unit 2 introduction'),link(unit2+'l02/','Lesson 2 plan →'));
+  const sectionFragment=fs.readFileSync(root+'content/p101/unit2-lesson1.html','utf8');
+  const unit2Sections=[...sectionFragment.matchAll(/<section class="chapter" id="(P101-U02-L01-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
+  extraRails.set(lessonPath,{title:'In this lesson',back:unit2,items:[...unit2Sections,{href:'#references',title:'Further reading and context'}]});
+ }
+
 }

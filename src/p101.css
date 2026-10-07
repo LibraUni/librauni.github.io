@@ -83,3 +83,27 @@
 .p101-l6 .reference-code-grid h4 { margin: .5rem 0; }
 .p101-l6 .reference-code-grid pre { margin-top: 0; }
 @media (max-width: 900px) { .p101-l6 .reference-code-grid { grid-template-columns: 1fr; } }
+
+/* Unit 2 local preview: scoped to preserve published Unit 1 presentation. */
+.p101-u2 .u2-diagram{overflow-x:auto;border-radius:5px}
+.p101-u2 .u2-diagram svg{min-width:540px}
+.p101-u2 .u2-diagram svg text{font:18px Georgia,serif}
+.p101-u2 .u2-diagram:focus-visible{outline:2px solid #216b68;outline-offset:4px}
+.p101-u2 .u2-image-passage{display:flow-root}
+.p101-u2 .u2-small-photo{float:right;width:220px;margin:5px 0 20px 24px}
+.p101-u2 .u2-small-photo img{width:220px;height:auto}
+.p101-u2 .u2-table table{table-layout:fixed;width:100%;margin:20px 0}
+.p101-u2 .u2-table :is(td,th){overflow-wrap:anywhere}
+.p101-u2 .u2-table th:first-child{width:16%}
+.p101-u2 .u2-table th:nth-child(2){width:28%}
+.p101-u2 .u2-table caption{font:14px/1.5 system-ui;text-align:left;margin-bottom:12px}
+.p101-u2 .u2-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.p101-u2 .u2-flow>div{padding:18px;border:1px solid #a7babc;border-top:4px solid #668e98;background:#eef3f1;border-radius:7px}
+.p101-u2 .u2-flow strong{font:600 15px/1.5 system-ui}
+.p101-u2 .u2-flow p{font-size:16px;margin-bottom:0}
+.p101-u2 .equation{overflow-x:auto}
+.p101-u2 pre code{font-size:1em}
+[data-theme=dark] .p101-u2 .u2-flow>div{background:#20383d;border-color:#63828c}
+@media(max-width:900px){.p101-u2 .u2-flow{grid-template-columns:1fr}}
+@media(max-width:650px){.p101-u2 .u2-small-photo{float:none;margin:24px auto}.p101-u2 .u2-table table{font-size:14px}.p101-u2 .u2-diagram svg text{font-size:18px}}
+.p101-u2 .equation:focus-visible{outline:2px solid #216b68;outline-offset:4px}

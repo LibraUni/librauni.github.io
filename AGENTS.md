@@ -1,5 +1,12 @@
 # LibraUni public website
 
+## P101 Unit 2 opening prepared locally — 7 October 2026
+
+The learner said “proceed” to the Unit 2 introduction and full U02-L01 for review before publication. The package is complete in this isolated clone on p101-unit2-local, base ad82f659. Read docs/p101-u02-l01-plan.json, docs/p101-u02-l01-review.md and the media register. Standard1.9 preserved; six sections2.1–2.6, five examples2.1–2.5, seven activities2.1–2.7, six figures2.1–2.6 across introduction/lesson, learner notebook and Python companion. 4h including1hPython retained; no mean/propagation taught. 96site tests, subject/code checks, preview build/search, media and browser/offline checks passed. No publication or private-record changes.
+
+Source fragments: content/p101/unit2.html and content/p101/unit2-lesson1.html. Preview rendering requires P101_UNIT2_PREVIEW=1; default generated source pages remain outlines and unchanged. The checked preview dist is served on http://127.0.0.1:8784/learn/physics/stage-1/p101/b01/u02/. Durable deliverables are in /Users/iker/Documents/Codex/2026-10-07/p/outputs. Source is in /Users/iker/Documents/Codex/2026-10-07/p/work/p101-unit2. Helpers/checks/screenshots are in that chat's work directory. No push made. Before any authorised publication reconcile current remote main, then deliberately release availability/search/nav and reverify. U02-L02 remains a plan; do not automatically author remaining lessons. Unit-end resources remain due at U02-L05.
+
+
 ## M101 Unit 1 approved publication — 3 October 2026
 
 The learner approved the full local closing package and explicitly authorised publication. Lesson5, the14 full-unit exercises, separate hints/worked solutions, conclusion and two-page reference PDF now render by default. Unit1 teaching is complete; module/block and catalogue labels updated. Review docs/m101-lesson5-review.json. Publication edition removes local-review labels; prior teaching source fragments and shared styles remain unchanged. P101 Lesson5 release70d9890 incorporated and preserved. No enrolment, mastery or academic records inferred. Earlier local-only restrictions below are superseded for this approved package. U02-L01 remains uncommissioned.

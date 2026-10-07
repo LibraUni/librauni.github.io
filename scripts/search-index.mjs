@@ -6,6 +6,8 @@ export function prepareSearchPage(html, url) {
  const $=load(html);
  const body=$('.lesson-reading').first().length?$('.lesson-reading').first():$('main').first();
  if(!body.length)throw new Error(`Missing search content: ${url}`);
+ // Local teaching previews must not enter the available-material index.
+ if(body.find('[data-search-status="draft"]').length)return null;
  const status=body.attr('data-search-status');
  if(!['available','outline','archive'].includes(status))throw new Error(`Missing search availability: ${url}`);
  if(body.find('.teaching-reading').length&&status!=='available')throw new Error(`Teaching missing availability marker: ${url}`);

@@ -1,0 +1,11 @@
+{
+ "checked":"2026-10-07",
+ "rights":"https://www.nist.gov/copyrights-disclaimers — unmarked NIST information may be copied/distributed with requested credits; selected image records contain no copyright restriction",
+ "assets":[
+ {"figure":"2.1","file":"public/teaching/p101/u02/nist-measurement.jpg","source":"https://www.nist.gov/image/measurementjpg","download":"https://www.nist.gov/sites/default/files/images/photogallery/measurement.jpg","credit":"Bruce Borchardt/NIST; 12PML024","dimensions":[2592,1944],"changes":"None","inspection":"Actual image inspected. Microscope, technician and measurement bench visible; instrument task confirmed by source caption. Not used as a measurement scale."},
+ {"figure":"2.4","file":"public/teaching/p101/u02/nist-tape-mark.jpg","source":"https://www.nist.gov/how-do-you-measure-it/how-do-you-ensure-tape-measure-accurate","download":"https://www.nist.gov/sites/default/files/styles/220_x_220_limit/public/images/2018/07/03/tape-microscope.jpg?itok=0TxIDjm8","credit":"NIST","dimensions":[220,165],"changes":"None; source-provided thumbnail","inspection":"Actual image inspected. Finite-width black mark and red crosshair visible. No quantitative image scale inferred; native-width display."}
+ ],
+ "originalFigures":["2.2 book endpoint definitions","2.3 offset ruler, centimetre divisions explicitly stated","2.5 invented timing-event timeline","2.6 raw/processed record relationship"],
+ "rejectedCandidate":"NIST Metric Ruler Front image explicitly marked copyrighted; not reused",
+ "limits":"No complete assistive-technology audit or learner testing; no measured visual efficacy claim"
+}

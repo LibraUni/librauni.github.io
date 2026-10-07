@@ -5,6 +5,11 @@ import {load} from 'cheerio';
 import {prepareSearchPage} from '../scripts/search-index.mjs';
 const lesson='/learn/physics/stage-1/p101/b01/u01/l01/';
 const fixture=`<!doctype html><html lang="en"><head><title>Test lesson</title></head><body><header>Chrome sentinel</header><main><aside class="lesson-sidebar">Navigation sentinel</aside><article class="lesson-reading" data-search-status="available"><h1>Lesson 1<br>Measurement</h1><section id="P101-S01"><h2>Units</h2><p>Question sentinel</p><aside class="worked-example">Worked example sentinel</aside><details><summary>Hint</summary><p>Solution sentinel</p></details><pre><code>print(42)</code></pre></section></article></main></body></html>`;
+test('local draft teaching stays outside available search even in a preview build',()=>{
+ const draft=fixture.replace('<section id="P101-S01">','<section class="teaching-reading" data-search-status="draft" id="P101-S01">');
+ assert.equal(prepareSearchPage(draft,lesson),null);
+ assert.equal(prepareSearchPage(draft.replace('data-search-status="available"','data-search-status="outline"'),lesson),null);
+});
 test('search allows only public curriculum and teaching routes',()=>{
  for(const url of ['/','/journal/','/profile/','/evidence/','/content/drafts/','/private/','/programme/','/programme/archive/m100/','/learn/preparation/m100/'])assert.equal(prepareSearchPage(fixture,url),null);
 });
