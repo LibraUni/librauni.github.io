@@ -1,5 +1,9 @@
 # LibraUni public website
 
+## P101 Unit 2 Lesson 2 LIVE — 7 October 2026
+
+Release f1204d7b973690d5a685fa6ceb430791dea2705b deployed successfully in GitHub run37642614983 (security and publish passed). Live Chrome verifies six sections/activities, four widths/two themes, maths/media, all three exact code copies, links, no-JS/offline behaviour and21-entry search. Live notebook/companion bytes exactly match release. Adjacent navigation and module/block availability checked. GitHub transient500s resolved on retry; no API fallback mutation succeeded. This supersedes pending/unpublished L02 dispositions. No later lesson commissioned or learner records changed.
+
 ## P101 Unit 2 Lesson 2 authorised for publication — 7 October 2026
 
 The learner explicitly requested “publish it” after reviewing U02-L02. This supersedes its local-only restrictions. Lesson2 now renders by default, with availability/navigation/search updates and published notebook labels. Approved teaching unchanged. Latest remote d730b1e (M101 Unit2 opening) reconciled and preserved. Await deployment and live verification before claiming publication complete. No later lesson or learner-record change authorised.
