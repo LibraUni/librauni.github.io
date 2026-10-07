@@ -5,14 +5,13 @@ export const p101Home='/learn/physics/stage-1/p101/';
 const unit=p101Home+'b01/u01/';
 const lesson=unit+'l01/';
 const unit2=p101Home+'b01/u02/';
-const unit2Preview=process.env.P101_UNIT2_PREVIEW==='1';
-export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',...(unit2Preview?[unit2,unit2+'l01/']:[])];
+export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/'];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
  const nav=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
  const module=pages.find(p=>p[0]===p101Home);
- module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2><p>Complete Unit 1 teaching, exercises and reference resources are available. Further units remain in preparation.</p>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
+ module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2><p>Complete Unit 1 teaching and resources, the Unit 2 introduction and Unit 2 Lesson 1 are available. Later teaching remains in preparation.</p>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
  const u=pages.find(p=>p[0]===unit);
  u[3]=notice+read('unit')+nav(link(p101Home,'← Module introduction'),link(lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U01').map((l,i)=>'<p>'+link(unit+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<6?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>All six lessons are available. <a href="/learn/physics/stage-1/p101/b01/u01/l06/#P101-U01-L06-S03">Unit exercises</a> · <a href="/learn/physics/stage-1/p101/b01/u01/l06/#P101-U01-L06-S05">On-page reference</a> · <a href="/teaching/p101/P101-Unit-1-Reference.pdf" download>Printable reference PDF</a>.</p></section>';
  const l=pages.find(p=>p[0]===lesson);l[3]=notice+read('lesson')+nav(link(unit,'← Unit introduction'),link(unit+'l02/','Lesson 2 →'));
@@ -22,7 +21,7 @@ export function addP101Teaching({root,pages,extraRails,link}){
  pages.push([p101Home+'orientation/','P101 · Practical orientation',[],notice+read('orientation')+nav(link(p101Home,'← Module introduction'),link(unit,'Unit 1 →'))]);
  extraRails.set(p101Home+'orientation/',{title:'Practical orientation',back:p101Home,items:[]});
  const block=pages.find(p=>p[0]===p101Home+'b01/');
- block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+extraRails.get(p101Home+'b01/').items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(item.unitId==='U01'?' · Complete Unit 1 teaching and reference resources available':' · Outline')+'</p>').join('');
+ block[3]=notice+'<h1>Measure, model and compute</h1><p>Quantities become models; measurements supply evidence; computation helps us compare the two. Begin with Unit 1 and continue through the block’s natural sequence.</p>'+extraRails.get(p101Home+'b01/').items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(item.unitId==='U01'?' · Complete Unit 1 teaching and reference resources available':item.unitId==='U02'?' · Introduction and Lesson 1 available':' · Outline')+'</p>').join('');
  const lesson2=unit+'l02/';
  const secondFragment=fs.readFileSync(root+'content/p101/lesson2.html','utf8');
  pages.find(p=>p[0]===lesson2)[3]=read('lesson2')+nav(link(lesson,'← Lesson 1'),link(unit+'l03/','Lesson 3 →'));
@@ -45,21 +44,20 @@ export function addP101Teaching({root,pages,extraRails,link}){
  extraRails.set(lesson5,{title:'In this lesson',back:unit,items:[...fifthSections,{href:'#references',title:'Further reading and context'}]});
  const lesson6=unit+'l06/';
  const sixthFragment=fs.readFileSync(root+'content/p101/lesson6.html','utf8');
- pages.find(p=>p[0]===lesson6)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-l6">'+sixthFragment+'</div>'+nav(link(lesson5,'← Lesson 5'),link(p101Home+'b01/u02/','Next: Unit 2 outline →'));
+ pages.find(p=>p[0]===lesson6)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-l6">'+sixthFragment+'</div>'+nav(link(lesson5,'← Lesson 5'),link(p101Home+'b01/u02/','Next: Unit 2 →'));
  const sixthSections=[...sixthFragment.matchAll(/<section class="chapter" id="(P101-U01-L06-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(lesson6,{title:'In this lesson',back:unit,items:[...sixthSections,{href:'#references',title:'Further reading and context'}]});
  for(const planned of p101Block1Lessons.lessons){
   const path=p101Home+'b01/'+planned.unit.toLowerCase()+'/'+planned.id.split('-').at(-1).toLowerCase()+'/';
   if(path===lesson||path===lesson2||path===lesson3||path===lesson4||path===lesson5||path===lesson6)continue;
   const page=pages.find(p=>p[0]===path);
-  page[3]=notice+'<p class="eyebrow">P101 · Block 1 · '+planned.unit+' · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned hours, including '+planned.pythonHours+' hours of Python. Teaching is in preparation.</p>'+nav(link(p101Home+'b01/'+planned.unit.toLowerCase()+'/','← Unit outline'),'');
+  page[3]=notice+'<p class="eyebrow">P101 · Block 1 · '+planned.unit+' · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned hours, including '+planned.pythonHours+' hours of Python. Teaching is in preparation.</p>'+nav(link(p101Home+'b01/'+planned.unit.toLowerCase()+'/',planned.unit==='U02'?'← Unit introduction':'← Unit outline'),'');
  }
- if(unit2Preview){
-  const draft='<p class="p101-preview-notice">Local review draft · Unit 2 teaching is not published</p>';
-  const wrap=name=>'<div data-search-status="draft" class="teaching-reading p101-reading p101-u2">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
+ {
+  const wrap=name=>'<div data-search-status="available" class="teaching-reading p101-reading p101-u2">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
   const lessonPath=unit2+'l01/';
-  pages.find(p=>p[0]===unit2)[3]=draft+wrap('unit2')+nav(link(unit+'l06/','← Unit 1 closing lesson'),link(lessonPath,'Lesson 1 · Local review →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U02').map((l,i)=>'<p>'+link(unit2+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i===0?' · Local review draft':' · Lesson plan')+'</p>').join('')+'</section>';
-  pages.find(p=>p[0]===lessonPath)[3]=draft+wrap('unit2-lesson1')+nav(link(unit2,'← Unit 2 introduction'),link(unit2+'l02/','Lesson 2 plan →'));
+  pages.find(p=>p[0]===unit2)[3]=wrap('unit2')+nav(link(unit+'l06/','← Unit 1 closing lesson'),link(lessonPath,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U02').map((l,i)=>'<p>'+link(unit2+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i===0?' · Available':' · Lesson plan')+'</p>').join('')+'</section>';
+  pages.find(p=>p[0]===lessonPath)[3]=wrap('unit2-lesson1')+nav(link(unit2,'← Unit 2 introduction'),link(unit2+'l02/','Lesson 2 plan →'));
   const sectionFragment=fs.readFileSync(root+'content/p101/unit2-lesson1.html','utf8');
   const unit2Sections=[...sectionFragment.matchAll(/<section class="chapter" id="(P101-U02-L01-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
   extraRails.set(lessonPath,{title:'In this lesson',back:unit2,items:[...unit2Sections,{href:'#references',title:'Further reading and context'}]});

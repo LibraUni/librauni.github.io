@@ -1,5 +1,10 @@
 # LibraUni public website
 
+## P101 Unit 2 opening approved for publication — 7 October 2026
+
+The learner explicitly requested “publish it” after reviewing the prepared introduction and Lesson1. This supersedes the local-only release restriction below for those two pages and their notebook companions. Release removes preview gating/notices, marks only the introduction and U02-L01 available, updates catalogue/module/block/Unit1→2 navigation and indexes both pages in published-material search. U02-L02–L05 remain plans. Approved teaching is unchanged. All96tests and local browser/clipboard/media/search checks pass; eighteen available search entries include the two new pages. Await successful GitHub security/deployment and live verification before claiming publication complete. See docs/p101-u02-opening-release.md. No learner records changed.
+
+
 ## P101 Unit 2 opening prepared locally — 7 October 2026
 
 The learner said “proceed” to the Unit 2 introduction and full U02-L01 for review before publication. The package is complete in this isolated clone on p101-unit2-local, base ad82f659. Read docs/p101-u02-l01-plan.json, docs/p101-u02-l01-review.md and the media register. Standard1.9 preserved; six sections2.1–2.6, five examples2.1–2.5, seven activities2.1–2.7, six figures2.1–2.6 across introduction/lesson, learner notebook and Python companion. 4h including1hPython retained; no mean/propagation taught. 96site tests, subject/code checks, preview build/search, media and browser/offline checks passed. No publication or private-record changes.
