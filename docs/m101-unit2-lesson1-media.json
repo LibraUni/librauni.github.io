@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-07",
+  "images": [
+    {
+      "figures": [
+        "2.1",
+        "2.7"
+      ],
+      "subject": "Canadarm2 and Dextre photographed from ISS on 23 July 2025",
+      "creator": "NASA/Jonny Kim",
+      "source": "https://www.nasa.gov/image-article/a-robotic-helping-hand/",
+      "asset": "https://www.nasa.gov/wp-content/uploads/2025/11/iss073e0575226orig.jpg",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "NASA factual educational/informational use under media guidelines, with credit; no endorsement claimed; no third-party copyright notice on this credited photo. Not relicensed as LibraUni original material.",
+      "modifications": "Resized 8256x5504 to1200x800, JPEG recompressed; no cropping or annotations. Embedded in standalone copies.",
+      "inspected": "Original resized photograph viewed; subject matches source. Neither photo nor fictional vector values used as measured joint geometry."
+    }
+  ],
+  "diagrams": {
+    "figures": [
+      "2.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.6"
+    ],
+    "creator": "Original LibraUni diagrams for this draft",
+    "terms": "CC BY-NC-SA 4.0",
+    "models": "Exact plane arrows/angles; distance triangle; fixed-length sign cases; 9 cosine theta graph computed in degrees."
+  },
+  "selection": "NASA robotic-arm image searched and selected for unit question and return in the lesson synthesis; no artificial image quota. Optional photograph context does not carry an unstated prerequisite. Static diagrams chosen over new interactive for this bounded lesson; no new video recommended without inspection."
+}

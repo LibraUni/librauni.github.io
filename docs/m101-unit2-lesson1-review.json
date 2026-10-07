@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-07",
+  "version": "0.1 local review",
+  "scope": "Unit2 introduction and U02-L01 only",
+  "authorisation": "User said proceed to proposed local introduction plus Lesson1, before publication. No deployment or availability changes.",
+  "standard": "1.9 plus fixed v0.4 illustrated reference; original sample positions and worked explanations read, reference styles retained locally.",
+  "references": {
+    "privateOU": "sources/Unit 5 - Coordinate Geometry.pdf; printed103\u2013104 (PDF3\u20134) introduction; printed182\u2013188 (PDF82\u201388) \u00a77.1\u20137.2 exposition, Examples21\u201323 and Activities51\u201354; solutions at printed203 (PDF103). Relevant text inspected; rendered pages183,185,187 viewed. Private pages and excerpts excluded from outputs and website draft content.",
+    "adjoining": "Published content/m101/unit.html; U01-L04 direction/radian conventions and components; U01-L05 conclusion and review. No prior teaching altered.",
+    "secondary": "OpenStax University Physics Volume1 \u00a72.4 scalar-product part, Eq2.27\u20132.34, Examples2.15\u20132.16 and associated checks read at source; no copied questions or prose; forces/work outside current required scope.",
+    "mapping": "See m101-unit2-lesson1-plan.json for section mapping. OU53 supplies component fluency, OU51 sign/angle work, OU52 expansion, OU54 angle recovery. Added constructive, diagnostic and method-choice questions are original extensions within L01 scope; no exact comparator claimed for every subpart."
+  },
+  "subjectReview": {
+    "method": "Author analytic derivation review plus independent numerical formulations (Pythagorean distance/polarisation and atan2 differences versus dot-product formula); not an independent human reviewer.",
+    "checks": "90 assertions passed in work/m101-u02-l01/check_maths.py; all numerical examples/activity answers included; degenerate angles and zero inputs checked.",
+    "assumptions": "Common perpendicular unit axes, compatible units, two nonzero vectors for angles; scalar product defined separately at zero; acute/obtuse endpoint qualifications; no determinants, cross products, calculus or programming prerequisite.",
+    "derivation": "Component formula justified by equality of squared tip distances in two perpendicular coordinate descriptions. Cosine-rule form derived explicitly from Pythagoras, avoiding untaught prerequisite or circular use of distributivity.",
+    "revisions": [
+      "Changed r,s magnitude symbols to avoid confusion with tip labels A,B.",
+      "Strengthened Activity2.6 from another right-angle result to a nontrivial obtuse inverse-cosine calculation with rescaling/reversal.",
+      "Distinguished perpendicular direction from abstract zero-product orthogonality, without using the latter to assign a zero-vector angle."
+    ]
+  },
+  "readerReview": {
+    "pass": "Read assembled seven-section argument and feedback; source comparison emphasises motivation, intermediate choices and interpretation.",
+    "repairs": [
+      "Explicitly distinguish interior joint angle and directed-displacement angle.",
+      "Derive the distance/cosine bridge instead of assuming the cosine rule.",
+      "Retain a concrete small-vector distributive calculation alongside general algebra; distinguish numerical check from proof.",
+      "Make lost magnitude information visible in Activity2.8; incorrect cancellation receives counterexample."
+    ],
+    "practice": "Eight numbered activities,8 worked examples,11 collapsed panels (8 discussions,3 hints); no separate lesson-end exercise set. Activities cover component/geometric products, zero and signs, constructive orthogonality, symmetry/scaling/distribution, sum magnitude, 3D inverse cosine, units and method selection. Answers checked separately; constructive questions include sample answers and validity criteria."
+  },
+  "visualReview": {
+    "checks": "Two offline self-contained reading copies;20 viewport/theme cases (1440,1024,768,390,320; light/dark), no-JavaScript maths/feedback, image loading, duplicate IDs and anchor targets. Rendered sections, diagrams and maths visually inspected; 200% CSS zoom and keyboard/offline navigation checked.",
+    "repairs": [
+      "Converted unsupported aligned environment into native MathML table rows.",
+      "Added explicit left/right cell alignment for browser MathML rendering.",
+      "Fixed dark-theme display maths contrast and logo background.",
+      "Separated touching diagram headings, moved coordinate label off connecting arrow and moved graph-axis title below ticks."
+    ],
+    "limits": "No screen-reader user audit, student validation or cross-browser certification. At320px five long working blocks scroll inside keyboard-focusable labelled containers; page itself does not overflow. Diagrams use labelled keyboard-focusable scrollers to preserve text size. No new PDF delivered for this partial unit. Large zoom can likewise require horizontal movement inside an equation; all controls and required text remain available."
+  },
+  "wholeLessonAndWider": {
+    "progression": "Unit1 vector representations -> comparing directions -> signed product -> component bridge -> perpendicularity -> algebraic rules -> angles -> selection/checking -> U02-L02 projections.",
+    "outcomes": "M101-O3 vector/product reasoning; M101-O6 explanation and validation. Supports B01 vector/linear progression and P101 later projections without claiming physical-law coverage or learner mastery.",
+    "workload": "180minutes:60explanation including introduction,90attempts (8+10+12+12+14+14+12+8),30feedback/correction/retrieval. Estimates unmeasured. Unit16h and final lesson1hPython unchanged.",
+    "unitRemaining": "L02\u2013L05, full-unit cumulative exercises and checked solutions, conclusion and concise synchronised web/PDF reference. Closing written-exercise budget is a recorded density risk to resolve visibly during later planning, not permission to add work or cut depth."
+  },
+  "disposition": "Local reading package ready for learner review; unpublished. Unit2 as a whole remains incomplete. Later publication requires integration, site regression checks and explicit publication decision; no learner/enrolment/academic records changed.",
+  "paths": {
+    "intro": "/Users/iker/.codex/.chatgpt-projects/g-p-6ab2a87e0300819183621d7ca21c1def/outputs/M101-Unit-2-Introduction.html",
+    "lesson": "/Users/iker/.codex/.chatgpt-projects/g-p-6ab2a87e0300819183621d7ca21c1def/outputs/M101-Unit-2-Lesson-1.html",
+    "editableSource": "/Users/iker/.codex/.chatgpt-projects/g-p-6ab2a87e0300819183621d7ca21c1def/work/m101-u02-l01",
+    "fragments": "content/drafts/m101-u02-local/",
+    "preview": "http://127.0.0.1:8772/M101-Unit-2-Introduction.html"
+  },
+  "outputSha256": {
+    "M101-Unit-2-Introduction.html": "374c276afef81b7adce1abd18490da197697411395ef88b0501f36706858642b",
+    "M101-Unit-2-Lesson-1.html": "c7b239a6375df123c0473c99ad1bdb4937cda64acde0cb8ef5942bfc7399b2dd"
+  },
+  "publicationDecision": {
+    "date": "2026-10-07",
+    "instruction": "publish it.",
+    "scope": "Approved introduction and complete Lesson1; U02-L02 onward remain plans.",
+    "base": "4b6b67803e6492333accd614190c3d6ed8414664 (includes P101 Unit2 and site search)",
+    "integration": "Canonical pages, bounded availability, catalogue/module/block/previous-next navigation and search. Approved teaching retained; local-review notice removed and asset/navigation URLs adapted. New CSS scoped to .m101-u2; prior teaching/shared CSS untouched.",
+    "checks": "97 site tests, production build, 20-entry search index and teaching-media check passed. CI security and live verification follow publication.",
+    "disposition": "Authorised release prepared; do not infer learner attainment."
+  }
+}

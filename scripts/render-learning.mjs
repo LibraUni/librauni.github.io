@@ -4,7 +4,7 @@ import {addP101Teaching,p101TeachingPaths} from './p101-teaching.mjs';
 import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
 import {degreeModules,degreeSidebar,stageList} from './degree-navigation.mjs';
 import {addM101Teaching,m101TeachingPaths} from './m101-teaching.mjs';
-import {m101Unit1Lessons} from '../curriculum/m101-released.js';
+import {m101Lessons} from '../curriculum/m101-released.js';
 import {prototypeLessons,prototypePlans} from '../curriculum/m100-prototype.js';
 import {renderAssessments} from './render-block1-assessments.mjs';
 import {teaching} from './render-block1-teaching.mjs';
@@ -73,7 +73,7 @@ export function renderLearning({root,shell,link,e}) {
  for(const u of m100.units)pages.push([unitPath(u.id),u.title,[...crumbs.slice(0,3),link(blockPath(m100.blocks.find(b=>b.units.includes(u.id)).id),'Block '+Number(m100.blocks.find(b=>b.units.includes(u.id)).id.slice(1))),`<span aria-current="page">${u.id}</span>`],intro(u.title,e(u.can))+`<p>${u.hours} planned study hours · ${link('/programme/bridge/lu-m100/#'+u.id,'Unit blueprint')}.</p>`+tree(lessons.filter(l=>l.unit===u.id).map(l=>branch(titled(l.id,l.id+' · '+l.title),`<p>${e(l.purpose)}</p><p>${l.id==='U01-L01'?link(lessonPath,'Open lesson · All six sections available'):link(lessonUrl(l),'Open lesson · All sections available')}</p>`)).join(''))]);
  pages.push([lessonPath,'Signed quantities and ordered calculations',[...crumbs,link(unitPath('U01'),'Unit 1'),'<span aria-current="page">Lesson 1</span>'],intro('Signed quantities and ordered calculations','Start with familiar arithmetic, then build a dependable way of explaining and checking it.')+`<p>Full lesson: 4 hours · All six sections available, including a downloadable Python practice notebook.</p>`+published.map(id=>fs.readFileSync(root+'content/m100-u01-l01-'+id.toLowerCase()+'.html','utf8')).join('')+`<nav class="lesson-pagination" aria-label="Previous and next"><a href="${unitPath('U01')}">← Unit overview</a><a href="/programme/archive/m100/b01/u01/l02/">Next: Fractions, decimals and named values →</a></nav><p class="small">Original LibraUni teaching · Published 26 September 2026. ${link('/programme/bridge/lu-m100/#opening-sections','Lesson design and section blueprint')}.</p>`]);
  // Generate navigation destinations from the approved hierarchy, without inventing teaching.
- const modules=[{base,blocks:m100.blocks,units:m100.units,lessons:lessons,blueprint:'/programme/bridge/lu-m100/'},...stage1Modules.map(m=>({base:home(m),blocks:stageBlocks[m.code],units:({'LU-M101':m101Units,'LU-M102':m102Units,'LU-P101':p101Units,'LU-A101':a101Units}[m.code]).units,lessons:m.code==='LU-M101'?m101Unit1Lessons:m.code==='LU-P101'?p101Block1Lessons.lessons:[],blueprint:m.path}))];
+ const modules=[{base,blocks:m100.blocks,units:m100.units,lessons:lessons,blueprint:'/programme/bridge/lu-m100/'},...stage1Modules.map(m=>({base:home(m),blocks:stageBlocks[m.code],units:({'LU-M101':m101Units,'LU-M102':m102Units,'LU-P101':p101Units,'LU-A101':a101Units}[m.code]).units,lessons:m.code==='LU-M101'?m101Lessons:m.code==='LU-P101'?p101Block1Lessons.lessons:[],blueprint:m.path}))];
  const addPage=(path,title,parent,items,label,description)=>{
   extraRails.set(path,{title:label,items,back:parent});
   if(pages.some(p=>p[0]===path))return;

@@ -7,6 +7,9 @@ The learner commissioned U02-L02 and its notebook for local review. The complete
 ## P101 Unit 2 opening LIVE — 7 October 2026
 
 Release 4b6b67803e6492333accd614190c3d6ed8414664 is published. GitHub run37639712429 succeeded, including planner-security and publish. Live Chrome and HTTP checks verified both pages, layouts/themes, all3 exact copy buttons, media, links/downloads, no-JavaScript maths/feedback, 18search entries including the2 new pages, catalogue/module/block/adjacent navigation and exact notebook bytes. Supersedes all pending/local-only dispositions for this package. U02-L02 remains uncommissioned; no learner records changed. This checkpoint is local documentation after the deployed release.
+## M101 Unit 2 opening authorised for publication — 7 October 2026
+
+The learner explicitly requested “publish it” after reviewing the local Unit2 introduction and U02-L01. This authorises publishing those two pages. Source: content/m101/unit2.html and unit2-lesson1.html; scoped src/m101-unit2.css; media public/teaching/m101/canadarm2.jpg. Seven sections2.1–2.7, eight worked examples and eight activities,184 native MathML expressions,11 initially closed feedback panels. Docs m101-unit2-lesson1-plan.json, -media.json and -review.json preserve calibration and review evidence. Only introduction/L01 marked available; U02-L02–L05 remain lesson plans. Latest base4b6b678 includes P101Unit2/search and is preserved. 97 tests, production build,20-entry search and media checks passed. Await deployment/live verification before claiming published. No learner records changed; no new teaching beyond the approved package commissioned.
 
 ## P101 Unit 2 opening approved for publication — 7 October 2026
 
