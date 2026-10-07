@@ -1,5 +1,9 @@
 # LibraUni public website
 
+## M101 Unit 2 opening authorised for publication — 7 October 2026
+
+The learner explicitly requested “publish it” after reviewing the local Unit2 introduction and U02-L01. This authorises publishing those two pages. Source: content/m101/unit2.html and unit2-lesson1.html; scoped src/m101-unit2.css; media public/teaching/m101/canadarm2.jpg. Seven sections2.1–2.7, eight worked examples and eight activities,184 native MathML expressions,11 initially closed feedback panels. Docs m101-unit2-lesson1-plan.json, -media.json and -review.json preserve calibration and review evidence. Only introduction/L01 marked available; U02-L02–L05 remain lesson plans. Latest base4b6b678 includes P101Unit2/search and is preserved. 97 tests, production build,20-entry search and media checks passed. Await deployment/live verification before claiming published. No learner records changed; no new teaching beyond the approved package commissioned.
+
 ## P101 Unit 2 opening approved for publication — 7 October 2026
 
 The learner explicitly requested “publish it” after reviewing the prepared introduction and Lesson1. This supersedes the local-only release restriction below for those two pages and their notebook companions. Release removes preview gating/notices, marks only the introduction and U02-L01 available, updates catalogue/module/block/Unit1→2 navigation and indexes both pages in published-material search. U02-L02–L05 remain plans. Approved teaching is unchanged. All96tests and local browser/clipboard/media/search checks pass; eighteen available search entries include the two new pages. Await successful GitHub security/deployment and live verification before claiming publication complete. See docs/p101-u02-opening-release.md. No learner records changed.

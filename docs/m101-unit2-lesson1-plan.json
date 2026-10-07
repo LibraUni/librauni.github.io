@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-07",
+  "status": "Authorised local introduction and complete Lesson 1; no publication",
+  "identity": "Degree Physics > Stage 1 > M101 > B01 > U02 > L01",
+  "standard": "1.9; fixed illustrated reference v0.4 inspected, including position exposition, examples, activities, margins and images",
+  "gate": "All M101 units and B01 lessons blueprinted and approved; current task authorises detailed section design and local production. No new dependency or allocation.",
+  "prerequisites": "U01 vector arithmetic, magnitudes, unit vectors, components and trigonometric angle conventions; no P101 code in L01",
+  "sections": [
+    [
+      "2.1",
+      "Comparing directions",
+      "OU Unit 5 \u00a77.1 printed 182\u2013183 / PDF 82\u201383; U01 \u00a71.22 angle convention",
+      6,
+      8,
+      3
+    ],
+    [
+      "2.2",
+      "A signed product",
+      "OU \u00a77.1 printed 183\u2013184 / PDF 83\u201384; Activity 51",
+      8,
+      10,
+      3
+    ],
+    [
+      "2.3",
+      "Calculating from components",
+      "OU printed 185\u2013186 / PDF 85\u201386; Example 22, Activity 53",
+      10,
+      12,
+      4
+    ],
+    [
+      "2.4",
+      "What a zero product tells us",
+      "OU printed 184; two directions of perpendicularity; Activity 53 zero pair",
+      5,
+      12,
+      4
+    ],
+    [
+      "2.5",
+      "Rules that preserve the meaning",
+      "OU printed 184\u2013185; Example 21, Activity 52",
+      8,
+      14,
+      4
+    ],
+    [
+      "2.6",
+      "Recovering an angle",
+      "OU \u00a77.2 printed 187\u2013188 / PDF 87\u201388; Example 23, Activity 54, solution printed 203",
+      9,
+      14,
+      4
+    ],
+    [
+      "2.7",
+      "Choosing and checking a calculation",
+      "OU Activities 51\u201354 collectively; original measurement and error diagnosis synthesis",
+      4,
+      20,
+      8
+    ]
+  ],
+  "minutes": {
+    "unitAndLessonIntroductions": 10,
+    "sectionExplanation": 50,
+    "practice": 90,
+    "feedbackRetrieval": 30,
+    "total": 180
+  },
+  "comparatorDifferences": "Original geometric motivation from signed components, then component formula justified by comparing squared distances. No prerequisite cosine rule: derive the needed relation. OU uses basis expansion and introduces projections here; full projection teaching deferred to approved L02. Own activities add orientation reversal, zero-vector diagnosis, constructing perpendicular vectors, unit checking and fictional 3D joint geometry; no copied questions.",
+  "secondaryComparator": "OpenStax University Physics 1 \u00a72.4 scalar-product exposition and Examples 2.15\u20132.16 read; strategy/solution/interpretation structure, not copied wording or examples. Force laws and cross-product parts excluded.",
+  "visualPlan": "Original diagrams for direction vs joint angle, signed component, cosine bridge, sign cases, and error diagnosis; NASA/Jonny Kim Canadarm2 image for perspective/direction context. Static geometry suffices here; an interactive/video is not needed for this bounded lesson. No claim of inspecting a new interactive/video.",
+  "unitCompletionReservation": "U02 L05 retains 30 explanation,30 written practice,60 Python,60 feedback/reference (last30 reference). Full-unit mixed set, checked solutions, conclusion and synchronised concise web/PDF reference remain due. Density risk: closing written set must be calibrated against whole-unit outcomes before L04/L05 authoring; propose any redistribution visibly, never add unbudgeted work. L01 activities are not the full-unit exercise set.",
+  "reviewLimits": "Author reviews and computational checks, not independent human or student validation; study times unmeasured. Sources private and not copied into deliverables.",
+  "introComparator": "OU Unit5 introduction printed103\u2013104 / PDF3\u20134; narrative route and connection to prior geometry; our introduction assumes U01 completed and excludes circles and equations.",
+  "sectionFields": "Each section inherits M101-O3/O6; predecessors are previous section and U01-L05; purposes and practice are embodied by named section and linked numbered activities; L01 scope excludes projection formulas, cross products and code."
+}

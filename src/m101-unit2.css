@@ -1,0 +1,33 @@
+/* Scoped to the newly published M101 Unit 2 reading pages. */
+.m101-u2 math{font-family:math;color:inherit}
+.m101-u2 mi[mathvariant="bold"]{font-weight:700;font-style:normal}
+.m101-u2 .equation{color:inherit;overflow-x:auto;max-width:100%;padding:14px 5px;font-size:21px}
+.m101-u2 math[display=block]{font-size:1em;margin:.25em 0}
+.m101-u2 mtd[columnalign="left"]{text-align:left}
+.m101-u2 mtd[columnalign="right"]{text-align:right}
+.m101-u2 .example h3,.m101-u2 .activity h3,.m101-u2 .important h3{font:600 16px/1.5 system-ui;margin:0 0 14px}
+.m101-u2 .activity h3{background:#dce7f3;padding:12px 15px}
+.m101-u2 .example h4{margin:20px 0 8px}
+.m101-u2 .time{font:13px/1.5 system-ui;color:#526166}
+.m101-u2 .table-wrap{overflow:auto}
+.m101-u2 table{border-collapse:collapse;width:100%;font-size:16px}
+.m101-u2 th,.m101-u2 td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid #cbd2ce}
+.m101-u2 th:first-child{width:39%}
+.m101-u2 caption{text-align:left;font:14px/1.5 system-ui;margin-bottom:15px}
+.m101-u2 .margin-figure{grid-template-columns:minmax(0,1fr) 165px;gap:22px}
+.m101-u2 .diagram-scroll{overflow:auto}
+.m101-u2 .diagram-scroll svg{min-width:540px}
+.m101-u2 .photo img{width:100%;height:auto}
+.m101-u2 .credit{margin-top:8px}
+.m101-u2 .figure-art{background:#fafaf6}
+.m101-u2 .history{display:flow-root}
+.m101-u2 .float-photo{float:right;width:42%;margin:4px 0 18px 25px}
+.m101-u2 [tabindex]:focus-visible{outline:3px solid #317ca0;outline-offset:3px}
+[data-theme="dark"] .m101-u2 .equation{color:#e5ece9}
+[data-theme="dark"] .m101-u2 .activity h3{background:#2a4052;color:#a7cfdf}
+[data-theme="dark"] .m101-u2 .time{color:#bdcdc5}
+[data-theme="dark"] .m101-u2 .important h3{color:#cae9d5}
+[data-theme="dark"] .m101-u2 .example h3{color:#a7cfdf}
+@media(max-width:1050px){.m101-u2 .margin-figure{display:block}.m101-u2 .margin-figure figcaption{margin-top:14px;border:0;padding:0}}
+@media(max-width:650px){.m101-u2 .float-photo{float:none;width:100%;margin:22px 0}.m101-u2 .equation{font-size:18px}.m101-u2 .activity>ol{padding-left:32px}.m101-u2 td,.m101-u2 th{padding:9px 7px}}
+@media print{.m101-u2 .diagram-scroll svg{min-width:0}.m101-u2 .margin-figure{display:block}.m101-u2 .equation{overflow:visible;font-size:12pt}.m101-u2 .float-photo{float:none;width:60%;margin:20px auto}}
