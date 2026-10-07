@@ -31,3 +31,8 @@
 @media(max-width:1050px){.m101-u2 .margin-figure{display:block}.m101-u2 .margin-figure figcaption{margin-top:14px;border:0;padding:0}}
 @media(max-width:650px){.m101-u2 .float-photo{float:none;width:100%;margin:22px 0}.m101-u2 .equation{font-size:18px}.m101-u2 .activity>ol{padding-left:32px}.m101-u2 td,.m101-u2 th{padding:9px 7px}}
 @media print{.m101-u2 .diagram-scroll svg{min-width:0}.m101-u2 .margin-figure{display:block}.m101-u2 .equation{overflow:visible;font-size:12pt}.m101-u2 .float-photo{float:none;width:60%;margin:20px auto}}
+
+/* Lesson 2 refinements preserve the existing Lesson 1 rendering. */
+.m101-u2-l02 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
+.m101-u2-l02 mi[mathvariant="normal"],.m101-u2-l02 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
+[data-theme="dark"] .m101-u2-l02 .history h3{color:#a7cfdf}

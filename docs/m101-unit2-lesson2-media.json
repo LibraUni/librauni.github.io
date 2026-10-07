@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-07",
+  "figures": {
+    "2.8": "Original positive/negative foot; labels and arrow directions checked",
+    "2.9": "Original equal-scale axes; a=(4,1),foot=(48/25,64/25); removed dimensionless unit arrow from metre-scaled plot to avoid ambiguity; unit direction taught in prose",
+    "2.10": "Original OFA tip-to-tail negative projection; right-angle marker checked",
+    "2.11": "Original paired reference reversal; input and foot unchanged",
+    "2.12": "NASA lunar photo, details below",
+    "2.13": "Original perpendicular vs slanted guides; OA shorter than OG, longer than OF"
+  },
+  "photo": {
+    "source": "https://www.nasa.gov/image-article/lunar-module-tranquility-base/",
+    "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/as11-40-5961hr.jpg",
+    "creator": "NASA/Neil Armstrong",
+    "identifier": "AS11-40-5961",
+    "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "permissionEvidence": "NASA factual educational reuse guidance inspected; source credits NASA with Armstrong as photographer; no third-party restriction identified. No endorsement implied.",
+    "changes": "JPEG recompressed quality88, dimensions1041x1048 unchanged; no cropping/annotations.",
+    "interpretation": "Armstrong shadow and terrain support limitations of shadow analogy, not quantitative inference. Actual downloaded image visually inspected.",
+    "sha256": "08e7e958bbe326ec64454f97cca45a29fb449c8051d7ec34b15ee1329ec4dd14"
+  },
+  "candidateSearch": "Searched NASA Apollo11 lunar shadows and inspected source page/photo/terms. Chose photograph with clearly visible shadow and relief.",
+  "interactiveVideo": "Considered changing reference direction interactively; paired static diagrams and prediction/rescaling activity carry comparison here. No quota; none included or claimed inspected."
+}
