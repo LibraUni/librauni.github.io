@@ -2,7 +2,7 @@
 # %% [markdown]
 # # P101 · Unit 2 · Lesson 2
 # ## Variation, bias and a fair comparison
-# Local review draft · Activity 2.12 · 60 minutes
+# Activity 2.12 · 60 minutes
 # 
 # All values are simulated. This file is an exercise in preserving and checking records, not evidence of a real calibration. Python 3; no external packages. Use the lesson for explanation and feedback.
 # 

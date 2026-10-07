@@ -1,5 +1,9 @@
 # LibraUni public website
 
+## P101 Unit 2 Lesson 2 authorised for publication — 7 October 2026
+
+The learner explicitly requested “publish it” after reviewing U02-L02. This supersedes its local-only restrictions. Lesson2 now renders by default, with availability/navigation/search updates and published notebook labels. Approved teaching unchanged. Latest remote d730b1e (M101 Unit2 opening) reconciled and preserved. Await deployment and live verification before claiming publication complete. No later lesson or learner-record change authorised.
+
 ## P101 Unit 2 Lesson 2 prepared locally — 7 October 2026
 
 The learner commissioned U02-L02 and its notebook for local review. The complete draft is ready, UNPUBLISHED. Read docs/p101-u02-l02-plan.json, review.md and media.json. Six sections2.7–2.12; five worked examples; six activities with separate hints/feedback; four figures; Python notebook and companion. 4h/1hPython retained. All96site tests plus subject/code/media/browser/offline checks pass; limitations documented. Render with P101_U02_L02_PREVIEW=1; default L02 remains an outline. Preview dist served on8784. Reading copy and companions are in this chat's outputs. No publication, learner-record changes or later lesson commissioned. Reconcile remote before any future authorised release. This supersedes earlier statements that L02 is uncommissioned.
