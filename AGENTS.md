@@ -1,5 +1,9 @@
 # LibraUni public website
 
+## P101 Unit 2 opening LIVE — 7 October 2026
+
+Release 4b6b67803e6492333accd614190c3d6ed8414664 is published. GitHub run37639712429 succeeded, including planner-security and publish. Live Chrome and HTTP checks verified both pages, layouts/themes, all3 exact copy buttons, media, links/downloads, no-JavaScript maths/feedback, 18search entries including the2 new pages, catalogue/module/block/adjacent navigation and exact notebook bytes. Supersedes all pending/local-only dispositions for this package. U02-L02 remains uncommissioned; no learner records changed. This checkpoint is local documentation after the deployed release.
+
 ## P101 Unit 2 opening approved for publication — 7 October 2026
 
 The learner explicitly requested “publish it” after reviewing the prepared introduction and Lesson1. This supersedes the local-only release restriction below for those two pages and their notebook companions. Release removes preview gating/notices, marks only the introduction and U02-L01 available, updates catalogue/module/block/Unit1→2 navigation and indexes both pages in published-material search. U02-L02–L05 remain plans. Approved teaching is unchanged. All96tests and local browser/clipboard/media/search checks pass; eighteen available search entries include the two new pages. Await successful GitHub security/deployment and live verification before claiming publication complete. See docs/p101-u02-opening-release.md. No learner records changed.
