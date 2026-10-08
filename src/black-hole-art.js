@@ -2,20 +2,57 @@
 const $=id=>document.getElementById(id);
 const canvas=$('black-hole-art'),ctx=canvas.getContext('2d');if(ctx){canvas.parentElement.classList.add('ready');$('art-motion').hidden=false;}const reduced=matchMedia('(prefers-reduced-motion: reduce)');let paused=reduced.matches,visible=true,phase=0,last=0,request=0,w=0,h=0;
 let seed=301;const rand=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646;};const stars=Array.from({length:140},()=>({x:rand(),y:rand(),r:.3+rand()*.8,a:.12+rand()*.45}));
-function draw(){if(!ctx||!w||!h)return;ctx.clearRect(0,0,w,h);for(const s of stars){ctx.fillStyle=`rgba(200,218,221,${s.a})`;ctx.beginPath();ctx.arc(s.x*w,s.y*h,s.r,0,Math.PI*2);ctx.fill();}
- const x=w*.60,y=h*.46,r=Math.min(w*.23,h*.24);
- const glow=ctx.createRadialGradient(x,y,r*.6,x,y,r*2.5);glow.addColorStop(0,'#efc98912');glow.addColorStop(.5,'#6baaa215');glow.addColorStop(1,'#10212b00');ctx.fillStyle=glow;ctx.fillRect(0,0,w,h);
- ctx.save();ctx.translate(x,y);ctx.rotate(-.27);
- // Faint instrument-like construction lines.
- ctx.strokeStyle='#98bfb31b';ctx.lineWidth=.6;for(const rr of [r*1.65,r*2.15]){ctx.beginPath();ctx.ellipse(0,0,rr,rr*.8,0,0,Math.PI*2);ctx.stroke();}
- for(let i=0;i<85;i++){const q=i/84,rx=r*(1.13+q*1.28),ry=rx*(.24+.025*Math.sin(q*7));ctx.beginPath();ctx.ellipse(0,0,rx,ry,0,Math.PI,Math.PI*2);ctx.strokeStyle=`rgba(${215+Math.round(q*25)},${170+Math.round(q*35)},${102+Math.round(q*37)},${.07+.20*(1-q)})`;ctx.lineWidth=.7;ctx.stroke();}
- const ring=ctx.createRadialGradient(0,0,r*.85,0,0,r*1.15);ring.addColorStop(0,'#070f17');ring.addColorStop(.46,'#0a1119');ring.addColorStop(.68,'#d9b980');ring.addColorStop(.75,'#f4dfad');ring.addColorStop(.79,'#b99459aa');ring.addColorStop(1,'#b9945900');ctx.fillStyle=ring;ctx.beginPath();ctx.arc(0,0,r*1.15,0,Math.PI*2);ctx.fill();
- ctx.fillStyle='#09131d';ctx.beginPath();ctx.arc(0,0,r*.975,0,Math.PI*2);ctx.fill();
- for(let i=0;i<94;i++){const q=i/93,rx=r*(1.05+q*1.4),ry=rx*(.24+.025*Math.sin(q*7));ctx.beginPath();ctx.ellipse(0,0,rx,ry,0,0,Math.PI);ctx.strokeStyle=`rgba(239,${184+Math.round(q*34)},${114+Math.round(q*37)},${.08+.29*(1-q)})`;ctx.lineWidth=.85;ctx.stroke();}
- for(let i=0;i<36;i++){let a=phase*(.18+(i%5)*.018)+i*2.39996,rx=r*(1.13+(i%11)/11*1.24),ry=rx*.25,px=Math.cos(a)*rx,py=Math.sin(a)*ry;if(py<0&&Math.hypot(px,py)<r)continue;ctx.fillStyle=`rgba(250,218,157,${.2+(i%4)*.13})`;ctx.beginPath();ctx.arc(px,py,.8+(i%3)*.4,0,Math.PI*2);ctx.fill();}
+// The broad upper/lower arcs echo the approved logo's lensed-disc silhouette.
+// Their shapes and flow are illustrative, not calculated photon trajectories.
+function draw(){
+ if(!ctx||!w||!h)return;
+ ctx.clearRect(0,0,w,h);
+ for(const star of stars){ctx.fillStyle=`rgba(200,218,221,${star.a*.65})`;ctx.beginPath();ctx.arc(star.x*w,star.y*h,star.r,0,Math.PI*2);ctx.fill();}
+ const x=w*(w<550?.5:.60),y=h*.46,r=Math.min(w*(w<550?.19:.16),h*.235);
+ ctx.save();ctx.translate(x,y);
+ const midline=r*.10;
+ const aura=ctx.createRadialGradient(0,midline,r*.7,0,midline,r*2.65);
+ aura.addColorStop(0,'#efba5d20');aura.addColorStop(.48,'#bc6b2520');aura.addColorStop(1,'#bc6b2500');
+ ctx.fillStyle=aura;ctx.fillRect(-r*3,-r*3,r*6,r*6);
+ // The shadow and arcs share their reflection axis; the shadow meets the inner crown.
+ ctx.fillStyle='#030a10';ctx.beginPath();ctx.arc(0,midline,r*1.15,0,Math.PI*2);ctx.fill();
+ const gold=ctx.createLinearGradient(-r*2.5,0,r*2.5,0);
+ gold.addColorStop(0,'#a04e1600');gold.addColorStop(.17,'#c77b35');gold.addColorStop(.38,'#ffe6ae');gold.addColorStop(.55,'#fff3cf');gold.addColorStop(.76,'#dba059');gold.addColorStop(1,'#a04e1600');
+ function arch(q,lower=false){
+  const radius=r*(1+q*.27),reflect=v=>lower?2*midline-v:v;
+  ctx.beginPath();ctx.moveTo(-radius*2.45,r*.10);
+  ctx.bezierCurveTo(-radius*1.35,reflect(r*.04),-radius*1.10,reflect(r*.06),-radius*.91,reflect(-radius*.43));
+  ctx.bezierCurveTo(-radius*.57,reflect(-radius*1.25),radius*.54,reflect(-radius*1.25),radius*.91,reflect(-radius*.43));
+  ctx.bezierCurveTo(radius*1.10,reflect(r*.06),radius*1.35,reflect(r*.04),radius*2.45,r*.10);
+ }
+ ctx.strokeStyle=gold;ctx.lineWidth=r*.08;ctx.shadowColor='#ed9a3c';ctx.shadowBlur=r*.19;
+ ctx.globalAlpha=.38;arch(.15);ctx.stroke();arch(.15,true);ctx.stroke();ctx.shadowBlur=0;
+ for(let i=0;i<42;i++){
+  const q=i/41;ctx.globalAlpha=(.16+.56*Math.sin(q*Math.PI))*(.88+.12*Math.sin(phase*.7+q*20));
+  ctx.lineWidth=Math.max(.45,r*.007);arch(q);ctx.stroke();arch(q,true);ctx.stroke();
+ }
+ for(const lower of [false,true]){
+  ctx.save();ctx.strokeStyle='#fff0c5';ctx.lineWidth=Math.max(.7,r*.012);
+  ctx.shadowColor='#ffbc62';ctx.shadowBlur=6;ctx.globalAlpha=.65;
+  ctx.setLineDash([r*.15,r*.62,r*.04,r*.91]);ctx.lineDashOffset=-phase*r*.16;
+  arch(.42,lower);ctx.stroke();ctx.restore();
+ }
+ ctx.globalAlpha=1;
+ const discGlow=ctx.createLinearGradient(0,-r*.13,0,r*.32);
+ discGlow.addColorStop(0,'#f2ba6c00');discGlow.addColorStop(.48,'#f6c77f30');discGlow.addColorStop(.56,'#ffe8b6b0');discGlow.addColorStop(.68,'#e3a44c25');discGlow.addColorStop(1,'#f2ba6c00');
+ ctx.fillStyle=discGlow;ctx.beginPath();ctx.ellipse(0,r*.11,r*2.5,r*.21,0,0,Math.PI*2);ctx.fill();ctx.strokeStyle=gold;
+ for(let i=0;i<54;i++){
+  const q=i/53,rx=r*(1.17+q*1.31),ry=r*(.09+q*.12);
+  ctx.globalAlpha=.12+.42*(1-q);ctx.lineWidth=Math.max(.5,r*.006);
+  ctx.beginPath();ctx.ellipse(0,r*.08,rx,ry,0,0,Math.PI);ctx.stroke();
+ }
+ for(let i=0;i<30;i++){
+  const a=phase*(.12+(i%4)*.025)+i*2.39996,rx=r*(1.2+(i%9)/9*1.2),ry=r*(.09+(i%9)/9*.12);
+  if(Math.sin(a)<0)continue;
+  ctx.globalAlpha=.3+(i%3)*.16;ctx.strokeStyle='#ffecc4';ctx.lineWidth=Math.max(.6,r*.008);
+  ctx.beginPath();ctx.ellipse(0,r*.08,rx,ry,0,a,a+.065);ctx.stroke();
+ }
  ctx.restore();
- // Small sight lines and a quiet annotation.
- ctx.strokeStyle='#87b2aa66';ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(x+r*.95,y-r*.4);ctx.lineTo(x+r*1.65,y-r*.95);ctx.lineTo(x+r*2.08,y-r*.95);ctx.stroke();ctx.fillStyle='#b8cecb';ctx.font='8px system-ui';ctx.fillText('THE QUESTION CONTINUES',x+r*.97,y-r*1.16);
 }
 function resize(){const rect=canvas.getBoundingClientRect();w=rect.width;h=rect.height;const d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(w*d);canvas.height=Math.round(h*d);ctx?.setTransform(d,0,0,d,0,0);draw();}
 function loop(t){request=0;if(paused||document.hidden||!visible)return;if(!last||t-last>=32){phase+=last?Math.min((t-last)/1000,.06):0;last=t;draw();}request=requestAnimationFrame(loop);}

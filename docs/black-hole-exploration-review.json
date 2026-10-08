@@ -83,5 +83,23 @@
     "fix": "Added required theme-color meta to page.",
     "verification": "New theme-startup regression reproduced null-content crash before fix, passes after fix. Laboratory DOM unit test exercises outside/inside, all3 modes, radius/mass, play/pause and reset. 114 tests pass; production rebuild and24-page index pass. Browser remains unavailable."
   },
-  "publication_authorisation": "User: ok, publish it now. User review supersedes the earlier local-only disposition. Automated rendered browser review remains unavailable; no browser-verification claim."
+  "publication_authorisation": "User: ok, publish it now. User review supersedes the earlier local-only disposition. Automated rendered browser review remains unavailable; no browser-verification claim.",
+  "local_appearance_addition": {
+    "status": "User reviewed final local animation, explanation and diagram corrections and explicitly authorised publication.",
+    "section": "what-you-see, Figure BH.3, Activity BH.2; existing figure IDs preserved",
+    "sources": [
+      {
+        "url": "https://www.nasa.gov/universe/nasa-visualization-shows-a-black-holes-warped-world/",
+        "passages": "Gas knots/shear, edge-on distortion and multiple narrow ring images; read actual exposition."
+      },
+      {
+        "url": "https://www.nasa.gov/universe/new-nasa-visualization-probes-the-light-bending-dance-of-binary-black-holes/",
+        "passages": "Colour assignment, wavelength and Doppler boosting; no binary-specific effects claimed for our single-hole illustration."
+      }
+    ],
+    "review": "Connected prose separates emitter, light propagation, image and illustration. Original spatial schematic labels approximate routes outside horizon; explicit distinction from laboratory spacetime diagram. Mirrored arcs not claimed as ray tracing; observed shadow distinct from horizon. No new curriculum scope or prerequisites. Prior v1.9/M101 reference and OU graph comparison apply; no private gravity comparator available.",
+    "checks": "8 existing exploration/homepage tests passed, build and search passed. Diagram XML/source labels checked; rendered browser inspection remains unavailable.",
+    "media": "Original inline SVG, no external media copied; existing EHT observation retained.",
+    "final_diagram": "Both paths solid gold; removed in-diagram spacetime comparison line. Accretion disc label at455,217 with short pointer to442,180. Intro links to large animation. Mirrored artwork restored after rejected reference variant."
+  }
 }

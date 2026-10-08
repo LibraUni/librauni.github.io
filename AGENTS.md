@@ -1,3 +1,31 @@
+# Black-hole appearance update authorised for publication
+
+User reviewed the restored mirrored animation, new explanation and final accretion-disc label placement, then said “ok, publish it”. Publish these changes, preserving subsequent M101 release work. This supersedes local-only restrictions below for this package. Automated browser review remains unavailable; user reviewed locally. Verify CI and live responses.
+
+# Previous animation restored — local only
+
+User rejected the screenshot-inspired variant. Restored the approved mirrored logo-like animation with corrected sphere alignment and original static fallback. New explanatory section retained; its description again matches the mirrored artwork. Supersedes the reference-shaped design note below. No publication.
+
+# Reference-shaped black-hole artwork — local review
+
+User supplied screenshot of broad luminous upper dome, thin horizontal disc and compact lower ring, requesting our colours retained. This supersedes the previous exact-mirroring design. Reworked canvas geometry and smooth moving brightness into dense amber bands; dark region now fills to band boundaries, with faint inner rim. Static fallback and explanatory art-disclaimer copy updated. Original code artwork, no screenshot pixels copied. Syntax/build/search checks pass. Local only, visual browser review still unavailable.
+
+# Local explanation of black-hole imagery
+
+Added #what-you-see between evidence and pathway: light emission, lensing, apparent arches, motion, colour/asymmetry and artistic limitations. Original Figure BH.3 spatial ray schematic and Activity BH.2 with hidden discussion. Reviewed NASA original explanations; see local_appearance_addition in docs/black-hole-exploration-review.json. Source/route tests and build pass. Local only; browser visual QA unavailable.
+
+# Local illustration alignment correction
+
+The mirrored arcs previously used a different vertical centre from the dark sphere, leaving a larger lower gap. Both now share the disc reflection axis; the shadow radius meets the inner arch crown. Static SVG corrected too. Local only; no publication.
+
+# Logo-inspired black-hole illustration — local review
+
+User requested the large black-hole animation resemble the LibraUni logo, locally first. Inspected public/brand/librauni-approved.png. Revised src/black-hole-art.js to level disc, broad upper/lower lensing arcs, amber filament flow; original SVG static fallback public/explore/black-hole-silhouette.svg and scoped CSS. Pause/reduced-motion retained. Laboratory unchanged. Syntax/build checks pass; browser visual verification still unavailable. Not published.
+
+# Black-hole exploration live — 8 October 2026
+
+Published3f5f133. Workflow37733156986 passed security, tests, build and deployment. Live HTTP checks verified homepage question link, exploration theme metadata, all3 mode controls and linked assets including EHT image. No automated visual-browser verification claimed. See docs/black-hole-exploration-live.json. Supersedes pending publication notes below.
+
 # Black-hole exploration publication authorised — 8 October 2026
 
 The user reviewed the interactive page, discussed its light and clock models and explicitly said “ok, publish it now”. Publish /explore/black-holes/ and its homepage question link. This supersedes the local-only restrictions below for this package. Startup bug fixed;114 tests passed. Automated browser QA remains unavailable; user reviewed locally. Verify deployment and public responses. No curriculum or learner-record changes.
