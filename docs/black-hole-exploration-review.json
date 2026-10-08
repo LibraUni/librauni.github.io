@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-08",
+  "status": "User reviewed the local page and explicitly authorised publication on 8 October 2026.",
+  "scope": "Public curiosity exploration linked from the homepage. Not a module, completed unit, assessment or amendment to degree credits.",
+  "route": "/explore/black-holes/",
+  "standard": "Read current website/docs/teaching-standard-and-practice.md v1.9; fixed M101 opening v0.4 introduction/coordinate exposition; adjoining P101 Lesson1 quantities/scale opening.",
+  "comparators": [
+    {
+      "source": "sources/mst124_unit2_e1i1.pdf",
+      "passages": "PDF pages8-9, printed122-123: Example2 and Activity2, plotting equations and limitations of point sampling",
+      "use": "Explicit graph variables, readable interpretation, supplied formula and a prediction before feedback",
+      "difference": "Private OU elementary graph teaching, not an advanced gravity comparator. No private text or imagery copied."
+    },
+    {
+      "source": "https://jila.colorado.edu/~ajsh/courses/bh/schwp.html",
+      "passages": "Schwarzschild radius, metric, gravitational clock rates, no stationary frames inside the horizon, free-fall spacetime diagram",
+      "use": "Check radial null ODE and clock model; distinguish coordinate slope from local light speed",
+      "difference": "More advanced mathematical source; our page supplies relationships without claiming to derive GR."
+    },
+    {
+      "source": "https://www.einstein-online.info/en/spotlight/changing_places/",
+      "passages": "Causal directions across the horizon",
+      "use": "Horizon explanation, finite infaller time and light-path interpretation"
+    },
+    {
+      "source": "https://science.nasa.gov/universe/what-happens-when-something-gets-too-close-to-a-black-hole/",
+      "passages": "Spaghettification and the Point of No Return",
+      "use": "Differential-gravity interpretation. Mass-scaling example independently derived from small-separation tidal formula."
+    },
+    {
+      "source": "https://science.nasa.gov/universe/black-holes/anatomy/",
+      "passages": "Accretion disk and Event Horizon Shadow",
+      "use": "Distinguish illustration, surrounding emission, shadow and horizon"
+    },
+    {
+      "source": "https://www.eso.org/public/images/eso1907a/",
+      "passages": "Image caption and credit",
+      "use": "Observed M87 image context and reuse"
+    }
+  ],
+  "curriculum": "Checked canonical stage1, M101/M102/P101 block plans, later-stage-audit, existing module-page titles and website/docs/modern-physics-progression.md. A302 curved-spacetime introduction is planned; explicit black-hole outcomes remain to be designed. A301 and A302 are alternative options. No approved scope or hours changed.",
+  "subject_review": [
+    "Radial PG null equation dx/dT = +/-1 - 1/sqrt(x), integrated by RK4 with bounded step near origin; stops at x=0.035 before singularity.",
+    "Checked horizon equilibrium, causal direction, numerical convergence and independent outgoing antiderivative T(x)=x+2sqrt(x)+2ln|sqrt(x)-1|.",
+    "Checked 1 solar mass horizon 2.953339 km, clock ratio at 4/3 rs =0.5, domain excludes stationary clocks at/inside horizon.",
+    "Tides use leading relative radial acceleration across2m; checked inverse-square mass scaling at fixed radius/rs and inverse-cube radial scaling.",
+    "Original activity answer 60sqrt(3/4)=51.9615 seconds. No proper-time freezing, singularity cure, body deformation or survival threshold claimed."
+  ],
+  "reader_review": [
+    "Defines horizon before controls; describes time-up/radius-right axes and coordinate speed distinction.",
+    "Separates falling watch from hovering clock. Explains log axes, physical radius versus horizon multiples and immutable horizon for fixed mass.",
+    "Corrected module titles to match actual programme pages; preserves proposed versus available states.",
+    "Distinguishes event horizon from shadow and singularity. Quantum/string study is further preparation, not a prerequisite for classical horizon exploration."
+  ],
+  "media": [
+    {
+      "file": "public/explore/m87-eht.jpg",
+      "source": "https://cdn.eso.org/images/screen/eso1907a.jpg",
+      "creator": "EHT Collaboration",
+      "license": "CC BY4.0",
+      "terms": "https://www.eso.org/public/outreach/copyright/",
+      "modifications": "None; supplied screen-size derivative",
+      "inspection": "Local pixels inspected. Orange reconstructed radio-brightness ring; caption identifies observation, wavelength, dates, credit, source and licence."
+    },
+    {
+      "files": "src/black-hole-art.js; SVG laboratory",
+      "creator": "Original LibraUni code",
+      "type": "Artist impression plus labelled numerical diagrams",
+      "limitations": "Artwork is not ray tracing; lab is ideal Schwarzschild model."
+    }
+  ],
+  "checks": {
+    "tests": "114 pass,0 fail including theme startup and laboratory interaction regressions",
+    "build": "Vite production build passed; existing shared-chunk size warning",
+    "search": "24 available learning pages indexed; public exploration deliberately not represented as a released curriculum lesson",
+    "accessibility_implemented": "Native labelled controls, button state, keyboard scroll region, no-JS explanations/static light graph, reduced motion, independent pause/reset, page visibility/intersection suspension, dark theme and print CSS",
+    "visual": "Not verified. Browser security policy check failed; no alternate browser workaround used. Desktop/mobile, MathML, theme, keyboard/screenreader and animation rendering require human/browser review before publication."
+  },
+  "source_gaps": "Supplied private sources contain mathematics, not advanced gravity teaching. NASA Space Math tidal worksheet could not be retrieved; no comparison with its actual questions is claimed. This public field trip is not a calibrated degree unit or workload allocation.",
+  "handover": "Publish the reviewed black-hole page and homepage question link. Preserve curriculum scope and learner records. Verify deployment and public responses.",
+  "startup_fix": {
+    "cause": "Missing theme-color meta caused shared theme startup to throw and abort the bundled laboratory entry.",
+    "fix": "Added required theme-color meta to page.",
+    "verification": "New theme-startup regression reproduced null-content crash before fix, passes after fix. Laboratory DOM unit test exercises outside/inside, all3 modes, radius/mass, play/pause and reset. 114 tests pass; production rebuild and24-page index pass. Browser remains unavailable."
+  },
+  "publication_authorisation": "User: ok, publish it now. User review supersedes the earlier local-only disposition. Automated rendered browser review remains unavailable; no browser-verification claim."
+}

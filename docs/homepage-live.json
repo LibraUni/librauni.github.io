@@ -1,0 +1,38 @@
+{
+  "commit": "e18f4b9a8816af662c5cc4cc8dad07db3c1a27f0",
+  "workflow": "https://github.com/LibraUni/librauni.github.io/actions/runs/37727977146",
+  "deployment": "success",
+  "security_checks": "passed",
+  "checked_at": "2026-10-08T04:35:04.503600+00:00",
+  "public_response_checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "markers": [
+        "landing-content",
+        "Curiosity welcome.",
+        "/study/"
+      ],
+      "assets_checked": 5
+    },
+    {
+      "path": "/study/",
+      "status": 200,
+      "markers": [
+        "study-overview",
+        "<aside>",
+        "YOUR CAMPUS"
+      ],
+      "assets_checked": 8
+    },
+    {
+      "path": "/programme/",
+      "status": 200,
+      "markers": [
+        "/study/"
+      ],
+      "assets_checked": 8
+    }
+  ],
+  "browser_review": "User approved local design; automated browser verification unavailable due to policy-check failure."
+}

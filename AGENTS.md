@@ -1,3 +1,15 @@
+# Black-hole exploration publication authorised — 8 October 2026
+
+The user reviewed the interactive page, discussed its light and clock models and explicitly said “ok, publish it now”. Publish /explore/black-holes/ and its homepage question link. This supersedes the local-only restrictions below for this package. Startup bug fixed;114 tests passed. Automated browser QA remains unavailable; user reviewed locally. Verify deployment and public responses. No curriculum or learner-record changes.
+
+# Black-hole exploration local draft — 8 October 2026
+
+New homepage question link leads to /explore/black-holes/. Dedicated public field trip: original animated artwork, three quantitative experiments, EHT observation and prerequisite/module route. Read docs/black-hole-exploration-review.json. All112 tests and production build pass; local preview8792. Browser security verification prevents rendered QA; do not describe as browser-verified or publish before remaining review. New page is not approved degree teaching and does not modify scope/credits. No push in this turn.
+
+# Public homepage live — 8 October 2026
+
+Published commit e18f4b9a8816af662c5cc4cc8dad07db3c1a27f0. GitHub run 37727977146 succeeded, including security, tests, build and deployment. Public HTTP checks passed for /, /study/ and /programme/ and their linked build assets. The Student desk retains its aside and study overview. Automated browser review remains unavailable; user approved the local design. See work/homepage-integration/docs/homepage-live.json. Supersedes pending publication notes below.
+
 # Public homepage publication authorised — 8 October 2026
 
 The user reviewed the local homepage and said “i like it. publish it.” Publish `/` plus the preserved `/study/` desk and corrected Student Home links together. Shared account/search/theme and study persistence code is retained. All 109 tests, production build and search indexing pass; remote main matches base cda18e9. Automated browser visual checks remain blocked by the known policy verification failure; user reviewed the local design. Check the publishing workflow and public responses before claiming live. This supersedes local-only publication restrictions below for this homepage package.
