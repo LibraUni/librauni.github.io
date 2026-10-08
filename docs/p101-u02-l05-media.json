@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-08",
+  "scope": "P101 U02-L05",
+  "photo": {
+    "figure": "2.21",
+    "asset": "public/teaching/p101/u02/nist-length.webp",
+    "source": "https://www.nist.gov/nist-work/highly-accurate-measurements-manufacturing-smallest-scale",
+    "download": "https://www.nist.gov/sites/default/files/styles/480_x_480_limit/public/images/pml/div683/grp01/test_2.png.webp?itok=11ydnXZk",
+    "credit": "Sean Kelley/PML, NIST",
+    "rights": "Unmarked NIST public information may be copied/distributed with credit; no separate copyright marking.",
+    "rightsURL": "https://www.nist.gov/copyrights-disclaimers",
+    "modification": "None;450x453source derivative",
+    "purpose": "Context for specified instrument arrangement and procedure; separate from simulated card experiment."
+  },
+  "originalFigures": {
+    "2.22": "Method controls and changed viewpoint; not a scale drawing",
+    "2.23": "Shared82\u201389mm axis; T one83/four84/one85; O one84/one85/two86/one87/one88",
+    "2.24": "Global chronological positions; circlesT/squaresO; missing5and11 marked outside data axis; corrected O3at85"
+  },
+  "review": "Source asset and all rendered figures inspected; captions/alt/SVG descriptions; desktop/narrow/light/dark and keyboard scroll checks passed."
+}

@@ -127,3 +127,13 @@
 .p101-u2-l4 .l4-table th,.p101-u2-l4 .l4-table td{padding:.65rem .8rem;overflow-wrap:normal}
 .p101-u2-l4 .l4-table caption{font-weight:600;text-align:left;margin-bottom:.6rem}
 .p101-u2-l4 .science-photo img{display:block;width:100%;height:auto}
+
+/* Unit 2 closing investigation and cumulative reference. */
+.p101-u2-l5 .l5-table{overflow-x:auto;margin:1.5rem 0}
+.p101-u2-l5 .l5-table table{width:100%;min-width:480px;table-layout:auto}
+.p101-u2-l5 .l5-table th,.p101-u2-l5 .l5-table td{padding:.65rem .8rem;overflow-wrap:normal}
+.p101-u2-l5 .l5-table caption{font-weight:600;text-align:left;margin-bottom:.6rem}
+.p101-u2-l5 .u2-small-photo img{display:block;width:100%;height:auto}
+.p101-u2-l5 .unit-exercise{margin-top:2rem}
+
+.p101-u2-l5 figure:not(.u2-small-photo){clear:both}

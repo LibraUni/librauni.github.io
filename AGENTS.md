@@ -1,3 +1,7 @@
+# P101 Unit2 closing lesson creation and publication authorised - 8 October2026
+
+User explicitly requested creation and online publication of L05 and whole-unit closing resources. Six sections2.25-2.30, four activities2.26-2.29, ten exercises2.1-2.10, four figures2.21-2.24, notebook and matching3pagePDF/web reference. Standard1.9 and5h/1hPython retained; U02 totals22h/6hPython. Read docs/p101-u02-l05-plan.json, -review.md, -media.json.115tests, independent numerical/code checks, browser/offline checks and28-entry search pass. Unit2 teaching now complete; Unit3 remains outline/uncommissioned. Remote cd52db1 preserved. Await deployment/security/live verification. No learner records changed.
+
 # P101 Unit 2 Lesson 4 LIVE — 8 October 2026
 
 Release cd52db122d701d46c873b4e2bc68d21b3e58c197 published successfully. GitHub run37745277166 passed planner-security and publish. Live Chrome, exact notebook/companion bytes, navigation, catalogue and27-entry search verified. See docs/p101-u02-l04-live.json. Supersedes pending disposition for L04. L05 remains a plan and uncommissioned. No learner records changed.

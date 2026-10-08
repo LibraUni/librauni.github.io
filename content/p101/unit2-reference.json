@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "date": "8 October 2026",
+  "title": "Measurement, variation and justified precision",
+  "pages": [
+    {
+      "title": "Recall fluently",
+      "intro": "Know the distinctions well enough to explain them in your own words. A digit or a summary is meaningful only with its quantity, unit and method.",
+      "rows": [
+        [
+          "Quantity and procedure",
+          "Define the measurand: the quantity intended for measurement, including endpoints and object state. Distinguish an endpoint separation from a distance along a curve."
+        ],
+        [
+          "Fresh repeats",
+          "Repeat the stated procedure, such as lifting and replacing a ruler. Re-reading an unchanged placement or copying an entry provides different evidence. Keep chronological order."
+        ],
+        [
+          "Resolution and recording",
+          "Resolution concerns distinguishable changes in indication. State instrument divisions and the chosen recording increment. Extra printed digits do not establish finer resolution or better accuracy."
+        ],
+        [
+          "Repeatability and accuracy",
+          "A tightly grouped set describes agreement under the repeat conditions. It can still share a systematic discrepancy. Accuracy requires a relationship to the quantity being measured; a suitable reference helps investigate it."
+        ],
+        [
+          "Variation and shared effects",
+          "Random variation changes among repetitions; a systematic effect can persist or vary predictably. A small observed spread does not show that systematic effects are absent."
+        ],
+        [
+          "Missing is not zero",
+          "An absent reading supplies no number. A numerical zero may be valid. A documented transcription correction needs source evidence; an unusual value alone is not proof of invalidity."
+        ],
+        [
+          "Preserve provenance",
+          "Keep source, first transcription, decisions with reasons, processed values and report linked by IDs. Excluding a value from one calculation does not delete its source record."
+        ]
+      ]
+    },
+    {
+      "title": "Understand and reconstruct",
+      "intro": "For n included finite real readings of the same quantity in one common unit, with n greater than zero. Every observation counts, including repeated numerical values.",
+      "rows": [
+        [
+          "Arithmetic mean",
+          "Add all included values and divide by their count. The mean need not equal an observed value. Its extra arithmetic digits do not establish a new instrument capability."
+        ],
+        [
+          "Range",
+          "Subtract the minimum from the maximum. The observed interval gives both endpoints; the range is their difference. It does not describe bounds on future readings."
+        ],
+        [
+          "Mean absolute deviation",
+          "D is the mean of the absolute distances from the arithmetic mean. Use that same mean for every distance. Adding signed deviations instead gives cancellation, not a spread."
+        ],
+        [
+          "Worked check",
+          "For 2, 4, 6 mm: mean 4 mm; range 4 mm; distances 2, 0, 2 mm; D is four-thirds of a millimetre (about 1.33 mm). All three summaries carry the readings' unit."
+        ],
+        [
+          "Conditions and limits",
+          "An empty list has no mean, range or D. A singleton has range and D zero but cannot reveal repeatability. These descriptive spreads are not a guaranteed error bound, confidence interval or complete measurement uncertainty."
+        ],
+        [
+          "Shifts and unit changes",
+          "Adding the same constant to all values shifts the mean equally but leaves range and D unchanged. Converting mm to m divides values, mean, range and D by 1000. Two endpoint coordinates cancel the same additive offset in their difference; a direct length indication does not."
+        ]
+      ]
+    },
+    {
+      "title": "Consult while working",
+      "intro": "Use this page as a practical aid. You need to understand the decisions, but do not need to memorise Python syntax or a reporting template.",
+      "rows": [
+        [
+          "A comparison",
+          "State the question, changed feature and controls. Preserve order, inspect each method separately and use common graph scales. A different mean is not automatically better accuracy or proof of a cause."
+        ],
+        [
+          "An audit trail",
+          "Count attempts separately from included readings. Preserve missing entries; record every correction or exclusion and its evidence. Retain unusual values when no independent invalidity reason is supplied."
+        ],
+        [
+          "Rounding",
+          "Keep working digits and round once to the final display. This unit uses nearest with exact ties to even: 7.245 to two decimal places is 7.24; 7.255 becomes 7.26. Binary floats may not represent decimal ties exactly."
+        ],
+        [
+          "Digits and units",
+          "Decimal places count positions after the point. Significant digits begin at the first nonzero digit and include intended trailing digits. 0.00470 m and 4.70 mm both express three significant digits. Exact counts and defined conversions do not supply measurement uncertainty."
+        ],
+        [
+          "Python record handling",
+          "Use dictionaries with stable IDs, units and notes. None represents missing; test value is None, not whether value is zero. Build a new processed list from explicit decisions. The lesson functions assume finite real inputs in a common unit."
+        ],
+        [
+          "Python summaries and display",
+          "Use the notebook mean_value, range_value and mean_absolute_deviation functions after eligibility decisions. Refuse an empty numerical summary. format(value, \".1f\") returns display text; keep the numerical working value."
+        ],
+        [
+          "A defensible report",
+          "Identify source/simulated status, measurand, method, units, attempt and inclusion counts, decisions, labelled summaries and limitations. Propose a check tied to a stated limitation. Supplied-data analysis does not demonstrate apparatus handling."
+        ]
+      ]
+    }
+  ],
+  "conclusion": "Unit 2 began with a simple difficulty: a reading is not yet a result that another person can interpret. Defining the quantity and procedure gave the reading a meaning. Repetition exposed variation; comparisons and references helped separate different questions about performance. Summaries made records easier to compare, while provenance kept the evidence available for inspection. A careful report now connects these steps without claiming more than they establish. In Unit 3, positions and times will change, but the same habits remain: define the quantities, retain the records, label the plots and explain the limits of the model."
+}

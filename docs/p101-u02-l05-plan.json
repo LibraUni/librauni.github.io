@@ -1,0 +1,91 @@
+{
+  "scope": "P101 U02-L05 and unit-closing resources, create/publish explicitly authorised8October2026",
+  "standard": "1.9; fixed M101v0.4 and OU117\u2013123 editorial comparators retained; adjacent L01\u2013L04 reviewed",
+  "base": "cd52db1 remote; local verified checkpoint6a8ee4f",
+  "hierarchy": [
+    "Degree",
+    "Stage1",
+    "P101",
+    "B01",
+    "U02",
+    "L05"
+  ],
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "curriculum/p101-units.js",
+    "curriculum/p101-blocks.js",
+    "curriculum/stage1-map.js"
+  ],
+  "outcomes": [
+    "P101-O5",
+    "P101-O6",
+    "P101-O7"
+  ],
+  "budgets": {
+    "lessonMinutes": {
+      "explanation": 45,
+      "written": 150,
+      "python": 60,
+      "feedback": 45
+    },
+    "unitHours": 22,
+    "unitPythonHours": 6,
+    "blockHours": 60,
+    "blockPythonHours": 20
+  },
+  "gate": "Every new section planned before prose; unit conclusion, cumulative exercises and matched web/PDF reference required before availability complete.",
+  "prerequisites": "L01\u2013L04 quantities, methods, variation/bias, descriptive mean/range/D, provenance/rounding, lists/dicts/loops/functions. No new package or inference method.",
+  "sections": [
+    {
+      "id": "P101-U02-L05-S01",
+      "title": "2.25 Turn a question into a comparison",
+      "purpose": "Define same measurand, changed method and controlled conditions; avoid accuracy claim without reference",
+      "practice": "Activity2.26 20min",
+      "visual": "Photo and method schematic",
+      "comparator": "OU model/explanation progression; original comparison case building on L02"
+    },
+    {
+      "id": "P101-U02-L05-S02",
+      "title": "2.26 From a ledger to a result",
+      "purpose": "Audit14attempts, preserve2missing and1sourcecorrection; calculate separate6-entry summaries; compare order and distributions",
+      "practice": "Activity2.27 20min",
+      "visual": "Raw ledger, dot and trial-order figures",
+      "comparator": "NIST EDA range/AAD; L03/L04 examples, original synthesis"
+    },
+    {
+      "id": "P101-U02-L05-S03",
+      "title": "2.27 Reproduce the analysis",
+      "purpose": "Self-contained notebook with previous functions; explicit decisions, grouping, counts, unit conversion and tests",
+      "practice": "Activity2.28 60minPython",
+      "visual": "Code/table correspondence",
+      "comparator": "L04 syntax and Python official functions; no new libraries"
+    },
+    {
+      "id": "P101-U02-L05-S04",
+      "title": "2.28 Explain the result and its limits",
+      "purpose": "Write bounded report; choose next check; distinguish simulation, calculation and apparatus evidence",
+      "practice": "Activity2.29 15min",
+      "visual": "Worked conclusion",
+      "comparator": "Fixed M101 explanation/interpretation standard; original open reporting criteria"
+    },
+    {
+      "id": "P101-U02-L05-S05",
+      "title": "2.29 Unit 2 exercises",
+      "purpose": "Independent varied cumulative practice with hidden hints and complete solutions",
+      "practice": "Exercises2.1\u20132.10 95min",
+      "visual": "Tables and MathML working",
+      "comparator": "OpenStax CollegePhysics2eCh1problems1\u20136,16\u201318 partial unit/digit calibration; U02prior prompts; no propagation/inference copied"
+    },
+    {
+      "id": "P101-U02-L05-S06",
+      "title": "2.30 Unit 2 reference and conclusion",
+      "purpose": "Recall/understand/consult distinctions, formula conditions and source trail; synchronised3pagePDF and closing argument",
+      "practice": "Within explanation/feedback budget",
+      "visual": "Reference table and typeset formulas",
+      "comparator": "Approved U01 reference structure, original U02 synthesis"
+    }
+  ],
+  "exerciseBudget": "95min across10unit exercises; other written work20+20+15=55min. Python60min separate; feedback45min across all work. No extra assessment.",
+  "media": "Actively searched NIST length/gauge imagery; long-length laboratory context photo plus original method, paired dot plot and trial-order chart. Stable static figures; notebook is hands-on computation.",
+  "forward": "U03 motion uses defined position, time, records and labelled plots; remains plan, not commissioned. No learner attainment inferred."
+}
