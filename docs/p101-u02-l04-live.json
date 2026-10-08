@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "lesson": "P101-U02-L04",
+  "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u02/l04/",
+  "release": "cd52db122d701d46c873b4e2bc68d21b3e58c197",
+  "workflow": 37745277166,
+  "conclusion": "success",
+  "jobs": [
+    "planner-security:success",
+    "publish:success"
+  ],
+  "liveChecks": [
+    "Chrome1440/900/390/320 light/dark",
+    "six sections/activities and initially closed feedback",
+    "images/maths/internal links/downloads",
+    "all3 exact keyboard code copies",
+    "keyboard table and diagram scroll",
+    "640CSSpx reflow",
+    "no-JavaScript and offline reading",
+    "notebook and companion exact bytes match",
+    "adjacent L03/L04/L05 navigation",
+    "P1011\u20134 availability, M1011\u20135 preserved",
+    "27search entries with L04, without L05"
+  ],
+  "limitations": [
+    "No native200%browser zoom audit",
+    "No full assistive-technology or student-user study",
+    "Notebook execution checked without JupyterUI"
+  ],
+  "next": "L05 remains a plan and is not commissioned; cumulative practice/conclusion/web and PDF reference due at unit closure."
+}

@@ -1,3 +1,7 @@
+# P101 Unit 2 Lesson 4 LIVE — 8 October 2026
+
+Release cd52db122d701d46c873b4e2bc68d21b3e58c197 published successfully. GitHub run37745277166 passed planner-security and publish. Live Chrome, exact notebook/companion bytes, navigation, catalogue and27-entry search verified. See docs/p101-u02-l04-live.json. Supersedes pending disposition for L04. L05 remains a plan and uncommissioned. No learner records changed.
+
 # P101 U02-L04 creation and publication authorised — 8 October 2026
 
 User explicitly requested “do it and publish online”. Complete Precision, provenance and awkward data and notebook. Sections2.19–2.24, examples2.17–2.22, activities2.20–2.25, figures2.16–2.20. Standard1.9,5h/2hPython retained. See docs/p101-u02-l04-plan.json, -review.md and -media.json.115tests, subject/code/rounding checks, browser/media/offline checks and27-entry search pass. Only L04 newly available; L05 remains uncommissioned. Remote6e9a61d reconciled. Await deployment/security/live verification before claiming published. No learner records changed.
