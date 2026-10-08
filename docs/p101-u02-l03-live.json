@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-08",
+  "commit": "b9b425f3be48478d0bcd6b0308ad8c201d5ca5c5",
+  "workflow": "https://github.com/LibraUni/librauni.github.io/actions/runs/37741888435",
+  "status": "success",
+  "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u02/l03/",
+  "verification": [
+    "115site tests before deployment",
+    "security and publish jobs succeeded",
+    "live four-width two-theme browser, maths/media, exact3copy buttons, keyboard tables/diagrams",
+    "26search entries with L03",
+    "adjacent/unit/catalogue navigation",
+    "notebook and companion exact release bytes",
+    "noJS/offline reading"
+  ],
+  "scope": "Only L03 newly available; no private records or later teaching commissioned."
+}

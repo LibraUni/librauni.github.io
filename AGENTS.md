@@ -1,3 +1,7 @@
+# P101 Unit 2 Lesson 3 LIVE — 8 October 2026
+
+Release b9b425f3be48478d0bcd6b0308ad8c201d5ca5c5 published successfully; GitHub run37741888435 passed security and publish. Live Chrome checks pass: six sections/activities, four widths/two themes, maths/media, all three exact keyboard code copies, links/downloads, no-JS and offline reading,26-entry search. Public notebook and companion bytes match the checked release; catalogue accurately labels P1011–3 while preserving M1011–5. Adjacent navigation verified. Supersedes pending/unpublished L03 dispositions. No later lesson commissioned or learner records changed. See docs/p101-u02-l03-live.json.
+
 # P101 U02-L03 creation and publication authorised — 8 October 2026
 
 User explicitly said “do it and publish it online” after the Lesson3 proposal. Complete “Summarising a set of readings”: sections2.13–2.18, six worked examples2.11–2.16, six activities2.14–2.19, five figures2.11–2.15 and Python notebook/companion. Standard1.9,4h/1hPython. Read docs/p101-u02-l03-plan.json, -review.md and -media.json. Mean, range and mean absolute deviation about the mean taught descriptively; no standard-error/confidence claims.115tests,18dataset rational subject checks, build/media/search and Chrome/offline/no-JS tests pass. Only L03 newly available; L04/L05 remain plans. Latest remote1ca4c42 merged and newer M101/homepage/search/black-hole work preserved. Await deployment/security and live checks before saying published. No learner records changed or later lesson commissioned.
