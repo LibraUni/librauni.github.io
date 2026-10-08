@@ -1,0 +1,18 @@
+{
+  "lesson": "M101-U02-L05",
+  "figures": [
+    {
+      "number": "2.26",
+      "purpose": "Correct projection foot and translated remainder; equal coordinate scale85px/unit"
+    },
+    {
+      "number": "2.27",
+      "purpose": "Correct and wrong-sign candidates on one line; remainder geometry; scale43px/unit"
+    }
+  ],
+  "creator": "Original LibraUni diagrams",
+  "licence": "CC BY-NC-SA4.0; branding excluded",
+  "accessibility": "SVG titles/descriptions, informative numbered captions, keyboard-scroll regions, prose explanation; no colour-only inference required.",
+  "externalImages": "None added; decision recorded in plan.",
+  "reference": "Same12entries rendered in web and3pagePDF; original summary of taught methods."
+}

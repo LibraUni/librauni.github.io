@@ -1,3 +1,7 @@
+# M101 U02 L05 publication authorised — 8 October 2026
+
+User requested publication of the locally reviewed closing lesson, ten unit exercises, code companions and three-page reference PDF. See docs/m101-unit2-lesson5-review.json. Unit2 hours unchanged; P101 coding readiness gate retained. Latest homepage and black-hole releases3f5f133 preserved; no learner records changed. Deployment/live verification pending.
+
 # Black-hole exploration publication authorised — 8 October 2026
 
 The user reviewed the interactive page, discussed its light and clock models and explicitly said “ok, publish it now”. Publish /explore/black-holes/ and its homepage question link. This supersedes the local-only restrictions below for this package. Startup bug fixed;114 tests passed. Automated browser QA remains unavailable; user reviewed locally. Verify deployment and public responses. No curriculum or learner-record changes.
