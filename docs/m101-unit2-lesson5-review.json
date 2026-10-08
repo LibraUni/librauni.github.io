@@ -1,0 +1,94 @@
+{
+  "lesson": "M101-U02-L05",
+  "date": "2026-10-08",
+  "status": "Reviewed and release-verified; publication authorised",
+  "reviewType": "Distinct author-agent subject, reader, visual and whole-unit passes. Not independent human review or student testing.",
+  "sources": [
+    {
+      "source": "Private OU MST124 Unit5 Coordinate Geometry",
+      "passages": "Printed182\u2013184, \u00a77.1 definition, Figure55 and Activity51; actual passage read from private supplied PDF extract",
+      "fit": "Sign/angle/nonzero conditions and geometry of projection; used in sections2.28/2.32 and E2/E6 calibration. Existing L01\u2013L04 supply remaining taught methods. Private sources not reproduced."
+    },
+    {
+      "source": "APEX Calculus 3e, Gregory Hartman et al., \u00a710.3",
+      "url": "https://math.libretexts.org/Bookshelves/Calculus/Calculus_3e_(Apex)/10%3A_Vectors/10.03%3A_The_Dot_Product",
+      "passages": "Examples5\u20136, Definition59, KeyIdea49; actual aligned solution and accompanying geometry/decomposition prose read",
+      "fit": "Sections2.28/2.32; geometric checks after a projection. Source numeric worked examples not adapted. Our example derives multiplier from two geometric requirements and contrasts a reconstruction check. Nonzero target stated explicitly."
+    },
+    {
+      "source": "APEX Calculus3e \u00a710.E",
+      "url": "https://math.libretexts.org/Bookshelves/Calculus/Calculus_3e_(Apex)/10%3A_Vectors/10.E%3A_Applications_of_Vectors_(Exercises)",
+      "passages": "\u00a710.3 exercises21\u201332 projection/decomposition; \u00a710.4 exercises6\u201314 component products with perpendicularity checks",
+      "fit": "E3/E4/E9; comparable basic operations, original mixed diagnosis increases method-selection demand. No calculus required for these passages. Source assigns repeated fluency drills; our cumulative set uses fewer, more varied tasks after28 prior activities."
+    },
+    {
+      "source": "Thomas Lebl\u00e9, NYU Math-UA123, Fall2016, Handout2",
+      "url": "https://helios2.mi.parisdescartes.fr/~tleble/teaching/123003Fall2016/Handout2.pdf",
+      "passages": "Pages1\u20132, Exercises1\u20132,7\u20139,14 read; other questions inspected for scope boundary",
+      "fit": "E1/E4/E5/E6/E10: component fluency, classification, oriented normals, triangular area and conceptual claim. Calculus tangent questions, scalar triple products and proof demands beyond current scope excluded. No worked solutions on this sheet; answers checked independently. Original question wording and settings; not merely number substitutions."
+    },
+    {
+      "source": "OpenStax College Physics2e",
+      "url": "https://openstax.org/books/college-physics-2e/pages/7-conceptual-questions",
+      "passages": "Chapter7 conceptual questions2\u20133; \u00a79.2 opening Torque discussion, Eqs9.3\u20139.5 and Figures9.6\u20139.7",
+      "fit": "E7/E8 and reference/conclusion: distinguish force/displacement and torque reference/lever arm. We retain explicit vector order from taught L04; source physical laws/equilibrium not imported. Source angle discussion uses a reversed position convention for a sine magnitude; our ordered torque always uses r from reference to application point. No implication that one torque determines motion."
+    },
+    {
+      "source": "Python3 tutorial",
+      "url": "https://docs.python.org/3/tutorial/floatingpoint.html",
+      "passages": "\u00a715 opening explanation of approximate binary fractions and comparison of0.1+0.1+0.1 with0.3",
+      "fit": "Section2.30 qualitative rounding limitation; no new tolerance machinery or floating-point theory required."
+    },
+    {
+      "source": "Approved local teaching",
+      "passages": "Fixedv0.4 opening/coordinate explanations and Example/Activity1.1; current U02 introduction, adjoining L01\u2013L04 closing passages; P101 U01 L04 conditions and L05 functions/None/return explanations; approved M101 released lesson and unit outlines",
+      "fit": "Prerequisites, pacing, justified intermediate steps, original-context standards, U02 opening/conclusion continuity, external readiness gate and U03 handover. No new unbudgeted coding teaching."
+    }
+  ],
+  "subjectReview": {
+    "result": "69 exact arithmetic and execution assertions passed",
+    "evidence": "work/m101-u02-l05/check.py; subject-checks.json",
+    "checks": "All numeric example/exercise answers, angle, decomposition/Pythagoras, oriented products, unit normals, lever arms, work, open-task samples, six code cases and six wrong-sign mutation expectations, three additional rational-oracle cases, input nonmutation and time budgets. General projection uniqueness checked algebraically; finite tests not treated as proof.",
+    "assumptions": "Three finite modest numeric entries, right-handed frame, b nonzero for projection, cross normalisation only when nonzero, work constant-force application displacement, torque reference and order explicit."
+  },
+  "readerReview": {
+    "evidence": "Entire assembled source read continuously after first layout revisions; surrounding unit and approved reference read.",
+    "findingsAndChanges": [
+      "Separated paired projection/remainder and area/normal equations to reduce phone scrolling.",
+      "Moved diagram labels away from vector/reference lines.",
+      "Clarified notebook contains the activity while Python companion contains worked code.",
+      "Replaced ambiguous planar cross-product magnitude wording with magnitude |c_z| for inputs in xy-plane.",
+      "Made code and table scroll regions keyboard-focusable.",
+      "Preserved zero-vector versus None distinction and marked coding pending if P101 preparation absent."
+    ],
+    "progression": "Independent geometry \u2192 explicit implementation \u2192 discriminating cases \u2192 cumulative exercises \u2192 recall/understand/consult reference \u2192 conclusion. No new mathematical prerequisite hidden in feedback."
+  },
+  "visualReview": {
+    "automated": "10viewport/theme combinations320\u20131440px;204nativeMathML;22initiallyclosed disclosures all keyboard-opened; no duplicateIDs/broken local anchors/merror/pageoverflow;200%CSSzoom;offline/noJavaScript;previouslessonlink;PDF3page geometry bounds.",
+    "inspection": "All six sections, both figures, each of ten exercises with open feedback, narrow examples/activity, and all three final PDF pages inspected. Long tables/code can scroll locally.",
+    "pdf": "Chromium prints semantic MathML from the same reference.json entries used by the lesson, preserving notation. Poppler rendered all final PDF pages; pypdf verified page count/text. Approved logo and motto from established reading copies. No separate cover; version/date/page numbers and short reuse footer.",
+    "limitations": "Desktop Chrome emulation; no physical-device or screen-reader user trial. Browser checks do not certify educational quality."
+  },
+  "wholeUnitReview": {
+    "coverage": "E1\u20132 scalar products/angles;E3 projection/distance;E4\u20135 cross/orientation/area;E6 zero conditions;E7\u20138 supplied work/torque;E9 checking/rescaling;E10 inverse mixed construction. Activity2.29 supplies code evidence. All four taught lessons represented, with hidden checked solutions and hints.",
+    "workload": "10exercise attempts sum60min (30L05+30reservedL04), separate30feedback. Code60min includes readiness/predictions/repair; reference30min; explanation30min. Unit16hours preserved. Times are editorial estimates, unmeasured; correction/retry priorities stated.",
+    "conclusion": "Returns to U02 opening relationship between directions, contrasts outputs and input meanings, separates computation from explanation, prepares U03 approved progression.",
+    "scope": "No new lesson-end exercise layer; one unit set. No learner records, publication availability or previous content changed."
+  },
+  "remaining": "Release and live verification. User explicitly requested publication.",
+  "artifactChecks": {
+    "notebook": "v4.5 JSON fields, unique cell IDs, unexecuted code-cell state and Python syntax checked. nbformat package unavailable; no nbformat-library validation claimed.",
+    "workedCode": "All displayed code blocks executed in order, outputs matched.",
+    "localHTTP": "Lesson, notebook, Python companion and PDF all HTTP200 at port8772.",
+    "PDF": "Final3pages inspected from Poppler renders.",
+    "pdfSha256": "35c0f6f1b00bdc40743fd549b250a031a30bd34ad449a9555bec6e4c9aaa903a"
+  },
+  "releaseChecks": {
+    "tests": 115,
+    "browserCases": 24,
+    "search": "Checking vector calculations finds L05",
+    "downloads": "PDF/notebook/Python HTTP200 and byte-identical to reviewed local files",
+    "fix": "Scoped lesson header display to block to avoid global navigation flex styling; all ten integrated viewport/theme checks then passed",
+    "preservation": "Existing lesson fragments, homepage and black-hole source unchanged; P101 entry still indexed."
+  }
+}

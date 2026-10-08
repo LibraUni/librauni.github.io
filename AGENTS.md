@@ -25,6 +25,9 @@ User requested the large black-hole animation resemble the LibraUni logo, locall
 # Black-hole exploration live — 8 October 2026
 
 Published3f5f133. Workflow37733156986 passed security, tests, build and deployment. Live HTTP checks verified homepage question link, exploration theme metadata, all3 mode controls and linked assets including EHT image. No automated visual-browser verification claimed. See docs/black-hole-exploration-live.json. Supersedes pending publication notes below.
+# M101 U02 L05 publication authorised — 8 October 2026
+
+User requested publication of the locally reviewed closing lesson, ten unit exercises, code companions and three-page reference PDF. See docs/m101-unit2-lesson5-review.json. Unit2 hours unchanged; P101 coding readiness gate retained. Latest homepage and black-hole releases3f5f133 preserved; no learner records changed. Deployment/live verification pending.
 
 # Black-hole exploration publication authorised — 8 October 2026
 
