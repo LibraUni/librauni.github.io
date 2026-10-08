@@ -1,0 +1,99 @@
+{
+  "scope": "P101 U02-L03, creation and publication explicitly authorised 8 October2026",
+  "standard": "1.9; fixed M101v0.4 and OU Unit2 printed117\u2013123 reviewed; original teaching",
+  "base": "1ca4c42 remote merged, preserving M101Unit2, homepage, black-hole and search work",
+  "hierarchy": [
+    "Degree",
+    "Stage1",
+    "P101",
+    "B01",
+    "U02",
+    "L03"
+  ],
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "curriculum/p101-units.js",
+    "curriculum/p101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/construction-policy.js"
+  ],
+  "gate": "All B01 lessons blueprinted; this plan records every new section before drafting.",
+  "outcomes": [
+    "P101-O5",
+    "P101-O6",
+    "P101-O7"
+  ],
+  "prerequisites": "U02-L01 raw records and unit conversion; L02 variation/bias/fair comparisons; U01 signed arithmetic, absolute magnitude, lists, len, loops, if, functions. New abs/min/max and ValueError explicitly explained.",
+  "budgets": {
+    "lessonMinutes": {
+      "explanation": 60,
+      "written": 90,
+      "python": 60,
+      "feedback": 30
+    },
+    "unitHours": 22,
+    "unitPythonHours": 6,
+    "blockHours": 60,
+    "blockPythonHours": 20
+  },
+  "spreadChoice": "Mean absolute deviation about the arithmetic mean, denoted D; no MAD acronym ambiguity. Descriptive only, no standard error/confidence interval/normal assumption.",
+  "sections": [
+    {
+      "id": "P101-U02-L03-S01",
+      "title": "2.13 A summary keeps some information",
+      "purpose": "Link raw ordered record to dot plot; choose same-measurand values before summarising",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.14 12min",
+      "visual": "NIST laboratory photo; card dots+table",
+      "comparator": "OU117\u2013123 table/plot exposition; L01/L02 adjacent data; original synthesis"
+    },
+    {
+      "id": "P101-U02-L03-S02",
+      "title": "2.14 The mean as a balance point",
+      "purpose": "Equal-weight arithmetic mean; repeated values count; balance check; mean need not be observed",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.15 18min",
+      "visual": "Mean marker on dots",
+      "comparator": "OpenStax2.5 opening exposition, Example2.26 and TryIt2.26; different sample/context and no median"
+    },
+    {
+      "id": "P101-U02-L03-S03",
+      "title": "2.15 Two descriptions of spread",
+      "purpose": "Range and mean absolute deviation explicitly derived; signs cancel, distances do not; units",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.16 20min",
+      "visual": "Equal-mean plots and distance schematic",
+      "comparator": "NIST EDA1.3.5.6 range/AAD definitions; original distances case, no variance/inference"
+    },
+    {
+      "id": "P101-U02-L03-S04",
+      "title": "2.16 What five readings cannot establish",
+      "purpose": "Small samples, duplicated records, candidate unusual value, translation and lost order",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.17 18min",
+      "visual": "Same values in two chronological orders",
+      "comparator": "OpenStax2.5Example2.27 sensitivity partial comparator; L02 offset, original no-exclusion investigation"
+    },
+    {
+      "id": "P101-U02-L03-S05",
+      "title": "2.17 Compute a summary without erasing the record",
+      "purpose": "Functions with visible loops, nonempty guard, units, independent and exceptional tests",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.18 60minPython",
+      "visual": "Code aligned to hand table",
+      "comparator": "OU worked substitution121\u2013123; Python official builtins; P101U01 syntax continuity, original synthesis"
+    },
+    {
+      "id": "P101-U02-L03-S06",
+      "title": "2.18 Report what was summarised",
+      "purpose": "Integrated bounded report and limitations; handover to justified reporting",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.19 22min",
+      "visual": "Paired method summary table",
+      "comparator": "Original integrated comparison of L02recordB; partial OpenStax calculation/interpretation comparator"
+    }
+  ],
+  "forward": "L04 justified precision, rounding/provenance/missing data; L05 cumulative unit practice and reference PDF unchanged. B01U03 motion uses plots; later mechanics/A101 use auditable summaries; probability/inference remains later.",
+  "media": "Actively sourced NIST SPRT laboratory photograph; original dot plots, deviation distances and trial-order contrast. Static figures chosen for stable side-by-side reading; no interactive required.",
+  "publication": "Authorise online after subject/editorial/rendered/browser/build/security checks. No learner enrolment, marks or study record inferred."
+}

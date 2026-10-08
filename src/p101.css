@@ -113,3 +113,10 @@
 .p101-u2-l2 .l2-mass-photo img{display:block;width:100%;height:auto}
 .p101-u2-l2 .l2-table table{width:100%;table-layout:fixed}
 .p101-u2-l2 .l2-table th,.p101-u2-l2 .l2-table td{overflow-wrap:anywhere}
+
+/* Unit 2 Lesson 3: preserve readable data and diagram labels. */
+.p101-u2-l3 .l3-table{overflow-x:auto;margin:1.5rem 0}
+.p101-u2-l3 .l3-table table{width:100%;min-width:420px;table-layout:auto}
+.p101-u2-l3 .l3-table th,.p101-u2-l3 .l3-table td{padding:.65rem .8rem;overflow-wrap:normal}
+.p101-u2-l3 .l3-table caption{font-weight:600;text-align:left;margin-bottom:.6rem}
+.p101-u2-l3 .science-photo img{display:block;width:100%;height:auto}
