@@ -1,0 +1,98 @@
+{
+  "scope": "P101 U02-L04 creation and publication explicitly authorised 8 October 2026",
+  "standard": "1.9; fixed M101v0.4 and OU Unit2 printed117\u2013123 reviewed; original teaching",
+  "base": "Remote6e9a61d merged before authoring",
+  "hierarchy": [
+    "Degree",
+    "Stage1",
+    "P101",
+    "B01",
+    "U02",
+    "L04"
+  ],
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "curriculum/p101-units.js",
+    "curriculum/p101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/construction-policy.js"
+  ],
+  "gate": "All B01 lessons blueprinted; this plan records every new section before drafting.",
+  "outcomes": [
+    "P101-O5",
+    "P101-O6",
+    "P101-O7"
+  ],
+  "prerequisites": "L01\u2013L03 measurement records, arithmetic summaries, lists, loops, functions, ValueError; dictionaries, None, membership and format taught here.",
+  "budgets": {
+    "lessonMinutes": {
+      "explanation": 60,
+      "written": 90,
+      "python": 120,
+      "feedback": 30
+    },
+    "unitHours": 22,
+    "unitPythonHours": 6,
+    "blockHours": 60,
+    "blockPythonHours": 20
+  },
+  "sections": [
+    {
+      "id": "P101-U02-L04-S01",
+      "title": "2.19 Digits are part of a claim",
+      "purpose": "Separate record increment, working arithmetic and justified display; significant digits and unit changes",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.20 12min",
+      "visual": "Digit ladder",
+      "comparator": "OpenStax1.3 precision/significant figures and zeros Check Your Understanding; original reporting comparison"
+    },
+    {
+      "id": "P101-U02-L04-S02",
+      "title": "2.20 Round once, at the end",
+      "purpose": "Nearest ties-even; double rounding; exact counts; fractional descriptive means",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.21 18min",
+      "visual": "Rounding number line",
+      "comparator": "NIST SP811 B.7.1\u20132; OpenStax1.3 calculation examples as partial practice comparator"
+    },
+    {
+      "id": "P101-U02-L04-S03",
+      "title": "2.21 Missing, mistaken or merely unusual?",
+      "purpose": "Seven-attempt evidence ledger; source correction, wrong measurand exclusion, keep unusual value",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.22 20min",
+      "visual": "Ordered ledger table",
+      "comparator": "NIST EDA1.3.5.17 opening outlier discussion; original synthesis, no rejection test"
+    },
+    {
+      "id": "P101-U02-L04-S04",
+      "title": "2.22 Keep the route back to the source",
+      "purpose": "Metadata and immutable source/transcription/decision/derived layers; reproducibility limits",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.23 18min",
+      "visual": "NIST photo and provenance chain",
+      "comparator": "Fixed M101v0.4 and OU117\u2013123 sustained prose/caption/worked reasoning; original audit practice"
+    },
+    {
+      "id": "P101-U02-L04-S05",
+      "title": "2.23 Prepare records without losing them",
+      "purpose": "Dictionary records, None vs zero, explicit decisions, fresh derived list, guards, formatted report",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.24 120min Python",
+      "visual": "Code and hand ledger correspondence",
+      "comparator": "Python tutorial dictionaries, builtins round/format; P101U01/L03 code continuity, original audit function"
+    },
+    {
+      "id": "P101-U02-L04-S06",
+      "title": "2.24 A report that can be checked",
+      "purpose": "Repair false precision and false certainty; complete sourced report and next check",
+      "requires": "preceding sections and stated prerequisites",
+      "practice": "Activity2.25 22min",
+      "visual": "Before/after report",
+      "comparator": "Original integration of prior P101 lessons; partial OpenStax1.3 concept checks"
+    }
+  ],
+  "forward": "L05 full investigation, cumulative exercises, unit conclusion and reference web/PDF remain planned.",
+  "media": "NIST lunar sample workstation photo with written log; original digit ladder, rounding line, provenance chain and report comparison. Static illustrations plus executable notebook provide the relevant interaction. No video adds required teaching.",
+  "publication": "Authorise online after subject/editorial/rendered/browser/build/security checks. No learner enrolment, marks or study record inferred."
+}

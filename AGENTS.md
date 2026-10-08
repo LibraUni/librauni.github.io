@@ -1,3 +1,7 @@
+# P101 U02-L04 creation and publication authorised — 8 October 2026
+
+User explicitly requested “do it and publish online”. Complete Precision, provenance and awkward data and notebook. Sections2.19–2.24, examples2.17–2.22, activities2.20–2.25, figures2.16–2.20. Standard1.9,5h/2hPython retained. See docs/p101-u02-l04-plan.json, -review.md and -media.json.115tests, subject/code/rounding checks, browser/media/offline checks and27-entry search pass. Only L04 newly available; L05 remains uncommissioned. Remote6e9a61d reconciled. Await deployment/security/live verification before claiming published. No learner records changed.
+
 # P101 Unit 2 Lesson 3 LIVE — 8 October 2026
 
 Release b9b425f3be48478d0bcd6b0308ad8c201d5ca5c5 published successfully; GitHub run37741888435 passed security and publish. Live Chrome checks pass: six sections/activities, four widths/two themes, maths/media, all three exact keyboard code copies, links/downloads, no-JS and offline reading,26-entry search. Public notebook and companion bytes match the checked release; catalogue accurately labels P1011–3 while preserving M1011–5. Adjacent navigation verified. Supersedes pending/unpublished L03 dispositions. No later lesson commissioned or learner records changed. See docs/p101-u02-l03-live.json.

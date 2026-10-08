@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-08",
+  "scope": "P101 U02-L04",
+  "sourcePhoto": {
+    "figure": "2.18",
+    "asset": "public/teaching/p101/u02/nist-moon-records.webp",
+    "source": "https://www.nist.gov/blogs/taking-measure/mooning-over-measurement",
+    "download": "https://www.nist.gov/sites/default/files/styles/1200_x_1200_limit/public/images/2019/05/10/moon-dust-Burrus-1-1024x683.jpg.webp?itok=jy_FKiFH",
+    "credit": "J. Burrus/NIST",
+    "rightsURL": "https://www.nist.gov/copyrights-disclaimers",
+    "rights": "Unmarked NIST public information may be copied/distributed with appropriate credit; no separate copyright marking on this image.",
+    "modification": "None; source derivative1024x683",
+    "purpose": "Link physical specimens, handwritten record and digital results; no processing facts or numerical data inferred from photo."
+  },
+  "originalFigures": {
+    "2.16": "Recorded/calculated/reported distinctions",
+    "2.17": "Linear126.2\u2013126.3 axis500units; midpoint320,126.251point325; no exaggerated separation",
+    "2.19": "Five logical provenance layers, source preserved",
+    "2.20": "Repair false certainty and attempt count as well as decimal presentation"
+  },
+  "review": "All actual rendered figures inspected with captions; responsive/light/dark/keyboard checks pass. Source photo/credit/reuse inspected. Original schematics CC BY-NC-SA4.0; NIST separate terms."
+}
