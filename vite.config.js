@@ -15,6 +15,7 @@ export default defineConfig({
         journal: fileURLToPath(new URL('./journal/index.html', import.meta.url)),
         profile: fileURLToPath(new URL('./profile/index.html', import.meta.url)),
         identity: fileURLToPath(new URL('./identity/index.html', import.meta.url)),
+        study: fileURLToPath(new URL('./study/index.html', import.meta.url)),
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         license: fileURLToPath(new URL('./license/index.html', import.meta.url)),
         programme: fileURLToPath(new URL('./programme/index.html', import.meta.url)),

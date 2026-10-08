@@ -1,3 +1,11 @@
+# Public homepage publication authorised — 8 October 2026
+
+The user reviewed the local homepage and said “i like it. publish it.” Publish `/` plus the preserved `/study/` desk and corrected Student Home links together. Shared account/search/theme and study persistence code is retained. All 109 tests, production build and search indexing pass; remote main matches base cda18e9. Automated browser visual checks remain blocked by the known policy verification failure; user reviewed the local design. Check the publishing workflow and public responses before claiming live. This supersedes local-only publication restrictions below for this homepage package.
+
+# Public homepage integration local review — 8 October 2026
+
+The public homepage now occupies `/` in this isolated local checkout; the preserved sidebar Student desk is at `/study/`. Shared search/account/theme controls remain. Read `docs/homepage-local-review.md`. Preview `http://127.0.0.1:8792/`; no publication authorised. Build, search indexing and all 109 tests pass; browser visual/interaction review is blocked by a browser policy-verification failure and remains outstanding. Reconcile later shared-main changes before any release. Do not alter private records or describe this as browser-verified.
+
 # M101 U02-L04 publication authorised — 8 October 2026
 
 User requested creation and online publication. Reviewed L04: sections2.22–2.27,7examples,6activities,6figures,281MathML. See docs/m101-unit2-lesson4-review.json and plan. IMPORTANT:30min of L04 practice reserved for cumulative exercises at L05; total hours unchanged. L05 remains outline and must include full-unit conclusion/exercises/reference web+PDF and P101-readiness-gated code. Earlier teaching/search/P101 preserved. Deployment verification pending.
