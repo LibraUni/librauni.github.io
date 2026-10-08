@@ -19,6 +19,7 @@ export default defineConfig({
         blackHoles: fileURLToPath(new URL('./explore/black-holes/index.html', import.meta.url)),
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         license: fileURLToPath(new URL('./license/index.html', import.meta.url)),
+        postgraduate: fileURLToPath(new URL('./postgraduate/index.html', import.meta.url)),
         programme: fileURLToPath(new URL('./programme/index.html', import.meta.url)),
         a101: fileURLToPath(new URL('./programme/stage-1/lu-a101/index.html', import.meta.url)),
         m100: fileURLToPath(new URL('./programme/bridge/lu-m100/index.html', import.meta.url)),
