@@ -1,0 +1,100 @@
+{
+  "lesson": "M101-U02-L03",
+  "version": "Local review v0.1",
+  "date": "2026-10-08",
+  "status": "Publication authorised; integrated release checks passed",
+  "standard": "1.9; fixed illustrated reference v0.4 preserved",
+  "structure": {
+    "sections": "2.15\u20132.21",
+    "examples": "2.16\u20132.22",
+    "activities": "2.16\u20132.22",
+    "figures": "2.14\u20132.19",
+    "keyResults": "2.9\u20132.12",
+    "hiddenPanels": 9,
+    "nativeMathML": 323
+  },
+  "subjectReview": {
+    "evidence": "work/m101-u02-l03/check.py and subject-checks.json; 1127 assertions passed. Exact rational projection-area checks supplement explicit expected cross-product answers and 150 random identity cases.",
+    "reasoningInspected": [
+      "Right-handed views from +z and +x; basis cycle and operand reversal",
+      "Sine height for acute and obtuse angles; endpoints handled separately",
+      "Six-term cancellation proof, signed middle component, bilinear expansion with order preserved",
+      "Normalization conditions, unit cancellation, sign versus magnitude",
+      "Point differences, triangle half-area, translation invariance",
+      "Parallel and zero inputs; no angle or normalization assigned to zero"
+    ],
+    "defectsCorrected": [
+      "Activity2.22 parametric z-component originally omitted factor two. Corrected to2t\u22124; direct symbolic reasoning and integer substitutions agree. Root t=2 unchanged.",
+      "Qualified scaling of a normal by a nonzero scalar; zero cannot retain a selected direction.",
+      "Added statement that Example2.20 component arithmetic uses numerical metre values and outputs square metres."
+    ]
+  },
+  "readerReview": {
+    "comparatorMap": "See lesson3-plan.json; exact OU/OpenStax passages and prerequisite gaps recorded.",
+    "sideBySideComparison": [
+      "S2.15 and Example2.16 compared with OU printed129\u2013130: retain grip convention and view change; introduce circled dot/cross explicitly instead of assuming pictorial literacy.",
+      "S2.18 basis collection and Example2.19 compared with OpenStax definition/Example2.31: three separately named components, explain middle order and two sign sources; no determinant mnemonic or prerequisite.",
+      "S2.19 Example2.20 compared with OpenStax Example2.38: retain normalisation reasoning but provide a projection-area cross-check and an explicit requested-side choice.",
+      "Opening/book motivation, worked reasoning and figure captions compared with fixedv0.4 coordinate exposition; sustained prose, clear result/example/activity roles and no lesson-end exercise layer."
+    ],
+    "defectsCorrected": [
+      "Final activity wording changed to ask which checks, if any, detect an overall sign error; feedback explains that consistent reversal can pass antisymmetry.",
+      "Long side-by-side unit normals separated so each is readable on a narrow screen.",
+      "Magnitude working and dot-product checks in Example2.19 broken into shorter lines without losing reasoning.",
+      "Post-edit continuous/rendered review caught a magnitude explanation inserted in the earlier geometric-result box by an overbroad replacement. Restored the geometric sentence and moved the explanation to the intended worked example. Targeted final check passed."
+    ],
+    "practiceFit": "Activities progress from spatial explanation through calculation, diagnosis, unit-normal selection, area/translation and zero cases. Compared with OpenStax checkpoints2.30,2.31,2.37,2.38: greater scaffolding initially and added explanation/check selection; no determinant demand. OU orientation passage has no equivalent cross-product exercise set in supplied files. No claim of exact workload equivalence."
+  },
+  "visualReview": {
+    "evidence": "browser-review.json, final-review.json and saved section/figure/mobile screenshots under work/m101-u02-l03; all seven rendered sections and all six figures inspected, plus final revised key/example and dark narrow-screen feedback.",
+    "passed": [
+      "Ten combinations:1440,1024,768,390,320px with light/dark themes; no page overflow",
+      "Native MathML, full radical bars/fractions/delimiters and aligned working; no merror nodes",
+      "Nine panels initially closed, every summary keyboard opens",
+      "Unique IDs, valid local section anchors, all images loaded",
+      "No SVG text outside viewboxes; geometric diagram positions checked against data",
+      "No-JavaScript offline reading retains323math expressions, image and working feedback; previous L02 link works",
+      "200%CSS zoom has no page overflow; reduced-motion preference checked",
+      "Diagram scroller responds to keyboard; narrow diagrams retain readable text and accessible descriptions",
+      "Final served localhost preview verified after corrections"
+    ],
+    "remainingPresentation": "Some long equations/diagrams use labelled keyboard-focusable horizontal scrollers on narrow screens. No comprehensive screen-reader or assistive-technology audit."
+  },
+  "wholeLessonReview": {
+    "performed": "Read complete source continuously, including all hidden discussions, then inspect rendered sections. Rechecked amended passages.",
+    "coherence": "L02 perpendicular remainder supplies the area height; unit vectors and distributivity lead to explicit3D formula; examples return to dot/projection checks before plane embedding and degeneracy. Handover to approved L04 is product choice and units, not additional physical prerequisites.",
+    "workload": {
+      "readingExamples": 75,
+      "attempts": 105,
+      "feedbackCorrection": 30,
+      "total": 210,
+      "status": "Editorial estimate, not timed with students; matches approved3.5h. Includes all activities and correction, no extra lesson-end exercises."
+    },
+    "unitStatus": "Unit2 incomplete: L04/L05, full-unit mixed exercise set, conclusion and synchronised concise web/PDF reference remain due. Revisit closing-practice density in later planning without silently exceeding16h."
+  },
+  "limitations": [
+    "Author review and computational checks are not independent human review or student validation.",
+    "Introductory cross-product chapter absent from supplied OU files; open undergraduate comparator used and mismatch recorded.",
+    "No site integration/release tests or publication performed; this increment is a self-contained local review artifact."
+  ],
+  "files": {
+    "reading": "outputs/M101-Unit-2-Lesson-3.html",
+    "source": "work/m101-u02-l03/lesson.source.html",
+    "fragment": "website/content/drafts/m101-u02-l03/lesson.html",
+    "preview": "http://127.0.0.1:8772/M101-Unit-2-Lesson-3.html"
+  },
+  "publication": "User authorised publication 8 October 2026. Latest main ed72d81 reconciled. Only L03 teaching newly released; L04/L05 remain outlines. No learner records changed.",
+  "sha256": {
+    "outputs/M101-Unit-2-Lesson-3.html": "42d59103c281d59aa0880be1ebaacd052e1e13a488d5e37099121d2aee0422e4",
+    "work/m101-u02-l03/lesson.source.html": "5450f93fa73779ef1f63d9c7d37652cd7b5b70bf61a0e50d2b43d6aa3ecef0ec",
+    "website/content/drafts/m101-u02-l03/lesson.html": "3d9a8279f897cd0af8aecc8bbb018080bff665c25fdcf13688423f9e849673d0"
+  },
+  "releaseChecks": {
+    "tests": 104,
+    "browserRecords": 24,
+    "search": "23 available pages; cross products orientation query returns L03 first",
+    "media": "Six figures and sourced image checks pass",
+    "preservation": "Earlier M101/P101 content fragments and latest search source unchanged from ed72d81",
+    "deployment": "Pending"
+  }
+}

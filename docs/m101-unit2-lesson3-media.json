@@ -1,0 +1,57 @@
+{
+  "lesson": "M101-U02-L03",
+  "date": "2026-10-08",
+  "figures": [
+    {
+      "number": "2.14",
+      "type": "original SVG diagram",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "purpose": "Right-handed xy view, symbols for depth and explicit viewpoint"
+    },
+    {
+      "number": "2.15",
+      "type": "original SVG diagram",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "purpose": "Acute/obtuse base and perpendicular height"
+    },
+    {
+      "number": "2.16",
+      "type": "original SVG diagram",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "purpose": "Basis-vector cyclic ordering; explicitly not a spatial axis diagram"
+    },
+    {
+      "number": "2.18",
+      "type": "original SVG diagram",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "purpose": "Tilted unit-normal direction in yz view; mixed physical dimensions not given a common length scale"
+    },
+    {
+      "number": "2.19",
+      "type": "original SVG diagram",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "purpose": "Equal-axis triangle and parallelogram from point differences"
+    }
+  ],
+  "photograph": {
+    "number": "2.17",
+    "title": "Space Station Solar Arrays",
+    "id": "ISS040-E-087239",
+    "captureDate": "2014-08-01",
+    "page": "https://www.nasa.gov/image-article/space-station-solar-arrays/",
+    "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/iss040e087239.jpg",
+    "creatorCredit": "NASA / Expedition 40 crew",
+    "termsURL": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "termsChecked": "Educational/factual editorial reuse permitted with acknowledgment; NASA source item has no third-party copyright credit. NASA separate media terms apply, not LibraUni text licence. No endorsement implied.",
+    "inspection": "Actual source page, caption and downloaded photograph viewed. 1041x693; gold solar-array panels above thin Earth atmosphere.",
+    "modifications": "JPEG recompression only, same dimensions; no crop, annotations or geometry changes.",
+    "local": "content/drafts/m101-u02-l03/assets/iss-solar-arrays.jpg",
+    "purpose": "Scientific setting for distinguishing in-surface edge directions from normal; caption explicitly rules out measurement from perspective."
+  },
+  "interactivity": "No new interactive. Static axis/area views and the integrated hand/sketch activity are sufficient for this bounded lesson. No animation or video dependency."
+}

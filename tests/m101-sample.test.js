@@ -21,5 +21,5 @@ test('M101 production introductions and complete lesson replace the temporary sa
  }
  for(const id of ['coordinates','m101-u01-s01','m101-u01-s01-01','m101-u01-s01-02','opening-conclusion','lesson-exercises'])assert.ok(lesson.includes(`id="${id}"`));
  assert.match(read(home+'b01/u01/l05/index.html'),/Exercise 1.14/);
- assert.match(read(home+'b01/u02/index.html'),/The introduction and Lessons 1–2 are available/);
+ assert.match(read(home+'b01/u02/index.html'),/The introduction and Lessons 1–3 are available/);
 });

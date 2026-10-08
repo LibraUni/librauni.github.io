@@ -1,0 +1,86 @@
+{
+  "lesson": "M101-U02-L03",
+  "title": "Cross products and orientation",
+  "status": "Complete local draft for learner review; unpublished",
+  "date": "2026-10-08",
+  "standard": "1.9",
+  "reference": "content/editorial-reference/m101-opening-chapter-v0.4.html",
+  "scope": "Approved U02-L03 from work/m101-unit2-release/curriculum/m101-released.js; right-handed convention, explicit components, perpendicularity, oriented area, reversal, parallel/zero and plane embedding. No determinants or triple products.",
+  "parent": "Degree Physics > Stage 1 > M101 > B01 > U02 > L03",
+  "requires": "U02-L02; U01 vector and trigonometry methods",
+  "handover": "U02-L04 product choice and units; U03 determinants independent",
+  "budgetMinutes": {
+    "readingExamples": 75,
+    "activityAttempts": [
+      12,
+      12,
+      14,
+      18,
+      16,
+      18,
+      15
+    ],
+    "feedbackCorrection": 30,
+    "total": 210
+  },
+  "sections": [
+    {
+      "number": "2.15",
+      "title": "Choosing an orientation in space",
+      "readingMinutes": 10,
+      "activity": "2.16",
+      "comparator": "OU pp129\u2013130 + OpenStax Fig2.54 and Checkpoint2.31"
+    },
+    {
+      "number": "2.16",
+      "title": "A product that measures area",
+      "readingMinutes": 12,
+      "activity": "2.17",
+      "comparator": "OpenStax Theorem2.8 and Fig2.57; L02 perpendicular remainder"
+    },
+    {
+      "number": "2.17",
+      "title": "Building from the three axis directions",
+      "readingMinutes": 10,
+      "activity": "2.18",
+      "comparator": "OpenStax standard basis / Example2.32 properties"
+    },
+    {
+      "number": "2.18",
+      "title": "Calculating with components",
+      "readingMinutes": 15,
+      "activity": "2.19",
+      "comparator": "OpenStax component definition, cancellation, Example2.31/Checkpoint2.30"
+    },
+    {
+      "number": "2.19",
+      "title": "From an area vector to a unit normal",
+      "readingMinutes": 10,
+      "activity": "2.20",
+      "comparator": "OpenStax Example2.38/Checkpoint2.37; L02 remainder"
+    },
+    {
+      "number": "2.20",
+      "title": "Plane vectors still need a third direction",
+      "readingMinutes": 10,
+      "activity": "2.21",
+      "comparator": "OpenStax Example2.39/Checkpoint2.38; U01 differences"
+    },
+    {
+      "number": "2.21",
+      "title": "What a zero product tells us",
+      "readingMinutes": 8,
+      "activity": "2.22",
+      "comparator": "OpenStax magnitude/geometric definition and properties; explicit zero distinction extends source scaffolding"
+    }
+  ],
+  "practice": "Seven integrated multi-part activities, 2.16\u20132.22; original questions and separate hidden feedback; no lesson-end set.",
+  "unitObligations": "U02 remains incomplete; L04/L05 and full-unit mixed exercises, conclusion, shared web/PDF reference remain due in 16h unit. Closing-practice density to be resolved during later lesson planning without extra unbudgeted work.",
+  "mediaDecision": "Original static diagrams with explicit viewing directions plus NASA array photograph. Physical right-hand/sketch activities serve the current orientation task; no new interactive or video selected, no quota.",
+  "comparators": {
+    "OU": "MST124 Unit5 Coordinate Geometry PDF29\u201330, printed129\u2013130, right/left-handed axes and right-hand grip, actual text and printed130 rendering inspected. MST224 Unit8 PDF47\u201348 printed111\u2013112 surface integrals inspected for area/normal but rejected as introductory comparator: assumes Unit4, determinants and derivatives. Missing introductory OU cross-product chapter recorded.",
+    "OpenStax": "Calculus3 \u00a72.4 definition/orthogonality cancellation; Examples2.31\u20132.32 and checkpoints2.30\u20132.31; standard basis and properties; Example2.38/Checkpoint2.37 unitnormal; Theorem2.8, Example2.39/Checkpoint2.38 area. Actual passages inspected. Omit determinant/triple-product methods; original basis derivation, projection checks and questions. No identical question structures with changed numbers.",
+    "fixedReference": "Original v0.4 module opening and coordinate exposition, worked reasoning, activities, role colours and margin captions read. L02 final projection/remainder teaching and handover read."
+  },
+  "validation": "Distinct author subject, reader, visual and whole-lesson reviews complete; evidence and limitations in lesson3-review.json. Not student validation."
+}

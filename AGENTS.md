@@ -1,3 +1,7 @@
+# M101 U02-L03 publication authorised — 8 October 2026
+
+User explicitly requested publication of reviewed Lesson3. Sections2.15–2.21,7examples,7activities,9disclosures,6figures,323MathML;3.5h unchanged. See docs/m101-unit2-lesson3-review.json. L04–L05 remain plans. Latest search improvements from ed72d81 preserved. No learner records changed. Deployment/live verification pending.
+
 # M101 U02-L02 publication authorised — 7 October 2026
 
 User explicitly requested publication of reviewed Lesson2. Integrated sections2.8–2.14,7examples,7activities,9disclosures,6figures,286MathML with3h unchanged. See docs/m101-unit2-lesson2-review.json. L03–L05 remain plans. Preserve latest P101Unit2Lesson2 and search. Deployment verification to follow; no learner records changed.

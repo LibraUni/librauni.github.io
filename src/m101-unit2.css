@@ -36,3 +36,8 @@
 .m101-u2-l02 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
 .m101-u2-l02 mi[mathvariant="normal"],.m101-u2-l02 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
 [data-theme="dark"] .m101-u2-l02 .history h3{color:#a7cfdf}
+
+/* Lesson 3 typography; earlier lesson styles remain unchanged. */
+.m101-u2-l03 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
+.m101-u2-l03 mi[mathvariant="normal"],.m101-u2-l03 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
+[data-theme="dark"] .m101-u2-l03 .history h3{color:#a7cfdf}
