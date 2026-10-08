@@ -28,3 +28,44 @@ test('candidate filtering caches accepted data and drops invalid results',async(
  assert.equal(filtered.length,1);await filtered[0].data();await filtered[0].data();assert.equal(loads,2);
  assert.deepEqual(await filterContentResults('quantum',results,()=>false),[]);
 });
+
+test('the distance walked ranks the activity ahead of earlier partial matches',()=>{
+ const sections=[
+  ['direction','The distance OF is always nonnegative.'],
+  ['example','Find the distance from the origin to its perpendicular foot.'],
+  ['solution','The foot lies three metres away. Its distance is 3 m.'],
+  ['activity-15','An observer reverses the reference arrow. A report calls the magnitude of d “the distance walked”. Explain what further information would make that claim valid.']
+ ].map(([id,plain_excerpt])=>({url:`/learn/example/#${id}`,plain_excerpt}));
+ const candidate={...page(sections.map(s=>s.plain_excerpt).join(' ')),sub_results:sections};
+ for(const query of ['the distance walked','"the distance walked"']){
+  const result=validateContentResult(query,candidate);
+  assert.equal(result.sub_results[0].url,'/learn/example/#activity-15');
+  assert.match(result.sub_results[0].excerpt,/<mark>the<\/mark> <mark>distance<\/mark> <mark>walked<\/mark>/);
+ }
+ assert.equal(validateContentResult('"the distance walked"',candidate).sub_results.length,1);
+});
+test('excerpts centre on a later phrase instead of the first common word',()=>{
+ const content='The introduction. '+ 'Background information. '.repeat(40)+'We measured the distance walked along the route.';
+ const result=validateContentResult('the distance walked',page(content));
+ assert.match(result.excerpt,/<mark>the<\/mark> <mark>distance<\/mark> <mark>walked<\/mark>/);
+ assert.ok(result.excerpt.length<400);
+ assert.match(validateContentResult('quantum',page('Quantum physics.')).excerpt,/^<mark>Quantum<\/mark>/);
+});
+test('passages prefer nearby complete matches, then meaningful partial matches',()=>{
+ const sections=[
+  ['common','The the the the the.'],
+  ['partial','Distance measurements.'],
+  ['far','The distance '+ 'background '.repeat(15)+'walked.'],
+  ['near','The distance we walked.'],
+  ['phrase','The distance walked.']
+ ].map(([id,plain_excerpt])=>({url:`/learn/example/#${id}`,plain_excerpt}));
+ const result=validateContentResult('the distance walked',{...page(sections.map(s=>s.plain_excerpt).join(' ')),sub_results:sections});
+ assert.deepEqual(result.sub_results.map(s=>s.url.split('#')[1]),['phrase','near','far','partial','common']);
+});
+test('later prefix clusters and repeated query words keep useful excerpts',()=>{
+ const text='The opening. '+'Background. '.repeat(40)+'The vectors have unit length.';
+ const result=validateContentResult('the unit vect',page(text));
+ assert.match(result.excerpt,/<mark>vectors<\/mark> have <mark>unit<\/mark>/);
+ assert.ok(validateContentResult('unit unit vect',page(text)));
+ assert.equal(validateContentResult('"unit unit"',page(text)),null);
+});
