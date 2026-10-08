@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-08",
+  "scope": "P101 U02-L03",
+  "sourcePhoto": {
+    "figure": "2.12",
+    "asset": "public/teaching/p101/u02/nist-thermometry-lab.webp",
+    "source": "https://www.nist.gov/image/sprt-calibration-laboratory",
+    "download": "https://www.nist.gov/sites/default/files/styles/960_x_960_limit/public/images/2025/09/03/SPRTCL.png.webp?itok=q4N1cMIX",
+    "credit": "NIST",
+    "rightsURL": "https://www.nist.gov/copyrights-disclaimers",
+    "rights": "Unmarked NIST public information may be copied/distributed with credit. No separate copyright marking seen.",
+    "modification": "None; source web derivative960x454",
+    "purpose": "Connect stored readings to physical instruments/conditions, no numerical values inferred from photograph."
+  },
+  "originalFigures": {
+    "2.11": "L1raw record:one125,three126,one127; table retains order",
+    "2.13": "C/V:five dots each; same47\u201353 scale; means50",
+    "2.14": "Distances from50 at48 and51; 2:1 scale ratio",
+    "2.15": "H/Jsamevalues,differentorder; 20drawingunits/mm; no interpolation claim"
+  },
+  "selection": "Actively searched NIST temperature measurement and laboratory images. Chose broad current laboratory view over mercury thermometer portrait to avoid unnecessary apparatus instructions or historical detour. Original static figures support side-by-side comparison without an interactive dependency.",
+  "review": "Source photo inspected; desktop/mobile/light/dark rendered checks; labels/captions/alt and keyboard horizontal scrolling supplied."
+}

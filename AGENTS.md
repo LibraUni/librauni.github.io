@@ -1,3 +1,7 @@
+# P101 U02-L03 creation and publication authorised — 8 October 2026
+
+User explicitly said “do it and publish it online” after the Lesson3 proposal. Complete “Summarising a set of readings”: sections2.13–2.18, six worked examples2.11–2.16, six activities2.14–2.19, five figures2.11–2.15 and Python notebook/companion. Standard1.9,4h/1hPython. Read docs/p101-u02-l03-plan.json, -review.md and -media.json. Mean, range and mean absolute deviation about the mean taught descriptively; no standard-error/confidence claims.115tests,18dataset rational subject checks, build/media/search and Chrome/offline/no-JS tests pass. Only L03 newly available; L04/L05 remain plans. Latest remote1ca4c42 merged and newer M101/homepage/search/black-hole work preserved. Await deployment/security and live checks before saying published. No learner records changed or later lesson commissioned.
+
 # Black-hole appearance update authorised for publication
 
 User reviewed the restored mirrored animation, new explanation and final accretion-disc label placement, then said “ok, publish it”. Publish these changes, preserving subsequent M101 release work. This supersedes local-only restrictions below for this package. Automated browser review remains unavailable; user reviewed locally. Verify CI and live responses.
