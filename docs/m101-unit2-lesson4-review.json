@@ -1,0 +1,67 @@
+{
+  "lesson": "M101-U02-L04",
+  "date": "2026-10-08",
+  "status": "Reviewed and release-verified; publication authorised",
+  "standard": "Teaching Standard and Practice v1.9; fixed illustrated M101 v0.4",
+  "reviewer": "Author-agent distinct review passes; no independent human or student validation claimed",
+  "sourceCalibration": "Actual OU pp183\u2013188 text and activities read; fixedv0.4 opening/coordinate explanation worked example and activity read; L03 final sections read. No introductory torque/work exposition found in supplied MST124 unit. OpenStax actual constant-work/torque passages and solved examples inspected; source uses calculus and rotation dynamics omitted here. Source torque examples sometimes call signed components negative magnitudes; do not reproduce that error.",
+  "sourceDetails": [
+    {
+      "source": "Private OU MST124 Unit 5 Coordinate Geometry",
+      "passages": "Printed183\u2013184 \u00a77.1 Figure55 Activity51;186 Example22 Activity53;187 Example23;188 Activities54\u201355",
+      "fit": "Scalar/vector distinction, acute/obtuse projection, signed components, angle reasoning, mixed method choice. Existing L01\u2013L03 supply cross products. No matching introductory work/torque passage found. Private text read for calibration only; no reproduction."
+    },
+    {
+      "source": "https://openstax.org/books/university-physics-volume-1/pages/7-1-work",
+      "passages": "Constant-force definition, Fig7.3, Example7.1 solved lawnmower, sign/unit discussion",
+      "fit": "Supplied work model and component interpretation; calculus and friction laws excluded. Original problems add displacement-versus-position and piecewise force diagnosis."
+    },
+    {
+      "source": "https://openstax.org/books/university-physics-volume-1/pages/10-6-torque",
+      "passages": "Eqs10.22\u201310.23, Figs10.31\u201310.33, Examples10.14\u201310.15, Check Your Understanding10.6",
+      "fit": "Reference position, order, lever arm, sign. No rotation dynamics. Source signed negative components are not described as negative magnitudes here; zero torque does not imply no rotation."
+    }
+  ],
+  "subjectReview": {
+    "result": "66 exact-arithmetic assertions passed",
+    "evidence": "work/m101-u02-l04/check.py and subject-checks.json",
+    "scope": "All numerical examples and activity answers, projections/reconstruction, normals, torque lever-arm checks, segmented work and budget. Models checked separately for constant force, application displacement, reference point, operand order, zero inputs and no motion inference."
+  },
+  "readerReview": {
+    "result": "Complete continuous source read, followed by section render inspection",
+    "revisions": [
+      "Qualified vector direction statement for nonzero vectors.",
+      "Qualified line of action for nonzero forces.",
+      "Restored units on every stage of Example2.23 and2.27 numeric equalities.",
+      "Removed misleading numerical adjective from dimensional dot product.",
+      "Shortened torque working line for narrow screens while retaining symbolic method and intermediate result."
+    ],
+    "progression": "Requested quantity \u2192 signs/zero \u2192 supplied work \u2192 torque/reference \u2192 same units/different meanings \u2192 mixed justification. Each physical definition supplied locally. All six discussions initially hidden; two separate hints."
+  },
+  "visualReview": {
+    "result": "All six section renders, five SVG figures, narrow activity/photo/key/example and zoom key inspected",
+    "automated": "10 viewport/theme combinations (320\u20131440px), no page overflow, 281 native MathML, no merror, unique IDs, anchors valid, images loaded, all eight keyboard disclosures, offline/no-JS reading, 200% CSS zoom and reduced-motion emulation. Final rebuild rechecked.",
+    "limitation": "Local horizontal scrolling permitted for long equations; no screen-reader user study or physical-device study claimed."
+  },
+  "wholeLessonReview": {
+    "result": "Continuous read checked question-to-answer continuity, notation and unit/module handover",
+    "inventory": {
+      "sections": 6,
+      "examples": 7,
+      "activities": 6,
+      "figures": 6,
+      "keys": 4,
+      "disclosures": 8,
+      "mathML": 281
+    },
+    "budget": "210min:60 explanation +90 attempts +30 feedback +30 reserved cumulative unit-end attempts. Timing editorial estimate, not student-tested. Unit stays16h. L05 must deliver conclusion, calibrated full-unit exercises, reference web/PDF, gated projection code."
+  },
+  "release": "Only Lesson4 added; Lesson5 remains outline. Earlier published lessons, P101/search work and learner records preserved.",
+  "releaseChecks": {
+    "tests": "105 passed",
+    "browser": "24 integrated browser/navigation/search cases passed; rendered lesson and mobile maths inspected",
+    "search": "Choosing product returns Lesson4 first",
+    "preservation": "Earlier lesson content fragments unchanged; P101 lesson2 still indexed; Lesson5 remains outline",
+    "finalCorrection": "Long inline torque equality caused 320px overflow; rewritten as short dimensional result with component-product explanation; final 10 local viewport/theme checks passed."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-07",
+  "status": "Publication authorised; integrated; release verification pending",
+  "identity": "M101 U02 L02 Signed projections and perpendicular parts",
+  "standard": "1.9",
+  "construction": "Within approved block1 lesson map v1.0 and 3h allocation; no changed dependencies. Full seven-section plan saved before authoring.",
+  "scope": "Sections2.8\u20132.14,examples2.9\u20132.15,activities2.9\u20132.15,keys2.5\u20132.8,figures2.8\u20132.13. 286 native MathML expressions;7 discussions and2 hints closed by default.",
+  "calibration": {
+    "fixed": "Read approved v0.4 passage on signed position/component conventions, accompanying worked reasoning/activity feedback, visual roles and contextual imagery.",
+    "adjoining": "Read Unit2 introduction and Lesson1 source including its projection handover; Unit1L04 component-angle opening for prerequisite conventions.",
+    "OU": "Read private Unit5 Coordinate geometry and vectors \u00a77.1 printed183\u2013186/PDF83\u201386, including Figure55, acute/obtuse projection prose, scalar rules, Example21,Activity52,Example22,Activity53; visually inspected rendered printed183. No copied source content/assets in deliverable.",
+    "secondary": "OpenStax Calculus3 \u00a72.3 Projections Eqs2.6/2.7,Example2.27, decomposition passage,Example2.28 and Checkpoint2.27 inspected. Its wording length/same direction needs qualification for negative products; our signed definitions avoid the inconsistency.",
+    "gap": "OU supplies geometric motivation and algebra but no full direct match for signed projection/decomposition/rescaling practice. Secondary actual worked exposition fills decomposition; rescaling and diagnostic tasks are original syntheses.",
+    "practice": "OU Activity51 direction prediction and Activity53 component arithmetic calibrate foundation. OpenStax Example2.27/2.28 and Checkpoint2.27 calibrate projection/decomposition demand. Own tasks add target reversal, input scaling, zero distinctions, incorrect target-line diagnosis and measurement interpretation. Unlike source drill questions they ask predictions and explanatory checks; no copied questions or numerical substitutions into source scenarios."
+  },
+  "subjectReview": {
+    "calculationEvidence": "work/m101-u02-l02/maths-review.json;567 passing assertions, including exact fractions, independent rotated-axis 2D check, 80 deterministic 2D/3D generated cases and positive/negative/fractional rescaling.",
+    "analytic": "Reviewed geometric sign convention, normalization, two factors of reference magnitude, distributive perpendicularity proof, uniqueness via c b, rescaling using |k|, zero-target exclusion, zero-input extension, Pythagorean bound and point-line shortest distance. Units remain those of input; dimensional reference supported by normalization.",
+    "limit": "Computational checks performed independently of prose calculation route where feasible; same author reviewed proofs, not an independent human reviewer."
+  },
+  "readerReview": {
+    "completeRead": "Read complete assembled source in sequence after drafting, including all feedback.",
+    "revisions": [
+      "Defined O and A before first distance notation; reintroduced A explicitly in point-to-line proof.",
+      "Nonparallel condition added in cross-product handover.",
+      "Separated signed scalar, magnitude, scale coefficient and vector; supplied both unit-vector and perpendicular-remainder derivations.",
+      "Explained that projection uses whole line, not ray/segment.",
+      "Distinguished correct sum from correct specified-line decomposition; supplied counterexample activity.",
+      "Explicitly distinguished displacement decomposition from a travelled route, and perpendicular projection from a slanted shadow."
+    ],
+    "pacing": "60min explanation/examples,90min attempts (10+12+14+14+14+12+14),30min feedback/correction/recall. Concrete prose,7 worked examples and short repeated calculations support this estimate. Reading includes optional context; no added required external reading/coding. Timing is unmeasured, not validated with a student."
+  },
+  "visualReview": {
+    "evidence": "work/m101-u02-l02/browser-review.json, final-review.json and inspected screenshots",
+    "coverage": "10 width/theme cases at1440,1024,768,390,320; no-JS offline pages;9 keyboard disclosures;diagram keyboard scroll;200%zoom;images,IDs,anchors,previous offline lesson.",
+    "repairs": [
+      "Figure2.8 positive-direction label clipped at SVG edge; repositioned and checked bounds.",
+      "Figure2.9 foot label crossed reference line; moved clear; removed scaled unit-direction arrow.",
+      "Optional blue-box heading had low dark-mode contrast; added specific local override and rechecked.",
+      "Made vector MathML bold upright and unit symbols upright through local CSS, without altering published rendering.",
+      "Split both two-formula key boxes and final activity scalar/vector and squared-magnitude working onto shorter displays after final narrow review."
+    ],
+    "limitations": "Long diagrams use labelled keyboard-focusable horizontal scrolling on narrow screens; final audit reports 2 display equations requiring local scrolling at the narrowest width, no page overflow. No full assistive-technology audit or dedicated PDF produced for incomplete unit."
+  },
+  "wholeLessonReview": "Read progression from familiar signed component through normalization, vector reconstruction, perpendicular proof, orientation reversal, edge cases and measurement. Claims rely only on U01 and prior U02L01; no physics law, cross product, determinant, calculus or programming imported. Module O3/O6 and P101 resolution handover preserved. No unit-end set or conclusion claimed complete.",
+  "unitObligations": "Full-unit mixed set, checked solutions, conclusion and synchronized web/PDF reference remain due in unit closing package. Existing L04/L05 practice-density issue retained in plan; no allocation silently changed.",
+  "release": "User explicitly requested publication 7 October 2026. Latest main f1204d7 incorporated, including P101 U02 L02. Scoped Lesson2 typography; prior teaching fragments unchanged.",
+  "outputs": {
+    "reading": "outputs/M101-Unit-2-Lesson-2.html",
+    "source": "work/m101-u02-l02/lesson.source.html",
+    "fragment": "website/content/drafts/m101-u02-l02/lesson.html"
+  },
+  "limitations": [
+    "Author and automated review, not human educational validation.",
+    "Study times estimated."
+  ],
+  "outputSha256": "26534275fc997af5f6458684208f3521830c1a4c539451b61d6db5c1c3e97f76",
+  "publicationDecision": {
+    "date": "2026-10-07",
+    "authorisation": "User: publish it",
+    "validation": "98 site tests passed; media and diff checks passed; build indexed22 pages;24 browser checks passed (20 width/theme page cases plus keyboard/search/outline/previous-unit checks); Pagefind signed projections query returns Lesson2. Actual desktop, mobile dark mathematics and context screenshots inspected. Deployment/live verification follows.",
+    "preservation": "P101 U02 L02 retained; prior teaching source fragments unchanged.",
+    "liveURL": "https://librauni.github.io/learn/physics/stage-1/m101/b01/u02/l02/"
+  }
+}

@@ -31,3 +31,26 @@
 @media(max-width:1050px){.m101-u2 .margin-figure{display:block}.m101-u2 .margin-figure figcaption{margin-top:14px;border:0;padding:0}}
 @media(max-width:650px){.m101-u2 .float-photo{float:none;width:100%;margin:22px 0}.m101-u2 .equation{font-size:18px}.m101-u2 .activity>ol{padding-left:32px}.m101-u2 td,.m101-u2 th{padding:9px 7px}}
 @media print{.m101-u2 .diagram-scroll svg{min-width:0}.m101-u2 .margin-figure{display:block}.m101-u2 .equation{overflow:visible;font-size:12pt}.m101-u2 .float-photo{float:none;width:60%;margin:20px auto}}
+
+/* Lesson 2 refinements preserve the existing Lesson 1 rendering. */
+.m101-u2-l02 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
+.m101-u2-l02 mi[mathvariant="normal"],.m101-u2-l02 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
+[data-theme="dark"] .m101-u2-l02 .history h3{color:#a7cfdf}
+
+/* Lesson 3 typography; earlier lesson styles remain unchanged. */
+.m101-u2-l03 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
+.m101-u2-l03 mi[mathvariant="normal"],.m101-u2-l03 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
+[data-theme="dark"] .m101-u2-l03 .history h3{color:#a7cfdf}
+
+/* Lesson 4 typography; earlier lessons preserved. */
+.m101-u2-l04 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
+.m101-u2-l04 mi[mathvariant="normal"],.m101-u2-l04 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
+[data-theme="dark"] .m101-u2-l04 .history h3{color:#a7cfdf}
+
+/* Lesson 5 only: preserve previous lessons. */
+.m101-u2-l05 mi[mathvariant="bold"]{text-transform:none;font-weight:700;font-style:normal}
+.m101-u2-l05 mi[mathvariant="normal"],.m101-u2-l05 mstyle[mathvariant="normal"] mi{text-transform:none;font-style:normal}
+[data-theme="dark"] .m101-u2-l05 .history h3{color:#a7cfdf}
+.m101-u2-l05 pre{overflow-x:auto;padding:18px;background:#f1f3f0;font:15px/1.6 monospace;white-space:pre;max-width:100%;box-sizing:border-box}.m101-u2-l05 code{font-size:.85em;overflow-wrap:anywhere}.m101-u2-l05 pre code{font-size:inherit;overflow-wrap:normal}.m101-u2-l05 .exercise{margin:36px 0;padding:0 0 24px;border-bottom:2px solid #b8c7c0}.m101-u2-l05 .exercise h3{border-left:4px solid #695387;padding-left:12px}.m101-u2-l05 .ref-table td{vertical-align:top}.m101-u2-l05 .ref-table th{min-width:130px}.m101-u2-l05 .table-wrap{overflow-x:auto;max-width:100%}.m101-u2-l05 .reference-group{margin-top:30px}[data-theme="dark"] .m101-u2-l05 pre{background:#283b34;color:#e5ece9}
+
+.m101-u2-l05 > header{display:block;position:static;padding:0;margin:0;background:none;border:0;box-shadow:none}

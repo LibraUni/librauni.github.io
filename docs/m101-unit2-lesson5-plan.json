@@ -1,0 +1,76 @@
+{
+  "lesson": "M101-U02-L05",
+  "title": "Checking vector calculations and unit review",
+  "date": "2026-10-08",
+  "status": "Local review only; user requested local development before publication",
+  "standard": "Teaching Standard and Practice1.9; approved illustrated M101 opening v0.4; source-selection clarification8October2026",
+  "scope": "Approved M101 U02 L05; one transparent scalar/list/function projection calculation, nonzero reference check, ordinary/perpendicular cases, wrong-sign diagnosis, mixed unit review and synchronised reference. No NumPy, plotting, installation, solver, calculus or new test-framework prerequisite.",
+  "numbering": "Sections2.28–2.33; examples2.30–2.31; activity2.29; key2.17; figures2.26–2.27; unit exercises2.1–2.10 with stable module/unit IDs.",
+  "budgetMinutes": {
+    "explanationWorkedExamples": 30,
+    "codingIncludingPredictionsAndCorrection": 60,
+    "writtenAttemptsL05": 30,
+    "writtenAttemptsReservedL04": 30,
+    "feedbackCorrection": 30,
+    "referenceRetrieval": 30,
+    "L05Total": 180,
+    "includingL04Reservation": 210
+  },
+  "unitHours": 16,
+  "readiness": "P101 U01 notebook, indexing, scalar arithmetic, condition and returning function demonstrated before independent coding. No readiness/attainment inferred for user. If absent, mathematical work proceeds and coding hour remains pending.",
+  "hierarchy": "Physics > Stage1 > M101 > B01 > U02 > L05; U03 approved title Matrices, transformations and simultaneous equations.",
+  "mediaDecision": "Two original equal-scale coordinate diagrams compare correct and reversed projection. Existing unit already has scientific photographs; new stock imagery would not help this short computational synthesis. Static diagrams expose the error without needing a new interactive. No media quota applied.",
+  "practiceCoverage": [
+    {
+      "exercise": "2.1",
+      "minutes": 4,
+      "coverage": "L01 component dot, angle, sign; L04 interpretation"
+    },
+    {
+      "exercise": "2.2",
+      "minutes": 5,
+      "coverage": "L01 geometric dot, reversal, zero input"
+    },
+    {
+      "exercise": "2.3",
+      "minutes": 7,
+      "coverage": "L02 signed/vector projection, remainder, distance, conditions"
+    },
+    {
+      "exercise": "2.4",
+      "minutes": 5,
+      "coverage": "L03 cross components/order, limits of checks"
+    },
+    {
+      "exercise": "2.5",
+      "minutes": 7,
+      "coverage": "L03 displacement edges, area, unit normal, reversal, units"
+    },
+    {
+      "exercise": "2.6",
+      "minutes": 5,
+      "coverage": "L01/L03 degenerate cases, counterexamples, distinctions"
+    },
+    {
+      "exercise": "2.7",
+      "minutes": 7,
+      "coverage": "L04 work model/assumptions, position vs displacement, sign, units"
+    },
+    {
+      "exercise": "2.8",
+      "minutes": 8,
+      "coverage": "L04 torque, reference, lever arm, orientation, work distinction"
+    },
+    {
+      "exercise": "2.9",
+      "minutes": 6,
+      "coverage": "L02 reversal/rescaling, L05 checking, scalar/vector distinction"
+    },
+    {
+      "exercise": "2.10",
+      "minutes": 6,
+      "coverage": "L02/L03 mixed inverse construction, information loss, open reasoning"
+    }
+  ],
+  "handover": "Unit conclusion returns to opening questions; U03 component relationships and order. Local authoring completion does not imply publication or learner completion."
+}

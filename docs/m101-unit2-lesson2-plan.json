@@ -1,0 +1,91 @@
+{
+  "identity": "Physics > Stage 1 > M101 > B01 > U02 > L02",
+  "date": "2026-10-07",
+  "standard": "1.9; fixed illustrated reference v0.4",
+  "status": "Commissioned local review only",
+  "gate": "Approved M101 block1 lesson map v1.0; all seven sections below blueprinted before drafting",
+  "scope": "Signed scalar and vector projection on a nonzero direction; decomposition; invariance under target rescaling. No least squares, general subspaces or coding.",
+  "prerequisites": [
+    "U01 vector arithmetic, unit vectors, signed cosine components",
+    "U02 L01 dot product and algebra, right-angle nonzero condition"
+  ],
+  "sections": [
+    {
+      "number": "2.8",
+      "title": "A component along a chosen direction",
+      "explanation": 8,
+      "attempt": 10,
+      "feedback": 3,
+      "comparator": "OU Unit5 printed183/PDF83 Figure55 and Activity51; Unit1 component teaching"
+    },
+    {
+      "number": "2.9",
+      "title": "Let the direction have unit length",
+      "explanation": 8,
+      "attempt": 12,
+      "feedback": 4,
+      "comparator": "OU printed183,185\u2013186; OpenStax Calculus3 \u00a72.3 Eq2.7 (signed interpretation corrected)"
+    },
+    {
+      "number": "2.10",
+      "title": "Turning the number into a vector",
+      "explanation": 10,
+      "attempt": 14,
+      "feedback": 5,
+      "comparator": "OU printed183 Figure55 acute/obtuse cases; OpenStax Eq2.6 Example2.27"
+    },
+    {
+      "number": "2.11",
+      "title": "What remains is perpendicular",
+      "explanation": 10,
+      "attempt": 14,
+      "feedback": 5,
+      "comparator": "OU printed184\u2013185 distributivity; OpenStax decomposition passage and Example2.28/Checkpoint2.27"
+    },
+    {
+      "number": "2.12",
+      "title": "Change the arrow, keep the line",
+      "explanation": 8,
+      "attempt": 14,
+      "feedback": 5,
+      "comparator": "Original synthesis from OU printed184 scalar rules and normalized direction; no exact OU projection-rescaling activity match"
+    },
+    {
+      "number": "2.13",
+      "title": "Zero cases and useful bounds",
+      "explanation": 7,
+      "attempt": 12,
+      "feedback": 4,
+      "comparator": "OU printed183\u2013184 zero conventions; original diagnosis synthesis"
+    },
+    {
+      "number": "2.14",
+      "title": "Read a projection as a measurement",
+      "explanation": 9,
+      "attempt": 14,
+      "feedback": 4,
+      "comparator": "OU scalar/component exposition and OpenStax Checkpoint2.27; original displacement/signed measurement synthesis"
+    }
+  ],
+  "minutes": {
+    "explanationExamples": 60,
+    "attempts": 90,
+    "feedbackCorrectionRecall": 30,
+    "total": 180
+  },
+  "outcomes": [
+    "M101-O3",
+    "M101-O6"
+  ],
+  "handover": "L03 cross product supplies oriented perpendicular to two vectors; L05 implements projection after P101 readiness.",
+  "numbering": "Sections2.8\u20132.14; examples2.9\u20132.15; activities2.9\u20132.15; keys2.5\u20132.8; figures2.8\u20132.13",
+  "visualPlan": "Signed foot; unit direction on oblique axes; tip-to-tail decomposition; reversal panels; lunar photograph; perpendicular vs slanted projection guides. Static paired cases support comparison without an extra interactive; video optional and not needed here. No new interactive/video inspected or claimed.",
+  "sourceLimit": "OU \u00a77.1 contains geometric projection but no full signed-scalar/vector/decomposition sequence; OpenStax actual exposition and checked examples fill this match. Its signed formula conflicts with wording calling it length; our teaching avoids that wording. Source questions not adapted by number substitution.",
+  "unitBudget": "16h unchanged; final unit mixed exercises/conclusion/reference PDF still due. L05 reserves last30min reference; closing written-practice density risk must be resolved visibly in L04/L05 planning, not through extra L02 work.",
+  "reviews": "Subject, reader, visuals and continuous whole-lesson reading separately required; no human/student validation claim.",
+  "readerRevisions": [
+    "Defined O and A before first distance notation; reintroduced A explicitly in point-to-line proof.",
+    "Nonparallel condition added in cross-product handover.",
+    "Separated signed scalar, magnitude, scale coefficient and vector; supplied both unit-vector and perpendicular-remainder derivations."
+  ]
+}

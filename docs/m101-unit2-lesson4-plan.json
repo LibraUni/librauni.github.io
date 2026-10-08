@@ -1,0 +1,73 @@
+{
+  "lesson": "M101-U02-L04",
+  "title": "Choosing a product and explaining its meaning",
+  "date": "2026-10-08",
+  "authorisation": "User requested creation and online publication in this turn.",
+  "standard": "1.9; fixed illustrated M101 v0.4",
+  "scope": "Approved U02-L04: method selection, scalar/vector outputs, signs/directions/units, supplied constant-force work and torque models. No variable-force integration, equilibrium course or calculus; no programming.",
+  "hierarchy": "Physics > Stage1 > M101 > B01 > U02 > L04",
+  "prerequisites": "U02-L01\u2013L03 only; no P101 physical laws assumed",
+  "handover": "L05 mixed unit closing exercises, one transparent projection-code check with P101 readiness gate, conclusion and concise web/PDF reference.",
+  "sections": [
+    {
+      "number": "2.22",
+      "title": "Begin with the quantity being asked for",
+      "readingMinutes": 9,
+      "activity": "2.23",
+      "attemptMinutes": 12,
+      "comparator": "OU Unit5 printed183 Figure55 and scalar/vector distinction; L02 signed projection; original selection synthesis"
+    },
+    {
+      "number": "2.23",
+      "title": "Keep the sign and test the zero",
+      "readingMinutes": 9,
+      "activity": "2.24",
+      "attemptMinutes": 14,
+      "comparator": "OU printed183\u2013184 Activity51; L03 zero/reversal; original mixed diagnosis"
+    },
+    {
+      "number": "2.24",
+      "title": "Work: a force acting through a displacement",
+      "readingMinutes": 12,
+      "activity": "2.25",
+      "attemptMinutes": 16,
+      "comparator": "OpenStax University Physics1 \u00a77.1 constant-force passage, Fig7.3 and Example7.1; excludes integrals/friction laws"
+    },
+    {
+      "number": "2.25",
+      "title": "Torque: a force acting at a position",
+      "readingMinutes": 13,
+      "activity": "2.26",
+      "attemptMinutes": 16,
+      "comparator": "OpenStax UP1 \u00a710.6 definition Eq10.22\u201310.23/Fig10.31\u201310.33; Example10.14 sign selection; no net torque dynamics"
+    },
+    {
+      "number": "2.26",
+      "title": "Same units do not mean the same quantity",
+      "readingMinutes": 9,
+      "activity": "2.27",
+      "attemptMinutes": 16,
+      "comparator": "Original synthesis of work/torque definitions and OU scalar/vector distinction; NASA photograph context"
+    },
+    {
+      "number": "2.27",
+      "title": "Make a defensible choice",
+      "readingMinutes": 8,
+      "activity": "2.28",
+      "attemptMinutes": 16,
+      "comparator": "OU Unit5 printed187\u2013188 Examples23/Activity55 progression toward independent method choice; L01\u2013L03; original mixed question"
+    }
+  ],
+  "budgetMinutes": {
+    "explanationExamples": 60,
+    "inTextAttempts": 90,
+    "feedbackCorrection": 30,
+    "reservedUnitEndWrittenAttempts": 30,
+    "total": 210
+  },
+  "unitClosingBudget": "Visible reservation resolves earlier closing-practice density concern: use30min of L04 mathematical practice at end of U02, combined with L05 30min written practice for60min cumulative written attempts. L05 retains60min code,30min explanation,30min feedback and30min reference. No lesson/unit hours changed, no second exercise layer; L05 must implement and calibrate actual set within these allocations.",
+  "calibration": "Actual OU pp183\u2013188 text and activities read; fixedv0.4 opening/coordinate explanation worked example and activity read; L03 final sections read. No introductory torque/work exposition found in supplied MST124 unit. OpenStax actual constant-work/torque passages and solved examples inspected; source uses calculus and rotation dynamics omitted here. Source torque examples sometimes call signed components negative magnitudes; do not reproduce that error.",
+  "media": "Five original diagrams paired parallel/perpendicular geometry, plus NASA ISS063-E-034013 instrument photograph. Static comparisons sufficient; no video/interactive quota.",
+  "numbering": "sections2.22\u20132.27; examples2.23\u20132.29; activities2.23\u20132.28; keys2.13\u20132.16; figures2.20\u20132.25",
+  "reviews": "Distinct subject, reader, rendered and continuous whole-lesson reviews required before publishing."
+}

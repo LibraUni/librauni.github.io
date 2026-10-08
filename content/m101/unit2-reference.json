@@ -1,0 +1,74 @@
+[
+  {
+    "group": "Recall",
+    "title": "Dot product and its sign",
+    "body": "$\\mathbf a\\cdot\\mathbf b=a_xb_x+a_yb_y+a_zb_z$. For nonzero inputs this also equals $|\\mathbf a||\\mathbf b|\\cos\\theta$. Positive, zero and negative distinguish acute, right and obtuse tail-to-tail angles. $\\mathbf a\\cdot\\mathbf a=|\\mathbf a|^2$.",
+    "conditions": "A dot product is a scalar. The component rule also allows zero inputs, although their angle is undefined."
+  },
+  {
+    "group": "Recall",
+    "title": "Angle from components",
+    "body": "$$\\theta=\\cos^{-1}\\left(\\frac{\\mathbf a\\cdot\\mathbf b}{|\\mathbf a||\\mathbf b|}\\right).$$",
+    "conditions": "Both vectors must be nonzero; use the angle between 0° and 180°. Keep the numerator's sign. Check the calculator's angle mode."
+  },
+  {
+    "group": "Recall",
+    "title": "Signed component and vector projection",
+    "body": "For $\\mathbf b\\ne\\mathbf0$, $$s=\\frac{\\mathbf a\\cdot\\mathbf b}{|\\mathbf b|},\\qquad \\mathbf p=\\frac{\\mathbf a\\cdot\\mathbf b}{\\mathbf b\\cdot\\mathbf b}\\mathbf b.$$ The scalar $s$ uses the direction of $\\mathbf b$; $\\mathbf p$ is the vector on its line. $|\\mathbf p|=|s|$.",
+    "conditions": "Both have the units of a. A signed component may be negative; its magnitude cannot. Do not substitute one output type for the other."
+  },
+  {
+    "group": "Recall",
+    "title": "Cross-product meaning",
+    "body": "In three dimensions, $\\mathbf c=\\mathbf a\\times\\mathbf b$ is a vector perpendicular to both inputs. For nonzero inputs, $$|\\mathbf c|=|\\mathbf a||\\mathbf b|\\sin\\theta.$$ Order fixes direction by the right-hand rule.",
+    "conditions": "Use a right-handed frame. $\\mathbf b\\times\\mathbf a=-\\mathbf a\\times\\mathbf b$. A zero result has no normal direction."
+  },
+  {
+    "group": "Understand",
+    "title": "Why the projection multiplier works",
+    "body": "Write $\\mathbf p=c\\mathbf b$ and require $(\\mathbf a-c\\mathbf b)\\cdot\\mathbf b=0$. This gives $c=(\\mathbf a\\cdot\\mathbf b)/(\\mathbf b\\cdot\\mathbf b)$. The remainder is $\\mathbf q=\\mathbf a-\\mathbf p$.",
+    "conditions": "For nonzero b the denominator is positive, so the multiplier is unique. Reconstruction alone does not prove that q is perpendicular."
+  },
+  {
+    "group": "Understand",
+    "title": "Checks with different purposes",
+    "body": "For a projection, check p lies on b's line and $\\mathbf q\\cdot\\mathbf b=0$. Also check $\\mathbf p+\\mathbf q=\\mathbf a$. Then $|\\mathbf a|^2=|\\mathbf p|^2+|\\mathbf q|^2$. For a cross product, check perpendicularity, scale and ordered orientation separately.",
+    "conditions": "Both signs of a normal pass perpendicularity checks. Numerical tests support selected cases; they do not prove a general identity."
+  },
+  {
+    "group": "Understand",
+    "title": "Zero and reversal",
+    "body": "For nonzero inputs: dot zero means perpendicular; cross zero means parallel, including opposite directions. Replacing b by any nonzero multiple leaves the vector projection unchanged. A negative multiple reverses the signed component's sign.",
+    "conditions": "Zero input a onto nonzero b gives zero projection. Zero reference b makes projection undefined. Never infer an angle from a zero input."
+  },
+  {
+    "group": "Understand",
+    "title": "Area, normal and perpendicular distance",
+    "body": "For adjacent edge vectors u and v, parallelogram area is $|\\mathbf u\\times\\mathbf v|$; triangle area is half this. For a nonzero cross product, $\\widehat{\\mathbf n}=(\\mathbf u\\times\\mathbf v)/|\\mathbf u\\times\\mathbf v|$. The distance of a's tip to b's line through the origin is $|\\mathbf q|$.",
+    "conditions": "Form edges from a common vertex. Length-edge products have area units; the unit normal is dimensionless. Swapping edges reverses the normal, not the area."
+  },
+  {
+    "group": "Consult",
+    "title": "Ordered component rule",
+    "body": "For $\\mathbf c=\\mathbf a\\times\\mathbf b$, $$\\begin{aligned}c_x&=a_yb_z-a_zb_y,\\\\c_y&=a_zb_x-a_xb_z,\\\\c_z&=a_xb_y-a_yb_x.\\end{aligned}$$",
+    "conditions": "The cyclic order matters. For inputs in the $xy$-plane only $c_z$ can be nonzero, and the magnitude is $|c_z|$. Its sign records direction along the $z$-axis."
+  },
+  {
+    "group": "Consult",
+    "title": "Supplied physical models",
+    "body": "Constant-force work: $W=\\mathbf F\\cdot\\mathbf d$, with d the displacement of the force's application point. Torque about O: $\\boldsymbol\\tau_O=\\mathbf r\\times\\mathbf F$, with r from O to that point. Its magnitude is $|\\mathbf F|\\ell$, where $\\ell$ is the perpendicular lever arm.",
+    "conditions": "Work model requires force constant in magnitude and direction. Torque must name the reference. Use J for work and N m for torque. Neither one force's work nor its torque alone determines the motion."
+  },
+  {
+    "group": "Consult",
+    "title": "Units and input meanings",
+    "body": "A product carries the product of its inputs' units. An angle ratio is dimensionless. A projection has the units of the vector projected, independent of the reference vector's scale. Position, displacement and perpendicular distance have different roles even when all are measured in metres.",
+    "conditions": "Check both units and the quantity requested. Correct units cannot distinguish work from torque or a position from a displacement."
+  },
+  {
+    "group": "Consult",
+    "title": "The small projection program",
+    "body": "Use three numeric entries in x,y,z order; calculate bb, reject zero before division, calculate ab, then return each entry of b multiplied by ab/bb. Return None for a zero reference, not a zero vector. Compare ordinary, perpendicular, parallel and zero cases with hand predictions.",
+    "conditions": "P101 notebook/list/condition/function readiness first. Our code assumes modest finite numeric inputs; it is not a general numerical library. Rounding discrepancies require interpretation, not automatic removal."
+  }
+]

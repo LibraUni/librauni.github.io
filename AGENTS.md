@@ -1,3 +1,66 @@
+# Black-hole appearance update authorised for publication
+
+User reviewed the restored mirrored animation, new explanation and final accretion-disc label placement, then said “ok, publish it”. Publish these changes, preserving subsequent M101 release work. This supersedes local-only restrictions below for this package. Automated browser review remains unavailable; user reviewed locally. Verify CI and live responses.
+
+# Previous animation restored — local only
+
+User rejected the screenshot-inspired variant. Restored the approved mirrored logo-like animation with corrected sphere alignment and original static fallback. New explanatory section retained; its description again matches the mirrored artwork. Supersedes the reference-shaped design note below. No publication.
+
+# Reference-shaped black-hole artwork — local review
+
+User supplied screenshot of broad luminous upper dome, thin horizontal disc and compact lower ring, requesting our colours retained. This supersedes the previous exact-mirroring design. Reworked canvas geometry and smooth moving brightness into dense amber bands; dark region now fills to band boundaries, with faint inner rim. Static fallback and explanatory art-disclaimer copy updated. Original code artwork, no screenshot pixels copied. Syntax/build/search checks pass. Local only, visual browser review still unavailable.
+
+# Local explanation of black-hole imagery
+
+Added #what-you-see between evidence and pathway: light emission, lensing, apparent arches, motion, colour/asymmetry and artistic limitations. Original Figure BH.3 spatial ray schematic and Activity BH.2 with hidden discussion. Reviewed NASA original explanations; see local_appearance_addition in docs/black-hole-exploration-review.json. Source/route tests and build pass. Local only; browser visual QA unavailable.
+
+# Local illustration alignment correction
+
+The mirrored arcs previously used a different vertical centre from the dark sphere, leaving a larger lower gap. Both now share the disc reflection axis; the shadow radius meets the inner arch crown. Static SVG corrected too. Local only; no publication.
+
+# Logo-inspired black-hole illustration — local review
+
+User requested the large black-hole animation resemble the LibraUni logo, locally first. Inspected public/brand/librauni-approved.png. Revised src/black-hole-art.js to level disc, broad upper/lower lensing arcs, amber filament flow; original SVG static fallback public/explore/black-hole-silhouette.svg and scoped CSS. Pause/reduced-motion retained. Laboratory unchanged. Syntax/build checks pass; browser visual verification still unavailable. Not published.
+
+# Black-hole exploration live — 8 October 2026
+
+Published3f5f133. Workflow37733156986 passed security, tests, build and deployment. Live HTTP checks verified homepage question link, exploration theme metadata, all3 mode controls and linked assets including EHT image. No automated visual-browser verification claimed. See docs/black-hole-exploration-live.json. Supersedes pending publication notes below.
+# M101 U02 L05 publication authorised — 8 October 2026
+
+User requested publication of the locally reviewed closing lesson, ten unit exercises, code companions and three-page reference PDF. See docs/m101-unit2-lesson5-review.json. Unit2 hours unchanged; P101 coding readiness gate retained. Latest homepage and black-hole releases3f5f133 preserved; no learner records changed. Deployment/live verification pending.
+
+# Black-hole exploration publication authorised — 8 October 2026
+
+The user reviewed the interactive page, discussed its light and clock models and explicitly said “ok, publish it now”. Publish /explore/black-holes/ and its homepage question link. This supersedes the local-only restrictions below for this package. Startup bug fixed;114 tests passed. Automated browser QA remains unavailable; user reviewed locally. Verify deployment and public responses. No curriculum or learner-record changes.
+
+# Black-hole exploration local draft — 8 October 2026
+
+New homepage question link leads to /explore/black-holes/. Dedicated public field trip: original animated artwork, three quantitative experiments, EHT observation and prerequisite/module route. Read docs/black-hole-exploration-review.json. All112 tests and production build pass; local preview8792. Browser security verification prevents rendered QA; do not describe as browser-verified or publish before remaining review. New page is not approved degree teaching and does not modify scope/credits. No push in this turn.
+
+# Public homepage live — 8 October 2026
+
+Published commit e18f4b9a8816af662c5cc4cc8dad07db3c1a27f0. GitHub run 37727977146 succeeded, including security, tests, build and deployment. Public HTTP checks passed for /, /study/ and /programme/ and their linked build assets. The Student desk retains its aside and study overview. Automated browser review remains unavailable; user approved the local design. See work/homepage-integration/docs/homepage-live.json. Supersedes pending publication notes below.
+
+# Public homepage publication authorised — 8 October 2026
+
+The user reviewed the local homepage and said “i like it. publish it.” Publish `/` plus the preserved `/study/` desk and corrected Student Home links together. Shared account/search/theme and study persistence code is retained. All 109 tests, production build and search indexing pass; remote main matches base cda18e9. Automated browser visual checks remain blocked by the known policy verification failure; user reviewed the local design. Check the publishing workflow and public responses before claiming live. This supersedes local-only publication restrictions below for this homepage package.
+
+# Public homepage integration local review — 8 October 2026
+
+The public homepage now occupies `/` in this isolated local checkout; the preserved sidebar Student desk is at `/study/`. Shared search/account/theme controls remain. Read `docs/homepage-local-review.md`. Preview `http://127.0.0.1:8792/`; no publication authorised. Build, search indexing and all 109 tests pass; browser visual/interaction review is blocked by a browser policy-verification failure and remains outstanding. Reconcile later shared-main changes before any release. Do not alter private records or describe this as browser-verified.
+
+# M101 U02-L04 publication authorised — 8 October 2026
+
+User requested creation and online publication. Reviewed L04: sections2.22–2.27,7examples,6activities,6figures,281MathML. See docs/m101-unit2-lesson4-review.json and plan. IMPORTANT:30min of L04 practice reserved for cumulative exercises at L05; total hours unchanged. L05 remains outline and must include full-unit conclusion/exercises/reference web+PDF and P101-readiness-gated code. Earlier teaching/search/P101 preserved. Deployment verification pending.
+
+# M101 U02-L03 publication authorised — 8 October 2026
+
+User explicitly requested publication of reviewed Lesson3. Sections2.15–2.21,7examples,7activities,9disclosures,6figures,323MathML;3.5h unchanged. See docs/m101-unit2-lesson3-review.json. L04–L05 remain plans. Latest search improvements from ed72d81 preserved. No learner records changed. Deployment/live verification pending.
+
+# M101 U02-L02 publication authorised — 7 October 2026
+
+User explicitly requested publication of reviewed Lesson2. Integrated sections2.8–2.14,7examples,7activities,9disclosures,6figures,286MathML with3h unchanged. See docs/m101-unit2-lesson2-review.json. L03–L05 remain plans. Preserve latest P101Unit2Lesson2 and search. Deployment verification to follow; no learner records changed.
+
 # LibraUni public website
 
 ## P101 Unit 2 Lesson 2 LIVE — 7 October 2026

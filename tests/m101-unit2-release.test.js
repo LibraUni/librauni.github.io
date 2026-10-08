@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const base='learn/physics/stage-1/m101/b01/u02/';
-test('M101 Unit 2 opens only its approved introduction and first lesson',()=>{
+test('M101 Unit 2 opens only its approved introduction and five lessons',()=>{
  const intro=read(base+'index.html'),lesson=read(base+'l01/index.html');
  for(const page of [intro,lesson]){
   assert.match(page,/data-search-status="available"/);
@@ -18,11 +18,67 @@ test('M101 Unit 2 opens only its approved introduction and first lesson',()=>{
  assert.equal((lesson.match(/<details>/g)||[]).length,11);
  for(let i=1;i<=7;i++)assert.ok(lesson.includes('id="M101-U02-L01-S0'+i+'"'));
  assert.match(lesson,/src\/m101-unit2.css/);
- assert.match(lesson,/Lesson 2 plan/);
- for(let i=2;i<=5;i++){
-  const outline=read(base+'l0'+i+'/index.html');
-  assert.match(outline,/data-search-status="outline"/);
-  assert.doesNotMatch(outline,/class="teaching-reading/);
- }
+ assert.match(lesson,/Next: Signed projections and perpendicular parts/);
+ assert.match(read('learn/physics/stage-1/m101/b01/u03/index.html'),/data-search-status="outline"/);
  assert.match(read('learn/physics/stage-1/m101/b01/u01/l05/index.html'),/Next: Products, projections and orientation/);
+});
+
+test('M101 Unit 2 Lesson 2 preserves its checked content and release boundary',()=>{
+ const page=read(base+'l02/index.html');
+ assert.match(page,/data-search-status="available"/);
+ assert.doesNotMatch(page,/Local review edition|M101-Unit-2-.*?\.html|src="assets\/|data-study-id/);
+ assert.equal((page.match(/class="activity"/g)||[]).length,7);
+ assert.equal((page.match(/class="example"/g)||[]).length,7);
+ assert.equal((page.match(/<math /g)||[]).length,286);
+ assert.equal((page.match(/<details>/g)||[]).length,9);
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(ids.length,new Set(ids).size);
+ for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
+ for(let i=1;i<=7;i++)assert.ok(ids.includes('M101-U02-L02-S0'+i));
+ assert.match(page,/Next: Cross products and orientation/);
+ assert.match(page,/m101-u2-l02/);
+ assert.ok(fs.existsSync(new URL('../public/teaching/m101/lunar-shadow.jpg',import.meta.url)));
+});
+
+test('M101 Unit 2 Lesson 3 publishes reviewed content with valid navigation and later outlines',()=>{
+ const page=read(base+'l03/index.html');
+ assert.match(page,/data-search-status="available"/);
+ assert.doesNotMatch(page,/Local review|src="assets\/|data-study-id/);
+ assert.equal((page.match(/class="activity"/g)||[]).length,7);
+ assert.equal((page.match(/class="example"/g)||[]).length,7);
+ assert.equal((page.match(/<math /g)||[]).length,323);
+ assert.equal((page.match(/<details>/g)||[]).length,9);
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(ids.length,new Set(ids).size);
+ for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
+ for(let i=1;i<=7;i++)assert.ok(ids.includes('M101-U02-L03-S0'+i));
+ assert.match(page,/Next: Choosing a product and explaining its meaning/);
+ assert.match(page,/m101-u2-l03/);
+ assert.ok(fs.existsSync(new URL('../public/teaching/m101/iss-solar-arrays.jpg',import.meta.url)));
+});
+
+test('M101 Unit 2 Lesson 4 releases reviewed teaching and preserves final lesson outline',()=>{
+ const page=read(base+'l04/index.html');
+ assert.match(page,/data-search-status="available"/);
+ assert.doesNotMatch(page,/Local review|src="assets\/|data-study-id/);
+ for(const [pattern,count] of [[/class="activity"/g,6],[/class="example"/g,7],[/<math /g,281],[/<details>/g,8]])assert.equal((page.match(pattern)||[]).length,count);
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(ids.length,new Set(ids).size);
+ for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
+ for(let i=1;i<=6;i++)assert.ok(ids.includes('M101-U02-L04-S0'+i));
+ assert.match(page,/Next: Checking vector calculations and unit review/);
+ assert.match(page,/m101-u2-l04/);
+ assert.ok(fs.existsSync(new URL('../public/teaching/m101/behnken-tool.jpg',import.meta.url)));
+});
+
+test('M101 Unit 2 closing lesson releases exercises and downloadable resources',()=>{
+ const page=read(base+'l05/index.html');
+ const teaching=read('content/m101/unit2-lesson5.html');
+ assert.match(page,/data-search-status="available"/);
+ assert.doesNotMatch(page,/Local review|href="M101-Unit-2|data-study-id/);
+ for(const [pattern,count] of [[/class="exercise"/g,10],[/class="example"/g,2],[/<math /g,204],[/<details(?:>| )/g,22]])assert.equal((teaching.match(pattern)||[]).length,count);
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
+ for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
+ assert.match(page,/Next unit outline/);
+ for(const file of ['notebooks/m101-u02-l05.ipynb','notebooks/m101-u02-l05.py','teaching/m101/M101-Unit-2-Reference.pdf']){assert.ok(page.includes('/'+file));assert.ok(fs.existsSync(new URL('../public/'+file,import.meta.url)));}
 });

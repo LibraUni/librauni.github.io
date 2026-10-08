@@ -21,30 +21,80 @@ function containsQuery(text,spec){
  const hits=matchingTokens(text,spec);
  return spec.exact?hits.length>0:spec.terms.length>0&&spec.terms.every(term=>hits.some(t=>t.word.startsWith(term)));
 }
-function highlightedExcerpt(text,spec){
+// Common words remain required for matching, but carry less passage-ranking weight.
+const commonWords=new Set('a an and are as at be by for from in is it of on or that the this to was were with'.split(' '));
+const compareRank=(a,b)=>{
+ for(let i=0;i<a.length;i++)if(a[i]!==b[i])return b[i]-a[i];
+ return 0;
+};
+function bestPassage(text,spec){
  const hits=matchingTokens(text,spec);
- if(!hits.length)return '';
- const start=Math.max(0,text.lastIndexOf(' ',Math.max(0,hits[0].start-90))+1);
- let end=Math.min(text.length,start+260);
+ if(!hits.length)return null;
+ // An adjacent whole-word phrase is strongest even for an unquoted query.
+ const phraseHits=matchingTokens(text,{...spec,exact:true});
+ if(phraseHits.length){
+  const first=phraseHits[0],last=phraseHits[spec.terms.length-1];
+  return {hits,start:first.start,end:last.end,rank:[1,1,0,0,-(last.end-first.start)]};
+ }
+ const terms=[...new Set(spec.terms)];
+ const matches=hits.map(hit=>terms.flatMap((term,i)=>hit.word.startsWith(term)?[i]:[]));
+ const counts=terms.map(()=>0);
+ let right=0,best=null;
+ // Sliding windows keep work bounded by text length rather than all hit pairs.
+ for(let left=0;left<hits.length;left++){
+  while(right<hits.length&&(right===left||hits[right].end-hits[left].start<=260)){
+   for(const i of matches[right])counts[i]++;
+   right++;
+  }
+  const covered=terms.filter((_,i)=>counts[i]>0);
+  const end=hits[right-1].end;
+  const rank=[0,Number(covered.length===terms.length),covered.reduce((sum,term)=>sum+(commonWords.has(term)?0.1:1),0),covered.length,-(end-hits[left].start)];
+  if(!best||compareRank(rank,best.rank)<0)best={hits,start:hits[left].start,end,rank};
+  for(const i of matches[left])counts[i]--;
+ }
+ return best;
+}
+function highlightedExcerpt(text,spec,passage=bestPassage(text,spec)){
+ if(!passage)return '';
+ const context=Math.max(0,Math.min(90,260-(passage.end-passage.start)));
+ const desiredStart=Math.max(0,passage.start-context);
+ const start=desiredStart===0?0:text.lastIndexOf(' ',desiredStart)+1;
+ let end=Math.min(text.length,Math.max(start+260,passage.end));
  const boundary=text.indexOf(' ',end);if(boundary!==-1)end=boundary;
  let cursor=start,html=start?'… ':'';
- for(const hit of hits.filter(h=>h.start>=start&&h.end<=end)){
+ for(const hit of passage.hits.filter(h=>h.start>=start&&h.end<=end)){
   if(hit.start<cursor)continue;
   html+=escape(text.slice(cursor,hit.start))+'<mark>'+escape(text.slice(hit.start,hit.end))+'</mark>';cursor=hit.end;
  }
  return html+escape(text.slice(cursor,end))+(end<text.length?' …':'');
+}
+function indexedSections(page){
+ const anchors=(page.anchors||[]).filter(a=>/^h[1-6]$/i.test(a.element)&&a.text?.trim()&&Number.isInteger(a.location)).sort((a,b)=>a.location-b.location);
+ if(!anchors.length)return page.sub_results||[];
+ // Pagefind excerpts can omit the best match. Reconstruct full sections from
+ // its indexed text and heading offsets, never from the live page DOM.
+ const raw=page.raw_content;
+ const text=raw??page.content??'';
+ const separated=text.includes('\u200B');
+ const words=separated?text.split('\u200B'):text.split(/[\r\n\s]+/g);
+ return anchors.map((anchor,i)=>{
+  let plain=words.slice(anchor.location,anchors[i+1]?.location??words.length).join(separated?'':' ');
+  if(raw!==undefined)plain=plain.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+  return {title:anchor.text,url:(page.meta?.url||page.url).split('#')[0]+'#'+encodeURIComponent(anchor.id),plain_excerpt:plain};
+ });
 }
 export function validateContentResult(query,page){
  const spec=querySpec(query);
  const content=page.content||'';
  const titles=[page.meta?.title||'',page.meta?.pageTitle||''];
  if(!containsQuery(content,spec)&&!titles.some(title=>containsQuery(title,spec)))return null;
- const subResults=(page.sub_results||[]).flatMap(section=>{
+ const subResults=indexedSections(page).flatMap(section=>{
   // Only expose section snippets containing actual forward matches.
   const plain=section.plain_excerpt||'';
-  if(!matchingTokens(plain,spec).length)return [];
-  return [{...section,excerpt:highlightedExcerpt(plain,spec)}];
- });
+  const passage=bestPassage(plain,spec);
+  if(!passage)return [];
+  return [{section:{...section,excerpt:highlightedExcerpt(plain,spec,passage)},rank:passage.rank}];
+ }).sort((a,b)=>compareRank(a.rank,b.rank)).map(result=>result.section);
  const excerpt=highlightedExcerpt(content,spec)||highlightedExcerpt(titles.find(title=>containsQuery(title,spec))||'',spec);
  return {...page,excerpt,sub_results:subResults};
 }
