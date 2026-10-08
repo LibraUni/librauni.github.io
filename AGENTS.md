@@ -1,3 +1,7 @@
+# M101 U02-L04 publication authorised — 8 October 2026
+
+User requested creation and online publication. Reviewed L04: sections2.22–2.27,7examples,6activities,6figures,281MathML. See docs/m101-unit2-lesson4-review.json and plan. IMPORTANT:30min of L04 practice reserved for cumulative exercises at L05; total hours unchanged. L05 remains outline and must include full-unit conclusion/exercises/reference web+PDF and P101-readiness-gated code. Earlier teaching/search/P101 preserved. Deployment verification pending.
+
 # M101 U02-L03 publication authorised — 8 October 2026
 
 User explicitly requested publication of reviewed Lesson3. Sections2.15–2.21,7examples,7activities,9disclosures,6figures,323MathML;3.5h unchanged. See docs/m101-unit2-lesson3-review.json. L04–L05 remain plans. Latest search improvements from ed72d81 preserved. No learner records changed. Deployment/live verification pending.

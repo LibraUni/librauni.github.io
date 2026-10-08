@@ -7,7 +7,7 @@ export const m101Lesson2=m101Unit+'l02/';
 export const m101Lesson3=m101Unit+'l03/';
 export const m101Lesson4=m101Unit+'l04/';
 export const m101Lesson5=m101Unit+'l05/';
-export const m101TeachingPaths=[m101Home,m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/'];
+export const m101TeachingPaths=[m101Home,m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/'];
 export function addM101Teaching({root,pages,extraRails,link}){
  const reading=name=>'<div data-search-status="available" class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
  const pagination=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
@@ -71,9 +71,9 @@ export function addM101Teaching({root,pages,extraRails,link}){
 
  const unit2=m101Home+'b01/u02/';
  const unit2Lesson=unit2+'l01/';
- const wrap2=name=>'<div data-search-status="available" class="teaching-reading m101-u2'+(name==='unit2-lesson2'?' m101-u2-l02':name==='unit2-lesson3'?' m101-u2-l03':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div><link rel="stylesheet" href="/src/m101-unit2.css">';
+ const wrap2=name=>'<div data-search-status="available" class="teaching-reading m101-u2'+(name==='unit2-lesson2'?' m101-u2-l02':name==='unit2-lesson3'?' m101-u2-l03':name==='unit2-lesson4'?' m101-u2-l04':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div><link rel="stylesheet" href="/src/m101-unit2.css">';
  const u2=pages.find(p=>p[0]===unit2);
- u2[3]=wrap2('unit2')+pagination(link(m101Lesson5,'← Unit 1 closing lesson'),link(unit2Lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2><p>The introduction and Lessons 1–3 are available. Later lessons and unit-closing resources remain in preparation.</p>'+m101Unit2Lessons.map((l,i)=>'<p>'+link(unit2+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<3?' · Available':' · Lesson plan')+'</p>').join('')+'</section>';
+ u2[3]=wrap2('unit2')+pagination(link(m101Lesson5,'← Unit 1 closing lesson'),link(unit2Lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2><p>The introduction and Lessons 1–4 are available. Later lessons and unit-closing resources remain in preparation.</p>'+m101Unit2Lessons.map((l,i)=>'<p>'+link(unit2+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<4?' · Available':' · Lesson plan')+'</p>').join('')+'</section>';
  const l1=pages.find(p=>p[0]===unit2Lesson);
  l1[1]='M101 · Unit 2 · Lesson 1 · Scalar products and angles';
  l1[3]=wrap2('unit2-lesson1')+pagination(link(unit2,'← Unit 2 introduction'),link(unit2+'l02/','Next: Signed projections and perpendicular parts →'));
@@ -90,16 +90,23 @@ export function addM101Teaching({root,pages,extraRails,link}){
  const l3path=unit2+'l03/';
  const l3=pages.find(p=>p[0]===l3path);
  l3[1]='M101 · Unit 2 · Lesson 3 · Cross products and orientation';
- l3[3]=wrap2('unit2-lesson3')+pagination(link(l2path,'← Signed projections and perpendicular parts'),link(unit2+'l04/','Lesson 4 plan →'));
+ l3[3]=wrap2('unit2-lesson3')+pagination(link(l2path,'← Signed projections and perpendicular parts'),link(unit2+'l04/','Next: Choosing a product and explaining its meaning →'));
  const l3fragment=fs.readFileSync(root+'content/m101/unit2-lesson3.html','utf8');
  const l3items=[...l3fragment.matchAll(/<section class="chapter" id="(M101-U02-L03-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
  extraRails.set(l3path,{title:'In this lesson',back:unit2,items:[...l3items,{href:'#m101-u02-l03-context',title:'Further reading and context'}]});
- for(const planned of m101Unit2Lessons.slice(3)){
+ const l4path=unit2+'l04/';
+ const l4=pages.find(p=>p[0]===l4path);
+ l4[1]='M101 · Unit 2 · Lesson 4 · Choosing a product and explaining its meaning';
+ l4[3]=wrap2('unit2-lesson4')+pagination(link(l3path,'← Cross products and orientation'),link(unit2+'l05/','Lesson 5 plan →'));
+ const l4fragment=fs.readFileSync(root+'content/m101/unit2-lesson4.html','utf8');
+ const l4items=[...l4fragment.matchAll(/<section class="chapter" id="(M101-U02-L04-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
+ extraRails.set(l4path,{title:'In this lesson',back:unit2,items:[...l4items,{href:'#m101-u02-l04-context',title:'Further reading and context'}]});
+ for(const planned of m101Unit2Lessons.slice(4)){
   const path=unit2+planned.id.split('-').at(-1).toLowerCase()+'/';
   pages.find(p=>p[0]===path)[3]='<section data-search-status="outline"><p class="eyebrow">M101 · Unit 2 · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned study hours. Teaching is in preparation.</p></section>'+pagination(link(unit2,'← Unit 2 introduction'),'');
  }
  pages.find(p=>p[0]===m101Lesson5)[3]=pages.find(p=>p[0]===m101Lesson5)[3].replace('Next unit outline: Products, projections and orientation','Next: Products, projections and orientation');
- module[3]=module[3].replace('Further teaching is in preparation.','The Unit 2 introduction and Lessons 1–3 are also available; later teaching remains in preparation.');
- block[3]=block[3].replace('Further block teaching is in preparation.','The Unit 2 introduction and Lessons 1–3 are also available; later block teaching remains in preparation.');
+ module[3]=module[3].replace('Further teaching is in preparation.','The Unit 2 introduction and Lessons 1–4 are also available; later teaching remains in preparation.');
+ block[3]=block[3].replace('Further block teaching is in preparation.','The Unit 2 introduction and Lessons 1–4 are also available; later block teaching remains in preparation.');
 
 }

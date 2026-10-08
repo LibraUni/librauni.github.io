@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const base='learn/physics/stage-1/m101/b01/u02/';
-test('M101 Unit 2 opens only its approved introduction and first three lessons',()=>{
+test('M101 Unit 2 opens only its approved introduction and first four lessons',()=>{
  const intro=read(base+'index.html'),lesson=read(base+'l01/index.html');
  for(const page of [intro,lesson]){
   assert.match(page,/data-search-status="available"/);
@@ -19,7 +19,7 @@ test('M101 Unit 2 opens only its approved introduction and first three lessons',
  for(let i=1;i<=7;i++)assert.ok(lesson.includes('id="M101-U02-L01-S0'+i+'"'));
  assert.match(lesson,/src\/m101-unit2.css/);
  assert.match(lesson,/Next: Signed projections and perpendicular parts/);
- for(let i=4;i<=5;i++){
+ for(let i=5;i<=5;i++){
   const outline=read(base+'l0'+i+'/index.html');
   assert.match(outline,/data-search-status="outline"/);
   assert.doesNotMatch(outline,/class="teaching-reading/);
@@ -56,7 +56,21 @@ test('M101 Unit 2 Lesson 3 publishes reviewed content with valid navigation and 
  assert.equal(ids.length,new Set(ids).size);
  for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
  for(let i=1;i<=7;i++)assert.ok(ids.includes('M101-U02-L03-S0'+i));
- assert.match(page,/Lesson 4 plan/);
+ assert.match(page,/Next: Choosing a product and explaining its meaning/);
  assert.match(page,/m101-u2-l03/);
  assert.ok(fs.existsSync(new URL('../public/teaching/m101/iss-solar-arrays.jpg',import.meta.url)));
+});
+
+test('M101 Unit 2 Lesson 4 releases reviewed teaching and preserves final lesson outline',()=>{
+ const page=read(base+'l04/index.html');
+ assert.match(page,/data-search-status="available"/);
+ assert.doesNotMatch(page,/Local review|src="assets\/|data-study-id/);
+ for(const [pattern,count] of [[/class="activity"/g,6],[/class="example"/g,7],[/<math /g,281],[/<details>/g,8]])assert.equal((page.match(pattern)||[]).length,count);
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(ids.length,new Set(ids).size);
+ for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
+ for(let i=1;i<=6;i++)assert.ok(ids.includes('M101-U02-L04-S0'+i));
+ assert.match(page,/Lesson 5 plan/);
+ assert.match(page,/m101-u2-l04/);
+ assert.ok(fs.existsSync(new URL('../public/teaching/m101/behnken-tool.jpg',import.meta.url)));
 });

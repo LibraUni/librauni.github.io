@@ -1,0 +1,25 @@
+{
+  "lesson": "M101-U02-L04",
+  "figures": "2.20\u20132.25",
+  "originalDiagrams": [
+    20,
+    21,
+    22,
+    23,
+    25
+  ],
+  "originalLicence": "CC BY-NC-SA 4.0",
+  "photograph": {
+    "figure": "2.24",
+    "creator": "NASA",
+    "identifier": "ISS063-E-034013",
+    "date": "2020-07-01",
+    "source": "https://www.nasa.gov/image-article/astronaut-bob-behnken-conducts-spacewalk/",
+    "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/iss063e034013.jpg",
+    "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "permission": "NASA educational/editorial media use, acknowledged; no third-party credit on source. No endorsement claimed.",
+    "modifications": "Recompressed at original 1041\u00d7694; no cropping",
+    "verification": "Actual source caption, image and reuse terms inspected; credit and alt text included."
+  },
+  "interaction": "Static comparisons sufficient; no interactive added."
+}
