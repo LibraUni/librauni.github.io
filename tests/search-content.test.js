@@ -69,3 +69,17 @@ test('later prefix clusters and repeated query words keep useful excerpts',()=>{
  assert.ok(validateContentResult('unit unit vect',page(text)));
  assert.equal(validateContentResult('"unit unit"',page(text)),null);
 });
+
+test('full indexed sections recover a phrase omitted from Pagefind excerpts',()=>{
+ const opening='The distance from the origin is positive.';
+ const activity='Activity 2.15 Explain the measurement. '+ 'Calculate the signed advance and distance. '.repeat(12)+'A report calls the magnitude “the distance walked”. Explain the claim.';
+ const candidate={...page(opening+' '+activity),anchors:[
+  {element:'h2',text:'Introduction',id:'intro',location:0},
+  {element:'h3',text:'Activity 2.15',id:'activity-15',location:opening.split(/\s+/).length}
+ ],sub_results:[{title:'Activity 2.15',url:'/learn/example/#activity-15',plain_excerpt:'Calculate the signed advance and distance.'}]};
+ for(const query of ['the distance walked','"the distance walked"']){
+  const result=validateContentResult(query,candidate);
+  assert.equal(result.sub_results[0].url,'/learn/example/#activity-15');
+  assert.match(result.sub_results[0].excerpt,/<mark>the<\/mark> <mark>distance<\/mark> <mark>walked<\/mark>/);
+ }
+});

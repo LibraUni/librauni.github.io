@@ -68,12 +68,27 @@ function highlightedExcerpt(text,spec,passage=bestPassage(text,spec)){
  }
  return html+escape(text.slice(cursor,end))+(end<text.length?' …':'');
 }
+function indexedSections(page){
+ const anchors=(page.anchors||[]).filter(a=>/^h[1-6]$/i.test(a.element)&&a.text?.trim()&&Number.isInteger(a.location)).sort((a,b)=>a.location-b.location);
+ if(!anchors.length)return page.sub_results||[];
+ // Pagefind excerpts can omit the best match. Reconstruct full sections from
+ // its indexed text and heading offsets, never from the live page DOM.
+ const raw=page.raw_content;
+ const text=raw??page.content??'';
+ const separated=text.includes('\u200B');
+ const words=separated?text.split('\u200B'):text.split(/[\r\n\s]+/g);
+ return anchors.map((anchor,i)=>{
+  let plain=words.slice(anchor.location,anchors[i+1]?.location??words.length).join(separated?'':' ');
+  if(raw!==undefined)plain=plain.replace(/&lt;/g,'<').replace(/&gt;/g,'>');
+  return {title:anchor.text,url:(page.meta?.url||page.url).split('#')[0]+'#'+encodeURIComponent(anchor.id),plain_excerpt:plain};
+ });
+}
 export function validateContentResult(query,page){
  const spec=querySpec(query);
  const content=page.content||'';
  const titles=[page.meta?.title||'',page.meta?.pageTitle||''];
  if(!containsQuery(content,spec)&&!titles.some(title=>containsQuery(title,spec)))return null;
- const subResults=(page.sub_results||[]).flatMap(section=>{
+ const subResults=indexedSections(page).flatMap(section=>{
   // Only expose section snippets containing actual forward matches.
   const plain=section.plain_excerpt||'';
   const passage=bestPassage(plain,spec);
