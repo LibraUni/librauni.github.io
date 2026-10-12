@@ -1,0 +1,22 @@
+{
+  "figures": [
+    {
+      "numbers": "3.19–3.21,3.23",
+      "creator": "LibraUni",
+      "purpose": "Zero-row interpretation; parameter-to-point connection; three solution geometries; whole-system decision order",
+      "license": "CC BY-NC-SA4.0",
+      "checks": "Equal axis scales, line endpoints/intersection and all parameter positions verified. Static text alternative and three sample points; no time-based animation."
+    },
+    {
+      "number": "3.22",
+      "source": "https://www.nasa.gov/image-article/rocket-booster-segments-that-help-power-artemis-test-flight/",
+      "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/ksc-20200615-ph-awg01_0004_orig.jpg",
+      "creator": "NASA/Tony Gray",
+      "reuse": "NASA educational/informational reuse under published media guidelines; photo NASA credited, not marked third-party copyright",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "changes": "Original1041×694 JPEG, no crop or colour alteration",
+      "inspection": "Downloaded actual photo viewed: bridge rails, handrails and repeating supports recede; factual caption identifies Indian River crossing15June2020. Used to distinguish perspective photograph from Cartesian diagram."
+    }
+  ],
+  "rights": "NASA photograph retains separate terms; no NASA endorsement claimed. Source/credit/reuse adjacent. No video selected; it would add a detour without necessary new explanation."
+}

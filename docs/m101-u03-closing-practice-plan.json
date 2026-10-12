@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-12",
+  "status": "Blueprint only; final questions to be authored and checked with L06",
+  "budget": "L06 written45min; L04 reserved feedback15min. L06 Python30min and iCMA60min/reference30min unchanged.",
+  "calibration": "Nicholson1.2E Ex4 routine classification and dependent family; ILA1.1/1.3 graphical/parametric reasoning; previously inspected U03L01/L02 matrix-transformation practice. Mixed synthesis is original; no exact source-set equivalence claimed.",
+  "questions": [
+    {
+      "number": "3.1",
+      "focus": "Matrix dimensions and entries",
+      "minutes": 3
+    },
+    {
+      "number": "3.2",
+      "focus": "Matrix action and images of coordinate vectors",
+      "minutes": 4
+    },
+    {
+      "number": "3.3",
+      "focus": "Compute composition and intermediate vector",
+      "minutes": 6
+    },
+    {
+      "number": "3.4",
+      "focus": "Explain composition order with a counterexample",
+      "minutes": 4
+    },
+    {
+      "number": "3.5",
+      "focus": "Two-unknown elimination with original checks",
+      "minutes": 6
+    },
+    {
+      "number": "3.6",
+      "focus": "Classify three contrasting small systems",
+      "minutes": 6
+    },
+    {
+      "number": "3.7",
+      "focus": "Parameter family and completeness",
+      "minutes": 5
+    },
+    {
+      "number": "3.8",
+      "focus": "Determinant/inverse conditions and check",
+      "minutes": 5
+    },
+    {
+      "number": "3.9",
+      "focus": "Block retrieval: vector projection or orientation",
+      "minutes": 4
+    },
+    {
+      "number": "3.10",
+      "focus": "Explain why a successful candidate check does not prove uniqueness",
+      "minutes": 2
+    }
+  ],
+  "coverage": "L01\u2013L05 and O4/O6; brief O3 block retrieval. Ten multi-part questions; no additional lesson-end set."
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-12",
+  "calibration": [
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/systems-of-eqns.html",
+      "passage": "1.1.2 Two Equations in Two Variables; 1.1.3 parameter descriptions",
+      "fit": "Geometric intersection/parallel/coincident interpretation and complete solution descriptions. Original simpler two-variable examples; no general-dimensional space or plane theory."
+    },
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/parametric-form.html",
+      "passage": "1.3.1 A System with a Free Variable, explicit family and example values; 1.3.2 Number of Solutions",
+      "fit": "Actual HTML exposition and rendered equations read. Two directions of verification/completeness developed with original numbers. Abstract pivot-column rules and larger families excluded."
+    },
+    {
+      "source": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/01:_Systems_of_Linear_Equations/1.02:_Gaussian_Elimination/1.2E:_Solutions_and_Elementary_Operations_Exercises",
+      "passage": "Exercise4 systems including dependent 3x-y=2 / 2y-6x=-4 and inconsistent variants; Exercise3 parameter descriptions and selected solutions",
+      "fit": "Original practice retains classification variety, signed arithmetic and family interpretation; more scaffolding and smaller dimension. Source selected-answer list numbering is misaligned, not used as arithmetic oracle. L06 mixed exercise blueprint records original synthesis, not claimed exact equivalent."
+    },
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/demos/parametric1.html?vers=224734",
+      "passage": "Actual 3D point-on-intersection-line display and z control",
+      "fit": "Inspected screenshot/DOM and accompanying exposition. Keyboard edit visible but point did not update; source interaction not verified. Own 2D parameter control checked at all17 positions and with reset. No source code copied."
+    },
+    {
+      "source": "Accepted M101 illustrated reference v0.4 and published U03L03",
+      "passage": "Opening prose, worked reasoning, colour roles, caption placement, practice and feedback",
+      "fit": "Maintained sustained prose and transitions, 7 worked examples, 7 original multi-part activities, 5 figures including credited photo and original interactive."
+    },
+    {
+      "source": "Private supplied OU MST124 Unit5 PDF p83, printed183",
+      "passage": "Actual rendered scalar-products page and Activity51 viewed",
+      "fit": "Typography only. Relevant Unit9 unavailable; university subject alternatives used; no claim to have inspected absent material."
+    }
+  ],
+  "originality": "No extended quotation or close paraphrase. Mathematical methods and original examples independently checked."
+}

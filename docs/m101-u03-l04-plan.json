@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-12",
+  "authorisation": "Create Lesson 4 and publish online",
+  "standard": "1.10",
+  "policy": "1.0",
+  "gate": {
+    "status": "ready: complete section blueprint before authoring",
+    "parent": "curriculum/m101-units.js U03",
+    "peers": "curriculum/m101-released.js; approved full B01 lesson blueprint retained in unit plan",
+    "wider": "Approved Stage 1 module/block/unit outlines and degree progression unchanged",
+    "dependency": "Published U03-L03; no new physics or Python prerequisite"
+  },
+  "lesson": {
+    "id": "U03-L04",
+    "unit": "U03",
+    "title": "When solutions fail or are not unique",
+    "hours": 3.0,
+    "allocation": {
+      "explanationAndExamples": 1,
+      "mathematicalPractice": 1.5,
+      "python": 0,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L03"
+    ],
+    "externalRequires": [],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Classify unique, inconsistent and dependent small systems and represent a simple solution family.",
+    "scope": "Contradiction versus redundant equation after elimination; parallel/coincident lines; a free parameter in a dependent two-unknown system; interpret a parameterised family by substitution.",
+    "boundary": "No rank theorem or abstract null spaces. A singular coefficient matrix alone cannot distinguish no solutions from infinitely many.",
+    "practiceAndEvidence": "Classify deliberately similar systems with different right-hand sides; show one inconsistent and one dependent case; check two members of a solution family and explain why examples alone do not describe the whole family.",
+    "visualPlan": "Intersecting, parallel and coincident line pairs aligned with their reduced equations.",
+    "python": "No coding required.",
+    "handover": "L05 connects 2D invertibility and determinant with this distinction."
+  },
+  "sections": [
+    {
+      "id": "M101-U03-L04-S01",
+      "number": "3.21",
+      "title": "When elimination produces a contradiction",
+      "purpose": "Interpret a nonzero augmented constant with zero coefficients; no division by zero.",
+      "minutes": {
+        "reading": 10,
+        "written": 12,
+        "feedback": 2
+      },
+      "requires": "U03-L03 and preceding sections",
+      "boundary": "No rank, null spaces, determinant formula, general solver or new three-variable family",
+      "handover": "When an equation adds no information"
+    },
+    {
+      "id": "M101-U03-L04-S02",
+      "number": "3.22",
+      "title": "When an equation adds no information",
+      "purpose": "Distinguish redundant equation from an unrestricted system; retain the remaining condition.",
+      "minutes": {
+        "reading": 10,
+        "written": 12,
+        "feedback": 2
+      },
+      "requires": "U03-L03 and preceding sections",
+      "boundary": "No rank, null spaces, determinant formula, general solver or new three-variable family",
+      "handover": "Describe every solution with a parameter"
+    },
+    {
+      "id": "M101-U03-L04-S03",
+      "number": "3.23",
+      "title": "Describe every solution with a parameter",
+      "purpose": "Derive and verify all members of a family, prove completeness, compare parameter choices.",
+      "minutes": {
+        "reading": 13,
+        "written": 18,
+        "feedback": 3
+      },
+      "requires": "U03-L03 and preceding sections",
+      "boundary": "No rank, null spaces, determinant formula, general solver or new three-variable family",
+      "handover": "Read the geometry without trusting appearances"
+    },
+    {
+      "id": "M101-U03-L04-S04",
+      "number": "3.24",
+      "title": "Read the geometry without trusting appearances",
+      "purpose": "Relate intersecting, parallel and coincident lines to exact algebra; graph window and photographic perspective limitations.",
+      "minutes": {
+        "reading": 9,
+        "written": 12,
+        "feedback": 2
+      },
+      "requires": "U03-L03 and preceding sections",
+      "boundary": "No rank, null spaces, determinant formula, general solver or new three-variable family",
+      "handover": "Classify the whole system"
+    },
+    {
+      "id": "M101-U03-L04-S05",
+      "number": "3.25",
+      "title": "Classify the whole system",
+      "purpose": "Consistent first, then uniqueness; zero row in overdetermined system; similar coefficients/different constants.",
+      "minutes": {
+        "reading": 10,
+        "written": 24,
+        "feedback": 3
+      },
+      "requires": "U03-L03 and preceding sections",
+      "boundary": "No rank, null spaces, determinant formula, general solver or new three-variable family",
+      "handover": "Ask what the model can determine"
+    },
+    {
+      "id": "M101-U03-L04-S06",
+      "number": "3.26",
+      "title": "Ask what the model can determine",
+      "purpose": "Translate supplied redundant readouts, select new information, interpret restrictions and hand over to invertibility.",
+      "minutes": {
+        "reading": 8,
+        "written": 12,
+        "feedback": 3
+      },
+      "requires": "U03-L03 and preceding sections",
+      "boundary": "No rank, null spaces, determinant formula, general solver or new three-variable family",
+      "handover": "U03-L05 determinants and invertibility"
+    }
+  ],
+  "totals": {
+    "reading": 60,
+    "written": 90,
+    "localFeedback": 15,
+    "reservedUnitEndFeedback": 15,
+    "python": 0,
+    "total": 180
+  },
+  "numbering": "Sections3.21–3.26; Examples3.22–3.28; Activities3.23–3.29; Figures3.19–3.23; Keys3.8–3.9",
+  "calibration": "Georgia Tech ILA1.1/1.3 actual exposition and parameter demo; Nicholson1.2E Exercise4 dependent/inconsistent pairs and Exercise3 parametric forms. Smaller 2D scope than general sources; original data and questions. OU Unit5 p183 typography only; relevant Unit9 absent. Accepted v0.4 and U03L03 prose reviewed.",
+  "mediaPlan": [
+    "Original row-meaning comparison",
+    "Original 2D family slider with textual/static equivalent and explicit finite control window",
+    "Three coordinate plots aligned with equations and classification",
+    "NASA/Tony Gray June15 2020 railway-bridge photo: perspective image is not a Cartesian graph",
+    "Whole-system decision cards"
+  ],
+  "sourcesInspected": [
+    "https://textbooks.math.gatech.edu/ila/systems-of-eqns.html",
+    "https://textbooks.math.gatech.edu/ila/parametric-form.html",
+    "https://textbooks.math.gatech.edu/ila/demos/parametric1.html?vers=224734",
+    "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/01:_Systems_of_Linear_Equations/1.02:_Gaussian_Elimination/1.2E:_Solutions_and_Elementary_Operations_Exercises",
+    "https://www.nasa.gov/image-article/rocket-booster-segments-that-help-power-artemis-test-flight/",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+  ],
+  "interactiveComparison": "Inspected actual 3D ILA demo and free-variable explanation. Text field edit visible but point did not update through automated keyboard attempt; no verified source-interaction claim. Our simpler 2D slider explicitly links parameter to both coordinates and both original equations, with static samples, no animation.",
+  "releaseDisposition": "Subject, reader, visual and whole-lesson reviews passed; user authorised publication",
+  "timing": "Editorial estimate, not learner validation"
+}
