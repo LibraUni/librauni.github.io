@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-12",
+  "lesson": "P101 U03 L04 — An analysis another person can rerun",
+  "standard": "Teaching Standard and Practice v1.10; fixed illustrated M101 opening v0.4",
+  "authorisation": "Explicit user request to continue Lesson4 and publish online",
+  "subject_review": {
+    "checks": [
+      "All numerical examples/activity tables checked with exact rational arithmetic",
+      "Repaired displayed blocks, companion and actual fresh-kernel notebook execute in two extracted locations; CSV byte-identical",
+      "Deliberate failure confirmed: wrong path",
+      "Deliberate failure confirmed: blank rejected by loadtxt",
+      "Deliberate failure confirmed: unpaired array lengths",
+      "Remaining model/sign faults execute but yield a wrong M1 comparison",
+      "Boundary cases: genuine zero retained; malformed shape/token, missing time and no complete pairs stop explicitly",
+      "Stale-value example and corrected rerun independently executed"
+    ],
+    "predictions_exact": [
+      "-2",
+      "4",
+      "23/2"
+    ],
+    "residuals_exact": [
+      "0",
+      "0",
+      "-21/2"
+    ],
+    "versions": {
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2"
+    },
+    "words": 5580,
+    "math_count": 1,
+    "code_blocks": 8
+  },
+  "reader_review": {
+    "method": "Separate continuous read-through of all six sections, examples, activities, hints/discussions and handover, using only taught prerequisites. Actual comparator passages and practice fit recorded in sources.json. This is author self-review, not independent human or student testing.",
+    "result": "Source-to-claim argument progresses to location, missingness, paired arrays, state/dependencies, plotted meaning, versions and handover. New Path, NaN, mask, all/isfinite, raise and version syntax explained at use; repair exercise distinct from verified teaching code.",
+    "defects_and_revisions": [
+      "Clarified NaN can arise from invalid arithmetic elsewhere and distinguished it from Unit2 None bookkeeping.",
+      "Recalled ndmin=2 for loaded array structure.",
+      "Made the misleading graph caption hypothetical rather than claiming it appears in the actual illustration.",
+      "Explained that printed prose describing a run is an analyst claim requiring comparison with actual values, not automated validation.",
+      "Added explicit source/method and reuse links plus Credit label to actual notebook-output figure."
+    ],
+    "practice": "Four written activities total45min; one integrated repair task120min. Six documented fault classes diagnosed and corrected in checked solution. Hidden feedback explains choices; original CSV preserved; no lesson-end exercise layer added."
+  },
+  "visual_review": {
+    "browser": [
+      {
+        "width": 1440,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 1440,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 900,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 900,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 390,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 390,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 320,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 320,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 1,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "searchPages": 38,
+        "keyboardCopies": 8
+      },
+      {
+        "noJavaScript": true,
+        "allInternalLinks": true,
+        "downloadsExact": true,
+        "errors": []
+      },
+      {
+        "zoomEquivalent": "720 CSS pixels at scale 2 for a 1440-pixel display",
+        "passed": true
+      }
+    ],
+    "offline": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true,
+        "math": 1,
+        "dark": false
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true,
+        "math": 1,
+        "dark": true
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "images": true,
+        "math": 1,
+        "dark": false
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "images": true,
+        "math": 1,
+        "dark": true
+      }
+    ],
+    "inspection": "Viewed rendered opening, section transitions/code, every figure, mobile context/MathML/code, enlarged-reading MathML, and offline opening/mobile. A fresh targeted graph capture and DOM check confirmed both horizontal-axis labels after a transient incomplete capture. SVG tables/flow preserve row meaning; misleading plot explicitly labelled; final output arrays/units checked.",
+    "media": "Five figures: original source-to-result diagram, paired-row visual, contrasting graph, actual notebook plot and verified NASA historical photograph. Captions and source/reuse register in media.json. Rich prose, sepia examples, green selection result and blue optional context retain standard without arbitrary image quota.",
+    "accessibility": "6section links,1 native MathML equation,8 exact keyboard copy controls,10 initially closed native disclosures, image alternatives, labelled horizontally scrollable wide plots/code; no-JS reading/feedback tested.",
+    "limitation": "Enlarged reading tested at720 CSS pixels/device scale2, not browser-menu zoom. No new PDF due for this intermediate lesson; completed-unit web/PDF reference remains reserved forL05."
+  },
+  "whole_lesson_review": {
+    "scope": "Sections3.19–3.24, Examples3.13–3.16, Activities3.19–3.23, Figures3.15–3.19; existing identifiers preserved. L03 handover updated; L05 remains outline. Model M1 unchanged; recordB explicitly constructed incomplete copy, not new experimental evidence.",
+    "workload": "4h total:45 explanation,45 written,120 Python,30 feedback; unmeasured planning estimate. U03 20h/6hPython, B01 60h/20hPython and separateTMA01 6h unchanged. L05 retains cumulative exercises, iCMA, synthesis/conclusion/reference obligations.",
+    "coherence": "Immediate lesson/unit inspected in detail; O1/O5/O6/O7, block measurement/model/computation and wider programme practical strand preserved; no strict M101 pairing prerequisite or new physics.",
+    "integration": "119 repository tests and production build passed;38-page available search. Exact five downloads, all internal content links, previous handover, next-outline gate, light/dark widths1440/900/390/320 and offline checks pass. No learner records/enrolment changed. Newer catalogue continuation change dd5364f merged and generated pages rebuilt;119tests and38-page build repeated successfully."
+  },
+  "disposition": "Ready for user-authorised publication. Verify security workflow/deployment and live bytes before claiming live."
+}

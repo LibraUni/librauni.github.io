@@ -1,0 +1,686 @@
+<div class="eyebrow">P101 · Block 1 · Unit 3 · Lesson 4</div><h1>An analysis another person can rerun</h1>
+<p class="opening">A graph is the visible end of an analysis. Behind it are a particular file, choices about its contents, a calculation and a sequence of instructions. To make the result useful to someone else, we need to preserve that route as carefully as the figure itself.</p>
+<p>Lesson 3 compared a constant-velocity model with four invented observations. It separated the observations from predictions and interpreted the signed residuals. Now imagine handing that notebook to a colleague. A saved graph may open perfectly while the calculation fails: the data file is elsewhere, a value exists only in your running session, or a missing entry has been quietly replaced. Our task is to make these dependencies visible and remove accidental ones.</p>
+<p>Allow four hours: 45 minutes for explanation and examples, 45 for written activities, 120 for the notebook repair and 30 for feedback and correction. Read the code slowly before running it; the two-hour practical begins in Activity 3.23. You will use the same free local Python, NumPy, Matplotlib and notebook tools as before. There is no new physics or fitting method, and no paid service is required.</p>
+<p><a href="/notebooks/p101-u03-l04.zip" download>Download and extract the Lesson 4 working folder</a>. It contains a <a href="/notebooks/p101-u03-l04.ipynb" download>deliberately broken repair notebook</a>, an equivalent <a href="/notebooks/p101-u03-l04.py" download>repair script</a>, a <code>data</code> folder and <code>README.txt</code>. Choose the notebook or script route, not both. The teaching below develops the methods needed to repair them. The errors are part of the activity; the files are not a finished analysis.</p>
+<section class="chapter" id="P101-U03-L04-S01"><h2>3.19 Preserve the route from file to claim</h2>
+<p>Suppose you receive a picture labelled “model comparison”. You can inspect its axes and points, but you cannot tell which file supplied the observations, how blank entries were treated, or whether the line uses the parameters described in the caption. A notebook adds executable instructions, but even that is insufficient if its inputs and working conditions are absent.</p>
+<p>Here, a <strong>rerunnable analysis</strong> means an account that lets another person start with the identified input files, follow the stated instructions in a fresh Python session, and obtain the stated numerical results. This is a practical meaning for this lesson, not a claim that terminology is used identically throughout science. Nor does successful rerunning establish physical truth. Two people can reproduce the same sign error. The calculation still needs the independent checks and physical interpretation developed earlier.</p>
+<p>Keep three roles distinct. The <strong>source record</strong> preserves what was supplied. The <strong>analysis</strong> says what was selected and calculated. The <strong>outputs</strong> show what that calculation produced. If we edit the source to make the calculation easier, a later reader loses the evidence needed to understand the edit. Instead, leave the source unchanged and express justified selections in code, with an explanation.</p>
+<figure id="p101-u03-figure-15"><div class="diagram generated-plot" tabindex="0" role="region" aria-label="The route from source to output; scroll horizontally if needed"><svg role="img" aria-labelledby="l4f15title l4f15desc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450"><title id="l4f15title">The route from source to output</title><desc id="l4f15desc">The preserved CSV and description feed an explained analysis: loading, inspection, paired selection and M1. Outputs include predictions, residuals, figure and run note. A fresh session and recorded versions support the route.</desc><rect width="800" height="450" fill="#f3f6f2"/><g font-family="Arial,sans-serif" fill="#253b3c"><rect x="35" y="30" width="730" height="90" rx="12" fill="#e2ebe3" stroke="#276963"/><text x="58" y="62" font-size="22" font-weight="bold">SOURCE · preserve</text><text x="58" y="94" font-size="19">data/record.csv + README: identity, units, missing field</text><path d="M400 125v25m-8-8 8 8 8-8" stroke="#99602a" fill="none" stroke-width="3"/><rect x="35" y="160" width="730" height="90" rx="12" fill="#e2ebe3" stroke="#276963"/><text x="58" y="192" font-size="22" font-weight="bold">ANALYSIS · explain</text><text x="58" y="224" font-size="19">Load → inspect → select paired rows → retain M1</text><path d="M400 255v25m-8-8 8 8 8-8" stroke="#99602a" fill="none" stroke-width="3"/><rect x="35" y="290" width="730" height="90" rx="12" fill="#e2ebe3" stroke="#276963"/><text x="58" y="322" font-size="22" font-weight="bold">OUTPUT · check</text><text x="58" y="354" font-size="19">Predictions, signed residuals, labelled figure, run note</text><text x="40" y="421" font-size="18">Fresh Python session + recorded versions support the whole route.</text></g></svg></div><figcaption><b>Figure 3.15.</b> An output depends on an identified source and an explained calculation. Keep the source unchanged; regenerate the output from the saved analysis. The arrows indicate dependence, not evidence that the choices are correct. <span class="media-credit">Original LibraUni figure · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>The <strong>provenance</strong> of a result is its traceable history: where its inputs came from and what was done to them. For our small investigation, a short readable note and a clearly organised folder are enough to begin. A result named <code>final.png</code> does not supply that history. A note identifying the record, its units, a selection rule and the model does.</p>
+<div class="example" id="p101-u03-example-13"><h4>Example 3.13 · What belongs with the picture?</h4><p><strong>Question.</strong> A colleague receives a position–time graph and the statement “I removed one bad point.” What is missing, and how could the statement be repaired?</p><p><strong>Reasoning.</strong> “Bad” does not identify a row or a reason. It might mean an absent reading, an impossible entry or merely a point that disagrees with the model. These require different decisions. The reader also needs the original record, the code that generated the plot, and its conventions.</p><p><strong>A usable account.</strong> “This uses invented record P101-U03-L04-B, version 1. The position field at 16 s is blank in the supplied file. I retained that row in the source and omitted it only from comparisons requiring a position. No value was substituted. Times are seconds; positions are metres from the fixed rail origin, right positive. M1 is retained from Lesson 3.” This can be checked against the file and the program. It does not pretend to know why a real instrument might have missed a reading.</p></div>
+<div class="activity" id="p101-u03-activity-19"><h4>Activity 3.19 · Follow the evidence backwards</h4><p>Allow 10 minutes of written work. You are sent a notebook containing a saved plot, but no CSV or source description. Its final sentence says “The model has been verified because the notebook runs.” Identify three distinct things you would need to inspect before accepting the comparison. Explain which part of the sentence overstates the evidence.</p><details><summary>Hint for Activity 3.19</summary><p>Trace a plotted marker to a row, a model line to its parameters, and a conclusion to an independently checked comparison.</p></details><details><summary>Discussion of Activity 3.19</summary><p>You need the actual input record with units and origin, the processing/model choices, and the calculation and its checks. A saved output does not establish that the current code produced it; request a fresh ordered run as well. A successful run establishes that those instructions executed in that environment. It does not establish that the source was measured correctly, that the subtraction has the intended sign, or that a constant-velocity description matches the physical system. For our invented data it cannot provide experimental validation at all.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L04-S02"><h2>3.20 Make the file location explicit</h2>
+<p>A filename is meaningful only relative to a place to look. Python has a <strong>current working directory</strong>: the folder from which relative paths are interpreted. This need not be the folder visible in a separate file-browser window. In particular, opening a script in an editor does not by itself guarantee that its execution starts in the script’s folder.</p>
+<p>Extract the ZIP before working. Inside <code>P101-Unit-3-Lesson-4</code>, keep the notebook or script beside <code>README.txt</code>, with <code>record.csv</code> inside the <code>data</code> subfolder. Start the notebook with this lesson folder as its working directory, or set your editor’s working directory to it for the script route. If using an existing hosted notebook service, upload the complete arrangement, including the subfolder; a notebook upload alone does not carry its data.</p>
+<pre class="file-tree" aria-label="Lesson working folder">P101-Unit-3-Lesson-4/
+    p101-u03-l04.ipynb
+    p101-u03-l04.py
+    README.txt
+    data/
+        record.csv</pre>
+<p>The next block makes the location visible. <code>Path</code>, from Python’s standard library, represents a filesystem path. <code>Path.cwd()</code> obtains the working directory; the slashes in the next line join folder and filename components. Because <code>project_dir</code> is a path object, this use of <code>/</code> constructs a path rather than dividing numbers. The result follows the computer’s path conventions.</p>
+<pre><code class="language-python">from pathlib import Path
+import platform
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+
+project_dir = Path.cwd()
+data_path = project_dir / &quot;data&quot; / &quot;record.csv&quot;
+print(&quot;Working directory:&quot;, project_dir)
+print(&quot;Data file:&quot;, data_path)
+print(&quot;File exists:&quot;, data_path.is_file())</code></pre>
+<p>The last line prints <code>True</code> if that path identifies an existing file. If it prints <code>False</code>, stop and compare the displayed location with the extracted folder. Check the spelling and case of each name. Do not repair the problem by copying an unrelated CSV into the expected location. An absolute path, which starts from the filesystem’s root, may work on one machine but contain folders absent on another. A documented folder arrangement and relative components travel more easily.</p>
+<p>Before loading, inspect <code>data/record.csv</code> as text. It has this exact content:</p>
+<pre aria-label="CSV source with one empty position field">time_s,position_m
+10,-2
+14,4
+16,
+19,1</pre>
+<p>This is <strong>P101-U03-L04-B</strong>, a deliberately incomplete teaching copy of the earlier invented record. The 16 s position has been withheld to create a missing-data case. It is not a new experiment and does not revise the earlier record. Treat the blank as unavailable in this exercise; do not fill it from memory. The comma on that row preserves the empty second field. Removing the comma would change the row structure.</p>
+<p><code>loadtxt</code>, used for the complete table in Lesson 2, expects numeric entries and will reject this blank. <code>genfromtxt</code> can represent a missing numeric field. We choose floating-point values and explicitly use <code>np.nan</code>, “not a number”, for missing entries. The header option here is <code>skip_header</code>, not <code>loadtxt</code>’s <code>skiprows</code>. As before, <code>ndmin=2</code> keeps the loaded result two-dimensional. The argument <code>loose=False</code> makes an unexpected nonnumeric token an error instead of quietly accepting it as a failed conversion.</p>
+<pre><code class="language-python">raw = np.genfromtxt(
+    data_path, delimiter=&quot;,&quot;, skip_header=1, dtype=float,
+    filling_values=np.nan, ndmin=2, loose=False
+)
+print(&quot;Rows, columns:&quot;, raw.shape)
+print(raw)
+if raw.shape != (4, 2):
+    raise ValueError(&quot;Expected four data rows and two columns; inspect the file.&quot;)
+
+time_all_s = raw[:, 0]
+position_all_m = raw[:, 1]
+if not np.all(np.isfinite(time_all_s)):
+    raise ValueError(&quot;A clock reading is missing or non-finite; inspect the source.&quot;)</code></pre>
+<p><code>raw.shape</code> gives the numbers of rows and columns. For this specified file, it should be <code>(4, 2)</code>. The first check stops with an explanatory <code>ValueError</code> if that structure differs. The instruction <code>raise</code> deliberately stops execution with an error; it prevents later steps from pretending that an unexamined input is acceptable. This is a check for this exercise’s file, not a universal CSV validator.</p>
+<p>The two slices select the time and position columns, just as in Lesson 2. <code>np.isfinite</code> tests each entry for an ordinary finite number; <code>np.all</code> asks whether every test is true. We require all four clock readings to be available so that even an omitted position can be located in time. A missing time stops this analysis for inspection. The code does not check units, origin or the correctness of the recorded times: those still require the source description and a comparison with the table.</p>
+<div class="activity" id="p101-u03-activity-20"><h4>Activity 3.20 · Which folder does the path use?</h4><p>Allow 10 minutes. Your working directory is a folder named <code>Physics</code>. Inside it is the extracted <code>P101-Unit-3-Lesson-4</code> folder shown above. Where would <code>Path.cwd() / "data" / "record.csv"</code> look? Explain two ways to make the location correct, and why renaming an unrelated file would not be a legitimate fix.</p><details><summary>Hint for Activity 3.20</summary><p>Start at the folder actually reported by Python, then follow each component in order. The lesson folder is one level below it.</p></details><details><summary>Discussion of Activity 3.20</summary><p>It looks for <code>Physics/data/record.csv</code>, missing the lesson-folder level. Either start the analysis with the extracted lesson folder as the working directory, as the instructions specify, or set <code>project_dir = Path.cwd() / "P101-Unit-3-Lesson-4"</code> before constructing <code>data_path</code>. The second choice is valid only for that stated starting arrangement and must be documented. An existing file is not necessarily the right file: its identity, contents and metadata must agree with the analysis. File existence is a location check, not a provenance check.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L04-S03"><h2>3.21 Keep a missing reading missing</h2>
+<p>In the loaded position column, the blank becomes <code>nan</code>. It is not a measurement at the origin, a small number, or an instruction to delete a row from the source. Here it marks the absence of a usable numeric position. In other calculations, <code>nan</code> can also result from an invalid numerical operation, so its meaning must be traced to its source. The <code>None</code> marker used in Unit 2 served a related bookkeeping role in ordinary records; we now use a marker that fits a floating-point array. Subtracting a prediction from it still produces <code>nan</code>: there is no observed value from which to form the residual.</p>
+<p>For the present comparison, we can use the three complete pairs, provided we say what has been left out. This restricted choice is different from declaring the incomplete record equivalent to a complete one. If missing observations tend to occur at difficult moments, analysing only the available ones could hide important behaviour. Here the omission is deliberately constructed; in an experiment its cause would need investigation.</p>
+<div class="important"><h4>Selection rule · Keep complete pairs together</h4><p>For each row, require a finite clock reading and a finite position. Use the same row selection for both columns. Preserve the source file, identify the omitted time, and do not replace an absent observation with zero or with a model prediction.</p></div>
+<p>The rule becomes an array of <code>True</code> and <code>False</code> values, called a <strong>Boolean mask</strong>. Each entry answers “May this row participate in this comparison?” The <code>&amp;</code> combines the two arrays of tests entry by entry: both must be true. This is different from applying Python’s scalar <code>and</code> to whole arrays.</p>
+<pre><code class="language-python">usable = np.isfinite(time_all_s) &amp; np.isfinite(position_all_m)
+time_s = time_all_s[usable]
+position_m = position_all_m[usable]
+print(&quot;Usable pairs:&quot;, len(time_s), &quot;of&quot;, len(time_all_s))
+print(&quot;Times without a usable position / s:&quot;, time_all_s[~usable])
+if len(time_s) == 0:
+    raise ValueError(&quot;No complete pairs are available for comparison.&quot;)</code></pre>
+<p>Square brackets containing a Boolean mask select the entries whose corresponding mask values are true. The same <code>usable</code> mask therefore keeps the time and position from each selected row together. The <code>~</code> reverses the mask, allowing us to print the time associated with the unavailable position. The guard against zero complete pairs avoids presenting an empty comparison as a result.</p>
+<figure id="p101-u03-figure-16"><div class="diagram generated-plot" tabindex="0" role="region" aria-label="One mask preserves time and position pairs; scroll horizontally if needed"><svg role="img" aria-labelledby="l4f16title l4f16desc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 465"><title id="l4f16title">One mask preserves time and position pairs</title><desc id="l4f16desc">At ten, fourteen, sixteen and nineteen seconds the positions are minus two, four, unavailable and one metres. The mask is true, true, false, true. It retains times ten, fourteen and nineteen with positions minus two, four and one.</desc><rect width="800" height="465" fill="#f3f6f2"/><g font-family="Arial,sans-serif" fill="#253b3c"><text x="35" y="38" font-size="23" font-weight="bold">One decision for each complete row</text><text x="45" y="86" font-size="20" font-weight="bold">Time / s</text><text x="220" y="86" font-size="20" font-weight="bold">Position / m</text><text x="415" y="86" font-size="20" font-weight="bold">Mask</text><text x="590" y="86" font-size="20" font-weight="bold">Decision</text><rect x="30" y="105" width="740" height="52" rx="8" fill="#e2ebe3"/><text x="60" y="138" font-size="23">10</text><text x="240" y="138" font-size="23">−2</text><text x="430" y="138" font-size="23">True</text><text x="590" y="138" font-size="23">Keep pair</text><rect x="30" y="167" width="740" height="52" rx="8" fill="#e2ebe3"/><text x="60" y="200" font-size="23">14</text><text x="240" y="200" font-size="23">4</text><text x="430" y="200" font-size="23">True</text><text x="590" y="200" font-size="23">Keep pair</text><rect x="30" y="229" width="740" height="52" rx="8" fill="#f3e5d0"/><text x="60" y="262" font-size="23">16</text><text x="240" y="262" font-size="23">nan</text><text x="430" y="262" font-size="23">False</text><text x="590" y="262" font-size="23">No position</text><rect x="30" y="291" width="740" height="52" rx="8" fill="#e2ebe3"/><text x="60" y="324" font-size="23">19</text><text x="240" y="324" font-size="23">1</text><text x="430" y="324" font-size="23">True</text><text x="590" y="324" font-size="23">Keep pair</text><text x="35" y="400" font-size="20">Selected times: 10, 14, 19 s</text><text x="35" y="432" font-size="20">Selected positions: −2, 4, 1 m · source file unchanged</text></g></svg></div><figcaption><b>Figure 3.16.</b> The mask makes one decision for each row. The 16 s row remains in the source but contributes no position comparison. Both retained columns use the same three rows; their pairing and order are preserved. <span class="media-credit">Original LibraUni figure · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>The selected times are 10, 14 and 19 s, and the selected positions are −2, 4 and 1 m. Their unequal time gaps must survive into the graph. Removing only the missing position and taking the first three times would falsely pair the final position with 16 s. Both arrays would then have length three, so a length check alone would miss the error.</p>
+<div class="example" id="p101-u03-example-14"><h4>Example 3.14 · Zero would invent a disagreement</h4><p><strong>Question.</strong> M1 predicts 7 m at 16 s. What residual follows from the incomplete source, and what would replacing its blank with zero do?</p><p><strong>Reasoning.</strong> A residual needs an observed position at that time. The source supplies none, so its residual is unavailable. If zero were inserted, the calculation would instead be</p><div class="equation" tabindex="0" role="region" aria-label="Residual from an invented zero"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>r</mi><mo>=</mo><mn>0</mn><mspace width="0.2em"/><mtext>m</mtext><mo>−</mo><mn>7</mn><mspace width="0.2em"/><mtext>m</mtext><mo>=</mo><mo>−</mo><mn>7</mn><mspace width="0.2em"/><mtext>m</mtext></math></div><p><strong>Interpretation.</strong> The −7 m value would be a consequence of an invented observation. It could appear as an apparently informative point far below the model. Substituting M1’s prediction would be equally misleading: it would manufacture a zero residual and artificial agreement. We may calculate the 7 m prediction, but we cannot relabel it as a supplied observation.</p></div>
+<div class="activity" id="p101-u03-activity-21"><h4>Activity 3.21 · Select rows, then interpret</h4><p>Allow 15 minutes. Write the four entries of <code>usable</code> for the supplied record. Make a three-row table of retained time, position, M1 prediction and residual. Explain what would happen to the selection if the final supplied position were genuinely 0 m. Finally, identify the wrong pair created by keeping the first three times with the three available positions.</p><details><summary>Hint for Activity 3.21</summary><p>M1 still starts at −2 m at 10 s and uses +1.5 m/s. A finite zero passes the test; absence and zero have different meanings.</p></details><details><summary>Discussion of Activity 3.21</summary><p>The mask is <code>[True, True, False, True]</code>. The retained comparisons are:</p><div class="table-scroll" tabindex="0" role="region" aria-label="Checked retained comparisons"><table><thead><tr><th>Time / s</th><th>Position / m</th><th>M1 / m</th><th>Residual / m</th></tr></thead><tbody><tr><td>10</td><td>−2</td><td>−2</td><td>0</td></tr><tr><td>14</td><td>4</td><td>4</td><td>0</td></tr><tr><td>19</td><td>1</td><td>11.5</td><td>−10.5</td></tr></tbody></table></div><p>A genuine final 0 m position remains selected; its residual would be −11.5 m. This hypothetical change is not an instruction to edit the source. Keeping the first three times would wrongly create the pair (16 s, 1 m), even though 1 m belongs at 19 s. Selecting whole corresponding rows prevents that mismatch. No observed residual can be reported at 16 s in the supplied incomplete copy.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L04-S04"><h2>3.22 Rebuild the calculation in order</h2>
+<p>A notebook has two kinds of state that are easy to confuse. Its saved document contains cells and possibly old outputs. Its <strong>kernel</strong>, the running Python process, holds values created by executed cells. Editing a cell changes the document; it does not execute that cell or update every result that once depended on it.</p>
+<p>Suppose a calculation cell evaluates a prediction using a velocity of 1.5 m/s. Later you change the velocity to 0, but rerun only a cell that prints the existing prediction. The old array remains. Python assignment evaluated the earlier expression at that time; it did not establish a permanently updating algebraic relationship. A displayed figure can likewise remain on screen after its source values have changed.</p>
+<div class="example" id="p101-u03-example-15"><h4>Example 3.15 · A result left behind</h4><p><strong>Question.</strong> Three cells are executed in the order shown. What does the last cell print?</p><pre><code class="language-python">velocity = 1.5
+prediction_at_19 = -2 + velocity * (19 - 10)
+
+velocity = 0.0
+
+print(prediction_at_19)</code></pre><p><strong>Working.</strong> The first calculation uses 1.5 and assigns 11.5 to <code>prediction_at_19</code>. The second cell changes only <code>velocity</code>. The final cell therefore prints <code>11.5</code>, not −2. To obtain the zero-velocity prediction, the calculation itself must be executed again after changing the input.</p><p><strong>Interpretation.</strong> The value is not random and Python has not ignored an instruction. It is the result of a particular execution history. A reader seeing only the final value of <code>velocity</code> could nevertheless attach the wrong meaning to it.</p></div>
+<p>A <strong>clean run</strong> starts a fresh kernel and executes the intended analysis from top to bottom. In JupyterLab, use the command <em>Restart Kernel and Run All Cells</em>, available through the menus or command palette. Other notebook interfaces may use slightly different wording. Save your edits first. Clearing visible outputs alone does not reset the kernel’s variables; closing a browser tab does not reliably terminate the kernel either. For the script route, run the saved script in a new Python process from the documented working directory.</p>
+<p>Arrange the notebook so that each cell can use values defined above it: imports and location, loading, inspection and selection, model, figure, then run notes. A clean run that fails because a name is undefined reveals a missing or misplaced step. Read the first error and repair its cause; running later cells from an old session may merely conceal it. Execution counters can warn about an unusual order, but are not a certificate that outputs match the current edited text.</p>
+<p>For the incomplete record we retain <em>the same M1</em> from Lesson 3. Its reference values and velocity are made explicit below. We do not choose new endpoints after selection or quietly change the model to improve the remaining agreement.</p>
+<pre><code class="language-python">def predict_position(times_s, t_ref_s, x_ref_m, velocity_m_per_s):
+    return x_ref_m + velocity_m_per_s * (times_s - t_ref_s)
+
+# M1 is retained from Lesson 3, not re-estimated after selection.
+reference_time_s = 10.0
+reference_position_m = -2.0
+velocity_m_per_s = 1.5
+predicted_m = predict_position(
+    time_s, reference_time_s, reference_position_m, velocity_m_per_s
+)
+residual_m = position_m - predicted_m
+print(&quot;Clock readings / s:&quot;, time_s)
+print(&quot;M1 predictions / m:&quot;, predicted_m)
+print(&quot;Residuals (observed - predicted) / m:&quot;, residual_m)</code></pre>
+<p>The predictions for the retained times are −2, 4 and 11.5 m; the residuals are 0, 0 and −10.5 m. Check the final entry by hand: nine seconds after the reference event, displacement is +13.5 m and position is 11.5 m, leaving the observed 1 m lower by 10.5 m. The missing row changes which comparisons are available, not the definition of M1.</p>
+<p>Use a different kind of check as well: at the reference time the function should return the reference position, and with zero velocity it should return that position for every input time. These checks probe the formula’s structure. They complement a hand-checked ordinary case; neither one proves that every possible program input is handled or that the physical assumptions are true.</p>
+<div class="activity" id="p101-u03-activity-22"><h4>Activity 3.22 · Repair the dependency, not the display</h4><p>Allow 10 minutes. In Example 3.15, which line must be rerun after changing the velocity to obtain the intended zero-velocity result? Predict that result. A second notebook runs only if its bottom cell is executed before its top cell. Explain what you would inspect and how you would demonstrate that the repair removed this dependence.</p><details><summary>Hint for Activity 3.22</summary><p>Follow the input used on the right-hand side of the assignment. Then distinguish moving a necessary definition from preserving a value that happens to be in memory.</p></details><details><summary>Discussion of Activity 3.22</summary><p>Rerun <code>prediction_at_19 = -2 + velocity * (19 - 10)</code> after assigning zero velocity, then print it. The result is −2 m. For the second notebook, inspect which names the top cell uses and where those names are defined. Place necessary imports, inputs or function definitions before their first use, and remove any accidental dependence on an exploratory cell. Save, restart the kernel and run top to bottom. If a result changes, investigate it against the source and a hand calculation; the old display is not automatically the correct target.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L04-S05"><h2>3.23 Leave a figure and an account of the run</h2>
+<p>Once the arrays are correct, the graph must communicate their meaning. A particularly plausible mistake is to plot positions against their array indices while labelling the horizontal axis as time. Indices 0, 1 and 2 identify entries; they do not stand for clock readings 10, 14 and 19 s. Equally spaced markers would conceal the unequal four- and five-second intervals between available observations.</p>
+<figure id="p101-u03-figure-17"><div class="diagram generated-plot" tabindex="0" role="region" aria-label="A misleading time axis and its repair; scroll horizontally if needed"><svg role="img" aria-labelledby="l4f17title l4f17desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 324" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="l4f17title">A misleading time axis and its repair</title><desc id="l4f17desc">The left diagnostic example plots three positions at indices zero, one and two and incorrectly calls them seconds. The right places the same available positions at ten, fourteen and nineteen seconds, unjoined, with the missing sixteen-second position noted.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="l4f17-figure_1">
+  <g id="l4f17-patch_1">
+   <path d="M 0 324
+L 720 324
+L 720 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="l4f17-axes_1">
+   <g id="l4f17-patch_2">
+    <path d="M 43.691803 285.998823
+L 374.995781 285.998823
+L 374.995781 19.94199
+L 43.691803 19.94199
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="l4f17-matplotlib.axis_1">
+    <g id="l4f17-xtick_1">
+     <g id="l4f17-line2d_1">
+      <path d="M 58.751074 285.998823
+L 58.751074 19.94199
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_2">
+      <defs>
+       <path id="l4f17-me4a6d562ac" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="58.751074" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="58.751074" y="302.11601" transform="rotate(-0 58.751074 302.11601)">0</text>
+     </g>
+    </g>
+    <g id="l4f17-xtick_2">
+     <g id="l4f17-line2d_3">
+      <path d="M 209.343792 285.998823
+L 209.343792 19.94199
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_4">
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="209.343792" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="209.343792" y="302.11601" transform="rotate(-0 209.343792 302.11601)">1</text>
+     </g>
+    </g>
+    <g id="l4f17-xtick_3">
+     <g id="l4f17-line2d_5">
+      <path d="M 359.936509 285.998823
+L 359.936509 19.94199
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_6">
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="359.936509" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="359.936509" y="302.11601" transform="rotate(-0 359.936509 302.11601)">2</text>
+     </g>
+    </g>
+    <g id="l4f17-text_4">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="209.343792" y="318.116947" transform="rotate(-0 209.343792 318.116947)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="l4f17-matplotlib.axis_2">
+    <g id="l4f17-ytick_1">
+     <g id="l4f17-line2d_7">
+      <path d="M 43.691803 285.998822
+L 374.995781 285.998822
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_8">
+      <defs>
+       <path id="l4f17-mdc5f733e56" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="285.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="290.557416" transform="rotate(-0 36.691803 290.557416)">−3</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_2">
+     <g id="l4f17-line2d_9">
+      <path d="M 43.691803 252.741718
+L 374.995781 252.741718
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_10">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="252.741718" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="257.300312" transform="rotate(-0 36.691803 257.300312)">−2</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_3">
+     <g id="l4f17-line2d_11">
+      <path d="M 43.691803 219.484614
+L 374.995781 219.484614
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_12">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="219.484614" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="224.043208" transform="rotate(-0 36.691803 224.043208)">−1</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_4">
+     <g id="l4f17-line2d_13">
+      <path d="M 43.691803 186.22751
+L 374.995781 186.22751
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_14">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="186.22751" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="190.786104" transform="rotate(-0 36.691803 190.786104)">0</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_5">
+     <g id="l4f17-line2d_15">
+      <path d="M 43.691803 152.970406
+L 374.995781 152.970406
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_16">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="152.970406" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="157.529" transform="rotate(-0 36.691803 157.529)">1</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_6">
+     <g id="l4f17-line2d_17">
+      <path d="M 43.691803 119.713302
+L 374.995781 119.713302
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_18">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="119.713302" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="124.271896" transform="rotate(-0 36.691803 124.271896)">2</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_7">
+     <g id="l4f17-line2d_19">
+      <path d="M 43.691803 86.456198
+L 374.995781 86.456198
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_20">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="86.456198" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="91.014792" transform="rotate(-0 36.691803 91.014792)">3</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_8">
+     <g id="l4f17-line2d_21">
+      <path d="M 43.691803 53.199094
+L 374.995781 53.199094
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_22">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="53.199094" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="57.757688" transform="rotate(-0 36.691803 57.757688)">4</text>
+     </g>
+    </g>
+    <g id="l4f17-ytick_9">
+     <g id="l4f17-line2d_23">
+      <path d="M 43.691803 19.94199
+L 374.995781 19.94199
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_24">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="43.691803" y="19.94199" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: end; fill: #253b3c" x="36.691803" y="24.500584" transform="rotate(-0 36.691803 24.500584)">5</text>
+     </g>
+    </g>
+    <g id="l4f17-text_14">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="12.118365" y="152.970406" transform="rotate(-90 12.118365 152.970406)">Position / m</text>
+    </g>
+   </g>
+   <g id="l4f17-line2d_25">
+    <path d="M 58.751074 252.741718
+L 209.343792 53.199094
+L 359.936509 152.970406
+" clip-path="url(#l4f17-p7fcb6ae0e7)" style="fill: none; stroke: #96552c; stroke-width: 1.5; stroke-linecap: square"/>
+    <defs>
+     <path id="l4f17-m13a6be0c57" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #96552c"/>
+    </defs>
+    <g clip-path="url(#l4f17-p7fcb6ae0e7)">
+     <use xlink:href="#l4f17-m13a6be0c57" x="58.751074" y="252.741718" style="fill: #96552c; stroke: #96552c"/>
+     <use xlink:href="#l4f17-m13a6be0c57" x="209.343792" y="53.199094" style="fill: #96552c; stroke: #96552c"/>
+     <use xlink:href="#l4f17-m13a6be0c57" x="359.936509" y="152.970406" style="fill: #96552c; stroke: #96552c"/>
+    </g>
+   </g>
+   <g id="l4f17-patch_3">
+    <path d="M 43.691803 285.998822
+L 43.691803 19.94199
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-patch_4">
+    <path d="M 374.995781 285.998822
+L 374.995781 19.94199
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-patch_5">
+    <path d="M 43.691803 285.998823
+L 374.995781 285.998823
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-patch_6">
+    <path d="M 43.691803 19.94199
+L 374.995781 19.94199
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-text_15">
+    <text style="font-size: 14.4px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="209.343792" y="13.94199" transform="rotate(-0 209.343792 13.94199)">Misleading: indices called time</text>
+   </g>
+  </g>
+  <g id="l4f17-axes_2">
+   <g id="l4f17-patch_7">
+    <path d="M 385.695781 285.998823
+L 716.99976 285.998823
+L 716.99976 19.94199
+L 385.695781 19.94199
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="l4f17-matplotlib.axis_3">
+    <g id="l4f17-xtick_4">
+     <g id="l4f17-line2d_26">
+      <path d="M 400.755053 285.998823
+L 400.755053 19.94199
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_27">
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="400.755053" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_16">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="400.755053" y="302.11601" transform="rotate(-0 400.755053 302.11601)">10</text>
+     </g>
+    </g>
+    <g id="l4f17-xtick_5">
+     <g id="l4f17-line2d_28">
+      <path d="M 534.615246 285.998823
+L 534.615246 19.94199
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_29">
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="534.615246" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_17">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="534.615246" y="302.11601" transform="rotate(-0 534.615246 302.11601)">14</text>
+     </g>
+    </g>
+    <g id="l4f17-xtick_6">
+     <g id="l4f17-line2d_30">
+      <path d="M 601.545343 285.998823
+L 601.545343 19.94199
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_31">
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="601.545343" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_18">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="601.545343" y="302.11601" transform="rotate(-0 601.545343 302.11601)">16</text>
+     </g>
+    </g>
+    <g id="l4f17-xtick_7">
+     <g id="l4f17-line2d_32">
+      <path d="M 701.940488 285.998823
+L 701.940488 19.94199
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_33">
+      <g>
+       <use xlink:href="#l4f17-me4a6d562ac" x="701.940488" y="285.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="l4f17-text_19">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="701.940488" y="302.11601" transform="rotate(-0 701.940488 302.11601)">19</text>
+     </g>
+    </g>
+    <g id="l4f17-text_20">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="551.347771" y="318.116947" transform="rotate(-0 551.347771 318.116947)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="l4f17-matplotlib.axis_4">
+    <g id="l4f17-ytick_10">
+     <g id="l4f17-line2d_34">
+      <path d="M 385.695781 285.998822
+L 716.99976 285.998822
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_35">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="285.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_11">
+     <g id="l4f17-line2d_36">
+      <path d="M 385.695781 252.741718
+L 716.99976 252.741718
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_37">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="252.741718" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_12">
+     <g id="l4f17-line2d_38">
+      <path d="M 385.695781 219.484614
+L 716.99976 219.484614
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_39">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="219.484614" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_13">
+     <g id="l4f17-line2d_40">
+      <path d="M 385.695781 186.22751
+L 716.99976 186.22751
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_41">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="186.22751" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_14">
+     <g id="l4f17-line2d_42">
+      <path d="M 385.695781 152.970406
+L 716.99976 152.970406
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_43">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="152.970406" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_15">
+     <g id="l4f17-line2d_44">
+      <path d="M 385.695781 119.713302
+L 716.99976 119.713302
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_45">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="119.713302" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_16">
+     <g id="l4f17-line2d_46">
+      <path d="M 385.695781 86.456198
+L 716.99976 86.456198
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_47">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="86.456198" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_17">
+     <g id="l4f17-line2d_48">
+      <path d="M 385.695781 53.199094
+L 716.99976 53.199094
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_49">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="53.199094" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="l4f17-ytick_18">
+     <g id="l4f17-line2d_50">
+      <path d="M 385.695781 19.94199
+L 716.99976 19.94199
+" clip-path="url(#l4f17-p97697ef668)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="l4f17-line2d_51">
+      <g>
+       <use xlink:href="#l4f17-mdc5f733e56" x="385.695781" y="19.94199" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="l4f17-line2d_52">
+    <defs>
+     <path id="l4f17-m0cd92901e6" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#l4f17-p97697ef668)">
+     <use xlink:href="#l4f17-m0cd92901e6" x="400.755053" y="252.741718" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#l4f17-m0cd92901e6" x="534.615246" y="53.199094" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#l4f17-m0cd92901e6" x="701.940488" y="152.970406" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="l4f17-patch_8">
+    <path d="M 385.695781 285.998822
+L 385.695781 19.94199
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-patch_9">
+    <path d="M 716.99976 285.998822
+L 716.99976 19.94199
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-patch_10">
+    <path d="M 385.695781 285.998823
+L 716.99976 285.998823
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-patch_11">
+    <path d="M 385.695781 19.94199
+L 716.99976 19.94199
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="l4f17-text_21">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="601.545343" y="232.787456" transform="rotate(-0 601.545343 232.787456)">No position at 16 s</text>
+   </g>
+   <g id="l4f17-text_22">
+    <text style="font-size: 14.4px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #253b3c" x="551.347771" y="13.94199" transform="rotate(-0 551.347771 13.94199)">Repaired: actual available pairs</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="l4f17-p7fcb6ae0e7">
+   <rect x="43.691803" y="19.94199" width="331.303979" height="266.056832"/>
+  </clipPath>
+  <clipPath id="l4f17-p97697ef668">
+   <rect x="385.695781" y="19.94199" width="331.303979" height="266.056832"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.17.</b> The left panel is intentionally wrong: equally spaced indices are labelled as clock time and joined. The right retains the actual unequal time intervals and makes no claim about the motion between supplied positions. Common vertical scales help isolate the change. <span class="media-credit">Original LibraUni figure · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<div class="example" id="p101-u03-example-16"><h4>Example 3.16 · Repair what the figure claims</h4><p><strong>Question.</strong> The left panel of Figure 3.17 joins the available positions at indices 0, 1 and 2, but calls that axis “Clock reading / s”. Suppose its caption also says “The model follows the observations.” What needs changing?</p><p><strong>Reasoning.</strong> Supply the actual time array, retain position units, and identify which data are absent. Joining observations asserts an intervening history that the file does not provide, so use separate markers. A model must be drawn from its prediction array and labelled with its own rule; a line joining observations is not evidence of model agreement.</p><p><strong>Interpretation.</strong> The repaired panel makes a narrower, checkable claim: three available invented positions at their stated times, without a supplied position at 16 s. A separate M1 line and residual panel can then show the actual comparison. A prettier title alone would leave the numerical misrepresentation intact.</p></div>
+<p>The following figure code reuses Lesson 3’s two-panel construction. The line is evaluated at drawing times between 10 and 19 s; residuals use only predictions at the retained observation times. The 100 drawing points are not observations. The title identifies the incomplete record and counts the available positions. There is no residual marker at 16 s, and the caption below explicitly explains why.</p>
+<pre><code class="language-python">line_time_s = np.linspace(10, 19, 100)
+line_position_m = predict_position(
+    line_time_s, reference_time_s, reference_position_m, velocity_m_per_s
+)
+fig, axes = plt.subplots(2, 1, sharex=True, figsize=(7, 7), layout=&quot;constrained&quot;)
+position_ax = axes[0]
+residual_ax = axes[1]
+position_ax.plot(time_s, position_m, &quot;o&quot;, label=&quot;Available invented positions&quot;)
+position_ax.plot(line_time_s, line_position_m, &quot;--&quot;, label=&quot;M1: retained A-B rate&quot;)
+position_ax.set_ylabel(&quot;Position / m&quot;)
+position_ax.set_title(&quot;P101-U03-L04-B: 3 of 4 positions available&quot;)
+position_ax.legend()
+position_ax.grid(alpha=0.3)
+residual_ax.plot(time_s, residual_m, &quot;o&quot;)
+residual_ax.axhline(0, color=&quot;grey&quot;, linewidth=1)
+residual_ax.set_ylabel(&quot;Residual: observed - predicted / m&quot;)
+residual_ax.set_xlabel(&quot;Clock reading / s&quot;)
+residual_ax.grid(alpha=0.3)
+fig.savefig(project_dir / &quot;p101-u03-l04-result.png&quot;, dpi=160)
+plt.show()</code></pre>
+<figure id="p101-u03-figure-18"><div class="diagram raster-plot" tabindex="0" role="region" aria-label="Rebuilt comparison; scroll horizontally if needed"><img src="/teaching/p101/u03/rerun-notebook.png" width="1120" height="1120" alt="Three available positions at ten, fourteen and nineteen seconds compared with M1; residuals below are zero, zero and minus ten point five metres. There is no observation or residual marker at sixteen seconds."></div><figcaption><b>Figure 3.18.</b> Actual output of the teaching code for P101-U03-L04-B. M1 retains the A–B rate; the available positions remain separate markers. The position at 16 s is absent, so no residual is plotted there. The rising model line predicts through that time but supplies no observation. Credit: Original LibraUni output · <a href="#P101-U03-L04-S05">Code and method</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</figcaption></figure>
+<p>The PNG is written to the lesson working folder. Rerunning replaces that output file, so give a deliberately revised analysis a new output name if you need to compare versions. Rebuilding an output is expected; overwriting the original CSV is not part of this workflow. Changes in fonts or software versions may alter the picture’s appearance without changing the numerical comparison. Inspect both the numbers and the meaning of the labels rather than demanding identical pixels.</p>
+<p>The <strong>environment</strong> includes the Python interpreter and libraries executing the analysis. Record their actual versions from the same session that produced the result:</p>
+<pre><code class="language-python">print(&quot;Python:&quot;, platform.python_version())
+print(&quot;NumPy:&quot;, np.__version__)
+print(&quot;Matplotlib:&quot;, matplotlib.__version__)
+print(&quot;Input: data/record.csv | record P101-U03-L04-B | version 1&quot;)
+print(&quot;M1: t_ref = 10 s; x_ref = -2 m; velocity = 1.5 m/s&quot;)
+print(&quot;Selection: complete finite pairs; no replacement or reordering&quot;)</code></pre>
+<p>The double-underscore <code>__version__</code> attributes report the installed library versions; <code>platform.python_version()</code> reports Python’s version. These lines do not install or change software. Keep their output with a dated run note stating the notebook or script version, input identity, selection rule, model and checks actually performed. Also name the notebook application you used. The final printed description is text written by the analyst: check that it agrees with the actual values and operations above it. Printing a claim does not validate it. Listing versions helps investigate differences; it is not an environment installer or a guarantee that every future machine will reproduce a result.</p>
+<div class="context"><h4>A wider view · From an instrument record to an analysis</h4><figure class="photo-wrap" id="p101-u03-figure-19"><img src="/teaching/p101/u03/skyrocket.jpg" width="1041" height="816" alt="Ground crew working around a Douglas D-558-II aircraft on a dry lakebed, with a service vehicle beside it."><figcaption><b>Figure 3.19.</b> D-558-II pre-flight work on Rogers Dry Lakebed in 1949. The photograph shows preparation around an aircraft, not a diagram of our carriage model. NASA’s accompanying account describes instrument calibration before flight and conversion of film records into tables or graphs afterwards. Credit: NASA, E49-00223. <a href="https://www.nasa.gov/image-article/d-558-ii-skyrocket-16/">Source</a> · <a href="https://www.nasa.gov/nasa-brand-center/images-and-media/">NASA reuse terms</a>.</figcaption></figure><p>A flight-research result began before a graph was drawn. Instruments had to be prepared, their records read, and quantities carried through to an analysis. NASA’s account of the early D-558 work describes human “computers” converting markings on films into data sheets and graphs for engineers.</p><p>Our files are much smaller and our observations invented, but the distinction remains useful: acquiring a record, converting its representation and interpreting its implications are different operations. Keeping their history visible makes an analysis open to examination. A convenient program does not remove responsibility for the choices between those stages.</p></div>
+</section>
+<section class="chapter" id="P101-U03-L04-S06"><h2>3.24 Repair, rerun and hand over</h2>
+<p>The downloaded notebook is intentionally defective. It contains no hidden measurement puzzle: the source is exactly the four-row incomplete record already discussed. Your task is to repair the chain from that file to the stated M1 comparison, explain each change, and demonstrate that the result can be rebuilt without relying on your exploratory session. A matching script provides an alternative for readers working outside notebooks.</p>
+<p>Keep the supplied repair file and save a working copy with <code>-repaired</code> in its name. Leave <code>data/record.csv</code> unchanged. Work in the extracted lesson folder. The displayed teaching blocks provide the necessary syntax; the intellectual task is to recognise which choice each line represents and check that your repaired analysis implements it.</p>
+<div class="activity" id="p101-u03-activity-23"><h4>Activity 3.23 · A two-hour repair and handover</h4><p>Use the 120-minute Python allocation in four stages. Stop at each error, explain it and make a deliberate change before running onward. Use the remaining 30-minute lesson feedback allowance afterwards to compare your reasoning with the discussion and correct your account.</p><ol><li><strong>Locate and inspect — 20 minutes.</strong> Read the README and CSV. Predict the mask, the retained times and the final residual on paper. Run the opening cell, inspect its path, and repair the location. Choose a loader that preserves the blank as unavailable. Check the printed shape and values.</li><li><strong>Repair the comparison — 35 minutes.</strong> Follow the time and position selections. Make them use the same mask. Check the model against the stated M1 and the subtraction against the residual definition. Recompute every dependent quantity. Keep a brief change log giving a reason for each repair.</li><li><strong>Repair the figure and test — 30 minutes.</strong> Use clock readings rather than indices, separate observation markers from the model line, and make the title, legend and axes agree with the arrays. Save the figure. Check the three comparisons by hand, then run the reference-time and zero-velocity checks. Record what each check can establish.</li><li><strong>Fresh run and handover — 35 minutes.</strong> Save, restart and run all cells in order, or run the repaired script in a fresh process. Extract a second copy of the original working folder at another location, place your repaired analysis there, and rerun from that folder. Include the source and README. This checks portability of the stated arrangement; it is not a test on a different machine. Record actual versions, a run date, outputs and limitations in your own short run note.</li></ol><p>Your handover should contain the unchanged source, its description, the repaired notebook or script, the generated figure and your run note. It should let a reader locate the input, understand the missing-data decision, identify M1, repeat the steps and assess the conclusion. No upload or formal submission is required.</p>
+<details><summary>Hint for Activity 3.23</summary><p>There are faults at the file path, numeric loader, time selection, velocity, residual subtraction and plotting choices. A later error can be a consequence of an earlier one. Inspect the values at each boundary rather than changing several lines until the graph looks plausible. The times that survive selection must be 10, 14 and 19 s; the model is still the A–B rule, not the A–D rule from Lesson 3.</p></details>
+<details><summary>Discussion of Activity 3.23</summary><p>A successful repair has the following connected explanations. Your wording and code organisation may differ.</p><ol><li>The data live in the <code>data</code> subfolder, so construct that path from the documented lesson working directory. Confirm the file’s contents and identity, not only its existence.</li><li>Replace the complete-numeric-file loader with the explicitly configured <code>genfromtxt</code> call from Section 3.20. The blank stays <code>nan</code>; retain four source rows. Preserve the checks that reject unexpected shape or unavailable time.</li><li>Select <code>time_all_s[usable]</code> and <code>position_all_m[usable]</code> together. Keeping all four times with three positions produces incompatible comparisons. Keeping only the first three times would be worse: it could run while pairing the last position incorrectly.</li><li>Retain reference time 10 s, position −2 m and velocity +1.5 m/s. The repair file’s one-third rate is the different M2 choice; a label saying M1 cannot make it M1. Calculate <code>position_m - predicted_m</code>. The expected predictions are −2, 4 and 11.5 m, giving residuals 0, 0 and −10.5 m.</li><li>Replace index-based plotting and joined observations with the labelled two-panel block in Section 3.23. Both panels use the retained times; the dashed line uses its own drawing times and M1 predictions. State that the 16 s position and its residual are unavailable. Keep the output filename distinct from the input.</li><li>Place all definitions before use, then restart and rerun the repaired analysis in order. The following structural checks should each print −2 m, first once and then for all retained times:</li></ol>
+<pre><code class="language-python">print(predict_position(
+    reference_time_s, reference_time_s, reference_position_m, velocity_m_per_s
+))
+print(predict_position(
+    time_s, reference_time_s, reference_position_m, 0.0
+))</code></pre>
+<p>A defensible conclusion is: “For invented incomplete record P101-U03-L04-B version 1, M1 retains the A–B rate +1.5 m/s and reference event (10 s, −2 m). Three complete pairs remain; no position is available at 16 s, and no replacement was made. At 19 s, M1 predicts 11.5 m against 1 m, giving residual −10.5 m. Thus it does not reproduce all available stipulated positions. The omission prevents the comparison at 16 s. Rerunning checks execution of this analysis; it does not establish an experimental law.”</p><p>Add your own execution evidence: the versions printed by your session, the date and filenames, which hand and limiting-case checks you performed, and whether the second-folder run succeeded. Do not copy a claim of a check you did not perform. If it failed, preserve the message and explain the unresolved dependency instead. A tidy report with an honest failure is more useful than an unsupported claim of reproducibility.</p></details></div>
+<p>The handover is complete when the reasoning travels with the calculation. A second reader should not have to guess what a missing value meant, which time belongs to a position, or which model generated the line. You have now connected the physical conventions, source record, numerical steps and interpretation into one inspectable account. Lesson 5 will use that account in a bounded investigation and the whole-unit review, bringing the first block’s measurement, modelling and computation together.</p>
+</section>
+<section id="references"><h2>Further reading and context</h2><p>These optional references support particular techniques; the required explanation and practice are above.</p><ul><li><a href="https://docs.python.org/3/library/pathlib.html">Python: pathlib</a> — working directories and constructing paths; consult the entries for <code>Path.cwd</code> and <code>is_file</code>.</li><li><a href="https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html">NumPy: genfromtxt</a> and <a href="https://numpy.org/doc/stable/user/basics.io.genfromtxt.html">importing missing data</a> — loader arguments; many advanced options are beyond this lesson.</li><li><a href="https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing">NumPy: Boolean array indexing</a> — selecting entries with a mask.</li><li><a href="https://swcarpentry.github.io/python-novice-gapminder/02-variables.html">Software Carpentry: Variables and Assignment</a> — see “Variables Persist Between Cells” and “Predicting Values”.</li><li><a href="https://jupyterlab.readthedocs.io/en/stable/user/commands.html">JupyterLab commands</a> — locating restart and run-all commands in the interface.</li><li><a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/masked_demo.html">Matplotlib: missing points and line gaps</a> — demonstrates why removing a point and marking its value unavailable can lead to different drawn lines.</li></ul><p class="small">Original teaching, data and diagrams: CC BY-NC-SA 4.0. Code: MIT. NASA photograph retains its stated reuse terms; no endorsement is implied. LibraUni branding is excluded from these licences.</p></section>

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-12",
+  "items": [
+    {
+      "figure": "3.15",
+      "file": "public/teaching/p101/u03/rerun-route.svg",
+      "creator": "LibraUni",
+      "source": "Original explanatory artwork or output from the six displayed teaching-code blocks",
+      "reuse": "CC BY-NC-SA 4.0; source code MIT; branding excluded",
+      "sha256": "960236d2074185c033070e21c23d86cead00143afe30fcace0e35cd77c8c1b2f"
+    },
+    {
+      "figure": "3.16",
+      "file": "public/teaching/p101/u03/paired-selection.svg",
+      "creator": "LibraUni",
+      "source": "Original explanatory artwork or output from the six displayed teaching-code blocks",
+      "reuse": "CC BY-NC-SA 4.0; source code MIT; branding excluded",
+      "sha256": "a2a553829cf60f266841622f1dc541d6d4a7b996a1196449730a072257824738"
+    },
+    {
+      "figure": "3.17",
+      "file": "public/teaching/p101/u03/repair-time-axis.svg",
+      "creator": "LibraUni",
+      "source": "Original explanatory artwork or output from the six displayed teaching-code blocks",
+      "reuse": "CC BY-NC-SA 4.0; source code MIT; branding excluded",
+      "sha256": "d1a86da9812e093ac283e2b6783190528c80e9bbf2daba5450251925b68a51a3"
+    },
+    {
+      "figure": "3.18",
+      "file": "public/teaching/p101/u03/rerun-notebook.png",
+      "creator": "LibraUni",
+      "source": "Original explanatory artwork or output from the six displayed teaching-code blocks",
+      "reuse": "CC BY-NC-SA 4.0; source code MIT; branding excluded",
+      "sha256": "ecd6e6fc1950f1ed9900221d714edca145492f7b64ea6846655a6789112bc97c"
+    },
+    {
+      "figure": "3.19",
+      "file": "public/teaching/p101/u03/skyrocket.jpg",
+      "creator": "NASA; E49-00223",
+      "source": "https://www.nasa.gov/image-article/d-558-ii-skyrocket-16/",
+      "reuse": "NASA educational/editorial imagery terms, https://www.nasa.gov/nasa-brand-center/images-and-media/; credit NASA, no endorsement; separate from course-material licence.",
+      "sha256": "c5f42ce13baf4e6dfbb40bdd8ed12c6d5f682deb87d8c99696babe64757b5074",
+      "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/304851main_E49-00223_full.jpg?w=1041",
+      "modifications": "NASA 1041×816 rendition recompressed as JPEG quality90. No crop or altered content.",
+      "inspection": "Actual image inspected. Ground crew and aircraft on lakebed; source identifies Rogers Dry Lakebed,1949 and describes instrument calibration and postflight film-to-table/graph conversion. No claim photograph itself shows data reduction."
+    }
+  ],
+  "selection": "Searched freely reusable computing/data-history imagery. Hamilton Apollo code photograph rejected: NASA page reprints MIT content and identifies laboratory photographer; reuse not independently established. D-558-II NASA photograph selected for instrument-record-analysis connection. Original figures preserve table/diagram/graph/code output variety. No private OU imagery published.",
+  "interactive_video": "Notebook repair provides substantive hands-on exploration. Static prose/figures fully carry explanation; no decorative browser animation or uninspected video recommendation."
+}

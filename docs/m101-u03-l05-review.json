@@ -46,7 +46,7 @@
   },
   "verification": {
     "repositoryTests": "120 passed on final integrated build",
-    "productionBuild": "passed;38availablepages indexed",
+    "productionBuild": "Passed after merging concurrent P101 L04 and catalogue/homepage updates through 4cc0cf5; 39 available pages indexed",
     "media": "structuralcheckpassed;rightsandactualvisualinspection separately completed",
     "release": "User-authorised; deploy and live verification pending"
   },
