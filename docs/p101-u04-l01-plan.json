@@ -1,0 +1,74 @@
+{
+  "version": "1.0",
+  "date": "2026-10-12",
+  "standard": "Teaching Standard and Practice v1.10; fixed illustrated M101 v0.4 read",
+  "scope": "Block2 introduction, Unit4 introduction and complete L01 only",
+  "policy": "Construction policy1.0: complete20-lesson B02 blueprint prepared before six-section lesson construction",
+  "parents": [
+    "curriculum/p101-blocks.js",
+    "curriculum/p101-units.js",
+    "curriculum/stage1.js",
+    "curriculum/later-stage-audit.js"
+  ],
+  "budget_minutes": {
+    "reading_including_two_introductions": 70,
+    "activities": 80,
+    "feedback_correction": 30
+  },
+  "sections": [
+    {
+      "id": "P101-U04-L01-S01",
+      "number": "4.1",
+      "title": "Choose the system before naming forces",
+      "purpose": "System and surroundings; point model and scope",
+      "comparator": "MIT8 \u00a78.4.1; fixed M101 opening",
+      "practice": "Activity4.1:10min"
+    },
+    {
+      "id": "P101-U04-L01-S02",
+      "number": "4.2",
+      "title": "Give every force an agent and a recipient",
+      "purpose": "Contact versus gravity, ongoing interaction, N versus kg",
+      "comparator": "CP2e4.1; MIT8 \u00a78.3.1",
+      "practice": "Activity4.2:10min"
+    },
+    {
+      "id": "P101-U04-L01-S03",
+      "number": "4.3",
+      "title": "From a scene to a free-body diagram",
+      "purpose": "Inventory, normal/friction/rope directions; explicitly stipulated smooth support",
+      "comparator": "UP1 \u00a75.7 strategy; MIT8 \u00a78.4",
+      "practice": "Activity4.3:15min"
+    },
+    {
+      "id": "P101-U04-L01-S04",
+      "number": "4.4",
+      "title": "Combine forces without inventing another one",
+      "purpose": "Resultant and components; sign/magnitude; no double counting",
+      "comparator": "OUU5 pp136\u2013142,174; MIT7 Example7.1",
+      "practice": "Activity4.4:15min"
+    },
+    {
+      "id": "P101-U04-L01-S05",
+      "number": "4.5",
+      "title": "Change the boundary, change the force list",
+      "purpose": "Internal/external across tray+block, individual recipient audit",
+      "comparator": "MIT8 \u00a78.4.1; UP1 Example5.15 (simpler prerequisites)",
+      "practice": "Activity4.5:10min"
+    },
+    {
+      "id": "P101-U04-L01-S06",
+      "number": "4.6",
+      "title": "Audit the model before solving it",
+      "purpose": "Before/after rope release; diagrams before equations; limitations and handover",
+      "comparator": "UP1 \u00a75.7; P101U03L05 evidence limits",
+      "practice": "Activity4.6:20min"
+    }
+  ],
+  "reservations": {
+    "U04L05": "300min=35 explanation/conclusion +100 written (75 cumulative mixed unit exercises,25 trajectory setup) +120Python +45feedback/reference. Unit reference PDF and full exercise set due at closing, not this opening.",
+    "U07L05": "240min=40 synthesis +100written (75 cumulative exercises,25 block comparison) +100feedback (60 iCMA02 attempt/feedback,25 corrections,15 reference)."
+  },
+  "disposition": "Construction ready; publication waits for distinct subject, reader, visual and hierarchy reviews. All timings editorial estimates, not learner trials.",
+  "media": "Crawler photograph in unit opening and smaller lesson revisit; Earth\u2013Moon photograph in block; original boundaries/force diagrams, vector addition, system-change diagrams. Static stages better serve inspect-and-redraw tasks than animation; no video selected or viewing claimed."
+}

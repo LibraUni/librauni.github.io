@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-12",
+  "scope": "Block2/Unit4 introductions and U04L01 sections4.1\u20134.6",
+  "standard": "website/docs/teaching-standard-and-practice.md v1.10 read; fixed website/content/editorial-reference/m101-opening-chapter-v0.4.html complete visible text read, preservation unchanged",
+  "adjoining": [
+    "P101 U03 introduction/L01 signed rates and model limits; closing L05 sections3.25\u20133.27 actual explanatory text and feedback read",
+    "M101 U01 L04 opening, angle conventions and worked example read; U01/U02 approved prerequisites retained",
+    "P101 approved block/unit maps B02/U04\u2013U07, Stage1 pairing and construction policy1.0 read; later-stage accepted map retains provisional capacity estimates"
+  ],
+  "comparators": [
+    {
+      "source": "Private OU MST124 Unit5 Coordinate geometry and vectors",
+      "path": "sources/Unit 5 - Coordinate Geometry.pdf (read only)",
+      "passages": "Printed pp135\u2013142: \u00a75 vector/scalar distinctions, arrow scale, equality, zero vector, triangle/parallelogram laws, Activities23\u201324. Printed p174 Example18 magnitude/direction; printed p195 solutions23\u201324. PDF page40 (printed140) visually inspected.",
+      "fit": "S02 force as vector; S04 component/resultant reasoning, original Activity4.4; typography, reasoning around diagrams and contextual notes across lesson.",
+      "difference": "OU is mathematical exposition, not a force-inventory course; no exact supplied OU systems/free-body lesson or mechanics practice counterpart. LibraUni adds agent/recipient, dimensions and no-double-counting audit. Private text/figures not reproduced."
+    },
+    {
+      "source": "OpenStax College Physics2e \u00a74.1 Development of force concept",
+      "url": "https://openstax.org/books/college-physics-2e/pages/4-1-development-of-force-concept",
+      "inspected": "Full explanatory passage, Figures4.3\u20134.4 descriptions and force-standard activity.",
+      "fit": "S02 and S03 connect push/pull, vector representation and physical agents.",
+      "difference": "Our opening separates force inventory from Newton-law calculations; no home experiment prescribed; original scenarios and prose."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a75.7 Drawing free-body diagrams",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-7-drawing-free-body-diagrams",
+      "inspected": "Opening construction strategy, Examples5.14\u20135.16 and Check Your Understanding5.10.",
+      "fit": "S03 diagram audit; S05 multiple recipients; S06 independent repair task.",
+      "difference": "Source assumes Newton laws and includes coupled pulleys/complex ramps. Our tasks omit solving those systems, supply values and separate identification from dynamics. The source\u2019s simplified friction wording is not adopted: our directions refer to relative sliding or a specifically stated model."
+    },
+    {
+      "source": "MIT8.01SC Peter Dourmashkin Chapter7",
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter7.pdf",
+      "inspected": "\u00a77.1 pp7-1\u20137-4 including Example7.1 force component sum and magnitude/direction.",
+      "fit": "S04 mathematical/physical relation and component checks; L02 handover.",
+      "difference": "MIT defines force quantitatively using acceleration before this point. Our L01 defers that definition and supplies force data; no historical claims borrowed."
+    },
+    {
+      "source": "MIT8.01SC Peter Dourmashkin Chapter8",
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter8.pdf",
+      "inspected": "\u00a78.3.1 contact-force discussion at pp8-10\u20138-12; \u00a78.4.1 system and \u00a78.4 vector decomposition/model discussion pp8-16\u20138-17.",
+      "fit": "S01 system selection and particle model; S03 normal/friction as contact components; S05 internal/external; S06 model qualification.",
+      "difference": "Broader chapter calculus, detailed tension, force laws and rotation absent from L01. Chapter excerpt is comparator, not a reading prerequisite."
+    }
+  ],
+  "section_mapping": {
+    "4.1": "MIT8\u00a78.4.1; fixed M101 motivation-to-definition progression",
+    "4.2": "CP2e4.1; OU U5 pp136\u2013138; P101 U01 quantity/unit distinctions",
+    "4.3": "UP1\u00a75.7 strategy/Example5.14; MIT8\u00a78.3.1. Original simpler ramp activity, no force calculation.",
+    "4.4": "OU U5 pp140\u2013142,174,195; MIT7Example7.1. Original given-force audit plus axis reversal.",
+    "4.5": "MIT8\u00a78.4.1; UP1Example5.15, with only vertical contacts and no assumed third-law derivation",
+    "4.6": "UP1\u00a75.7 audit; P101U03L05 evidence limits. Original multi-error repair, no exact external equivalent."
+  },
+  "practice_review": "Six original activities: boundary classification, agent audit, ramp diagram, vector arithmetic, boundary change and integrated error repair. Progression moves from prompted classification to independently defended inventory. Hidden discussions explain why rejected arrows fail and provide criteria for sketches.80min attempts +30feedback; editorial estimate, no student timing/equivalence claim. OU vector practice informs only the mathematical strand; inspected mechanics examples inform diagram prerequisites/scaffolding, not copied questions.",
+  "new_unit_gate": "Complete20-lesson B02 blueprint with all six policy fields,72h/10Python reconciled; U04 18h/2Python; L01 six sections; M101U05 gate explicit for U07L03. Later lessons remain outlines. Original approved scopes, unit IDs, assessment windows, credits and dependencies unchanged.",
+  "media_decisions": "NASA crawler search considered actual track/ground and internal-machine contacts; selected directly credited Jan9 2026 photograph. Earth\u2013Moon existing image rechecked at official source for block gravity context. Each asset actually viewed. Five original schematics + lesson photo revisit. Static inspect/redraw tasks support the intended reasoning; animation would add no necessary manipulation in L01. No video selected or viewing claimed."
+}

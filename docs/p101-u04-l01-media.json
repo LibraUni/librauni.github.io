@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-12",
+  "items": [
+    {
+      "file": "public/teaching/p101/u04/crawler.jpg",
+      "creator": "NASA/Ben Smegelsky",
+      "source": "https://www.nasa.gov/image-article/nasas-crawler-preps-for-artemis-ii-rollout/",
+      "ids": [
+        "p101-u04-figure-01",
+        "p101-u04-figure-01-revisited"
+      ],
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "Credited educational/editorial use under NASA media guidelines; no third-party copyright flag on selected source. External image retains its own status, not relicensed as LibraUni text. No endorsement implied.",
+      "modifications": "None; crawler uses NASA supplied1200x800 rendition; Earth\u2013Moon reuses existing1571x1580 source image whose enhanced colour/filter composite is explicitly described.",
+      "sha256": "100e996df45e7f6a07272288a1d22f29377c3cf98bcdefa02d63d50cf6f1bf12"
+    },
+    {
+      "file": "public/media/p101/earth-moon.jpg",
+      "creator": "NASA",
+      "source": "https://science.nasa.gov/resource/the-earth-moon-system/",
+      "ids": [
+        "p101-b02-figure-01"
+      ],
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "Credited educational/editorial use under NASA media guidelines; no third-party copyright flag on selected source. External image retains its own status, not relicensed as LibraUni text. No endorsement implied.",
+      "modifications": "None; crawler uses NASA supplied1200x800 rendition; Earth\u2013Moon reuses existing1571x1580 source image whose enhanced colour/filter composite is explicitly described.",
+      "sha256": "11878d03796b760f10c71a7ef07a28134e33632b7c56939252aba3219b676d48"
+    }
+  ],
+  "original_figures": {
+    "4.2": "Book vs book+tray boundaries; same physical scene",
+    "4.3": "Scene and external force inventory; schematic directions",
+    "4.4": "Stipulated force vectors with lengths proportional to12,12,7,3N; separate4N resultant",
+    "4.5": "8N east plus6N north,10N diagonal; exact3:4:5geometry",
+    "4.6": "Book, tray and combined-system external inventory; all forces vertical; magnitudes not asserted"
+  },
+  "original_terms": "CC BY-NC-SA4.0; all vector diagrams independently authored, no proprietary copied material",
+  "revision": "Visual pass corrected contact gaps in scene sketches and overlapping recipient labels; removed pixel-based force-scale wording in favour of proportional-force statement."
+}

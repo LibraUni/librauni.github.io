@@ -1,0 +1,19 @@
+/* Isolated styles for the new P101 Block 2 / Unit 4 reading. */
+.p101-u4 .diagram{overflow-x:auto;background:#f3f6f2;border:1px solid #d4ddd7;border-radius:6px}
+.p101-u4 .diagram svg{display:block;width:100%;min-width:620px;background:#f3f6f2}
+.p101-u4 .diagram svg text{font:18px Georgia,serif;fill:#253b3c}
+.p101-u4 .equation{overflow-x:auto;white-space:nowrap;padding:12px 0}
+.p101-u4 math{font-size:1.06em}
+.p101-u4 .context{display:flow-root;background:#e6eff2;border-left:4px solid #628c9c;padding:25px 28px;margin:30px 0;border-radius:6px}
+.p101-u4 .context-figure{float:right;width:44%;margin:0 0 20px 25px}
+.p101-u4 .context-photo{display:block;width:100%;height:auto}
+.p101-u4 .context-figure figcaption{font-size:13px;line-height:1.6}
+.p101-u4 .note{border-block:1px solid #b7c6c2;margin:25px 0;padding:18px 0;font-size:17px}
+.p101-u4 .note strong{font:600 14px system-ui}
+.p101-u4 .note p{margin:8px 0 0}
+.p101-u4 :is(.diagram,.equation):focus-visible{outline:2px solid #216b68;outline-offset:4px}
+[data-theme=dark] .p101-u4 .context{background:#233d48;color:#e7eee7}
+[data-theme=dark] .p101-u4 .context h4{color:#b8dce9}
+@media(min-width:1100px){.p101-u4 .science-photo{display:grid;grid-template-columns:minmax(0,3fr) minmax(160px,1fr);gap:23px}.p101-u4 .science-photo figcaption{margin:0}.p101-u4 .science-photo img{align-self:start}.p101-u4 .block-photo{grid-template-columns:minmax(0,2fr) minmax(180px,1fr);max-width:650px}}
+@media(max-width:650px){.p101-u4 .context-figure{float:none;width:100%;margin:0 0 20px}.p101-u4 .context{padding:20px 17px}.p101-u4 .equation{font-size:18px}}
+@media print{.p101-u4 .diagram{overflow:visible}.p101-u4 .diagram svg{min-width:0}.p101-u4 .context-figure{float:none;width:60%;margin:15px auto}.p101-u4 .equation{white-space:normal}.p101-u4 figure{break-inside:avoid}}

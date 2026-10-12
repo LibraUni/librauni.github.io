@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-12",
+  "scope": "P101 Block 2 and Unit 4 introductions; complete Unit 4 Lesson 1 only",
+  "disposition": "Reviewed for publication; deployment and live verification pending",
+  "reviews": {
+    "correctness": "Recomputed supplied-force resultants and angles independently; checked separate/combined system force inventories, force-recipient notation, contact-component wording and exclusions. 40 arithmetic/structure/XML/diagram checks passed. These are author-led distinct review passes, not an independent human review.",
+    "reader": "Read progression from observation to interactions; system before inventory before sum; no Newton-law inference required before L02. Five worked examples and six original activities with separate hints/discussion; 80min attempts and 30min feedback within 3h including introductions. Explicit supplied values, omitted effects and diagram scale conditions.",
+    "visual": "Inspected actual rendered photo, five SVGs, examples, mobile feedback, dark openings, offline feedback and print/enlargement views. Fixed floating contact gaps, overlapping labels, mathematical spacing and boundary interfaces. Four widths 320/390/900/1440 across two themes and three pages passed; no document overflow; diagrams scroll within keyboard-focusable containers. Native feedback works without JavaScript.",
+    "hierarchy": "Complete 20-lesson Block 2 map; approved 72h/10h Python and four 18h units retained. U04 18h/2h Python; L01 3h/0h Python. M101 prerequisites retained, including U07L03 U05 gate. Later lessons are explicitly outlines. Unit conclusion, cumulative exercises and web/PDF reference remain due at unit closure, not claimed complete."
+  },
+  "verification": {
+    "site_tests": 126,
+    "subject_checks": 40,
+    "browser_cases": 24,
+    "build": "passed",
+    "search": "46 available pages; three new teaching pages indexed; future outlines excluded",
+    "offline": "Three self-contained HTML copies checked at 390px with JavaScript disabled and external network blocked; all images, native mathematics and feedback work",
+    "media": "NASA official sources and terms checked; credits and modification status recorded; five original SVGs",
+    "limitations": "Study times are editorial estimates. Browser checks use Chrome, not a cross-browser or screen-reader certification. Source comparison gaps documented in sources record."
+  }
+}

@@ -2,6 +2,7 @@ import {presentOverview,subjectFor} from './module-presentation.mjs';
 import {unitLink,assertBlockUnitLabels} from './unit-link.mjs';
 import {addP101Teaching,p101TeachingPaths} from './p101-teaching.mjs';
 import {p101Block1Lessons} from '../curriculum/p101-block1-lessons.js';
+import {p101Block2Lessons} from '../curriculum/p101-block2-lessons.js';
 import {degreeModules,degreeSidebar,stageList} from './degree-navigation.mjs';
 import {addM101Teaching,m101TeachingPaths} from './m101-teaching.mjs';
 import {m101Lessons} from '../curriculum/m101-released.js';
@@ -74,7 +75,7 @@ export function renderLearning({root,shell,link,e}) {
  for(const u of m100.units)pages.push([unitPath(u.id),u.title,[...crumbs.slice(0,3),link(blockPath(m100.blocks.find(b=>b.units.includes(u.id)).id),'Block '+Number(m100.blocks.find(b=>b.units.includes(u.id)).id.slice(1))),`<span aria-current="page">${u.id}</span>`],intro(u.title,e(u.can))+`<p>${u.hours} planned study hours · ${link('/programme/bridge/lu-m100/#'+u.id,'Unit blueprint')}.</p>`+tree(lessons.filter(l=>l.unit===u.id).map(l=>branch(titled(l.id,l.id+' · '+l.title),`<p>${e(l.purpose)}</p><p>${l.id==='U01-L01'?link(lessonPath,'Open lesson · All six sections available'):link(lessonUrl(l),'Open lesson · All sections available')}</p>`)).join(''))]);
  pages.push([lessonPath,'Signed quantities and ordered calculations',[...crumbs,link(unitPath('U01'),'Unit 1'),'<span aria-current="page">Lesson 1</span>'],intro('Signed quantities and ordered calculations','Start with familiar arithmetic, then build a dependable way of explaining and checking it.')+`<p>Full lesson: 4 hours · All six sections available, including a downloadable Python practice notebook.</p>`+published.map(id=>fs.readFileSync(root+'content/m100-u01-l01-'+id.toLowerCase()+'.html','utf8')).join('')+`<nav class="lesson-pagination" aria-label="Previous and next"><a href="${unitPath('U01')}">← Unit overview</a><a href="/programme/archive/m100/b01/u01/l02/">Next: Fractions, decimals and named values →</a></nav><p class="small">Original LibraUni teaching · Published 26 September 2026. ${link('/programme/bridge/lu-m100/#opening-sections','Lesson design and section blueprint')}.</p>`]);
  // Generate navigation destinations from the approved hierarchy, without inventing teaching.
- const modules=[{base,blocks:m100.blocks,units:m100.units,lessons:lessons,blueprint:'/programme/bridge/lu-m100/'},...stage1Modules.map(m=>({base:home(m),blocks:stageBlocks[m.code],units:({'LU-M101':m101Units,'LU-M102':m102Units,'LU-P101':p101Units,'LU-A101':a101Units}[m.code]).units,lessons:m.code==='LU-M101'?m101Lessons:m.code==='LU-P101'?p101Block1Lessons.lessons:[],blueprint:m.path}))];
+ const modules=[{base,blocks:m100.blocks,units:m100.units,lessons:lessons,blueprint:'/programme/bridge/lu-m100/'},...stage1Modules.map(m=>({base:home(m),blocks:stageBlocks[m.code],units:({'LU-M101':m101Units,'LU-M102':m102Units,'LU-P101':p101Units,'LU-A101':a101Units}[m.code]).units,lessons:m.code==='LU-M101'?m101Lessons:m.code==='LU-P101'?[...p101Block1Lessons.lessons,...p101Block2Lessons.lessons]:[],blueprint:m.path}))];
  const addPage=(path,title,parent,items,label,description)=>{
   extraRails.set(path,{title:label,items,back:parent});
   if(pages.some(p=>p[0]===path))return;
@@ -148,6 +149,7 @@ export function renderLearning({root,shell,link,e}) {
   if(m101TeachingPaths.includes(path)||p101TeachingPaths.includes(path))html=html.replace('</body>','<script type="module" src="/src/teaching-code.js"></script></body>').replace('</head>','<link rel="stylesheet" href="/src/teaching.css"></head>').replace('<script type="module" src="/src/study-ui.js"></script>','');
   if(path==='/learn/physics/stage-1/m101/b01/u01/l02/')html=html.replace('</body>','<script type="module" src="/src/m101-vector-lab.js"></script></body>');
   if(path==='/learn/physics/stage-1/m101/b01/u01/l01/')html=html.replace('</body>','<script src="/m101-legacy-links.js"></script></body>');
+  if(path.startsWith('/learn/physics/stage-1/p101/b02/'))html=html.replace('</head>','<link rel="stylesheet" href="/src/p101-unit4.css"></head>');
   if(path.startsWith('/learn/physics/stage-1/p101/'))html=html.replace('<script type="module" src="/src/study-ui.js"></script>','').replace('</head>','<link rel="stylesheet" href="/src/p101.css"></head>');
   if(path==='/learn/')html=html.replace('<a class="button-link" href="/learn/">Learning materials</a>','');
   if(path.startsWith(base))html=html.replace(/<script type="module" src="\/src\/study-ui.js"><\/script>/g,'').replaceAll('LEARNING MATERIALS','PROTOTYPE ARCHIVE').replace(/<p class="section-read">[\s\S]*?<\/p>/g,'');
