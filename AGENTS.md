@@ -1,3 +1,7 @@
+# P101 Unit 3 Lesson 4 LIVE — 12 October 2026
+
+Release c6c0ab433831299387f4aa257e17172482669d0f; workflow38273191909 security and publication succeeded. Live Chrome widths/themes,8 exact keyboard code copies, native feedback,38-page search, navigation, outline gate and no-JS verified. Teaching fragment and ten media/download files match checked release; linked build assets return200. See docs/p101-u03-l04-live.json. Supersedes pending publication disposition. L05 remains outline.
+
 # P101 Unit 3 Lesson 4 publication authorised — 12 October 2026
 
 User requested creation and online publication of An analysis another person can rerun. Standard1.10;4h including2hPython. Sections3.19–3.24, examples3.13–3.16, activities3.19–3.23, figures3.15–3.19. Deliberately broken notebook/script repair package clearly labelled; checked teaching code and hidden feedback repair all faults. CSV source unchanged through fresh-kernel/script and second-folder tests.119site tests/build/media,38-page search, desktop/mobile/theme/keyboard/no-JS/offline checks passed. Distinct reviews and source/media/plan records at docs/p101-u03-l04-*.json. L05 remains outline; cumulative closing resources/iCMA budgets preserved. Await deployment/live verification; no learner records changed.

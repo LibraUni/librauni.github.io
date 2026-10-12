@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-12",
+  "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l04/",
+  "release": "c6c0ab433831299387f4aa257e17172482669d0f",
+  "workflow": 38273191909,
+  "security": "success",
+  "publish": "success",
+  "browser": [
+    {
+      "width": 1440,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 1440,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 1,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "searchPages": 38,
+      "keyboardCopies": 8
+    },
+    {
+      "noJavaScript": true,
+      "allInternalLinks": true,
+      "downloadsExact": true,
+      "errors": []
+    },
+    {
+      "zoomEquivalent": "720 CSS pixels at scale 2 for a 1440-pixel display",
+      "passed": true
+    }
+  ],
+  "bytes": {
+    "teaching_fragment_exact": true,
+    "linked_build_assets_200": true,
+    "files": [
+      {
+        "file": "notebooks/p101-u03-l04.ipynb",
+        "sha256": "f6688fdff8e140e4136268f25e770a149500fcc538cd78057f0731d977ba5132"
+      },
+      {
+        "file": "notebooks/p101-u03-l04.py",
+        "sha256": "d8ab988722cba217ec44b5790b63916a99c85390cf675720e1fb12b1ab1c83af"
+      },
+      {
+        "file": "notebooks/p101-u03-l04.csv",
+        "sha256": "f5ac8722eff75bcdef5788da923dc8a66edd5cf316d58c16ee19d07e9695711b"
+      },
+      {
+        "file": "notebooks/p101-u03-l04-metadata.txt",
+        "sha256": "c07cec162e2df785f9d942a378cd93558bfe63a04249a9cfbdf404123376900e"
+      },
+      {
+        "file": "notebooks/p101-u03-l04.zip",
+        "sha256": "1bf65eb81fd01ce9ae0be97b24faaa89e35be68d0847b31bcd94fa0c9370d61d"
+      },
+      {
+        "file": "teaching/p101/u03/rerun-route.svg",
+        "sha256": "960236d2074185c033070e21c23d86cead00143afe30fcace0e35cd77c8c1b2f"
+      },
+      {
+        "file": "teaching/p101/u03/paired-selection.svg",
+        "sha256": "a2a553829cf60f266841622f1dc541d6d4a7b996a1196449730a072257824738"
+      },
+      {
+        "file": "teaching/p101/u03/repair-time-axis.svg",
+        "sha256": "d1a86da9812e093ac283e2b6783190528c80e9bbf2daba5450251925b68a51a3"
+      },
+      {
+        "file": "teaching/p101/u03/rerun-notebook.png",
+        "sha256": "ecd6e6fc1950f1ed9900221d714edca145492f7b64ea6846655a6789112bc97c"
+      },
+      {
+        "file": "teaching/p101/u03/skyrocket.jpg",
+        "sha256": "c5f42ce13baf4e6dfbb40bdd8ed12c6d5f682deb87d8c99696babe64757b5074"
+      }
+    ]
+  },
+  "disposition": "Published and verified. L05 remains outline; unit closing exercises/iCMA/reference resources remain reserved there. No learner records changed."
+}
