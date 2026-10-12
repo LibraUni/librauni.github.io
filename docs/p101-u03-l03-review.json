@@ -148,7 +148,7 @@
         "badAnchors": []
       },
       {
-        "searchPages": 36,
+        "searchPages": 37,
         "keyboardCopies": 4
       },
       {
@@ -197,6 +197,6 @@
   "whole_lesson_review": {
     "result": "Approved scope, section sequence, preceding handover and next outline checked. Six sections3.13–3.18; examples3.9–3.12; activities3.13–3.18; figures3.10–3.14. No existing identifiers renumbered. L04/L05 remain outlines.",
     "budget": "4h:60min explanation,90 written,60 Python,30 feedback. U03 20h/6hPython and B01 60h/20hPython unchanged.",
-    "integration": "Production build, 118 repository tests, media structure check and 36-page search pass. All five downloads and content links checked. M101 U03 L03 release preserved. No learner records changed."
+    "integration": "After merging newer M101 U03 L04 release c4191ea: production build,119 repository tests and37-page search pass. Full P101 browser checks repeated and passed. All five downloads and content links checked; no learner records changed."
   }
 }
