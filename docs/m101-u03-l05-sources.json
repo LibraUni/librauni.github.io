@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "calibration": [
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/determinants-volumes.html",
+      "passage": "4.3.2 area theorem, planar example and signed-volume remark;4.3.3 image of unit square",
+      "sections": "3.27\u20133.28",
+      "fit": "Original column-image diagrams and area derivation retrieve the already taught U02 cross product. Only planar rectangles/parallelograms, no general volume axioms or multivariable integration. Same equal-axis coordinate interpretation; own values and geometry."
+    },
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/matrix-inverses.html",
+      "passage": "3.5.1 inverse definition;3.5.2 two-by-two formula/proof and column systems;3.5.3 unique solution",
+      "sections": "3.29\u20133.30",
+      "fit": "Derive one inverse by recovering input, then general two-by-two condition. No general augmented-identity inversion, abstract null-space theory or higher-dimensional algorithm. Original zero-determinant collision proof handles zero first row and zero matrix explicitly."
+    },
+    {
+      "source": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/02:_Matrix_Algebra/2.04:_Matrix_Inverses/2.4E:_Matrix_Inverses_Exercises",
+      "passage": "Exercises1(a,d) inverse verification;2(a,b) inverse computation;3(a,b) solving using an inverse;9(a) nonzero matrix misconception",
+      "sections": "Activities3.32\u20133.35",
+      "fit": "Actual questions/selected solutions inspected. Original tasks add recovery of columns, two-sided products, a numerical target and diagnostic counterexamples; smaller dimension, explicit scaffolding and interpretation. No claimed one-to-one equivalence or copied question. Selected answer numbering and1(b) pair appear unreliable; independent calculations used."
+    },
+    {
+      "source": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/03:_Determinants_and_Diagonalization/3.02:_Determinants_and_Matrix_Inverses/3.2E:_Determinants_and_Matrix_Inverses_Exercises",
+      "passage": "Exercises2 and8",
+      "fit": "Partial planning comparator: invertibility restrictions and two-variable equations; source uses larger matrices/Cramer rule not taught here. No equivalence claim."
+    },
+    {
+      "source": "https://docs.python.org/3/tutorial/floatingpoint.html",
+      "passage": "Opening binary-fraction representation and decimal equality examples",
+      "sections": "3.31\u20133.32",
+      "fit": "Bounded explanation of exact small-integer tests versus floating-point residuals. Own independently run subtraction and near-repeated-equation counterexample; no general tolerance rule, new package or solver."
+    },
+    {
+      "source": "Fixed M101 illustrated opening v0.4; published U03L04 and U03L02 Python; P101U01L04/L05",
+      "passage": "Observation/model distinction, sustained prose, worked examples, hidden feedback, list/function representation",
+      "fit": "Retains narrative, figures and source credit; self-contained prerequisite gate. Lists remain flat row order; notebook code uses existing P101 syntax."
+    },
+    {
+      "source": "Private supplied OU MST124 Unit5 PDF page83, printed183; existing local rendered page",
+      "passage": "Scalar-product page typography and Activity51",
+      "fit": "Rendered image inspected for typography and hierarchy only. Relevant Unit9 determinant material unavailable; subject calibration uses university sources. Nothing from the private page republished."
+    }
+  ],
+  "originality": "Original prose, questions, diagrams and independently implemented code. No extended quotation or close paraphrase.",
+  "pythonPractice": "Original test-design synthesis calibrated to existing P101 function/debugging work. No exact external equivalent or observed completion-time claim."
+}

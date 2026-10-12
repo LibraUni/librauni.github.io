@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-12",
+  "comparators": [
+    {
+      "source": "M101 illustrated opening v0.4",
+      "passages": "Fixed reference work/m101-u03/reference.txt: substantive opening, coordinate explanation, worked reasoning, photographic/model distinction and closure. Superseded lesson-end exercise placement not followed.",
+      "use": "Reader continuity, visual return and explicit checks."
+    },
+    {
+      "source": "OU MST124 Unit5 printed p183",
+      "passages": "Private local typography-source-083.png inspected: scalar-product exposition, display typography and Activity51.",
+      "use": "Typography and vector-product retrieval only. No claim to have inspected OU matrix unit."
+    },
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/systems-of-eqns.html",
+      "passages": "Actual §1.1 definitions, two-equation intersection/parallel/coincident exposition and parameter descriptions.",
+      "use": "S3.33–3.34 solution membership vs full solution set; geometry. General n-space excluded."
+    },
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/matrix-multiplication.html",
+      "passages": "Actual §3.4.1 composition, compatible domains, noncommutativity; §3.4.2 row-column rule.",
+      "use": "S3.33 synthesis and Exercises3.1–3.4; original smaller numbers and displacement combination."
+    },
+    {
+      "source": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/02:_Matrix_Algebra/2.04:_Matrix_Inverses/2.4E:_Matrix_Inverses_Exercises",
+      "passages": "Actual Ex1(a,d) inverse checking, Ex2(a,b) two-by-two inverses, Ex3(a,b) systems and Ex9(a) counterexample claim.",
+      "use": "Practice level for Exercise3.8 and claims/conditions. Original problems; no copied questions. Displayed answer numbering inconsistent and Ex1b appears erroneous: not used as oracle."
+    },
+    {
+      "source": "Published M101 U03L05 and U02L05",
+      "passages": "Residual limitations, labelled faulty code, test-case design and closing-reference/conclusion actual content read.",
+      "use": "S3.35 diagnostic transfer, S3.36 original formative assessment, S3.37 reference from actual teaching, S3.38 closure."
+    }
+  ],
+  "limitations": [
+    "Nicholson1.2E attempted URL unavailable this turn; prior blueprint source record retained, not claimed newly inspected. ILA actual exposition supplies classification comparator.",
+    "No external exam equivalence claimed for original iCMA. Its distractors target taught misconceptions; no invented pass boundary.",
+    "No video added: closing retrieval has no new demonstration gap; prior L01/L04 interactive explorations remain available."
+  ]
+}

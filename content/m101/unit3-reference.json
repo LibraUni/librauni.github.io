@@ -1,0 +1,73 @@
+[
+  {
+    "page": 1,
+    "group": "Recall",
+    "title": "Dimensions and columns",
+    "formula": "A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix},\\quad A\\begin{pmatrix}x\\\\y\\end{pmatrix}=\\begin{pmatrix}ax+by\\\\cx+dy\\end{pmatrix}",
+    "note": "m rows × n columns: n input entries, m output entries. Entry aᵢⱼ: row i, column j. Coordinate-vector images are the columns."
+  },
+  {
+    "page": 1,
+    "group": "Recall",
+    "title": "Composition",
+    "formula": "(BA)\\mathbf v=B(A\\mathbf v)",
+    "note": "Rightmost acts first. Inner dimensions must match. AB and BA can differ. Identity I leaves every compatible vector unchanged."
+  },
+  {
+    "page": 1,
+    "group": "Consult",
+    "title": "Two-by-two product",
+    "formula": "\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}\\begin{pmatrix}e&f\\\\g&h\\end{pmatrix}=\\begin{pmatrix}ae+bg&af+bh\\\\ce+dg&cf+dh\\end{pmatrix}",
+    "note": "Each output entry combines one row of the left matrix with one column of the right matrix."
+  },
+  {
+    "page": 1,
+    "group": "Understand",
+    "title": "Solution-preserving operations",
+    "formula": "R_i\\leftrightarrow R_j,\\quad R_i\\leftarrow kR_i\\ (k\\ne0)",
+    "formula2": "R_i\\leftarrow R_i+kR_j\\quad(i\\ne j)",
+    "note": "Operate on whole equations, including right-hand sides. Keep the other row in a row replacement. Each operation is reversible."
+  },
+  {
+    "page": 1,
+    "group": "Understand",
+    "title": "Elimination and solution sets",
+    "formula": "0=c\\ (c\\ne0)\\Rightarrow\\text{no solution}",
+    "note": "0 = 0 adds no condition. Keep the remaining equations. Back-substitute when each unknown is fixed; otherwise describe allowed free parameters. Verify against the originals."
+  },
+  {
+    "page": 1,
+    "group": "Understand",
+    "title": "A complete parameter family",
+    "formula": "x+2y=6\\quad\\Longleftrightarrow\\quad(x,y)=(6-2t,t)",
+    "note": "t ranges over all real numbers. Check both directions: every parameter gives a solution; every solution has such a parameter. Sample pairs alone do not prove completeness."
+  },
+  {
+    "page": 2,
+    "group": "Recall",
+    "title": "Determinant and inverse",
+    "formula": "\\Delta=ad-bc,\\quad A^{-1}=\\frac{1}{\\Delta}\\begin{pmatrix}d&-b\\\\-c&a\\end{pmatrix}",
+    "note": "Inverse formula requires Δ ≠ 0. Then every target has exactly one input. Check AA⁻¹ = A⁻¹A = I. With Δ = 0, inspect the target: no solution or infinitely many."
+  },
+  {
+    "page": 2,
+    "group": "Understand",
+    "title": "Area and orientation in the plane",
+    "formula": "\\text{image area}=|\\Delta|\\,\\text{original area}",
+    "note": "Same perpendicular, equal-scale coordinates. Positive Δ preserves orientation; negative reverses it; zero collapses area. Area scale does not specify length or angle changes."
+  },
+  {
+    "page": 2,
+    "group": "Understand",
+    "title": "Residuals and their limits",
+    "formula": "\\mathbf r=A\\mathbf x_{\\mathrm{candidate}}-\\mathbf b",
+    "note": "Every entry zero: candidate satisfies these equations. This does not prove uniqueness. A failed candidate does not prove inconsistency. Small residual need not mean small input error."
+  },
+  {
+    "page": 2,
+    "group": "Consult",
+    "title": "Transparent Python check",
+    "code": "def residual2(m, v, target):\n    first = m[0]*v[0] + m[1]*v[1]\n    second = m[2]*v[0] + m[3]*v[1]\n    return [first-target[0], second-target[1]]\n\nr = residual2([1, 2, 0, 1], [1, 2], [5, 2])\nok = r[0] == 0 and r[1] == 0\nprint(r, ok)  # [0, 0] True",
+    "note": "m = [a,b,c,d] in row order; v and target have two entries. Modest finite numeric inputs only. Exact zero suits these integer cases; inspect floating-point discrepancies in context. Predict, use revealing cases, restart and rerun."
+  }
+]
