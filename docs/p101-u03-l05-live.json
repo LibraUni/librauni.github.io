@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-12",
+  "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l05/",
+  "release": "532f05e7fe1a9c5437d6e2eb2d3514c0bd398ffb",
+  "workflow": 38282746189,
+  "attempt": 3,
+  "security": "success",
+  "publication": "success",
+  "browser": [
+    {
+      "width": 1440,
+      "dark": false,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 1440,
+      "dark": true,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": false,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": true,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "closed": 0,
+      "duplicateIds": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 21,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "searchPages": 41,
+      "keyboardCopies": 9,
+      "icma": "empty, wrong partial, correct, stale feedback, keyboard check and reset passed"
+    },
+    {
+      "noJavaScript": true,
+      "allInternalLinks": true,
+      "downloadsExact": true,
+      "errors": []
+    },
+    {
+      "zoomEquivalent": "720 CSS pixels at scale 2",
+      "reducedMotion": true,
+      "passed": true
+    }
+  ],
+  "bytes": {
+    "teaching_fragment_exact": true,
+    "linked_build_assets_200": true,
+    "files": [
+      {
+        "file": "notebooks/p101-u03-l05.ipynb",
+        "sha256": "dda6921899f5179fd326c248ce196fbb80d0e1b376620168cc24fe9a0c72f62b"
+      },
+      {
+        "file": "notebooks/p101-u03-l05.py",
+        "sha256": "a11b701ac4e6e2c8f0b91e5c7f482d8420eea004e980cbc154e9dfc890ddaeab"
+      },
+      {
+        "file": "notebooks/p101-u03-l05.csv",
+        "sha256": "bfdda66549616b0e2b8a0c0dacbc513242ff72f2e1bd1cc6213388f9cf9a6883"
+      },
+      {
+        "file": "notebooks/p101-u03-l05-metadata.txt",
+        "sha256": "11eaec4823b713ab69235abe748fdef79defaf42f0eeec6ebeaecfdbbe506612"
+      },
+      {
+        "file": "notebooks/p101-u03-l05.zip",
+        "sha256": "b580e4c640c22104ae777da55119e83e508c390ca7167b1776abb637e0f55959"
+      },
+      {
+        "file": "teaching/p101/u03/synthesis-route.svg",
+        "sha256": "fd65cd660091816bb7c8ea098e2b17db5a78368ece87d50a869cb39ab9cb7b1a"
+      },
+      {
+        "file": "teaching/p101/u03/synthesis-comparison.svg",
+        "sha256": "e967fccbe1aed823aab7a00e7e5a4f017fe3124fe803c80920258d0dbb7f6004"
+      },
+      {
+        "file": "teaching/p101/u03/exercise-journey.svg",
+        "sha256": "dc189367fdb5b5dfb6533758409236395a4b4c19e7e335a60becc8b965bdcecc"
+      },
+      {
+        "file": "teaching/p101/u03/apollo15-rover.gif",
+        "sha256": "e45b977def7358ce166ae1dd0aa00a5d46f7b9950859721ded6f94354e36e246"
+      },
+      {
+        "file": "teaching/p101/P101-Unit-3-Reference.pdf",
+        "sha256": "8b7e1c7d10881e1334c78c7c285f0e4c09dd2af0fc1176988ca74292428d0985"
+      }
+    ]
+  },
+  "deployment_recovery": "Initial Pages HTTP500; rerun produced duplicate github-pages artifacts. Fresh dispatch38283280226 waited at environment, then cancelled. Removed only the two failed-run generated artifacts11762850200/11762190976; retried original publish job; attempt3 passed. No environment/protection/workflow policy changed.",
+  "disposition": "Live teaching and all ten downloads/media files verified; unit3 and Block1 teaching complete. TMA01 remains unreleased; Unit4 outline. No learner records changed."
+}
