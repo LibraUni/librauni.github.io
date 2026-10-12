@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-12",
+  "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l03/",
+  "release": "fd2583f228cb4818aa5e5df24b921bd642402b06",
+  "workflow": 38265082787,
+  "security": "success",
+  "publish": "success",
+  "browser": [
+    {
+      "width": 1440,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 1440,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 17,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "searchPages": 37,
+      "keyboardCopies": 4
+    },
+    {
+      "noJavaScript": true,
+      "allInternalLinks": true,
+      "downloadsExact": true,
+      "errors": []
+    },
+    {
+      "zoomEquivalent": "720 CSS pixels at scale 2 for a 1440-pixel display",
+      "passed": true
+    }
+  ],
+  "bytes": {
+    "teaching_fragment_exact": true,
+    "linked_build_assets_200": true,
+    "files": [
+      {
+        "file": "notebooks/p101-u03-l03.ipynb",
+        "sha256": "5ba1db39b462bbb535b5316447f05905b35ba503f4abde0cdded0bd1aff3254f"
+      },
+      {
+        "file": "notebooks/p101-u03-l03.py",
+        "sha256": "94d5255f248d675e6dea6ebf7530f56e829e2f193c1fadfaf34f54bc9bffbd37"
+      },
+      {
+        "file": "notebooks/p101-u03-l03.csv",
+        "sha256": "7a678b2ae187b3a3db90e9c56ed24bb2a5221663e02514d71604cb172d696d0e"
+      },
+      {
+        "file": "notebooks/p101-u03-l03-metadata.txt",
+        "sha256": "08b18a6306b9f5cf8c0c2369cded435c47a0f1a2fb73f79e06978344310e09bb"
+      },
+      {
+        "file": "notebooks/p101-u03-l03.zip",
+        "sha256": "6e60ee62fe6470baa4d63922314004ff45006183f5a26b508ea54bc2964ae2ed"
+      },
+      {
+        "file": "teaching/p101/u03/m1-residuals.svg",
+        "sha256": "17dc8a353414b54684dede24959bb1ce23e70587b0f4d1aeb2a7f14a5a2b0cf1"
+      },
+      {
+        "file": "teaching/p101/u03/residual-patterns.svg",
+        "sha256": "844bbbd334828a8ccf9a456d3c6dc408d1a88d28284b5e59bf012d47fd559d17"
+      },
+      {
+        "file": "teaching/p101/u03/wind-tunnel.jpg",
+        "sha256": "2fb19faacde04c275b2e12ec985418cc7ea8a122bab03ac64ef74ad6863992f8"
+      },
+      {
+        "file": "teaching/p101/u03/prediction-range.svg",
+        "sha256": "708d888fd4fd5b3f4581bb17fd0a52de9359cc293b4be1faf3dede411b059b3b"
+      },
+      {
+        "file": "teaching/p101/u03/m1-notebook.png",
+        "sha256": "2717c23031a6fb89e0485ca9f5f2671fcd5b8739a4e5c7af4a179a636f5c3151"
+      }
+    ]
+  },
+  "disposition": "Published and verified; L04/L05 remain outlines. No learner records changed."
+}
