@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-12",
+  "authorisation": "User requests Lesson 3 creation and online publication",
+  "standard": "1.10",
+  "constructionPolicy": "1.0",
+  "gate": {
+    "status": "ready for section authoring after this complete section blueprint",
+    "parent": "curriculum/m101-units.js",
+    "peers": "curriculum/m101-block1-lessons.js; all 16 B01 lessons blueprinted",
+    "wider": "Approved Stage 1 block/unit maps and stage/degree progression; unchanged scope",
+    "dependency": "Published U03-L02; elementary signed arithmetic/algebra and coordinates from U01; no new physics or programming prerequisite"
+  },
+  "lesson": {
+    "id": "U03-L03",
+    "unit": "U03",
+    "title": "Solving simultaneous equations by elimination",
+    "hours": 4.0,
+    "allocation": {
+      "explanationAndExamples": 1.25,
+      "mathematicalPractice": 2.25,
+      "python": 0,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L02"
+    ],
+    "externalRequires": [],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Solve small coupled linear equations using justified elimination and check against the original equations.",
+    "scope": "Translate supplied relationships into a system; equation and augmented-matrix forms; reversible elementary row operations; two unknowns first and one guided three-unknown example; back substitution.",
+    "boundary": "No general-purpose algorithm implementation or unqualified division by a coefficient that may be zero. Introduce row exchange explicitly.",
+    "practiceAndEvidence": "Move from worked to partially completed to independent two-unknown systems; carry out a guided three-unknown solution; substitute into every original equation and explain preservation of solutions.",
+    "visualPlan": "Aligned equations and row operations; intersecting lines for the two-unknown case.",
+    "python": "No coding required.",
+    "handover": "L04 handles cases in which elimination does not produce one unique answer; L06 samples independent reasoning."
+  },
+  "sections": [
+    {
+      "id": "M101-U03-L03-S01",
+      "number": "3.14",
+      "title": "From a known output to unknown inputs",
+      "purpose": "Define simultaneous solution, translate a supplied mass model, connect A v = b and intersecting lines.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 10,
+        "written": 12,
+        "feedback": 3
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "Eliminate a variable, keep the information"
+    },
+    {
+      "id": "M101-U03-L03-S02",
+      "number": "3.15",
+      "title": "Eliminate a variable, keep the information",
+      "purpose": "Justify reversible operations and retaining the other equation; staged practice and invalid-operation diagnosis.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 13,
+        "written": 27,
+        "feedback": 5
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "Write the system as an augmented matrix"
+    },
+    {
+      "id": "M101-U03-L03-S03",
+      "number": "3.16",
+      "title": "Write the system as an augmented matrix",
+      "purpose": "Fix column order, retain zero placeholders, operate on the right-hand side too; distinguish row operations from transforming unknowns.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 10,
+        "written": 15,
+        "feedback": 4
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "Choose a usable pivot"
+    },
+    {
+      "id": "M101-U03-L03-S04",
+      "number": "3.17",
+      "title": "Choose a usable pivot",
+      "purpose": "Exchange rows when a pivot is zero and when a simpler first coefficient is available; never divide by an unchecked zero.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 10,
+        "written": 18,
+        "feedback": 4
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "Choose efficient arithmetic and keep exact values"
+    },
+    {
+      "id": "M101-U03-L03-S05",
+      "number": "3.18",
+      "title": "Choose efficient arithmetic and keep exact values",
+      "purpose": "Use common multiples or fractions deliberately; partially completed then independent systems; exact checks.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 10,
+        "written": 22,
+        "feedback": 4
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "Three unknowns, one stage at a time"
+    },
+    {
+      "id": "M101-U03-L03-S06",
+      "number": "3.19",
+      "title": "Three unknowns, one stage at a time",
+      "purpose": "One fully guided three-unknown example with forward elimination and back substitution; learner completes the stages and checks all originals.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 15,
+        "written": 25,
+        "feedback": 6
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "Check the answer and the argument"
+    },
+    {
+      "id": "M101-U03-L03-S07",
+      "number": "3.20",
+      "title": "Check the answer and the argument",
+      "purpose": "Independent contextual system, diagnose a candidate that passes one equation; distinguish existence from uniqueness; prepare L04.",
+      "requires": "U03-L02 and preceding lesson sections",
+      "boundaries": "Unique small systems; no rank, inverse, determinant algorithm, free parameters or general solver",
+      "minutes": {
+        "reading": 7,
+        "written": 16,
+        "feedback": 4
+      },
+      "evidence": "Numbered worked reasoning, in-text activity and explanatory discussion",
+      "handover": "U03-L04 inconsistent and dependent systems"
+    }
+  ],
+  "totals": {
+    "reading": 75,
+    "written": 135,
+    "feedback": 30,
+    "python": 0
+  },
+  "practice": "Activities 3.15–3.22; one 25-minute guided three-unknown activity; no separate lesson-end set. Existing L04/L06 cumulative-unit reservations unchanged.",
+  "mediaPlan": [
+    "Original graph: two intersecting lines and shared solution",
+    "Original paired graphs: replacing one line preserves common intersection but changes individual line",
+    "Augmented-matrix correspondence and back-substitution trail",
+    "NIST stainless-steel mass standards photograph alongside optional distinction between exact teaching model and uncertain measured masses; credited Jennifer Lauren Lee/NIST, reuse under NIST public-information policy"
+  ],
+  "optionalMedia": "Static stages keep the evolving system visible for comparison; no new interactive or video needed. Required learning is self-contained.",
+  "calibration": "Georgia Tech ILA1.2 and Nicholson1.1–1.2 plus actual exercises; M101 v0.4 and prior U03 lessons for sustained prose/pacing; supplied OU typography specimen. Missing MST124 Unit9 not claimed as inspected.",
+  "releaseDisposition": "Subject, reader, visual and whole-lesson reviews passed; authorised for publication",
+  "timing": "Editorial allocation, not measured learner timing"
+}
