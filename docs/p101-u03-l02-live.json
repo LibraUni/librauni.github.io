@@ -1,0 +1,158 @@
+{
+  "date": "2026-10-12",
+  "release": "0330418e3a7960c26bf84ab9f88ede2651c80eff",
+  "workflow": 38248774350,
+  "deployment": "security and publish succeeded",
+  "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l02/",
+  "browser": [
+    {
+      "width": 1440,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 1440,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 900,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 390,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "width": 320,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 2,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "searchPages": 34,
+      "keyboardCopies": 4
+    },
+    {
+      "noJavaScript": true,
+      "allInternalLinks": true,
+      "downloadsExact": true,
+      "errors": []
+    },
+    {
+      "zoomEquivalent": "720 CSS pixels at scale 2 for a 1440-pixel display",
+      "passed": true
+    }
+  ],
+  "bytes": {
+    "teaching_fragment_exact": true,
+    "linked_build_assets_200": true,
+    "files": [
+      {
+        "file": "notebooks/p101-u03-l02.ipynb",
+        "sha256": "80c15e473b678795543a1e1f137be1ef96545ce080c3754948e1b72fc04e3fde"
+      },
+      {
+        "file": "notebooks/p101-u03-l02.py",
+        "sha256": "d4da343ce10d1bcb1ecb9c88641a1a0985c3036c759c3db00aaf7a8f7a0219f7"
+      },
+      {
+        "file": "notebooks/p101-u03-l02.csv",
+        "sha256": "7a678b2ae187b3a3db90e9c56ed24bb2a5221663e02514d71604cb172d696d0e"
+      },
+      {
+        "file": "notebooks/p101-u03-l02-metadata.txt",
+        "sha256": "be25668e5d9dc7d3d115015207f421f81aee8d875e40817e114df1e2f7686864"
+      },
+      {
+        "file": "notebooks/p101-u03-l02.zip",
+        "sha256": "af51a6c6f7bb3ee60583a5302fd0de63a410b8062b83d46a8a3ac86d423e929f"
+      },
+      {
+        "file": "teaching/p101/u03/star-trails.jpg",
+        "sha256": "331af464e0ebfa38720b0c18859ab5bec78d46dcbf10897f9859980363f8d9db"
+      },
+      {
+        "file": "teaching/p101/u03/carriage-matplotlib.png",
+        "sha256": "7598d6ff4e9e8a268b45a73999e3bd44ee791dbd53a1821dfb8840af0d3e446b"
+      },
+      {
+        "file": "teaching/p101/u03/table-rail-graph.svg",
+        "sha256": "a2a4f9d31114b84036fc5e5027af9c19f4ab21c57e1568716155a5c768de4ac0"
+      },
+      {
+        "file": "teaching/p101/u03/possible-histories.svg",
+        "sha256": "6cf1bc7053475b180528a2b4cf48c50c0dc415b616e8f3f52eb3b19c39d98c44"
+      },
+      {
+        "file": "teaching/p101/u03/same-gradient.svg",
+        "sha256": "4f36b3557d22e43b4afc2027b397a06d3247e4a14a28c30549b25de2b8341fcf"
+      }
+    ]
+  },
+  "scope": "Only P101 U03-L02 newly available. L03\u2013L05 remain outlines. Newer M101 teaching preserved. No learner records changed."
+}
