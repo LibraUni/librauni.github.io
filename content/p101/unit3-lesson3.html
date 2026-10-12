@@ -1,0 +1,1987 @@
+<div class="eyebrow">P101 · Block 1 · Unit 3 · Lesson 3</div><h1>Comparing a model with observations</h1>
+<p class="opening">A model earns its usefulness by making a definite prediction. A comparison becomes informative when we can say exactly where that prediction agrees with the record, where it disagrees, and what the difference allows us to conclude.</p>
+<p>Lesson 2 turned four time–position pairs into a graph. We deliberately left the observed points unjoined because they did not specify a continuous history. Now we will draw a line with a different role: it will represent an explicitly stated constant-velocity model. We can then compare its predictions with the observations at the same times. The gaps between them will become a second graph, one designed to make disagreement easier to inspect.</p>
+<p>Allow four hours: 60 minutes for explanation and examples, 90 for written activities, 60 for Python and 30 for feedback and corrections. Activity 3.18 is the Python hour. You will reuse Lesson 2’s arrays and plotting ideas and Lesson 1’s signed rates; no regression method or calculus is needed. Our numerical records remain invented teaching cases. They let us check reasoning and code, but they cannot establish how a real carriage behaves.</p>
+<p><a href="/notebooks/p101-u03-l03.zip" download>Download the working folder</a>, containing the <a href="/notebooks/p101-u03-l03.ipynb" download>notebook</a>, <a href="/notebooks/p101-u03-l03.py" download>Python companion</a>, <a href="/notebooks/p101-u03-l03.csv" download>CSV</a> and <a href="/notebooks/p101-u03-l03-metadata.txt" download>metadata</a>. Extract it and keep these files together. The CSV repeats the unchanged four pairs from Lessons 1–2.</p>
+<section class="chapter" id="P101-U03-L03-S01"><h2>3.13 Turn a rate into a prediction</h2>
+<p>Recall the invented record P101-U03-L01-A. At clock readings 10, 14, 16 and 19 s, the marked point has positions −2, 4, 4 and 1 m respectively. The rail origin is fixed, and rightwards is positive. Between the first two readings, A and B, position changes by +6 m in 4 s. The average velocity over that interval is therefore +1.5 m/s.</p>
+<p>Suppose we ask what would happen if the carriage maintained that velocity. This is a new assumption, stronger than the average-rate calculation. A constant velocity of +1.5 m/s predicts an additional 1.5 m of displacement for each second that passes. Starting at −2 m when the clock reads 10 s, we add that predicted displacement to the starting position. The time to multiply by the velocity is the elapsed time since 10 s, not the clock reading itself.</p>
+<p>We can express the reasoning for any chosen reference event. Let <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>t</mi><mtext>ref</mtext></msub></math> denote its clock reading, <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mtext>ref</mtext></msub></math> its position, and <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>v</mi></math> the assumed constant velocity. The predicted position at clock reading <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math> is</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>x</mi><mtext>pred</mtext></msub><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msub><mi>x</mi><mtext>ref</mtext></msub><mo>+</mo><mi>v</mi><mrow><mo>(</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mtext>ref</mtext></msub><mo>)</mo></mrow></math></div>
+<p>The subscript “pred” identifies a predicted value. The notation <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mtext>pred</mtext></msub><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></math> means “the model’s predicted position at time <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math>”; the parentheses indicate an input to the prediction, not multiplication. The term <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>−</mo><msub><mi>t</mi><mtext>ref</mtext></msub></math> is elapsed time from the reference event. Multiplying it by velocity gives a displacement, with units of metres, which can be added to the reference position.</p>
+<div class="important"><h4>Model M1 · Continue the A–B rate</h4><p>Use reference time 10 s, reference position −2 m and constant velocity +1.5 m/s. The rate was calculated from A and B. Apply the same rule at C and D as a test of continuing it across the rest of the supplied record. The rule assumes one straight coordinate axis, an unchanged clock and velocity that does not change during the interval being modelled.</p></div>
+<div class="example" id="p101-u03-example-09"><h4>Example 3.9 · Predict before comparing</h4><p><strong>Question.</strong> What position does M1 predict at the time of C, 16 s?</p><p><strong>Working.</strong> The elapsed time since A is 16 s − 10 s = 6 s. At the assumed velocity, the predicted displacement is +9 m. Add it to the reference position:</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable columnalign="right left"><mtr><mtd><msub><mi>x</mi><mtext>pred</mtext></msub><mrow><mo>(</mo><mn>16</mn><mspace width="0.2em"/><mtext>s</mtext><mo>)</mo></mrow></mtd><mtd><mo>=</mo><mo>−</mo><mn>2</mn><mspace width="0.2em"/><mtext>m</mtext><mo>+</mo><mn>9</mn><mspace width="0.2em"/><mtext>m</mtext></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mn>7</mn><mspace width="0.2em"/><mtext>m</mtext></mtd></mtr></mtable></math></div><p><strong>Interpretation.</strong> M1 predicts position 7 m. This is a prediction at the time of C; it is not a replacement for C’s recorded position of 4 m. Keeping both numbers is precisely what makes a comparison possible.</p></div>
+<p>At A the model returns −2 m because the elapsed time is zero. At B it returns 4 m because we chose its velocity from A and B. Those agreements are useful checks of substitution and programming, but they are built into the construction. They are not independent evidence that the velocity remained constant, even between A and B. Another motion history could pass through both endpoints.</p>
+<div class="activity" id="p101-u03-activity-13"><h4>Activity 3.13 · State the assumption behind the number</h4><p>Allow 15 minutes. Calculate M1’s prediction at 12 s and at D’s time, 19 s. Show the elapsed time, predicted displacement and predicted position for each. A student multiplies 1.5 m/s by 19 s and then adds −2 m. Explain the error. Finally, identify which of A–D were used to choose M1 and which provide additional comparisons.</p><details><summary>Hint for Activity 3.13</summary><p>At the reference time, the predicted displacement from the reference event must be zero. Use that limiting case to check the expression before calculating.</p></details><details><summary>Discussion of Activity 3.13</summary><p>At 12 s, 2 s have elapsed: predicted displacement is +3 m and position is 1 m. At 19 s, 9 s have elapsed: displacement is +13.5 m and position is 11.5 m. Multiplying by the full clock reading wrongly counts motion during the ten seconds before the reference event. It would even predict a nonzero displacement from A at A itself. A supplies the anchor; A and B supply the velocity. C and D are additional checks of that chosen rule, although the whole record is invented rather than experimental evidence.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L03-S02"><h2>3.14 Measure the disagreement</h2>
+<p>At C, the observation is 4 m and M1 predicts 7 m. The observation lies 3 m below the prediction on the position–time graph. To record both the size and direction of the disagreement, we subtract predicted position from observed position. This signed difference is called a <strong>residual</strong>. We will use the letter <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi></math>:</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>r</mi><mo>=</mo><msub><mi>x</mi><mtext>obs</mtext></msub><mo>−</mo><msub><mi>x</mi><mtext>pred</mtext></msub></math></div>
+<p>The two positions must refer to the same time, origin, direction and units. The residual has the same unit as position: metres in this lesson. A positive residual means the observed position is more positive than the predicted position; a negative residual means it is less positive. “More positive” is safer than “farther from the origin”: for example, −1 m is more positive than −3 m, but closer to the origin.</p>
+<div class="example" id="p101-u03-example-10"><h4>Example 3.10 · Keep the sign of the gap</h4><p><strong>Question.</strong> Calculate the residual at C and compare it with a separate invented case whose observed position is −1 m and predicted position is −3 m.</p><p><strong>Working.</strong> At C, subtract the 7 m prediction from the 4 m observation. In the separate case, subtract the whole negative prediction:</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>r</mi><mtext>C</mtext></msub><mo>=</mo><mn>4</mn><mspace width="0.2em"/><mtext>m</mtext><mo>−</mo><mn>7</mn><mspace width="0.2em"/><mtext>m</mtext><mo>=</mo><mo>−</mo><mn>3</mn><mspace width="0.2em"/><mtext>m</mtext></math></div><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>r</mi><mo>=</mo><mo>−</mo><mn>1</mn><mspace width="0.2em"/><mtext>m</mtext><mo>−</mo><mrow><mo>(</mo><mo>−</mo><mn>3</mn><mspace width="0.2em"/><mtext>m</mtext><mo>)</mo></mrow><mo>=</mo><mo>+</mo><mn>2</mn><mspace width="0.2em"/><mtext>m</mtext></math></div><p><strong>Interpretation.</strong> C lies below M1’s line, giving a negative residual. The separate observation is 2 m more positive than its prediction, giving a positive residual even though both positions are negative. Taking an absolute value immediately would hide this distinction.</p></div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Observed positions, M1 predictions and residuals"><table><caption>The same four observations compared with Model M1. Residual = observed position − predicted position.</caption><thead><tr><th scope="col">Event</th><th scope="col">Time / s</th><th scope="col">Observed / m</th><th scope="col">Predicted / m</th><th scope="col">Residual / m</th></tr></thead><tbody><tr><th scope="row">A</th><td>10</td><td>−2</td><td>−2</td><td>0</td></tr><tr><th scope="row">B</th><td>14</td><td>4</td><td>4</td><td>0</td></tr><tr><th scope="row">C</th><td>16</td><td>4</td><td>7</td><td>−3</td></tr><tr><th scope="row">D</th><td>19</td><td>1</td><td>11.5</td><td>−10.5</td></tr></tbody></table></div>
+<p>A residual is a disagreement with a chosen model, not automatically a measurement error. Measurement error concerns the difference between a measured value and the quantity’s true value, which is usually not exactly known. A model prediction is not guaranteed to be that true value. A nonzero residual could involve limitations of the model, the measuring procedure, the recorded data or the calculation. Its sign alone does not tell us which.</p>
+<p>Nor is a residual a velocity. The residual −10.5 m at D says that D’s position is 10.5 m less positive than M1 predicts at 19 s. It does not say the carriage is moving at −10.5 m/s. We have compared two positions at one time; we have not divided a change of position by a time interval.</p>
+<div class="activity" id="p101-u03-activity-14"><h4>Activity 3.14 · Read a residual both ways</h4><p>Allow 15 minutes. For a separate invented observation, the predicted position is −2 m and the residual is +0.6 m. Recover the observed position and explain its location relative to the prediction. Then calculate D’s residual for M1. A report calls it “the true measurement error” and deletes D from the CSV. Give two reasons why that response is unjustified.</p><details><summary>Hint for Activity 3.14</summary><p>Rearrange the definition in words: observed = predicted + residual. A disagreement is a reason to inspect an observation and its assumptions, not evidence by itself that the observation is invalid.</p></details><details><summary>Discussion of Activity 3.14</summary><p>The separate observed position is −2 m + 0.6 m = −1.4 m: 0.6 m more positive than predicted. For D, 1 m − 11.5 m = −10.5 m. Calling this a true error assumes without evidence that the model gives the true position. Deleting D would also discard a supplied observation solely because it challenges the model. Preserve the raw record, check the transcription and calculation, and report the disagreement. In this invented case the given positions are stipulated exactly; there is no instrument whose error has been measured.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L03-S03"><h2>3.15 Read the pattern without inventing a cause</h2>
+<p>The upper panel of Figure 3.10 places M1 and the observed points on the same axes. The vertical gaps at the sample times are the residuals. The lower panel plots those gaps against time, with zero as a reference. It removes the model’s rising trend from the display, allowing the remaining disagreement to be inspected directly.</p>
+<figure id="p101-u03-figure-10"><div class="diagram generated-plot" tabindex="0" role="region" aria-label="Position comparison and signed residuals; scroll horizontally if needed"><svg role="img" aria-labelledby="fig10title fig10desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 540" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="fig10title">Position comparison and signed residuals</title><desc id="fig10desc">At times ten, fourteen, sixteen and nineteen seconds, observed positions are minus two, four, four and one metres. M1 predicts minus two, four, seven and eleven point five. Residuals are zero, zero, minus three and minus ten point five metres.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="f10-figure_1">
+  <g id="f10-patch_1">
+   <path d="M 0 540
+L 576 540
+L 576 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="f10-axes_1">
+   <g id="f10-patch_2">
+    <path d="M 51.326802 253.408979
+L 565.36476 253.408979
+L 565.36476 18.878209
+L 51.326802 18.878209
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f10-matplotlib.axis_1">
+    <g id="f10-xtick_1">
+     <g id="f10-line2d_1">
+      <path d="M 98.057526 253.408979
+L 98.057526 18.878209
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_2">
+      <defs>
+       <path id="f10-m8a6d5fc27f" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="98.057526" y="253.408979" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f10-xtick_2">
+     <g id="f10-line2d_3">
+      <path d="M 191.518973 253.408979
+L 191.518973 18.878209
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_4">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="191.518973" y="253.408979" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f10-xtick_3">
+     <g id="f10-line2d_5">
+      <path d="M 284.98042 253.408979
+L 284.98042 18.878209
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_6">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="284.98042" y="253.408979" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f10-xtick_4">
+     <g id="f10-line2d_7">
+      <path d="M 378.441866 253.408979
+L 378.441866 18.878209
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_8">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="378.441866" y="253.408979" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f10-xtick_5">
+     <g id="f10-line2d_9">
+      <path d="M 471.903313 253.408979
+L 471.903313 18.878209
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_10">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="471.903313" y="253.408979" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f10-xtick_6">
+     <g id="f10-line2d_11">
+      <path d="M 565.36476 253.408979
+L 565.36476 18.878209
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_12">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="565.36476" y="253.408979" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="f10-matplotlib.axis_2">
+    <g id="f10-ytick_1">
+     <g id="f10-line2d_13">
+      <path d="M 51.326802 242.748489
+L 565.36476 242.748489
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_14">
+      <defs>
+       <path id="f10-m646b12a475" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="242.748489" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="247.307083" transform="rotate(-0 44.326802 247.307083)">−2</text>
+     </g>
+    </g>
+    <g id="f10-ytick_2">
+     <g id="f10-line2d_15">
+      <path d="M 51.326802 211.161854
+L 565.36476 211.161854
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_16">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="211.161854" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="215.720447" transform="rotate(-0 44.326802 215.720447)">0</text>
+     </g>
+    </g>
+    <g id="f10-ytick_3">
+     <g id="f10-line2d_17">
+      <path d="M 51.326802 179.575218
+L 565.36476 179.575218
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_18">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="179.575218" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="184.133812" transform="rotate(-0 44.326802 184.133812)">2</text>
+     </g>
+    </g>
+    <g id="f10-ytick_4">
+     <g id="f10-line2d_19">
+      <path d="M 51.326802 147.988582
+L 565.36476 147.988582
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_20">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="147.988582" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="152.547176" transform="rotate(-0 44.326802 152.547176)">4</text>
+     </g>
+    </g>
+    <g id="f10-ytick_5">
+     <g id="f10-line2d_21">
+      <path d="M 51.326802 116.401946
+L 565.36476 116.401946
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_22">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="116.401946" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="120.96054" transform="rotate(-0 44.326802 120.96054)">6</text>
+     </g>
+    </g>
+    <g id="f10-ytick_6">
+     <g id="f10-line2d_23">
+      <path d="M 51.326802 84.815311
+L 565.36476 84.815311
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_24">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="84.815311" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="89.373905" transform="rotate(-0 44.326802 89.373905)">8</text>
+     </g>
+    </g>
+    <g id="f10-ytick_7">
+     <g id="f10-line2d_25">
+      <path d="M 51.326802 53.228675
+L 565.36476 53.228675
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_26">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="53.228675" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="57.787269" transform="rotate(-0 44.326802 57.787269)">10</text>
+     </g>
+    </g>
+    <g id="f10-ytick_8">
+     <g id="f10-line2d_27">
+      <path d="M 51.326802 21.642039
+L 565.36476 21.642039
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_28">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="21.642039" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="26.200633" transform="rotate(-0 44.326802 26.200633)">12</text>
+     </g>
+    </g>
+    <g id="f10-text_9">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="19.753365" y="136.143594" transform="rotate(-90 19.753365 136.143594)">Position / m</text>
+    </g>
+   </g>
+   <g id="f10-line2d_29">
+    <path d="M 98.057526 242.748489
+L 284.98042 147.988582
+L 378.441866 100.608629
+L 518.634037 29.538698
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #995a26; stroke-width: 1.5"/>
+   </g>
+   <g id="f10-LineCollection_1">
+    <path d="M 98.057526 242.748489
+L 98.057526 242.748489
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke-dasharray: 2,3.3; stroke-dashoffset: 0; stroke: #657883; stroke-width: 2"/>
+   </g>
+   <g id="f10-LineCollection_2">
+    <path d="M 284.98042 147.988582
+L 284.98042 147.988582
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke-dasharray: 2,3.3; stroke-dashoffset: 0; stroke: #657883; stroke-width: 2"/>
+   </g>
+   <g id="f10-LineCollection_3">
+    <path d="M 378.441866 147.988582
+L 378.441866 100.608629
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke-dasharray: 2,3.3; stroke-dashoffset: 0; stroke: #657883; stroke-width: 2"/>
+   </g>
+   <g id="f10-LineCollection_4">
+    <path d="M 518.634037 195.368536
+L 518.634037 29.538698
+" clip-path="url(#f10-p7f9a7d5f14)" style="fill: none; stroke-dasharray: 2,3.3; stroke-dashoffset: 0; stroke: #657883; stroke-width: 2"/>
+   </g>
+   <g id="f10-patch_3">
+    <path d="M 51.326802 253.408979
+L 51.326802 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_4">
+    <path d="M 565.36476 253.408979
+L 565.36476 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_5">
+    <path d="M 51.326802 253.408979
+L 565.36476 253.408979
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_6">
+    <path d="M 51.326802 18.878209
+L 565.36476 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-text_10">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="105.057526" y="235.748489" transform="rotate(-0 105.057526 235.748489)">A</text>
+   </g>
+   <g id="f10-text_11">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="291.98042" y="140.988582" transform="rotate(-0 291.98042 140.988582)">B</text>
+   </g>
+   <g id="f10-text_12">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="385.441866" y="140.988582" transform="rotate(-0 385.441866 140.988582)">C</text>
+   </g>
+   <g id="f10-text_13">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="525.634037" y="188.368536" transform="rotate(-0 525.634037 188.368536)">D</text>
+   </g>
+   <g id="f10-text_14">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="308.345781" y="12.878209" transform="rotate(-0 308.345781 12.878209)">One model, four comparisons</text>
+   </g>
+   <g id="f10-line2d_30">
+    <defs>
+     <path id="f10-m1266e49b2f" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f10-p7f9a7d5f14)">
+     <use xlink:href="#f10-m1266e49b2f" x="98.057526" y="242.748489" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f10-m1266e49b2f" x="284.98042" y="147.988582" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f10-m1266e49b2f" x="378.441866" y="147.988582" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f10-m1266e49b2f" x="518.634037" y="195.368536" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f10-legend_1">
+    <g id="f10-patch_7">
+     <path d="M 58.326802 56.879771
+L 207.064302 56.879771
+Q 209.064302 56.879771 209.064302 54.879771
+L 209.064302 25.878209
+Q 209.064302 23.878209 207.064302 23.878209
+L 58.326802 23.878209
+Q 56.326802 23.878209 56.326802 25.878209
+L 56.326802 54.879771
+Q 56.326802 56.879771 58.326802 56.879771
+z
+" style="fill: #f3f6f2; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
+    </g>
+    <g id="f10-line2d_31">
+     <g>
+      <use xlink:href="#f10-m1266e49b2f" x="70.326802" y="31.976646" style="fill: #216b68; stroke: #216b68"/>
+     </g>
+    </g>
+    <g id="f10-text_15">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="88.326802" y="35.476646" transform="rotate(-0 88.326802 35.476646)">Supplied observations</text>
+    </g>
+    <g id="f10-line2d_32">
+     <path d="M 60.326802 46.977428
+L 70.326802 46.977428
+L 80.326802 46.977428
+" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #995a26; stroke-width: 1.5"/>
+    </g>
+    <g id="f10-text_16">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="88.326802" y="50.477428" transform="rotate(-0 88.326802 50.477428)">M1: continued A–B rate</text>
+    </g>
+   </g>
+  </g>
+  <g id="f10-axes_2">
+   <g id="f10-patch_8">
+    <path d="M 51.326802 501.998823
+L 565.36476 501.998823
+L 565.36476 267.468053
+L 51.326802 267.468053
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f10-matplotlib.axis_3">
+    <g id="f10-xtick_7">
+     <g id="f10-line2d_33">
+      <path d="M 98.057526 501.998823
+L 98.057526 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_34">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="98.057526" y="501.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_17">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="98.057526" y="518.11601" transform="rotate(-0 98.057526 518.11601)">10</text>
+     </g>
+    </g>
+    <g id="f10-xtick_8">
+     <g id="f10-line2d_35">
+      <path d="M 191.518973 501.998823
+L 191.518973 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_36">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="191.518973" y="501.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_18">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="191.518973" y="518.11601" transform="rotate(-0 191.518973 518.11601)">12</text>
+     </g>
+    </g>
+    <g id="f10-xtick_9">
+     <g id="f10-line2d_37">
+      <path d="M 284.98042 501.998823
+L 284.98042 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_38">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="284.98042" y="501.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_19">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="284.98042" y="518.11601" transform="rotate(-0 284.98042 518.11601)">14</text>
+     </g>
+    </g>
+    <g id="f10-xtick_10">
+     <g id="f10-line2d_39">
+      <path d="M 378.441866 501.998823
+L 378.441866 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_40">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="378.441866" y="501.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_20">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="378.441866" y="518.11601" transform="rotate(-0 378.441866 518.11601)">16</text>
+     </g>
+    </g>
+    <g id="f10-xtick_11">
+     <g id="f10-line2d_41">
+      <path d="M 471.903313 501.998823
+L 471.903313 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_42">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="471.903313" y="501.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_21">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="471.903313" y="518.11601" transform="rotate(-0 471.903313 518.11601)">18</text>
+     </g>
+    </g>
+    <g id="f10-xtick_12">
+     <g id="f10-line2d_43">
+      <path d="M 565.36476 501.998823
+L 565.36476 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_44">
+      <g>
+       <use xlink:href="#f10-m8a6d5fc27f" x="565.36476" y="501.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_22">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="565.36476" y="518.11601" transform="rotate(-0 565.36476 518.11601)">20</text>
+     </g>
+    </g>
+    <g id="f10-text_23">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="308.345781" y="534.116948" transform="rotate(-0 308.345781 534.116948)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="f10-matplotlib.axis_4">
+    <g id="f10-ytick_9">
+     <g id="f10-line2d_45">
+      <path d="M 51.326802 501.998822
+L 565.36476 501.998822
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_46">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="501.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_24">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="506.557416" transform="rotate(-0 44.326802 506.557416)">−12</text>
+     </g>
+    </g>
+    <g id="f10-ytick_10">
+     <g id="f10-line2d_47">
+      <path d="M 51.326802 468.494427
+L 565.36476 468.494427
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_48">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="468.494427" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_25">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="473.053021" transform="rotate(-0 44.326802 473.053021)">−10</text>
+     </g>
+    </g>
+    <g id="f10-ytick_11">
+     <g id="f10-line2d_49">
+      <path d="M 51.326802 434.990031
+L 565.36476 434.990031
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_50">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="434.990031" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_26">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="439.548625" transform="rotate(-0 44.326802 439.548625)">−8</text>
+     </g>
+    </g>
+    <g id="f10-ytick_12">
+     <g id="f10-line2d_51">
+      <path d="M 51.326802 401.485635
+L 565.36476 401.485635
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_52">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="401.485635" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_27">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="406.044229" transform="rotate(-0 44.326802 406.044229)">−6</text>
+     </g>
+    </g>
+    <g id="f10-ytick_13">
+     <g id="f10-line2d_53">
+      <path d="M 51.326802 367.98124
+L 565.36476 367.98124
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_54">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="367.98124" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_28">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="372.539833" transform="rotate(-0 44.326802 372.539833)">−4</text>
+     </g>
+    </g>
+    <g id="f10-ytick_14">
+     <g id="f10-line2d_55">
+      <path d="M 51.326802 334.476844
+L 565.36476 334.476844
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_56">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="334.476844" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_29">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="339.035438" transform="rotate(-0 44.326802 339.035438)">−2</text>
+     </g>
+    </g>
+    <g id="f10-ytick_15">
+     <g id="f10-line2d_57">
+      <path d="M 51.326802 300.972448
+L 565.36476 300.972448
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_58">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="300.972448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_30">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="305.531042" transform="rotate(-0 44.326802 305.531042)">0</text>
+     </g>
+    </g>
+    <g id="f10-ytick_16">
+     <g id="f10-line2d_59">
+      <path d="M 51.326802 267.468053
+L 565.36476 267.468053
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.25; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f10-line2d_60">
+      <g>
+       <use xlink:href="#f10-m646b12a475" x="51.326802" y="267.468053" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f10-text_31">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="44.326802" y="272.026646" transform="rotate(-0 44.326802 272.026646)">2</text>
+     </g>
+    </g>
+    <g id="f10-text_32">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="384.733438" transform="rotate(-90 12.118365 384.733438)">Residual / m</text>
+    </g>
+   </g>
+   <g id="f10-line2d_61">
+    <g clip-path="url(#f10-pa53807899e)">
+     <use xlink:href="#f10-m1266e49b2f" x="98.057526" y="300.972448" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f10-m1266e49b2f" x="284.98042" y="300.972448" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f10-m1266e49b2f" x="378.441866" y="351.229042" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f10-m1266e49b2f" x="518.634037" y="476.870526" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f10-line2d_62">
+    <path d="M 51.326802 300.972448
+L 565.36476 300.972448
+" clip-path="url(#f10-pa53807899e)" style="fill: none; stroke: #64736c; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_9">
+    <path d="M 51.326802 501.998822
+L 51.326802 267.468053
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_10">
+    <path d="M 565.36476 501.998822
+L 565.36476 267.468053
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_11">
+    <path d="M 51.326802 501.998823
+L 565.36476 501.998823
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-patch_12">
+    <path d="M 51.326802 267.468053
+L 565.36476 267.468053
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f10-text_33">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="105.057526" y="293.972448" transform="rotate(-0 105.057526 293.972448)">A</text>
+   </g>
+   <g id="f10-text_34">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="291.98042" y="293.972448" transform="rotate(-0 291.98042 293.972448)">B</text>
+   </g>
+   <g id="f10-text_35">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="385.441866" y="344.229042" transform="rotate(-0 385.441866 344.229042)">C</text>
+   </g>
+   <g id="f10-text_36">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="525.634037" y="469.870526" transform="rotate(-0 525.634037 469.870526)">D</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="f10-p7f9a7d5f14">
+   <rect x="51.326802" y="18.878209" width="514.037958" height="234.53077"/>
+  </clipPath>
+  <clipPath id="f10-pa53807899e">
+   <rect x="51.326802" y="267.468053" width="514.037958" height="234.53077"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.10.</b> The upper dotted vertical gaps compare positions at the same times. The lower points show their signed differences, observed minus predicted, on the same time scale. M1 agrees at A and B by construction, then lies above C and D. <span class="media-credit">Original LibraUni figure · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>Read the panels together. At A and B the residuals are zero, as the construction requires. At C and D the residuals are negative, with a larger negative value at D. M1 continues increasing at the A–B rate while the recorded position first stays at the same sampled value and then decreases. The rule therefore fails to reproduce the complete stipulated record. We do not need a statistical test to see that exact disagreement in an invented example.</p>
+<p>A real experiment requires an additional judgement: how large are the discrepancies compared with the measurement limitations and the accuracy needed for the task? A small nonzero residual may be unsurprising when readings have limited resolution or repeatability. A residual plot alone cannot supply those limits. Here no instrument uncertainty has been provided, so we will not attach a probability, call a difference “statistically significant”, or decide a numerical acceptance threshold.</p>
+<p>Some patterns suggest useful questions. Residuals clustered around a positive value might make us check the position origin or the model’s reference position. Residuals that steadily become more positive might make us check the assumed rate, or whether a clock or scale is behaving as expected. Curvature suggests that one fixed rate may be missing a change across the interval. These are leads for investigation, not diagnoses established by a shape.</p>
+<figure id="p101-u03-figure-11"><div class="diagram generated-plot" tabindex="0" role="region" aria-label="Three constructed residual sequences; scroll horizontally if needed"><svg role="img" aria-labelledby="fig11title fig11desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 590.4" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="fig11title">Three constructed residual sequences</title><desc id="fig11desc">At elapsed times zero to five seconds: A has residual zero point two metres throughout; B has zero, point one, point two, point three, point four, point five; C has zero, point one, point four, point nine, one point six, two point five metres. All panels use the same vertical scale.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="f11-figure_1">
+  <g id="f11-patch_1">
+   <path d="M 0 590.4
+L 576 590.4
+L 576 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="f11-axes_1">
+   <g id="f11-patch_2">
+    <path d="M 45.084927 179.799448
+L 572.99976 179.799448
+L 572.99976 18.878209
+L 45.084927 18.878209
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f11-matplotlib.axis_1">
+    <g id="f11-xtick_1">
+     <g id="f11-line2d_1">
+      <path d="M 69.081056 179.799448
+L 69.081056 18.878209
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_2">
+      <defs>
+       <path id="f11-m8a6d5fc27f" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="69.081056" y="179.799448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_2">
+     <g id="f11-line2d_3">
+      <path d="M 165.065571 179.799448
+L 165.065571 18.878209
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_4">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="165.065571" y="179.799448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_3">
+     <g id="f11-line2d_5">
+      <path d="M 261.050086 179.799448
+L 261.050086 18.878209
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_6">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="261.050086" y="179.799448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_4">
+     <g id="f11-line2d_7">
+      <path d="M 357.034601 179.799448
+L 357.034601 18.878209
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_8">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="357.034601" y="179.799448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_5">
+     <g id="f11-line2d_9">
+      <path d="M 453.019116 179.799448
+L 453.019116 18.878209
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_10">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="453.019116" y="179.799448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_6">
+     <g id="f11-line2d_11">
+      <path d="M 549.003631 179.799448
+L 549.003631 18.878209
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_12">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="549.003631" y="179.799448" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="f11-matplotlib.axis_2">
+    <g id="f11-ytick_1">
+     <g id="f11-line2d_13">
+      <path d="M 45.084927 169.071365
+L 572.99976 169.071365
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_14">
+      <defs>
+       <path id="f11-m646b12a475" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="169.071365" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="173.629959" transform="rotate(-0 38.084927 173.629959)">0.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_2">
+     <g id="f11-line2d_15">
+      <path d="M 45.084927 142.251158
+L 572.99976 142.251158
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_16">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="142.251158" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="146.809752" transform="rotate(-0 38.084927 146.809752)">0.5</text>
+     </g>
+    </g>
+    <g id="f11-ytick_3">
+     <g id="f11-line2d_17">
+      <path d="M 45.084927 115.430952
+L 572.99976 115.430952
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_18">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="115.430952" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="119.989546" transform="rotate(-0 38.084927 119.989546)">1.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_4">
+     <g id="f11-line2d_19">
+      <path d="M 45.084927 88.610746
+L 572.99976 88.610746
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_20">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="88.610746" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="93.169339" transform="rotate(-0 38.084927 93.169339)">1.5</text>
+     </g>
+    </g>
+    <g id="f11-ytick_5">
+     <g id="f11-line2d_21">
+      <path d="M 45.084927 61.790539
+L 572.99976 61.790539
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_22">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="61.790539" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="66.349133" transform="rotate(-0 38.084927 66.349133)">2.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_6">
+     <g id="f11-line2d_23">
+      <path d="M 45.084927 34.970333
+L 572.99976 34.970333
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_24">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="34.970333" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="39.528926" transform="rotate(-0 38.084927 39.528926)">2.5</text>
+     </g>
+    </g>
+    <g id="f11-text_7">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="99.338828" transform="rotate(-90 12.118365 99.338828)">Residual / m</text>
+    </g>
+   </g>
+   <g id="f11-line2d_25">
+    <defs>
+     <path id="f11-m1266e49b2f" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f11-p04165feb8a)">
+     <use xlink:href="#f11-m1266e49b2f" x="69.081056" y="158.343282" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="165.065571" y="158.343282" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="261.050086" y="158.343282" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="357.034601" y="158.343282" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="453.019116" y="158.343282" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="549.003631" y="158.343282" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f11-line2d_26">
+    <path d="M 45.084927 169.071365
+L 572.99976 169.071365
+" clip-path="url(#f11-p04165feb8a)" style="fill: none; stroke: #65736c; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_3">
+    <path d="M 45.084927 179.799448
+L 45.084927 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_4">
+    <path d="M 572.99976 179.799448
+L 572.99976 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_5">
+    <path d="M 45.084927 179.799448
+L 572.99976 179.799448
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_6">
+    <path d="M 45.084927 18.878209
+L 572.99976 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-text_8">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="309.042344" y="12.878209" transform="rotate(-0 309.042344 12.878209)">A · constant offset</text>
+   </g>
+  </g>
+  <g id="f11-axes_2">
+   <g id="f11-patch_7">
+    <path d="M 45.084927 366.099135
+L 572.99976 366.099135
+L 572.99976 205.177896
+L 45.084927 205.177896
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f11-matplotlib.axis_3">
+    <g id="f11-xtick_7">
+     <g id="f11-line2d_27">
+      <path d="M 69.081056 366.099135
+L 69.081056 205.177896
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_28">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="69.081056" y="366.099135" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_8">
+     <g id="f11-line2d_29">
+      <path d="M 165.065571 366.099135
+L 165.065571 205.177896
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_30">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="165.065571" y="366.099135" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_9">
+     <g id="f11-line2d_31">
+      <path d="M 261.050086 366.099135
+L 261.050086 205.177896
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_32">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="261.050086" y="366.099135" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_10">
+     <g id="f11-line2d_33">
+      <path d="M 357.034601 366.099135
+L 357.034601 205.177896
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_34">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="357.034601" y="366.099135" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_11">
+     <g id="f11-line2d_35">
+      <path d="M 453.019116 366.099135
+L 453.019116 205.177896
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_36">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="453.019116" y="366.099135" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="f11-xtick_12">
+     <g id="f11-line2d_37">
+      <path d="M 549.003631 366.099135
+L 549.003631 205.177896
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_38">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="549.003631" y="366.099135" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="f11-matplotlib.axis_4">
+    <g id="f11-ytick_7">
+     <g id="f11-line2d_39">
+      <path d="M 45.084927 355.371052
+L 572.99976 355.371052
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_40">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="355.371052" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="359.929646" transform="rotate(-0 38.084927 359.929646)">0.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_8">
+     <g id="f11-line2d_41">
+      <path d="M 45.084927 328.550846
+L 572.99976 328.550846
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_42">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="328.550846" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="333.10944" transform="rotate(-0 38.084927 333.10944)">0.5</text>
+     </g>
+    </g>
+    <g id="f11-ytick_9">
+     <g id="f11-line2d_43">
+      <path d="M 45.084927 301.73064
+L 572.99976 301.73064
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_44">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="301.73064" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="306.289233" transform="rotate(-0 38.084927 306.289233)">1.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_10">
+     <g id="f11-line2d_45">
+      <path d="M 45.084927 274.910433
+L 572.99976 274.910433
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_46">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="274.910433" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="279.469027" transform="rotate(-0 38.084927 279.469027)">1.5</text>
+     </g>
+    </g>
+    <g id="f11-ytick_11">
+     <g id="f11-line2d_47">
+      <path d="M 45.084927 248.090227
+L 572.99976 248.090227
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_48">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="248.090227" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="252.64882" transform="rotate(-0 38.084927 252.64882)">2.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_12">
+     <g id="f11-line2d_49">
+      <path d="M 45.084927 221.27002
+L 572.99976 221.27002
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_50">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="221.27002" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_14">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="225.828614" transform="rotate(-0 38.084927 225.828614)">2.5</text>
+     </g>
+    </g>
+    <g id="f11-text_15">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="285.638516" transform="rotate(-90 12.118365 285.638516)">Residual / m</text>
+    </g>
+   </g>
+   <g id="f11-line2d_51">
+    <g clip-path="url(#f11-pf6babdc366)">
+     <use xlink:href="#f11-m1266e49b2f" x="69.081056" y="355.371052" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="165.065571" y="350.007011" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="261.050086" y="344.64297" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="357.034601" y="339.278929" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="453.019116" y="333.914887" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="549.003631" y="328.550846" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f11-line2d_52">
+    <path d="M 45.084927 355.371052
+L 572.99976 355.371052
+" clip-path="url(#f11-pf6babdc366)" style="fill: none; stroke: #65736c; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_8">
+    <path d="M 45.084927 366.099135
+L 45.084927 205.177896
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_9">
+    <path d="M 572.99976 366.099135
+L 572.99976 205.177896
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_10">
+    <path d="M 45.084927 366.099135
+L 572.99976 366.099135
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_11">
+    <path d="M 45.084927 205.177896
+L 572.99976 205.177896
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-text_16">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="309.042344" y="199.177896" transform="rotate(-0 309.042344 199.177896)">B · steady increase</text>
+   </g>
+  </g>
+  <g id="f11-axes_3">
+   <g id="f11-patch_12">
+    <path d="M 45.084927 552.398822
+L 572.99976 552.398822
+L 572.99976 391.477584
+L 45.084927 391.477584
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f11-matplotlib.axis_5">
+    <g id="f11-xtick_13">
+     <g id="f11-line2d_53">
+      <path d="M 69.081056 552.398822
+L 69.081056 391.477584
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_54">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="69.081056" y="552.398822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_17">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="69.081056" y="568.51601" transform="rotate(-0 69.081056 568.51601)">0</text>
+     </g>
+    </g>
+    <g id="f11-xtick_14">
+     <g id="f11-line2d_55">
+      <path d="M 165.065571 552.398822
+L 165.065571 391.477584
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_56">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="165.065571" y="552.398822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_18">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="165.065571" y="568.51601" transform="rotate(-0 165.065571 568.51601)">1</text>
+     </g>
+    </g>
+    <g id="f11-xtick_15">
+     <g id="f11-line2d_57">
+      <path d="M 261.050086 552.398822
+L 261.050086 391.477584
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_58">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="261.050086" y="552.398822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_19">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="261.050086" y="568.51601" transform="rotate(-0 261.050086 568.51601)">2</text>
+     </g>
+    </g>
+    <g id="f11-xtick_16">
+     <g id="f11-line2d_59">
+      <path d="M 357.034601 552.398822
+L 357.034601 391.477584
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_60">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="357.034601" y="552.398822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_20">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="357.034601" y="568.51601" transform="rotate(-0 357.034601 568.51601)">3</text>
+     </g>
+    </g>
+    <g id="f11-xtick_17">
+     <g id="f11-line2d_61">
+      <path d="M 453.019116 552.398822
+L 453.019116 391.477584
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_62">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="453.019116" y="552.398822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_21">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="453.019116" y="568.51601" transform="rotate(-0 453.019116 568.51601)">4</text>
+     </g>
+    </g>
+    <g id="f11-xtick_18">
+     <g id="f11-line2d_63">
+      <path d="M 549.003631 552.398822
+L 549.003631 391.477584
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_64">
+      <g>
+       <use xlink:href="#f11-m8a6d5fc27f" x="549.003631" y="552.398822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_22">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="549.003631" y="568.51601" transform="rotate(-0 549.003631 568.51601)">5</text>
+     </g>
+    </g>
+    <g id="f11-text_23">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="309.042344" y="584.516948" transform="rotate(-0 309.042344 584.516948)">Elapsed time / s</text>
+    </g>
+   </g>
+   <g id="f11-matplotlib.axis_6">
+    <g id="f11-ytick_13">
+     <g id="f11-line2d_65">
+      <path d="M 45.084927 541.67074
+L 572.99976 541.67074
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_66">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="541.67074" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_24">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="546.229334" transform="rotate(-0 38.084927 546.229334)">0.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_14">
+     <g id="f11-line2d_67">
+      <path d="M 45.084927 514.850533
+L 572.99976 514.850533
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_68">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="514.850533" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_25">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="519.409127" transform="rotate(-0 38.084927 519.409127)">0.5</text>
+     </g>
+    </g>
+    <g id="f11-ytick_15">
+     <g id="f11-line2d_69">
+      <path d="M 45.084927 488.030327
+L 572.99976 488.030327
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_70">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="488.030327" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_26">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="492.588921" transform="rotate(-0 38.084927 492.588921)">1.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_16">
+     <g id="f11-line2d_71">
+      <path d="M 45.084927 461.210121
+L 572.99976 461.210121
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_72">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="461.210121" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_27">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="465.768714" transform="rotate(-0 38.084927 465.768714)">1.5</text>
+     </g>
+    </g>
+    <g id="f11-ytick_17">
+     <g id="f11-line2d_73">
+      <path d="M 45.084927 434.389914
+L 572.99976 434.389914
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_74">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="434.389914" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_28">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="438.948508" transform="rotate(-0 38.084927 438.948508)">2.0</text>
+     </g>
+    </g>
+    <g id="f11-ytick_18">
+     <g id="f11-line2d_75">
+      <path d="M 45.084927 407.569708
+L 572.99976 407.569708
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f11-line2d_76">
+      <g>
+       <use xlink:href="#f11-m646b12a475" x="45.084927" y="407.569708" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f11-text_29">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="38.084927" y="412.128301" transform="rotate(-0 38.084927 412.128301)">2.5</text>
+     </g>
+    </g>
+    <g id="f11-text_30">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="471.938203" transform="rotate(-90 12.118365 471.938203)">Residual / m</text>
+    </g>
+   </g>
+   <g id="f11-line2d_77">
+    <g clip-path="url(#f11-p669bd5fccd)">
+     <use xlink:href="#f11-m1266e49b2f" x="69.081056" y="541.67074" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="165.065571" y="536.306699" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="261.050086" y="520.214575" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="357.034601" y="493.394368" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="453.019116" y="455.846079" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f11-m1266e49b2f" x="549.003631" y="407.569708" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f11-line2d_78">
+    <path d="M 45.084927 541.67074
+L 572.99976 541.67074
+" clip-path="url(#f11-p669bd5fccd)" style="fill: none; stroke: #65736c; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_13">
+    <path d="M 45.084927 552.398823
+L 45.084927 391.477584
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_14">
+    <path d="M 572.99976 552.398823
+L 572.99976 391.477584
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_15">
+    <path d="M 45.084927 552.398822
+L 572.99976 552.398822
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-patch_16">
+    <path d="M 45.084927 391.477584
+L 572.99976 391.477584
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f11-text_31">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="309.042344" y="385.477584" transform="rotate(-0 309.042344 385.477584)">C · curved increase</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="f11-p04165feb8a">
+   <rect x="45.084927" y="18.878209" width="527.914833" height="160.921239"/>
+  </clipPath>
+  <clipPath id="f11-pf6babdc366">
+   <rect x="45.084927" y="205.177896" width="527.914833" height="160.921239"/>
+  </clipPath>
+  <clipPath id="f11-p669bd5fccd">
+   <rect x="45.084927" y="391.477584" width="527.914833" height="160.921239"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.11.</b> These invented sequences isolate a constant offset, a steady increase and curvature. Both axes use common scales across panels. The points illustrate patterns, not proof of a mechanism or a statistical decision rule. <span class="media-credit">Original LibraUni figure · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>The three panels in Figure 3.11 are deliberately constructed residual sequences, not three experiments. They isolate shapes so that you can think about them without random scatter. In actual data a pattern may be weak, mixed with other effects, or produced by too few readings to judge confidently. Even residuals that look irregular and small do not prove the model: missing observations, inappropriate scales or limited coverage may conceal a failure.</p>
+<div class="example" id="p101-u03-example-11"><h4>Example 3.11 · What a changed reference can repair</h4><p><strong>Question.</strong> Suppose every predicted position is increased by 0.2 m, with observations unchanged. What happens to every residual? Could that change remove M1’s whole residual pattern?</p><p><strong>Working.</strong> Each residual is observed minus predicted. Increasing the number subtracted by 0.2 m decreases the residual by 0.2 m. Thus residuals all equal to +0.2 m would become zero. M1’s residuals would instead become −0.2, −0.2, −3.2 and −10.7 m.</p><p><strong>Interpretation.</strong> A fixed position shift moves the residual pattern vertically. It cannot remove the differences between its values. A reference-position adjustment alone cannot make M1 agree with all four exact observations. This is a limited, checkable conclusion; it does not identify the physical cause of the disagreement.</p></div>
+<div class="activity" id="p101-u03-activity-15"><h4>Activity 3.15 · Turn a pattern into a question</h4><p>Allow 20 minutes. In Figure 3.11, which sequence could be made identically zero by one fixed change to the predicted position? Explain why that correction would not remove the other two patterns. For M1’s carriage comparison, write (a) a statement justified directly by the residuals, (b) a possible explanation that needs more evidence, and (c) a useful next check. A colleague says, “The negative residuals prove friction slowed the carriage.” Explain what is missing from that argument.</p><details><summary>Hint for Activity 3.15</summary><p>Separate a description of the plotted differences from an explanation of their cause. A numerical or recording mistake should be checked before a new physical mechanism is asserted.</p></details><details><summary>Discussion of Activity 3.15</summary><p>Only the constant +0.2 m sequence can be removed by adding 0.2 m to every prediction. A shared shift leaves the changes between residuals intact, so it cannot flatten the rising or curved sequences. For the carriage, “C and D lie below M1, with residuals −3 and −10.5 m” is directly supported. “The velocity may not have remained constant after B” is a possible explanation in a physical investigation; so are some failures of the measurement or recording process. A first check is to recompute the predictions and confirm the time/position pairs and units. If those checks passed in a real experiment, additional intermediate readings and a review of the measurement method would help investigate the departure. No forces have been measured here. The residuals cannot identify friction, and a constructed teaching record cannot provide experimental evidence for it.</p></details></div>
+<div class="context"><h4>A wider view · Models still need comparisons</h4><figure class="context-figure" id="p101-u03-figure-12"><img class="context-photo" src="/teaching/p101/u03/wind-tunnel.jpg" width="1041" height="702" alt="A small Space Launch System rocket model is mounted horizontally inside a large wind-tunnel test section."><figcaption><b>Figure 3.12.</b> A scale model of the Space Launch System in an Ames wind tunnel. A physical test model and a mathematical prediction are different tools; the photograph is not the source of our carriage data. Credit: NASA/ARC/Dominic Hart. JPEG recompressed, not cropped. <a href="https://www.nasa.gov/image-article/wind-tunnel-testing-scale-model-of-space-launch-system/">Source</a> · <a href="https://www.nasa.gov/nasa-brand-center/images-and-media/">Reuse terms</a>. No endorsement implied.</figcaption></figure><p>Optional, about two minutes within the reading allowance. Wind tunnels provide controlled conditions in which engineers can collect measurements from physical models. The pictured SLS model was tested at NASA Ames in an 11-by-11-foot tunnel; the source describes design and stability as the purposes of the tests.</p><p>In a separate example, a <a href="https://www.nasa.gov/centers-and-facilities/armstrong/low-speed-wind-tunnel-test-provides-important-data/">2022 account of X-59 forebody tests</a> describes comparing measured airflow with earlier computer predictions. The physics is far beyond our present model, but the distinction is familiar: calculating a prediction and testing it against independently obtained observations are different steps. Our invented examples practise the calculation and interpretation, not that experimental validation.</p></div>
+</section>
+<section class="chapter" id="P101-U03-L03-S04"><h2>3.16 Between the readings and beyond them</h2>
+<p>M1 gives a value at 12 s even though the record has no observation then. Using a model to estimate a value inside a stated interval covered by observations is called <strong>interpolation</strong>. Using it outside that interval is <strong>extrapolation</strong>. Always identify the interval: a word such as “inside” is incomplete until we know inside what.</p>
+<p>For M1, there are two relevant ranges. Its parameters were chosen using A and B, spanning 10–14 s. The complete supplied record spans 10–19 s. Relative to A–B, the prediction at 12 s is interpolation and the prediction at 16 s is extrapolation. Relative to the complete record’s range, 16 s is inside the range—and it is an actual observation time at which we can check M1. These descriptions answer different questions; neither makes the prediction reliable by itself.</p>
+<figure id="p101-u03-figure-13"><div class="diagram generated-plot" tabindex="0" role="region" aria-label="Prediction ranges relative to observations; scroll horizontally if needed"><svg role="img" aria-labelledby="fig13title fig13desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 360" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="fig13title">Prediction ranges relative to observations</title><desc id="fig13desc">Shading marks ten to fourteen seconds used for M1 and fourteen to nineteen with further observations. M1 predicts one metre at twelve seconds and sixteen metres at twenty-two seconds, marked by open squares. Observations remain four filled circles.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="f13-figure_1">
+  <g id="f13-patch_1">
+   <path d="M 0 360
+L 576 360
+L 576 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="f13-axes_1">
+   <g id="f13-patch_2">
+    <path d="M 41.271178 321.998823
+L 572.99976 321.998823
+L 572.99976 18.878209
+L 41.271178 18.878209
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f13-patch_3">
+    <path d="M 79.251791 321.998823
+L 231.174243 321.998823
+L 231.174243 18.878209
+L 79.251791 18.878209
+z
+" clip-path="url(#f13-p2d5122745f)" style="fill: #d9e6da; stroke: #d9e6da; stroke-linejoin: miter"/>
+   </g>
+   <g id="f13-patch_4">
+    <path d="M 231.174243 321.998823
+L 421.077308 321.998823
+L 421.077308 18.878209
+L 231.174243 18.878209
+z
+" clip-path="url(#f13-p2d5122745f)" style="fill: #e9e3d8; stroke: #e9e3d8; stroke-linejoin: miter"/>
+   </g>
+   <g id="f13-matplotlib.axis_1">
+    <g id="f13-xtick_1">
+     <g id="f13-line2d_1">
+      <path d="M 79.251791 321.998823
+L 79.251791 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_2">
+      <defs>
+       <path id="f13-m8a6d5fc27f" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="79.251791" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="79.251791" y="338.11601" transform="rotate(-0 79.251791 338.11601)">10</text>
+     </g>
+    </g>
+    <g id="f13-xtick_2">
+     <g id="f13-line2d_3">
+      <path d="M 155.213017 321.998823
+L 155.213017 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_4">
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="155.213017" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="155.213017" y="338.11601" transform="rotate(-0 155.213017 338.11601)">12</text>
+     </g>
+    </g>
+    <g id="f13-xtick_3">
+     <g id="f13-line2d_5">
+      <path d="M 231.174243 321.998823
+L 231.174243 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_6">
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="231.174243" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="231.174243" y="338.11601" transform="rotate(-0 231.174243 338.11601)">14</text>
+     </g>
+    </g>
+    <g id="f13-xtick_4">
+     <g id="f13-line2d_7">
+      <path d="M 307.135469 321.998823
+L 307.135469 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_8">
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="307.135469" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="307.135469" y="338.11601" transform="rotate(-0 307.135469 338.11601)">16</text>
+     </g>
+    </g>
+    <g id="f13-xtick_5">
+     <g id="f13-line2d_9">
+      <path d="M 383.096695 321.998823
+L 383.096695 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_10">
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="383.096695" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="383.096695" y="338.11601" transform="rotate(-0 383.096695 338.11601)">18</text>
+     </g>
+    </g>
+    <g id="f13-xtick_6">
+     <g id="f13-line2d_11">
+      <path d="M 459.057921 321.998823
+L 459.057921 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_12">
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="459.057921" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="459.057921" y="338.11601" transform="rotate(-0 459.057921 338.11601)">20</text>
+     </g>
+    </g>
+    <g id="f13-xtick_7">
+     <g id="f13-line2d_13">
+      <path d="M 535.019147 321.998823
+L 535.019147 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_14">
+      <g>
+       <use xlink:href="#f13-m8a6d5fc27f" x="535.019147" y="321.998823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="535.019147" y="338.11601" transform="rotate(-0 535.019147 338.11601)">22</text>
+     </g>
+    </g>
+    <g id="f13-text_8">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="307.135469" y="354.116947" transform="rotate(-0 307.135469 354.116947)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="f13-matplotlib.axis_2">
+    <g id="f13-ytick_1">
+     <g id="f13-line2d_15">
+      <path d="M 41.271178 282.461351
+L 572.99976 282.461351
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_16">
+      <defs>
+       <path id="f13-m646b12a475" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f13-m646b12a475" x="41.271178" y="282.461351" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="34.271178" y="287.019945" transform="rotate(-0 34.271178 287.019945)">0</text>
+     </g>
+    </g>
+    <g id="f13-ytick_2">
+     <g id="f13-line2d_17">
+      <path d="M 41.271178 216.565566
+L 572.99976 216.565566
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_18">
+      <g>
+       <use xlink:href="#f13-m646b12a475" x="41.271178" y="216.565566" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="34.271178" y="221.124159" transform="rotate(-0 34.271178 221.124159)">5</text>
+     </g>
+    </g>
+    <g id="f13-ytick_3">
+     <g id="f13-line2d_19">
+      <path d="M 41.271178 150.66978
+L 572.99976 150.66978
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_20">
+      <g>
+       <use xlink:href="#f13-m646b12a475" x="41.271178" y="150.66978" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="34.271178" y="155.228374" transform="rotate(-0 34.271178 155.228374)">10</text>
+     </g>
+    </g>
+    <g id="f13-ytick_4">
+     <g id="f13-line2d_21">
+      <path d="M 41.271178 84.773994
+L 572.99976 84.773994
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_22">
+      <g>
+       <use xlink:href="#f13-m646b12a475" x="41.271178" y="84.773994" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="34.271178" y="89.332588" transform="rotate(-0 34.271178 89.332588)">15</text>
+     </g>
+    </g>
+    <g id="f13-ytick_5">
+     <g id="f13-line2d_23">
+      <path d="M 41.271178 18.878209
+L 572.99976 18.878209
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f13-line2d_24">
+      <g>
+       <use xlink:href="#f13-m646b12a475" x="41.271178" y="18.878209" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f13-text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="34.271178" y="23.436802" transform="rotate(-0 34.271178 23.436802)">20</text>
+     </g>
+    </g>
+    <g id="f13-text_14">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="170.438516" transform="rotate(-90 12.118365 170.438516)">Position / m</text>
+    </g>
+   </g>
+   <g id="f13-line2d_25">
+    <path d="M 79.251791 308.819665
+L 83.855501 306.423455
+L 88.459212 304.027245
+L 93.062923 301.631034
+L 97.666633 299.234824
+L 102.270344 296.838613
+L 106.874055 294.442403
+L 111.477765 292.046193
+L 116.081476 289.649982
+L 120.685187 287.253772
+L 125.288897 284.857562
+L 129.892608 282.461351
+L 134.496319 280.065141
+L 139.100029 277.66893
+L 143.70374 275.27272
+L 148.307451 272.87651
+L 152.911161 270.480299
+L 157.514872 268.084089
+L 162.118583 265.687878
+L 166.722293 263.291668
+L 171.326004 260.895458
+L 175.929715 258.499247
+L 180.533425 256.103037
+L 185.137136 253.706827
+L 189.740847 251.310616
+L 194.344557 248.914406
+L 198.948268 246.518195
+L 203.551979 244.121985
+L 208.155689 241.725775
+L 212.7594 239.329564
+L 217.363111 236.933354
+L 221.966821 234.537143
+L 226.570532 232.140933
+L 231.174243 229.744723
+L 235.777953 227.348512
+L 240.381664 224.952302
+L 244.985375 222.556092
+L 249.589085 220.159881
+L 254.192796 217.763671
+L 258.796507 215.36746
+L 263.400217 212.97125
+L 268.003928 210.57504
+L 272.607639 208.178829
+L 277.211349 205.782619
+L 281.81506 203.386408
+L 286.418771 200.990198
+L 291.022481 198.593988
+L 295.626192 196.197777
+L 300.229903 193.801567
+L 304.833613 191.405356
+L 309.437324 189.009146
+L 314.041035 186.612936
+L 318.644745 184.216725
+L 323.248456 181.820515
+L 327.852167 179.424305
+L 332.455877 177.028094
+L 337.059588 174.631884
+L 341.663299 172.235673
+L 346.267009 169.839463
+L 350.87072 167.443253
+L 355.474431 165.047042
+L 360.078141 162.650832
+L 364.681852 160.254621
+L 369.285563 157.858411
+L 373.889273 155.462201
+L 378.492984 153.06599
+L 383.096695 150.66978
+L 387.700405 148.27357
+L 392.304116 145.877359
+L 396.907827 143.481149
+L 401.511538 141.084938
+L 406.115248 138.688728
+L 410.718959 136.292518
+L 415.32267 133.896307
+L 419.92638 131.500097
+L 424.530091 129.103886
+L 429.133802 126.707676
+L 433.737512 124.311466
+L 438.341223 121.915255
+L 442.944934 119.519045
+L 447.548644 117.122835
+L 452.152355 114.726624
+L 456.756066 112.330414
+L 461.359776 109.934203
+L 465.963487 107.537993
+L 470.567198 105.141783
+L 475.170908 102.745572
+L 479.774619 100.349362
+L 484.37833 97.953151
+L 488.98204 95.556941
+L 493.585751 93.160731
+L 498.189462 90.76452
+L 502.793172 88.36831
+L 507.396883 85.9721
+L 512.000594 83.575889
+L 516.604304 81.179679
+L 521.208015 78.783468
+L 525.811726 76.387258
+L 530.415436 73.991048
+L 535.019147 71.594837
+" clip-path="url(#f13-p2d5122745f)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #985b29; stroke-width: 1.5"/>
+   </g>
+   <g id="f13-line2d_26">
+    <defs>
+     <path id="f13-m1266e49b2f" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f13-p2d5122745f)">
+     <use xlink:href="#f13-m1266e49b2f" x="79.251791" y="308.819665" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f13-m1266e49b2f" x="231.174243" y="229.744723" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f13-m1266e49b2f" x="307.135469" y="229.744723" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f13-m1266e49b2f" x="421.077308" y="269.282194" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f13-line2d_27">
+    <defs>
+     <path id="f13-ma9dd69f3ce" d="M -4 4
+L 4 4
+L 4 -4
+L -4 -4
+z
+" style="stroke: #985b29; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#f13-p2d5122745f)">
+     <use xlink:href="#f13-ma9dd69f3ce" x="155.213017" y="269.282194" style="fill-opacity: 0; stroke: #985b29; stroke-linejoin: miter"/>
+     <use xlink:href="#f13-ma9dd69f3ce" x="535.019147" y="71.594837" style="fill-opacity: 0; stroke: #985b29; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="f13-patch_5">
+    <path d="M 41.271178 321.998823
+L 41.271178 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f13-patch_6">
+    <path d="M 572.99976 321.998823
+L 572.99976 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f13-patch_7">
+    <path d="M 41.271178 321.998823
+L 572.99976 321.998823
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f13-patch_8">
+    <path d="M 41.271178 18.878209
+L 572.99976 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f13-text_15">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="163.213017" y="289.282194" transform="rotate(-0 163.213017 289.282194)">12 s: 1 m</text>
+   </g>
+   <g id="f13-text_16">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="527.019147" y="57.594837" transform="rotate(-0 527.019147 57.594837)">22 s: 16 m</text>
+   </g>
+   <g id="f13-text_17">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="307.135469" y="12.878209" transform="rotate(-0 307.135469 12.878209)">State the interval before extending the claim</text>
+   </g>
+   <g id="f13-legend_1">
+    <g id="f13-patch_9">
+     <path d="M 48.271178 101.882115
+L 217.224302 101.882115
+Q 219.224302 101.882115 219.224302 99.882115
+L 219.224302 25.878209
+Q 219.224302 23.878209 217.224302 23.878209
+L 48.271178 23.878209
+Q 46.271178 23.878209 46.271178 25.878209
+L 46.271178 99.882115
+Q 46.271178 101.882115 48.271178 101.882115
+z
+" style="fill: #f3f6f2; opacity: 0.8; stroke: #cccccc; stroke-linejoin: miter"/>
+    </g>
+    <g id="f13-patch_10">
+     <path d="M 50.271178 35.476646
+L 70.271177 35.476646
+L 70.271177 28.476646
+L 50.271178 28.476646
+z
+" style="fill: #d9e6da; stroke: #d9e6da; stroke-linejoin: miter"/>
+    </g>
+    <g id="f13-text_18">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="78.271177" y="35.476646" transform="rotate(-0 78.271177 35.476646)">A–B: chosen-model interval</text>
+    </g>
+    <g id="f13-patch_11">
+     <path d="M 50.271178 50.477427
+L 70.271177 50.477427
+L 70.271177 43.477427
+L 50.271178 43.477427
+z
+" style="fill: #e9e3d8; stroke: #e9e3d8; stroke-linejoin: miter"/>
+    </g>
+    <g id="f13-text_19">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="78.271177" y="50.477427" transform="rotate(-0 78.271177 50.477427)">Further supplied times</text>
+    </g>
+    <g id="f13-line2d_28">
+     <path d="M 50.271178 61.978209
+L 60.271178 61.978209
+L 70.271177 61.978209
+" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #985b29; stroke-width: 1.5"/>
+    </g>
+    <g id="f13-text_20">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="78.271177" y="65.478209" transform="rotate(-0 78.271177 65.478209)">M1 continued</text>
+    </g>
+    <g id="f13-line2d_29">
+     <g>
+      <use xlink:href="#f13-m1266e49b2f" x="60.271178" y="76.97899" style="fill: #216b68; stroke: #216b68"/>
+     </g>
+    </g>
+    <g id="f13-text_21">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="78.271177" y="80.47899" transform="rotate(-0 78.271177 80.47899)">Observations</text>
+    </g>
+    <g id="f13-line2d_30">
+     <g>
+      <use xlink:href="#f13-ma9dd69f3ce" x="60.271178" y="91.979771" style="fill-opacity: 0; stroke: #985b29; stroke-linejoin: miter"/>
+     </g>
+    </g>
+    <g id="f13-text_22">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="78.271177" y="95.479771" transform="rotate(-0 78.271177 95.479771)">Unobserved predictions</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="f13-p2d5122745f">
+   <rect x="41.271178" y="18.878209" width="531.728583" height="303.120614"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.13.</b> The first shaded interval identifies the observations used to choose M1; the second contains further supplied times. Open squares are predictions where no observation is supplied. Beyond 19 s there are no supplied observations. Shading marks time ranges, not confidence bands. <span class="media-credit">Original LibraUni figure · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>At 12 s the predicted position is 1 m. This may be a useful estimate if constant velocity between A and B is a justified assumption. But both a changing-velocity journey and the steady one could reach the same endpoints. Interpolation is not a guarantee: a change can occur in a gap between readings. Lesson 2’s imagined excursion between equal-position samples was an example of just such missing information.</p>
+<p>At 22 s, outside the complete 10–19 s record, M1 predicts 16 m. The arithmetic is straightforward. The physical justification is weak: M1 already disagrees with C and D, and the record supplies no later observations. A smooth extension on the page cannot repair that loss of support. Extrapolation can also encounter new conditions—an end stop, a change of driving force or a different measurement range—that were absent earlier.</p>
+<div class="example" id="p101-u03-example-12"><h4>Example 3.12 · Matching the endpoints is not enough</h4><p><strong>Question.</strong> Choose a second constant-velocity model, M2, using A and D instead of A and B. Does matching the first and last observations make it agree with the whole record?</p><p><strong>Working.</strong> Keep the anchor at A. The displacement A–D is +3 m over 9 s, giving</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>v</mi><mtext>M2</mtext></msub><mo>=</mo><mfrac><mrow><mn>3</mn><mspace width="0.2em"/><mtext>m</mtext></mrow><mrow><mn>9</mn><mspace width="0.2em"/><mtext>s</mtext></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mspace width="0.2em"/><mtext>m/s</mtext></math></div><p>At C, 6 s after A, this rate predicts a displacement of 2 m and therefore position 0 m. The observed position is 4 m, so the residual is +4 m. At B, the prediction is <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mspace width="0.2em"/><mtext>m</mtext></math>, giving residual <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>+</mo><mfrac><mrow><mn>14</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mspace width="0.2em"/><mtext>m</mtext></math>.</p><p><strong>Interpretation.</strong> M2’s residuals are zero at A and D by construction, but positive at both interior observations. A correct whole-interval average velocity does not imply that the velocity was constant. Neither M1 nor M2 reproduces all four exact positions. We have compared two explicitly chosen rules; we have not searched for a best-fitting line.</p></div>
+<div class="activity" id="p101-u03-activity-16"><h4>Activity 3.16 · Specify the range of a claim</h4><p>Allow 15 minutes. Classify M1’s predictions at 13 s, 18 s and 22 s relative to (i) the A–B interval used to choose it and (ii) the full observation interval. Calculate the prediction at 22 s. Then explain why M2’s agreement at A and D does not establish its prediction at 15 s. Identify an existing observation that was not used to choose either model and provides a further comparison.</p><details><summary>Hint for Activity 3.16</summary><p>Write the two intervals explicitly before using “interpolation” or “extrapolation”. B or C already provides a check that endpoint agreement alone overlooks.</p></details><details><summary>Discussion of Activity 3.16</summary><p>Relative to 10–14 s, 13 s is interpolation while 18 and 22 s are extrapolation. Relative to 10–19 s, 13 and 18 s are interpolation while 22 s is extrapolation. At 22 s, 12 s have elapsed since A, giving −2 m + (1.5 m/s)(12 s) = 16 m. M2’s endpoints do not determine the intervening history; its disagreement with B and C already shows that it does not reproduce the full record. At C, M1 predicts 7 m and M2 predicts 0 m, whereas the observed position is 4 m. Thus C is an additional observation relative to either model’s construction and distinguishes their predictions, while challenging both as exact descriptions. A new measurement at 15 s could give further information in a real investigation, but it must not be fabricated.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L03-S05"><h2>3.17 Compare arrays and draw both panels</h2>
+<p>We will now make the numerical comparison in Python. The data-loading lines repeat Lesson 2: skip the header, read two numeric columns and preserve their pairing. The new work is to evaluate a model at every observed time, then subtract arrays in the stated order. Predictions and residuals receive their own names; the observed positions are not overwritten.</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+data = np.loadtxt(
+    &quot;p101-u03-l03.csv&quot;, delimiter=&quot;,&quot;, skiprows=1, ndmin=2
+)
+time_s = data[:, 0]
+position_m = data[:, 1]
+reference_time_s = time_s[0]
+reference_position_m = position_m[0]
+velocity_m_per_s = (
+    (position_m[1] - reference_position_m)
+    / (time_s[1] - reference_time_s)
+)</code></pre>
+<p>The first two entries are A and B. Index 0 selects A, and index 1 selects B. Subtracting the reference values in the velocity calculation therefore gives the A–B differences. The resulting number is 1.5, in metres per second. These variable names document the numerical unit convention; Python does not check the units for us.</p>
+<p>The function below expresses the model once. Its four arguments supply the requested times, the reference time, the reference position and the velocity. With a single time it returns one prediction. With a NumPy array of times, the subtraction and multiplication operate on every entry. This is the same array arithmetic introduced for elapsed time in Lesson 2, now with an added multiplication and position offset.</p>
+<pre><code class="language-python">def predict_position(times_s, t_ref_s, x_ref_m, velocity_m_per_s):
+    return x_ref_m + velocity_m_per_s * (times_s - t_ref_s)
+
+predicted_m = predict_position(
+    time_s, reference_time_s, reference_position_m, velocity_m_per_s
+)
+residual_m = position_m - predicted_m
+print(&quot;M1 predicted position / m:&quot;, predicted_m)
+print(&quot;M1 residual (observed - predicted) / m:&quot;, residual_m)</code></pre>
+<p>The prediction array should be −2, 4, 7 and 11.5 m, and the residual array 0, 0, −3 and −10.5 m. Subtraction works entry by entry: first observation minus first prediction, second minus second, and so forth. Arrays of the same length can still be wrongly paired if one was reordered or calculated for different times. Checking C by hand is therefore more informative than checking only that the arrays have four entries.</p>
+<p>For the picture, we need two sets of prediction values with different jobs. <code>predicted_m</code> contains predictions at the four observation times and is used for the residual calculation. <code>line_position_m</code> below contains values at a closely spaced set of times used only to draw the model line. These extra times are drawing coordinates, not new observations. For this straight line, two endpoint predictions would suffice; using a regular grid keeps the drawing values explicitly separate from the observation times. It does not strengthen the evidence.</p>
+<pre><code class="language-python">line_time_s = np.linspace(time_s[0], time_s[-1], 100)
+line_position_m = predict_position(
+    line_time_s, reference_time_s, reference_position_m, velocity_m_per_s
+)
+fig, axes = plt.subplots(2, 1, sharex=True, figsize=(7, 7), layout=&quot;constrained&quot;)
+position_ax = axes[0]
+residual_ax = axes[1]
+position_ax.plot(time_s, position_m, &quot;o&quot;, label=&quot;Invented observations&quot;)
+position_ax.plot(line_time_s, line_position_m, &quot;--&quot;, label=&quot;M1: A-B rate&quot;)
+position_ax.set_ylabel(&quot;Position / m&quot;)
+position_ax.set_title(&quot;Invented record P101-U03-L01-A&quot;)
+position_ax.legend()
+position_ax.grid(alpha=0.3)
+residual_ax.plot(time_s, residual_m, &quot;o&quot;)
+residual_ax.axhline(0, color=&quot;grey&quot;, linewidth=1)
+residual_ax.set_ylabel(&quot;Residual: observed - predicted / m&quot;)
+residual_ax.set_xlabel(&quot;Clock reading / s&quot;)
+residual_ax.grid(alpha=0.3)
+fig.savefig(&quot;p101-u03-l03-m1.png&quot;, dpi=160)
+plt.show()</code></pre>
+<p><code>np.linspace</code> creates 100 evenly spaced times from the first to the last observation, including both endpoints. Index <code>-1</code> means the last array entry. We pass these times through the same prediction function, so the line and the four numerical predictions describe the same model.</p>
+<p>The arguments <code>2, 1</code> to <code>plt.subplots</code> request two rows and one column of plotting areas. This time the second returned object, <code>axes</code>, is an array containing two Axes. We give its entries the names <code>position_ax</code> and <code>residual_ax</code>. The option <code>sharex=True</code> makes their horizontal scales agree, so a given time lines up vertically between panels. Each panel still needs its own vertical label: position and residual have the same unit but are different quantities.</p>
+<p>The observed positions use circles without joining lines. The dashed model line has a label that identifies its origin; <code>legend()</code> displays those labels. The residual panel likewise shows only sampled differences. <code>axhline(0, ...)</code> draws a horizontal reference at zero residual, with grey colour and a line width of 1. It is a reference, not an uncertainty band or acceptance boundary. Saving and showing the figure work as in Lesson 2.</p>
+<figure id="p101-u03-figure-14"><div class="diagram raster-plot" tabindex="0" role="region" aria-label="Notebook output; scroll horizontally if needed"><img src="/teaching/p101/u03/m1-notebook.png" width="1120" height="1120" alt="Two-panel notebook output: four invented positions compared with the rising M1 line; residuals below are zero, zero, minus three and minus ten point five metres."></div><figcaption><b>Figure 3.14.</b> Output of the displayed code for invented record P101-U03-L01-A. The dashed line is M1, chosen from A and B; circles represent observations above and their signed residuals below. Both panels share clock time. No error bars or acceptance threshold are implied. Credit: Original LibraUni output. <a href="/notebooks/p101-u03-l03.py">Source code</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Figure reuse terms</a>.</figcaption></figure>
+<div class="activity" id="p101-u03-activity-17"><h4>Activity 3.17 · Check meaning before execution</h4><p>Allow 15 minutes of written work. Predict what the residual plot would show if the subtraction were reversed. Explain why subtracting <code>line_position_m</code> from the four observed positions is the wrong calculation, even apart from the different array lengths. Finally, predict the residual change if 2 m were added to both every observed position and the model’s reference position, with velocity and times unchanged.</p><details><summary>Hint for Activity 3.17</summary><p>Each comparison needs one observed position and one prediction for that same time. For the shared position shift, write “observed plus 2 minus predicted plus 2” with the grouping made explicit.</p></details><details><summary>Discussion of Activity 3.17</summary><p>Reversing the subtraction gives 0, 0, +3 and +10.5 m. The numbers would disagree with a label saying “observed − predicted”. The 100 line values describe a different set of times, so their entries are not paired with the four observations. Use predictions evaluated at <code>time_s</code> for residuals. A shared +2 m position-origin shift changes every observation and prediction by the same amount, so residuals stay unchanged:</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mo>(</mo><msub><mi>x</mi><mtext>obs</mtext></msub><mo>+</mo><mn>2</mn><mspace width="0.2em"/><mtext>m</mtext><mo>)</mo></mrow><mo>−</mo><mrow><mo>(</mo><msub><mi>x</mi><mtext>pred</mtext></msub><mo>+</mo><mn>2</mn><mspace width="0.2em"/><mtext>m</mtext><mo>)</mo></mrow><mo>=</mo><msub><mi>x</mi><mtext>obs</mtext></msub><mo>−</mo><msub><mi>x</mi><mtext>pred</mtext></msub></math></div><p>Changing only one side would change the comparison, rather than merely its coordinate convention.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L03-S06"><h2>3.18 Make a defensible comparison</h2>
+<p>A successful calculation should leave a reader able to distinguish three things: the supplied values, the chosen model and the conclusion drawn from comparing them. The notebook keeps those parts separate. Its worked cells reproduce M1; your task is to check them, then compare M2 without rewriting the raw data or quietly replacing the first result.</p>
+<p>Changing a model after inspecting disagreement is a legitimate part of modelling, provided the change is recorded. But the revised agreement has a different evidential status from a successful prediction made before a new observation. Here both rules use selected points from an invented record. The exercise establishes whether we implemented and interpreted those rules consistently. Experimental support would require suitable real observations, their measurement limitations, and a clear account of how the model was chosen.</p>
+<div class="activity" id="p101-u03-activity-18"><h4>Activity 3.18 · Compare, check and report</h4><p>Allow 60 minutes of Python work: 10 for files and predictions, 20 to run and inspect M1, 15 to calculate M2 and check a limiting case, and 15 to restart and report.</p><ol><li>Read the metadata and compare the CSV with the earlier record. Predict C’s model value and residual before running the worked cells. Check the two printed arrays and both panels against the table.</li><li>Calculate M2’s velocity from A and D using array entries. Call the same function with that velocity, then calculate M2 residuals in a new variable. Compare B and C with Example 3.12. Keep the M1 values.</li><li>Repeat the plotting block with M2’s prediction arrays and an accurate model label. Save under a new filename so that you can compare the two figures. Describe what the zero residuals at each model’s chosen endpoints do and do not establish.</li><li>Check the function at the reference time: its result should equal the reference position for either velocity. Then check zero velocity at all four times: every predicted position should equal the reference position. Predict before running.</li><li>Restart and run the valid notebook cells in order, or rerun the companion in a fresh Python process. Write a short report with the source, units and conventions, both model choices, at least one checked residual, a caption and a justified conclusion. State that the data are invented and distinguish a calculation check from experimental validation.</li></ol><details><summary>Hint for Activity 3.18</summary><p>The last entry is selected with <code>[-1]</code>. Use A–D differences for M2’s velocity, but keep the reference event at A. When making the second graph, change both the line’s prediction values and the residual array; changing only a legend would mislabel the old result.</p></details><details><summary>Discussion of Activity 3.18</summary><p>M1 predicts −2, 4, 7 and 11.5 m, with residuals 0, 0, −3 and −10.5 m. The following code computes M2 without overwriting those arrays:</p><pre><code class="language-python">velocity_m2 = (
+    (position_m[-1] - reference_position_m)
+    / (time_s[-1] - reference_time_s)
+)
+predicted_m2 = predict_position(
+    time_s, reference_time_s, reference_position_m, velocity_m2
+)
+residual_m2 = position_m - predicted_m2
+line_position_m2 = predict_position(
+    line_time_s, reference_time_s, reference_position_m, velocity_m2
+)
+print(&quot;M2 predicted position / m:&quot;, predicted_m2)
+print(&quot;M2 residual / m:&quot;, residual_m2)</code></pre><p>M2’s predictions are −2, approximately −0.6667, 0 and 1 m; its residuals are 0, approximately 4.6667, 4 and 0 m. The repeating decimal comes from one-third; retain the calculation’s precision and round only when reporting. A very small numerical remainder near a theoretical zero can arise from floating-point arithmetic and is not new physical evidence.</p><p>For the second figure, reuse the plotting block with <code>line_position_m2</code> in the model-line call and <code>residual_m2</code> in the residual call. Use label <code>"M2: rate chosen from A and D"</code> and save as <code>"p101-u03-l03-m2.png"</code>. The reference-time and zero-velocity checks both return the reference position, −2 m; their purpose is to test the formula’s behaviour.</p><p>A defensible conclusion says that neither chosen constant-velocity rule reproduces all four exact supplied positions. It identifies which points set each rule and which further points challenge it. A suitable report might say: “For invented record P101-U03-L01-A, M1 uses the A–B average velocity, +1.5 m/s, anchored at A. At C it predicts 7 m against the stipulated 4 m, giving residual −3 m. M2 uses the A–D average and also disagrees with the interior readings. These checks expose the limits of the chosen constant-velocity descriptions; they neither identify a force nor experimentally validate a motion law.” Add your own figure caption, conventions and checks actually performed.</p></details></div>
+<h3>From disagreement to a better question</h3><p>Use the remaining 10 minutes of written practice to write a short response to “The graph looks convincing, so the model is correct.” Refer to an endpoint used to choose a rule, an additional observation, the residual’s sign and the observation interval. During the 30-minute feedback allowance, revisit changed answers and record the reasoning behind each correction.</p>
+<p>The useful outcome is a more precise claim. A model predicts under stated assumptions; residuals expose what it leaves unexplained in a particular record; the observation range limits where the comparison has been made. None of these steps is helped by hiding awkward points or mistaking a successful calculation for a successful experiment. Lesson 4 will make the whole analysis easier for another person to rerun, including the files, environment and decisions on which it depends.</p>
+</section>
+<section class="references" id="references"><h2>Further reading and context</h2><p>The required teaching is self-contained. For optional perspective, the NIST/SEMATECH handbook’s <a href="https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd44.htm">introduction to residual analysis</a> and <a href="https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd441.htm">discussion of residual patterns</a> develop these ideas for fitted statistical models. Their regression methods and statistical assumptions go beyond this lesson; focus on the observed-minus-predicted definition and the caution that a single plot cannot fully justify a model. For code reference, see <a href="https://numpy.org/doc/stable/reference/generated/numpy.linspace.html">NumPy linspace</a> and <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html">Matplotlib subplots</a>.</p><p>Original teaching, data and diagrams: CC BY-NC-SA 4.0. Code: MIT. NASA imagery retains its separately linked terms; LibraUni branding is excluded. The carriage record and residual-pattern examples are invented teaching cases.</p></section>

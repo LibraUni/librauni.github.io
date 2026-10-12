@@ -165,10 +165,10 @@
 @media print{.p101-u3 .diagram svg{min-width:0}.p101-u3 pre{white-space:pre-wrap;overflow-wrap:anywhere}}
 
 /* Matplotlib diagrams retain their authored typography and responsive viewBox. */
-.p101-u3-l2 .generated-plot svg{display:block;width:100%;height:auto;min-width:720px}
-.p101-u3-l2 .generated-plot svg text{font-family:"DejaVu Sans",sans-serif}
-@media print{.p101-u3-l2 .generated-plot svg{min-width:0}}
+:is(.p101-u3-l2,.p101-u3-l3) .generated-plot svg{display:block;width:100%;height:auto;min-width:720px}
+:is(.p101-u3-l2,.p101-u3-l3) .generated-plot svg text{font-family:"DejaVu Sans",sans-serif}
+@media print{:is(.p101-u3-l2,.p101-u3-l3) .generated-plot svg{min-width:0}}
 
-.p101-u3-l2 figure img{max-width:100%;height:auto}
-.p101-u3-l2 .raster-plot img{display:block;width:100%;min-width:720px;max-width:none}
-@media print{.p101-u3-l2 .raster-plot img{min-width:0}}
+:is(.p101-u3-l2,.p101-u3-l3) figure img{max-width:100%;height:auto}
+:is(.p101-u3-l2,.p101-u3-l3) .raster-plot img{display:block;width:100%;min-width:720px;max-width:none}
+@media print{:is(.p101-u3-l2,.p101-u3-l3) .raster-plot img{min-width:0}}

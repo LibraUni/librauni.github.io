@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-12",
+  "items": [
+    {
+      "figure": "3.10",
+      "file": "public/teaching/p101/u03/m1-residuals.svg",
+      "sha256": "17dc8a353414b54684dede24959bb1ce23e70587b0f4d1aeb2a7f14a5a2b0cf1",
+      "creator": "LibraUni",
+      "source": "Original teaching diagram or output from the accompanying original Python code",
+      "reuse": "Original programme material; programme reuse terms",
+      "modifications": "None"
+    },
+    {
+      "figure": "3.11",
+      "file": "public/teaching/p101/u03/residual-patterns.svg",
+      "sha256": "844bbbd334828a8ccf9a456d3c6dc408d1a88d28284b5e59bf012d47fd559d17",
+      "creator": "LibraUni",
+      "source": "Original teaching diagram or output from the accompanying original Python code",
+      "reuse": "Original programme material; programme reuse terms",
+      "modifications": "None"
+    },
+    {
+      "figure": "3.12",
+      "file": "public/teaching/p101/u03/wind-tunnel.jpg",
+      "sha256": "2fb19faacde04c275b2e12ec985418cc7ea8a122bab03ac64ef74ad6863992f8",
+      "creator": "NASA/ARC/Dominic Hart",
+      "source": "https://www.nasa.gov/image-article/wind-tunnel-testing-scale-model-of-space-launch-system/",
+      "reuse": "NASA imagery educational/editorial use under https://www.nasa.gov/nasa-brand-center/images-and-media/; source credits NASA/ARC/Dominic Hart. No endorsement implied; separate from programme licence.",
+      "modifications": "Recompressed JPEG at quality 90; original 1041 × 702 dimensions; no crop.",
+      "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/t11-0265_sls_10s_6.jpg",
+      "context": "SLS scale model in NASA Ames 11-by-11-foot transonic wind tunnel; source dated 4 November 2013. Caption concerns testing model predictions; not the invented carriage dataset."
+    },
+    {
+      "figure": "3.13",
+      "file": "public/teaching/p101/u03/prediction-range.svg",
+      "sha256": "708d888fd4fd5b3f4581bb17fd0a52de9359cc293b4be1faf3dede411b059b3b",
+      "creator": "LibraUni",
+      "source": "Original teaching diagram or output from the accompanying original Python code",
+      "reuse": "Original programme material; programme reuse terms",
+      "modifications": "None"
+    },
+    {
+      "figure": "3.14",
+      "file": "public/teaching/p101/u03/m1-notebook.png",
+      "sha256": "2717c23031a6fb89e0485ca9f5f2671fcd5b8739a4e5c7af4a179a636f5c3151",
+      "creator": "LibraUni",
+      "source": "Original teaching diagram or output from the accompanying original Python code",
+      "reuse": "Original programme material; programme reuse terms",
+      "modifications": "None"
+    }
+  ],
+  "selection_notes": "X-59 source photo credited Lockheed Martin/Garry Tice rejected because reuse permission not verified. No private OU imagery reproduced. No video viewing claimed. Notebook offers purposeful manipulation; no decorative interactive added."
+}

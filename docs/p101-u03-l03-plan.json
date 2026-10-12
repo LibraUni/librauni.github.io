@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-12",
+  "version": "1.0",
+  "standard": "Teaching Standard1.10 and fixed illustrated M101v0.4",
+  "authorisation": "User explicitly requests full Lesson3 and online publication",
+  "construction_policy": "1.0 section-authoring gate: all B01 lesson peers blueprinted, all L03 sections below planned; parent map and prerequisites checked",
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "docs/p101-block1-lesson-map.md",
+    "curriculum/p101-units.js",
+    "curriculum/p101-blocks.js",
+    "curriculum/construction-policy.js"
+  ],
+  "scope": "Constant-rate predictions; residual observed minus predicted; patterns and interpretation; interpolation/extrapolation. No fitting/regression/calculus/statistical significance or claims synthetic data empirically validate physics.",
+  "dependencies": "U03L02 table/CSV/arrays/Matplotlib and U03L01 rates; U02 provenance and measurement limitations. No further M101 prerequisite.",
+  "budget_minutes": {
+    "explanation": 60,
+    "written": 90,
+    "python": 60,
+    "feedback": 30
+  },
+  "unit_block_budget": "U03 20h/6hPython; B01 60h/20hPython unchanged",
+  "sections": [
+    {
+      "id": "P101-U03-L03-S01",
+      "number": "3.13",
+      "title": "Turn a rate into a prediction",
+      "purpose": "Anchor and constant velocity; specify model and source of parameters",
+      "comparator": "MST124 U2 printed121–123,130–132; Example2/3, Activity5; P101 U01 constant-rate and U03-L01",
+      "written_minutes": 15,
+      "prerequisite": "Earlier sections and U03L02",
+      "evidence": "Original numbered activity with separately hidden hint/discussion"
+    },
+    {
+      "id": "P101-U03-L03-S02",
+      "number": "3.14",
+      "title": "Measure the disagreement",
+      "purpose": "Observed minus predicted; same times, units and sign; residual not true error",
+      "comparator": "NIST handbook4.4.4 residual definition/table; OU substitution121–122 partial",
+      "written_minutes": 15,
+      "prerequisite": "Earlier sections and U03L02",
+      "evidence": "Original numbered activity with separately hidden hint/discussion"
+    },
+    {
+      "id": "P101-U03-L03-S03",
+      "number": "3.15",
+      "title": "Read the pattern without inventing a cause",
+      "purpose": "Two-panel plot; offset/rate/curved residual patterns, limits and testable follow-up",
+      "comparator": "NIST4.4.4.1 actual explanatory passages/plots; P101U02 errors/offsets; no exact private OU residual match",
+      "written_minutes": 20,
+      "prerequisite": "Earlier sections and U03L02",
+      "evidence": "Original numbered activity with separately hidden hint/discussion"
+    },
+    {
+      "id": "P101-U03-L03-S04",
+      "number": "3.16",
+      "title": "Between the readings and beyond them",
+      "purpose": "Interpolation/extrapolation relative to specified interval; support vs calculation domain",
+      "comparator": "OU U2 printed122–123 finite-table caveat; fixed M101 opening observation/model distinction; partial not exact private interpolation match",
+      "written_minutes": 15,
+      "prerequisite": "Earlier sections and U03L02",
+      "evidence": "Original numbered activity with separately hidden hint/discussion"
+    },
+    {
+      "id": "P101-U03-L03-S05",
+      "number": "3.17",
+      "title": "Compare arrays and draw both panels",
+      "purpose": "Elementwise predictions/residuals; two Axes, matching times, linspace/legend/zero reference",
+      "comparator": "Official NumPy linspace and Matplotlib subplots/axhline; adjoining L02 code; no private OU Python match",
+      "written_minutes": 15,
+      "prerequisite": "Earlier sections and U03L02",
+      "evidence": "Original numbered activity with separately hidden hint/discussion"
+    },
+    {
+      "id": "P101-U03-L03-S06",
+      "number": "3.18",
+      "title": "Make a defensible comparison",
+      "purpose": "Notebook main/endpoint model, hand checks, report, verification vs empirical validation",
+      "comparator": "P101U02L05 and U03L02 reports; NIST caveats partial; original integrated practice",
+      "written_minutes": 10,
+      "prerequisite": "Earlier sections and U03L02",
+      "evidence": "Original numbered activity with separately hidden hint/discussion"
+    }
+  ],
+  "media_plan": "Main data/model+residual diagram; different residual patterns with common axes; interpolation/extrapolation plot; actual notebook output; NASA SLS wind-tunnel photograph with context. X59 photo rejected: third-party Lockheed credit without verified reuse. SLS chosen NASA/ARC/DominicHart educational terms.",
+  "interactive_video": "No new interactive or video: notebook parameter/model comparison provides purposeful manipulation; static alternative carries required reasoning. No video viewing claimed.",
+  "handover": "L04 expands rerunnable analysis and environment/provenance; L05 retains whole-unit closing resources and exercise budget. L04/L05 remain outlines.",
+  "release_disposition": "Subject, reader, visual and whole-lesson reviews passed. User-authorised publication; deployment/live verification pending.",
+  "comparator_limits": "No exact private OU residual/Python comparator; public NIST is more statistically advanced, use qualitative inspection and definition only, no regression inference."
+}

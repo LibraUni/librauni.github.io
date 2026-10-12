@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-12",
+  "lesson": "P101 U03 L03 — Comparing a model with observations",
+  "standard": "Teaching Standard and Practice v1.10; fixed M101 opening chapter v0.4",
+  "disposition": "Passed local review; authorised publication awaiting deployment/live checks",
+  "subject_review": {
+    "versions": {
+      "numpy": "2.5.4",
+      "matplotlib": "3.11.2"
+    },
+    "exact_M1_predictions": [
+      "-2",
+      "4",
+      "7",
+      "23/2"
+    ],
+    "exact_M1_residuals": [
+      "0",
+      "0",
+      "-3",
+      "-21/2"
+    ],
+    "exact_M2_predictions": [
+      "-2",
+      "-2/3",
+      "0",
+      "1"
+    ],
+    "exact_M2_residuals": [
+      "0",
+      "14/3",
+      "4",
+      "0"
+    ],
+    "checks": "Exact rational arithmetic independently checked every numerical example/activity. Notebook valid; cells, companion, hidden M2 solution executed. Graph arrays/signs/paired axes/line roles checked. M2 plotting substitutions executed, reference-time/zero-velocity/shared-origin-shift checks pass. All package bytes/source blocks match; IDs unique.",
+    "math_count": 17,
+    "words": 5468
+  },
+  "reader_review": {
+    "result": "Passed complete read-through against taught prerequisites and fixed reference. Motivated model construction, elapsed time, signed residuals, paired plots, interpretation limits, interval-relative extrapolation and array implementation developed in connected prose.",
+    "revisions": [
+      "Clarified drawing times are not observations and two endpoints suffice to draw a straight line.",
+      "Activity 3.16 identifies C as unused in construction of either model.",
+      "Residual pattern label corrected to curved increase.",
+      "Long reference-origin identity moved to a labelled scrollable display; worked calculation split into aligned rows."
+    ],
+    "practice": "Six original activities, separate initially closed hints/discussions. Independent rational arithmetic and executed solution checks. No end-of-lesson exercise set; whole-unit practice remains L05."
+  },
+  "comparator_review": {
+    "private": "MST124 Unit 2 printed pp.121–123 (PDF7–9): substitution, tables, finite-point graph limitations, Example2/Activity2; pp.130–132 (PDF16–18): straight-line gradient/intercept, Example3/Activity5. Actual explanatory passages inspected; printed130 rendered page inspected. pp.126–128 and p.185 solution passages inspected in adjoining lesson preparation. Private sources remain read-only and unpublished.",
+    "public": [
+      "https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd44.htm",
+      "https://www.itl.nist.gov/div898/handbook/pmd/section4/pmd441.htm",
+      "https://numpy.org/doc/stable/reference/generated/numpy.linspace.html",
+      "https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html"
+    ],
+    "limits": "No exact private OU residual/Python counterpart. NIST is statistically more advanced; only definition and qualitative pattern limits used, without regression inference. No artificial one-to-one question match claimed. Fixed M101 reference and adjoining P101 teaching inspected; original explanations, activities and figures."
+  },
+  "visual_accessibility_review": {
+    "result": "Passed rendered desktop/narrow/light/dark review; all figures and selected worked maths inspected. Native MathML 17 expressions; five numbered figures with captions/alternatives; semantic example/result/context/activity labels.",
+    "browser_evidence": [
+      {
+        "width": 1440,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 1440,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 900,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 900,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 390,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 390,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 320,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 320,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 17,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "searchPages": 36,
+        "keyboardCopies": 4
+      },
+      {
+        "noJavaScript": true,
+        "allInternalLinks": true,
+        "downloadsExact": true,
+        "errors": []
+      },
+      {
+        "zoomEquivalent": "720 CSS pixels at scale 2 for a 1440-pixel display",
+        "passed": true
+      }
+    ],
+    "offline_evidence": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true,
+        "math": 17,
+        "dark": false
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true,
+        "math": 17,
+        "dark": true
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "images": true,
+        "math": 17,
+        "dark": false
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "images": true,
+        "math": 17,
+        "dark": true
+      }
+    ],
+    "limitation": "Enlarged-reading check uses 720 CSS pixels at device scale2, not browser-menu zoom. No new PDF issued for an intermediate lesson; unit closing reference remains L05."
+  },
+  "whole_lesson_review": {
+    "result": "Approved scope, section sequence, preceding handover and next outline checked. Six sections3.13–3.18; examples3.9–3.12; activities3.13–3.18; figures3.10–3.14. No existing identifiers renumbered. L04/L05 remain outlines.",
+    "budget": "4h:60min explanation,90 written,60 Python,30 feedback. U03 20h/6hPython and B01 60h/20hPython unchanged.",
+    "integration": "Production build, 118 repository tests, media structure check and 36-page search pass. All five downloads and content links checked. M101 U03 L03 release preserved. No learner records changed."
+  }
+}

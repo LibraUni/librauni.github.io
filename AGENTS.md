@@ -1,3 +1,7 @@
+# P101 Unit 3 Lesson 3 publication authorised — 12 October 2026
+
+User requested creation and online publication. Comparing a model with observations: sections3.13–3.18, examples3.9–3.12, activities3.13–3.18, figures3.10–3.14; notebook/companion/CSV/metadata ZIP. Standard1.10 and4h/1hPython retained. Distinct reviews in docs/p101-u03-l03-review.json, with plan/media records.118tests, independent arithmetic/code checks, production build,36-page search, browser/keyboard/no-JS/offline and download checks passed. M101 release693df1c preserved. L04/L05 remain outlines. Deployment/live verification pending. No learner records changed.
+
 # P101 Unit 3 Lesson 2 LIVE — 12 October 2026
 
 Release0330418e3a7960c26bf84ab9f88ede2651c80eff; workflow38248774350 security and publication succeeded. Live Chrome width/theme,feedback,four exact keyboard copies,34-page search,later-outline gates,navigation,no-JS and downloads verified. Teaching fragment and all ten notebook/data/media files match checked release; linked build assets return200. See docs/p101-u03-l02-live.json. Supersedes pending deployment disposition. L03–L05 remain outlines.
