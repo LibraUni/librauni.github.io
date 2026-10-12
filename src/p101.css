@@ -163,3 +163,12 @@
 @media(min-width:1100px){.p101-u3 .science-photo{display:grid;grid-template-columns:minmax(0,3fr) minmax(160px,1fr);gap:23px}.p101-u3 .science-photo figcaption{margin:0}.p101-u3 .science-photo img{align-self:start}}
 @media(max-width:650px){.p101-u3 .context-figure{float:none;width:100%;margin:0 0 20px}.p101-u3 .context{padding:20px 17px}.p101-u3 .diagram svg text{font-size:18px}.p101-u3 .equation{font-size:18px}}
 @media print{.p101-u3 .diagram svg{min-width:0}.p101-u3 pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+
+/* Matplotlib diagrams retain their authored typography and responsive viewBox. */
+.p101-u3-l2 .generated-plot svg{display:block;width:100%;height:auto;min-width:720px}
+.p101-u3-l2 .generated-plot svg text{font-family:"DejaVu Sans",sans-serif}
+@media print{.p101-u3-l2 .generated-plot svg{min-width:0}}
+
+.p101-u3-l2 figure img{max-width:100%;height:auto}
+.p101-u3-l2 .raster-plot img{display:block;width:100%;min-width:720px;max-width:none}
+@media print{.p101-u3-l2 .raster-plot img{min-width:0}}

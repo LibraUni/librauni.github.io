@@ -1,0 +1,1387 @@
+<div class="eyebrow">P101 · Block 1 · Unit 3 · Lesson 2</div>
+<h1>From a table to a labelled graph</h1>
+<p class="opening">A table keeps the observations separate. A graph lets us see them together. Moving from one to the other should change what is easy to notice, without quietly changing what we know.</p>
+<p>In Lesson 1 we followed a marked point on an inspection carriage along a straight rail. We calculated changes between recorded positions, and found that the record did not determine everything that happened between readings. Here we will give that record a visual form, then build the same graph in Python. The hand construction comes first: it gives us something against which to check the computer’s result.</p>
+<p>Allow four hours: about 60 minutes for reading and examples, 90 for the written activities, 60 for the notebook and 30 for feedback and corrections. Activity 3.12 is the notebook hour, not additional work. You will need the position and average-rate ideas from Lesson 1 and the basic Python and data-record habits developed in Units 1 and 2. NumPy arrays and Matplotlib are introduced here; no previous plotting-library experience is assumed.</p>
+<p><a href="/notebooks/p101-u03-l02.zip" download>Download the complete working folder</a> (notebook, Python companion, CSV and metadata), or download the <a href="/notebooks/p101-u03-l02.ipynb" download>notebook</a>, <a href="/notebooks/p101-u03-l02.py" download>Python companion</a>, <a href="/notebooks/p101-u03-l02.csv" download>data file</a> and <a href="/notebooks/p101-u03-l02-metadata.txt" download>metadata</a> separately. Keep the files together after extracting the ZIP.</p>
+<section class="chapter" id="P101-U03-L02-S01"><h2>3.7 What a point on the graph means</h2>
+<p>We will reuse the four pairs below. They are invented teaching observations, not readings from an experiment we have performed. The position is measured from the same fixed rail mark throughout, with rightwards positive; all times use one clock. The letters identify events, while the two numerical columns tell us where the tracked point was and when.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Carriage record"><table><caption>Record P101-U03-L01-A, carried forward unchanged. Each row is one paired observation.</caption><thead><tr><th scope="col">Event</th><th scope="col">Clock reading / s</th><th scope="col">Position / m</th></tr></thead><tbody><tr><th scope="row">A</th><td>10</td><td>−2</td></tr><tr><th scope="row">B</th><td>14</td><td>4</td></tr><tr><th scope="row">C</th><td>16</td><td>4</td></tr><tr><th scope="row">D</th><td>19</td><td>1</td></tr></tbody></table></div>
+<p>A <strong>position–time graph</strong> puts time along the horizontal axis and position along the vertical axis. To plot A, find 10 s on the time scale, then move vertically to the level −2 m and place a point. The point combines both entries in its row. It does not say that the carriage has moved 10 units sideways and two units downwards: the two axes describe different quantities.</p>
+<p>This last distinction matters because our physical rail is horizontal, whereas position increases upwards on the graph. A graph is a representation of a relationship, not necessarily a picture of the apparatus. In Figure 3.5 the rail snapshots use left and right to show physical position. The graph uses left and right to show earlier and later times. The event labels help you follow the same observation through the two representations.</p>
+<figure id="p101-u03-figure-05"><div class="diagram generated-plot" role="region" tabindex="0" aria-label="Rail positions and time coordinates; scroll horizontally if needed"><svg role="img" aria-labelledby="fig5title fig5desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 576" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="fig5title">Rail positions and time coordinates</title><desc id="fig5desc">Four rail snapshots: A at minus two metres at ten seconds; B and C at four metres at fourteen and sixteen seconds; D at one metre at nineteen seconds. Below, those exact pairs are plotted with time horizontally and position vertically.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-12T14:21:05.938692</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="f5-figure_1">
+  <g id="f5-patch_1">
+   <path d="M 0 576
+L 576 576
+L 576 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="f5-axes_1">
+   <g id="f5-patch_2">
+    <path d="M 52.51649 211.47872
+L 565.36476 211.47872
+L 565.36476 18.878209
+L 52.51649 18.878209
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f5-matplotlib.axis_1">
+    <g id="f5-xtick_1">
+     <g id="f5-line2d_1">
+      <defs>
+       <path id="f5-m118c3cbddc" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="112.851581" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="112.851581" y="227.595908" transform="rotate(-0 112.851581 227.595908)">−2</text>
+     </g>
+    </g>
+    <g id="f5-xtick_2">
+     <g id="f5-line2d_2">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="173.186671" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="173.186671" y="227.595908" transform="rotate(-0 173.186671 227.595908)">−1</text>
+     </g>
+    </g>
+    <g id="f5-xtick_3">
+     <g id="f5-line2d_3">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="233.521762" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="233.521762" y="227.595908" transform="rotate(-0 233.521762 227.595908)">0</text>
+     </g>
+    </g>
+    <g id="f5-xtick_4">
+     <g id="f5-line2d_4">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="293.856852" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="293.856852" y="227.595908" transform="rotate(-0 293.856852 227.595908)">1</text>
+     </g>
+    </g>
+    <g id="f5-xtick_5">
+     <g id="f5-line2d_5">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="354.191943" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="354.191943" y="227.595908" transform="rotate(-0 354.191943 227.595908)">2</text>
+     </g>
+    </g>
+    <g id="f5-xtick_6">
+     <g id="f5-line2d_6">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="414.527034" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="414.527034" y="227.595908" transform="rotate(-0 414.527034 227.595908)">3</text>
+     </g>
+    </g>
+    <g id="f5-xtick_7">
+     <g id="f5-line2d_7">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="474.862124" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="474.862124" y="227.595908" transform="rotate(-0 474.862124 227.595908)">4</text>
+     </g>
+    </g>
+    <g id="f5-xtick_8">
+     <g id="f5-line2d_8">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="535.197215" y="211.47872" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="535.197215" y="227.595908" transform="rotate(-0 535.197215 227.595908)">5</text>
+     </g>
+    </g>
+    <g id="f5-text_9">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="308.940625" y="243.596845" transform="rotate(-0 308.940625 243.596845)">Physical position along the rail / m</text>
+    </g>
+   </g>
+   <g id="f5-matplotlib.axis_2">
+    <g id="f5-ytick_1">
+     <g id="f5-line2d_9"/>
+     <g id="f5-text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="49.01649" y="189.162824" transform="rotate(-0 49.01649 189.162824)">D · 19 s</text>
+     </g>
+    </g>
+    <g id="f5-ytick_2">
+     <g id="f5-line2d_10"/>
+     <g id="f5-text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="49.01649" y="144.372007" transform="rotate(-0 49.01649 144.372007)">C · 16 s</text>
+     </g>
+    </g>
+    <g id="f5-ytick_3">
+     <g id="f5-line2d_11"/>
+     <g id="f5-text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="49.01649" y="99.581191" transform="rotate(-0 49.01649 99.581191)">B · 14 s</text>
+     </g>
+    </g>
+    <g id="f5-ytick_4">
+     <g id="f5-line2d_12"/>
+     <g id="f5-text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="49.01649" y="54.790374" transform="rotate(-0 49.01649 54.790374)">A · 10 s</text>
+     </g>
+    </g>
+   </g>
+   <g id="f5-LineCollection_1">
+    <path d="M 76.650526 50.23178
+L 535.197215 50.23178
+" clip-path="url(#f5-ped3c377c4c)" style="fill: none; stroke: #8c9b95"/>
+   </g>
+   <g id="f5-line2d_13">
+    <defs>
+     <path id="f5-mb02cd735a8" d="M 0 4
+C 1.060812 4 2.078319 3.578535 2.828427 2.828427
+C 3.578535 2.078319 4 1.060812 4 0
+C 4 -1.060812 3.578535 -2.078319 2.828427 -2.828427
+C 2.078319 -3.578535 1.060812 -4 0 -4
+C -1.060812 -4 -2.078319 -3.578535 -2.828427 -2.828427
+C -3.578535 -2.078319 -4 -1.060812 -4 0
+C -4 1.060812 -3.578535 2.078319 -2.828427 2.828427
+C -2.078319 3.578535 -1.060812 4 0 4
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f5-ped3c377c4c)">
+     <use xlink:href="#f5-mb02cd735a8" x="112.851581" y="50.23178" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f5-LineCollection_2">
+    <path d="M 76.650526 95.022597
+L 535.197215 95.022597
+" clip-path="url(#f5-ped3c377c4c)" style="fill: none; stroke: #8c9b95"/>
+   </g>
+   <g id="f5-line2d_14">
+    <g clip-path="url(#f5-ped3c377c4c)">
+     <use xlink:href="#f5-mb02cd735a8" x="474.862124" y="95.022597" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f5-LineCollection_3">
+    <path d="M 76.650526 139.813414
+L 535.197215 139.813414
+" clip-path="url(#f5-ped3c377c4c)" style="fill: none; stroke: #8c9b95"/>
+   </g>
+   <g id="f5-line2d_15">
+    <g clip-path="url(#f5-ped3c377c4c)">
+     <use xlink:href="#f5-mb02cd735a8" x="474.862124" y="139.813414" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f5-LineCollection_4">
+    <path d="M 76.650526 184.60423
+L 535.197215 184.60423
+" clip-path="url(#f5-ped3c377c4c)" style="fill: none; stroke: #8c9b95"/>
+   </g>
+   <g id="f5-line2d_16">
+    <g clip-path="url(#f5-ped3c377c4c)">
+     <use xlink:href="#f5-mb02cd735a8" x="293.856852" y="184.60423" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f5-line2d_17">
+    <path d="M 233.521762 211.47872
+L 233.521762 18.878209
+" clip-path="url(#f5-ped3c377c4c)" style="fill: none; stroke-dasharray: 1,1.65; stroke-dashoffset: 0; stroke: #8c9b95"/>
+   </g>
+   <g id="f5-patch_3">
+    <path d="M 52.51649 211.47872
+L 565.36476 211.47872
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f5-text_14">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="308.940625" y="12.878209" transform="rotate(-0 308.940625 12.878209)">Four snapshots of the same straight rail</text>
+   </g>
+  </g>
+  <g id="f5-axes_2">
+   <g id="f5-patch_4">
+    <path d="M 52.51649 537.998822
+L 565.36476 537.998822
+L 565.36476 268.358106
+L 52.51649 268.358106
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f5-matplotlib.axis_3">
+    <g id="f5-xtick_9">
+     <g id="f5-line2d_18">
+      <path d="M 99.13906 537.998822
+L 99.13906 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_19">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="99.13906" y="537.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_15">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="99.13906" y="554.11601" transform="rotate(-0 99.13906 554.11601)">10</text>
+     </g>
+    </g>
+    <g id="f5-xtick_10">
+     <g id="f5-line2d_20">
+      <path d="M 192.3842 537.998822
+L 192.3842 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_21">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="192.3842" y="537.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_16">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="192.3842" y="554.11601" transform="rotate(-0 192.3842 554.11601)">12</text>
+     </g>
+    </g>
+    <g id="f5-xtick_11">
+     <g id="f5-line2d_22">
+      <path d="M 285.62934 537.998822
+L 285.62934 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_23">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="285.62934" y="537.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_17">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="285.62934" y="554.11601" transform="rotate(-0 285.62934 554.11601)">14</text>
+     </g>
+    </g>
+    <g id="f5-xtick_12">
+     <g id="f5-line2d_24">
+      <path d="M 378.87448 537.998822
+L 378.87448 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_25">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="378.87448" y="537.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_18">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="378.87448" y="554.11601" transform="rotate(-0 378.87448 554.11601)">16</text>
+     </g>
+    </g>
+    <g id="f5-xtick_13">
+     <g id="f5-line2d_26">
+      <path d="M 472.11962 537.998822
+L 472.11962 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_27">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="472.11962" y="537.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_19">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="472.11962" y="554.11601" transform="rotate(-0 472.11962 554.11601)">18</text>
+     </g>
+    </g>
+    <g id="f5-xtick_14">
+     <g id="f5-line2d_28">
+      <path d="M 565.36476 537.998822
+L 565.36476 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_29">
+      <g>
+       <use xlink:href="#f5-m118c3cbddc" x="565.36476" y="537.998822" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_20">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="565.36476" y="554.11601" transform="rotate(-0 565.36476 554.11601)">20</text>
+     </g>
+    </g>
+    <g id="f5-text_21">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="308.940625" y="570.116948" transform="rotate(-0 308.940625 570.116948)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="f5-matplotlib.axis_4">
+    <g id="f5-ytick_5">
+     <g id="f5-line2d_30">
+      <path d="M 52.51649 508.038743
+L 565.36476 508.038743
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_31">
+      <defs>
+       <path id="f5-m3c31592a89" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f5-m3c31592a89" x="52.51649" y="508.038743" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_22">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="45.51649" y="512.597337" transform="rotate(-0 45.51649 512.597337)">−2</text>
+     </g>
+    </g>
+    <g id="f5-ytick_6">
+     <g id="f5-line2d_32">
+      <path d="M 52.51649 448.118584
+L 565.36476 448.118584
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_33">
+      <g>
+       <use xlink:href="#f5-m3c31592a89" x="52.51649" y="448.118584" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_23">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="45.51649" y="452.677178" transform="rotate(-0 45.51649 452.677178)">0</text>
+     </g>
+    </g>
+    <g id="f5-ytick_7">
+     <g id="f5-line2d_34">
+      <path d="M 52.51649 388.198425
+L 565.36476 388.198425
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_35">
+      <g>
+       <use xlink:href="#f5-m3c31592a89" x="52.51649" y="388.198425" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_24">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="45.51649" y="392.757018" transform="rotate(-0 45.51649 392.757018)">2</text>
+     </g>
+    </g>
+    <g id="f5-ytick_8">
+     <g id="f5-line2d_36">
+      <path d="M 52.51649 328.278266
+L 565.36476 328.278266
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_37">
+      <g>
+       <use xlink:href="#f5-m3c31592a89" x="52.51649" y="328.278266" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_25">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="45.51649" y="332.836859" transform="rotate(-0 45.51649 332.836859)">4</text>
+     </g>
+    </g>
+    <g id="f5-ytick_9">
+     <g id="f5-line2d_38">
+      <path d="M 52.51649 268.358106
+L 565.36476 268.358106
+" clip-path="url(#f5-pf1b69bdf2a)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f5-line2d_39">
+      <g>
+       <use xlink:href="#f5-m3c31592a89" x="52.51649" y="268.358106" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f5-text_26">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="45.51649" y="272.9167" transform="rotate(-0 45.51649 272.9167)">6</text>
+     </g>
+    </g>
+    <g id="f5-text_27">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="20.943052" y="403.178464" transform="rotate(-90 20.943052 403.178464)">Position / m</text>
+    </g>
+   </g>
+   <g id="f5-patch_5">
+    <path d="M 52.51649 537.998822
+L 52.51649 268.358106
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f5-patch_6">
+    <path d="M 565.36476 537.998822
+L 565.36476 268.358106
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f5-patch_7">
+    <path d="M 52.51649 537.998822
+L 565.36476 537.998822
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f5-patch_8">
+    <path d="M 52.51649 268.358106
+L 565.36476 268.358106
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f5-text_28">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="105.13906" y="499.038743" transform="rotate(-0 105.13906 499.038743)">A</text>
+   </g>
+   <g id="f5-text_29">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="291.62934" y="319.278266" transform="rotate(-0 291.62934 319.278266)">B</text>
+   </g>
+   <g id="f5-text_30">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="384.87448" y="319.278266" transform="rotate(-0 384.87448 319.278266)">C</text>
+   </g>
+   <g id="f5-text_31">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="524.74219" y="409.158504" transform="rotate(-0 524.74219 409.158504)">D</text>
+   </g>
+   <g id="f5-text_32">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="308.940625" y="262.358106" transform="rotate(-0 308.940625 262.358106)">The same four observations on a position–time graph</text>
+   </g>
+   <g id="f5-line2d_40">
+    <defs>
+     <path id="f5-mc1f3d8fdf4" d="M 0 3.5
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
+C 3.131218 1.81853 3.5 0.928211 3.5 0
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874
+C -1.81853 3.131218 -0.928211 3.5 0 3.5
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f5-pf1b69bdf2a)">
+     <use xlink:href="#f5-mc1f3d8fdf4" x="99.13906" y="508.038743" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f5-mc1f3d8fdf4" x="285.62934" y="328.278266" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f5-mc1f3d8fdf4" x="378.87448" y="328.278266" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f5-mc1f3d8fdf4" x="518.74219" y="418.158504" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="f5-ped3c377c4c">
+   <rect x="52.51649" y="18.878209" width="512.84827" height="192.600511"/>
+  </clipPath>
+  <clipPath id="f5-pf1b69bdf2a">
+   <rect x="52.51649" y="268.358106" width="512.84827" height="269.640716"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.5.</b> The upper rows show separate snapshots of the same rail, not four rails. The lower graph turns each time–position pair into a point. B and C share a physical position but have different times. No route between readings is supplied. <span class="media-credit">Original LibraUni diagram · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<div class="example" id="p101-u03-example-05"><h4>Example 3.5 · Reading in both directions</h4><p><strong>Question.</strong> Locate B and D on the graph. What displacement occurred between them, and where does that information appear visually?</p><p><strong>Working.</strong> B is at horizontal coordinate 14 s and vertical coordinate 4 m. D is at 19 s and 1 m. Read each quantity from its own axis before subtracting. The final position is lower on the graph, so we expect a negative change:</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>1</mn><mspace width="0.2em"/><mtext>m</mtext><mo>−</mo><mn>4</mn><mspace width="0.2em"/><mtext>m</mtext><mo>=</mo><mo>−</mo><mn>3</mn><mspace width="0.2em"/><mtext>m</mtext></math></div><p>The vertical difference represents the displacement −3 m. The horizontal difference represents an elapsed time of 5 s. Neither difference is the slanting length of a line on the page. That page length would combine two different axis scales and would change if we stretched the drawing.</p><p><strong>Interpretation.</strong> The marked point finishes 3 m to the left of its position at B. This is a net change. We have not yet specified whether it paused or reversed during the interval.</p></div>
+<p>The axis label <em>Position / m</em> means that its tick numbers give position expressed in metres. Thus the tick marked 4 corresponds to 4 m. Similarly, <em>Clock reading / s</em> gives times expressed in seconds. Including the quantity and unit lets the graph travel beyond the paragraph in which it was introduced. An isolated label such as “x” or “time” would leave more for the reader to guess.</p>
+<div class="important"><h4>Key idea · Each plotted point preserves a pair</h4><p>On a position–time graph, horizontal coordinate = time and vertical coordinate = position. Keep the two entries from each observation together. The graph’s shape is not the shape of the physical track.</p></div>
+<div class="activity" id="p101-u03-activity-07"><h4>Activity 3.7 · Translate without adding information</h4><p>Allow 15 minutes. Draw a position–time graph of A–D on squared paper. Use one consistent scale on each axis, label quantities and units, and leave the points unjoined. Under it, sketch the rail and mark the positions of A–D. Explain why B and C coincide on the rail but occupy different points on the graph. Finally, correct the statement “D is above the time axis, so the carriage must be moving rightwards at D.”</p><details><summary>Hint for Activity 3.7</summary><p>Ask what the vertical coordinate tells you at one instant, and what you would need to know to describe a change. Label B and C separately even where their physical positions coincide.</p></details><details><summary>Discussion of Activity 3.7</summary><p>Your four graph points should have coordinates (10 s, −2 m), (14 s, 4 m), (16 s, 4 m) and (19 s, 1 m). The B–C horizontal spacing represents 2 s, compared with 4 s for A–B and 3 s for C–D. On the rail B and C both mark 4 m; the graph also distinguishes their times. D’s positive position says it lies to the right of the chosen origin. It does not establish its direction of motion at that instant. Even the negative average velocity from C to D describes an interval, not an instantaneous reading.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L02-S02"><h2>3.8 What belongs between the points?</h2>
+<p>It is tempting to join the points as soon as they appear. A line makes a pattern easier to follow, but it also occupies times at which the table contains no observation. We must decide what that line is intended to mean. It might be a visual guide, explicitly described as such, or it might represent an assumed history of the motion. A plotting command cannot make this scientific decision for us.</p>
+<p>For example, a horizontal segment from B to C represents position 4 m throughout those two seconds. That is a model of rest. The two endpoint observations are also compatible with an excursion away from 4 m followed by a return. Figure 3.6 shows both possibilities. The extra point on the dotted alternative is part of that imagined history; it is not an additional observation.</p>
+<figure id="p101-u03-figure-06"><div class="diagram generated-plot" role="region" tabindex="0" aria-label="Observations do not choose a connector; scroll horizontally if needed"><svg role="img" aria-labelledby="fig6title fig6desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 338.4" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="fig6title">Observations do not choose a connector</title><desc id="fig6desc">The four recorded points are fixed. Dashed segments assume constant velocity from A to B, rest from B to C and constant velocity from C to D. A dotted alternative goes from B to five metres at fifteen seconds and returns to C.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-12T14:21:05.983004</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="f6-figure_1">
+  <g id="f6-patch_1">
+   <path d="M 0 338.4
+L 576 338.4
+L 576 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="f6-axes_1">
+   <g id="f6-patch_2">
+    <path d="M 43.691802 300.398823
+L 565.36476 300.398823
+L 565.36476 18.878209
+L 43.691802 18.878209
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f6-matplotlib.axis_1">
+    <g id="f6-xtick_1">
+     <g id="f6-line2d_1">
+      <path d="M 91.116617 300.398823
+L 91.116617 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_2">
+      <defs>
+       <path id="f6-ma6443d8d0d" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f6-ma6443d8d0d" x="91.116617" y="300.398823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="91.116617" y="316.51601" transform="rotate(-0 91.116617 316.51601)">10</text>
+     </g>
+    </g>
+    <g id="f6-xtick_2">
+     <g id="f6-line2d_3">
+      <path d="M 185.966245 300.398823
+L 185.966245 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_4">
+      <g>
+       <use xlink:href="#f6-ma6443d8d0d" x="185.966245" y="300.398823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="185.966245" y="316.51601" transform="rotate(-0 185.966245 316.51601)">12</text>
+     </g>
+    </g>
+    <g id="f6-xtick_3">
+     <g id="f6-line2d_5">
+      <path d="M 280.815874 300.398823
+L 280.815874 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_6">
+      <g>
+       <use xlink:href="#f6-ma6443d8d0d" x="280.815874" y="300.398823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="280.815874" y="316.51601" transform="rotate(-0 280.815874 316.51601)">14</text>
+     </g>
+    </g>
+    <g id="f6-xtick_4">
+     <g id="f6-line2d_7">
+      <path d="M 375.665503 300.398823
+L 375.665503 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_8">
+      <g>
+       <use xlink:href="#f6-ma6443d8d0d" x="375.665503" y="300.398823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="375.665503" y="316.51601" transform="rotate(-0 375.665503 316.51601)">16</text>
+     </g>
+    </g>
+    <g id="f6-xtick_5">
+     <g id="f6-line2d_9">
+      <path d="M 470.515131 300.398823
+L 470.515131 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_10">
+      <g>
+       <use xlink:href="#f6-ma6443d8d0d" x="470.515131" y="300.398823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="470.515131" y="316.51601" transform="rotate(-0 470.515131 316.51601)">18</text>
+     </g>
+    </g>
+    <g id="f6-xtick_6">
+     <g id="f6-line2d_11">
+      <path d="M 565.36476 300.398823
+L 565.36476 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_12">
+      <g>
+       <use xlink:href="#f6-ma6443d8d0d" x="565.36476" y="300.398823" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="565.36476" y="316.51601" transform="rotate(-0 565.36476 316.51601)">20</text>
+     </g>
+    </g>
+    <g id="f6-text_7">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="304.528281" y="332.516948" transform="rotate(-0 304.528281 332.516948)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="f6-matplotlib.axis_2">
+    <g id="f6-ytick_1">
+     <g id="f6-line2d_13">
+      <path d="M 43.691802 269.118754
+L 565.36476 269.118754
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_14">
+      <defs>
+       <path id="f6-m17dc90ef3c" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f6-m17dc90ef3c" x="43.691802" y="269.118754" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="36.691802" y="273.677348" transform="rotate(-0 36.691802 273.677348)">−2</text>
+     </g>
+    </g>
+    <g id="f6-ytick_2">
+     <g id="f6-line2d_15">
+      <path d="M 43.691802 206.558618
+L 565.36476 206.558618
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_16">
+      <g>
+       <use xlink:href="#f6-m17dc90ef3c" x="43.691802" y="206.558618" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="36.691802" y="211.117212" transform="rotate(-0 36.691802 211.117212)">0</text>
+     </g>
+    </g>
+    <g id="f6-ytick_3">
+     <g id="f6-line2d_17">
+      <path d="M 43.691802 143.998482
+L 565.36476 143.998482
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_18">
+      <g>
+       <use xlink:href="#f6-m17dc90ef3c" x="43.691802" y="143.998482" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="36.691802" y="148.557075" transform="rotate(-0 36.691802 148.557075)">2</text>
+     </g>
+    </g>
+    <g id="f6-ytick_4">
+     <g id="f6-line2d_19">
+      <path d="M 43.691802 81.438345
+L 565.36476 81.438345
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_20">
+      <g>
+       <use xlink:href="#f6-m17dc90ef3c" x="43.691802" y="81.438345" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="36.691802" y="85.996939" transform="rotate(-0 36.691802 85.996939)">4</text>
+     </g>
+    </g>
+    <g id="f6-ytick_5">
+     <g id="f6-line2d_21">
+      <path d="M 43.691802 18.878209
+L 565.36476 18.878209
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.22; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f6-line2d_22">
+      <g>
+       <use xlink:href="#f6-m17dc90ef3c" x="43.691802" y="18.878209" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f6-text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="36.691802" y="23.436802" transform="rotate(-0 36.691802 23.436802)">6</text>
+     </g>
+    </g>
+    <g id="f6-text_13">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="159.638516" transform="rotate(-90 12.118365 159.638516)">Position / m</text>
+    </g>
+   </g>
+   <g id="f6-line2d_23">
+    <path d="M 91.116617 269.118754
+L 280.815874 81.438345
+L 375.665503 81.438345
+L 517.939946 175.27855
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #955820; stroke-width: 2"/>
+   </g>
+   <g id="f6-line2d_24">
+    <path d="M 280.815874 81.438345
+L 328.240688 50.158277
+L 375.665503 81.438345
+" clip-path="url(#f6-pd4ad5164d5)" style="fill: none; stroke-dasharray: 2.5,4.125; stroke-dashoffset: 0; stroke: #304c9e; stroke-width: 2.5"/>
+   </g>
+   <g id="f6-patch_3">
+    <path d="M 43.691802 300.398823
+L 43.691802 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f6-patch_4">
+    <path d="M 565.36476 300.398823
+L 565.36476 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f6-patch_5">
+    <path d="M 43.691802 300.398823
+L 565.36476 300.398823
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f6-patch_6">
+    <path d="M 43.691802 18.878209
+L 565.36476 18.878209
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f6-text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="97.116617" y="260.118754" transform="rotate(-0 97.116617 260.118754)">A</text>
+   </g>
+   <g id="f6-text_15">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="286.815874" y="72.438345" transform="rotate(-0 286.815874 72.438345)">B</text>
+   </g>
+   <g id="f6-text_16">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="381.665503" y="72.438345" transform="rotate(-0 381.665503 72.438345)">C</text>
+   </g>
+   <g id="f6-text_17">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="523.939946" y="166.27855" transform="rotate(-0 523.939946 166.27855)">D</text>
+   </g>
+   <g id="f6-text_18">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="304.528281" y="12.878209" transform="rotate(-0 304.528281 12.878209)">Same recorded points; different assumed histories</text>
+   </g>
+   <g id="f6-line2d_25">
+    <defs>
+     <path id="f6-m57490ac301" d="M 0 3.5
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
+C 3.131218 1.81853 3.5 0.928211 3.5 0
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874
+C -1.81853 3.131218 -0.928211 3.5 0 3.5
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f6-pd4ad5164d5)">
+     <use xlink:href="#f6-m57490ac301" x="91.116617" y="269.118754" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f6-m57490ac301" x="280.815874" y="81.438345" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f6-m57490ac301" x="375.665503" y="81.438345" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f6-m57490ac301" x="517.939946" y="175.27855" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f6-legend_1">
+    <g id="f6-patch_7">
+     <path d="M 300.138198 295.398823
+L 558.36476 295.398823
+Q 560.36476 295.398823 560.36476 293.398823
+L 560.36476 264.39726
+Q 560.36476 262.39726 558.36476 262.39726
+L 300.138198 262.39726
+Q 298.138198 262.39726 298.138198 264.39726
+L 298.138198 293.398823
+Q 298.138198 295.398823 300.138198 295.398823
+z
+" style="fill: #f3f6f2; opacity: 0.95; stroke: #cccccc; stroke-linejoin: miter"/>
+    </g>
+    <g id="f6-line2d_26">
+     <path d="M 302.138198 270.495698
+L 312.138198 270.495698
+L 322.138198 270.495698
+" style="fill: none; stroke-dasharray: 7.4,3.2; stroke-dashoffset: 0; stroke: #955820; stroke-width: 2"/>
+    </g>
+    <g id="f6-text_19">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="330.138198" y="273.995698" transform="rotate(-0 330.138198 273.995698)">One assumed history: steady stages and rest</text>
+    </g>
+    <g id="f6-line2d_27">
+     <path d="M 302.138198 285.496479
+L 312.138198 285.496479
+L 322.138198 285.496479
+" style="fill: none; stroke-dasharray: 2.5,4.125; stroke-dashoffset: 0; stroke: #304c9e; stroke-width: 2.5"/>
+    </g>
+    <g id="f6-text_20">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="330.138198" y="288.996479" transform="rotate(-0 330.138198 288.996479)">Alternative between B and C: out and back</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="f6-pd4ad5164d5">
+   <rect x="43.691802" y="18.878209" width="521.672958" height="281.520614"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.6.</b> The circles are the supplied observations. The dashed history is one additional model; the dotted excursion replaces its middle segment with another possibility. Both meet B and C. Line styles distinguish assumptions even without colour. <span class="media-credit">Original LibraUni diagram · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>Joining A to B by a straight segment likewise supplies information: equal time increments along that segment correspond to equal position increments. It represents constant velocity over that interval. The samples establish the interval’s average velocity, but constant velocity requires the additional assumption. The direct, steady travelling stages and middle rest used in a stipulated journey in Lesson 1 are one possible model for the whole record; they are not recovered from the data merely by drawing straight lines.</p>
+<div class="example" id="p101-u03-example-06"><h4>Example 3.6 · A slope has units</h4><p><strong>Question.</strong> Find the average velocity from C to D. Would making the graph twice as tall change the answer?</p><p><strong>Working.</strong> C is (16 s, 4 m) and D is (19 s, 1 m). The position change is −3 m, and the elapsed time is 3 s. The average velocity is</p><div class="equation" tabindex="0" role="region" aria-label="Calculation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>v</mi><mtext>av</mtext></msub><mo>=</mo><mfrac><mrow><mo>−</mo><mn>3</mn><mspace width="0.2em"/><mtext>m</mtext></mrow><mrow><mn>3</mn><mspace width="0.2em"/><mtext>s</mtext></mrow></mfrac><mo>=</mo><mo>−</mo><mn>1</mn><mspace width="0.2em"/><mtext>m/s</mtext></math></div><p>The ratio is the vertical-coordinate change divided by the horizontal-coordinate change: the <strong>gradient</strong> of the straight segment joining these two points. Here its unit is metres per second. We divide changes in the labelled quantities, not centimetres measured with a ruler on the display.</p><p><strong>Interpretation.</strong> Stretching the graph makes the drawn segment look steeper, but the endpoint values, their differences and the average velocity remain unchanged. The negative sign means a net change towards decreasing position. It does not mean that the rail slopes downhill, and the magnitude 1 m/s is not evidence of a constant speed throughout the interval.</p></div>
+<figure id="p101-u03-figure-07"><div class="diagram generated-plot" role="region" tabindex="0" aria-label="Same coordinate differences in two aspect ratios; scroll horizontally if needed"><svg role="img" aria-labelledby="fig7title fig7desc" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 576 381.6" xmlns="http://www.w3.org/2000/svg" version="1.1"><title id="fig7title">Same coordinate differences in two aspect ratios</title><desc id="fig7desc">C is at sixteen seconds and four metres; D is at nineteen seconds and one metre on both graphs. One plotting area is wider, the other taller. Both changes are minus three metres in three seconds.</desc>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-12T14:21:06.029337</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="f7-figure_1">
+  <g id="f7-patch_1">
+   <path d="M 0 381.6
+L 576 381.6
+L 576 0
+L 0 0
+z
+" style="fill: #f3f6f2"/>
+  </g>
+  <g id="f7-axes_1">
+   <g id="f7-patch_2">
+    <path d="M 33.636177 271.025903
+L 284.99976 271.025903
+L 284.99976 107.639574
+L 33.636177 107.639574
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f7-matplotlib.axis_1">
+    <g id="f7-xtick_1">
+     <g id="f7-line2d_1">
+      <path d="M 83.908894 271.025903
+L 83.908894 107.639574
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_2">
+      <defs>
+       <path id="f7-mc84bd26a68" d="M 0 0
+L 0 3.5
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="83.908894" y="271.025903" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="83.908894" y="287.14309" transform="rotate(-0 83.908894 287.14309)">16</text>
+     </g>
+    </g>
+    <g id="f7-xtick_2">
+     <g id="f7-line2d_3">
+      <path d="M 134.181611 271.025903
+L 134.181611 107.639574
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_4">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="134.181611" y="271.025903" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="134.181611" y="287.14309" transform="rotate(-0 134.181611 287.14309)">17</text>
+     </g>
+    </g>
+    <g id="f7-xtick_3">
+     <g id="f7-line2d_5">
+      <path d="M 184.454327 271.025903
+L 184.454327 107.639574
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_6">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="184.454327" y="271.025903" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="184.454327" y="287.14309" transform="rotate(-0 184.454327 287.14309)">18</text>
+     </g>
+    </g>
+    <g id="f7-xtick_4">
+     <g id="f7-line2d_7">
+      <path d="M 234.727044 271.025903
+L 234.727044 107.639574
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_8">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="234.727044" y="271.025903" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="234.727044" y="287.14309" transform="rotate(-0 234.727044 287.14309)">19</text>
+     </g>
+    </g>
+    <g id="f7-text_5">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="159.317969" y="303.144028" transform="rotate(-0 159.317969 303.144028)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="f7-matplotlib.axis_2">
+    <g id="f7-ytick_1">
+     <g id="f7-line2d_9">
+      <path d="M 33.636177 271.025903
+L 284.99976 271.025903
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_10">
+      <defs>
+       <path id="f7-m364eb99925" d="M 0 0
+L -3.5 0
+" style="stroke: #253b3c; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="33.636177" y="271.025903" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_6">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="26.636177" y="275.584497" transform="rotate(-0 26.636177 275.584497)">0</text>
+     </g>
+    </g>
+    <g id="f7-ytick_2">
+     <g id="f7-line2d_11">
+      <path d="M 33.636177 238.348637
+L 284.99976 238.348637
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_12">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="33.636177" y="238.348637" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="26.636177" y="242.907231" transform="rotate(-0 26.636177 242.907231)">1</text>
+     </g>
+    </g>
+    <g id="f7-ytick_3">
+     <g id="f7-line2d_13">
+      <path d="M 33.636177 205.671371
+L 284.99976 205.671371
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_14">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="33.636177" y="205.671371" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="26.636177" y="210.229965" transform="rotate(-0 26.636177 210.229965)">2</text>
+     </g>
+    </g>
+    <g id="f7-ytick_4">
+     <g id="f7-line2d_15">
+      <path d="M 33.636177 172.994106
+L 284.99976 172.994106
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_16">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="33.636177" y="172.994106" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="26.636177" y="177.552699" transform="rotate(-0 26.636177 177.552699)">3</text>
+     </g>
+    </g>
+    <g id="f7-ytick_5">
+     <g id="f7-line2d_17">
+      <path d="M 33.636177 140.31684
+L 284.99976 140.31684
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_18">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="33.636177" y="140.31684" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="26.636177" y="144.875434" transform="rotate(-0 26.636177 144.875434)">4</text>
+     </g>
+    </g>
+    <g id="f7-ytick_6">
+     <g id="f7-line2d_19">
+      <path d="M 33.636177 107.639574
+L 284.99976 107.639574
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_20">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="33.636177" y="107.639574" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="26.636177" y="112.198168" transform="rotate(-0 26.636177 112.198168)">5</text>
+     </g>
+    </g>
+    <g id="f7-text_12">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="12.118365" y="189.332738" transform="rotate(-90 12.118365 189.332738)">Position / m</text>
+    </g>
+   </g>
+   <g id="f7-line2d_21">
+    <path d="M 83.908894 140.31684
+L 234.727044 238.348637
+" clip-path="url(#f7-p6326ce0bd4)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #216b68; stroke-width: 1.5"/>
+    <defs>
+     <path id="f7-m1397d69d8b" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #216b68"/>
+    </defs>
+    <g clip-path="url(#f7-p6326ce0bd4)">
+     <use xlink:href="#f7-m1397d69d8b" x="83.908894" y="140.31684" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f7-m1397d69d8b" x="234.727044" y="238.348637" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f7-patch_3">
+    <path d="M 33.636177 271.025903
+L 33.636177 107.639574
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-patch_4">
+    <path d="M 284.99976 271.025903
+L 284.99976 107.639574
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-patch_5">
+    <path d="M 33.636178 271.025903
+L 284.99976 271.025903
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-patch_6">
+    <path d="M 33.636178 107.639574
+L 284.99976 107.639574
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-text_13">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="90.908894" y="134.31684" transform="rotate(-0 90.908894 134.31684)">C</text>
+   </g>
+   <g id="f7-text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="241.727044" y="232.348637" transform="rotate(-0 241.727044 232.348637)">D</text>
+   </g>
+   <g id="f7-text_15">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="159.317969" y="101.639574" transform="rotate(-0 159.317969 101.639574)">Wider plotting area</text>
+   </g>
+  </g>
+  <g id="f7-axes_2">
+   <g id="f7-patch_7">
+    <path d="M 321.636178 340.150888
+L 572.99976 340.150888
+L 572.99976 38.514589
+L 321.636178 38.514589
+z
+" style="fill: #f3f6f2"/>
+   </g>
+   <g id="f7-matplotlib.axis_3">
+    <g id="f7-xtick_5">
+     <g id="f7-line2d_22">
+      <path d="M 371.908894 340.150888
+L 371.908894 38.514589
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_23">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="371.908894" y="340.150888" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_16">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="371.908894" y="356.268075" transform="rotate(-0 371.908894 356.268075)">16</text>
+     </g>
+    </g>
+    <g id="f7-xtick_6">
+     <g id="f7-line2d_24">
+      <path d="M 422.181611 340.150888
+L 422.181611 38.514589
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_25">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="422.181611" y="340.150888" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_17">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="422.181611" y="356.268075" transform="rotate(-0 422.181611 356.268075)">17</text>
+     </g>
+    </g>
+    <g id="f7-xtick_7">
+     <g id="f7-line2d_26">
+      <path d="M 472.454327 340.150888
+L 472.454327 38.514589
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_27">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="472.454327" y="340.150888" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_18">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="472.454327" y="356.268075" transform="rotate(-0 472.454327 356.268075)">18</text>
+     </g>
+    </g>
+    <g id="f7-xtick_8">
+     <g id="f7-line2d_28">
+      <path d="M 522.727044 340.150888
+L 522.727044 38.514589
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_29">
+      <g>
+       <use xlink:href="#f7-mc84bd26a68" x="522.727044" y="340.150888" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_19">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="522.727044" y="356.268075" transform="rotate(-0 522.727044 356.268075)">19</text>
+     </g>
+    </g>
+    <g id="f7-text_20">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="447.317969" y="372.269013" transform="rotate(-0 447.317969 372.269013)">Clock reading / s</text>
+    </g>
+   </g>
+   <g id="f7-matplotlib.axis_4">
+    <g id="f7-ytick_7">
+     <g id="f7-line2d_30">
+      <path d="M 321.636178 340.150888
+L 572.99976 340.150888
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_31">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="321.636178" y="340.150888" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_21">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="314.636178" y="344.709482" transform="rotate(-0 314.636178 344.709482)">0</text>
+     </g>
+    </g>
+    <g id="f7-ytick_8">
+     <g id="f7-line2d_32">
+      <path d="M 321.636178 279.823628
+L 572.99976 279.823628
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_33">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="321.636178" y="279.823628" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_22">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="314.636178" y="284.382222" transform="rotate(-0 314.636178 284.382222)">1</text>
+     </g>
+    </g>
+    <g id="f7-ytick_9">
+     <g id="f7-line2d_34">
+      <path d="M 321.636178 219.496368
+L 572.99976 219.496368
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_35">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="321.636178" y="219.496368" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_23">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="314.636178" y="224.054962" transform="rotate(-0 314.636178 224.054962)">2</text>
+     </g>
+    </g>
+    <g id="f7-ytick_10">
+     <g id="f7-line2d_36">
+      <path d="M 321.636178 159.169109
+L 572.99976 159.169109
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_37">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="321.636178" y="159.169109" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_24">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="314.636178" y="163.727702" transform="rotate(-0 314.636178 163.727702)">3</text>
+     </g>
+    </g>
+    <g id="f7-ytick_11">
+     <g id="f7-line2d_38">
+      <path d="M 321.636178 98.841849
+L 572.99976 98.841849
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_39">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="321.636178" y="98.841849" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_25">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="314.636178" y="103.400443" transform="rotate(-0 314.636178 103.400443)">4</text>
+     </g>
+    </g>
+    <g id="f7-ytick_12">
+     <g id="f7-line2d_40">
+      <path d="M 321.636178 38.514589
+L 572.99976 38.514589
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="f7-line2d_41">
+      <g>
+       <use xlink:href="#f7-m364eb99925" x="321.636178" y="38.514589" style="fill: #253b3c; stroke: #253b3c; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="f7-text_26">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #253b3c" x="314.636178" y="43.073183" transform="rotate(-0 314.636178 43.073183)">5</text>
+     </g>
+    </g>
+    <g id="f7-text_27">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="300.118365" y="189.332738" transform="rotate(-90 300.118365 189.332738)">Position / m</text>
+    </g>
+   </g>
+   <g id="f7-line2d_42">
+    <path d="M 371.908894 98.841849
+L 522.727044 279.823628
+" clip-path="url(#f7-p27809112d9)" style="fill: none; stroke-dasharray: 5.55,2.4; stroke-dashoffset: 0; stroke: #216b68; stroke-width: 1.5"/>
+    <g clip-path="url(#f7-p27809112d9)">
+     <use xlink:href="#f7-m1397d69d8b" x="371.908894" y="98.841849" style="fill: #216b68; stroke: #216b68"/>
+     <use xlink:href="#f7-m1397d69d8b" x="522.727044" y="279.823628" style="fill: #216b68; stroke: #216b68"/>
+    </g>
+   </g>
+   <g id="f7-patch_8">
+    <path d="M 321.636178 340.150888
+L 321.636178 38.514589
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-patch_9">
+    <path d="M 572.99976 340.150888
+L 572.99976 38.514589
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-patch_10">
+    <path d="M 321.636178 340.150888
+L 572.99976 340.150888
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-patch_11">
+    <path d="M 321.636178 38.514589
+L 572.99976 38.514589
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="f7-text_28">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="378.908894" y="92.841849" transform="rotate(-0 378.908894 92.841849)">C</text>
+   </g>
+   <g id="f7-text_29">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #253b3c" x="529.727044" y="273.823628" transform="rotate(-0 529.727044 273.823628)">D</text>
+   </g>
+   <g id="f7-text_30">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #253b3c" x="447.317969" y="32.514589" transform="rotate(-0 447.317969 32.514589)">Taller plotting area</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="f7-p6326ce0bd4">
+   <rect x="33.636177" y="107.639574" width="251.363582" height="163.386329"/>
+  </clipPath>
+  <clipPath id="f7-p27809112d9">
+   <rect x="321.636178" y="38.514589" width="251.363583" height="301.636299"/>
+  </clipPath>
+ </defs>
+</svg>
+</div><figcaption><b>Figure 3.7.</b> The same C–D pair is shown twice. The dashed connector identifies the endpoints being compared, not a measured continuous history. Its angle on the page changes with the aspect ratio; its coordinate gradient remains −1 m/s. <span class="media-credit">Original LibraUni diagram · CC BY-NC-SA 4.0.</span></figcaption></figure>
+<p>A useful graph does not have to begin at zero on every axis. Our time record begins at 10 s, so showing the neighbourhood of 10–19 s gives the points room. The tick labels must make that choice clear. The position scale must include the negative reading; cropping it away would hide an observation. For the ordinary linear axes used here, equal numerical increments occupy equal distances along each individual axis. The spacing of events therefore follows their clock readings, not their order in the table.</p>
+<div class="activity" id="p101-u03-activity-08"><h4>Activity 3.8 · Diagnose the claim</h4><p>Allow 20 minutes. A report places A, B, C and D at equally spaced horizontal locations labelled “reading 1” to “reading 4”, joins them and calls the result a position–time graph. Explain the problem. Calculate the A–B and B–C average velocities from the record. Then sketch two different position histories between B and C, both consistent with the recorded endpoints, and say what you can conclude about travelled distance over that interval.</p><details><summary>Hint for Activity 3.8</summary><p>The actual time gaps are unequal. For the second sketch you may choose a new, explicitly imagined position at 15 s. A zero displacement need not mean zero distance.</p></details><details><summary>Discussion of Activity 3.8</summary><p>A reading-number graph can display order, but its horizontal increments are not seconds. Equal spacing conceals the 4 s, 2 s and 3 s gaps, so its visual gradients cannot be read as velocities in metres per second. A–B changes by +6 m in 4 s, giving +1.5 m/s. B–C changes by 0 m in 2 s, giving 0 m/s. Rest at 4 m is one possible history. Another goes from 4 m to 5 m at 15 s and back to 4 m at 16 s, travelling 2 m if both stages are direct. The exact endpoints establish zero displacement, and zero is the minimum possible distance. They do not establish the actual distance or a finite upper bound without further physical constraints. Our simple sketches need not describe realistic behaviour at their sharp corners; they demonstrate missing information, not a detailed mechanical model.</p></details></div>
+<div class="context"><h4>A wider view · A luminous trace is not a time axis</h4><figure class="context-figure" id="p101-u03-figure-08"><img class="context-photo" src="/teaching/p101/u03/star-trails.jpg" width="1041" height="693" alt="Curved star trails surround a point in the sky, with part of the space station above and bright streaks across Earth's limb below."><figcaption><b>Figure 3.8.</b> A composite view from the International Space Station, 16 March 2012. The curves are traces in an image plane; neither image direction is a calibrated time axis. Credit: NASA/Don Pettit. JPEG recompressed, not cropped. <a href="https://www.nasa.gov/image-article/space-station-star-trail/">Source</a> · <a href="https://www.nasa.gov/nasa-brand-center/images-and-media/">Reuse terms</a>. No endorsement implied.</figcaption></figure><p>Optional, about two minutes within the reading allowance. Don Pettit assembled this view from multiple 30-second exposures taken with a camera mounted on the station. The luminous arcs make change during the exposures visible, but they are not position–time curves of the kind we have just constructed.</p><p>To obtain a position–time record from images, we would need to identify the tracked feature, define a coordinate and scale, and associate readings with times. The photograph is a reminder to ask how a visual representation was made before interpreting its curves. No astronomy calculation is needed here.</p></div>
+</section>
+<section class="chapter" id="P101-U03-L02-S03"><h2>3.9 Give the file a meaning</h2>
+<p>We can now ask a computer to reproduce our graph. The first step is less glamorous than drawing: preserve the paired values in a form that another calculation can read. A CSV file is a plain-text table whose fields are separated by commas. In this lesson each line after the header represents one observation, and each line contains exactly two numeric fields.</p>
+<pre aria-label="Contents of the supplied CSV data file"><code>time_s,position_m
+10,-2
+14,4
+16,4
+19,1</code></pre>
+<p>The first line is a <strong>header</strong>. It names the two columns and records their units using the suffixes <code>_s</code> and <code>_m</code>. These names are a convention we have chosen; a CSV reader does not automatically know that “s” means seconds. The minus sign in <code>-2</code> belongs to the number in the position field. There is no unit text inside that field because we want to read it as a number.</p>
+<p>A file of numbers still leaves questions unanswered. Where is the position origin? Which way is positive? Are these observations measured, simulated or invented? Does the clock restart between rows? The accompanying <strong>metadata</strong> supplies this meaning. It identifies the source record P101-U03-L01-A, states that these are invented teaching values, specifies a fixed rail origin and right-positive convention, and says that the same clock runs throughout. It also states that there are no missing entries in this small file and that no measurement uncertainties have been supplied.</p>
+<p>The absence of uncertainties is not a claim of a perfect instrument. There is no physical instrument behind this invented example. The numerical values are stipulated so that we can check the representation exactly. An actual investigation would need the measurement procedure and limitations discussed in Unit 2. A plot of realistic data would not become precise simply because its markers were small.</p>
+<div class="example" id="p101-u03-example-07"><h4>Example 3.7 · Keep the record and its meaning together</h4><p><strong>Question.</strong> A colleague sends the line <code>14,4</code> and writes “this is the second observation”. What is missing, and what would make it usable here?</p><p><strong>Working.</strong> The line alone does not identify which quantity comes first or either unit. A header restores that order: <code>time_s,position_m</code>. It then describes position 4 m at clock reading 14 s. To compare it with the other rows, we also need the common coordinate and clock conventions and the source of the values. Calling it the second observation establishes order, but does not supply elapsed time.</p><p><strong>Interpretation.</strong> A useful record combines the numerical fields, their names and the metadata. None of these parts can repair an incorrectly transcribed value by itself. Checking the downloaded file against the displayed table gives us a separate check of the transfer.</p></div>
+<p>Keep the supplied CSV unchanged. A derived column, such as elapsed time since A, belongs in a calculation or a separately named processed file. This preserves a route back to the original record. Do not replace an awkward value just to make a graph look smooth. If a different file contains a blank or invalid field, investigate and document it; the simple loading recipe below is deliberately designed for this complete numeric table.</p>
+<div class="activity" id="p101-u03-activity-09"><h4>Activity 3.9 · Audit the transfer</h4><p>Allow 15 minutes. Open the supplied CSV as text and check all four rows against the table. Write a short metadata note in your own words explaining the two columns, units, coordinate convention, clock convention and invented source. A draft note says “B to C shows two seconds of rest”. Decide whether that belongs among the observations or among additional assumptions, and revise the note.</p><details><summary>Hint for Activity 3.9</summary><p>Separate what was entered in the file from what a particular model would say between entries. The CSV has four data rows, even though the file has five lines including its header.</p></details><details><summary>Discussion of Activity 3.9</summary><p>The rows should be 10,−2; 14,4; 16,4; 19,1, with time first. A suitable note identifies seconds and metres, one fixed origin with right positive, one unchanged clock, and invented record P101-U03-L01-A transcribed without alteration. Replace the disputed sentence with “The position is 4 m at clock readings 14 s and 16 s; continuous rest between them is an additional model assumption.” No instrument precision or uncertainty should be invented to fill a metadata box.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L02-S04"><h2>3.10 Read the table into an array</h2>
+<p>Python’s basic lists were enough for our earlier short records. NumPy provides an <strong>array</strong>: a container particularly suited to organised numerical data and calculations on whole collections of values. We will use a two-dimensional array for the table. Its first direction runs through rows and its second through columns. “Two-dimensional” here describes the arrangement of numbers in memory, not a claim that the carriage moves in two spatial dimensions.</p>
+<p>Use a Python environment with NumPy and Matplotlib installed; many scientific notebook environments already include them. Extract the working folder and open the notebook there, or run the companion from that folder. The bare filename below is resolved relative to the Python session’s <em>working directory</em>, the folder from which it looks for files. In a hosted notebook, upload the CSV alongside the notebook. If Python reports <code>FileNotFoundError</code>, check that folder and the exact filename; changing the numbers will not fix a file-location problem. If an import reports <code>ModuleNotFoundError</code>, the named package needs installing in that environment; the official installation links at the end explain the options.</p>
+<pre><code class="language-python">import numpy as np
+
+data = np.loadtxt(
+    &quot;p101-u03-l02.csv&quot;,
+    delimiter=&quot;,&quot;,
+    skiprows=1,
+    ndmin=2,
+)
+print(&quot;Array shape (rows, columns):&quot;, data.shape)
+print(data)</code></pre>
+<p>The first line imports NumPy and gives it the short name <code>np</code>. The <code>as</code> clause is an alias, so subsequent calls can use <code>np</code> rather than the full package name. The dot in <code>np.loadtxt</code> selects NumPy’s text-loading function. Its first argument names our data file. The remaining named arguments explain how to read it: <code>delimiter=","</code> separates fields at commas; <code>skiprows=1</code> skips the header line; and <code>ndmin=2</code> keeps the result arranged in at least two dimensions, including when a suitable file contains only one data row.</p>
+<p>For this file the result printed by <code>data.shape</code> is <code>(4, 2)</code>: four rows and two columns. The printed array contains <code>10.</code>, <code>-2.</code> and so on. These are floating-point representations of our input numbers. The added decimal point reflects the numerical storage type; it does not add measurement precision. Reading the file successfully only establishes that the loader accepted its contents. It does not establish that the columns have the intended meaning or that the values match our source.</p>
+<p>To inspect one entry, use square brackets with a row index followed by a column index. Python starts counting at zero, so the first row is row 0 and the second column is column 1. The expression <code>data[0, 1]</code> therefore selects −2, the first recorded position. Counting from one would pick a different entry without necessarily producing an error.</p>
+<div class="example" id="p101-u03-example-08"><h4>Example 3.8 · Check a pair before plotting a column</h4><p><strong>Question.</strong> Which entries select C’s clock reading and position? How can we check that we have not confused rows and columns?</p><p><strong>Working.</strong> C is the third data row, so its row index is 2. Time is the first column, index 0; position is the second, index 1. Thus <code>data[2, 0]</code> gives 16 and <code>data[2, 1]</code> gives 4. Compare both values with the original row, including units. The header is not row 0 of this array: it was skipped during loading.</p><p><strong>Interpretation.</strong> Selecting one familiar pair checks our understanding of the layout. It is stronger than merely observing that the array contains a 4 somewhere, because B also has position 4 m.</p></div>
+<pre><code class="language-python">time_s = data[:, 0]
+position_m = data[:, 1]
+print(&quot;First position / m:&quot;, data[0, 1])
+print(&quot;C clock reading / s:&quot;, data[2, 0])
+elapsed_s = time_s - time_s[0]</code></pre>
+<p>In <code>data[:, 0]</code>, the colon means “all rows”; the 0 selects the time column. The result is a one-dimensional array of four times, assigned the descriptive name <code>time_s</code>. The next line extracts all positions in the same row order. The first time remains paired with the first position, and so on. Sorting either array on its own would destroy those pairs.</p>
+<p>The final line introduces a useful array calculation. <code>time_s[0]</code> is the first clock reading, 10 s. Subtracting that one number from the array subtracts it from every entry, producing elapsed times <code>[0., 4., 6., 9.]</code>. The new name <code>elapsed_s</code> keeps the distinction visible. This subtraction creates a derived array; the original <code>time_s</code> is unchanged. That distinction would be lost if we deliberately overwrote the original variable.</p>
+<div class="activity" id="p101-u03-activity-10"><h4>Activity 3.10 · Predict the selection</h4><p>Allow 15 minutes of written work before running the notebook. Give the meaning, value and unit of <code>data[1, 0]</code> and <code>data[3, 1]</code>. Write the four values selected by <code>data[:, 1]</code>. Predict the C–D elapsed-time difference using both <code>time_s</code> and <code>elapsed_s</code>. Explain why the answers should agree, and why sorting the positions from smallest to largest would spoil this record if times were left unchanged.</p><details><summary>Hint for Activity 3.10</summary><p>Annotate the table with row indices 0–3 and column indices 0–1. The same constant is subtracted from both endpoints when we change the time origin.</p></details><details><summary>Discussion of Activity 3.10</summary><p><code>data[1, 0]</code> is B’s clock reading, 14 s. <code>data[3, 1]</code> is D’s position, 1 m. The position column is −2, 4, 4, 1 m in that order. C–D is 19 − 16 = 3 s using clock readings and 9 − 6 = 3 s using elapsed times. A shared origin shift cancels in a difference. Independently sorting positions would produce −2, 1, 4, 4; it would wrongly pair 1 m with 14 s and 4 m with 19 s. Plausible-looking arrays can therefore describe the wrong experiment.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L02-S05"><h2>3.11 Make a graph that explains itself</h2>
+<p>Matplotlib is a plotting library. We will give it the two arrays and choose how to show them. Run the loading and column-selection blocks first, in the same session, then the block below. This uses the recorded clock readings; the elapsed-time version is a later check.</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(6, 4), layout=&quot;constrained&quot;)
+ax.plot(time_s, position_m, marker=&quot;o&quot;, linestyle=&quot;none&quot;)
+ax.set_xlabel(&quot;Clock reading / s&quot;)
+ax.set_ylabel(&quot;Position / m&quot;)
+ax.set_title(&quot;Invented carriage record P101-U03-L01-A&quot;)
+ax.grid(alpha=0.3)
+fig.savefig(&quot;p101-u03-l02-clock.png&quot;, dpi=160)
+plt.show()</code></pre>
+<p>The import supplies the plotting interface under the conventional short name <code>plt</code>. The call to <code>plt.subplots</code> creates two related objects. <code>fig</code> represents the whole figure; <code>ax</code> represents the plotting area, which Matplotlib calls an <em>Axes</em> even when we make just one. The two names on the left receive these two returned objects in order. The <code>figsize</code> values set a width of 6 inches and height of 4 inches for the figure, not the ranges of time and position. <code>layout="constrained"</code> asks Matplotlib to reserve space for labels.</p>
+<p>In <code>ax.plot(time_s, position_m, ...)</code>, the first array supplies horizontal coordinates and the second supplies vertical coordinates. This is worth reading aloud: time horizontally, position vertically. <code>marker="o"</code> requests a circular marker at each pair, while <code>linestyle="none"</code> suppresses joining lines. Without that deliberate choice, a usual line plot could introduce a continuous-looking history we have not established.</p>
+<p>The label commands name quantities and units. The title identifies the invented record; the grid provides a light reading aid, with <code>alpha=0.3</code> making its lines partly transparent. Finally, the figure is saved to a PNG image before <code>plt.show()</code> displays it. The value <code>dpi=160</code> sets image resolution in dots per inch; it changes the stored image’s pixel density, not the number or accuracy of the observations. The PNG is written to the working directory and is replaced if you run the same save command again. Give a revised plot a different filename if you want to preserve both versions.</p>
+<figure id="p101-u03-figure-09"><div class="diagram raster-plot" tabindex="0" role="region" aria-label="Matplotlib output; scroll horizontally if needed"><img src="/teaching/p101/u03/carriage-matplotlib.png" width="960" height="640" alt="Marker-only Matplotlib plot: time 10, 14, 16, 19 seconds and position minus 2, 4, 4, 1 metres, with labelled axes and a grid."></div><figcaption><b>Figure 3.9.</b> Position against clock reading for invented record P101-U03-L01-A, using a fixed rail origin and right-positive convention. Circles show the four supplied pairs. There is no joining curve because these samples alone do not determine the intervening motion. Credit: Original LibraUni output, generated by the displayed code. <a href="/notebooks/p101-u03-l02.py">Source code</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Figure reuse terms</a>.</figcaption></figure>
+<p>Compare this result with your paper graph. B and C should share a height; the two-second gap between them should be narrower than the four-second A–B gap. A must be below zero position, D above it. Automatic tick placement need not put a tick exactly beneath every observation. A point at 19 s is still meaningful if the nearest labelled ticks are 18 s and 20 s. Different software versions may choose slightly different ticks or spacing without changing the plotted pairs.</p>
+<p>The title and axis labels are necessary, but they do not carry the whole explanation. A caption should identify the record, say what the symbols or lines represent, and explain a relevant limitation. Figure 3.9’s caption does this. In a report, place your caption next to the exported figure rather than expecting a reader to infer its provenance from a filename.</p>
+<div class="important"><h4>Reporting rule · Check the graph against its source</h4><p>Check at least one pair in each direction: locate a source row on the graph, then read a plotted point back to the record. Check all rows when the file is this small. Name quantities and units, preserve meaningful time spacing, and explain whether lines represent observations, guides or a model.</p></div>
+<div class="activity" id="p101-u03-activity-11"><h4>Activity 3.11 · Review a figure as a reader</h4><p>Allow 15 minutes. A draft uses <code>ax.plot(position_m, time_s)</code> but labels its horizontal axis “Clock reading / s” and its vertical axis “Position / m”. Explain why correct labels alone cannot fix it, and identify where A would actually be drawn. Write a corrected plotting call. Then draft a two- or three-sentence caption for our marker-only graph that includes the source and one limitation.</p><details><summary>Hint for Activity 3.11</summary><p>Argument order determines the coordinates. Labels are text; Matplotlib does not check whether they describe the supplied arrays.</p></details><details><summary>Discussion of Activity 3.11</summary><p>The erroneous call places A at horizontal value −2 and vertical value 10, because position was supplied first. Relabelling does not move any point. Use <code>ax.plot(time_s, position_m, marker="o", linestyle="none")</code> for the intended axes. A suitable caption is: “Recorded position against clock reading for invented record P101-U03-L01-A. Circles show the four supplied pairs, with position measured from a fixed rail origin and right positive. No joining curve is shown because the samples alone do not determine motion between readings.” Equivalent wording is acceptable if it gives the reader the same information and does not claim an experiment was performed.</p></details></div>
+</section>
+<section class="chapter" id="P101-U03-L02-S06"><h2>3.12 Reproduce, inspect and explain</h2>
+<p>We now have a chain from a documented record to arrays and then to a figure. Each link has a different check. Matching rows tests transcription and selection; matching plotted coordinates tests the representation; a caption tests whether we can state what the result means. Running without an error is useful, but it answers none of those questions on its own.</p>
+<p>The notebook brings the three worked code blocks together, followed by spaces for your own checks. Keep predictions beside outputs. When a result surprises you, return to the smallest checkable part: one row, one selected entry or one axis. This makes a correction explainable and avoids changing several things at once until the picture happens to look familiar.</p>
+<div class="activity" id="p101-u03-activity-12"><h4>Activity 3.12 · A graph someone else can reproduce</h4><p>Allow 60 minutes of Python work, including setup: about 10 to inspect the files and predict, 20 to load and plot, 15 to make the checks below, and 15 to restart and write your report.</p><ol><li>Extract the working folder, read the metadata and compare the CSV with the lesson table. Predict the array shape and the values of A’s position and C’s time before executing the supplied cells.</li><li>Run the loading, selection and plotting blocks. Check the displayed shape, those two entries and all four markers. Open the saved PNG and check that its labels are visible.</li><li>Make a second figure using <code>elapsed_s</code> horizontally. Change the horizontal label to “Elapsed time since A / s”, give the image a different filename, and check the point times and the C–D average velocity by hand. Do not change the CSV.</li><li>Make one further version of that second figure with <code>figsize=(6, 6)</code>. Keep the same data and axis meanings. Explain what changed visually and what did not change physically. Do not add a fitted curve or joining line.</li><li>Restart the notebook kernel, which clears stored variables, and run the cells in order. In a short report, include the source ID, conventions, your figure and caption, one numerical check, and one limit on interpretation. Record any correction you made. If using the companion script, run it again in a fresh Python process instead.</li></ol><details><summary>Hint for Activity 3.12</summary><p>For each new figure, repeat the plotting block beginning with <code>fig, ax = ...</code>, then change the horizontal array, label, title and saved filename as appropriate. Changing the label alone would leave the old clock readings plotted. The derived elapsed-time array is already created in the selection block. A final clean run should not depend on a variable left over from a deleted cell.</p></details><details><summary>Discussion of Activity 3.12</summary><p>The expected shape is (4, 2); A’s position is −2 m and C’s clock reading is 16 s. The elapsed-time plot places A–D at 0, 4, 6 and 9 s, with positions unchanged. Its C–D difference is still 3 s and the average velocity still −1 m/s. A taller figure changes the visual aspect, not those numerical differences. Check your saved files as well as the notebook display.</p><p>One complete elapsed-time plotting block is shown below. The loading and selection blocks must have run first.</p><pre><code class="language-python">fig, ax = plt.subplots(figsize=(6, 4), layout=&quot;constrained&quot;)
+ax.plot(elapsed_s, position_m, marker=&quot;o&quot;, linestyle=&quot;none&quot;)
+ax.set_xlabel(&quot;Elapsed time since A / s&quot;)
+ax.set_ylabel(&quot;Position / m&quot;)
+ax.set_title(&quot;Invented record: elapsed time since A&quot;)
+ax.grid(alpha=0.3)
+fig.savefig(&quot;p101-u03-l02-elapsed.png&quot;, dpi=160)
+plt.show()</code></pre><p>For the taller version, repeat this block with <code>figsize=(6, 6)</code> and save as <code>p101-u03-l02-elapsed-tall.png</code>. Both graphs retain the same coordinate pairs; compare their tick labels before comparing their apparent steepness.</p><p>A satisfactory report lets another reader recover the data, understand the coordinate and clock conventions, and reproduce your figure. It distinguishes the invented observations from assumptions, includes labels and a source-specific caption, and supports at least one statement with a hand calculation. For example: “Using P101-U03-L01-A, I plotted position from a fixed rail origin, right positive, against elapsed time since A. C and D are separated by 3 s and −3 m, giving average velocity −1 m/s. The marker-only plot does not establish steady motion between them.” Your own report should also describe the file and rerun checks you actually performed; do not claim a check simply because this discussion recommends it.</p></details></div>
+<h3>Bring the representations together</h3>
+<p>Use the remaining 10 minutes of written practice to compare your rail sketch, table, CSV and final graph. Write one sentence about what each makes easy to see and one about information it leaves to the accompanying explanation. Use the 30-minute feedback allowance to revisit activities where your first answer changed; record why it changed rather than copying the discussion.</p>
+<p>The rail sketch locates positions in space; the table and file preserve paired values; the graph reveals their time pattern. The metadata and caption carry the conventions and limitations that numbers alone cannot supply. In Lesson 3 we will add a model’s predictions to this chain and compare them with observations. The distinction between a plotted observation and an assumed history will remain essential.</p>
+</section>
+<section class="references" id="references"><h2>Further reading and context</h2><p>The required teaching is self-contained. For optional technical reference, consult NumPy’s <a href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html">loadtxt documentation</a> for the arguments used here, and Matplotlib’s <a href="https://matplotlib.org/stable/users/explain/quick_start.html">Quick start guide</a>, particularly “A simple example” and “Parts of a Figure”. These references cover more options than this lesson requires. For environment setup, use the official <a href="https://numpy.org/install/">NumPy installation guide</a> and <a href="https://matplotlib.org/stable/install/index.html">Matplotlib installation guide</a>.</p><p>Original teaching, data and diagrams: CC BY-NC-SA 4.0. Code: MIT. The NASA photograph retains its separately linked reuse terms; LibraUni branding is excluded. All carriage values in this lesson are invented teaching data.</p></section>

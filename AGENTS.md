@@ -1,3 +1,7 @@
+# P101 Unit 3 Lesson 2 publication authorised — 12 October 2026
+
+User requested creation and online publication. U03-L02 From a table to a labelled graph complete: sections3.7–3.12,4examples,6activities,5figures; notebook/companion/CSV/metadata ZIP. Standard1.10,4h/1hPython unchanged. See docs/p101-u03-l02-plan.json, -review.json and -media.json.117tests, independent subject/code checks, build,34-page search, browser widths/themes, four exact keyboard code copies, no-JS/offline and downloads passed. Newer M101 release84c3cb9 preserved. L03–L05 remain outlines; no learner records changed. Await deployment/live verification before claiming published.
+
 # P101 Unit3 opening and Lesson1 LIVE — 12 October 2026
 
 Release3768bbf58345fc3e288f47c365b1a95a0c63cf30; workflow38230130137 security and publish succeeded. Live Chrome16width/theme cases,maths/feedback,three exact keyboard code copies,30-page search, later outline gates, adjacent navigation and notebook/companion bytes checked. Live teaching fragments and image match the checked build; CI asset hashes differ but linked assets return200. See docs/p101-u03-l01-live.json. Supersedes pending publication disposition. L02–L05 remain outlines; no learner records changed.

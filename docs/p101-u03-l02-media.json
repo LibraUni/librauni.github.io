@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-12",
+  "search": "NASA star-trail composites considered for image-plane/time-axis distinction; selected actual NASA/Don Pettit asset inspected. Original graphs generated with Matplotlib.",
+  "assets": [
+    {
+      "figure": "3.8",
+      "file": "public/teaching/p101/u03/star-trails.jpg",
+      "source": "https://www.nasa.gov/image-article/space-station-star-trail/",
+      "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/650797main_jsc2012e051505_alt_full-1.jpg",
+      "creator": "NASA/Don Pettit",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "Educational/editorial factual use under NASA media guidelines; no endorsement; separately credited, not relicensed",
+      "modifications": "JPEG recompressed at original1041x693 dimensions, no crop",
+      "interpretation": "Composite multiple30s exposures; not calibrated position\u2013time graph. Actual source description and image inspected.",
+      "sha256": "331af464e0ebfa38720b0c18859ab5bec78d46dcbf10897f9859980363f8d9db"
+    },
+    {
+      "figure": "3.5",
+      "file": "public/teaching/p101/u03/table-rail-graph.svg",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0; original content",
+      "purpose": "Physical rail snapshots contrasted with time-coordinate graph",
+      "method": "Matplotlib from the four exact invented time/position pairs",
+      "sha256": "a2a4f9d31114b84036fc5e5027af9c19f4ab21c57e1568716155a5c768de4ac0"
+    },
+    {
+      "figure": "3.6",
+      "file": "public/teaching/p101/u03/possible-histories.svg",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0; original content",
+      "purpose": "Two illustrative histories meet same sampled endpoints; no fitted curve",
+      "method": "Matplotlib from the four exact invented time/position pairs",
+      "sha256": "6cf1bc7053475b180528a2b4cf48c50c0dc415b616e8f3f52eb3b19c39d98c44"
+    },
+    {
+      "figure": "3.7",
+      "file": "public/teaching/p101/u03/same-gradient.svg",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0; original content",
+      "purpose": "Aspect ratio changes angle, not coordinate gradient",
+      "method": "Matplotlib from the four exact invented time/position pairs",
+      "sha256": "4f36b3557d22e43b4afc2027b397a06d3247e4a14a28c30549b25de2b8341fcf"
+    },
+    {
+      "figure": "3.9",
+      "file": "public/teaching/p101/u03/carriage-matplotlib.png",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0; original content",
+      "purpose": "Actual output of distributed worked code",
+      "method": "Matplotlib from the four exact invented time/position pairs",
+      "sha256": "7598d6ff4e9e8a268b45a73999e3bd44ee791dbd53a1821dfb8840af0d3e446b"
+    }
+  ],
+  "enrichment": "No animation or video added: static comparisons and learner-controlled notebook plot changes fulfil the learning purpose; no uninspected video recommended."
+}

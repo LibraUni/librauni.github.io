@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-12",
+  "scope": "P101 U03-L02 only, sections3.7\u20133.12, examples3.5\u20133.8, activities3.7\u20133.12, figures3.5\u20133.9; four-hour allocation retained",
+  "standard": "Teaching Standard1.10, fixed M101 illustrated openingv0.4 and preceding P101 U03-L01",
+  "subject_review": {
+    "method": "Separate exact integer/Fraction calculations from parsed CSV; execute every notebook cell, Python companion and hidden solution in fresh or explicitly prepared namespaces; verify graph coordinate arrays, labels, no-line style and shape; exact package/CSV/metadata bytes",
+    "findings": "Pairs preserved; stage velocities+1.5,0,\u22121m/s. B\u2013D displacement\u22123m. Origin shift leaves intervals/rates unchanged. Two endpoints do not establish rest or steady velocity. No physical experiment or measurement precision implied.",
+    "evidence": {
+      "numeric_pairs": [
+        [
+          10,
+          -2
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "exact_stage_average_velocities": [
+        "3/2",
+        "0",
+        "-1"
+      ],
+      "B_D_displacement": -3,
+      "elapsed_s": [
+        0,
+        4,
+        6,
+        9
+      ],
+      "checks": "Notebook code and companion executed from fresh namespaces; expected coordinates/labels/no-line style checked; elapsed/tall variants checked; singleton shape checked; all ZIP bytes and code blocks match; unique IDs and object counts checked",
+      "versions": {
+        "numpy": "2.5.4",
+        "matplotlib": "3.11.2"
+      },
+      "word_count": 5563
+    }
+  },
+  "reader_review": {
+    "method": "Read whole extracted lesson including feedback; compare private OU actual printed122\u2013123 plots and worked explanation, earlier119\u2013121/126\u2013128/185 text, fixed M101 opening and coordinates; compare adjoining P101 L01",
+    "revisions": [
+      "Explained that graph axes are time and position even though physical rail is horizontal.",
+      "Explained numeric field versus units and metadata, and header not part of array row numbering.",
+      "Explained every new loading/plotting argument, working directory and package availability.",
+      "Added complete hidden elapsed-time plotting code and explicit taller-version changes; kept distributed notebook solutions unfilled.",
+      "Added explicit spaces before units in MathML."
+    ],
+    "calibration": "OU table-to-equation-graph progression informs pacing and hand checks. Our invented observation record has unequal time gaps and no known equation: no assumption of unique connector. OU has no matching private Python/CSV task; official API docs and prior P101 work fill this partial match. Original contexts and questions, no private figures/text republished.",
+    "workload": "60 reading/examples (including optional2min context),90 written =15+20+15+15+15+10,60 Python,30 feedback. Unit20h/6hPython unchanged; later cumulative practice remains at L05."
+  },
+  "visual_review": {
+    "findings": [
+      "Five integrated numbered figures with captions: four original scientific representations and one sourced composite image.",
+      "Fixed original960px image overflow at900px by using a labelled keyboard-focusable horizontal-scroll frame; diagrams retain minimum720px width for legible labels.",
+      "Namespaced all inline SVG IDs after duplicate-ID check detected Matplotlib default names.",
+      "Desktop/narrow light/dark checks include open feedback, native maths, code, photograph and captions. CSS zoom alone produced a false responsive-layout test; final zoom-equivalent check uses720CSSpx at scale2, not claimed as browser-menu zoom."
+    ],
+    "browser": [
+      {
+        "width": 1440,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 1440,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 900,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 900,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 390,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 390,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 320,
+        "dark": false,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "width": 320,
+        "dark": true,
+        "closed": 0,
+        "overflow": false,
+        "images": true,
+        "sections": 6,
+        "math": 2,
+        "raw": false,
+        "badAnchors": []
+      },
+      {
+        "searchPages": 34,
+        "keyboardCopies": 4
+      },
+      {
+        "noJavaScript": true,
+        "allInternalLinks": true,
+        "downloadsExact": true,
+        "errors": []
+      },
+      {
+        "zoomEquivalent": "720 CSS pixels at scale 2 for a 1440-pixel display",
+        "passed": true
+      }
+    ],
+    "offline": [
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true,
+        "math": 2,
+        "dark": false
+      },
+      {
+        "width": 1440,
+        "overflow": false,
+        "images": true,
+        "math": 2,
+        "dark": true
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "images": true,
+        "math": 2,
+        "dark": false
+      },
+      {
+        "width": 390,
+        "overflow": false,
+        "images": true,
+        "math": 2,
+        "dark": true
+      }
+    ]
+  },
+  "whole_lesson_and_unit_review": "One chain from L01 record to hand graph, CSV, arrays, plotted points and auditable caption. L03 receives documented observations ready for model comparison; fitting/calculus deferred. Unit introduction/L01 kept substantively intact. Unit closing exercises/conclusion/web+PDF remain due at L05; no lesson-end extra set or assessment added.",
+  "release_checks": {
+    "site_tests": "117 passed",
+    "build": "Production build and34-page published-material search index passed",
+    "media": "Structural check:5figures,2images; source/terms and all captions reviewed",
+    "preservation": "Remote84c3cb9 merged before authoring; newer M101 Unit3 L01\u2013L02 preserved. No academic/learner records changed.",
+    "publication": "Ready for explicitly authorised publication; local release checks complete. Deployment/live check to follow."
+  },
+  "limitations": "Separate subject, reader and visual self-review performed; no independent human editorial review or measured learner study-time trial claimed."
+}

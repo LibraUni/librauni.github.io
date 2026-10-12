@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "date": "2026-10-12",
+  "scope": "Complete P101 U03-L02 with notebook/data; user explicitly authorises publication after review",
+  "standard": "v1.10; fixed illustrated M101 v0.4 read, original production P101 U03-L01 read",
+  "construction_policy": "1.0; section-authoring gate: all B01 lessons blueprinted in docs/p101-block1-lesson-map.md and curriculum/p101-block1-lessons.js; all L02 sections below planned before drafting",
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "docs/p101-block1-lesson-map.md",
+    "curriculum/construction-policy.js",
+    "curriculum/p101-units.js"
+  ],
+  "dependencies": "P101 U03-L01; coordinate/time convention, scalar Python, lists, units/provenance from Units1/2. No independent M101 progress assumed. No calculus, fitting, uncertainty inference or new assessment.",
+  "budget_minutes": {
+    "reading_examples": 60,
+    "written_attempts": 90,
+    "python": 60,
+    "feedback_corrections": 30
+  },
+  "unit_budget": "20h/6h Python; B01 60h/20h Python unchanged",
+  "sections": [
+    {
+      "id": "P101-U03-L02-S01",
+      "number": "3.7",
+      "title": "What a point on the graph means",
+      "purpose": "Read each row as a time\u2013position pair; contrast physical rail and graph axes",
+      "comparator": "MST124 U2 printed119\u2013122 (PDF5\u20138), Example2; fixed reference1.1; adjoining L01 \u00a7\u00a73.1,3.5",
+      "written_minutes": 15,
+      "prerequisites": "Earlier sections of this lesson and U03-L01",
+      "evidence": "Numbered activity with separate hint/discussion"
+    },
+    {
+      "id": "P101-U03-L02-S02",
+      "number": "3.8",
+      "title": "What belongs between the points?",
+      "purpose": "Separate sampled evidence from connectors; unequal time spacing and average rates",
+      "comparator": "MST124 U2 printed123 (PDF9), Activity2 and finite-sample caveat; printed126\u2013128, Activity4 (solution185); L01\u00a73.5",
+      "written_minutes": 20,
+      "prerequisites": "Earlier sections of this lesson and U03-L01",
+      "evidence": "Numbered activity with separate hint/discussion"
+    },
+    {
+      "id": "P101-U03-L02-S03",
+      "number": "3.9",
+      "title": "Give the file a meaning",
+      "purpose": "CSV header, fields, raw rows and metadata; preservation",
+      "comparator": "U02L04 raw/processed data; no private OU CSV comparator available",
+      "written_minutes": 15,
+      "prerequisites": "Earlier sections of this lesson and U03-L01",
+      "evidence": "Numbered activity with separate hint/discussion"
+    },
+    {
+      "id": "P101-U03-L02-S04",
+      "number": "3.10",
+      "title": "Read the table into an array",
+      "purpose": "Load known complete two-column file; shape, zero-based indexing, column slices and a derived time origin",
+      "comparator": "Official NumPy loadtxt and beginner indexing; OU Example2 only partial table correspondence, no Python match",
+      "written_minutes": 15,
+      "prerequisites": "Earlier sections of this lesson and U03-L01",
+      "evidence": "Numbered activity with separate hint/discussion"
+    },
+    {
+      "id": "P101-U03-L02-S05",
+      "number": "3.11",
+      "title": "Make a graph that explains itself",
+      "purpose": "Matplotlib Figure/Axes, paired arrays, markers, labels, caption and saved figure",
+      "comparator": "Official Matplotlib quick start, Parts of a Figure and explicit interface; OU U2 Example2/Activity2 plotting organisation, different empirical purpose",
+      "written_minutes": 15,
+      "prerequisites": "Earlier sections of this lesson and U03-L01",
+      "evidence": "Numbered activity with separate hint/discussion"
+    },
+    {
+      "id": "P101-U03-L02-S06",
+      "number": "3.12",
+      "title": "Reproduce, inspect and explain",
+      "purpose": "Run notebook from fresh state, cross-check rows and changes, retain data and report limitations",
+      "comparator": "U02L05 investigation/report; OU Activity2 partial handplot comparator; no equivalent Python exercise",
+      "written_minutes": 10,
+      "prerequisites": "Earlier sections of this lesson and U03-L01",
+      "evidence": "Numbered activity with separate hint/discussion"
+    }
+  ],
+  "comparator_review": "Actual private OU printed119\u2013123,126\u2013128 and185 text inspected; rendered122\u2013123 inspected. Equation graphs assume algebraic rule, unlike our sparse empirical-style invented observations. Original activities require no quadratic/cubic knowledge. Exact private Python match unavailable; official docs plus preceding P101 used.",
+  "media_plan": "Original rail snapshot/point plot, labelled alternative connectors, axis-aspect comparison, actual Matplotlib output. NASA star-trail composite inspected to contrast image coordinates with time axis; source/terms checked. No additional animation: static same-data comparisons and learner-generated notebook changes serve the questions. No video selected or viewing claimed.",
+  "handover": "L03 compares model predictions and observations, no fit pre-taught. L03\u2013L05 remain outlines. L05 retains whole-unit exercises/conclusion/web+PDF and reserved workload as in L01 plan.",
+  "release_disposition": "Publication authorised; final browser and deployment/live verification pending",
+  "unresolved": "Review and live verification pending; no missing required teaching reference.",
+  "construction_disposition": "Gate met; scoped lesson constructed and reviewed"
+}

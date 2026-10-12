@@ -1,0 +1,13 @@
+P101 Unit 3 Lesson 2 | LibraUni | 12 October 2026
+File: p101-u03-l02.csv
+Source record: P101-U03-L01-A, transcribed unchanged from Lesson 1.
+Status: invented teaching observations, not an actual experiment.
+Fields, in order: time_s (clock reading in seconds), position_m (position in metres).
+Coordinate convention: one fixed origin on a straight rail; rightwards positive.
+Tracked quantity: position of the same marked point on a carriage.
+Clock convention: one unchanged running clock; first supplied reading is 10 s.
+Four numeric rows, ordered by increasing time; no missing fields.
+Values are stipulated for teaching; no instrument, resolution or measurement uncertainties are supplied.
+No between-sample path or constant-velocity assumption is encoded in the CSV.
+Preserve this raw file. Calculate elapsed time since A as a derived array.
+Data and explanatory text: CC BY-NC-SA 4.0. Code: MIT. Branding excluded.
