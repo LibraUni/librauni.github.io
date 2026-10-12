@@ -10,10 +10,10 @@ test('Unit 3 release exposes only reviewed teaching and preserves hidden feedbac
  assert.equal((page.match(/<math /g)||[]).length,328);
  assert.equal((page.match(/class="activity"/g)||[]).length,8);
  assert.equal((page.match(/<details><summary>/g)||[]).length,10);
- assert.match(read(base+'l06/index.html'),/data-search-status="outline"/);
+ assert.match(read(base+'l06/index.html'),/data-search-status="available"/);
  const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
  for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
- assert.match(read(base+'index.html'),/Lesson 6 remains in preparation/);
+ assert.match(read(base+'index.html'),/All six lessons are available/);
  for(const f of ['u03-cayley.jpg','u03-manhattan.jpg'])assert.ok(fs.existsSync(new URL('../public/teaching/m101/'+f,import.meta.url)));
 });
 

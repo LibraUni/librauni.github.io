@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-12",
+  "reviewer": "Author in separate subject, reader, visual and whole-unit passes; not independent human review",
+  "standard": "1.10",
+  "subject": {
+    "status": "pass",
+    "checks": 1509,
+    "evidence": "Independent arithmetic, exact families, all modest integer residual cases, notebook/script execution, reference code, MathML and structure/budgets. These finite checks do not replace algebraic review.",
+    "algebra": "Reviewed all exercise/iCMA solutions independently: transformation routes, two inverse products, contradiction vs redundancy, both directions of parameter completeness, sign/area and uniqueness counterexamples. All code and reference outputs run."
+  },
+  "reader": {
+    "status": "pass",
+    "evidence": "Read assembled opening → synthesis → 10 mixed exercises → Python repair → formative checkpoint → reference → conclusion. No new mathematical technique; original question logic linked to prior lessons. Actual approved reference and university exposition compared.",
+    "revisions": [
+      "Replaced provisional Unit4 title with canonical Functions, limits and continuity, and corrected description of its position within B02.",
+      "Split three long displays at meaningful mathematical steps for narrow screens.",
+      "Added explicit spoken option labels because native AX originally exposed only A/B/C for mathematical radio options.",
+      "Registered L06 in teaching path list to inherit three source-copy buttons and avoid study-record controls.",
+      "Fixed offline width inherited from site-specific reading margins."
+    ]
+  },
+  "visual": {
+    "status": "pass",
+    "evidence": [
+      "1280px desktop opening,320/390px mobile, light and dark themes; native fractions, inverse superscripts, negative entries, compound radical and vectors viewed.",
+      "At320px all24 panels open:205MathML, zero page/prose/display-equation overflow. Reference tables/code retain labelled contained scrolling.",
+      "Original before/after plots inspected in dark mobile; labels/endpoints/scales coherent. NASA image viewed and loaded.",
+      "All3keyboard copy buttons preserve text byte-for-byte; prior clipboard restored.",
+      "Script-free offline copy with CSPscript-none:205MathML,24openedpanels,imagesloaded,320px no page overflow.",
+      "200%CSSzoom proxy read without page overflow; not a native OSzoom or screen-reader audit.",
+      "Two-pagePDF rendered and every page inspected; proper identity/motto/version/page numbers, vector math and compact Python; reference entries share JSON with web.",
+      "Self-contained interactive reading copy also checked: one correct answer gives1/1with9unanswered,3copybuttons and loaded embedded images."
+    ]
+  },
+  "assessment": {
+    "status": "pass",
+    "evidence": "Pure marking checks all30choices and missing/invalid inputs. Browser keyboard:empty0/0no panelsopened; mixed1/2opensonly2; allcorrect10/10; changedchoiceinvalidatesstatusthen9/10. Native selections, visible text feedback, live summary, no storage/network submission; static full reasoning remains available."
+  },
+  "wholeUnit": {
+    "status": "pass",
+    "coverage": "Six lessons connect action, composition, elimination, solution sets, determinant/inverse and computational checking. Ten exercises include dimensions, columns, both composition orders, reversible elimination, a triangular3unknownsystem, inconsistent/dependent systems, complete family, inverse/sign/area, vector cross/dot retrieval and membership-vs-uniqueness. iCMA samples U01–U03; Python transfers taught conditions/functions.",
+    "budget": "20h including3hPython unchanged. L06 180min=15reading+45attempts+30Python+60iCMA+30reference. L04reserved15minfeedback used on this page; no double count.",
+    "closing": "Unit conclusion answers opening grid/recovery questions;10exerciseswithsolutions,formativeiCMA,matchingweb/PDFreference complete. TMA01 questions/marking guide remain uncommissioned,6hseparate; U04 outline remains.",
+    "widerFit": "O3retrieval/O4/O6; B01 synthesis and TMAreadiness. P101owns coding foundations. M102later extends linear algebra; no new algorithm, rank/eigenmethod or physical law."
+  },
+  "verification": {
+    "repositoryTests": 122,
+    "productionBuild": "pass;40availablepagesindexed",
+    "mediaCheck": "pass both L06 and status-only introduction edit",
+    "deployment": "pending"
+  },
+  "limits": [
+    "Timings are editorial estimates, not observed student timings. Self-review and tests do not certify academic quality.",
+    "iCMA assesses selections; written reasoning and programming readiness remain learner evidence. No attainment or completion logged.",
+    "Pre-existing Unit2 literal-less-than SVG parsing and identity/large-bundle build warnings remain outside this change."
+  ],
+  "artifactSha256": {
+    "content/m101/unit3-lesson6.html": "47025a7673daba2cec40e9a38094e83b80829a455fc394b0a01d2cb80519cb7e",
+    "content/m101/unit3-reference.json": "7d43b1bb80bc9cf24201b46a661d3e87bce6e42ef21ae7491349515c1def3092",
+    "public/teaching/m101/M101-Unit-3-Reference.pdf": "85128116237e5ee1ceac2ee9e47e22c807c09cf459479d84d06dec2434a9e40f",
+    "public/notebooks/m101-u03-l06.ipynb": "98a6c5fa11490824ccb65959e85242c9ade5e44f483277a51a9c498737db4aec",
+    "public/notebooks/m101-u03-l06.py": "9005e63d6a5c861cfa17e5778ab7ef476973393d773672aadbee6a478dff74ef",
+    "src/m101-icma01.js": "287d0ad81bc16ad25d6e1715d785c71c3cbdf152326cb3af67c890e48e23816e"
+  }
+}

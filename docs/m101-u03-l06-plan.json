@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-12",
+  "authorisation": "User requests next lesson and publication; L06 only, including unit-end obligations. TMA01 remains separate and uncommissioned.",
+  "standard": "1.10; fixed M101 opening v0.4 read; OU MST124 Unit5 p183 viewed for typography and dot-product retrieval, not matrix subject calibration.",
+  "gate": {
+    "policy": "1.0",
+    "status": "ready for construction",
+    "parents": [
+      "curriculum/m101-units.js",
+      "curriculum/m101-released.js",
+      "curriculum/m101-blocks.js",
+      "docs/curriculum-authoring.md"
+    ],
+    "outcomes": [
+      "M101-O3 retrieval",
+      "M101-O4",
+      "M101-O6"
+    ],
+    "dependencies": "Published U01/U02/U03 L01–L05. P101 U01 lists/functions/conditions/notebook readiness remains explicit."
+  },
+  "budget": {
+    "lessonMinutes": 180,
+    "reading": 15,
+    "writtenAttempts": 45,
+    "Python": 30,
+    "iCMAAttemptFeedbackCorrection": 60,
+    "referenceReview": 30,
+    "earlierL04FeedbackUsedHere": 15,
+    "unitHours": 20,
+    "unitPythonHours": 3
+  },
+  "sections": [
+    {
+      "number": "3.33",
+      "title": "From a description to a justified answer",
+      "readingMinutes": 11,
+      "scope": "Retrieve displacement, linear action, reversal and checking; one synthesis worked example; original decision diagram."
+    },
+    {
+      "number": "3.34",
+      "title": "Unit 3 exercises",
+      "writtenMinutes": 45,
+      "earlierFeedbackMinutes": 15,
+      "scope": "Ten questions following pre-existing blueprint, with hidden hints and complete solutions; broad independent retrieval."
+    },
+    {
+      "number": "3.35",
+      "title": "Repair a check and explain its limits",
+      "PythonMinutes": 30,
+      "scope": "One activity 3.36: trace/repair deliberately faulty residual logic, valid/failing/dependent cases, fresh run and interpretation."
+    },
+    {
+      "number": "3.36",
+      "title": "iCMA 01: a formative block checkpoint",
+      "minutes": 60,
+      "scope": "10 original selected-response items across U01–U03;35minattempt,15minfeedback,10mincorrection; local marking and offline disclosures, no records or threshold."
+    },
+    {
+      "number": "3.37",
+      "title": "Unit 3 quick reference",
+      "minutes": 30,
+      "scope": "Recall/Understand/Consult table and matching compact two-page PDF;5minrecall,10compare,10reconstruct,5returnplan, no extra exercise set."
+    },
+    {
+      "number": "3.38",
+      "title": "Looking back, then looking ahead",
+      "readingMinutes": 4,
+      "scope": "Return to opening grid/recovery questions, NASA opening photo revisited with model limits; TMA01 readiness, 6h separate; U04 outline."
+    }
+  ],
+  "visualPlan": [
+    {
+      "figure": "3.29",
+      "purpose": "Decision route description-method-check; readable HTML flow diagram"
+    },
+    {
+      "figure": "3.30",
+      "purpose": "Equal-scale before/after vectors connecting synthesis example; original SVG"
+    },
+    {
+      "figure": "3.31",
+      "purpose": "Revisit NASA Manhattan opening image to distinguish mathematical grid model from perspective photograph; same verified image, new conclusion caption"
+    }
+  ],
+  "mediaSearch": "Reviewed original NASA source and separate Manhattan NASA page; choose exact opening photo for intentional visual return rather than unrelated imagery. Rechecked rights; no new video, existing L01/L04 interactives already explore transformations/families; new iCMA computer feedback serves assessment.",
+  "comparatorPlan": {
+    "3.33": "Georgia Tech ILA3.4 actual composition exposition and U03L02, original synthesis",
+    "3.34": "Existing approved question blueprint, ILA1.1/3.4 exposition; Nicholson1.2E and2.4E selected actual questions to inspect before drafting",
+    "3.35": "U03L05 worked residual code, original diagnostic repair",
+    "3.36": "Approved M101 formative assessment remit; questions calibrated to taught activities, original assessment, no claim equivalence with external exam",
+    "3.37": "Derived only from U03L01–L05",
+    "3.38": "Approved reference opening/closing and U03 opening"
+  },
+  "release": "Reviews complete; user-authorised deployment and live verification next."
+}

@@ -1,0 +1,27 @@
+{
+  "figures": [
+    {
+      "number": "3.29",
+      "type": "HTML decision diagram",
+      "purpose": "Meaning → method → evidence, explicitly not model-validation algorithm",
+      "rights": "Original LibraUni"
+    },
+    {
+      "number": "3.30",
+      "type": "Two original SVG coordinate plots",
+      "purpose": "Displacement before/after shear on equal axis scales; actual endpoint labels and geometry checked",
+      "rights": "Original LibraUni"
+    },
+    {
+      "number": "3.31",
+      "type": "NASA astronaut photograph",
+      "asset": "public/teaching/m101/u03-manhattan.jpg",
+      "source": "https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/NewYorkCity.htm",
+      "credit": "NASA / ISS Crew Earth Observations Facility and Earth Science and Remote Sensing Unit, JSC, ISS039-E-18538, 5 May2014",
+      "reuse": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "inspection": "Original local720×480 image viewed; official description and media rules read. Existing NASA crop, contrast adjustment and lens-artifact removal; no further edit. Adjacent source/credit/terms and perspective limit.",
+      "purpose": "Intentional return to Unit3 opening image; no exact matrix claim about photographed terrain."
+    }
+  ],
+  "illustratedStandard": "Three figures integrated with original synthesis, explanatory captions and conclusion. Official alternative NASA Manhattan page inspected; exact opening asset selected for pedagogical continuity. Photo is not a measurement diagram."
+}
