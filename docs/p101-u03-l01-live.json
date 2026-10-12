@@ -1,0 +1,242 @@
+{
+  "date": "2026-10-12",
+  "release": "3768bbf58345fc3e288f47c365b1a95a0c63cf30",
+  "workflow": 38230130137,
+  "conclusion": "success",
+  "jobs": [
+    "planner-security:success",
+    "publish:success"
+  ],
+  "urls": [
+    "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/",
+    "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l01/"
+  ],
+  "live_browser": [
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 1440,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 1440,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 900,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 900,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 390,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 390,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 320,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/",
+      "width": 320,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 1,
+      "math": 0,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 1440,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 1440,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 900,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 900,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 390,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 390,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 320,
+      "dark": false,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b01/u03/l01/",
+      "width": 320,
+      "dark": true,
+      "closed": 0,
+      "overflow": false,
+      "images": true,
+      "sections": 6,
+      "math": 11,
+      "raw": false,
+      "badAnchors": []
+    },
+    {
+      "searchPages": 30,
+      "keyboardCopy": 3
+    },
+    {
+      "download": "py",
+      "sha256": "5fd844b36cf123452f3c216e0cc66a0d507452a5acccc9a82a273b4d02155a37"
+    },
+    {
+      "download": "ipynb",
+      "sha256": "1bdfc898135ec8181e59fee40d761aeb694db1627985a7a73fb6255b83503427"
+    },
+    {
+      "noJavaScript": true
+    }
+  ],
+  "live_content": [
+    {
+      "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/",
+      "teaching_fragment_matches_build": true,
+      "linked_assets_http200": 10,
+      "note": "Full HTML differs in CI-generated asset hashes; exact teaching fragment matches."
+    },
+    {
+      "url": "https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l01/",
+      "teaching_fragment_matches_build": true,
+      "linked_assets_http200": 10,
+      "note": "Full HTML differs in CI-generated asset hashes; exact teaching fragment matches."
+    },
+    {
+      "image_sha256": "52dceff8b126d0416c9750d1eff94f53fdb3ac262cddf93efe7c8c9d9d46b624",
+      "image_bytes_match": true
+    }
+  ],
+  "disposition": "Published and verified; later U03 lessons remain outlines. No academic records changed."
+}
