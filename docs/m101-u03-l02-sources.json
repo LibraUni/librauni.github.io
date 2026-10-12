@@ -1,0 +1,26 @@
+{
+  "standard": "Teaching standard 1.10; approved M101 v0.4 Unit 3 blueprint",
+  "calibration": [
+    {
+      "url": "https://textbooks.math.gatech.edu/ila/matrix-multiplication.html",
+      "read": "3.4 composition, columns, row-column rule, dimensions, associativity; hidden numerical and noncommuting examples",
+      "decision": "Retain connected derivation; use original reflection/shear examples instead of source shear pair; omit general-dimensional abstractions."
+    },
+    {
+      "url": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/02:_Matrix_Algebra/2.03:_Matrix_Multiplication",
+      "read": "Composition/column derivation and row-column procedure; companion 2.3E Exercises 1,2,5,6,7",
+      "decision": "Original practice combines calculation, diagnostic explanation, geometric comparison and checks; exclude general commutation classification."
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/introduction.html#lists",
+      "read": "Lists and zero-based indexing; official functions tutorial also consulted",
+      "decision": "Reuse only P101 Unit 1 syntax; flat lists, explicit scalar arithmetic, return values."
+    },
+    {
+      "url": "https://www.jpl.nasa.gov/news/apollo-11-experiment-still-going-strong-after-35-years/",
+      "read": "Historical instrument account, 100 corner-cube prisms and laser roundtrip",
+      "decision": "Optional context distinguishes 2D mathematical model from 3D optical device; no current performance claim."
+    }
+  ],
+  "originality": "Original explanations, examples, activities, diagrams and code. Sources used for calibration and factual context; no copied exercise bank."
+}

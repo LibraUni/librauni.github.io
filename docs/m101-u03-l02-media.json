@@ -1,0 +1,19 @@
+{
+  "figures": [
+    {
+      "numbers": "3.10–3.12",
+      "creator": "LibraUni",
+      "purpose": "Intermediate vector; basis-column construction; simultaneous labelled paths with fixed equal-scale axes."
+    },
+    {
+      "number": "3.13",
+      "source": "https://commons.wikimedia.org/wiki/File:AS11-40-5952_(21472291008).jpg",
+      "asset": "https://live.staticflickr.com/5834/21472291008_66b8eda896_o.jpg",
+      "credit": "NASA AS11-40-5952; scan via Project Apollo Archive",
+      "reuse": "NASA US-government public-domain photograph, as identified on source page; NASA media guidance linked",
+      "changes": "Resized to 960×941; no crop or colour alteration",
+      "verification": "Original downloaded image inspected; NASA Apollo image index identifies post-deployment retroreflector photograph."
+    }
+  ],
+  "interactive_decision": "Static simultaneous paths preserve intermediate stages; learner changes inputs and candidate products in Python. No additional interactive control needed."
+}

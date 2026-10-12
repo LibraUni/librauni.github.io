@@ -176,4 +176,175 @@ export const m101Unit2Lessons = [
     "handover": "U03 uses the verified scalar/list/function workflow. Independent coding evidence waits for P101 readiness."
   }
 ];
-export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons];
+export const m101Unit3Lessons = [
+  {
+    "id": "U03-L01",
+    "unit": "U03",
+    "title": "Matrices acting on vectors",
+    "hours": 3.0,
+    "allocation": {
+      "explanationAndExamples": 1,
+      "mathematicalPractice": 1.5,
+      "python": 0,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U02-L05"
+    ],
+    "externalRequires": [],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Read matrix dimensions and apply a small matrix to a column vector.",
+    "scope": "Rows, columns, dimensions and entry notation; matrix-vector multiplication as a weighted combination of columns; identity and zero matrices; plane scaling, reflection and shear.",
+    "boundary": "No abstract basis theory or eigenvectors. Use explicit coordinate geometry; dimensions must be compatible.",
+    "practiceAndEvidence": "Calculate transformed points/vectors and predict basic shapes; identify columns from the images of coordinate unit vectors; diagnose a dimension mismatch.",
+    "visualPlan": "Coordinate grid before/after reflection and shear with labelled basis arrows.",
+    "python": "No coding required.",
+    "handover": "L02 composes these transformations; L03 reuses matrix notation for coupled equations."
+  },
+  {
+    "id": "U03-L02",
+    "unit": "U03",
+    "title": "Composing transformations in order",
+    "hours": 3.0,
+    "allocation": {
+      "explanationAndExamples": 1,
+      "mathematicalPractice": 1,
+      "python": 0.5,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L01"
+    ],
+    "externalRequires": [
+      "P101 U01 programming readiness as specified at U02-L05."
+    ],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Compute a product of two small matrices and relate order to successive transformations.",
+    "scope": "Derive the 2-by-2 product from successive matrix-vector application; rightmost transformation acts first; contrast a noncommuting pair with identity and a simple commuting pair.",
+    "boundary": "Do not generalise noncommutativity to a claim that every pair fails to commute. No general rotation-angle formula or new trigonometry syllabus.",
+    "practiceAndEvidence": "Calculate a shear/reflection composition both ways, compare on coordinate vectors and an independent vector; hand-trace and run a supplied short scalar/list function.",
+    "visualPlan": "Two transformation paths from the same starting figure, with intermediate states.",
+    "python": "0.5 hour included: reuse P101 functions/lists to compare successive applications with the hand-computed product; no matrix library.",
+    "handover": "L03\u2013L04 solve coupled equations; L05 returns to reversible and collapsed transformations."
+  },
+  {
+    "id": "U03-L03",
+    "unit": "U03",
+    "title": "Solving simultaneous equations by elimination",
+    "hours": 4.0,
+    "allocation": {
+      "explanationAndExamples": 1.25,
+      "mathematicalPractice": 2.25,
+      "python": 0,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L02"
+    ],
+    "externalRequires": [],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Solve small coupled linear equations using justified elimination and check against the original equations.",
+    "scope": "Translate supplied relationships into a system; equation and augmented-matrix forms; reversible elementary row operations; two unknowns first and one guided three-unknown example; back substitution.",
+    "boundary": "No general-purpose algorithm implementation or unqualified division by a coefficient that may be zero. Introduce row exchange explicitly.",
+    "practiceAndEvidence": "Move from worked to partially completed to independent two-unknown systems; carry out a guided three-unknown solution; substitute into every original equation and explain preservation of solutions.",
+    "visualPlan": "Aligned equations and row operations; intersecting lines for the two-unknown case.",
+    "python": "No coding required.",
+    "handover": "L04 handles cases in which elimination does not produce one unique answer; L06 samples independent reasoning."
+  },
+  {
+    "id": "U03-L04",
+    "unit": "U03",
+    "title": "When solutions fail or are not unique",
+    "hours": 3.0,
+    "allocation": {
+      "explanationAndExamples": 1,
+      "mathematicalPractice": 1.5,
+      "python": 0,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L03"
+    ],
+    "externalRequires": [],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Classify unique, inconsistent and dependent small systems and represent a simple solution family.",
+    "scope": "Contradiction versus redundant equation after elimination; parallel/coincident lines; a free parameter in a dependent two-unknown system; interpret a parameterised family by substitution.",
+    "boundary": "No rank theorem or abstract null spaces. A singular coefficient matrix alone cannot distinguish no solutions from infinitely many.",
+    "practiceAndEvidence": "Classify deliberately similar systems with different right-hand sides; show one inconsistent and one dependent case; check two members of a solution family and explain why examples alone do not describe the whole family.",
+    "visualPlan": "Intersecting, parallel and coincident line pairs aligned with their reduced equations.",
+    "python": "No coding required.",
+    "handover": "L05 connects 2D invertibility and determinant with this distinction."
+  },
+  {
+    "id": "U03-L05",
+    "unit": "U03",
+    "title": "Determinants, invertibility and computational checks",
+    "hours": 4.0,
+    "allocation": {
+      "explanationAndExamples": 0.75,
+      "mathematicalPractice": 0.75,
+      "python": 2,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L04"
+    ],
+    "externalRequires": [
+      "P101 U01 programming readiness as specified at U02-L05."
+    ],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Interpret a 2-by-2 determinant and validate transformation and solution calculations transparently.",
+    "scope": "ad\u2212bc, signed area scale and collapse in 2D; determinant nonzero as the invertibility condition; obtain/check a simple inverse by reversing a transformation or solving for its columns; substitute hand solutions into original systems.",
+    "boundary": "No 3-by-3 determinant expansion, general inverse algorithm or eigenmethods. Coding checks a supplied candidate, not an automatic solver. A zero residual is not evidence of uniqueness.",
+    "practiceAndEvidence": "Use contrasting invertible and singular integer matrices; compare transformed unit-square area with determinant; write a 2-by-2 transformation function and residual calculation; test a valid, invalid and dependent-system candidate. Explain each check\u2019s limits.",
+    "visualPlan": "Unit square transformed into parallelogram or collapsed line, with orientation clearly labelled.",
+    "python": "2 hours included: independently implement a fixed small matrix-vector calculation and residual check with lists/functions, explain results and rerun cleanly. No solver, arrays or plotting required.",
+    "handover": "L06 integrates O4/O6 evidence; M102 will extend bases, orthogonality and eigenmethods."
+  },
+  {
+    "id": "U03-L06",
+    "unit": "U03",
+    "title": "Block synthesis, iCMA 01 and unit review",
+    "hours": 3.0,
+    "allocation": {
+      "explanationAndExamples": 0.25,
+      "mathematicalPractice": 0.75,
+      "python": 0.5,
+      "retrievalAndFeedback": 1.5
+    },
+    "requires": [
+      "U03-L05"
+    ],
+    "externalRequires": [
+      "P101 U01 programming readiness as specified at U02-L05."
+    ],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Connect vector, transformation and equation methods and prepare for TMA 01 using formative evidence.",
+    "scope": "Interleaved block practice, one short code interpretation/correction, embedded iCMA 01 and explanatory feedback; U03 reference table/PDF; assess readiness for the separately budgeted TMA.",
+    "boundary": "No new content, additional graded assignment, invented pass threshold or claim of mastery. iCMA is formative; TMA questions and marking guide remain to be authored.",
+    "practiceAndEvidence": "Use 1 hour of retrieval/feedback for iCMA attempt plus feedback and targeted correction, and 0.5 hour for the unit reference-sheet review. Mixed practice samples vector signs/products, composition order and system classification; the code check asks what it cannot establish.",
+    "visualPlan": "Concise decision diagram connecting representation, method and independent check.",
+    "python": "0.5 hour included: interpret and repair a short scalar/list residual check, using already taught syntax.",
+    "handover": "TMA 01 follows with its existing separate 6 hours and O3/O4/O6 remit. B02 U04 retrieves algebra/functions; M102 extends linear algebra after relevant readiness."
+  }
+];
+
+export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons,...m101Unit3Lessons];

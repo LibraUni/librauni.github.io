@@ -1,0 +1,25 @@
+[
+  {
+    "source": "Georgia Tech, Interactive Linear Algebra \u00a73.1 and \u00a73.3.2\u20133",
+    "url": "https://textbooks.math.gatech.edu/ila/matrix-transformations.html",
+    "reviewed": "Actual exposition, reflection/dilation/shear worked examples, coordinate-vector identification and proof; linked shear demo visually inspected.",
+    "influence": "Weighted-column interpretation before row computation; original numbers and drawings; simpler bounded shear explorer with keyboard and static equivalent."
+  },
+  {
+    "source": "Open University MST125 Unit 1 \u00a74.1",
+    "url": "https://www.open.ac.uk/courses/Courses/media/Courses/Qualification/Infographics/mst125_unit-1.pdf",
+    "reviewed": "Actual text pp53\u201357, Example 11, Activity 28(a,b), solution p109. Web text available; local download denied and visual PDF rendering unavailable.",
+    "influence": "Dimension and matrix-column practice calibration; fresh introduction here instead of assumed prior matrices."
+  },
+  {
+    "source": "MIT 18.013A \u00a73.4",
+    "url": "https://www.ocw.mit.edu/ans7870/18/18.013a/textbook/HTML/chapter03/section04.html",
+    "reviewed": "Actual row-column rule, dimensions and exercise 3.7.",
+    "influence": "Dimension counterexamples and structural checks; later topics excluded."
+  },
+  {
+    "source": "Supplied OU MST124 Unit 5",
+    "reviewed": "Private supplied text and rendered page83 (printed183).",
+    "influence": "Typography and exposition calibration only. Supplied inventory did not contain MST124 Unit9."
+  }
+]

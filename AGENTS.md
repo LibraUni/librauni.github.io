@@ -2,6 +2,10 @@
 
 Release3768bbf58345fc3e288f47c365b1a95a0c63cf30; workflow38230130137 security and publish succeeded. Live Chrome16width/theme cases,maths/feedback,three exact keyboard code copies,30-page search, later outline gates, adjacent navigation and notebook/companion bytes checked. Live teaching fragments and image match the checked build; CI asset hashes differ but linked assets return200. See docs/p101-u03-l01-live.json. Supersedes pending publication disposition. L02–L05 remain outlines; no learner records changed.
 
+# M101 Unit3 introduction and Lesson1 publication authorised — 12 October 2026
+
+User requested publish after local review. Only U03 introduction and L01 newly available. Six-lesson20h plan unchanged, L01 3h; later lessons remain outlines. See docs/m101-u03-l01-review.json and source/media/plan records. Deployment and live verification pending. No learner records changed.
+
 # P101 Unit3 introduction and Lesson1 publication authorised — 12 October 2026
 
 User explicitly requested publish after local review. Source content/p101/unit3.html and unit3-lesson1.html;6sections,4examples,6activities,notebook/companion. Standard1.10 retained. See docs/p101-u03-l01-release.json and plan/review/media records.115tests,build,30-page search and integrated browser checks pass. Only introduction/L01 newly available; L02–L05 remain outlines. Await security/deployment and live checks before claiming live. No learner records changed.
