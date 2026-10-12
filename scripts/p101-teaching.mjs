@@ -6,13 +6,13 @@ const unit=p101Home+'b01/u01/';
 const lesson=unit+'l01/';
 const unit2=p101Home+'b01/u02/';
 const unit3=p101Home+'b01/u03/';
-export const p101TeachingPaths=[p101Home,p101Home+'orientation/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
+export const p101TeachingPaths=[p101Home,p101Home+'orientation/',p101Home+'assessments/',p101Home+'assessments/tma01/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
  const nav=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
  const module=pages.find(p=>p[0]===p101Home);
- module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2><p>Complete Units 1 and 2 teaching, exercises and reference resources are available. Complete Unit 3 teaching, exercises, formative iCMA 01 and reference resources are also available. Later units remain in preparation.</p>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
+ module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2><p>Complete Units 1 and 2 teaching, exercises and reference resources are available. Complete Unit 3 teaching, exercises, formative iCMA 01 and reference resources are also available. TMA 01 is available after Block 1. Later units remain in preparation.</p><p><a href="/learn/physics/stage-1/p101/assessments/tma01/">TMA 01 · Questions and submission guidance</a></p>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
  const u=pages.find(p=>p[0]===unit);
  u[3]=notice+read('unit')+nav(link(p101Home,'← Module introduction'),link(lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U01').map((l,i)=>'<p>'+link(unit+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<6?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>All six lessons are available. <a href="/learn/physics/stage-1/p101/b01/u01/l06/#P101-U01-L06-S03">Unit exercises</a> · <a href="/learn/physics/stage-1/p101/b01/u01/l06/#P101-U01-L06-S05">On-page reference</a> · <a href="/teaching/p101/P101-Unit-1-Reference.pdf" download>Printable reference PDF</a>.</p></section>';
  const l=pages.find(p=>p[0]===lesson);l[3]=notice+read('lesson')+nav(link(unit,'← Unit introduction'),link(unit+'l02/','Lesson 2 →'));
@@ -137,9 +137,15 @@ export function addP101Teaching({root,pages,extraRails,link}){
  {
   const path=unit3+'l05/';
   const fragment=fs.readFileSync(root+'content/p101/unit3-lesson5.html','utf8');
-  pages.find(p=>p[0]===path)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-u3 p101-u3-l5">'+fragment+'</div><link rel="stylesheet" href="/src/p101-unit3-lesson5.css">'+nav(link(unit3+'l04/','← Lesson 4'),link(p101Home+'b02/u04/','Next: Unit 4 outline →'))+'<script type="module" src="/src/p101-icma01.js"></script>';
+  pages.find(p=>p[0]===path)[3]='<div data-search-status="available" class="teaching-reading p101-reading p101-u3 p101-u3-l5">'+fragment+'</div><link rel="stylesheet" href="/src/p101-unit3-lesson5.css">'+nav(link(unit3+'l04/','← Lesson 4'),link(p101Home+'assessments/tma01/','Next: TMA 01 →'))+'<script type="module" src="/src/p101-icma01.js"></script>';
   const sections=[...fragment.matchAll(/<section class="chapter" id="(P101-U03-L05-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
   extraRails.set(path,{title:'In this lesson',back:unit3,items:[...sections,{href:'#references',title:'Further reading and context'}]});
  }
+
+ const assessment=p101Home+'assessments/tma01/';
+ pages.push([p101Home+'assessments/','P101 · Assessments',[], '<div data-search-status="available"><h1>P101 assessments</h1><p>After Units 1–3, complete the separate six-hour TMA 01.</p><p>'+link(assessment,'TMA 01 · Can the evidence support the model?')+'</p><p>Later assessments remain in preparation.</p></div>']);
+ pages.push([assessment,'P101 · TMA 01',[], '<div data-search-status="available" class="teaching-reading p101-reading p101-tma01">'+fs.readFileSync(root+'content/p101/tma01.html','utf8')+'</div>'+nav(link(unit3+'l05/','← Unit 3 closing lesson'),link(p101Home+'b02/u04/','Unit 4 outline →'))]);
+ block[3]+='<p>'+link(assessment,'After Block 1: TMA 01 · 6 hours')+'</p>';
+ extraRails.set(assessment,{title:'TMA 01',back:p101Home,items:[]});
 
 }

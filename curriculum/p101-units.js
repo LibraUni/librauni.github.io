@@ -22,7 +22,7 @@ export const p101Units = {
       "practical": "Deliver a short notebook with a unit-aware scalar model, independently typed functions, a hand calculation and a clean rerun.",
       "boundary": "No prior Python or M100 assumed; no calculus or formal uncertainty theory. Eight coding hours require careful introductory scaffolding.",
       "handover": "Supplies scalar/list/function/loop readiness before M101 U02 code and U03 matrix checks; demonstrate readiness rather than rely on elapsed time.",
-      "evidence": "TMA 01 samples the mapped outcomes through explained reasoning and the stated deliverable; formative checks occur within unit hours. No assessment tasks are released."
+      "evidence": "TMA 01 samples the mapped outcomes through explained reasoning and the stated deliverable; formative checks occur within unit hours. TMA 01 questions and marking criteria are available after Unit 3."
     },
     {
       "id": "U02",
@@ -45,7 +45,7 @@ export const p101Units = {
       "practical": "Plan and document a small repeat-measurement activity using available everyday equipment, or analyse supplied documented measurements. Submit table, short method, limitations and a justified reported value.",
       "boundary": "Descriptive spread is not a probability distribution or confidence interval. Supplied data cannot demonstrate instrument handling; no required purchases.",
       "handover": "Measurement conventions underpin every later practical and A101; formal probability belongs to M102, inference/propagation later.",
-      "evidence": "TMA 01 samples the mapped outcomes through explained reasoning and the stated deliverable; formative checks occur within unit hours. No assessment tasks are released."
+      "evidence": "TMA 01 samples the mapped outcomes through explained reasoning and the stated deliverable; formative checks occur within unit hours. TMA 01 questions and marking criteria are available after Unit 3."
     },
     {
       "id": "U03",
@@ -70,7 +70,7 @@ export const p101Units = {
       "practical": "Compare a small recorded motion table with an algebraic model; deliver a reproducible notebook and concise evidence-based conclusion. Embedded iCMA 01; TMA 01 follows U03.",
       "boundary": "No regression theory or calculus-derived instantaneous rate; no automatic claim of empirical validation from synthetic data.",
       "handover": "Supplies arrays/plots before M101 U05 graph options and U06 onward; M101 U04 scalar limit tables only need U01.",
-      "evidence": "TMA 01 samples the mapped outcomes through explained reasoning and the stated deliverable; formative checks occur within unit hours. Formative iCMA 01 is available in U03-L05; TMA 01 remains unreleased."
+      "evidence": "TMA 01 samples the mapped outcomes through explained reasoning and the stated deliverable; formative checks occur within unit hours. Formative iCMA 01 is available in U03-L05; TMA 01 questions and marking criteria are available."
     },
     {
       "id": "U04",
