@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-12",
+  "assets": [
+    {
+      "id": "p101-u03-figure-01",
+      "source": "https://science.nasa.gov/photojournal/tracks-tell-tale-of-perseverances-crater-rim-climb/",
+      "creator": "NASA/JPL-Caltech",
+      "asset_id": "PIA26379",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "supplementary_terms": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+      "reuse": "Educational/editorial use with source credit; no endorsement. No separately marked third-party copyright on inspected source page. Not relicensed as original LibraUni content.",
+      "modifications": "None; downloaded NASA 1280x960 rendition, embedded as data URI; displayed smaller with preserved proportions.",
+      "sha256": "52dceff8b126d0416c9750d1eff94f53fdb3ac262cddf93efe7c8c9d9d46b624",
+      "inspection": "Actual asset viewed. Tracks and rover deck match alt text. Date/source description checked from NASA page retrieved directly; browser web extractor failed for this page. Context only, not measurement data.",
+      "placement": "Unit opening; same numbered figure revisited with caption in lesson optional context."
+    }
+  ],
+  "original_figures": [
+    {
+      "id": "p101-u03-figure-02",
+      "purpose": "Equal one-metre coordinate scale, tracked endpoints",
+      "licence": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": "p101-u03-figure-03",
+      "purpose": "Same scale on three rows; stages and net displacement distinguished",
+      "licence": "CC BY-NC-SA 4.0"
+    },
+    {
+      "id": "p101-u03-figure-04",
+      "purpose": "60 units of SVG per second; 4+2+3 seconds incl pause",
+      "licence": "CC BY-NC-SA 4.0"
+    }
+  ],
+  "candidate_search": "NASA rover track photography; selected PIA26379 for path/evidence context. Other search results not adopted.",
+  "interactive_video": "Considered reversible motion exploration; static separated stages, reconstruction and hidden-excursion tasks achieve the intended comparisons without motion. No video selected or claimed inspected."
+}

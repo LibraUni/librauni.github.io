@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "date": "2026-10-12",
+  "scope": "Local Unit 3 introduction and complete U03-L01 only; no publication or availability/academic-record changes",
+  "standard": "website/docs/teaching-standard-and-practice.md v1.10; fixed M101 v0.4 read in full",
+  "gate": "All B01 lessons mapped in docs/p101-block1-lesson-map.md; U03 20h/6h Python; B01 60h/20h Python. Relevant P101 unit and stage maps unchanged.",
+  "sections": [
+    {
+      "id": "P101-U03-L01-S01",
+      "number": "3.1",
+      "title": "A position needs a reference",
+      "purpose": "Reconnect U01 origin/direction and U02 measurand to a tracked point; delta notation; signed change",
+      "comparator": "MST124 U2 printed119\u2013120; fixed reference1.1.1; OpenStax CP2e2.1",
+      "practice": "Activity3.1,10min"
+    },
+    {
+      "id": "P101-U03-L01-S02",
+      "number": "3.2",
+      "title": "The route and the change",
+      "purpose": "Build distance from stages, distinguish net displacement; return and partial return",
+      "comparator": "OpenStax CP2e2.1 exposition and check; conceptual questions1\u20132",
+      "practice": "Activity3.2,15min"
+    },
+    {
+      "id": "P101-U03-L01-S03",
+      "number": "3.3",
+      "title": "An average belongs to an interval",
+      "purpose": "Elapsed time, signed average velocity, average speed, pauses; conditions",
+      "comparator": "MST124 U2 printed126\u2013128 signed differences/quotients, Activity4 and solution185; OpenStax2.3",
+      "practice": "Activity3.3,15min"
+    },
+    {
+      "id": "P101-U03-L01-S04",
+      "number": "3.4",
+      "title": "Combining stages without losing time",
+      "purpose": "Ratios of totals, unequal durations, shifts/reversal; return to scalar model",
+      "comparator": "OpenStax2.3 partial match; U01L02 constant-rate model; U02L05 shared offsets",
+      "practice": "Activity3.4,15min"
+    },
+    {
+      "id": "P101-U03-L01-S05",
+      "number": "3.5",
+      "title": "What the record leaves open",
+      "purpose": "Sparse samples cannot determine path length or constant motion; explicit idealised assumptions",
+      "comparator": "Fixed M101 introduction observed/model distinction; U02L05 evidence limits; no exact private OU match",
+      "practice": "Activity3.5,15min"
+    },
+    {
+      "id": "P101-U03-L01-S06",
+      "number": "3.6",
+      "title": "Calculate, check and explain in Python",
+      "purpose": "Scalar functions reused, unit contract, edge cases and report; no new library",
+      "comparator": "U01L05 and U02L05; OU121 substitution checking partial, no Python match",
+      "practice": "Activity3.6,60min Python; closing written synthesis20min"
+    }
+  ],
+  "budget_minutes": {
+    "reading_including_intro": 60,
+    "written_attempts": 90,
+    "python_attempts": 60,
+    "feedback_corrections": 30
+  },
+  "future_unit_reservation": "Approved map: L05 30min synthesis/conclusion; 90 written =60 cumulative exercises+30 investigation integration;60Python;60feedback/review =40 iCMA attempt/feedback+20 corrections/reference. Total240min, unchanged.",
+  "media": "Photo PIA26379 for actual path/context in unit opening and optional lesson connection; 3 original labelled schematics (coordinate/path/clock). Search NASA tracks and rover photography; chosen asset actually viewed. No interactive needed for this bounded lesson: static path stages and hand-drawn alternatives directly support questions. No video selected; no video inspection claimed.",
+  "sources": "Private OU inspected only locally; no proprietary prose or figures copied. Public sources are comparison, not question templates. Original contexts: inspection carriage, staged motion log, hidden reversal, unequal-stage duration and counterexample to input bugs."
+}

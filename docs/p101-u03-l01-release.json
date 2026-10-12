@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-12",
+  "authorization": "User reviewed local Unit3 introduction and Lesson1 then explicitly requested publish. Supersedes local-only disposition for this package.",
+  "scope": "Unit3 introduction and U03-L01; notebook/companion, NASA asset, scoped reading styles, hierarchy/search/catalogue and previous-lesson handover. Later lessons remain outlines; no academic records changed.",
+  "base": "6709b7d, matching publish/main before integration",
+  "checks": [
+    "115 existing tests pass",
+    "production build passes;30 available pages indexed",
+    "structural media and whitespace checks pass",
+    "16 local Chrome width/theme cases plus exact3 keyboard copies, disclosure,11 MathML,noJS,local links,download byte comparisons",
+    "inspected actual integrated intro, worked fractions, narrow dark maths, original figures and context photo"
+  ],
+  "build_note": "Used Vite native config loader locally to avoid writing through pre-existing external node_modules symlink. CI uses standard frozen dependencies/build.",
+  "status": "Ready for deployment; require successful security/publish workflow and live checks before claiming live."
+}

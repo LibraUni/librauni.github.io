@@ -1,3 +1,7 @@
+# P101 Unit3 introduction and Lesson1 publication authorised — 12 October 2026
+
+User explicitly requested publish after local review. Source content/p101/unit3.html and unit3-lesson1.html;6sections,4examples,6activities,notebook/companion. Standard1.10 retained. See docs/p101-u03-l01-release.json and plan/review/media records.115tests,build,30-page search and integrated browser checks pass. Only introduction/L01 newly available; L02–L05 remain outlines. Await security/deployment and live checks before claiming live. No learner records changed.
+
 # P101 Unit2 closing lesson creation and publication authorised - 8 October2026
 
 User explicitly requested creation and online publication of L05 and whole-unit closing resources. Six sections2.25-2.30, four activities2.26-2.29, ten exercises2.1-2.10, four figures2.21-2.24, notebook and matching3pagePDF/web reference. Standard1.9 and5h/1hPython retained; U02 totals22h/6hPython. Read docs/p101-u02-l05-plan.json, -review.md, -media.json.115tests, independent numerical/code checks, browser/offline checks and28-entry search pass. Unit2 teaching now complete; Unit3 remains outline/uncommissioned. Remote cd52db1 preserved. Await deployment/security/live verification. No learner records changed.

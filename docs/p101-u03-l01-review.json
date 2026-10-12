@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-12",
+  "scope": "P101 U03 introduction and U03-L01, local reading v0.1",
+  "disposition": "Locally authored and checked; not published; Unit3 remains incomplete (L02\u2013L05 not authored here).",
+  "standard": "Teaching Standard and Practice v1.10 from website/docs; approved illustrated M101v0.4 fully read. Work/homepage-integration contains latest adjacent P101U02L05 but lacks the standard/reference files, so accessible canonical website copies used without modifying them.",
+  "structure": "6 sections3.1\u20133.6;4 worked examples3.1\u20133.4;6 activities3.1\u20133.6 with separate hints/discussions;4 distinct figures3.1\u20133.4 (photo3.1 revisited);11 MathML expressions; learner notebook and Python companion.",
+  "coherence": {
+    "immediate": "Painted mark operational definition \u2192 signed change \u2192 path lengths \u2192 time interval/rates \u2192 combining stages and origin changes \u2192 sparse-data limits \u2192 scalar functions and report. U02 operational definitions, provenance and scope of claims retained. U01 signed constant-rate model and function/return knowledge reused.",
+    "wider": "Approved P101 B01U03 20h/6hPython remains intact. B01 60h/20hPython; module300h. L02 receives positions/time and scalar calculations; arrays/CSV/Matplotlib remain for L02 onward. No calculus, regression, acceleration law or M101 completion gate added. Stage1 practical and mathematical roles unchanged.",
+    "unit_end_reservation": "Existing L05:30min synthesis;90written (60exercises+30investigation);60Python;60feedback/review (40iCMA+20correction/reference). TMA01 remains separate6h. Unit conclusion/reference PDF belong at unit completion, not this increment."
+  },
+  "comparators": [
+    {
+      "source": "Private MST124 Unit2 Graphs and equations",
+      "locations": "printed117\u2013120 (PDF3\u20136), printed121 (PDF7), printed126\u2013128 (PDF12\u201314), solution Activity4 printed185 (PDF71)",
+      "inspected": "Explanatory text and actual Activity1/4 plus solutions; rendered PDF13 (printed127) inspected visually for signed quotients, subscripts, fractions, graphic placement and result box.",
+      "fit": "Opening motivation and coordinate conventions inform3.1; ordered differences and denominator conditions inform3.3/3.4; substitution checking partially informs3.6. Activity4 offers a signed-difference quotient, not a velocity problem.",
+      "differences": "OU graphs and two-coordinate mathematics assumed; this lesson uses a single spatial coordinate with paired time readings, postponing graph construction. No exact private physics or Python comparator supplied.",
+      "rights": "Private reference only; no prose, questions, annotations or page images reproduced."
+    },
+    {
+      "source": "OpenStax College Physics2e2.1",
+      "url": "https://openstax.org/books/college-physics-2e/pages/2-1-displacement",
+      "locations": "Position, Displacement, Distance; Check Your Understanding",
+      "fit": "Physics distinction for3.1/3.2; compared exposition and conceptual demand. Original rail record and hidden reversal are not number-substituted copies."
+    },
+    {
+      "source": "OpenStax College Physics2e2.3",
+      "url": "https://openstax.org/books/college-physics-2e/pages/2-3-time-velocity-and-speed",
+      "locations": "Time, Average Velocity, Speed; Check Your Understanding",
+      "fit": "Elapsed interval and whole-return distinction for3.3. Kept nonzero initial times deliberately. Stopped before instantaneous/graphical treatment; no calculator unit-conversion drill copied."
+    },
+    {
+      "source": "OpenStax College Physics2e chapter2 conceptual questions",
+      "url": "https://openstax.org/books/college-physics-2e/pages/2-conceptual-questions",
+      "locations": "Questions1\u20132,4,9\u201311",
+      "fit": "Conceptual comparison for activities3.1\u20133.5; new tasks combine reconstruction, signed arithmetic, duration error diagnosis, coordinate shifts and two possible trajectories. Our tasks are more scaffolded and explicitly budgeted; no equivalence of difficulty or study hours claimed."
+    },
+    {
+      "source": "Existing P101U01L05 and U02L05",
+      "locations": "Function definition/return/input conventions; U02 sections2.25\u20132.30, especially record versus claim and rerun",
+      "fit": "3.6 reuses known functions/ValueError/clean run. No external Python exercise match found; original synthesis. U02 full closing lesson read; fixed reference unit introduction and1.1 compared to opening and3.1."
+    }
+  ],
+  "subject_review": {
+    "evidence": "subject-checks.json",
+    "checks": "Independent Fraction arithmetic for11 rate cases; shared shifts and direction reversal;5 invalid inputs; activity1/2 signed changes and route sums checked separately; no-reversal/rest caveats and noisy-sample limitation inspected. Both notebook and plain companion run in clean Python namespaces. All MathML parsed; IDs/anchors/local download targets verified.",
+    "limits": "Function contract is finite real values in declared units, not arbitrary file validation or uncertainty inference. No experimental data collection claimed."
+  },
+  "reader_review": {
+    "defects_and_revisions": [
+      "Removed introductory use of physical work before its mechanics definition.",
+      "Made distance-from-samples conditional on no hidden reversal; distinguished a stipulated rest from two equal positions.",
+      "Separated whole-trip and moving-time speed, and retained nonzero starting clock readings.",
+      "Explained why shared fixed-origin changes preserve rates while direction reversal changes velocity sign.",
+      "Supplied commented invalid notebook calls so a default clean run succeeds; instructions still ask learners to test errors individually.",
+      "Moved nontrivial feedback quotients to MathML after narrow-screen reading review."
+    ],
+    "practice_coverage": "Activities1 sign/location;2 multi-stage route/net change;3 stops/intervals/return;4 incorrect arithmetic averaging plus shifts;5 nonunique journeys;6 implementation/boundaries/report. Closing written synthesis supplies open-task criteria. Full answers hidden until opened.",
+    "estimate": "814word unit intro and approximately4709word lesson including code/captions/closed feedback.60min reading/examples incl intro;70min numbered written attempts plus20min synthesis;60min Python;30min corrections. Editorial estimates, not student timings; no extra homework."
+  },
+  "visual_review": {
+    "evidence": "browser-checks.json and PNGs in this directory",
+    "inspected": "Wide opening pages, all original figure crops, worked nested fraction, mobile dark worked examples3.3/3.4 and activity3.4 with feedback, stacked photo caption. Corrected cramped diagram3.3 row labels by adding40px between rows, then re-rendered and inspected.",
+    "automation": "Chrome local16 page/width/theme combinations, widths1440/900/390/320; all feedback open for layout tests; image decode, SVG label bounds, document overflow. Three exact clipboard copies via keyboard; keyboard disclosure.200%CSS zoom reflow; no-JavaScript maths/feedback; file:// embedded photo.",
+    "limits": "CSS zoom is not browser-menu zoom; no screen-reader or student usability study. Print stylesheet supplied but no PDF produced or PDF pagination claim. Local reading layout only, not integrated deployment verification."
+  },
+  "media": "media.json records source/creator/reuse/modifications. Structural media checker passes both fragments. Colour roles, captions and source credits retained. Optional media do not contain required prerequisites.",
+  "next": "User review of introduction/L01; publication is a separate decision under current local-work instruction. If authorised, integrate fragments/assets/notebooks with existing site renderer and verify availability/navigation/search in current main before deploying. Next teaching increment is U03L02, From a table to a labelled graph; requires its own section/source plan.",
+  "outputs": {
+    "P101-Unit-3-Introduction.html": "536b2364eef4a7fb9374ccd2ff3cc4eb6531a37604910a44ae9cbd6b326aa271",
+    "P101-Unit-3-Lesson-1.html": "bfe50c53c775c33694fa848a17ee5c816d8202e46e705fddd4ff8fd4684f7a21",
+    "P101-Unit-3-Lesson-1.ipynb": "1bdfc898135ec8181e59fee40d761aeb694db1627985a7a73fb6255b83503427",
+    "P101-Unit-3-Lesson-1.py": "5fd844b36cf123452f3c216e0cc66a0d507452a5acccc9a82a273b4d02155a37"
+  }
+}
