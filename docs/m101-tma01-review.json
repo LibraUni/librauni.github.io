@@ -1,0 +1,73 @@
+{
+  "assessment": "M101 TMA 01",
+  "version": "1.0",
+  "date": "2026-10-12",
+  "authorisation": "User proceeded after proposal to create and publish the separate six-hour Block 1 assessment.",
+  "construction": {
+    "policy": "1.0",
+    "gate": "All B01 lessons blueprinted and released, M101 units/stage blocks mapped; detailed question blueprint precedes drafting.",
+    "scope": "Only TMA01. O3:Q1\u20132; O4:Q3\u20134 and Q5 interpretation; O6:coherent explanations throughout and independently written Q5.",
+    "budgets": "15 read + 40/55/60/75/75 question minutes + 40 final checks = 360; 100 marks. Separate from B01 54h/4h Python; module 300h unchanged.",
+    "handover": "M101 B02U04 remains outline. No timing trial, learner readiness or achievement inferred."
+  },
+  "subject_review": {
+    "evidence": {
+      "checks": 1630,
+      "result": "passed",
+      "question_marks": [
+        15,
+        20,
+        20,
+        25,
+        20
+      ],
+      "minutes": 360,
+      "mathml": 52,
+      "fresh_process_outputs_match": true,
+      "public_solution_leak_checks": "passed",
+      "scope": "Exact arithmetic, varied row-dot oracle, independent rational elimination, fresh runs, marks/budgets/MathML/IDs/offline. Not independent human moderation."
+    },
+    "private_files": "work/m101-tma01/marking.source.html, marking.html, solution.py, check.py and model-output.txt, outside public repository.",
+    "coverage": "Every subpart has a worked result and explicit credit allocation, with error carry-forward and alternative-method decisions. Rational elimination independently verifies the three-unknown system. Row-dot oracle checks reusable code over varied matrices/inputs; two fresh processes in separate directories agree. No original or new learner code executed."
+  },
+  "reader_review": {
+    "read_as_whole": "Connected path from representation to geometry, action, inversion/classification and evidence. Conditions, resources, exact/rounded conventions and file handover are explicit. Questions require only released B01/P101 foundation. No matrix package, ODE, rank theorem, abstract space or new physics law.",
+    "revisions": [
+      "Clarified Q1 scale/directions remain fixed after the origin shift.",
+      "Specified column-vector convention for Q3 component pairs.",
+      "Directed Q4(c) to eliminate x before back-substitution, retaining the taught small-system scope.",
+      "Bounded Q5 to modest integer inputs; removed need for general validation or solvers.",
+      "Separated fresh-run evidence from hand predictions and interpretation marks.",
+      "Kept private worked solutions outside the public source and offline download.",
+      "Retained contextual imagery after structural media review, with explicit photograph/model distinction.",
+      "Split paired displayed matrices into wrapping MathML groups after a 3px overflow at 320px."
+    ]
+  },
+  "visual_review": {
+    "status": "Complete for this release",
+    "evidence": "1280/900/390/320 widths in light and dark: no page or prose/display-equation overflow; 52 MathML, unique IDs, five question groups. Desktop photo/coordinate stimulus and mobile vectors/matrices/linear systems inspected. Keyboard question links work. Offline copy has all five questions, embedded photo, 52 MathML, zero scripts and no page/prose overflow at 320. Enlarged CSS 200% reading proxy inspected at 1280; not OS/browser zoom.",
+    "fixes": [
+      "Paired-matrix 3px overflow fixed by flexible wrapping groups.",
+      "Coordinate labels enlarged for narrow screens.",
+      "Offline main border-box sizing fixed 32px page overflow.",
+      "Offline return-link wording corrected."
+    ],
+    "limits": "No independent human, student timing or screen-reader audit."
+  },
+  "integration": "Assessments index and TMA route, module/block links, module sidebar and U03L06 next link. Last-lesson source and canonical lesson boundary wording updated. P101 concurrent releases through 0cddc27 preserved. No enrolment, submission forms, records, deadlines, grade weights or thresholds added.",
+  "limitations": [
+    "Editorial self-review, not independent human moderation or student timing.",
+    "No screen-reader audit claimed.",
+    "Private tutoring handover is available; this release does not implement a formal website submission service."
+  ],
+  "release": "Authoring and local review complete; user authorised publication; deployment/live verification pending.",
+  "verification": {
+    "site_tests": 124,
+    "production_build": "passed",
+    "search_available_pages": 45,
+    "media": "Two figures, one sourced image, source/reuse register complete; structural checks passed.",
+    "subject_checks": 1630,
+    "private_answers": "Outside repository and build. Public question/guide allocation matches.",
+    "existing_warnings": "Pre-existing Unit2 SVG less-than parse warnings and identity/non-module/large-bundle notices unchanged."
+  }
+}

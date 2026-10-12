@@ -21,7 +21,7 @@ test('M101 closing release has cumulative feedback, complete downloads and uncha
  assert.equal((page.match(/<details>/g)||[]).length,24);
  assert.doesNotMatch(page,/<details open|data-study-id/);
  assert.match(page,/TMA 01 has a separate six-hour allocation/);
- assert.match(page,/questions and marking guide remain in preparation/);
+ assert.match(page,/TMA 01 questions and marking criteria are available/);
  for(const path of ['public/teaching/m101/M101-Unit-3-Reference.pdf','public/notebooks/m101-u03-l06.ipynb','public/notebooks/m101-u03-l06.py'])assert.ok(fs.statSync(new URL('../'+path,import.meta.url)).size>100);
  const future=fs.readFileSync(new URL('../learn/physics/stage-1/m101/b02/u04/index.html',import.meta.url),'utf8');assert.match(future,/data-search-status="outline"/);
 });
