@@ -188,7 +188,7 @@
     "scope": "Sections3.19–3.24, Examples3.13–3.16, Activities3.19–3.23, Figures3.15–3.19; existing identifiers preserved. L03 handover updated; L05 remains outline. Model M1 unchanged; recordB explicitly constructed incomplete copy, not new experimental evidence.",
     "workload": "4h total:45 explanation,45 written,120 Python,30 feedback; unmeasured planning estimate. U03 20h/6hPython, B01 60h/20hPython and separateTMA01 6h unchanged. L05 retains cumulative exercises, iCMA, synthesis/conclusion/reference obligations.",
     "coherence": "Immediate lesson/unit inspected in detail; O1/O5/O6/O7, block measurement/model/computation and wider programme practical strand preserved; no strict M101 pairing prerequisite or new physics.",
-    "integration": "119 repository tests and production build passed;38-page available search. Exact five downloads, all internal content links, previous handover, next-outline gate, light/dark widths1440/900/390/320 and offline checks pass. No learner records/enrolment changed."
+    "integration": "119 repository tests and production build passed;38-page available search. Exact five downloads, all internal content links, previous handover, next-outline gate, light/dark widths1440/900/390/320 and offline checks pass. No learner records/enrolment changed. Newer catalogue continuation change dd5364f merged and generated pages rebuilt;119tests and38-page build repeated successfully."
   },
   "disposition": "Ready for user-authorised publication. Verify security workflow/deployment and live bytes before claiming live."
 }
