@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-12",
+  "reviewer": "Author in separate subject, reader, visual and whole-lesson passes; not independent human review",
+  "standard": "1.10, approved referencev0.4",
+  "subject": {
+    "result": "pass",
+    "checks": 1944,
+    "scope": "1875 small-matrix inverse/kernel/area/scaling checks plus all original numerical examples, independent code values, notebook/companion execution, MathML parsing, anchors and budgets. Finite checks support, not replace, algebraic reasoning.",
+    "evidence": "Exact Fraction calculations,625small-matrix two-sided-inverse/kernel cases,625polygon areas,625arbitrary-parallelogram scaling cases; all original example/activity outputs; notebook and companion executed independently and identical. Code outputs compared against separate row-dot-product arithmetic. MathML parsed as XML,anchors/budgets/disclosures checked.",
+    "argumentReview": "General inverse derived without dividing by a possibly zero entry. Existence verified by substitution; singular argument includes zero row and zero matrix. Candidate membership kept separate from uniqueness. Near-singular example is a counterexample, not a general determinant-size rule."
+  },
+  "reader": {
+    "result": "pass",
+    "progression": "Read assembled six-section exposition/feedback; area and orientation lead to collapse, input recovery, residuals, implementation and deliberately revealing tests. Four written activities45min, two coding activities120min;7workedexamples precede practice.",
+    "revisions": [
+      "Replaced undefined symmetric terminology with explicit equal off-diagonal entries.",
+      "Added explicit cancellation/substitution explanation to distinguish existence from necessary elimination conditions.",
+      "Moved expected test-table answers into the hidden discussion so prediction remains meaningful.",
+      "Corrected next-lesson link text to canonical Block synthesis,iCMA01 and unit review.",
+      "Split compound inverse/substitution displays and a long inline coordinate calculation at meaningful boundaries."
+    ],
+    "comparison": "Accepted reference connects observation to model; new opening follows that pattern without repeating it. University inverse derivation and selected Nicholson questions support level; our tasks include more scaffolded interpretation and original debugging synthesis."
+  },
+  "visual": {
+    "result": "pass",
+    "checks": [
+      "1280desktop,390and320mobile; initially8closeddisclosures; all8keyboard opened; zero page-wide overflow.",
+      "Native247then248MathML after final small wording edit; fractions,inverse superscripts,negative entries,radical bar,hat and aligned derivation inspected.",
+      "Light/dark review: readable examples,feedback,coordinate diagrams and photo context; restoredlight.",
+      "Both Python copy buttons activated usingkeyboard; clipboard byte-for-byte identical to source; clipboard restored.",
+      "Offline self-contained script-free copy:0scripts,248MathML,allimagesloaded,8feedbackpanels usable;320px no overflow of paragraphs/lists.",
+      "200%CSSzoom proxy at1280px readable without page overflow."
+    ],
+    "repairs": [
+      "Separated adjacent matrices and residual statements, reducing overflowing display containers from12to2.",
+      "Removed redundant x-axis zero labels colliding with O.",
+      "Made source-code scrollers explicitly focusable and labelled."
+    ],
+    "limits": "Two long equations intentionally scroll inside labelled focusable containers at320px. Code/table scrollers preserve content. CSSzoom is a proxy,not OSzoom; no screen-reader audit or student testing."
+  },
+  "wholeLesson": {
+    "result": "pass",
+    "summary": "6sections,7workedexamples,6activities,8closedfeedback/hintpanels,5figures,248MathML.4h budget45reading+45written+120Python+30feedback retained; no new matrix library or physical theory.",
+    "widerFit": "O4/O6 withinU03, B01 mathematical reasoning and checks; laterM102 extends linear algebra. P101owns programming foundations and links remain available. Earlier M101/P101teaching and learner records unchanged.",
+    "closing": "L06 cumulative10question45minplan retained, L04feedback15minreserved, L06Python30min/iCMA60min/reference30min. Whole-unit conclusion,exercises,referenceweb/PDF andiCMAstilldueL06; this lesson does not claim unit completion."
+  },
+  "verification": {
+    "repositoryTests": "120 passed on final integrated build",
+    "productionBuild": "passed;38availablepages indexed",
+    "media": "structuralcheckpassed;rightsandactualvisualinspection separately completed",
+    "release": "User-authorised; deploy and live verification pending"
+  },
+  "limitations": [
+    "Timing is editorial estimate,not observed learner time.",
+    "Existing older Unit2/identity asset and large-bundle build warnings remain unrelated."
+  ],
+  "artifacts": {
+    "content/m101/unit3-lesson5.html": "da6d8927646bce3c353ef8ac8dd8c900e4ece8e6d4ef95f104e618707fe8fa0d",
+    "src/m101-unit3-lesson5.css": "ad0252045fb85fcd2232c9715acefb6af744b707634325fc61cb70620f4cf7b3",
+    "public/notebooks/m101-u03-l05.ipynb": "636b3a9ee299fa54c1ae0f475c34cc5c4adc817348e29cb3830b41a9f9c7a46c",
+    "public/notebooks/m101-u03-l05.py": "a4a0f40a3efff7ac8f8aa856b4d8f86658aba7add8204f9d0b5ee5b2e36dd6a7",
+    "public/teaching/m101/u03-solar.jpg": "7cec438de3609073d8246c17cfb1c8e8bbf2130a62d0c5549e2b8f4d7a87c7a6"
+  }
+}

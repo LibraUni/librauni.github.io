@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-12",
+  "figures": [
+    {
+      "id": "3.24",
+      "type": "original paired coordinate diagrams",
+      "purpose": "Columns determine ordered vertices; area3 independently checked by polygon area and bounding-square subtraction; equal60SVGunits per coordinate unit"
+    },
+    {
+      "id": "3.25",
+      "type": "original static three-case comparison",
+      "purpose": "Tk positive/negative/zero; fixed equal axes, signed area2/-2/0. Whole-plane image distinguished from square segment. Static comparison sufficient; L04 already supplies adjacent interactive."
+    },
+    {
+      "id": "3.26",
+      "type": "photograph",
+      "source": "https://www.nasa.gov/image-article/new-iss-roll-out-solar-array-irosa-deployed/",
+      "asset": "https://www.nasa.gov/wp-content/uploads/2023/03/iss065e125924.jpg",
+      "credit": "NASA, iss065e125924,20June2021",
+      "rights": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "verification": "Actual image/source/policy inspected; NASA-labelled material without third-party copyright notice. Factual educational use with attribution, no endorsement.",
+      "changes": "None; original1041x1562 image, CSS proportional scaling",
+      "purpose": "Apparent shapes and model assumptions; no determinant inferred from photo. Compact floated photo on desktop, stacked on mobile."
+    },
+    {
+      "id": "3.27",
+      "type": "original inverse path",
+      "purpose": "Forward and recovery expressions, composition order and every-input reasoning"
+    },
+    {
+      "id": "3.28",
+      "type": "original table",
+      "purpose": "Five candidate cases with inputs visible, expected residuals in hidden discussion; cancellation and dependent-system contrasts"
+    }
+  ],
+  "videoInteractiveDecision": "No new video or interactive: paired static figures, earlier adjacent interactive and120min of direct Python exploration serve this lesson. No uninspected video recommended.",
+  "review": "All5figures inspected in assembled browser; coordinate grids, captions, proportion, loading, light/dark and narrow layouts checked. NASA asset embedded in offline copy; no diagram-only reduction."
+}

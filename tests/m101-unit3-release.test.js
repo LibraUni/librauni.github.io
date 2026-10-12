@@ -10,10 +10,10 @@ test('Unit 3 release exposes only reviewed teaching and preserves hidden feedbac
  assert.equal((page.match(/<math /g)||[]).length,328);
  assert.equal((page.match(/class="activity"/g)||[]).length,8);
  assert.equal((page.match(/<details><summary>/g)||[]).length,10);
- for(let i=5;i<=6;i++)assert.match(read(base+'l0'+i+'/index.html'),/data-search-status="outline"/);
+ assert.match(read(base+'l06/index.html'),/data-search-status="outline"/);
  const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
  for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
- assert.match(read(base+'index.html'),/Lessons 5–6 remain in preparation/);
+ assert.match(read(base+'index.html'),/Lesson 6 remains in preparation/);
  for(const f of ['u03-cayley.jpg','u03-manhattan.jpg'])assert.ok(fs.existsSync(new URL('../public/teaching/m101/'+f,import.meta.url)));
 });
 
@@ -61,4 +61,22 @@ test('Unit 3 Lesson 4 preserves families, hidden feedback and unit-end reservati
  const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
  for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
  assert.match(read(base+'l03/index.html'),/Next: When solutions fail or are not unique/);
+});
+
+test('Unit 3 Lesson 5 keeps candidate checks distinct from uniqueness and supplies runnable preparation',()=>{
+ const page=read(base+'l05/index.html');
+ assert.match(page,/data-search-status="available"/);
+ assert.equal((page.match(/class="activity"/g)||[]).length,6);
+ assert.equal((page.match(/<details><summary>/g)||[]).length,8);
+ assert.doesNotMatch(page,/<details open|Local review|href="M101-Unit-3|data-study-id/);
+ assert.match(page,/P101 Unit 1, Lesson 4/);
+ assert.ok(page.includes('/p101/b01/u01/l05/'));
+ assert.match(page,/m101-u03-l05.ipynb/);
+ assert.match(page,/zero residual cannot prove uniqueness/);
+ assert.match(page,/language-python/);
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
+ for(const [,id] of page.matchAll(/href="#([^"]+)"/g))assert.ok(ids.includes(id),id);
+ const nb=JSON.parse(read('public/notebooks/m101-u03-l05.ipynb'));
+ assert.ok(nb.cells.filter(c=>c.cell_type==='code').every(c=>c.execution_count===null&&c.outputs.length===0));
+ assert.match(read(base+'l04/index.html'),/Next: Determinants, invertibility and computational checks/);
 });
