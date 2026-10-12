@@ -1,0 +1,20 @@
+[
+  {
+    "figure": "3.1",
+    "source": "https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/NewYorkCity.htm",
+    "credit": "NASA, ISS039-E-18538, 5 May 2014",
+    "rights": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "note": "Existing reference image reused locally. Official caption and educational reuse terms checked. Oblique perspective explicitly distinguished from exact 2D matrix."
+  },
+  {
+    "figure": "3.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Arthur_Cayley.jpg",
+    "credit": "Herbert Beraud, before 1883, public domain",
+    "note": "Downloaded 500px thumbnail and visually inspected. Historical account checked at https://mathshistory.st-andrews.ac.uk/Biographies/Cayley/."
+  },
+  {
+    "figures": "3.2\u20133.4, 3.6\u20133.9",
+    "credit": "Original SVG illustrations and JavaScript explorer authored for this lesson",
+    "rights": "Original work; no third-party diagram/code copied."
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-12",
+  "status": "Publication authorised; integrated review passed; deployment pending",
+  "standard": "Teaching standard v1.10 and approved six-lesson 20h curriculum",
+  "subject_review": {
+    "result": "115 arithmetic, structure and budget checks pass",
+    "evidence": "subject-checks.json and checks.py",
+    "repairs": [
+      "Correct matrix label in basis diagram",
+      "Explicit zero-vector direction exception",
+      "Reflection proof now separates fixed points from nonzero perpendicular displacement",
+      "Explicit scalar-matrix explanation before negative identity"
+    ]
+  },
+  "reader_review": {
+    "result": "Seven-section progression inspected as whole lesson; column construction precedes row shortcut; eight activities total90min, feedback30min, reading60min.",
+    "repairs": [
+      "Defined transformation before use",
+      "Explained why one tested vector cannot identify a whole matrix",
+      "Added return-to-activity links to feedback",
+      "Kept composition, determinants and elimination in their planned later lessons"
+    ]
+  },
+  "visual_review": {
+    "result": "Desktop and narrow reading views inspected, including all opened discussions; no page overflow at320px; display MathML overflow count zero; dark CSS and script-free copies inspected; 200% CSS zoom at1280px inspected with zero display overflow.",
+    "evidence": "CUA screenshots and DOM measurements in this chat. Dark/no-script and zoom variants are test-only copies under qa.",
+    "repairs": [
+      "Long calculations broken into aligned rows",
+      "Bold vectors forced to render correctly",
+      "Unsupported MathML conversion replaced with supported array layout"
+    ]
+  },
+  "interaction_review": "Shear slider tested using keyboard Home/End; reset returns k=0.5; coordinates correct. Static diagram/table supports reading with no scripts. All10 disclosures initially closed in deliverable.",
+  "whole_lesson_review": "Introduces general component maps, matrix structure, weighted columns, dimensions, basis images, identity/zero, scaling, reflection and shear without importing later theory. Integrated practice and diagnostic ending; cumulative unit exercise set reserved in approved schedule.",
+  "limitations": [
+    "No independent human/student validation claimed.",
+    "Later five lessons, cumulative exercise set and compact reference remain to be authored."
+  ],
+  "artifacts": {
+    "M101-Unit-3-Introduction.html": {
+      "sha256": "4962f94c263119f51ab833b35ede1883fdddde3b9b1f8a858121753a2cb3c834",
+      "bytes": 321849
+    },
+    "M101-Unit-3-Lesson-1.html": {
+      "sha256": "2f465b71dd8f6b8fa9791fcc2da7dad5d8ef36123178c4c6a33267048683b4ae",
+      "bytes": 340646
+    }
+  },
+  "release_review": {
+    "tests": "116 site tests pass; 115 subject/structure/budget checks previously passed",
+    "build": "Production build and 32-page search index pass",
+    "browser": "Integrated desktop and390px mobile, light/dark screenshots reviewed; math328; no page overflow; images loaded; keyboard shear End and reset verified",
+    "scope": "Introduction/L01 available; L02\u2013L06 outline; no learner records changed"
+  }
+}
