@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-12",
+  "status": "Authoring and online publication explicitly authorised",
+  "policy": "Construction1.0; teaching standard1.10",
+  "parent": "M101 B01 U03 approved20h/3hPython, O4/O6; all16 block lessons blueprinted before U03 authoring",
+  "lesson": {
+    "id": "U03-L02",
+    "unit": "U03",
+    "title": "Composing transformations in order",
+    "hours": 3.0,
+    "allocation": {
+      "explanationAndExamples": 1,
+      "mathematicalPractice": 1,
+      "python": 0.5,
+      "retrievalAndFeedback": 0.5
+    },
+    "requires": [
+      "U03-L01"
+    ],
+    "externalRequires": [
+      "P101 U01 programming readiness as specified at U02-L05."
+    ],
+    "outcomes": [
+      "M101-O4",
+      "M101-O6"
+    ],
+    "purpose": "Compute a product of two small matrices and relate order to successive transformations.",
+    "scope": "Derive the 2-by-2 product from successive matrix-vector application; rightmost transformation acts first; contrast a noncommuting pair with identity and a simple commuting pair.",
+    "boundary": "Do not generalise noncommutativity to a claim that every pair fails to commute. No general rotation-angle formula or new trigonometry syllabus.",
+    "practiceAndEvidence": "Calculate a shear/reflection composition both ways, compare on coordinate vectors and an independent vector; hand-trace and run a supplied short scalar/list function.",
+    "visualPlan": "Two transformation paths from the same starting figure, with intermediate states.",
+    "python": "0.5 hour included: reuse P101 functions/lists to compare successive applications with the hand-computed product; no matrix library.",
+    "handover": "L03\u2013L04 solve coupled equations; L05 returns to reversible and collapsed transformations."
+  },
+  "sections": [
+    {
+      "id": "M101-U03-L02-S01",
+      "number": "3.8",
+      "title": "Keep the intermediate vector",
+      "minutes": {
+        "reading": 10,
+        "written": 10,
+        "python": 0,
+        "feedback": 5
+      },
+      "requires": "U03-L01 and earlier sections; P101 U01 list/function readiness for coding only",
+      "purpose": "Keep the intermediate vector",
+      "boundary": "2-by-2 core; dimension compatibility reminder; no new trigonometry, determinants, inverses or abstract bases",
+      "evidence": "Worked reasoning and activity discussion; compare sequential and product action",
+      "handover": "One matrix for the whole journey"
+    },
+    {
+      "id": "M101-U03-L02-S02",
+      "number": "3.9",
+      "title": "One matrix for the whole journey",
+      "minutes": {
+        "reading": 14,
+        "written": 12,
+        "python": 0,
+        "feedback": 5
+      },
+      "requires": "U03-L01 and earlier sections; P101 U01 list/function readiness for coding only",
+      "purpose": "One matrix for the whole journey",
+      "boundary": "2-by-2 core; dimension compatibility reminder; no new trigonometry, determinants, inverses or abstract bases",
+      "evidence": "Worked reasoning and activity discussion; compare sequential and product action",
+      "handover": "Calculating a matrix product"
+    },
+    {
+      "id": "M101-U03-L02-S03",
+      "number": "3.10",
+      "title": "Calculating a matrix product",
+      "minutes": {
+        "reading": 12,
+        "written": 14,
+        "python": 0,
+        "feedback": 5
+      },
+      "requires": "U03-L01 and earlier sections; P101 U01 list/function readiness for coding only",
+      "purpose": "Calculating a matrix product",
+      "boundary": "2-by-2 core; dimension compatibility reminder; no new trigonometry, determinants, inverses or abstract bases",
+      "evidence": "Worked reasoning and activity discussion; compare sequential and product action",
+      "handover": "What changes when the order changes?"
+    },
+    {
+      "id": "M101-U03-L02-S04",
+      "number": "3.11",
+      "title": "What changes when the order changes?",
+      "minutes": {
+        "reading": 12,
+        "written": 14,
+        "python": 0,
+        "feedback": 5
+      },
+      "requires": "U03-L01 and earlier sections; P101 U01 list/function readiness for coding only",
+      "purpose": "What changes when the order changes?",
+      "boundary": "2-by-2 core; dimension compatibility reminder; no new trigonometry, determinants, inverses or abstract bases",
+      "evidence": "Worked reasoning and activity discussion; compare sequential and product action",
+      "handover": "When the order does not matter"
+    },
+    {
+      "id": "M101-U03-L02-S05",
+      "number": "3.12",
+      "title": "When the order does not matter",
+      "minutes": {
+        "reading": 7,
+        "written": 10,
+        "python": 0,
+        "feedback": 5
+      },
+      "requires": "U03-L01 and earlier sections; P101 U01 list/function readiness for coding only",
+      "purpose": "When the order does not matter",
+      "boundary": "2-by-2 core; dimension compatibility reminder; no new trigonometry, determinants, inverses or abstract bases",
+      "evidence": "Worked reasoning and activity discussion; compare sequential and product action",
+      "handover": "A transparent computational check"
+    },
+    {
+      "id": "M101-U03-L02-S06",
+      "number": "3.13",
+      "title": "A transparent computational check",
+      "minutes": {
+        "reading": 5,
+        "written": 0,
+        "python": 30,
+        "feedback": 5
+      },
+      "requires": "U03-L01 and earlier sections; P101 U01 list/function readiness for coding only",
+      "purpose": "A transparent computational check",
+      "boundary": "2-by-2 core; dimension compatibility reminder; no new trigonometry, determinants, inverses or abstract bases",
+      "evidence": "Worked reasoning and activity discussion; compare sequential and product action",
+      "handover": "L03 coupled equations"
+    }
+  ],
+  "mediaPlan": [
+    "Original labelled point pipeline",
+    "Original column construction diagram",
+    "Original two rows of three coordinate panels showing intermediate states and both orders",
+    "NASA Apollo11 retroreflector photograph beside optional account of successive reflections; distinguish3D optics from2D plane model"
+  ],
+  "interactionDecision": "Static paths retain intermediate and final states simultaneously; computing activity supplies manipulation and comparison. No additional animation needed for this lesson.",
+  "practice": "5written activities60min;1coding activity30min;30min feedback/correction;60min reading/examples. No extra end-of-lesson set. Existing cumulative unit reservation unchanged.",
+  "limits": "Editorial timings, not observed learner timing; no human/student validation claimed"
+}
