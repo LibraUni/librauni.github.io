@@ -1,0 +1,21 @@
+.p101-u3-l5 .icma-question{border:1px solid #a7b7b0;border-radius:7px;padding:20px;margin:25px 0}
+.p101-u3-l5 fieldset{min-width:0;border:0;padding:0;margin:0}
+.p101-u3-l5 legend{font:600 17px/1.5 system-ui;padding:0}
+.p101-u3-l5 .icma-question label{display:flex;align-items:baseline;gap:12px;padding:12px 8px;cursor:pointer;border-bottom:1px solid #cdd8d2}
+.p101-u3-l5 .icma-question input{flex:0 0 auto;accent-color:#216c68}
+.p101-u3-l5 .icma-question label span{min-width:0}
+.p101-u3-l5 .icma-controls button{font:600 15px/1.5 system-ui;padding:12px 17px;color:#fff;background:#245c51;border:1px solid #245c51;border-radius:5px;cursor:pointer}
+.p101-u3-l5 .icma-total,.p101-u3-l5 [data-item-feedback]{font:15px/1.6 system-ui}
+.p101-u3-l5 :focus-visible{outline:3px solid #a97230;outline-offset:4px}
+@media(max-width:650px){.p101-u3-l5 .icma-question{padding:14px}.p101-u3-l5 .key{padding:16px}.p101-u3-l5 pre{font-size:13px}.p101-u3-l5 .equation{font-size:19px}}
+.p101-u3-l5 .exercise{border-top:1px solid #a7b7b0;padding:18px 0 25px}
+.p101-u3-l5 .generated-plot svg{width:100%;height:auto;min-width:720px;background:#f3f6f2}
+.p101-u3-l5 .generated-plot svg text{font-family:"DejaVu Sans",Arial,sans-serif;fill:initial}
+.p101-u3-l5 .l5-table{overflow-x:auto;max-width:100%}
+.p101-u3-l5 .l5-table table{min-width:520px;border-collapse:collapse;width:100%}
+.p101-u3-l5 th,.p101-u3-l5 td{padding:10px;border-bottom:1px solid #a7b7b0;vertical-align:top;text-align:left}
+.p101-u3-l5 .photo img{width:100%;height:auto;max-width:539px;margin:auto}
+.p101-u3-l5 .icma-controls{display:flex;gap:12px;flex-wrap:wrap}
+.p101-u3-l5 .icma-controls[hidden]{display:none}
+.p101-u3-l5 .icma-question input{min-width:18px;min-height:18px}
+@media print{.p101-u3-l5 .generated-plot svg{min-width:0}.p101-u3-l5 .icma-controls{display:none}}

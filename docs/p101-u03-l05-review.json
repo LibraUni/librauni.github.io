@@ -1,0 +1,59 @@
+{
+  "lesson": "P101-U03-L05 Motion evidence and block synthesis",
+  "date": "2026-10-12",
+  "standard": "1.10",
+  "status": "Content reviewed; publication authorised by user; deployment/live verification pending",
+  "scope": {
+    "sections": "3.25\u20133.30",
+    "examples": "3.17\u20133.19",
+    "activities": "3.24\u20133.26",
+    "figures": "3.20\u20133.23",
+    "exercises": "3.1\u20133.10",
+    "checkpoint_questions": 10,
+    "mathml": 21,
+    "feedback_disclosures": 36,
+    "pdf_pages": 2
+  },
+  "subject_review": {
+    "evidence": "41 independent numerical/structure checks; exact rational C1/C2 and D1/D2 predictions/residuals; four fresh Jupyter kernels (starter/full solution in two folders); sources preserved; malformed shape, missing time, nonnumeric token and all-unavailable cases rejected. All displayed Python compiles.",
+    "findings": "No new physics or syntax; C1/C2 explicitly constructed, not fitted. No residual at missing29s. Positive/negative residuals are position differences, not velocities. No statistical significance invented. Reference time and zero velocity return expected positions.",
+    "limits": "Invented data test reasoning/code, not experimental validity or instrument handling. Fresh kernels tested one installed environment; no claim of compatibility with every Python version."
+  },
+  "reader_review": {
+    "comparisons": "Fixed M101 v0.4 signed-change explanation/Example1.1/Activity1.1; actual OU U2 pp143\u2013145 and Activity12 solutionp188; Exercise Booklet2 pp2\u20133 and solutionspp5\u20138. See source register for prerequisites and missing exact matches.",
+    "changes": [
+      "Made loader scope explicit: shape/finite values do not check source truth, units or time ordering.",
+      "Distinguished new C record from earlier A/B records and retained model construction-point caveat.",
+      "Added labelled important distinction between hand arithmetic, fresh execution and evidence comparison.",
+      "Starter clearly stops at C1; hidden feedback supplies C2 code without pretending an unperformed learner run succeeded.",
+      "Exercise2 explicitly specifies continuous model segments, while Exercises1/3/10 preserve sparse-data uncertainty about distance.",
+      "Separated20minute checkpoint attempt from20minute feedback and retained20minute correction/reference budget."
+    ],
+    "disposition": "Connected explanation leads from question through comparison to qualified report. Self-review, not independent human review or measured learner timing."
+  },
+  "visual_review": {
+    "checks": "Production Chrome1440/900/390/320 light/dark; all feedback opened, no page overflow; native MathML, table/diagram scroll regions, image proportions/credits, keyboard code copying, checkpoint marking/reset and no-JavaScript feedback; offline desktop/mobile/themes;720CSSpx scale2 zoom proxy/reduced motion. Every PDF page rendered and visually inspected.",
+    "fixes": [
+      "Namespaced embedded SVG IDs to avoid collisions between plots.",
+      "Changed long Example3.18 prediction to aligned working and enabled full-size display fractions.",
+      "Adjusted image QA to load lazy image before asserting completion.",
+      "Regenerated via render-curriculum after detecting render-learning exports a function rather than executing it."
+    ],
+    "media": "Four purposeful figures: evidence route, actual checked C1/C2 comparison, sourced Apollo15 photograph and idealised exercise graph. Actual NASA asset and reuse terms verified; no image quota imposed.",
+    "reference": "Shared JSON supplies web and compact PDF definitions/code, with separate compact rows stored in the same source; canonical module/unit, official logo/motto, version/date, page numbers and small rights notice checked."
+  },
+  "whole_unit_review": {
+    "continuity": "L01 quantities/average rates; L02 actual-time arrays and labelled plots; L03 model construction/residuals/reach; L04 missing pairs/provenance/fresh run; L05 independent synthesis and cumulative practice. No published IDs renumbered.",
+    "practice": "Coverage map and60min ten-question allocation in plan; separate hints and reasoned solutions. Formative iCMA samples Block1 distinctions and does not replace written work.",
+    "budget": "4h:30reading+30written investigation+60Python+60exercises+40iCMA/feedback+20correction/reference. Unit20h/6Python and Block60h/20Python unchanged. Timings unmeasured.",
+    "handover": "Unit3 and Block1 teaching complete. TMA01 questions/rubric remain unreleased and six hours separate; Unit4 remains outline. No learner records or private sources changed."
+  },
+  "release_checks": {
+    "site_tests": 124,
+    "search_pages": 41,
+    "build": "Production build passes; pre-existing M101 SVG parse warnings and bundle-size warnings remain unrelated to this increment.",
+    "media": "Structural media checker passes four figures and one sourced photograph.",
+    "checkpoint": "Tests cover empty, all correct, all wrong, invalid and partial choices; visible answer reasoning matches key; no localStorage/network scoring. Real browser empty/partial/full/change/reset feedback checked.",
+    "pending": "Final live URL, source fragment/download byte equality and successful security/publication workflow."
+  }
+}

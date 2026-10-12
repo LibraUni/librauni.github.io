@@ -1,0 +1,42 @@
+{
+  "lesson": "P101-U03-L05",
+  "assets": [
+    {
+      "figure": "3.20",
+      "file": "synthesis-route.svg",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "source/comparison/claim dependencies",
+      "modifications": "original"
+    },
+    {
+      "figure": "3.21",
+      "file": "synthesis-comparison.svg",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "C1/C2 positions and signed residuals from checked source; hidden with investigation feedback",
+      "model": "invented C record; available20,22,25,32s; unavailable29s",
+      "modifications": "original Matplotlib output, inline SVG IDs namespaced"
+    },
+    {
+      "figure": "3.22",
+      "file": "apollo15-rover.gif",
+      "creator": "NASA/David R. Scott",
+      "image_id": "AS15-86-11603",
+      "source": "https://starchild.gsfc.nasa.gov/docs/StarChild/space_level2/apollo15_rover.html",
+      "download": "https://starchild.gsfc.nasa.gov/Images/StarChild/space_level2/apollo15_rover_big.gif",
+      "terms": "NASA media guidelines, educational/informational factual use with source credit, no endorsement; retains separate status",
+      "terms_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "modifications": "unmodified539x411 GIF",
+      "verified": "Actual image inspected; source identifies James Irwin, photographer David Scott and31July1971. Photo not used as calibrated measurement."
+    },
+    {
+      "figure": "3.23",
+      "file": "exercise-journey.svg",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "stated idealised continuous motion with text-equivalent coordinates",
+      "modifications": "original, SVG IDs namespaced"
+    }
+  ]
+}

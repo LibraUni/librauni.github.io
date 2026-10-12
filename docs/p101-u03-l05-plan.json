@@ -1,0 +1,54 @@
+{
+  "scope": "P101 U03 L05 Motion evidence and block synthesis; standard 1.10",
+  "prerequisites": "U03 L01\u2013L04; no new physics or Python syntax",
+  "sections": [
+    "3.25 A question the record can answer",
+    "3.26 Build the evidence comparison",
+    "3.27 Hand over a defensible conclusion",
+    "3.28 Unit 3 exercises",
+    "3.29 Formative iCMA 01",
+    "3.30 Reference and block conclusion"
+  ],
+  "budget_minutes": {
+    "synthesis_reading": 30,
+    "investigation_written": 30,
+    "python": 60,
+    "unit_exercises": 60,
+    "icma_attempt_feedback": 40,
+    "corrections_reference": 20
+  },
+  "exercise_minutes": [
+    4,
+    5,
+    5,
+    6,
+    5,
+    5,
+    6,
+    6,
+    8,
+    10
+  ],
+  "media_plan": [
+    "NASA Apollo 15 photograph: distinguish image context from timed measurement",
+    "Original route from source through models to claim",
+    "Original two-model position/residual comparison inside hidden investigation feedback",
+    "Original piecewise motion plot for cumulative exercise"
+  ],
+  "data_plan": "Invented new C record t20,22,25,29,32 s; x1,3,6,missing,5 m. Model C1 first pair +1m/s; C2 endpoints +1/3m/s. Preserve missing row; compare unsupported long-term predictions and boundary checks. No fitting.",
+  "handover": "Unit 4 and Block 2 outline; TMA01 separate six-hour work, not released by this lesson",
+  "calibration": "MST124 U2 pp143\u2013145, Activity12, solution p188; exercise booklet pp2\u20133 Exercises1\u20133,7\u20138 and solutions pp5\u20138; original practical and checkpoint have no exact OU match.",
+  "outcome_coverage": {
+    "P101-O1": "Exercises1\u20137,10 and C model interpretation",
+    "P101-O5": "Activities24\u201326, Exercises4,8\u201310, checkpoint4\u20135,8\u201310",
+    "P101-O6": "Activity25, Exercises8\u20139, reference code and actual fresh runs",
+    "P101-O7": "Activity26 evidence report, Exercise4 caption, Exercises7/9/10 qualified explanation"
+  },
+  "unit_coverage": {
+    "L01": "Exercises1\u20133; checkpoint1\u20133",
+    "L02": "Exercise4; Activity25 two-panel graph",
+    "L03": "Exercises5\u20137,10; C1/C2 comparison; checkpoint6\u20137,9",
+    "L04": "Exercises8\u20139; Activity25 source selection/fresh run; checkpoint5,8,10",
+    "L05": "Activity26 synthesis and mixed Exercise10"
+  }
+}

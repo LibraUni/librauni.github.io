@@ -1,0 +1,121 @@
+{
+  "title": "Motion graphs and reproducible data work",
+  "version": "1.0",
+  "date": "12 October 2026",
+  "rows": [
+    [
+      "Recall",
+      "Position and change",
+      "x: position from a stated origin; chosen positive direction; unit m. \u0394x = x\u2082 \u2212 x\u2081. A position is not a distance travelled."
+    ],
+    [
+      "Recall",
+      "Elapsed time",
+      "\u0394t = t\u2082 \u2212 t\u2081 > 0; unit s. Clock reading and elapsed time differ."
+    ],
+    [
+      "Recall",
+      "Average rates",
+      "Average velocity = displacement / elapsed time. Average speed = total distance / elapsed time. Include stops in the interval. Units m/s."
+    ],
+    [
+      "Recall",
+      "Constant-velocity model",
+      "x_pred(t) = x_ref + v(t \u2212 t_ref). One fixed coordinate system; v constant over the modelled interval."
+    ],
+    [
+      "Recall",
+      "Residual",
+      "r = x_observed \u2212 x_predicted, at the same time; unit m. Positive: observed position lies on positive side of prediction."
+    ],
+    [
+      "Understand",
+      "Graph and evidence",
+      "Position\u2013time gradient gives interval average velocity between endpoints. A straight model segment asserts constant velocity; isolated points do not."
+    ],
+    [
+      "Understand",
+      "Distance",
+      "Endpoints give net displacement. Total distance needs the path; equal endpoint positions need not mean rest."
+    ],
+    [
+      "Understand",
+      "Model reach",
+      "Interpolation: inside stated data interval. Extrapolation: outside it. Neither guarantees accuracy. Construction-point agreement is built in."
+    ],
+    [
+      "Consult",
+      "A reproducible handover",
+      "Unchanged identified source + units/origin/clock + selection rule + declared model + saved code + labelled output + actual fresh-run/version note."
+    ],
+    [
+      "Consult",
+      "Checks and limits",
+      "Hand prediction/residual; reference-time and zero-velocity checks; fresh ordered run. Missing is not zero. Code execution is not physical validation."
+    ]
+  ],
+  "python": [
+    [
+      "Load a documented CSV",
+      "from pathlib import Path\nimport numpy as np\np = Path.cwd() / \"data\" / \"record.csv\"\na = np.genfromtxt(p, delimiter=\",\", skip_header=1,\n    dtype=float, filling_values=np.nan,\n    ndmin=2, loose=False)\nprint(a.shape)  # inspect expected rows and columns"
+    ],
+    [
+      "Select complete pairs",
+      "t_all = a[:, 0]\nx_all = a[:, 1]\nkeep = np.isfinite(t_all) & np.isfinite(x_all)\nt = t_all[keep]\nx = x_all[keep]\nprint(t_all[~keep])  # omitted times; source unchanged"
+    ],
+    [
+      "Predict and compare",
+      "def predict(t, t_ref, x_ref, v):\n    return x_ref + v * (t - t_ref)\ny = predict(t, 20.0, 1.0, 1.0)  # C1 example\nr = x - y  # observed minus predicted"
+    ],
+    [
+      "Plot and save",
+      "import matplotlib.pyplot as plt\nfig, ax = plt.subplots()\nax.plot(t, x, \"o\", label=\"Available observations\")\nax.set_xlabel(\"Clock reading / s\")\nax.set_ylabel(\"Position / m\")\nax.legend()\nfig.savefig(\"positions.png\", dpi=160)\nplt.show()"
+    ],
+    [
+      "Record the environment",
+      "import platform\nimport matplotlib\nprint(platform.python_version())\nprint(np.__version__, matplotlib.__version__)"
+    ]
+  ],
+  "compact_rows": [
+    [
+      "Recall",
+      "Conventions",
+      "State origin, positive direction and tracked point. Clock reading differs from elapsed time."
+    ],
+    [
+      "Recall",
+      "Rates",
+      "Include stops in elapsed time. Distance needs the path; displacement needs endpoints."
+    ],
+    [
+      "Recall",
+      "Model",
+      "Fixed coordinate system; constant velocity over the modelled interval. At reference time, return reference position."
+    ],
+    [
+      "Recall",
+      "Residual",
+      "Observed minus predicted at the same time. Positive residual: observed position on positive side of prediction."
+    ],
+    [
+      "Understand",
+      "Graph",
+      "Interval gradient gives average velocity. A straight model segment asserts constant velocity; isolated points do not."
+    ],
+    [
+      "Understand",
+      "Reach",
+      "Interpolation inside the stated data interval; extrapolation outside. Neither guarantees accuracy. Construction agreement is built in."
+    ],
+    [
+      "Consult",
+      "Handover",
+      "Identified unchanged source; conventions; selection and model choices; saved code; labelled output; actual run/version note."
+    ],
+    [
+      "Consult",
+      "Checks",
+      "Hand calculation; reference-time and zero-velocity cases; fresh ordered run. Missing is not zero; execution is not physical validation."
+    ]
+  ]
+}

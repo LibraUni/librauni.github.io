@@ -1,0 +1,26 @@
+P101-U03-L05-C | version 1 | LibraUni | 12 October 2026
+Entirely invented teaching record, not experimental measurements.
+One painted mark on a straight rail. Origin fixed to rail, right positive.
+Clock readings in seconds on one clock; positions in metres.
+Source rows: (20,1), (22,3), (25,6), (29,unavailable), (32,5).
+The blank position at 29 s is intentional. No uncertainty estimate is supplied.
+Available values are stipulated for the mathematical comparison. No claim
+about a continuous path, experimental validation or cause is supported.
+Preserve every source row. Select the same complete-pair mask for both columns.
+C1 uses first-pair velocity 1 m/s; C2 endpoint velocity 1/3 m/s.
+Both use reference time 20 s and reference position 1 m.
+
+Extract the ZIP. Start Python with P101-Unit-3-Lesson-5 as working directory.
+The notebook/script sits beside README.txt and a data subfolder containing record.csv.
+Requires Python 3, NumPy, Matplotlib and a notebook environment for the ipynb route.
+Tested versions are recorded in the lesson release review, not required pins.
+Complete Activity 3.25 in either notebook or companion; both are the same work.
+The starter runs C1 only; add C2, the comparison graph and stated checks yourself.
+Restart and run all in order (or run the script in a fresh session). Repeat from
+another copy of the whole folder. Record versions and actual outcomes.
+The suggested p101-u03-l05-comparison.png output is overwritten on rerun.
+No files are uploaded or learner records changed by this analysis.
+
+Original data, teaching and figures CC BY-NC-SA 4.0; code MIT; branding excluded.
+Lesson and separate hidden feedback:
+https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l05/

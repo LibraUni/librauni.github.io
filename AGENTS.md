@@ -1,3 +1,7 @@
+# P101 Unit 3 Lesson 5 publication authorised — 12 October 2026
+
+User requests next lesson and online publication. U03 closing lesson Motion evidence and block synthesis completes Block1 teaching: sections3.25–3.30, examples3.17–3.19, activities3.24–3.26, figures3.20–3.23, exercises3.1–3.10. Original C record, starter notebook/companion/CSV/source ZIP;10-question local formative iCMA01 with no storage/submission; sharedweb/PDF reference JSON and2pagePDF. Standard1.10;4h/1Python retained.41subject/structurechecks,fourfreshkernels,124sitetests,41pagesearch,build/media and desktop/mobile/theme/keyboard/noJS/offline/PDF reviews. See docs/p101-u03-l05-{plan,sources,media,review}.json. TMA01 remains unreleased,6hseparate; U04outline. Latest M101 releases through0275096 preserved. No learner records changed. Await deployment/liveverification before claimingpublished.
+
 # P101 Unit 3 Lesson 4 LIVE — 12 October 2026
 
 Release c6c0ab433831299387f4aa257e17172482669d0f; workflow38273191909 security and publication succeeded. Live Chrome widths/themes,8 exact keyboard code copies, native feedback,38-page search, navigation, outline gate and no-JS verified. Teaching fragment and ten media/download files match checked release; linked build assets return200. See docs/p101-u03-l04-live.json. Supersedes pending publication disposition. L05 remains outline.

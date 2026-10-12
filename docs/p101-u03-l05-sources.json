@@ -1,0 +1,38 @@
+{
+  "lesson": "P101-U03-L05",
+  "date": "2026-10-12",
+  "standard": "Teaching Standard and Practice v1.10, website/docs/teaching-standard-and-practice.md",
+  "fixed_reference": "M101 illustrated opening v0.4: module/unit motivation; signed-change example and Activity1.1; separate feedback; figure captions. Demonstration lesson-end exercise placement superseded.",
+  "adjacent": "P101 U03 introduction and L01\u2013L04: original A/B records, M1/M2, paired missing-data selection and reproducibility. New C dataset explicitly distinguished.",
+  "comparators": [
+    {
+      "source": "Private OU MST124 Unit 2 Graphs and equations",
+      "passages": "Printed pp143\u2013145: Displacement and velocity, Figures17\u201319, Activity12; printed p188 solution to Activity12 (PDF74).",
+      "read": "Actual explanatory passage and activity/solution text read.",
+      "relevance": "S01 anchored rates, S02 substitutions, S03 distance/position distinctions; S04 motion interpretation and prediction; S05 conceptual checkpoint and S06 concise conditions.",
+      "differences": "OU presents stipulated piecewise continuous journeys; LibraUni additionally separates sparse observations from model assumptions. No calculus, new algebraic methods or unknown continuous path inferred."
+    },
+    {
+      "source": "Private OU MST124 Exercise Booklet 2",
+      "passages": "Printed/PDF pp2\u20133 Exercises1\u20133,7\u20138; solutions pp5\u20138, especially p8 Exercise8. Exercise8 page3 graph visually inspected.",
+      "relevance": "Point substitution, table-to-graph work, gradients and units, piecewise motion interpretation. Informs original Exercises3.1\u20133.7 and3.10; expanded evidence/missing-data/reproducibility tasks3.8\u20133.9 do not have an exact booklet match.",
+      "differences": "LibraUni adds distance versus displacement, sparse-record limitations, captions, model construction versus further evidence. Uses seconds/metres and no simultaneous equations/quadratics. Original cases/questions; no private source text or figures reproduced."
+    }
+  ],
+  "section_fit": {
+    "3.25": "OU pp143\u2013145 and prior P101 L03: define conventions and model question before arithmetic.",
+    "3.26": "OU substitution/gradient methods; prior P101 L02\u2013L04 are exact taught code prerequisites. No exact OU NumPy/notebook comparator available.",
+    "3.27": "Original synthesis of P101 U01\u2013U03; OU displacement distinction supports limited claims, not provenance.",
+    "3.28": "Booklet questions/solutions above for arithmetic/graph progression; original computing judgement added within60min.",
+    "3.29": "Original formative checkpoint; no supplied OU iCMA inspected or claimed equivalent. Site M101 checkpoint supplies accessible implementation pattern, not assessment content.",
+    "3.30": "Reference derived from actual U03 teaching; fixed reference conclusion supplies editorial comparator. Compact v1.10 presentation applies."
+  },
+  "practice_calibration": {
+    "scaffolding": "Worked C1/C2 rate choices precede a starter notebook; completed C2 feedback remains hidden. Exercises move from endpoint arithmetic to independent two-model reasoning.",
+    "independence": "No algorithm supplied for Exercise3.10; notebook leaves C2/plot/checks to learner. iCMA separately diagnoses distinctions and is not a substitute for written solutions.",
+    "workload": "60min10-question exercise set;30written+60Python investigation;40iCMA+20correction/reference. Unmeasured estimates.",
+    "gaps": "No actual OU notebook investigation or interactive iCMA counterpart available; no claim of exact difficulty/workload equivalence."
+  },
+  "media_search": "Searched NASA Apollo15 rover/tracks images; selected historical rover photograph for a record/provenance versus timed-measurement distinction. NASA source and media terms inspected12October2026.",
+  "interactive_decision": "Formative checker required by approved scope. No additional animation: two fixed model lines and residuals answer this investigation without another interface or new time allocation. No unverified video recommended."
+}
