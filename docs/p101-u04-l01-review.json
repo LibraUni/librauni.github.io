@@ -13,9 +13,10 @@
     "subject_checks": 40,
     "browser_cases": 24,
     "build": "passed",
-    "search": "46 available pages; three new teaching pages indexed; future outlines excluded",
+    "search": "48 available pages after incorporating M101 TMA01; three new P101 pages indexed; future outlines excluded",
     "offline": "Three self-contained HTML copies checked at 390px with JavaScript disabled and external network blocked; all images, native mathematics and feedback work",
     "media": "NASA official sources and terms checked; credits and modification status recorded; five original SVGs",
     "limitations": "Study times are editorial estimates. Browser checks use Chrome, not a cross-browser or screen-reader certification. Source comparison gaps documented in sources record."
-  }
+  },
+  "concurrent_release": "Merged d2c698f M101 TMA01; regenerated output unchanged; build, 126 tests and teaching-media checks rerun successfully."
 }
