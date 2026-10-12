@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-12",
+  "standard": "1.10",
+  "sources": [
+    {
+      "source": "https://textbooks.math.gatech.edu/ila/row-reduction.html",
+      "read": "Actual section 1.2 and linked systems-eqns-example1 / example1b worked examples",
+      "use": "Calibrated equation-to-augmented-matrix sequence, three operations and back substitution. Original numbers and prose. A source example has an inconsistent intermediate x=3 statement before its correct final x=1; not used as an answer oracle."
+    },
+    {
+      "source": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/01:_Systems_of_Linear_Equations/1.01:_Solutions_and_Elementary_Operations",
+      "read": "Actual definitions, elementary operations and examples; following section 1.2 and its 1.2E exercises 1,4,5,6 with selected solutions",
+      "use": "Calibrated signed and fractional arithmetic, explicit row exchange and staged practice. Explains differing echelon normalization conventions. Larger/general systems deferred."
+    },
+    {
+      "source": "https://www.nist.gov/news-events/news/2018/11/white-cat-hair-black-pants-international-study-measures-stability-precision",
+      "read": "Historical study account and image page; NIST calibration-of-mass-standards programme page",
+      "use": "Optional context differentiating exact invented totals from physical standards and measurement uncertainty."
+    },
+    {
+      "source": "Private supplied MST124 Unit 5 typography specimen, PDF page 83 / printed page 183",
+      "read": "Viewed actual rendered page; scalar-products activity layout",
+      "use": "Typography, prose/activity balance only. Unit 9 absent from supplied inventory; not claimed as read. University alternatives used for subject calibration."
+    },
+    {
+      "source": "Accepted M101 v0.4 reference and published U03 L01–L02",
+      "read": "Actual reference prose and adjacent lesson content",
+      "use": "Continuity, notation, sustained explanatory teaching, sequential numbering and feedback treatment."
+    }
+  ],
+  "rights": "Original teaching text, examples and diagrams; no substantial copied or closely paraphrased passages. Photo separately credited."
+}

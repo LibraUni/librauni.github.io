@@ -1,0 +1,20 @@
+{
+  "figures": [
+    {
+      "numbers": "3.14, 3.16–3.18",
+      "creator": "LibraUni",
+      "purpose": "Equal-scale intersection; retained line before/after replacement; augmented-matrix correspondence; back-substitution order."
+    },
+    {
+      "number": "3.15",
+      "source": "https://www.nist.gov/image/simkgscloseup2500pxpng",
+      "asset": "https://www.nist.gov/sites/default/files/images/2019/02/06/sim_kgs_closeup_2500px.png",
+      "credit": "Jennifer Lauren Lee/NIST",
+      "reuse": "Image is not marked as separately copyrighted; NIST copyrights-disclaimers policy permits copying/distribution of such public information with credit. Source and reuse links are adjacent.",
+      "terms": "https://www.nist.gov/copyrights-disclaimers",
+      "changes": "Resized from 2500×1612 to 1000×644 JPEG; no crop or colour alteration",
+      "verification": "Actual image downloaded and visually inspected; source identifies nominal 1 kg stainless-steel standards."
+    }
+  ],
+  "interactive_decision": "Static retained stages allow comparison without hiding previous steps; handwritten practice supplies learner action. No additional interactive or video warranted."
+}

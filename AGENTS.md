@@ -2,6 +2,10 @@
 
 Release0330418e3a7960c26bf84ab9f88ede2651c80eff; workflow38248774350 security and publication succeeded. Live Chrome width/theme,feedback,four exact keyboard copies,34-page search,later-outline gates,navigation,no-JS and downloads verified. Teaching fragment and all ten notebook/data/media files match checked release; linked build assets return200. See docs/p101-u03-l02-live.json. Supersedes pending deployment disposition. L03–L05 remain outlines.
 
+## M101 Unit 3 Lesson 3 release — 12 October 2026
+
+User authorised creation and online publication of Lesson 3. Ready for publication after subject, reader, visual and whole-lesson reviews recorded in docs/m101-u03-l03-*.json. Lesson 3 is 4 hours: 75 reading, 135 written, 30 feedback, no Python. Sections 3.14–3.20, Examples 3.14–3.21, Activities 3.15–3.22, Figures 3.14–3.18, Key ideas 3.6–3.7. All hints/discussions closed initially. Native MathML uses explicit augmented-column borders. Next lesson is U03-L04, “When solutions fail or are not unique”; lessons 4–6 remain outlines. Do not alter learner records or cumulative exercise reservations. P101 U03-L02 publication at 0330418 retained. 77 exact/structural checks, 118 repository tests and production build passed; browser desktop/mobile, keyboard, dark theme, no-script copy and enlarged reading reviewed. Publication verification remains to be recorded after deployment.
+
 # P101 Unit 3 Lesson 2 publication authorised — 12 October 2026
 
 User requested creation and online publication. U03-L02 From a table to a labelled graph complete: sections3.7–3.12,4examples,6activities,5figures; notebook/companion/CSV/metadata ZIP. Standard1.10,4h/1hPython unchanged. See docs/p101-u03-l02-plan.json, -review.json and -media.json.117tests, independent subject/code checks, build,34-page search, browser widths/themes, four exact keyboard code copies, no-JS/offline and downloads passed. Newer M101 release84c3cb9 preserved. L03–L05 remain outlines; no learner records changed. Await deployment/live verification before claiming published.

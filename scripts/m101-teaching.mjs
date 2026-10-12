@@ -7,7 +7,7 @@ export const m101Lesson2=m101Unit+'l02/';
 export const m101Lesson3=m101Unit+'l03/';
 export const m101Lesson4=m101Unit+'l04/';
 export const m101Lesson5=m101Unit+'l05/';
-export const m101TeachingPaths=[m101Home,m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/'];
+export const m101TeachingPaths=[m101Home,m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/',m101Home+'b01/u03/l03/'];
 export function addM101Teaching({root,pages,extraRails,link}){
  const reading=name=>'<div data-search-status="available" class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
  const pagination=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
@@ -115,20 +115,27 @@ export function addM101Teaching({root,pages,extraRails,link}){
 
  const unit3=m101Home+'b01/u03/', lesson31=unit3+'l01/';
  const wrap3=name=>'<div data-search-status="available" class="teaching-reading m101-u3">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div><link rel="stylesheet" href="/src/m101-unit3.css">';
- pages.find(p=>p[0]===unit3)[3]=wrap3('unit3')+'<section><h2>Unit lessons</h2><p>The introduction and Lessons 1–2 are available. Lessons 3–6 remain in preparation.</p>'+m101Unit3Lessons.map((l,i)=>'<p>'+link(unit3+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<2?' · Available':' · Lesson plan')+'</p>').join('')+'</section>'+pagination(link(l5path,'← Unit 2 closing lesson'),link(lesson31,'Start Lesson 1 →'));
+ pages.find(p=>p[0]===unit3)[3]=wrap3('unit3')+'<section><h2>Unit lessons</h2><p>The introduction and Lessons 1–3 are available. Lessons 4–6 remain in preparation.</p>'+m101Unit3Lessons.map((l,i)=>'<p>'+link(unit3+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<3?' · Available':' · Lesson plan')+'</p>').join('')+'</section>'+pagination(link(l5path,'← Unit 2 closing lesson'),link(lesson31,'Start Lesson 1 →'));
  const page31=pages.find(p=>p[0]===lesson31);
  page31[1]='M101 · Unit 3 · Lesson 1 · Matrices acting on vectors';
  page31[3]=wrap3('unit3-lesson1')+pagination(link(unit3,'← Unit 3 introduction'),link(unit3+'l02/','Next: Composing transformations in order →'))+'<script type="module" src="/src/m101-shear.js"></script>';
  const fragment31=fs.readFileSync(root+'content/m101/unit3-lesson1.html','utf8');
  extraRails.set(lesson31,{title:'In this lesson',back:unit3,items:[...fragment31.matchAll(/<section class="chapter" id="(M101-U03-L01-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}))});
  l5[3]=l5[3].replace('Next unit outline: Matrices','Next unit: Matrices');
- module[3]=module[3].replace('later teaching remains in preparation.','the Unit 3 introduction and Lessons 1–2 are also available. Later teaching remains in preparation.');
- block[3]=block[3].replace('later block teaching remains in preparation.','the Unit 3 introduction and Lessons 1–2 are also available. Later teaching remains in preparation.');
+ module[3]=module[3].replace('later teaching remains in preparation.','the Unit 3 introduction and Lessons 1–3 are also available. Later teaching remains in preparation.');
+ block[3]=block[3].replace('later block teaching remains in preparation.','the Unit 3 introduction and Lessons 1–3 are also available. Later teaching remains in preparation.');
 
  const lesson32=unit3+'l02/';
  const page32=pages.find(p=>p[0]===lesson32);
  page32[1]='M101 · Unit 3 · Lesson 2 · Composing transformations in order';
  const fragment32=fs.readFileSync(root+'content/m101/unit3-lesson2.html','utf8');
- page32[3]='<div data-search-status="available" class="teaching-reading m101-u3 m101-u3-l02">'+fragment32+'</div><link rel="stylesheet" href="/src/m101-unit3.css"><link rel="stylesheet" href="/src/m101-unit3-lesson2.css">'+pagination(link(lesson31,'← Matrices acting on vectors'),link(unit3+'l03/','Next lesson plan: Solving simultaneous equations by elimination →'));
+ page32[3]='<div data-search-status="available" class="teaching-reading m101-u3 m101-u3-l02">'+fragment32+'</div><link rel="stylesheet" href="/src/m101-unit3.css"><link rel="stylesheet" href="/src/m101-unit3-lesson2.css">'+pagination(link(lesson31,'← Matrices acting on vectors'),link(unit3+'l03/','Next: Solving simultaneous equations by elimination →'));
  extraRails.set(lesson32,{title:'In this lesson',back:unit3,items:[...[...fragment32.matchAll(/<section class="chapter" id="(M101-U03-L02-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]})),{href:'#m101-u03-l02-context',title:'Further reading and context'}]});
+
+ const lesson33=unit3+'l03/';
+ const page33=pages.find(p=>p[0]===lesson33);
+ page33[1]='M101 · Unit 3 · Lesson 3 · Solving simultaneous equations by elimination';
+ const fragment33=fs.readFileSync(root+'content/m101/unit3-lesson3.html','utf8');
+ page33[3]='<div data-search-status="available" class="teaching-reading m101-u3 m101-u3-l03">'+fragment33+'</div><link rel="stylesheet" href="/src/m101-unit3.css"><link rel="stylesheet" href="/src/m101-unit3-lesson3.css">'+pagination(link(lesson32,'← Composing transformations in order'),link(unit3+'l04/','Next lesson plan: When solutions fail or are not unique →'));
+ extraRails.set(lesson33,{title:'In this lesson',back:unit3,items:[...[...fragment33.matchAll(/<section class="chapter" id="(M101-U03-L03-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]})),{href:'#m101-u03-l03-context',title:'Further reading and context'}]});
 }
