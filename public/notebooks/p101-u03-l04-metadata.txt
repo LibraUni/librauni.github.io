@@ -1,0 +1,34 @@
+P101 Unit 3 Lesson 4 | LibraUni | 12 October 2026 | version 1
+ANALYSIS REPAIR EXERCISE: notebook and script deliberately contain errors.
+Choose one route; save a -repaired copy. Full prompt: Activity 3.23 online.
+https://librauni.github.io/learn/physics/stage-1/p101/b01/u03/l04/
+
+Extract this folder, preserving data/record.csv beneath it. Start the notebook
+kernel or script process with this lesson folder as the working directory.
+Requires Python 3, NumPy and Matplotlib, as in Lesson 3. No paid service required.
+Use your existing Python environment; record its actual versions after a run.
+Output p101-u03-l04-result.png is replaced on rerun. Source must stay unchanged.
+
+Record P101-U03-L04-B, version 1: deliberately incomplete COPY of invented
+P101-U03-L01-A. The position at 16 s was withheld for this missing-data exercise.
+This is not a real measurement or a revision of the earlier complete record.
+Do not fill the blank from memory or earlier data; treat it as unavailable here.
+CSV: time_s,position_m. Seconds and metres. Four rows:
+10,-2
+14,4
+16,
+19,1
+Fixed rail origin, right positive, same tracked mark and running clock.
+Empty position field means unavailable, not zero. No measurement uncertainty supplied.
+M1 RETAINED from Lesson 3: t_ref=10 s, x_ref=-2 m, velocity=+1.5 m/s from A/B.
+Select complete finite pairs with one shared row mask; do not replace or reorder.
+Residual = observed position minus M1 prediction at the same clock reading.
+Keep the unavailable time visible in the report, although it has no residual.
+
+Two-hour practical:20min locate/inspect;35 comparison;30 plot/check;35 fresh rerun/handover.
+Keep change log, source description, repaired code, figure and dated run note.
+Clean-run check: save, restart kernel and run all cells, or use a fresh script process.
+Second-folder check: extract original ZIP elsewhere and add your repaired file;
+run from that folder.
+Checks establish computation, not experimental validation of the motion law.
+Original teaching/data/figures CC BY-NC-SA 4.0; code MIT; branding excluded.

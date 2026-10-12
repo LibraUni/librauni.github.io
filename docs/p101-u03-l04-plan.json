@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-12",
+  "standard": "Teaching Standard and Practice1.10; illustrated M101 opening v0.4",
+  "authorisation": "User requests Lesson4 and online publication",
+  "lesson": "P101-U03-L04 An analysis another person can rerun",
+  "parents": [
+    "curriculum/p101-block1-lessons.js",
+    "docs/p101-block1-lesson-map.md",
+    "curriculum/p101-units.js",
+    "curriculum/construction-policy.js"
+  ],
+  "gate": "All B01 lessons blueprinted; all six L04 sections below planned before drafting. Existing module/block/unit scope and outcomes retained.",
+  "budget_minutes": {
+    "explanation": 45,
+    "written": 45,
+    "python": 120,
+    "feedback": 30
+  },
+  "boundaries": "No fitting, opaque cleaning, paid service, new physics or automatic data repair. No whole-unit closure until L05.",
+  "sections": [
+    {
+      "number": "3.19",
+      "title": "Preserve the route from file to claim",
+      "purpose": "Source/processing/result distinction, portable folder, provenance",
+      "comparator": "MST124 U2 pp121–123 table-to-graph explanation partial; P101U02L04 and U03L03; no private provenance computing match",
+      "practice": "Activity3.19,10min written; recover missing description"
+    },
+    {
+      "number": "3.20",
+      "title": "Make the file location explicit",
+      "purpose": "Working directory, relative path, inspected CSV/schema and loading",
+      "comparator": "Python pathlib cwd/path joining, NumPy genfromtxt input and missing fields; adjoiningL02",
+      "practice": "Activity3.20,10min written; reason through relative path"
+    },
+    {
+      "number": "3.21",
+      "title": "Keep a missing reading missing",
+      "purpose": "NaN, finite mask, paired selection, missingness limits",
+      "comparator": "NumPy genfromtxt missing/filling, Boolean indexing/isfinite; P101U02L04; no privateOU match",
+      "practice": "Activity3.21,15min written; table and falsezero residual"
+    },
+    {
+      "number": "3.22",
+      "title": "Rebuild the calculation in order",
+      "purpose": "Kernel state, stale output, ordered dependencies, restart-run-all, checks",
+      "comparator": "Software Carpentry Variables and Assignment: persistence, Predicting Values challenge/solution; JupyterLab commands; MST124U2p121 independent substitution",
+      "practice": "Activity3.22,10min written; stalevalue trace"
+    },
+    {
+      "number": "3.23",
+      "title": "Leave a figure and an account of the run",
+      "purpose": "Plot repair, absent marker annotation, versions/provenance, rerun limits",
+      "comparator": "MST124U2pp122–123 labelled graph/finitepoint caution; Matplotlib NaN demo; Python platform; NASA E49-00223 context",
+      "practice": "Integrated plotrepair in Activity3.23"
+    },
+    {
+      "number": "3.24",
+      "title": "Repair, rerun and hand over",
+      "purpose": "Independent bounded repair lab, explanation and checks in freshcopy",
+      "comparator": "Earlier lessons; SoftwareCarpentry trace challenge partial, original integrated task; U2p184Activity31 only pointer to absent computer guide not claimed inspected",
+      "practice": "Activity3.23,120min Python; hidden full repair guidance and report criteria"
+    }
+  ],
+  "numbering": "Sections3.19–3.24; Examples3.13–3.16; Activities3.19–3.23; Figures3.15–3.19",
+  "media_plan": "Original file/dependency diagram; paired row-selection visual; stale-state trace illustration/table; deliberately misleading versus repaired graph; actual final notebook output; contextual NASA D-558-II preflight photograph explains instrument-to-data-to-analysis work. NASA Hamilton photograph rejected: MIT third-party rights unverified.",
+  "interactive_video": "Notebook repair is purposeful active exploration; no separate browser animation needed. No video recommended without content inspection.",
+  "handover": "L05 four-hour synthesis retains cumulative exercise/iCMA/reference budgets. U03 20h/6hPython and B01 60h/20hPython unchanged.",
+  "disposition": "Distinct subject, reader, visual and whole-lesson reviews passed; user authorised online publication. Deployment/live checks pending."
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-12",
+  "private_comparators": [
+    {
+      "source": "MST124 Unit2 Graphs and equations supplied PDF",
+      "pages": "Printed121–123 (PDF7–9), Example1/Activity1 and Example2/Activity2; printed184 Section5/Activity31",
+      "inspection": "Actual explanatory text and questions read; printed121 rendered and visually inspected. Substitution independently checks a claimed point; table-to-graph progression, labelling and warning about finite plotted samples inform sections3.21–3.23. Activity31 merely points to a separate Computer algebra guide, which is absent; its contents have NOT been inspected.",
+      "fit": "No equivalent supplied OU pathlib/NaN/notebook-state exercise. Preserve OU development and worked-reasoning depth, but use actual official/software-teaching sources for new computing mechanics. No proprietary examples adapted."
+    }
+  ],
+  "fixed_reference": "website/content/editorial-reference/m101-opening-chapter-v0.4.html, module/unit introductions and section1.1 including examples/activities read. Its sample closing exercise placement is not used as a production requirement.",
+  "adjoining": "P101 U03 introduction, L03 model/residual explanation and handover, U02L04 raw/processed and None bookkeeping inspected. L04 extends file arrays and fresh-state work without changing earlier records.",
+  "public": [
+    {
+      "url": "https://docs.python.org/3/library/pathlib.html",
+      "passages": "Path.cwd, path joining and is_file; section3.20",
+      "limits": "API reference, not an undergraduate practice match."
+    },
+    {
+      "url": "https://numpy.org/doc/stable/user/basics.io.genfromtxt.html",
+      "passages": "Input, delimiters, skip_header, missing_values/filling_values",
+      "limits": "Advanced options excluded."
+    },
+    {
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.genfromtxt.html",
+      "passages": "dtype, ndmin, loose, filling_values; tested actual behavior"
+    },
+    {
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.isfinite.html",
+      "passages": "Finite/nonfinite Boolean tests"
+    },
+    {
+      "url": "https://numpy.org/doc/stable/user/basics.indexing.html",
+      "passages": "Boolean array indexing; paired-row selection"
+    },
+    {
+      "url": "https://swcarpentry.github.io/python-novice-gapminder/02-variables.html",
+      "passages": "Variables Persist Between Cells; Predicting Values challenge and worked solution; Swapping Values trace",
+      "fit": "Beginner scalar-state comparison for3.22. Our original velocity calculation adds physical units and an earlier taught model; no string exercise copied. Integrated notebook repair more demanding, allotted120min."
+    },
+    {
+      "url": "https://jupyterlab.readthedocs.io/en/stable/user/running.html",
+      "passages": "Kernel lifetime separate from open document"
+    },
+    {
+      "url": "https://jupyterlab.readthedocs.io/en/stable/user/commands.html",
+      "passages": "Restart Kernel and Run All Cells command"
+    },
+    {
+      "url": "https://docs.python.org/3/library/platform.html#platform.python_version",
+      "passages": "Interpreter version reporting"
+    },
+    {
+      "url": "https://matplotlib.org/stable/gallery/lines_bars_and_markers/masked_demo.html",
+      "passages": "Removing points compared with missing-value gaps; optional further reading, our observations unjoined"
+    },
+    {
+      "url": "https://www.nasa.gov/image-article/d-558-ii-skyrocket-16/",
+      "passages": "Full image article and asset inspected; historical context <200words, no unsupported anecdote"
+    }
+  ],
+  "practice_calibration": "Activities3.19–3.21 and3.23 are original analysis/provenance tasks; no exact OU questions available. Activity3.22 calibrated against actual SoftwareCarpentry persistence and prediction exercise; paired-row/plot activities calibrated against OU actual hand table/graph reasoning and NumPy behavior. Mixed exercise set/iCMA remain inL05; no extra layer added."
+}
