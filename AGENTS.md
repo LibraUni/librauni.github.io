@@ -1,3 +1,7 @@
+# P101 Unit 4 opening LIVE — 12 October 2026
+
+Release 32856f67fa60f8322ec17d9111600768a1da7a25 published; workflow 38297821749 security and publish succeeded. All three live page texts match reviewed fragments, 24 width/theme cases and keyboard/no-JS feedback passed, 48-page search and future-outline gates verified. Two images match local bytes; 11 linked build assets return 200. See docs/p101-u04-l01-live.json. Next is L02 Newton’s laws and equilibrium, 3h/0h Python. Unit 4 remains incomplete; closing exercises, conclusion and web/PDF reference remain due at L05. M101 TMA01 concurrent release preserved. No learner records changed.
+
 # P101 Unit 4 opening publication authorised — 12 October 2026
 
 User authorises online publication of Block 2 and Unit 4 introductions and complete L01 Systems, interactions and force diagrams. Standard v1.10, fixed M101 reference and actual OU/external passages inspected. Complete 20-lesson Block 2 blueprint; approved 72h/10h Python unchanged. L01: six sections 4.1–4.6, five examples, six activities, five original SVGs; 3h including introductions and practice. Distinct reviews, source comparison and media records: docs/p101-u04-l01-*.json. Build, 126 site tests, 40 subject checks, 24 browser cases and three offline copies pass. Unit remains incomplete; L02 is next, Newton’s laws and equilibrium. Unit conclusion, cumulative exercises and web/PDF reference due at L05. No learner records changed. Live publication verification pending.

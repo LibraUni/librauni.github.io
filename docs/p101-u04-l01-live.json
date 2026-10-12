@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-12",
+  "release": "32856f67fa60f8322ec17d9111600768a1da7a25",
+  "workflow": "https://github.com/LibraUni/librauni.github.io/actions/runs/38297821749",
+  "deployment": "success; planner-security and publish passed",
+  "browser": [
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 1440,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 1440,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 900,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 900,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 390,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 390,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 320,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/",
+      "width": 320,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 1440,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 1440,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 900,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 900,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 390,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 390,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 320,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/",
+      "width": 320,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 0,
+      "sections": 0
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 1440,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 1440,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 900,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 900,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 390,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 390,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 320,
+      "theme": "light",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b02/u04/l01/",
+      "width": 320,
+      "theme": "dark",
+      "initiallyOpen": 0,
+      "overflow": false,
+      "images": true,
+      "idsUnique": true,
+      "math": 6,
+      "sections": 6
+    },
+    {
+      "keyboardFeedback": true,
+      "diagramFocus": true,
+      "noJavaScript": true,
+      "outlineGates": true,
+      "searchPages": 48,
+      "sourceTextMatches": true,
+      "errors": []
+    }
+  ],
+  "assets": {
+    "pages_media": [
+      {
+        "path": "/learn/physics/stage-1/p101/b02/",
+        "status": 200,
+        "bytes": 13817
+      },
+      {
+        "path": "/learn/physics/stage-1/p101/b02/u04/",
+        "status": 200,
+        "bytes": 15746
+      },
+      {
+        "path": "/learn/physics/stage-1/p101/b02/u04/l01/",
+        "status": 200,
+        "bytes": 59932
+      },
+      {
+        "path": "/teaching/p101/u04/crawler.jpg",
+        "sha256": "100e996df45e7f6a07272288a1d22f29377c3cf98bcdefa02d63d50cf6f1bf12",
+        "matches_local": true
+      },
+      {
+        "path": "/media/p101/earth-moon.jpg",
+        "sha256": "11878d03796b760f10c71a7ef07a28134e33632b7c56939252aba3219b676d48",
+        "matches_local": true
+      }
+    ],
+    "assets": [
+      "/assets/header-account-C8EZh_Wd.js",
+      "/assets/learning-COP4O8Jg.css",
+      "/assets/learning-DVHq_Jws.js",
+      "/assets/lesson-navigation-CwWmViFn.js",
+      "/assets/p101-CrgRQydY.css",
+      "/assets/p101-unit4-BEpSBWw9.css",
+      "/assets/programme-CU35EmSW.css",
+      "/assets/teaching-code-Bd5xqjrZ.js",
+      "/assets/teaching-code-Dl4m3cPn.css",
+      "/assets/theme-B_-SZrDz.css",
+      "/assets/theme-Cjwny4wf.js"
+    ]
+  },
+  "scope": "Block 2 and Unit 4 introductions plus complete Lesson 1. Remaining lessons are outlines; Unit 4 is not complete.",
+  "next": "U04 L02 Newton\u2019s laws and equilibrium; approved 3h/0h Python",
+  "preservation": "Concurrent M101 TMA01 publication retained. No learner records changed."
+}
