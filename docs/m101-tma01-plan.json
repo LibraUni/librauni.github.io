@@ -1,0 +1,110 @@
+{
+  "assessment": "M101 TMA 01",
+  "version": "1.0",
+  "date": "2026-10-12",
+  "authorisation": "User proceeded after proposal to develop and publish TMA 01.",
+  "policy": "Construction policy 1.0; teaching standard 1.10; fixed M101 v0.4.",
+  "gate": {
+    "parents": [
+      "curriculum/m101-blocks.js",
+      "curriculum/m101-units.js",
+      "curriculum/m101-released.js",
+      "curriculum/stage1.js",
+      "curriculum/coverage.js"
+    ],
+    "evidence": "All B01 lesson blueprints and Units 1\u20133 teaching complete; assessment scope O3/O4/O6, independent code after P101 list/function readiness. All M101 units and stage blocks mapped. Assessment question blueprint completed before drafting.",
+    "disposition": "Construct only TMA01; Unit4 remains outline."
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "marks": 15,
+      "minutes": 40,
+      "scope": "Displacement/distance; magnitude/direction/unit vector; translate origin",
+      "outcomes": [
+        "O3"
+      ],
+      "parts": [
+        5,
+        6,
+        4
+      ]
+    },
+    {
+      "id": "Q02",
+      "marks": 20,
+      "minutes": 55,
+      "scope": "Dot/angle; scalar and vector projection; cross/area/orientation; zero direction",
+      "outcomes": [
+        "O3"
+      ],
+      "parts": [
+        5,
+        7,
+        5,
+        3
+      ]
+    },
+    {
+      "id": "Q03",
+      "marks": 20,
+      "minutes": 60,
+      "scope": "Columns; ordered composition; determinant/inverse; area versus length",
+      "outcomes": [
+        "O4"
+      ],
+      "parts": [
+        4,
+        6,
+        6,
+        4
+      ]
+    },
+    {
+      "id": "Q04",
+      "marks": 25,
+      "minutes": 75,
+      "scope": "Unique 2-equation system, dependent/inconsistent parameter case, small 3-unknown elimination",
+      "outcomes": [
+        "O4"
+      ],
+      "parts": [
+        8,
+        9,
+        8
+      ]
+    },
+    {
+      "id": "Q05",
+      "marks": 20,
+      "minutes": 75,
+      "scope": "Independent transparent residual checker; hand predictions, revealing test, nonunique solutions, limits of evidence",
+      "outcomes": [
+        "O6",
+        "O4"
+      ],
+      "parts": [
+        4,
+        6,
+        3,
+        4,
+        3
+      ]
+    }
+  ],
+  "minutes": {
+    "read": 15,
+    "questions": 305,
+    "check_and_package": 40,
+    "total": 360
+  },
+  "media": "Original equal-scale coordinate plan supplies Q1 positions without worked arrows. Full text supplies all coordinates. No photograph or animation is needed to interpret the assessment stimulus; illustrated teaching remains intact, as in P101 assessment precedent. Do not reveal assessed constructions.",
+  "delivery": "Web questions and public criteria, self-contained offline questions; private worked marking guide outside public repo. No generated starter code, private records, upload controls, new pass threshold or deadline.",
+  "review_pending": [
+    "Independent calculations and executed model code",
+    "Reader and workload review",
+    "Rendered browser and no-JS checks",
+    "Whole assessment integration and publication verification"
+  ],
+  "media_review_revision": "Plan refined before final release: retain illustrated standard through a contextual return to the NASA Manhattan image plus original equal-scale coordinate stimulus; no assessment answers shown. Photo and diagram captions explicitly distinguish real view and ideal invented route."
+}

@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "date": "2026-10-12",
+  "standard": "Teaching standard 1.10 and fixed M101 opening v0.4, inspected local text; OU typography PNG inspected.",
+  "comparators": [
+    {
+      "source": "Private OU MST124 Unit 5, printed p.183, scalar product definition, Figure 55 and Activity 51",
+      "use": "Q2 geometry and notation; readable vector symbols, fraction/radical/delimiter conventions. Private image inspected; no source content republished. This is a taught activity, not an OU TMA; no external assessment equivalence claimed."
+    },
+    {
+      "source": "OpenStax Calculus Volume 3 \u00a72.3, Exercises 123\u2013126, 131\u2013140 and 167\u2013172",
+      "url": "https://openstax.org/books/calculus-volume-3/pages/2-3-the-dot-product",
+      "use": "Inspected actual dot-product, angle, scalar/vector projection and decomposition questions. Original Q2 combines these taught operations with an explicit zero-direction qualification. No molecular geometry, direction-cosine theorem or calculus required."
+    },
+    {
+      "source": "Margalit and Rabinoff, Interactive Linear Algebra \u00a73.4.1\u20133.4.3",
+      "url": "https://textbooks.math.gatech.edu/ila/matrix-multiplication.html",
+      "use": "Inspected exposition of chaining actions, row-column calculation and noncommutative composition. Q3 restricts to two dimensions and asks the learner to justify action order. General-dimensional transformation proofs excluded."
+    },
+    {
+      "source": "Nicholson, Linear Algebra with Applications \u00a72.4E, Exercises 1(a,d), 2(a,b)",
+      "url": "https://math.libretexts.org/Bookshelves/Linear_Algebra/Linear_Algebra_with_Applications_(Nicholson)/02:_Matrix_Algebra/2.04:_Matrix_Inverses/2.4E:_Matrix_Inverses_Exercises",
+      "use": "Read actual two-by-two inverse calculation and inverse-product questions. Excluded larger matrices and symbolic generalisations. Source answer indexing and Ex1(b) appear inconsistent; calculated original answers independently, never using that answer list as an oracle."
+    }
+  ],
+  "local_prerequisites": {
+    "Q1": "M101 U01 coordinates, displacement, magnitude/unit vectors and angles; no velocity laws.",
+    "Q2": "M101 U02 scalar/cross products and signed projection; original L02 prose and zero cases reviewed.",
+    "Q3": "M101 U03 L01\u2013L02 and L05, columns/composition/determinant/inverse.",
+    "Q4": "M101 U03 L03\u2013L04, reversible elimination and completeness of parameter families; three-unknown question supplies an elimination sequence.",
+    "Q5": "M101 U03 L05\u2013L06 and P101 U01 L04\u2013L05; flat-list arithmetic and reusable functions, no libraries."
+  },
+  "gaps": "No private OU TMA or independently moderated timed assessment was available. Timings and marks are original editorial allocations; external sources calibrate prerequisite level and question form, not institutional equivalence. No exact external introductory-Python assessment comparator inspected."
+}

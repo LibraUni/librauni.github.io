@@ -1,0 +1,27 @@
+{
+  "standard": "1.10 retained; two informative captioned figures, photograph plus original model diagram.",
+  "items": [
+    {
+      "id": "M101-TMA01-photo",
+      "caption": "Figure T1",
+      "file": "public/teaching/m101/u03-manhattan.jpg",
+      "source": "https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/NewYorkCity.htm",
+      "creator": "NASA / ISS Crew Earth Observations Facility and Earth Science and Remote Sensing Unit, Johnson Space Center; ISS039-E-18538",
+      "date": "2014-05-05",
+      "rights": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "rights_review": "Educational/informational reuse with credit, no endorsement; no third-party copyright identified for this asset. Existing local asset viewed and source/reuse page rechecked this turn.",
+      "changes": "NASA crop, contrast enhancement and lens-artifact removal; same local asset as unit opening, no additional alteration.",
+      "purpose": "Return to the coordinate context and distinguish an oblique real view from stipulated ideal geometry. No measured data are inferred."
+    },
+    {
+      "id": "M101-TMA01-figure-1",
+      "caption": "Figure T2",
+      "creator": "Original LibraUni SVG",
+      "rights": "CC BY-NC-SA 4.0",
+      "purpose": "Supply Q1 point positions with equal metre scales, labels and text-equivalent coordinates; no computed displacements or answer-bearing arrows.",
+      "checks": "40 SVG units per metre on both axes; positions match prompt; title/description and numbered caption; fits narrow screens. Axis-label type enlarged to 23 SVG units for narrow-screen legibility."
+    }
+  ],
+  "opportunities": "No video or interactive is required: a static supplied plan is sufficient and computation/constructed answers are the assessed evidence. Earlier teaching and reference PDFs preserved.",
+  "offline": "Photograph embedded as a data URI; SVG, CSS and MathML inline; no scripts or network assets required."
+}

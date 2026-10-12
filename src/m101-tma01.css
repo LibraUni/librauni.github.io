@@ -1,0 +1,24 @@
+
+.m101-tma01 {overflow-wrap:break-word; min-width:0;}
+.m101-tma01 .tma-introduction {display:block;}
+.m101-tma01 .tma-context-photo {max-width:600px;margin:1.8em auto;}
+.m101-tma01 .small {font:14px/1.55 system-ui;}
+.m101-tma01 h2 span {display:block;font:15px/1.6 system-ui;margin-top:.5em;}
+.m101-tma01 math {font-family: "STIX Two Math", "Cambria Math", math; font-size:1.06em;}
+.m101-tma01 .tma-equation {margin:1.3em 0; padding:.4em 0; overflow-x:auto;}
+.m101-tma01 .tma-equation math {margin:auto;}
+.m101-tma01 .tma-pair {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.4em;}
+.m101-tma01 .tma-pair math {margin:0;}
+.m101-tma01 ol {padding-left:1.55em;}
+.m101-tma01 li {padding-left:.2em; margin-bottom:1.25em;}
+.m101-tma01 .tma-contents {display:grid;gap:.7em;margin:1.5em 0;font:16px/1.5 system-ui;}
+.m101-tma01 .tma-coordinate-plan {max-width:520px;margin:2em auto;}
+.m101-tma01 .tma-coordinate-plan svg text {font:23px system-ui;fill:#233640;}
+.m101-tma01 code {font-size:.9em;white-space:normal;}
+:root[data-theme="dark"] .m101-tma01 {background:#152329;color:#e1e8e9;border-color:#45616a;}
+:root[data-theme="dark"] .m101-tma01 h1,:root[data-theme="dark"] .m101-tma01 h2,:root[data-theme="dark"] .m101-tma01 h3 {color:#b8dce6;}
+:root[data-theme="dark"] .m101-tma01 a {color:#a6d9eb;}
+:root[data-theme="dark"] .m101-tma01 .eyebrow,:root[data-theme="dark"] .m101-tma01 figcaption {color:#bacbd1;}
+:root[data-theme="dark"] .m101-tma01 .important {background:#193c32;}
+@media(max-width:550px){.m101-tma01{padding:22px 16px;}.m101-tma01 h1{font-size:30px;}.m101-tma01 h2{font-size:25px;}.m101-tma01 .important{padding:16px;}.m101-tma01 math{font-size:1em;}}
+@media print {.m101-tma01{border:0;padding:0;background:white!important;color:#111!important;}.m101-tma01 .chapter+.chapter{break-before:auto;}.m101-tma01 h2{break-after:avoid;}.m101-tma01 .tma-contents{display:none;}.m101-tma01 li{break-inside:avoid;}}

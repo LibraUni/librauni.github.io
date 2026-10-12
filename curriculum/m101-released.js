@@ -339,7 +339,7 @@ export const m101Unit3Lessons = [
     ],
     "purpose": "Connect vector, transformation and equation methods and prepare for TMA 01 using formative evidence.",
     "scope": "Interleaved block practice, one short code interpretation/correction, embedded iCMA 01 and explanatory feedback; U03 reference table/PDF; assess readiness for the separately budgeted TMA.",
-    "boundary": "No new content, additional graded assignment, invented pass threshold or claim of mastery. iCMA is formative; TMA questions and marking guide remain to be authored.",
+    "boundary": "No new content, additional graded assignment, invented pass threshold or claim of mastery. iCMA is formative; TMA 01 questions and criteria are released separately, with a private worked marking guide.",
     "practiceAndEvidence": "Use 1 hour of retrieval/feedback for iCMA attempt plus feedback and targeted correction, and 0.5 hour for the unit reference-sheet review. Mixed practice samples vector signs/products, composition order and system classification; the code check asks what it cannot establish.",
     "visualPlan": "Concise decision diagram connecting representation, method and independent check.",
     "python": "0.5 hour included: interpret and repair a short scalar/list residual check, using already taught syntax.",
