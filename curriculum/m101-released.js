@@ -347,4 +347,6 @@ export const m101Unit3Lessons = [
   }
 ];
 
-export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons,...m101Unit3Lessons];
+export const m101Unit4Lessons = [{id:'U04-L01',unit:'U04',title:'Functions and their domains',hours:4,purpose:'Specify functions and their domains, interpret elementary graphs, and compose rules while preserving input restrictions.'}];
+
+export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons,...m101Unit3Lessons,...m101Unit4Lessons];

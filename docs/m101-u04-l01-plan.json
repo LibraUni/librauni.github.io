@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-12",
+  "scope": "Block 2 introduction, Unit 4 introduction, U04-L01 only",
+  "user_boundary": "User explicitly corrected scope: do not create or publish all Unit 4; stop after Lesson 1. No L02+ teaching or unit closing resources authored.",
+  "standard": "Current local Teaching Standard and Practice 1.10; fixed illustrated opening v0.4 inspected",
+  "curriculum": "Approved M101 B02 72h/8Python; U04 16h/1Python, O1/O5/O6; U03 prerequisite. All unchanged.",
+  "lesson": {
+    "title": "Functions and their domains",
+    "hours": 4,
+    "python": 0,
+    "allocationMinutes": {
+      "openings_explanation_examples": 80,
+      "activities_and_algebra_revisit": 110,
+      "feedback_correction": 50
+    },
+    "activity_attempt_estimates": [
+      5,
+      12,
+      15,
+      20,
+      10,
+      20,
+      18,
+      10
+    ],
+    "timingLimitation": "Editorial estimates, not student time measurements."
+  },
+  "sections": [
+    "4.1 rule/domain/range",
+    "4.2 domain restrictions and simplification",
+    "4.3 elementary functions and graphs",
+    "4.4 composition and intermediate-domain checks",
+    "4.5 piecewise rules and boundary values"
+  ],
+  "futureReservation": "12h remain including 1h Python. Provisional route in introduction: L02 3.5h, L03 3.5h, L04 5h. No later lesson source/pages created. Reserve cumulative exercises, feedback, conclusion and concise synchronised web/PDF reference within those hours when commissioned.",
+  "prerequisiteReview": "Reuses algebra, graphs and ordered transformations. No derivative, formal limit law, epsilon-delta, arrays or plotting prerequisite introduced. Logarithm retrieval explicit. Later Python gated on P101 Unit1 readiness; no learner attainment inferred."
+}

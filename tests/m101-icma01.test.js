@@ -14,7 +14,7 @@ test('M101 iCMA distinguishes omitted answers from wrong choices',()=>{
   }
  }
 });
-test('M101 closing release has cumulative feedback, complete downloads and unchanged forward boundary',()=>{
+test('M101 closing release has cumulative feedback, complete downloads and honest forward boundary',()=>{
  const page=fs.readFileSync(new URL('../content/m101/unit3-lesson6.html',import.meta.url),'utf8');
  assert.equal((page.match(/class="exercise"/g)||[]).length,10);
  assert.equal((page.match(/class="icma-question"/g)||[]).length,10);
@@ -23,5 +23,5 @@ test('M101 closing release has cumulative feedback, complete downloads and uncha
  assert.match(page,/TMA 01 has a separate six-hour allocation/);
  assert.match(page,/TMA 01 questions and marking criteria are available/);
  for(const path of ['public/teaching/m101/M101-Unit-3-Reference.pdf','public/notebooks/m101-u03-l06.ipynb','public/notebooks/m101-u03-l06.py'])assert.ok(fs.statSync(new URL('../'+path,import.meta.url)).size>100);
- const future=fs.readFileSync(new URL('../learn/physics/stage-1/m101/b02/u04/index.html',import.meta.url),'utf8');assert.match(future,/data-search-status="outline"/);
+ const future=fs.readFileSync(new URL('../learn/physics/stage-1/m101/b02/u04/index.html',import.meta.url),'utf8');assert.match(future,/data-search-status="available"/);assert.match(future,/Later lessons, unit exercises and reference resources are in preparation/);
 });

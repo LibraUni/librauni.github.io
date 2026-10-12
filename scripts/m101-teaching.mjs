@@ -1,3 +1,4 @@
+import {addM101Unit4,m101Unit4Paths} from './m101-unit4-teaching.mjs';
 import fs from 'node:fs';
 import {m101Unit1Lessons,m101Unit2Lessons,m101Unit3Lessons} from '../curriculum/m101-released.js';
 export const m101Home='/learn/physics/stage-1/m101/';
@@ -7,7 +8,7 @@ export const m101Lesson2=m101Unit+'l02/';
 export const m101Lesson3=m101Unit+'l03/';
 export const m101Lesson4=m101Unit+'l04/';
 export const m101Lesson5=m101Unit+'l05/';
-export const m101TeachingPaths=[m101Home,m101Home+'assessments/',m101Home+'assessments/tma01/',m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/',m101Home+'b01/u03/l03/',m101Home+'b01/u03/l04/',m101Home+'b01/u03/l05/',m101Home+'b01/u03/l06/'];
+export const m101TeachingPaths=[...m101Unit4Paths,m101Home,m101Home+'assessments/',m101Home+'assessments/tma01/',m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/',m101Home+'b01/u03/l03/',m101Home+'b01/u03/l04/',m101Home+'b01/u03/l05/',m101Home+'b01/u03/l06/'];
 export function addM101Teaching({root,pages,extraRails,link}){
  const reading=name=>'<div data-search-status="available" class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
  const pagination=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
@@ -167,4 +168,5 @@ export function addM101Teaching({root,pages,extraRails,link}){
  module[3]+='<section><h2>Assessments</h2><p>'+link(assessment,'TMA 01 · Questions and marking criteria')+' · Available after Block 1.</p></section>';
  block[3]+='<p>'+link(assessment,'After Block 1: TMA 01 · 6 hours')+'</p>';
  extraRails.set(assessment,{title:'TMA 01',back:m101Home,items:[...assessmentFragment.matchAll(/<section class="chapter" id="([^"]+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2].replace(/<[^>]*>/g,'')}))});
+ addM101Unit4({root,pages,extraRails,link});
 }

@@ -1,0 +1,39 @@
+{
+  "figures": [
+    {
+      "id": "4.1",
+      "file": "public/teaching/m101/u04-webb-chamber.jpg",
+      "source": "https://www.nasa.gov/universe/engineers-warm-nasas-webb-telescope-as-end-of-cryogenic-testing-nears/",
+      "creator": "NASA/Steve Sabia",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "modifications": "None; CSS display scaling only",
+      "purpose": "Unit opening: defined quantity, three scales and one time sample; caption distinguishes estimated average helium-shroud temperature from telescope temperature."
+    },
+    {
+      "id": "4.4",
+      "file": "public/teaching/m101/u04-calibration.jpg",
+      "source": "https://www.nist.gov/image/thermometermercuryjpg",
+      "creator": "NIST, reference11PML009, 2011-02-01",
+      "terms": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+      "modifications": "None; CSS display scaling only",
+      "purpose": "Optional context beside composition: experimental calibration versus a supplied mathematical rule. Image actually inspected; caption names historical thermometer, not invented sensor."
+    },
+    {
+      "ids": [
+        "4.2",
+        "4.3",
+        "4.5",
+        "4.6"
+      ],
+      "creator": "Original LibraUni SVG diagrams",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Domain number line; four graph families with domain/range; intermediate-output composition; open/filled boundary points."
+    }
+  ],
+  "mediaGate": "Structural check passes. Block opening has no separate image: it is a 334-word transition leading directly to the illustrated unit opening. Unit opening and first lesson together contain two verified contextual photographs and four original mathematical figures. No fixed photo quota or exemption inferred; actual rendered reading reviewed.",
+  "corrections": [
+    "Moved graph domain/range labels below plot window to avoid reciprocal-branch overlap.",
+    "Preserved SVG label sizes at narrow widths with a labelled keyboard-scrollable region.",
+    "Kept scientific photographs unaltered; their own reuse status is retained."
+  ]
+}
