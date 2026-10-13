@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-13",
+  "scope": "Complete M101 U06,18hours including2Python. User authorised local sequential lesson development and publication once required checks pass.",
+  "standard": "Teaching Standard and Practicev1.10; fixed illustrated M101 openingv0.4; actual approved B02/U06 plans and U05L05/L06 adjoining teaching inspected. No curriculum hours, outcomes or dependencies changed.",
+  "sequence": "L01 separately drafted and subject/reader/render reviewed before L02, and likewise through L04. L05+closing resources reviewed next; then full U06 read for continuity, coverage, notation and workload. Final media/reader revisions affected L02/L04/L05 and were rechecked.",
+  "subject_review": {
+    "evidence": "All per-lesson independent symbolic/value checks; every activity and exercise worked solution checked against its question. Notebook and script fresh namespace runs and reference code passed. Hypotheses, boundaries, nonzero divisions, physical units, figure curves/labels and model limitations reviewed manually.",
+    "findings": [
+      "Absolute pressure made explicit in gas model.",
+      "Continuity retained in sign/extreme/mean-value claims; failed theorem assumptions distinguished from false conclusion.",
+      "Second-derivative test correctly uses existence at stationary point, with limit reasoning, without assuming more regularity than required.",
+      "Finite sample evidence never promoted to proof; actual sample-cancellation and false connection verified."
+    ]
+  },
+  "reader_review": {
+    "progression": "Unit introduction supplies reservoir questions; signs -> stationary/critical candidates -> concavity/local/global comparisons -> simultaneous model rates -> MVT justifies interval claims -> graphical audit. Conclusion reconnects these and hands over exact versus approximate reasoning to U07.",
+    "comparative_read": "Re-read fixedv0.4 observation/model/representation opening against U06 introduction and L05 evidence distinction. Re-read OU MST224U1pp44–50 and actual ActiveCalculus3.1 explanations/questions against U06 worked reasoning. Earlier calculus is revision in MST224; U06 supplies motivations and steps rather than assuming that fluency.",
+    "fixes": [
+      "Moved speed/velocity reasoning out of optional blue context because Activity6.6 uses it.",
+      "Expanded n−1 spacing and viewport-versus-sampling distinction.",
+      "Separated longer Exercise6.4/6.14 derivations into display mathematics and reasoning paragraphs.",
+      "Added real instrument contexts without treating a photograph as measurements."
+    ],
+    "coverage": {
+      "6.1–6.2": {
+        "sections": "6.1–6.4",
+        "skills": "height versus slope, interval signs, stationary classification, undetermined height",
+        "comparison": "MST124 U3 Functions pp223–224 increasing/decreasing and Activity15; Active Calculus3.1 Example3.1.7/Activity3.1.2 factor signs. More explicit original height/offset diagnosis, less complicated derivative algebra."
+      },
+      "6.3": {
+        "sections": "6.5,6.9,6.16",
+        "skills": "corner candidate, endpoints, theorem failure",
+        "comparison": "OpenStax4.3 Example4.12 critical candidates and4.13 complete interval comparison;4.4 corner counterexample. Combines taught methods, with no cube-root derivative prerequisite."
+      },
+      "6.4–6.5": {
+        "sections": "6.6–6.8",
+        "skills": "concavity, nonstationary inflection, inconclusive test",
+        "comparison": "Active Calculus3.1 Activity3.1.3 requests concavity sign chart; our polynomial supplies exact factors and allcoordinates. OU MST224U1 §5.3 pp46–48 stationary classification is partial only; our inconclusive-test counterexamples add explanation."
+      },
+      "6.6–6.7": {
+        "sections": "6.9–6.10",
+        "skills": "complete extrema list, ties, open/unbounded domains, attained versus limiting",
+        "comparison": "OpenStax4.3 Example4.13 and Exercise91 endpoint reasoning; OU MST224U1 p48 global extrema/asymptote explanation and Exercise34p50. Our original tasks isolate tied extrema and changed domain rather than a large rational calculation."
+      },
+      "6.8–6.11": {
+        "sections": "6.11–6.14",
+        "skills": "product/chain time rates, surface-area factor, signed geometry, model conditions",
+        "comparison": "OU MST224U1 chain/implicit pp44–46 is method prerequisite, not exact related-rates match. Active Calculus3.5 Preview3.5.1/Example3.5.1 and Activities3.5.2/3.5.5: supplied geometry and signed rates. Our sphere formula supplied, endpoint limitation and gas assumptions explicit; no cone-similarity prerequisite or mechanics law assumed."
+      },
+      "6.12–6.13": {
+        "sections": "6.15–6.18",
+        "skills": "MVT check/solve, failed guarantee vs false conclusion, derivative bounds, constant difference",
+        "comparison": "OpenStax4.4 Example4.15 and Exercises167–181/190–191 and corollaries. Original logarithm/gap pairing and signed-bound problem require choosing among taught claims. No matching supplied OU MVT exposition located."
+      },
+      "6.14": {
+        "sections": "6.2–6.10",
+        "skills": "complete mixed shape analysis, exact roots, endpoint comparison",
+        "comparison": "OU MST224U1 Exercise33p48 exponential stationary analysis and Exercise34p50 broader graph synthesis; Active Calculus3.1 Exercise1 graphical/exact distinction. Our task combines smooth exponential model with concavity and bounded domain after separate scaffolding, not a parameter change of OU questions."
+      },
+      "6.15": {
+        "sections": "6.19–6.21",
+        "skills": "exact sample cancellation, derivative refutation, controlled revision, evidence limits",
+        "comparison": "Active Calculus3.1 Activity3.1.4 graphical conjecture then exact reasoning is partial. Original audit transfers the taught sample-alignment idea. No equivalent supplied OU programming question found; does not claim equivalence of measured workload."
+      }
+    },
+    "workload": {
+      "lessonHours": [
+        4,
+        4,
+        3,
+        3,
+        4
+      ],
+      "pythonHours": 2,
+      "closingAttemptsMinutes": 120,
+      "closingCorrectionMinutes": 40,
+      "referenceConclusionMinutes": 20,
+      "practice": "22activities;15core unit exercises with hidden checked feedback and separate hints. No added lesson-end sets, compulsory videos or extra simulation time.",
+      "limits": "Editorial budget, not observed student timing. P101 readiness remains explicit."
+    }
+  },
+  "visual_review": {
+    "scope": "1440/900/390/320px light/dark for all5lessons; hidden/open feedback, unique IDs, image loading, keyboard disclosure, no-JS and200%CSSzoom proxy. Exact source-to-page text equality. Clipboard checked byte-for-byte by keyboard for4code blocks. Unit links, download bytes and offline copies verified.",
+    "math": "Native semantic MathML in inline/display equations, all feedback and reference. Viewed compound radical, fraction, exponents and opened mixed solutions; scoped overflow scrollers retain keyboard access. Long solutions improved after screenshot review.",
+    "pdf": "Two A4pages actually rendered/viewed; canonical title, approved logo/motto, version/date/page numbers,7.5pt grey reuse footer. Same11reference rows and Python code as web. No full PDF/UA claim.",
+    "media": "17figures; source/caption/rights register includes all4photos. Tank/track labels and quartic y ticks repaired. Narrow layout stacks captions; original diagrams/text supply static alternatives to Python plots."
+  },
+  "unit_gate": {
+    "numbering": "Sections6.1–6.23;Examples6.1–6.19;Activities6.1–6.22;Figures6.1–6.17;Exercises6.1–6.15;Keyideas6.1–6.10. Internal IDs unique; unpublished figure sequence finalised before release.",
+    "preservation": "Earlier teaching fragments/assets and approved scope unchanged; additive U06 availability. U07 stays outline. No enrolment/completion/academic records modified.",
+    "checks": "135repository tests passed; final build/search and refreshed browser checks recorded in release evidence. Hosted security/build/deploy must succeed before reporting publication.",
+    "publication": "Authorised by user; only after required local gates. Live pages/download hashes to be verified after deploy."
+  },
+  "source_gap": "Supplied MST124 introductory calculus material unavailable; actual MST124U3 functions and MST224U1§5.3pp46–50 used. OpenStax4.3–4.4, ActiveCalculus1.6/3.1/3.5 fill introductory explanation/practice gaps. No fabricated comparison to absent sources.",
+  "limitations": "Author self-review and independent computational recalculation, not independent human review, a student trial or formal accessibility certification. No unresolved substantive defect identified; automated passes do not certify educational quality."
+}

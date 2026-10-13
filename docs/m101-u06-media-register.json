@@ -1,0 +1,123 @@
+{
+  "inspected": "2026-10-13",
+  "photos": [
+    {
+      "figure": "m101-u06-fig-1",
+      "page": "unit6.html",
+      "file": "public/teaching/m101/u06-water-tower.jpg",
+      "caption": "Figure 6.1 · A level and a stored volume are different quantities. Pensacola Beach Water Tower, photographed in 2022. The visible tank suggests why container shape matters when relating volume to water depth. Its internal geometry and operating data are not supplied by this photograph; the containers studied here are explicitly idealised. Credit: APK, Wikimedia Commons , CC BY-SA 4.0 . Unmodified, scaled for display; this image retains its separate licence.",
+      "sourceAndTerms": [
+        "https://commons.wikimedia.org/wiki/File:Beach_ball_water_tower.jpg",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ],
+      "sha256": "6fabf97641dcdbf892520715c2e3df7a4c4cc6b0bb77dd7e4305ad03aad483f1",
+      "modifications": "See exact caption; original downloaded rendition retained, CSS display scaling only. Separate source licence preserved."
+    },
+    {
+      "figure": "m101-u06-fig-6",
+      "page": "unit6-lesson2.html",
+      "file": "public/teaching/m101/astrobee.jpg",
+      "caption": "Figure 6.6 · Position, velocity and acceleration answer different questions. An Astrobee robot aboard the International Space Station. In a one-dimensional position model, negative velocity and positive acceleration can describe motion in the negative direction with decreasing speed. The photograph is a setting for that distinction; no trajectory or acceleration has been measured from this image. Credit: NASA, ISS069-E-010815. Image source · NASA reuse terms . Existing image, unmodified; display scaling only.",
+      "sourceAndTerms": [
+        "https://www.nasa.gov/technology/robotics/nasa-seeks-input-for-astrobee-free-flying-space-robots/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "sha256": "75ad4be707c27921ce64b50990c9e36b0b7a6ce2816a2fdcacffbbfd36e33e40",
+      "modifications": "See exact caption; original downloaded rendition retained, CSS display scaling only. Separate source licence preserved."
+    },
+    {
+      "figure": "m101-u06-fig-13",
+      "page": "unit6-lesson4.html",
+      "file": "public/teaching/m101/u06-speedometer.jpg",
+      "caption": "Figure 6.13 · Rate and accumulated distance are different readings. A bicycle instrument displays speed and trip distance in different units. One photograph cannot establish the average speed over a journey; a trip-distance change also needs an elapsed time. Nor does a speed display give the signed direction needed for a velocity. Credit: Petar Milošević. Source · CC BY-SA 3.0 . Source's white-balance-corrected version; no additional modification, display scaling only.",
+      "sourceAndTerms": [
+        "https://commons.wikimedia.org/wiki/File:Hybrid_bicycle_clock.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/"
+      ],
+      "sha256": "101fa7c33641eaf3925102254db50bfab5a9fadc3f6b71b54d7a11406d13043b",
+      "modifications": "See exact caption; original downloaded rendition retained, CSS display scaling only. Separate source licence preserved."
+    },
+    {
+      "figure": "m101-u06-fig-15",
+      "page": "unit6-lesson5.html",
+      "file": "public/teaching/m101/u06-oscilloscope.jpg",
+      "caption": "Figure 6.15 · A display is part of a measurement system. A laboratory oscilloscope. Digital instruments construct waveform records from samples; choices of acquisition and display affect what a user sees. This photograph shows the instrument setting, not a recorded trace or evidence of a particular sampling error. Credit: Rashedul Islam Emon; source crop and rotation by Pittigrilli. Source and edit history · CC BY-SA 4.0 . No additional modification; display scaling only.",
+      "sourceAndTerms": [
+        "https://commons.wikimedia.org/wiki/File:Oscilloscope_front_view.jpg",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ],
+      "sha256": "716ac6feda4454b1efeb1a544b09798879133503d1b2aceca6be71c4b6bd9ee4",
+      "modifications": "See exact caption; original downloaded rendition retained, CSS display scaling only. Separate source licence preserved."
+    }
+  ],
+  "originalDiagrams": [
+    {
+      "id": "m101-u06-fig-2",
+      "page": "unit6-lesson1.html",
+      "caption": "Figure 6.2 · Height and slope answer different questions. The line 2x − 9 stays below the axis on the shown interval but rises. The line 6 − x stays above the axis but falls. Neither the sign nor the size of an output determines its rate. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-3",
+      "page": "unit6-lesson1.html",
+      "caption": "Figure 6.3 · A horizontal tangent is not a classification. All three curves have derivative zero at the origin. The square has a minimum, the negative square a maximum, and the cube continues increasing through zero. The functions are shown only near the point under discussion. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-4",
+      "page": "unit6-lesson1.html",
+      "caption": "Figure 6.4 · A pause in slope without a turn. The quartic decreases through its horizontal tangent at zero and turns upwards at x = 2. The sign chart, rather than the plotted samples, establishes the full intervals of decrease and increase. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-5",
+      "page": "unit6-lesson2.html",
+      "caption": "Figure 6.5 · Falling with an increasing slope. For exp(−x), tangent slopes are negative but become less negative from left to right. The dashed curve is the derivative: it rises towards zero while the original positive function falls towards zero. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-7",
+      "page": "unit6-lesson2.html",
+      "caption": "Figure 6.7 · A zero second derivative does not settle the bend. The curve x³ + x changes concavity at zero with slope 1. The curve x⁴ has second derivative zero there but stays concave up. Compare the direction in which the tangent slopes change, not just the height of the curves. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-8",
+      "page": "unit6-lesson2.html",
+      "caption": "Figure 6.8 · Local and absolute comparisons differ. On [−2,3], the local high point at (−1,2) is lower than the right endpoint (3,18). The least value −2 occurs both at the left endpoint and at x = 1. A larger vertical scale needed for the endpoint compresses the local features. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-9",
+      "page": "unit6-lesson3.html",
+      "caption": "Figure 6.9 · Depth is measured from the bottom. A cross-section of the ideal spherical tank. R is fixed; h and the water-surface radius ρ change. The vertical displacement from the centre to the water surface is h − R. The drawing illustrates a partially filled tank, not the photographed water tower’s construction. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-10",
+      "page": "unit6-lesson3.html",
+      "caption": "Figure 6.10 · A changing right triangle. The markers lie on perpendicular tracks. Their positive distances x and y from the common origin determine separation d. Arrows show the example’s outward x motion and inward y motion; lengths are schematic. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-11",
+      "page": "unit6-lesson4.html",
+      "caption": "Figure 6.11 · Equal slopes, different lines. On [−2,2], the cubic has endpoint secant slope 4. The illustrated matching tangent is at c = 2/√3; another matching tangent occurs at −2/√3. Only the positive-c tangent is drawn to keep the lines distinct. Neither match is at the midpoint. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-12",
+      "page": "unit6-lesson4.html",
+      "caption": "Figure 6.12 · A corner can evade a horizontal tangent. The endpoint secant for |x| on [−1,1] is horizontal at height 1. Every existing derivative is +1 or −1; the derivative at zero fails to exist. Continuity alone does not give the mean value theorem. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-14",
+      "page": "unit6-lesson5.html",
+      "caption": "Figure 6.14 · A line of samples can hide repeated falls. The dashed straight line joins the 21 coarse samples: all lie on y = x. The solid curve uses 401 samples of the same function and reveals the oscillations. The exact derivative proves that falling intervals exist; neither finite plot proves completeness. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-16",
+      "page": "unit6-lesson5.html",
+      "caption": "Figure 6.16 · A wide vertical window compresses the variation. The same 401 samples are displayed over a vertical range from −10 to 10. The height oscillations now occupy only a small fraction of the frame. Compare Figure 6.14: changing the scale has changed visibility, not the function or its derivative. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    },
+    {
+      "id": "m101-u06-fig-17",
+      "page": "unit6-lesson5.html",
+      "caption": "Figure 6.17 · A plotted connection can invent a zero. The reciprocal has two separate branches and no zero. The dashed middle segment is the false join between the two central samples of a single 20-point array; it crosses the axis despite the excluded input x = 0.5. Branches extend beyond the visible vertical limits. Original LibraUni diagram · CC BY-NC-SA 4.0."
+    }
+  ],
+  "searches": "Wikimedia rounded water tank; existing verified NASA Astrobee; Wikimedia speedometer/bicycle instruments; Wikimedia digital oscilloscope. Oscilloscope and bicycle assets actually viewed; current source edit histories credited. Optional oscilloscope context checked against Tektronix DSO architecture exposition. NASA/JPL rover candidate considered but not inserted without a strong additional teaching function.",
+  "editorialDisposition": "17figures:13original diagrams and4sourced photographs. L01 shares the opening reservoir/height setting then needs three explicit shape comparisons; L03 returns to that actual tank photograph and develops original cross-section and moving-triangle geometry. All-diagram structural flags reviewed against the whole reading sequence and approved reference; no waiver or reduction in explanatory/caption/accessibility standards. Contextual imagery is purposeful, not forced into every section. L04/L05 photographs added during unit review to connect ideal rate and plotting ideas with instruments.",
+  "reuse": "Original diagrams CC BY-NC-SA4.0. Water tower/oscilloscope CC BY-SA4.0, bicycle CC BY-SA3.0, NASA under credited media terms. No private source imagery/text published."
+}

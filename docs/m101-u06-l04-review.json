@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U06 L04",
+  "status": "Reviewed locally before drafting L05; final integrated/offline checks due",
+  "comparators": {
+    "6.15": "OpenStax Calculus1 §4.4 theorem4.5, geometric Rolle reduction and Example4.15; original symmetric cubic has two non-midpoint matches, semicircle task tests endpoint differentiability. OU supplied U1 §5.3 supports prerequisite extrema but supplies no MVT match.",
+    "6.16": "OpenStax4.4 Rolle counterexample Figure4.22 and Exercises148–151/167–181. Original endpoint-discontinuity and altered-point polynomial distinguish failed guarantee from failed conclusion.",
+    "6.17": "OpenStax4.4 Corollaries1–3, connected to actual MST124 U3 pp223–224 definition and U06L01. Direct arbitrary-pair argument written originally; no proof-based analysis expansion.",
+    "6.18": "OpenStax4.4 theorem/velocity interpretation and Exercises190–191 provide the local/average distinction. Original temperature bound and signed displacement task use existing units and model skills; no exact OU counterpart."
+  },
+  "subject": "13 exact symbolic/value checks in check4.py, plus direct checks of all counterexamples/hypotheses and derivative-bound argument. Geometric proof sketch checked against extreme-value/Fermat reasoning. Activity solutions cover multiple/non-midpoint c, endpoint derivative failure, discontinuities and connected intervals.",
+  "reader": "Continuous read with L01 and L03. Replaced potentially misleading average-speed phrasing with explicit displacement-versus-distance distinction; existence not uniqueness; failed assumptions not automatic disproof. Bound used only as a consequence of supplied all-interval derivative information.",
+  "visual": "Eight width/theme cases,keyboard,no-JS,source equality,200%zoom proxy passed. Viewed theorem box, both diagrams and mobile opening; radicals/fractions and tangent/secant distinctions legible. Final recheck includes wording revision.",
+  "media": "Two original mathematical diagrams selected for direct secant/tangent comparison and corner counterexample. Not a photograph quota; the continuing unit visual journey includes sourced tank and robot imagery, with additional contextual imagery considered during whole-unit review.",
+  "workload": "60reading+65activities+25correction+30reservedclosing=180min; editorial estimate.",
+  "limitations": "Author/computational review, not independent human/student validation. Final integrated/offline checks due.",
+  "finalDisposition": "Closed by final whole-unit review and repeated integrated browser checks; see m101-u06-whole-unit-review.json and m101-u06-release-checks.json."
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U06 L03",
+  "status": "Reviewed locally before L04; final integrated/offline checks due",
+  "comparators": {
+    "6.11": "OU MST224 U1 §5.2 pp44–45 chain-rule explanation and Exercises30–31, plus adjoining U05 L04–L05. Active Calculus1e §3.5 PreviewActivity3.5.1 explicitly distinguishes volume and radius time rates. Our cylinder starts with net flow and sign/unit diagnosis.",
+    "6.12": "Active Calculus1e §3.5 Examples3.5.1/3.5.3 and Activity3.5.2 provide geometry-to-rate scaffolding. Original spherical-cap model is supplied rather than derived by untaught integration; compare equator and symmetric depths, rather than merely changing comparator numbers. OU has no matching supplied introductory related-rate passage.",
+    "6.13": "Active Calculus1e §3.5 Activity3.5.5 for changing perpendicular separations, with prior M101 Pythagoras and implicit differentiation. Original two-marker cancellation question uses signed rates and instantaneous-not-interval reasoning.",
+    "6.14": "OpenStax UniversityPhysics2 §2.1 Gas Laws/Ideal Gas Law confirms constant amount/temperature and absolute-pressure convention. Original rate calculation is self-contained, not a thermodynamics prerequisite."
+  },
+  "subject": "13 independent symbolic/value checks in check3.py, plus units/signs and endpoint behaviour. All four activity solutions checked. Differentiated spherical volume independently and recovered surface area from Pythagoras; reviewed h=0,2R singular conversion and nonzero separation condition.",
+  "reader": "Continuous read against L01–L02 and fixed reference: added explicit absolute-pressure definition after physics source check; distinguished fixed radius from instantaneous depth, net from inflow rate, finite percentage change from instantaneous fractional rate. No unsupplied physical prerequisites.",
+  "visual": "Eight width/theme cases, source text equality, closed/native keyboard feedback,no-JS and200%zoom proxy passed. Viewed both diagrams and rate examples with fractions/radicals/dot notation. Moved two motion-rate labels away from the separation line after visual inspection; final integrated check will recheck these edits.",
+  "media": "Original tank cross-section and moving-track diagram develop the geometry. Explicit return to the verified opening water-tower photograph separates object from supplied idealisation; no claim to reconstruct its interior. The all-diagram warning is considered in this continuous unit reading journey.",
+  "workload": "60reading+65activity+25correction+30reservedclosing=180min; editorial estimates.",
+  "limitations": "Author/computational review, not independent human/student validation; final integrated/offline checks remain due.",
+  "finalDisposition": "Closed by final whole-unit review and repeated integrated browser checks; see m101-u06-whole-unit-review.json and m101-u06-release-checks.json."
+}

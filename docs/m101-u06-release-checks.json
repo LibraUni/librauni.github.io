@@ -1,0 +1,447 @@
+{
+  "date": "2026-10-13",
+  "baseCommit": "e6c998c98167b92d732886c3b7d73747baf05052",
+  "repositoryTests": {
+    "passed": 135,
+    "failed": 0
+  },
+  "build": "Vite production build passed;71available learning pages indexed",
+  "browser": {
+    "L01": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 129,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L02": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L03": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 105,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L04": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 87,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L05": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 209,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    }
+  },
+  "closing": {
+    "codeCopyKeyboardExact": true,
+    "downloadsExact": [
+      "M101-Unit-6-Reference.pdf",
+      "M101-Unit-6-Investigation.py",
+      "M101-Unit-6-Investigation.ipynb",
+      "u06-water-tower.jpg",
+      "u06-speedometer.jpg",
+      "u06-oscilloscope.jpg"
+    ],
+    "routesAndAnchors": true,
+    "unit7Outline": true,
+    "offlineChecked": true,
+    "errors": []
+  },
+  "preservedPriorM101Files": 66,
+  "sha256": {
+    "content/m101/unit6-lesson1.html": "488ac90e9ed1ab4fc3d9a8f78fe38674ef38ab63f2edb871dd2ece59f4b46ee3",
+    "content/m101/unit6-lesson2.html": "bc4d3015d7d5115b443a95b26f582d2b9d6377434350ba0e4137d6a935f9e17d",
+    "content/m101/unit6-lesson3.html": "fbef952f540ae501444cc283215ff8ea4c0d31206cb14a6a965633ae8ff8de74",
+    "content/m101/unit6-lesson4.html": "1401889671e4e3f1c449f1428e67bae71b1a5610348d0b101062830817dd8cf1",
+    "content/m101/unit6-lesson5.html": "1e6ae6bbdec413a76a0bc33864c7b23e4f918a250c32917805347f3beb4cae13",
+    "content/m101/unit6.html": "feb500670b63d44d68ab2e88ca92dda34126ce3476211c1ab0815f30386cb642",
+    "public/teaching/m101/M101-Unit-6-Investigation.ipynb": "18b3d73868eb59cbe510b45996dde47cb7b2393f4d131dea160b5c55ff817a35",
+    "public/teaching/m101/M101-Unit-6-Investigation.py": "cca3b07fdda4494ed44fc0347516479acb0d23ceb99563501a77016a66cf3cc7",
+    "public/teaching/m101/M101-Unit-6-Reference.pdf": "28ece9e7fdf9edd3bc0cb1168c0f71fa3c64d97f6e375f3364d51887d350d1b4"
+  },
+  "pdf": "2pages rendered and visually inspected; web rows/Python derived from same reference data",
+  "subject": "checks1–5 passed; all independent calculations and manual edge/hypothesis reviews documented per lesson",
+  "hostedGate": "Pending push, hosted Firestore security suite, build/deploy and live exact-page/asset verification. No publication success claimed by this local record.",
+  "offlineVisual": "Introduction photograph and final worked solutions viewed, including320px no-JS. Long derivative equations split into aligned rows after inspection; final fit verified."
+}
