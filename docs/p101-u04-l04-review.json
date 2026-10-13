@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-13",
+  "disposition": "Reviewed locally; no publication yet",
+  "subject": "227 independent numerical/structure/XML checks, including54 signed/zero-acceleration identity checks. All example/activity results recomputed; intervals and sign choices reviewed.",
+  "reader": "Continuous six-section reading. Added reminder that graph is not track; develops signed-area geometry and average-acceleration counterexample. a=0 derivation avoids division; initial conditions and force-regime boundary explicit.",
+  "visual": "All six figures, key equations and fraction/radical example plus mobile opening inspected. Moved Figure4.24 labels off plotted line. Eight width/theme cases, keyboard feedback, noJS,200%CSSzoom proxy and source match pass; revised figure rechecked.",
+  "workload": "4270approxwords including feedback;60reading+90activities+30correction=180min. Timing editorial estimate.",
+  "hierarchy": "Sections4.20\u201325;Examples4.19\u201324;Activities4.20\u201325;Figures4.19\u201324. L01\u201303 prerequisites, L05 handover; approved18h/2Python unit unchanged.",
+  "limitations": "Distinct author self-review passes and independent arithmetic, not human independent review or learner validation. Whole-unit closure still due."
+}

@@ -9,7 +9,7 @@ const unit2=p101Home+'b01/u02/';
 const unit3=p101Home+'b01/u03/';
 const block2=p101Home+'b02/';
 const unit4=block2+'u04/';
-export const p101U04LessonCount=3;
+export const p101U04LessonCount=4;
 export const p101TeachingPaths=[...[2,3,4,5].filter(n=>n<=p101U04LessonCount).map(n=>unit4+'l0'+n+'/'),block2,unit4,unit4+'l01/',p101Home,p101Home+'orientation/',p101Home+'assessments/',p101Home+'assessments/tma01/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';

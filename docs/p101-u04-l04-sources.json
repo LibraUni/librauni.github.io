@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-13",
+  "lesson": "U04-L04",
+  "comparators": {
+    "4.20": "OU MST124 Unit2 printed124\u2013128 actual gradients and Activities3\u20134; OpenStax3.4 notation andEx3.7",
+    "4.21": "OpenStax3.4 Fig3.18 and relations3.10\u201313; original signed-area reasoning",
+    "4.22": "OpenStax3.4 elimination andEx3.9\u201310",
+    "4.23": "OpenStax3.5 free-fall exposition andEx3.15",
+    "4.24": "OpenStax3.5 Ex3.16; OU Unit2 printed170\u2013172 quadratic formula andEx15; original signed-area example",
+    "4.25": "OpenStax3.4 piecewise introduction/Ex3.10; original force-regime synthesis"
+  },
+  "urls": [
+    "https://openstax.org/books/university-physics-volume-1/pages/3-4-motion-with-constant-acceleration",
+    "https://openstax.org/books/university-physics-volume-1/pages/3-5-free-fall"
+  ],
+  "differences": "No supplied OU mechanics chapter; mathematical/typographic comparison only. No calculus/pursuit prerequisites. Original examples and activities with time-origin, average-acceleration counterexample, sign/turning and post-stop checks. No equivalence of measured workload claimed.",
+  "media": {
+    "asset": "/teaching/p101/u04/drop-vehicle.jpg",
+    "source": "https://www.nasa.gov/centers-and-facilities/glenn/zero-gravity-research-facility/",
+    "file": "https://www.nasa.gov/wp-content/uploads/2024/12/2004-00575-m.jpg",
+    "creator": "NASA",
+    "terms": "NASA educational/editorial guidelines inspected; no third-party credit; no endorsement",
+    "modification": "Unmodified480\u00d7640",
+    "inspection": "Actual file and rendered image viewed;132m/5.18s checked in account",
+    "original": "Five SVG diagrams; no video selected"
+  }
+}

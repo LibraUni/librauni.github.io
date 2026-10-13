@@ -1,0 +1,51 @@
+{
+  "lesson": "U04-L04",
+  "standard": "1.10; fixed illustrated v0.4, preceding L03 and approved B02 blueprint read",
+  "scope": "Constant-acceleration motion;3h, noPython; O1/O6/O7; no calculus",
+  "sections": [
+    {
+      "number": "4.20",
+      "purpose": "Initial conditions and constant versus average acceleration",
+      "source": "OU Unit2 pp124\u2013128;OpenStax3.4 notation/velocity"
+    },
+    {
+      "number": "4.21",
+      "purpose": "Velocity-time signed area; geometric derivation",
+      "source": "OpenStax3.4 Fig3.18 and relations;OU gradient distinction"
+    },
+    {
+      "number": "4.22",
+      "purpose": "Select relation; eliminate time without division by a; signs",
+      "source": "OpenStax3.4 equations3.12\u201314 andEx3.9\u201310"
+    },
+    {
+      "number": "4.23",
+      "purpose": "Vertical free fall and instantaneous turning",
+      "source": "OpenStax3.5 Ex3.15\u201316"
+    },
+    {
+      "number": "4.24",
+      "purpose": "Displacement versus distance; two valid times",
+      "source": "OpenStax3.5 Ex3.16;OU Unit2 quadratic roots"
+    },
+    {
+      "number": "4.25",
+      "purpose": "Force-to-motion piecewise model and checks",
+      "source": "OpenStax3.4 Ex3.10;original unit synthesis"
+    }
+  ],
+  "minutes": {
+    "reading": 60,
+    "activities": [
+      10,
+      15,
+      20,
+      15,
+      15,
+      15
+    ],
+    "feedback": 30
+  },
+  "media": "Original velocity graphs, signed areas, turning sequence, braking intervals; NASA drop vehicle for free-fall conditions and interval boundary. Static figures sufficient for derivation; interactive reserved for L05. No video needed to replace explanation.",
+  "handover": "L05 perpendicular components, algebraic Python and closing unit resources; U05 unchanged."
+}
