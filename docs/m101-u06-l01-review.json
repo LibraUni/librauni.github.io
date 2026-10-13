@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U06 L01",
+  "status": "Subject and reader review completed before L02; local browser checks passed; final integrated/offline checks remain due",
+  "standard": "v1.10 and fixed v0.4; approved 18h unit and B02 complete lesson blueprint inspected",
+  "comparators": {
+    "6.1": "Supplied MST124 Unit3 Functions printed pp223–224, Increasing and decreasing functions, Activity15; formal all-pairs language inspected. Our strict/non-strict distinction is explicit.",
+    "6.2": "Same OU passage plus Active Calculus1e §1.6.2. MVT justification deferred transparently to L04; original counterexamples distinguish one-point and interval evidence.",
+    "6.3": "MST224 Unit1 §5.3 pp46–48, Figure27 and Exercise33; Active Calculus1e §3.1.2 and PreviewActivity3.1.1. OU is revision and assumes smoothness; our text expands the differentiability/interior qualifications and includes nondifferentiable extrema.",
+    "6.4": "OU §5.3 pp48–49 Example5; Active Calculus1e Activity3.1.2. Original polynomial/repeated-factor tasks reduce the comparator's rational-domain load before the next section.",
+    "6.5": "OU §5.3 p48 endpoint/global discussion and Example5 domain analysis; Active Calculus1e §3.1.2. Discontinuous point-value counterexample is an original synthesis."
+  },
+  "subject": "Independently checked polynomial derivatives, stationary coordinates, factor signs, all five activity solutions and stated exceptional cases. check1.py contains14 symbolic/value/sign assertions; also checked local-extremum quotient reasoning and disconnected-domain counterexample analytically.",
+  "reader": "Continuous read alongside fixed reference and U05 implicit/second-derivative teaching. Defined strict increase, nondecrease and interior-local convention before using them. Explained why test-point signs represent intervals, why continuity joins decreasing pieces across an isolated zero, and why heights cannot be recovered from a derivative alone.",
+  "visual": "Eight width/theme browser cases, keyboard feedback, no-JS, source equality and200%CSSzoom proxy passed. Viewed all3 diagram/caption renders, sign-table example, opening dark mobile and zoom example. Replaced an overlong decimal tick at −4/3 with simple integer ticks after seeing its clipped label; numerical minimum remains exact in prose.",
+  "media": "Unit introduction's new CC BY-SA4.0 APK water-tower photograph inspected and credited, supporting the opening model/shape question. L01 follows with three original mathematical comparison diagrams rather than repeating that photo. Whole-unit review must verify richness across subsequent lessons; all-diagram structural warning explicitly considered, not treated as automatic acceptance.",
+  "workload": "80reading including introduction +90activity attempts +40correction +30reserved closing attempts=240min; editorial estimates, not measured student times.",
+  "limitations": "Author review with independent calculation routes and automated/browser evidence, not independent human or student validation. Final whole-unit/offline review due.",
+  "finalDisposition": "Closed by final whole-unit review and repeated integrated browser checks; see m101-u06-whole-unit-review.json and m101-u06-release-checks.json."
+}

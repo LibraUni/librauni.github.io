@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U06 L02",
+  "status": "Reviewed locally before drafting L03; final integrated/offline checks due",
+  "standard": "v1.10; fixed v0.4, U05 L05 and reviewed U06 L01 inspected",
+  "comparators": {
+    "6.6": "Active Calculus1e §1.6.4, Figure1.6.5 and negative-slope discussion; OU MST224 U1 pp46–48 provides classification but not introductory concavity exposition.",
+    "6.7": "Active Calculus1e §3.1.3 Definition3.1.14 and Activity3.1.3; OU U1 p47 zero-second-derivative caution. Original x^5/x^6/1/x comparison.",
+    "6.8": "OU U1 p47 classification box/p48 alternative and Exercise33. Expanded sufficient-test reasoning; U05 derivative prerequisites retained.",
+    "6.9": "OU U1 p48 global/local/endpoints; OpenStax4.3 theorem4.3 and examples4.12–4.13. Original closed-interval, tied-minimum and corner comparisons.",
+    "6.10": "OU U1 §5.3 investigation sequence; original bounded response model separates continuation from model validity."
+  },
+  "subject": "19 independent symbolic/value/sign checks in check2.py; all activity solutions, candidate lists, open-interval failure and sufficient-test argument reviewed analytically.",
+  "reader": "Continuous read: concavity introduced through changing slope, not merely second-derivative signs. Added an inflection comparison figure to separate stationary and nonstationary cases. Model validity and signed speed interpretation explicit.",
+  "visual": "Eight width/theme cases, keyboard feedback, no-JS,200%CSSzoom proxy and exact source text passed. Viewed all four figures, second-derivative example and endpoint comparison table. Media structural check passed.",
+  "media": "Three original diagrams plus NASA Astrobee photograph; source description and NASA terms rechecked; actual rendered asset viewed. Separate rights retained.",
+  "workload": "80reading+90activities+40correction+30reservedclosing=240min; editorial estimates.",
+  "limitations": "Author/computational review, not independent human/student validation. Final integrated/offline/PDF checks due.",
+  "finalDisposition": "Closed by final whole-unit review and repeated integrated browser checks; see m101-u06-whole-unit-review.json and m101-u06-release-checks.json."
+}

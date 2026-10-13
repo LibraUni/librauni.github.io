@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U05 L03",
+  "status": "Reviewed locally before L04; integrated release checks pending",
+  "subject": "17 symbolic derivatives independently verified, plus arithmetic value/rate example. Exact product increment identity, vanishing cross term after division, quotient difference numerator and continuity/nonzero neighbourhood read independently. Domain holes and one-sided root endpoint checked.",
+  "reader": "Five sections read continuously against L02. Product motivating rectangle labels positive increments only; signed identity stated. Quotient proof chosen directly from definition, avoiding assuming differentiability of a quotient before proving it. Retained whole second numerator term in brackets and original exclusions after simplification. Explained degree of checking provided by expansion.",
+  "visual": "Eight widths/themes, source equality, keyboard/no-JS and zoom proxy passed. Viewed rectangle strips/corner, two holes and quotient worked example; context photograph previously inspected. Figure holes match their stated coordinates.",
+  "comparators": {
+    "5.11": "OU MST224 U1 \u00a75.2 pp42\u201343 product rule; OpenStax3.3 product proof. Our area-increment justification explicitly checks cross term after division; OU revision is too terse for first exposure.",
+    "5.12": "OU Example3 p43 and Exercise29 p44; OpenStax3.3 Examples3.23\u20133.24 different routes/data at a point. Composition examples deferred; original product fluency and supplied collecting model.",
+    "5.13": "OU p43 quotient rule/Example3(b); OpenStax3.3 quotient theorem/proof. Complete difference-quotient argument and nonzero-neighbourhood explanation added.",
+    "5.14": "Unit4 cancellation/domain teaching is immediate comparator; OU Algebra factorisation baseline and OpenStax quotient exercises support technique, but missing-point derivative synthesis is original.",
+    "5.15": "OU Exercises29/31 pp44\u201345 mixed rules, filtered to remove untaught chain-rule needs; original multi-factor and method-choice tasks."
+  },
+  "workload": "75reading+100activities+35correction+30closing reservation=240min. No additional practice layer.",
+  "limitations": "Author/computational/visual checks, no independent human review; editorial times unmeasured."
+}

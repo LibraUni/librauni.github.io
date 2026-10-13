@@ -1,0 +1,329 @@
+{
+  "date": "2026-10-13",
+  "scope": "M101 Unit5 locally, one lesson drafted and reviewed before the next; publish whole unit only after checks",
+  "standard": "Teaching Standard and Practice v1.10; fixed illustrated M101 opening v0.4",
+  "policy": "construction-policy v1.0; all B02 lessons blueprinted in m101-block2-lesson-blueprint.json; each lesson sections settled here before drafting",
+  "parents": [
+    "curriculum/m101-units.js",
+    "curriculum/m101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/later-stage-audit.js"
+  ],
+  "hours": 24,
+  "pythonHours": 2,
+  "lessons": [
+    {
+      "title": "From secants to a derivative",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Difference quotient and first principles",
+      "requires": "U04",
+      "evidence": "Derive a simple derivative",
+      "handover": "Elementary rules",
+      "id": "U05-L01",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "Within approved parent unit; teaching uncommissioned beyond U04",
+      "sections": [
+        {
+          "id": "M101-U05-L01-S01",
+          "number": "5.1",
+          "title": "Average changes and secants"
+        },
+        {
+          "id": "M101-U05-L01-S02",
+          "number": "5.2",
+          "title": "A rate at one input"
+        },
+        {
+          "id": "M101-U05-L01-S03",
+          "number": "5.3",
+          "title": "Deriving a whole function"
+        },
+        {
+          "id": "M101-U05-L01-S04",
+          "number": "5.4",
+          "title": "Tangent lines and units"
+        },
+        {
+          "id": "M101-U05-L01-S05",
+          "number": "5.5",
+          "title": "Where a derivative fails"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 75,
+        "activities": 100,
+        "correction": 35,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Elementary derivative families",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Powers, exponential, logarithmic and trigonometric derivatives, radians",
+      "requires": "U05-L01",
+      "evidence": "Choose rule and domain",
+      "handover": "Products and quotients",
+      "id": "U05-L02",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "Within approved parent unit; teaching uncommissioned beyond U04",
+      "sections": [
+        {
+          "id": "M101-U05-L02-S01",
+          "number": "5.6",
+          "title": "Constants, sums and powers"
+        },
+        {
+          "id": "M101-U05-L02-S02",
+          "number": "5.7",
+          "title": "Negative and fractional powers"
+        },
+        {
+          "id": "M101-U05-L02-S03",
+          "number": "5.8",
+          "title": "The natural exponential and logarithm"
+        },
+        {
+          "id": "M101-U05-L02-S04",
+          "number": "5.9",
+          "title": "Trigonometric derivatives in radians"
+        },
+        {
+          "id": "M101-U05-L02-S05",
+          "number": "5.10",
+          "title": "Choosing a family and stating its domain"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 75,
+        "activities": 100,
+        "correction": 35,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Products and quotients",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Product/quotient rules with domains",
+      "requires": "U05-L02",
+      "evidence": "Explain rule selection",
+      "handover": "Composition",
+      "id": "U05-L03",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "Within approved parent unit; teaching uncommissioned beyond U04",
+      "sections": [
+        {
+          "id": "M101-U05-L03-S01",
+          "number": "5.11",
+          "title": "Why two changing factors need two terms"
+        },
+        {
+          "id": "M101-U05-L03-S02",
+          "number": "5.12",
+          "title": "Using and checking the product rule"
+        },
+        {
+          "id": "M101-U05-L03-S03",
+          "number": "5.13",
+          "title": "Deriving the quotient rule"
+        },
+        {
+          "id": "M101-U05-L03-S04",
+          "number": "5.14",
+          "title": "Simplification and domain preservation"
+        },
+        {
+          "id": "M101-U05-L03-S05",
+          "number": "5.15",
+          "title": "Choosing a route through a calculation"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 75,
+        "activities": 100,
+        "correction": 35,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "The chain rule",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Composition, inner and outer changes",
+      "requires": "U05-L03",
+      "evidence": "Nested derivative with reasoning",
+      "handover": "Implicit relations",
+      "id": "U05-L04",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "Within approved parent unit; teaching uncommissioned beyond U04",
+      "sections": [
+        {
+          "id": "M101-U05-L04-S01",
+          "number": "5.16",
+          "title": "A change passed through another function"
+        },
+        {
+          "id": "M101-U05-L04-S02",
+          "number": "5.17",
+          "title": "Reading inner and outer functions"
+        },
+        {
+          "id": "M101-U05-L04-S03",
+          "number": "5.18",
+          "title": "Nested chains and powers of functions"
+        },
+        {
+          "id": "M101-U05-L04-S04",
+          "number": "5.19",
+          "title": "Combining chain, product and quotient rules"
+        },
+        {
+          "id": "M101-U05-L04-S05",
+          "number": "5.20",
+          "title": "Dimensional arguments and derivative checks"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 75,
+        "activities": 100,
+        "correction": 35,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Implicit and second derivatives",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Implicit differentiation, second derivatives",
+      "requires": "U05-L04",
+      "evidence": "Differentiate a relation and interpret order",
+      "handover": "Numerical checks",
+      "id": "U05-L05",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "Within approved parent unit; teaching uncommissioned beyond U04",
+      "sections": [
+        {
+          "id": "M101-U05-L05-S01",
+          "number": "5.21",
+          "title": "Differentiating a relation"
+        },
+        {
+          "id": "M101-U05-L05-S02",
+          "number": "5.22",
+          "title": "Tangents, branches and exceptional points"
+        },
+        {
+          "id": "M101-U05-L05-S03",
+          "number": "5.23",
+          "title": "Second derivatives as new rates"
+        },
+        {
+          "id": "M101-U05-L05-S04",
+          "number": "5.24",
+          "title": "Differentiating an implicit derivative again"
+        },
+        {
+          "id": "M101-U05-L05-S05",
+          "number": "5.25",
+          "title": "Smooth joins and limits of the rules"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 75,
+        "activities": 100,
+        "correction": 35,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Checking derivative calculations",
+      "hours": 4,
+      "pythonHours": 2,
+      "purpose_scope": "Independent scalar checks; cumulative exercises/reference/conclusion",
+      "requires": "U05-L05; P101 scalar/functions",
+      "evidence": "Written and computational comparisons",
+      "handover": "U06",
+      "id": "U05-L06",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "Within approved parent unit; teaching uncommissioned beyond U04",
+      "sections": [
+        {
+          "id": "M101-U05-L06-S01",
+          "number": "5.26",
+          "title": "A calculation needs a different check"
+        },
+        {
+          "id": "M101-U05-L06-S02",
+          "number": "5.27",
+          "title": "A scalar Python investigation"
+        },
+        {
+          "id": "M101-U05-L06-S03",
+          "number": "5.28",
+          "title": "Reading agreement and disagreement"
+        },
+        {
+          "id": "M101-U05-L06-S04",
+          "number": "5.29",
+          "title": "Unit exercises"
+        },
+        {
+          "id": "M101-U05-L06-S05",
+          "number": "5.30",
+          "title": "Conclusion and reference"
+        }
+      ],
+      "allocationMinutes": {
+        "reading": 25,
+        "python": 120,
+        "closingAttempts": 30,
+        "closingCorrection": 45,
+        "referenceConclusion": 20
+      }
+    }
+  ],
+  "closingBudget": {
+    "attempts": 180,
+    "correction": 45,
+    "referenceAndConclusion": 20
+  },
+  "boundaries": "No ODE solving, multivariable calculus, optimisation or systematic numerical error theory; U06 and U07 retain their roles. P101 Unit1 scalar function/loop readiness for code. No plotting induction required. No learner mastery inferred.",
+  "mediaPlan": "L01 Goldstone instrument photograph plus original secants, tangent and corner diagrams; L02 waveform and exponential graphs with existing solar-array context image if verified; L03 changing rectangle and quotient diagram with actual telescope aperture context; L04 composition map with existing calibration photograph; L05 circle/ellipse and slope/second-rate figures with carefully qualified dish photo return; L06 comparison/error charts and investigated data, returning to actual instrumentation. Search and inspect actual assets/rights; static diagrams where simultaneous comparison best; secant explorer considered with Active Calculus activity comparator. Videos considered only if actual content can be inspected and adds value.",
+  "timingLimitation": "Editorial estimates, not measured learner times.",
+  "reviewStatus": {
+    "L01": "complete locally; see lesson and whole-unit records",
+    "L02": "complete locally; see lesson and whole-unit records",
+    "L03": "complete locally; see lesson and whole-unit records",
+    "L04": "complete locally; see lesson and whole-unit records",
+    "L05": "complete locally; see lesson and whole-unit records",
+    "L06": "complete locally; see lesson and whole-unit records",
+    "closing": "complete locally; see lesson and whole-unit records",
+    "wholeUnit": "complete locally; see lesson and whole-unit records"
+  }
+}

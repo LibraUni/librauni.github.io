@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U05 L01",
+  "status": "Local lesson review complete before drafting L02; final integrated release checks still due",
+  "standard": "v1.10; fixed opening v0.4 and U04 closing read",
+  "subject": "Independently expanded quadratic/linear/reciprocal and sensor quotients; symbolic limits for five functions passed. Checked all activity values, dimensions, offset domains, two-sided corners, vertical-tangent failure and differentiability-implies-continuity reasoning. Figures computed from their stated formulas.",
+  "reader": "Continuous read: explicit supplied-model status, distinction of numerical coordinates from physical units, both subtraction orders, general centre held fixed, missing point versus limit. Corrected photograph dimensions to actual 1280x853 source rendition. Clarified equal-time weighting in Example5.1 and endpoint convention before failure examples.",
+  "visual": "Eight width/theme browser cases, source text equality, keyboard disclosure, no-JS and 200% zoom proxy passed. Viewed three complete graph/caption renders, worked example and mobile dark opening. Goldstone actual image inspected. Native fractions, derivative primes and units rendered.",
+  "media": "Unit opening provides verified Goldstone instrument photograph, with lesson graphs supporting the following detailed argument. This opening-plus-first-lesson reading journey deliberately uses one contextual photograph and three diagrams; not an exemption for later lessons. No private OU assets copied. Static side-by-side secants selected over animation after inspecting Active Calculus1.1 Activity1.1.2; Python in L06 supplies manipulation.",
+  "comparators": {
+    "5.1": "OU MST224 U1 §5.1 printed p38 linear/nonlinear rates; Active Calculus §1.1.2/Activity1.1.2. Original carriage and volume tasks; OU is compressed revision requiring expanded scaffolding.",
+    "5.2": "OU p39 Figure26/definition with two-sided margin condition; Active Calculus1.1.3; OpenStax3.1 difference quotient and Examples3.1–3.4. Adds exact offset-error relationship from taught U04.",
+    "5.3": "OU pp39–40 definition/notational discussion; OpenStax3.2 derivative-function exposition. Our full reciprocal/affine derivations preserve restrictions.",
+    "5.4": "OU pp38–40 graph rate and notation; OpenStax3.1 tangent interpretation. Sensor model and units are original synthesis.",
+    "5.5": "OpenStax3.2 differentiability and continuity discussion/absolute-value example; OU p39 two-sided condition. Vertical tangent finite-value convention made explicit."
+  },
+  "practice": "Actual OU25–27 inspected; they require chain rules not yet taught, so first lesson uses definition-only original tasks. Active Calculus1.1.2 supports rate/graph/units comparison. No lesson-end exercise set; 30min reserved closing attempts.",
+  "workload": "75reading+100activities+35correction+30reservedclosing=240min; editorial estimate not timed student study.",
+  "limitations": "Author review with independent computational routes and rendered checks, not independent human review or student testing.",
+  "whole_unit_followup": "During unit review, added verified Curiosity panorama to L01 for path versus position-time distinction, strengthening the visual reading journey beyond the unit-opening instrument photo. Unpublished figure sequence adjusted before release; all affected rendered pages rechecked. No existing published ID changed."
+}

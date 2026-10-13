@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U05 L05",
+  "status": "Local review complete before L06; unit closing and release reviews pending",
+  "subject": "Nine symbolic derivative stages and separate explicit-branch checks of circle/ellipse/hyperbola second derivatives. Tangent point membership/slopes checked, circle equal-scale diagram and tangent equations independently calculated, cubic rate units/values checked, piecewise first and second quotient limits read separately.",
+  "reader": "Continuous read after L04. Branch assumption explicit, no assertion that every relation defines unique y(x). Zero denominator distinguished from 0/0 crossing; no inverse differentiability proof falsely claimed. Explained why substituting a point before second differentiation loses variation. Join uses actual value before branch slopes.",
+  "visual": "Eight viewport/theme cases, keyboard/no-JS/zoom proxy and source equality passed. Viewed circle branches/tangents, rate graph, Astrobee photo, derivative corner and piecewise worked example. Curves and labels agree; equal circle scales preserved.",
+  "comparators": {
+    "5.21": "OU MST224 U1 p45 implicit ellipse and Exercise32 p46. OpenStax3.8 local branch discussion and Example3.69. Our relation/tangent uses taught product/chain and explicitly checks membership.",
+    "5.22": "OpenStax3.8 circle branches; source displayed piecewise branch contains suspect bound25 where radius is5, not copied. Original crossing/vertical cases supply condition audit.",
+    "5.23": "OU pp40\u201342 higher derivatives, time dots, Exercises25/27; OpenStax3.2 higher-order derivatives. Original cubic separates zero acceleration from zero velocity.",
+    "5.24": "OpenStax3.8 Example3.70 second implicit derivative, whose annotation incorrectly says d/dy during an x derivative; our text uses x consistently. Hyperbola/ellipse checked by explicit branches.",
+    "5.25": "OpenStax3.2 differentiable piecewise example/checkpoint3.8; Unit4 join teaching. Original first-versus-second join synthesis with one-sided quotient feedback."
+  },
+  "workload": "75reading+100activities+35correction+30closing reservation=240min, unmeasured estimates.",
+  "limitations": "Author/self review and independent calculations, not independent human/student review. No implicit-function theorem or multivariable/ODE methods introduced."
+}

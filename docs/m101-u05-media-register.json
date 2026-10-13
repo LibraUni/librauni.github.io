@@ -1,0 +1,88 @@
+{
+  "inspected": "2026-10-13",
+  "photos": [
+    {
+      "figure": "m101-u05-fig-1",
+      "page": "unit5.html",
+      "file": "public/teaching/m101/u05-goldstone.jpg",
+      "caption": "Figure 5.1 · Instruments follow a changing geometry. Antennas at NASA's Goldstone Deep Space Network complex, photographed in February 2020. Tracking a spacecraft involves changing positions and directions. This photograph supplies an instrument setting, not measurements for the simplified rate models used in this unit. Credit: Courtesy NASA/JPL-Caltech, PIA23214. Image source · Reuse terms . Unmodified source rendition; display scaling only. No endorsement implied.",
+      "sourceAndTerms": [
+        "https://science.nasa.gov/photojournal/nasas-deep-space-network-goldstone-complex/",
+        "https://www.jpl.nasa.gov/jpl-image-use-policy/"
+      ],
+      "sha256": "9b026d36a1fe166163e8ba4796f4a38be442af4eb7bb28c21265d3bf81f74380"
+    },
+    {
+      "figure": "m101-u05-fig-2",
+      "page": "unit5-lesson1.html",
+      "file": "public/teaching/m101/curiosity-tracks.jpg",
+      "caption": "Figure 5.2 · A path does not specify a rate. Curiosity's navigation-camera panorama from 8 June 2023 records tracks left while backing up and repositioning near an obstacle. Tracks reveal a route, but the image alone does not tell us the elapsed time between chosen positions. Credit: NASA/JPL-Caltech, PIA26015. Source and description · Reuse terms . Unmodified panorama, scaled for display.",
+      "sourceAndTerms": [
+        "https://science.nasa.gov/photojournal/curiosity-views-its-tracks-using-its-navcam/",
+        "https://www.jpl.nasa.gov/jpl-image-use-policy/"
+      ],
+      "sha256": "beb94039a191962958c6a9721f9908bf654bb50f0571c297cd310e68e9e52715"
+    },
+    {
+      "figure": "m101-u05-fig-9",
+      "page": "unit5-lesson2.html",
+      "file": "public/teaching/m101/iss-solar-arrays.jpg",
+      "caption": "Figure 5.9 · A surface and incoming light. ISS solar arrays, photographed by the Expedition 40 crew in August 2014. Revisited from Unit 2: the panels provide a setting for considering a projected area and how that area changes with angle. Perspective does not supply a measured angle or a power curve. Credit: NASA / Expedition 40 crew, ISS040-E-087239. Source · NASA reuse terms . Existing recompressed image; no geometric alterations.",
+      "sourceAndTerms": [
+        "https://www.nasa.gov/image-article/space-station-solar-arrays/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "sha256": "37499aee1fa7d1c96eae4bef1a9ebdcee41d346a2c5525308d65256b32ced52a"
+    },
+    {
+      "figure": "m101-u05-fig-11",
+      "page": "unit5-lesson3.html",
+      "file": "public/teaching/m101/u05-goldstone.jpg",
+      "caption": "Figure 5.11 · An instrument suggests more than one changing factor. The Goldstone photograph from the unit opening returns here as a setting for a deliberately simplified collection model. No receiving area, illumination or measured power is extracted from the image. Credit: Courtesy NASA/JPL-Caltech, PIA23214. Source · Reuse terms . Unmodified rendition.",
+      "sourceAndTerms": [
+        "https://science.nasa.gov/photojournal/nasas-deep-space-network-goldstone-complex/",
+        "https://www.jpl.nasa.gov/jpl-image-use-policy/"
+      ],
+      "sha256": "9b026d36a1fe166163e8ba4796f4a38be442af4eb7bb28c21265d3bf81f74380"
+    },
+    {
+      "figure": "m101-u05-fig-15",
+      "page": "unit5-lesson4.html",
+      "file": "public/teaching/m101/u04-calibration.jpg",
+      "caption": "Figure 5.15 · Which variable is changing? NIST thermometer calibration, revisited from Unit 4. A temperature, an instrument reading and a displayed output can be related by different functions. Their derivatives refer to different pairs of variables; converting between rates requires the corresponding local conversion factor. Credit: NIST, 11PML009, 2011. Source · Reuse terms . Unmodified; US-government work, with NIST's foreign-copyright qualification retained.",
+      "sourceAndTerms": [
+        "https://www.nist.gov/image/thermometermercuryjpg",
+        "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications"
+      ],
+      "sha256": "f91f5d16a21561f85bb43fc05b2e323d24ef0d72a90bcf98912eb7ab9e14f4b9"
+    },
+    {
+      "figure": "m101-u05-fig-18",
+      "page": "unit5-lesson5.html",
+      "file": "public/teaching/m101/astrobee.jpg",
+      "caption": "Figure 5.18 · A position is not a velocity or an acceleration. An Astrobee robot aboard the International Space Station in May 2023. The scene, revisited from Unit 1, is a reminder of three different descriptions of motion. One photograph cannot determine a velocity or acceleration; our cubic model is not a reconstruction of this robot's trajectory. Credit: NASA, ISS069-E-010815. Source · NASA reuse terms . Unaltered image, scaled for display.",
+      "sourceAndTerms": [
+        "https://www.nasa.gov/technology/robotics/nasa-seeks-input-for-astrobee-free-flying-space-robots/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "sha256": "75ad4be707c27921ce64b50990c9e36b0b7a6ce2816a2fdcacffbbfd36e33e40"
+    },
+    {
+      "figure": "m101-u05-fig-20",
+      "page": "unit5-lesson6.html",
+      "file": "public/teaching/m101/u04-johnson.jpg",
+      "caption": "Figure 5.20 · Verification is a mathematical task. Katherine Johnson at NASA Langley in 1966. NASA's account describes her verification of electronic-computer calculations for John Glenn's orbital flight. Our small investigation is an exercise in checking a model calculation, not a reconstruction of that orbital work. Credit: NASA, 1966-L-06717. Source and historical context · NASA reuse terms . Existing teaching image, scaled for display.",
+      "sourceAndTerms": [
+        "https://www.nasa.gov/image-detail/1-1966-l-06717_2/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "sha256": "36e1061c81df52576f35a0974807bbb27647b403da7fd06619d2c92e24605070"
+    }
+  ],
+  "rights": "NASA/JPL credit retained under image-use policy, no endorsement or logo claim. NASA images retain agency media terms. NIST11PML009/Dawn Cross government-image status and possible foreign-copyright qualification retained; no blanket CC relicensing of third-party material.",
+  "modifications": "Goldstone new NASA1280x853 source rendition. Other photo files reused byte-for-byte from previous verified lessons; no geometric/content alterations. Display scaling only in U05.",
+  "original_diagrams": "Thirteen original SVG figures, CC BY-NC-SA4.0. Function/derivative curves, secants/tangents, product increment, chain stages, circle branches and second-rate graphs checked against formulas. Captions state model and domain/scale limitations; colours accompanied by labels/dashes.",
+  "interactive_decision": "ActiveCalculus1.1 secant/velocity exploration inspected. Static comparisons keep both signs, branches and rates visible together; two-hour learner-controlled Python investigation tests an actual error and domain/rounding limits. No additional animation selected. This is an explicit selection after planning, not an exemption from media richness.",
+  "video_decision": "Video opportunity considered for tangent motion; no video recommended because no inspected candidate added a necessary perspective beyond original diagrams and the investigation. No claim that a video was watched.",
+  "review": "Source pages and terms inspected; actual assets viewed. New Goldstone and existing NASA/NIST images checked against specific source descriptions. All7 teaching fragments pass structural media audit. Human visual inspection complements the structural check."
+}

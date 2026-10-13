@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U05 L02",
+  "status": "Local review complete before L03; integrated release checks pending",
+  "subject": "19 independent symbolic derivatives passed; separately checked negative rational-power interpretation, x=0 boundary quotients, parameter constants, exp/log domains, radian factor and trigonometric exclusions. Stated elementary auxiliary limits as established results rather than pretending the proof was supplied.",
+  "reader": "Continuous read after L01. Delayed products/compositions requiring new rules. Clarified positive-base exponential b=1 versus invalid logarithm base1; numerical input convention and function/derivative domains separated. Revisited solar-array photograph with a new angular-rate question, no claimed electrical performance model.",
+  "visual": "Eight width/theme cases, no-JS, zoom proxy, keyboard feedback and source-text equality passed. Viewed root/exponential/sine diagrams, solar photograph/caption and fractional-power worked example. Visual review found draft Figure5.6 (final Figure5.7) title incorrectly called both functions positive, although ln(x)<0 below1. Corrected to Positive inputs, different slopes; graph values unchanged.",
+  "comparators": {
+    "5.6": "OU MST224 U1 pp39\u201340 linear combinations; OpenStax3.3 constant/sum/power proofs and Examples3.18\u20133.21. Adds first-principles justification before fluency.",
+    "5.7": "OpenStax3.3 power extension; OU p39 standard-family discussion is only summary, so rational-domain teaching expanded. Original cusp/endpoints tasks.",
+    "5.8": "OpenStax3.9 exponential-at-zero normalisation and inverse logarithm; OU pp39\u201342 standard derivatives/Exercises26\u201327. Chain-rule tasks deferred.",
+    "5.9": "OpenStax3.5 sine difference quotient proof, Figure3.25 and stated auxiliary limits; OU MST224 U1 §3.1 printed p24 supplies the inspected radian/unit-circle background.",
+    "5.10": "OU27(a\u2013e) original practice inspected, but its nested/composed cases are beyond this lesson; our original tasks restrict required operations to sums/families and ask recognition of the next step."
+  },
+  "workload": "75+100+35+30=240min; five activities total100, closing half-hour retained. Estimates unmeasured.",
+  "limitations": "Author review, not human peer review/student testing. Full real-exponent theory and auxiliary trigonometric-limit proofs not required; results labelled honestly."
+}

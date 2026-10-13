@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "date": "2026-10-13",
+  "rows": [
+    [
+      "Recall",
+      "Stationary / critical",
+      "Stationary: $f\\prime(c)=0$. Interior critical input: $f(c)$ exists and $f\\prime(c)=0$ or $f\\prime(c)$ does not exist. These are candidates, not classifications."
+    ],
+    [
+      "Understand",
+      "Increasing / decreasing",
+      "On an interval: $f\\prime&gt;0$ gives strict increase; $f\\prime&lt;0$ gives strict decrease; $f\\prime\\ge0$ gives nondecrease. Require differentiability inside and continuity at included endpoints. Do not bridge a domain gap."
+    ],
+    [
+      "Recall",
+      "First-derivative test",
+      "At continuous interior candidate $c$, neighbouring derivative signs $+\\to-$ give a local maximum; $-\\to+$ a local minimum; unchanged nonzero signs give neither."
+    ],
+    [
+      "Recall",
+      "Concavity / inflection",
+      "$f\\prime\\prime&gt;0$: slopes increase, concave up. $f\\prime\\prime&lt;0$: slopes decrease, concave down. Inflection: change of concavity through a continuous graph point. $f\\prime\\prime(c)=0$ alone is insufficient."
+    ],
+    [
+      "Recall",
+      "Second-derivative test",
+      "$f\\prime(c)=0$; $f$ differentiable nearby; $f\\prime\\prime(c)$ exists. Positive: local minimum; negative: local maximum; zero: inconclusive."
+    ],
+    [
+      "Understand",
+      "Absolute extrema",
+      "Continuous $f$ on closed bounded $[a,b]$ attains maximum and minimum. Compare all interior critical values and both endpoint values. Keep ties. A limiting value need not be attained."
+    ],
+    [
+      "Consult",
+      "Related rates",
+      "Choose a model and signed rates; identify fixed quantities. Differentiate with respect to the common time before inserting instantaneous values. Chain/product rules retain every changing factor. Check units and validity."
+    ],
+    [
+      "Consult",
+      "Rate relations",
+      "$A=ab:\\ \\dot A=b\\dot a+a\\dot b$. $d^2=x^2+y^2:\\ d\\dot d=x\\dot x+y\\dot y$. Fixed-radius sphere: $V=\\pi h^2(R-h/3)$, $\\dot V=\\pi h(2R-h)\\dot h$, $0&lt;h&lt;2R$. Constant $pV:\\ V\\dot p+p\\dot V=0$ (absolute pressure)."
+    ],
+    [
+      "Understand",
+      "Mean value theorem",
+      "Continuous on $[a,b]$, differentiable on $(a,b)$, $a&lt;b$:$${f\\prime(c)=\\frac{f(b)-f(a)}{b-a}},\\quad a&lt;c&lt;b.$$ At least one match; not necessarily unique or at the midpoint."
+    ],
+    [
+      "Recall",
+      "Consequences on an interval",
+      "$f\\prime=0\\Rightarrow f$ constant; $f\\prime=g\\prime\\Rightarrow f-g$ constant. With MVT hypotheses, $m\\le f\\prime\\le M$ gives $m(b-a)\\le f(b)-f(a)\\le M(b-a)$."
+    ],
+    [
+      "Understand",
+      "Plot audit",
+      "Function/domain ≠ sample list ≠ displayed line. Record spacing and limits. Separate domain components. Check derivative evidence. Finite sampling cannot generally certify every feature."
+    ]
+  ],
+  "python": "import numpy as np\nimport matplotlib.pyplot as plt\nx = np.linspace(0, 1, 401)  # endpoints included; 400 gaps\ny = x + 0.08 * np.sin(20 * np.pi * x)  # radians\nplt.plot(x, y, \"o-\")       # markers plus connecting segments\nplt.xlim(0, 1); plt.ylim(-0.15, 1.15)\nplt.xlabel(\"x (dimensionless)\"); plt.ylabel(\"f(x) (dimensionless)\")\nplt.show()\n# Change n in linspace to change samples; limits change the view.\n# For a domain gap, plot the two component arrays separately.",
+  "notation": "Notation: primes refer to the displayed input; dots to time. $a,b$ denote endpoints or panel sides as labelled; $c$ an interior input; $R$ a fixed radius; $h$ depth; $p$ absolute pressure; $V$ volume. A rate has output units per input unit."
+}

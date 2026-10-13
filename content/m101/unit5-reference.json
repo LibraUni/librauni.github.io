@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "date": "2026-10-13",
+  "rows": [
+    [
+      "Understand",
+      "Derivative",
+      "$$f\\prime(a)=\\lim_{h\\to0}\\frac{f(a+h)-f(a)}{h}.$$ Require a finite limit from both sides at an interior point and $f(a)$ defined. At an endpoint specify an inward derivative. Differentiability implies continuity, not conversely."
+    ],
+    [
+      "Recall",
+      "Meaning and notation",
+      "$f\\prime(x)=\\mathrm df/\\mathrm dx$: instantaneous output/input rate. Tangent: $y-f(a)=f\\prime(a)(x-a)$. If output has units $U$ and input $X$, derivative units are $U/X$."
+    ],
+    [
+      "Recall",
+      "Linear combinations",
+      "$(c)\\prime=0$, $(cf+dg)\\prime=cf\\prime+dg\\prime$ for constants $c,d$ and differentiable functions $f$ and $g$."
+    ],
+    [
+      "Recall",
+      "Powers",
+      "$(x^n)\\prime=nx^{n-1}$. Integer powers: all real inputs except $x=0$ for negative powers; a constant is differentiated directly. Real powers: use $x&gt;0$; investigate any additional real-domain points separately. $(\\sqrt x)\\prime=1/(2\\sqrt x)$ for $x&gt;0$."
+    ],
+    [
+      "Recall",
+      "Exponential and log",
+      "$(e^x)\\prime=e^x$; $(a^x)\\prime=a^x\\ln a$ for $a&gt;0$. $(\\ln x)\\prime=1/x$ for $x&gt;0$; $(\\log_a x)\\prime=1/(x\\ln a)$ for $a&gt;0$, $a\\ne1$, $x&gt;0$."
+    ],
+    [
+      "Recall",
+      "Trigonometric",
+      "$(\\sin x)\\prime=\\cos x$, $(\\cos x)\\prime=-\\sin x$, $(\\tan x)\\prime=1/\\cos^2x$ where $\\cos x\\ne0$. Arguments in radians."
+    ],
+    [
+      "Recall",
+      "Product and quotient",
+      "$$(fg)\\prime=f\\prime g+fg\\prime,\\qquad \\left(\\frac f g\\right)\\prime=\\frac{f\\prime g-fg\\prime}{g^2}.$$ Both factors differentiable; quotient requires $g\\ne0$."
+    ],
+    [
+      "Understand",
+      "Chain rule",
+      "$$\\frac{\\mathrm d}{\\mathrm dx}F(g(x))=F\\prime(g(x))g\\prime(x).$$ Require $g$ differentiable at $x$ and $F$ at $g(x)$. Evaluate each derivative at its own input. Retain every layer and its domain."
+    ],
+    [
+      "Consult",
+      "Implicit derivatives",
+      "On a differentiable branch $y=y(x)$, $(y^n)\\prime=ny^{n-1}y\\prime$, $(xy)\\prime=y+xy\\prime$. Collect $y\\prime$ terms; divide only by a nonzero coefficient. Verify the point on the original relation. An exceptional denominator needs investigation."
+    ],
+    [
+      "Understand",
+      "Second derivative",
+      "$f\\prime\\prime=(f\\prime)\\prime=\\mathrm d^2f/\\mathrm dx^2$, not $(f\\prime)^2$. Units $U/X^2$. Keep $y$ dependent when differentiating implicitly again. Substitute a point after differentiating."
+    ],
+    [
+      "Consult",
+      "Joins and exclusions",
+      "For smoothly extendible branch formulas, first match function values, then one-sided slopes. Matching first derivatives need not give a second derivative. Cancellation does not fill a hole in the original domain."
+    ],
+    [
+      "Understand",
+      "Checking",
+      "Use a different algebraic route, units and varied inputs. A finite secant $(f(x+h)-f(x))/h$ is not generally an exact derivative. Both offset signs matter. Finite agreement is evidence, not proof; tiny offsets can cause rounding problems."
+    ]
+  ],
+  "python": "from math import exp, isfinite\nx, h = 1.0, 0.01  # dimensionless test input and offset\nif not isfinite(x) or not isfinite(h):\n    raise ValueError(\"Use finite inputs\")\nif h == 0 or x + h == x:\n    raise ValueError(\"Choose a representable nonzero offset\")\nf0, f1 = x*x*exp(-x), (x+h)**2*exp(-(x+h))\nprint(\"secant\", (f1-f0)/h)\nprint(\"derivative\", exp(-x)*(2*x-x*x))"
+}

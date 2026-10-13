@@ -1,0 +1,260 @@
+{
+  "date": "2026-10-13",
+  "standard": "Teaching Standard and Practice v1.10; fixed illustrated M101 opening v0.4",
+  "scope": "All five lessons sequentially locally; closing and whole-unit review; publish only after required checks",
+  "policy": "construction-policy v1.0; section-authoring gate met by complete B02 lesson blueprint and this section plan",
+  "parents": [
+    "curriculum/m101-units.js",
+    "curriculum/m101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/later-stage-audit.js",
+    "docs/m101-block2-lesson-blueprint.json"
+  ],
+  "hours": 18,
+  "pythonHours": 2,
+  "lessons": [
+    {
+      "title": "Increase, decrease and stationary points",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Derivative signs and stationary points",
+      "requires": "U05",
+      "evidence": "Sign analysis with hypotheses",
+      "handover": "Concavity",
+      "id": "U06-L01",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "No multivariable differentiation, general optimisation algorithms, ODE solving or proof-based real analysis. U07 retains numerical differentiation and local linear approximation. P101 array/plot readiness required before the two-hour Python investigation; no learner attainment inferred.",
+      "sections": [
+        {
+          "id": "M101-U06-L01-S01",
+          "number": "6.1",
+          "title": "What increasing means"
+        },
+        {
+          "id": "M101-U06-L01-S02",
+          "number": "6.2",
+          "title": "From a derivative to an interval"
+        },
+        {
+          "id": "M101-U06-L01-S03",
+          "number": "6.3",
+          "title": "Stationary points are candidates"
+        },
+        {
+          "id": "M101-U06-L01-S04",
+          "number": "6.4",
+          "title": "A sign chart is an argument"
+        },
+        {
+          "id": "M101-U06-L01-S05",
+          "number": "6.5",
+          "title": "Domain boundaries and missing derivatives"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 80,
+        "activities": 90,
+        "correction": 40,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Concavity and extrema",
+      "hours": 4,
+      "pythonHours": 0,
+      "purpose_scope": "Second derivative, critical points and endpoints",
+      "requires": "U06-L01",
+      "evidence": "Classify extrema on specified domains",
+      "handover": "Related rates",
+      "id": "U06-L02",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "No multivariable differentiation, general optimisation algorithms, ODE solving or proof-based real analysis. U07 retains numerical differentiation and local linear approximation. P101 array/plot readiness required before the two-hour Python investigation; no learner attainment inferred.",
+      "sections": [
+        {
+          "id": "M101-U06-L02-S01",
+          "number": "6.6",
+          "title": "How the slope changes"
+        },
+        {
+          "id": "M101-U06-L02-S02",
+          "number": "6.7",
+          "title": "Inflection requires a change of concavity"
+        },
+        {
+          "id": "M101-U06-L02-S03",
+          "number": "6.8",
+          "title": "The second-derivative test"
+        },
+        {
+          "id": "M101-U06-L02-S04",
+          "number": "6.9",
+          "title": "Absolute extrema on a closed interval"
+        },
+        {
+          "id": "M101-U06-L02-S05",
+          "number": "6.10",
+          "title": "Choosing the right conclusion"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 80,
+        "activities": 90,
+        "correction": 40,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Related rates",
+      "hours": 3,
+      "pythonHours": 0,
+      "purpose_scope": "Supplied physical models and units",
+      "requires": "U06-L02",
+      "evidence": "Explain rate relation",
+      "handover": "Mean value",
+      "id": "U06-L03",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "No multivariable differentiation, general optimisation algorithms, ODE solving or proof-based real analysis. U07 retains numerical differentiation and local linear approximation. P101 array/plot readiness required before the two-hour Python investigation; no learner attainment inferred.",
+      "sections": [
+        {
+          "id": "M101-U06-L03-S01",
+          "number": "6.11",
+          "title": "Two quantities, one clock"
+        },
+        {
+          "id": "M101-U06-L03-S02",
+          "number": "6.12",
+          "title": "Geometry before numbers"
+        },
+        {
+          "id": "M101-U06-L03-S03",
+          "number": "6.13",
+          "title": "Two changing lengths"
+        },
+        {
+          "id": "M101-U06-L03-S04",
+          "number": "6.14",
+          "title": "Rates in a supplied physical model"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 60,
+        "activities": 65,
+        "correction": 25,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "The mean-value idea",
+      "hours": 3,
+      "pythonHours": 0,
+      "purpose_scope": "Statement, hypotheses and counterexamples",
+      "requires": "U06-L03",
+      "evidence": "Check assumptions and interpret conclusion",
+      "handover": "Graph audit",
+      "id": "U06-L04",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "No multivariable differentiation, general optimisation algorithms, ODE solving or proof-based real analysis. U07 retains numerical differentiation and local linear approximation. P101 array/plot readiness required before the two-hour Python investigation; no learner attainment inferred.",
+      "sections": [
+        {
+          "id": "M101-U06-L04-S01",
+          "number": "6.15",
+          "title": "A tangent parallel to a secant"
+        },
+        {
+          "id": "M101-U06-L04-S02",
+          "number": "6.16",
+          "title": "Why the hypotheses matter"
+        },
+        {
+          "id": "M101-U06-L04-S03",
+          "number": "6.17",
+          "title": "From local rates to interval claims"
+        },
+        {
+          "id": "M101-U06-L04-S04",
+          "number": "6.18",
+          "title": "Bounds and what the theorem does not say"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 60,
+        "activities": 65,
+        "correction": 25,
+        "reservedClosingAttempts": 30
+      }
+    },
+    {
+      "title": "Reading the shape critically",
+      "hours": 4,
+      "pythonHours": 2,
+      "purpose_scope": "Graph sampling/window audit and cumulative closing resources",
+      "requires": "U06-L04; P101 array/plot readiness",
+      "evidence": "Analytic versus plotted claims",
+      "handover": "U07",
+      "id": "U06-L05",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "boundary": "No multivariable differentiation, general optimisation algorithms, ODE solving or proof-based real analysis. U07 retains numerical differentiation and local linear approximation. P101 array/plot readiness required before the two-hour Python investigation; no learner attainment inferred.",
+      "sections": [
+        {
+          "id": "M101-U06-L05-S01",
+          "number": "6.19",
+          "title": "What a plotting program actually draws"
+        },
+        {
+          "id": "M101-U06-L05-S02",
+          "number": "6.20",
+          "title": "A controlled graph investigation"
+        },
+        {
+          "id": "M101-U06-L05-S03",
+          "number": "6.21",
+          "title": "Reconciling analytical and numerical evidence"
+        },
+        {
+          "id": "M101-U06-L05-S04",
+          "number": "6.22",
+          "title": "Unit exercises"
+        },
+        {
+          "id": "M101-U06-L05-S05",
+          "number": "6.23",
+          "title": "Conclusion and reference"
+        }
+      ],
+      "allocationMinutes": {
+        "readingExamples": 60,
+        "pythonInvestigation": 120,
+        "closingCorrection": 40,
+        "referenceConclusion": 20
+      }
+    }
+  ],
+  "closingBudget": {
+    "attempts": 120,
+    "correction": 40,
+    "referenceConclusion": 20
+  },
+  "boundaries": "No multivariable differentiation, general optimisation algorithms, ODE solving or proof-based real analysis. U07 retains numerical differentiation and local linear approximation. P101 array/plot readiness required before the two-hour Python investigation; no learner attainment inferred.",
+  "mediaPlan": "Original linked function/derivative graphs, sign charts, concavity comparisons, domain endpoints, geometry and secant/tangent diagrams. Source and inspect water-tower photograph for model-versus-object context; revisit verified NASA motion imagery where purposeful. Python manipulation provides sampling/window exploration; no decorative animation or unverified video.",
+  "limitations": "Study-time estimates are editorial, not measured learner data."
+}
