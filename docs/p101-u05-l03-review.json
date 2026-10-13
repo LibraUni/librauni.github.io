@@ -1,0 +1,18 @@
+{
+  "lesson": "U05-L03",
+  "date": "2026-10-13",
+  "disposition": "Local subject/reader/layout review passed; copy/download final checks carried to whole-unit review",
+  "comparators": {
+    "5.11": "UniversityPhysics1 \u00a713.1 force law, interaction recipients and spherical-body conditions. Ex13.1 inspected; no approximate collision-time method imported.",
+    "5.12": "NASA Microgravity actual explanation; P101U04 support/weight distinction; original altitude ratios.",
+    "5.13": "UniversityPhysics1 \u00a713.4 CircularOrbits equations13.7\u20138, Fig13.12 and CheckYourUnderstanding13.7. No energy/escape or general Kepler derivation imported.",
+    "5.14": "Same13.4 Ex13.9/13.10 and CYU13.6 for hand/ratio demand; new numerical benchmark and explicit centre/altitude distinctions.",
+    "5.15": "P101U01 array prerequisite; original software verification sequence based on independently predicted factors."
+  },
+  "reader": "Continuous read: force contributions distinguished from total lab acceleration; gravity versus support reading, fixed-source approximation, units of mu versus mu_s, direction as well as speed condition. Notebook tasks state arithmetic scenario evaluation rather than time integration.",
+  "subject": "109 mathematical/XML checks; scalar/vector factors and altitude calculations independently checked; published companion runs with expected outputs.",
+  "visual": "8width/theme cases with all feedback open; math and diagrams inspected; keyboard/noJS/zoom proxy and source equality pass. ISS actual photograph inspected and credited.",
+  "workload": "60explanation+90written+60Python+30feedback=240min. Notebook/script alternative versions of same60min task.",
+  "limitations": "Author self-review, not external peer/student review. Notebook full execution and exact code-copy checked at unit closure.",
+  "executable_resources": "Both notebook and script executed successfully in clean local environment; source code matches web block. See notebook-results.json."
+}

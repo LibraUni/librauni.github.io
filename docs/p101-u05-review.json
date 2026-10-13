@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-13",
+  "decision": "All content, subject, reader, visual and resource checks passed locally; publication followed by live verification. CI security and test jobs must pass before the deployment job.",
+  "authority": "User directly requested local sequential development/review, closing resources, whole-unit review, then publication when all required checks pass. No reduced-standard exception requested or used.",
+  "standard": "Teaching Standard and Practice v1.10; fixed M101 illustrated reference v0.4; approved P101 Block2 lesson blueprint; policy1.0 recursive construction gates recorded in plan.",
+  "sequence": "Introduction and L01 -> local review -> L02 -> local review -> L03 -> local review -> L04 -> local review including both notebook runs -> L05 and closing resources -> local and whole-unit review. Later review corrections were then rechecked.",
+  "continuity": "Geometry and timing determine acceleration; actual force inventories test whether a circle can be sustained; gravitational field introduces centre distance; the gravity-only circular condition selects speed/period; controlled computational comparisons separate algebraic verification from evidence. Synthesis and mixed exercises return to the opening questions. No energy, general Kepler derivation, angular momentum, rotating-frame mechanics, calculus or orbit integration prerequisites imported.",
+  "coverage": {
+    "L01": "Speed/velocity, period/frequency/radians, finite vector changes, short-chord limiting reasoning, fixed-speed versus fixed-period controls. Exercises1\u20132.",
+    "L02": "Real interactions, static-friction capacity, geometry/components, local top/bottom tests, opposite contact constraints. Exercises3\u20135.",
+    "L03": "Pair recipients, spherical scope, field/altitude, support vs gravity, dominant fixed-source orbit, hand predictions. Exercises6\u20138.",
+    "L04": "Explicit input domain, independent benchmark, array/scalar controls, labels, model vs observation, limitations of coarse Moon values. Exercises8\u201310 plus2hour investigation.",
+    "L05": "Cross-scale synthesis, ten-minute misconception audit, ten cumulative exercises with hints/worked feedback, on-page reference, identical dedicated web reference and two-pagePDF, conclusion/handover."
+  },
+  "workload": "3+4+4+4+3=18h, Python1h+2h=3h; B02 unchanged72h/10Python. Introduction included L01; closing reference/context/conclusion35min + audit10 + exercise attempts90 +feedback45=180min. Notebook and script are alternatives. No extra assessment. Editorial timings, not measured learner timings.",
+  "subject": "All published example/activity/exercise solutions read and independently recomputed.558 named calculation/XML/structure checks across five lessons; both scripts executed, both notebooks clean-kernel executed, code equal to web;80 scenario/identity comparisons +9 invalid-input cases + Moon rounding check. Units, directions, force recipients, local-vs-global constraints and exact-vs-approximate domains checked.",
+  "reader": "Separate continuous reader review per lesson; worked steps and reasons retained. Whole-unit reread compared opening, transitions and conclusion and rechecked all examples/activities. Self-review by author, not external peer/student review.",
+  "visual": "All lessons: widths1440,900,390,320 in light/dark; all feedback open, all images loaded, uniqueIDs, MathML/SVG parse, keyboard feedback, no-JS and200%CSSzoom proxy. Figures, examples, important boxes and selected cumulative solutions visually inspected. Intro/reference extra12cases. Required offline reading copies14cases. These browser checks are not a screen-reader certification.",
+  "media": "17numbered figures across intro/lessons; photographs/scientific images from NASA and original diagrams/plots serve distinct teaching purposes. All actual assets inspected, source/processing/terms retained. Centrifuge revisited for mounting forces; EarthMoon revisited for observational limits. Europa low-detail candidate replaced by PIA19048. M101 visual standard retained including prose-led teaching, informative captions and occasional floated context. Reference-only lookup flag reviewed against explicit compact-table requirement; no narrative lesson substitutes an all-diagram layout for appropriate sourced imagery.",
+  "code_copy": "8Python blocks copied exactly via keyboard including indentation/newlines; blocks remain selectable without JS. Reference snippet requires explicitly assigned inputs as labelled.",
+  "closing": "Ten mixed exercises include calculation, explanation, sketch/inventory, error diagnosis, comparison, inverse inference and limits. All worked solutions independently checked.13reference entries and Python lookup generated from shared dataset;2PDF pages inspected after final change, logo/motto/version/date/license and links verified.",
+  "local_regression": "137site tests passed; full render/build/search succeeded;414internal links/anchors checked;10public files match built copies; all7unit pages indexed available. Earlier P101 teaching hashes unchanged. Unit6/7 stay outlines; no learner dates, records, completions or marks touched.",
+  "defects_resolved": [
+    "Cramped mobile reference replaced by responsive stacked rows.",
+    "Reference placed directly in closing lesson as required, while retaining separate lookup page.",
+    "Low-detail Europa image replaced and processing credits documented.",
+    "Notebook prompts spacing and placement repaired.",
+    "Explicitly labelled separate instantaneous top/bottom tests to avoid implying a compatible full trajectory.",
+    "Corrected double-altitude statement to say it need not double centre distance.",
+    "Added angular notation to compact reference.",
+    "Updated previous Unit4 regression boundary to Unit6 without weakening earlier teaching preservation."
+  ],
+  "optional_media": "Walter Fendt external simulation text, actual canvas, radius/period inputs, vector selectors and start/stop/reset inspected. Optional link only; required explanation self-contained. No video quota. Local static vector constructions and notebook plots suffice without adding a bespoke animated widget.",
+  "limitations": "Author editorial/subject review; no claim of external peer review, learner timing validation or precision observational test. Live checks recorded separately after CI deployment."
+}

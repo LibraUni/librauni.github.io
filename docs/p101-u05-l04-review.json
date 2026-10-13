@@ -1,0 +1,11 @@
+{
+  "lesson": "U05-L04",
+  "date": "2026-10-13",
+  "disposition": "Subject, reader, visual and executable-resource review passed before drafting L05",
+  "subject": "Independent 80 scenario/identity comparisons, 9 invalid-input cases and Moon rounded result passed. Both Unit5 notebooks executed from clean kernels and both scripts ran; notebook code equals web code. Structural MathML/SVG and workload checks passed.",
+  "reader": "Continuous source read: scalar versus array inputs and all/any explained, independent benchmarks distinguished from self-consistency and observation; hypothetical plots do not describe time evolution. Whole-day NASA comparison deliberately cannot establish a precision residual. Notebook prose spacing corrected; prompts now precede the relevant cells.",
+  "visual": "8 viewport/theme checks, all feedback open; original three-panel plot, worked example and narrow dark view inspected. Keyboard, no-JS, zoom proxy and source text equality passed.",
+  "comparators": "NumPy array/closeness documentation for numerical operations; NASA Moon facts actual distance/orbit/phase text; University Physics13.4 circular-model conditions previously inspected.",
+  "workload": "45 reading +45 written +120 Python +30 feedback =240minutes. No extra coding assignment.",
+  "limitations": "Author self-review, not external peer/student review. Exact browser clipboard and production-live checks remain whole-unit release gates."
+}

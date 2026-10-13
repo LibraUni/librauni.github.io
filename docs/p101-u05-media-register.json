@@ -1,0 +1,36 @@
+[
+  {
+    "file": "earth-moon.jpg",
+    "source": "https://science.nasa.gov/resource/the-earth-moon-system/",
+    "creator": "NASA",
+    "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "processing": "NASA enhanced colour/contrast from filter images; unmodified here",
+    "inspected": true
+  },
+  {
+    "file": "centrifuge.jpg",
+    "source": "https://images.nasa.gov/details/ACD21-0020-017",
+    "creator": "NASA/Dominic Hart",
+    "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "processing": "NASA medium derivative, unmodified",
+    "inspected": true
+  },
+  {
+    "file": "iss.jpg",
+    "source": "https://images.nasa.gov/details/s110e5075",
+    "creator": "NASA/STS110crew",
+    "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "date": "2002-04-09",
+    "processing": "NASA medium derivative, unmodified",
+    "inspected": true
+  },
+  {
+    "file": "europa.jpg",
+    "source": "https://science.nasa.gov/photojournal/europas-stunning-surface-2/",
+    "creator": "NASA/JPL-Caltech/SETI Institute",
+    "terms": "https://www.jpl.nasa.gov/jpl-image-use-policy/",
+    "processing": "PIA19048 filtered-image mosaic, colour correction and simulated gap colour per source; NASA2300x1700 derivative, unmodified here",
+    "inspected": true,
+    "editorial": "Replaced low-detail A79-7021 candidate after rendered review; surface shape contrasted with unknown trajectory. Educational reuse permitted including credited third-party JPL materials."
+  }
+]

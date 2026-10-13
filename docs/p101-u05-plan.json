@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-13",
+  "standard": "1.10; fixed M101 illustrated v0.4",
+  "authorisation": "User commissions all Unit5 locally, one lesson and review at a time; publish only after all required checks.",
+  "policy": "construction-policy1.0",
+  "gates": {
+    "block_peers": "All20 B02 lessons in curriculum/p101-block2-lessons.js carry purpose, scope/boundary, dependencies, budget, evidence, handover.",
+    "parents": "p101-units.js U05 18h/3Python; B02 72h/10Python; stage1 and degree architecture inherited unchanged.",
+    "section_blueprints": [
+      [
+        "Tangent velocity and an inward direction",
+        "Timing a revolution",
+        "Subtracting velocity vectors",
+        "From a short chord to radial acceleration",
+        "What is held fixed?"
+      ],
+      [
+        "A radial equation is a force inventory",
+        "A horizontal turn and friction capacity",
+        "Tension with two components",
+        "Top and bottom of a vertical circle",
+        "When the prescribed circle fails"
+      ],
+      [
+        "One attraction, two interacting bodies",
+        "Field strength and centre distance",
+        "Selecting a circular orbital speed",
+        "Period and a hand benchmark",
+        "An hour of computational scaling"
+      ],
+      [
+        "Build a transparent orbit function",
+        "Design two controlled comparisons",
+        "Read the plots without changing the question",
+        "Prediction, evidence and neglected effects"
+      ],
+      [
+        "Gravity across scales",
+        "Choosing a method and auditing a claim",
+        "Cumulative exercises",
+        "Reference and conclusion"
+      ]
+    ],
+    "disposition": "Construction ready after section plans; release pending all lessons and whole-unit checks."
+  },
+  "lesson_minutes": [
+    [
+      60,
+      90,
+      0,
+      30
+    ],
+    [
+      75,
+      135,
+      0,
+      30
+    ],
+    [
+      60,
+      90,
+      60,
+      30
+    ],
+    [
+      45,
+      45,
+      120,
+      30
+    ],
+    [
+      35,
+      100,
+      0,
+      45
+    ]
+  ],
+  "closing_budget": "L05 written100: exercises90 + audit10; feedback45; reading35 includes context10/reference15/conclusion10. No extra assessment.",
+  "outcomes": [
+    "P101-O1",
+    "P101-O6",
+    "P101-O7"
+  ],
+  "boundaries": "No ODE integration, Kepler-law derivation, rotating frames, relativity, energy or angular-momentum prerequisite.",
+  "prerequisites": "P101U04 forces/components and constant/variable acceleration; P101U01 arrays/functions/plots; M101U01/U02 vectors, trigonometry and algebra.",
+  "media_plan": [
+    "Opening Earth/Moon view: distance is centre-to-centre, apparent sizes are viewpoint-dependent. NASA candidate and terms.",
+    "L01 centrifuge photograph plus tangent/change-vector/chord diagrams; finite versus instantaneous explicitly separated.",
+    "L02 original interaction and capacity diagrams; reuse verified centrifuge context if appropriate, actively inspect an instrument image.",
+    "L03 satellite scientific image and gravity/circular-model diagrams.",
+    "L04 original comparative plots and supplied model data, contextual planetary image with reuse check.",
+    "L05 scale-context photograph and compact comparison diagram."
+  ],
+  "interactive_plan": "Consider static parameter explorer for speed/radius vs fixed period; inspect an undergraduate comparator before implementation. No animation or video unless inspected value justifies it.",
+  "source_plan": "Actual OU U4 Trigonometry pp4\u20137 \u00a71.1, Example1/Activity1 inspected; vector and proportion exposition from fixed sample and U04. CollegePhysics2e \u00a7\u00a76.2,6.3 plus problems10,13,19,21 inspected as level/practice comparators; independently repair finite-chord approximation and limiting-friction distinctions. Additional gravitational/observational sources to inspect before L03\u201305. No private OU mechanics chapter available; sources are comparators, original teaching required.",
+  "preservation": {
+    "content/p101/orientation.html": "6c22f928c4455ece93a8e52b0132ad6392d954f86c8b217ef46b23f206865bcf",
+    "content/p101/unit2-lesson5.html": "fdfa9689a6d20434a97761be17ddf46fb707bffe3704173df220ecf8f914c512",
+    "content/p101/lesson2.html": "a52efcd2b27e560fc3f45864110f24ac121eb934601feb685e8423f54e59a87f",
+    "content/p101/lesson.html": "964d9a5a35ced45f4ca26dbc9f0ef61d291a5942a8663f30e4714eb2e7382887",
+    "content/p101/unit3-lesson4.html": "cdea507ca47589db12236b57755ed76497681210a737334e21ed49cdaffff44e",
+    "content/p101/unit4-lesson4.html": "35fc774bc2717616bd40762662a5e7ba3d09a49959178de136078d44908fc1f7",
+    "content/p101/unit4-lesson5.html": "7a70cebe8440cca65a31ca456ed00b69fd354dbbdda5e326b696dcf1be551171",
+    "content/p101/unit3-lesson5.html": "ae9228b5d57e39cd5841f0aad73abe4428e30fcd4d72088be9adc8fddf3c733b",
+    "content/p101/lesson3.html": "6b173dd3ccbf581f179e58abb652d70002278fd942282c6b6fe399a9093dc601",
+    "content/p101/unit4.html": "b1749aea4e91d0649294dbe7538b793f8ad02f765214ee3f1e9e3bdc39d97765",
+    "content/p101/unit2-lesson4.html": "efc7ae91ceaeaa8d43fa5bc876e8c01a6fd1f71202a81f3c8dda215db9b37b57",
+    "content/p101/unit.html": "f19216a1af178afd2cfac311a52c5d297330d66ec6745d8d52e98f208d1fe8ec",
+    "content/p101/block2.html": "9a9d53d891a84153c2ce1b8232fb0bc1cf71aa93bb9c80b0161ae27aec434399",
+    "content/p101/unit3.html": "bdc83ede5f93c29fd18bc7c0593aa843438f7279f201ff0676dbb938fd66a525",
+    "content/p101/module.html": "c38653d9235b7678c7b1857e6c0dbaa473cd09459ecd2da0e1e8da651edfa1e5",
+    "content/p101/lesson4.html": "4193cb4b64ca96331323503d89be844673e29fa114cbdf1b027e8c6e41e5b906",
+    "content/p101/unit3-lesson2.html": "2d52fd882225c581edc3285db663c36e7042ab320655b6f19ced5a8ae2f9920c",
+    "content/p101/unit4-lesson2.html": "73b69136ed978e394e305a8aaee9776f21a7bc96290f25afe25309832829a04e",
+    "content/p101/unit2-lesson3.html": "4cb7e3743d2d57423dd308077bb00d387a2eab7ed3360b41fb34d30169ce9f27",
+    "content/p101/unit2-lesson2.html": "43f69d002756b12fa33f34db4cc81c3bc13e5febaab6540033e88559ab6864b6",
+    "content/p101/unit4-lesson3.html": "781551cffb9e70d069ab9226ebef39f92d23c8eea10a1d1f842eb504fd82179b",
+    "content/p101/unit3-lesson3.html": "cd612a2a124a026fee0f2fb3a14a20efa6ade8785d39918e0a49f075f6b03b59",
+    "content/p101/lesson5.html": "627b2763fa2a4c3c6cc5c6ba32a76a6f2853ca4d507c35b0e44cd7c25652c467",
+    "content/p101/unit2.html": "89c25c13d70a1893ed7cf375913b93e925eb963454829dcd463971c05c3a4c77",
+    "content/p101/lesson6.html": "ce5ba8607c92efb6990d3cef53dfec145f2be4533984abcb13d89e26a3223c06",
+    "content/p101/unit2-lesson1.html": "81fe1bb72d2b0ac0411d6a9281a08923046401bd9398722e8d9ce2efed481bbe",
+    "content/p101/tma01.html": "a8454241b5f9e1aeb9f365fd884be8a6724f01dffb739de5ce69c909a0e23e50",
+    "content/p101/unit3-lesson1.html": "6a5a75de2ef02f0f36bfae45582576e893aedce87419ae229570ee08c0145728",
+    "content/p101/unit4-lesson1.html": "5d6f3105703652a883782f6e0eaf1ca87fbb130a710e522fe09e2bccd020fa29"
+  },
+  "status": "All five lessons authored and reviewed sequentially; complete unit in final release verification.",
+  "initial_status": "No lessons drafted yet; sequential review required."
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-13",
+  "lesson": "U05-L01",
+  "disposition": "Reviewed locally before Lesson2 drafting; whole-unit publication pending",
+  "source_passages": {
+    "5.1": "Fixed M101 v0.4 coordinates/changes development; P101U04L05 component/acceleration distinctions; CollegePhysics2e6.2 opening and Fig6.7",
+    "5.2": "OU U4Trigonometry printed4\u20137 \u00a71.1, Example1 and Activity1; original period/frequency counting sequence",
+    "5.3": "M101 vector subtraction prerequisite and original quarter/half-turn examples; CollegePhysics2e6.2 finite-change triangle compared",
+    "5.4": "CollegePhysics2e6.2 geometry, equations6.13\u201316; original exact chord relation and explicit limiting qualification",
+    "5.5": "CollegePhysics2e6.2 centrifuge applications and problems10,13,19; Fendt actual explanatory text and controls description inspected; live simulation not inspected"
+  },
+  "calibration": "Original sequence, examples and activities; no copied source figures/prose/questions. OU mathematics comparator available; no supplied OU mechanics equivalent. Practice extends formula substitution to controlled comparisons and finite-interval diagnostics.",
+  "reader_review": "Continuous source reading against fixed sample and U04: explicit position/path/velocity diagram roles, period-versus-observation-time distinction, speed-versus-velocity distinction, and intermediate geometry; clarified final source by using distinct S tension and f frequency notation for next lesson. Chord cannot be called arc for finite turns.",
+  "subject": "Independent vector-component calculation verifies geometric average values;20 radius/speed cases verify period identity; all math/SVG parsed. See local check record.",
+  "visual": "8width/theme cases320/390/900/1440; no page overflow, unique IDs, loaded image, keyboard disclosure, source-text equality, noJS and200%CSSzoom proxy. All three diagrams and key/representative example/mobile screenshot inspected.",
+  "media": "Centrifuge photograph actually inspected; NASA metadata and educational terms checked; not treated as speed measurement. Fendt optional link is supplementary, required lesson self-contained.",
+  "workload": "60reading including unit intro +90activities +30feedback=180min; estimates editorial, not learner measured.",
+  "limitations": "Distinct author reviews and independent calculations; no independent human peer/student/screen-reader review. Offline unit pack pending closing review."
+}

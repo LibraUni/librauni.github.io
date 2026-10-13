@@ -1,0 +1,17 @@
+{
+  "lesson": "U05-L02",
+  "date": "2026-10-13",
+  "disposition": "Reviewed locally before Lesson3 drafting",
+  "comparators": {
+    "5.6": "P101U04L01\u201303 actual force inventories and interaction pairs; CollegePhysics2e6.3 opening",
+    "5.7": "CollegePhysics2e6.3 Example6.4 and responsive friction discussion; original platform controlled-comparison activity",
+    "5.8": "UniversityPhysics1 6.3 banked-force components and CollegePhysics2e problem29; original conical-string geometry, no rotating-frame prerequisite",
+    "5.9": "CollegePhysics2e problems21\u201322 supplied instantaneous speed and force-diagram reasoning; original top/string feasibility synthesis using U04 tension constraint",
+    "5.10": "Original comparison using taught normal constraint, supported by U04L03 contact modelling; no exact supplied OU mechanics match"
+  },
+  "reader": "Continuous read after drafting. Clarified local feasibility versus whole-loop completion and use of supplied unequal speeds; separated string length from orbit radius and static friction demand from capacity. Fixed-frame observation prevents importing centrifugal-force prerequisites.",
+  "subject": "105 checks including independent force arithmetic,component identities at4angles,and opposite top-contact conditions. No energy law used to connect instants.",
+  "visual": "8width/theme cases,keyboard/noJS/200%zoom proxy and source equality pass. All4diagrams,representative radical example and mobile opening inspected. Shared photograph revisited explicitly for force-transmission question; not used as quantitative apparatus model.",
+  "workload": "75reading+135attempts+30feedback=240min; timing remains editorial.",
+  "limitations": "Author self-review plus independent numerical checks, not human peer/student validation. Full-unit review remains outstanding."
+}

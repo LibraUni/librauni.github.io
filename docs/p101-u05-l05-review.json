@@ -1,0 +1,23 @@
+{
+  "lesson": "U05-L05",
+  "date": "2026-10-13",
+  "reader": "Continuous read of synthesis, audit, all ten questions/solutions, reference and conclusion. Cross-scale claims distinguish presence of gravity from dominance and surface shape from trajectory. No new prerequisites or assessment introduced. Full on-page reference added to closing lesson as required; dedicated web copy is supplementary.",
+  "subject": "All exercise results independently recomputed, including finite-vector average, conical geometry, negative tension, inverse-square interaction, altitude, combined q/k scaling, unit-error factors and inferred mu discrepancy. Exact values retained before published rounding.",
+  "visual": "Eight viewport/theme checks initially passed; figures and example inspected. Low-detail Voyager photograph replaced after review with inspected Galileo PIA19048 mosaic and processing/educational reuse credits. Final rerender recorded with whole-unit checks. Mobile reference converted from cramped table columns to stacked rows; semantic headers retained.",
+  "practice_coverage": {
+    "5.1": "Timing, direction and dimensions",
+    "5.2": "Finite vector change vs instantaneous acceleration",
+    "5.3": "Actual static friction vs capacity",
+    "5.4": "Geometry and force components",
+    "5.5": "Physical feasibility and limits of a local criterion",
+    "5.6": "Interaction pair, acceleration recipients, scaling",
+    "5.7": "Centre/altitude conversion, field and orbital model",
+    "5.8": "Simultaneous source/radius change and unsupported inference",
+    "5.9": "Unit errors and limits of self-consistency",
+    "5.10": "Rearrangement, independent inference, discrepancy diagnosis"
+  },
+  "workload": "35 reading +10 audit +90 exercises +45 feedback =180min. Reference15min and conclusion10min included in reading. No additional Python task.",
+  "reference": "Web and PDF generated from one row dataset, 13 entries + Python lookup. PDF two pages, approved logo/motto, version/date/licensing, every page visually inspected. Reference-only page media-check flag reviewed: this is the required compact lookup companion to illustrated teaching; no teaching-page imagery was removed or replaced.",
+  "disposition": "Lesson content and closing resources reviewed; release remains gated on final complete-unit checks.",
+  "limitations": "Author self-review; time allocations are editorial estimates, not learner timing observations."
+}
