@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-13",
+  "disposition": "Reviewed locally; whole-unit publication gate follows",
+  "subject": "446 independent arithmetic/code checks plus 225 structure/XML/preservation checks. Supplied notebook executed in a fresh kernel; web, notebook and companion cells compared. 36 scalar-oracle model combinations, floor roots, angle conversion, sample-count behaviour and all exercise results checked. Four additional site tests cover explorer model, preservation and closing resources.",
+  "reader": "Continuous lesson read against L04 handover and Unit3 Python prerequisites. Explained tuple return, degree conversion, scalar versus array evaluation, sampled top and shared time. Event selection, equal-height conditions, contact termination and model versus empirical validation explicit. No calculus or ODE solver required.",
+  "visual": "All five figures, worked examples, exercise7/8/11/12 and reference table inspected. Corrected plot legend overlap and responsive image overflow. Four widths by two themes pass; no-JS, keyboard feedback, 200% CSS-zoom proxy and exact source text checked. Explorer keyboard/reset/zero-case/reduced-motion checks pass; all eight code copies exact. All two PDF pages rendered and inspected, including header detail.",
+  "practice": "12 cumulative exercises, 75 minutes; routine, conceptual, method selection, synthesis and code audit. Separate hidden worked solutions, four hints; specific comparisons and prerequisite differences in source record.",
+  "resources": "Shared data generates the web reference and two-page PDF. Blank learner tasks retained in public notebook; companion, metadata, README and source ZIP checked. Four self-contained local reading copies pass eight offline width cases. External links and downloads remain online.",
+  "workload": "35 reading/reference/conclusion +25 written exploration +120 Python including code reading, modification, checks and clean rerun +75 exercises +45 feedback =300minutes. Editorial estimate, not learner timing evidence.",
+  "hierarchy": "Sections4.26\u201332;Examples4.25\u201327;Activities4.26\u201327;Figures4.25\u201329;Exercises4.1\u201312. Unit total18h including2Python.",
+  "limitations": "Distinct author self-review and independent computations, not independent human review. Actual Fendt instructions read; live comparator UI blocked by security-policy verification, therefore only partial comparator. Original explorer tested against equations and analytic limiting cases; no Fendt code reused."
+}

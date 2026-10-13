@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-13",
+  "lesson": "U04-L05",
+  "standard": "1.10; approved B02L05 scope, L04 handover, fixed reference and actual external passages inspected",
+  "budget_minutes": {
+    "reading_reference_conclusion": 35,
+    "written_trajectory": 25,
+    "cumulative_exercises": 75,
+    "python_including_code_reading_checks_restart_report": 120,
+    "feedback_revision": 45
+  },
+  "sections": [
+    {
+      "number": "4.26",
+      "purpose": "Gravity-only inventory, perpendicular components and one shared time",
+      "source": "OpenStax4.3 opening/equations4.19\u201323;OU Unit5 printed175\u2013178 component geometry"
+    },
+    {
+      "number": "4.27",
+      "purpose": "Landing event, roots, speed and direction; equal-height conditions",
+      "source": "OpenStax4.3 Ex4.7\u20138 andCheck4.3;OU Unit2 printed170\u2013172 Ex15/Activity25"
+    },
+    {
+      "number": "4.28",
+      "purpose": "Predict and compare horizontal changes; original static parameter explorer",
+      "source": "Walter Fendt projectile textual controls/model description; live UI unavailable due browser security-policy check. Partial comparator only; no source code reused."
+    },
+    {
+      "number": "4.29",
+      "purpose": "Algebraic Python functions, arrays, plot, benchmark and model limits",
+      "source": "P101 U03L02\u201305; NumPy linspace/deg2rad and Matplotlibset_aspect official docs"
+    },
+    {
+      "number": "4.30",
+      "purpose": "Cumulative unit exercises and hidden solutions",
+      "source": "OpenStaxCh5 Problems19\u201320,22,26\u201328,32,37\u201341; Ch6 Problems27,37,39,41,48; L04Ex3.10/3.15/3.16 and L05Ex4.7\u20138; original code-audit synthesis"
+    },
+    {
+      "number": "4.31",
+      "purpose": "Compact synchronised web/PDF reference: Recall/Understand/Consult plus Python cheatsheet",
+      "source": "Actual unit teaching"
+    },
+    {
+      "number": "4.32",
+      "purpose": "Substantive conclusion and self-directed correction",
+      "source": "Preserved unit opening and complete lessons"
+    }
+  ],
+  "practice_minutes": [
+    5,
+    4,
+    6,
+    5,
+    5,
+    6,
+    7,
+    7,
+    6,
+    7,
+    8,
+    9
+  ],
+  "coverage": "Boundary/inventory, signs/laws, equilibrium, pairs, support/tension, system sums, friction/normal, incline, relation/area/turning, free fall, projectile event and code/model checks",
+  "media": "NASA Apollo16jump photo (actual ballistic interval/context, no image-based measurement); original component and trajectory diagrams plus static resettable explorer. No decorative/time animation; static table and PDF equations preserve content.",
+  "boundaries": "NoODE/drag solver/calculus/optimisation; no new unit teaching or assessment; no learner attainment/logging changes."
+}

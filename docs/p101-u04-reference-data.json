@@ -1,0 +1,78 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "System & diagram",
+      "Select the boundary. Draw external forces with agent, recipient and direction; components replace, not supplement, a force."
+    ],
+    [
+      "Recall",
+      "Newton\u2019s laws",
+      "$\\sum\\mathbf F_{\\rm ext}=m\\mathbf a$; constant mass, inertial frame. Zero resultant $\\Rightarrow$ constant velocity (possibly zero)."
+    ],
+    [
+      "Recall",
+      "Third-law pair",
+      "$\\mathbf F_{A\\to B}=-\\mathbf F_{B\\to A}$; different recipients. Internal pairs cancel in the combined sum."
+    ],
+    [
+      "Recall",
+      "Weight & units",
+      "$\\mathbf W=m\\mathbf g$; $W=mg$. $1\\,\\mathrm N=1\\,\\mathrm{kg\\,m\\,s^{-2}}$; $g$ in $\\mathrm{m\\,s^{-2}}$ or $\\mathrm{N\\,kg^{-1}}$."
+    ],
+    [
+      "Understand",
+      "Support & cord",
+      "Find $N$ from perpendicular motion, with $N\\geq0$ for nonadhesive contact. Taut rope pulls; $T\\geq0$. Light straight rope, no other loads: equal endpoint tension."
+    ],
+    [
+      "Recall",
+      "Dry friction",
+      "Sticking: $0\\leq f_s\\leq\\mu_sN$; calculate the required force, then test. Sliding: $f_k=\\mu_kN$, opposite relative slip. Recheck at a stop."
+    ],
+    [
+      "Consult",
+      "Fixed ramp",
+      "Only weight + contact: $N=mg\\cos\\theta$; downslope weight $mg\\sin\\theta$. Rest possible if $\\tan\\theta\\leq\\mu_s$, for $0\\leq\\theta&lt;90^\\circ$."
+    ],
+    [
+      "Recall",
+      "Constant acceleration",
+      "$s=x-x_0$, $t$ elapsed, $u$ initial signed velocity. $v=u+at$; $s=ut+\\tfrac12at^2$; $v^2=u^2+2as$. One fixed axis, constant $a$ throughout."
+    ],
+    [
+      "Understand",
+      "Areas & intervals",
+      "$s=\\tfrac12(u+v)t$ for constant $a$: signed velocity\u2013time area. Distance: add magnitudes across turns. At $a=0$: $v=u$, $s=ut$. Stop when the force regime changes."
+    ],
+    [
+      "Recall",
+      "Projectile components",
+      "Uniform gravity, no drag; right/up axes: $u_x=u\\cos\\theta$, $u_y=u\\sin\\theta$. $x=x_0+u_xt$, $y=h+u_yt-\\tfrac12gt^2$; $v_x=u_x$, $v_y=u_y-gt$. One shared time."
+    ],
+    [
+      "Consult",
+      "Floor event",
+      "For $h\\geq0$, $u_y\\geq0$, $g&gt;0$: $t_f=(u_y+\\sqrt{u_y^2+2gh})/g$. $R=u_xt_f$ with $u_x\\geq0$. At $h=u_y=0$: no airborne interval. Earlier obstacles can end flight."
+    ],
+    [
+      "Understand",
+      "Top & equal height",
+      "For $u_y&gt;0$: $t_{\\rm top}=u_y/g$, $y_{\\max}=h+u_y^2/(2g)$. At top $v_y=0$, $a_y=-g$. Equal-height later return only: $t_f=2u_y/g$."
+    ]
+  ],
+  "python": [
+    [
+      "Consult \u00b7 components in SI",
+      "theta = np.deg2rad(angle_deg)\nux = speed * np.cos(theta)\nuy = speed * np.sin(theta)"
+    ],
+    [
+      "Consult \u00b7 sampled algebraic path",
+      "tf = (uy + np.sqrt(uy**2 + 2*g*h)) / g\nt = np.linspace(0.0, tf, 101)\nx = ux*t\ny = h + uy*t - 0.5*g*t**2"
+    ],
+    [
+      "Consult \u00b7 plot & checks",
+      "fig, ax = plt.subplots()\nax.plot(x, y)\nax.set_xlabel(\"x / m\"); ax.set_ylabel(\"y / m\")\nax.set_aspect(\"equal\", adjustable=\"box\")\nfig.savefig(\"path.png\", dpi=160)\nprint(abs(y[-1]) < 1e-10)"
+    ]
+  ]
+}

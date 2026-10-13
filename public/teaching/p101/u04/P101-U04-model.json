@@ -1,0 +1,32 @@
+{
+  "kind": "stipulated teaching model; not measured data",
+  "version": "1.0",
+  "units": {
+    "height": "m",
+    "velocity": "m/s",
+    "gravity": "m/s^2",
+    "time": "s"
+  },
+  "axes": "right/up; x0=0;floor y=0",
+  "inputs": {
+    "h_m": 4.9,
+    "ux_m_s": 6,
+    "uy_m_s": 4.9,
+    "g_m_s2": 9.8
+  },
+  "assumptions": [
+    "uniform downward gravity",
+    "constant mass",
+    "no drag",
+    "no obstacle before floor"
+  ],
+  "contract": "finite h>=0,uy>=0,g>0; functions do not validate arbitrary input",
+  "samples": 101,
+  "benchmark": {
+    "h_m": 4.9,
+    "ux_m_s": 6,
+    "uy_m_s": 0,
+    "tf_s": 1,
+    "landing_x_m": 6
+  }
+}
