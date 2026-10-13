@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-13",
+  "lesson": "U04-L03",
+  "gate": "Existing20-lesson B02 map; all seven sections below planned before prose",
+  "budget": {
+    "reading": 85,
+    "attempts": 125,
+    "feedback": 30
+  },
+  "sections": [
+    {
+      "number": "4.13",
+      "purpose": "Weight, gravitational field and mass; free-fall interpretation",
+      "evidence": "Activity4.13:15min",
+      "boundary": "No inverse-square gravity",
+      "requires": "L02 secondlaw"
+    },
+    {
+      "number": "4.14",
+      "purpose": "Normal from perpendicular acceleration; contact feasibility",
+      "evidence": "Activity4.14:20min",
+      "boundary": "Nonadhesive support only",
+      "requires": "4.13"
+    },
+    {
+      "number": "4.15",
+      "purpose": "Taut, massless rope; tension from recipient equations",
+      "evidence": "Activity4.15:15min",
+      "boundary": "No pulley network",
+      "requires": "L02 thirdlaw,4.13"
+    },
+    {
+      "number": "4.16",
+      "purpose": "Static friction as required force with limit",
+      "evidence": "Activity4.16:20min",
+      "boundary": "Empirical dry contact",
+      "requires": "4.14"
+    },
+    {
+      "number": "4.17",
+      "purpose": "Kinetic friction while sliding; stopping invalidates regime",
+      "evidence": "Activity4.17:15min",
+      "boundary": "No drag law or numericalintegration",
+      "requires": "4.16"
+    },
+    {
+      "number": "4.18",
+      "purpose": "Resolve gravity relative to ramp; test static then kinetic",
+      "evidence": "Activity4.18:20min",
+      "boundary": "Straight ramp and maintained contact",
+      "requires": "M101 projections,4.17"
+    },
+    {
+      "number": "4.19",
+      "purpose": "Combine inclined pull with support/friction and audit possibility",
+      "evidence": "Activity4.19:20min",
+      "boundary": "No optimisation or rigidbodyrotation",
+      "requires": "All prior sections"
+    }
+  ],
+  "media": "NASA/Harrison Schmitt Apollo17 rover shows contact context and limits of flat rigid dry-friction model; original support,rope,friction/ramp/pull diagrams",
+  "handover": "L04 constant acceleration when forces remain constant",
+  "release": "Local draft and review before next lesson"
+}

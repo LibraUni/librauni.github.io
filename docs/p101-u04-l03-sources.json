@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-13",
+  "lesson": "U04-L03",
+  "sources": [
+    {
+      "source": "Private OU MST124 Unit5 Coordinate geometry and vectors",
+      "path": "sources/Unit 5 - Coordinate Geometry.pdf",
+      "inspected": "Printed175\u2013178 Example19 resolving components and Activities46\u201347; solutions200\u2013201",
+      "fit": "Sections4.18\u20134.19: geometry, signs, progressive component practice",
+      "gap": "Mathematical comparison only; no supplied OU mechanics chapter matches contact-force modelling. Original prose and questions; no private source reproduced."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a75.6",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-6-common-forces",
+      "inspected": "Normal-force discussion; Example5.12 and Check5.8; tension introduction and Example5.13",
+      "fit": "4.13\u20134.15 and4.18\u20134.19",
+      "difference": "We qualify relative sliding, light-rope equilibrium and loss of contact; do not equate remote endpoint tension using third law alone."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a76.2",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction",
+      "inspected": "Friction introduction, equations6.1\u20136.2, Figure6.11, Example6.10 including strategy/solution",
+      "fit": "4.16\u20134.19: actual versus limiting friction, original feasibility and transition tasks",
+      "difference": "More explicit friction-direction and state checks; no implication static contact means rest in every frame."
+    },
+    {
+      "source": "MIT8.01SC Chapter8",
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter8.pdf",
+      "inspected": "\u00a78.3.1 pp8-10\u201313; \u00a78.3.2 pp8-14\u201316; \u00a78.5.1 pp8-18\u201319",
+      "fit": "4.14 normal constraint;4.16\u20134.17 empirical friction;4.15 light rope",
+      "difference": "Calculus/pulley networks and extensive worked systems deferred."
+    }
+  ],
+  "practice": "Seven original activities,125min. Compare OU46\u201347 component scaffolding and OpenStax6.10 model selection; add impossible-contact and post-stop diagnosis. No exact equivalent for all synthesis questions; timing is an editorial estimate.",
+  "media": {
+    "asset": "/teaching/p101/u04/lunar-rover.jpg",
+    "source": "https://science.nasa.gov/resource/apollo-17-gene-cernan-in-lunar-roving-vehicle/",
+    "creator": "NASA/Harrison Schmitt;11December1972",
+    "terms": "NASA educational/editorial media terms inspected; source credited NASA; no endorsement",
+    "modifications": "Unmodified NASA1280\u00d7685 rendition",
+    "inspection": "Actual file and rendered figure inspected",
+    "originals": "Five original SVG diagrams: support, rope systems, static-friction capacity, ramp geometry and angled pull. No video used."
+  }
+}
