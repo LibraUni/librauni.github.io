@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U05 L06",
+  "status": "Subject, reader, rendered and closing-resource review complete locally; deployment verification follows publication.",
+  "subject": "24 independent symbolic derivative pairs, three definition limits, explicit circle second derivative and implicit tangent checks; manual domain, radian, unit and join review of every solution. Additional base-exponential/log/tangent exercise checked separately. Fresh notebook namespace, exact downloadable code match, nine guard/domain cases and reference snippet execution. Numerical secants quoted in feedback corrected against actual output.",
+  "reader": "Continuous read after L05. Independent checking explained before code; deliberate candidate error labelled. Function argument, nested loops, isfinite and raising ValueError explained. Exact proof, finite interval, rounding and domain failure distinguished. Transfer task provides acceptance criteria. No systematic step-size theory, arrays or plotting assumed.",
+  "comparators": {
+    "5.26": "MST224 U1 §5.3 printed p46 opening describes hand deductions cross-checking machine output; only checking motivation used, extrema deferred. Original paired-algebra and unit checks. Active Calculus1.1 average versus instantaneous rate supplies return to definition.",
+    "5.27": "Python math module documentation for exp/isfinite/domain exceptions and tutorial Floating Point Arithmetic: Issues and Limitations opening representation discussion inspected. Actual starter/feedback run. No equivalent supplied OU Python question; explicitly original investigation using already-taught derivative model.",
+    "5.28": "MST224 p46 checking context plus Unit4 numerical limitations; actual code outputs distinguish candidate error from finite-offset error. NASA Johnson image description checked; not a reproduction of orbital verification.",
+    "5.29": "Practice coverage/comparator matrix in whole-unit review maps all18 questions. Actual OU Exercises25–32 pp41–46 and public OpenStax/Active Calculus passages inspected. Original tasks, not number substitutions.",
+    "5.30": "Actual U05 teaching and approved v1.10 compact-reference instruction. Rows/code shared between web and two-page print source. Conclusion answers opening rate question and prepares U06/U07 without teaching their scope."
+  },
+  "visual": "Eight viewport/theme cases; source equality; no-JS/native feedback; 200% CSS zoom proxy; exact keyboard code-copy for all3 blocks; offline images/feedback; exercise4,12,18 and mobile code opened and viewed; both PDF pages visually inspected. Long timing labels and inline Python wrapping fixed. Native mathematical structure retained.",
+  "workload": "240min =25 reading+120Python (including Activity5.26)+30 closing attempts+45 closing correction+20 reference/conclusion. Total closing attempts180min includes150 reserved in L1–L5. Estimates, not measured student timings.",
+  "limitations": "Author self-review with independently recomputed calculations, not external peer review, student testing or PDF/UA certification. Accessible structured HTML is the mathematical reading alternative to the print PDF."
+}

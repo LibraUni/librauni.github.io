@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-13",
+  "scope": "M101 U05 complete only; user explicitly authorises local lesson-by-lesson development and publication after required checks.",
+  "standard": "Teaching Standard and Practice v1.10, 8 October2026; fixed illustrated M101 openingv0.4, actual adjoining U04 teaching/closing and approved B02/U05 blueprint inspected before drafting.",
+  "sequence": "L01 drafted/reviewed before L02; successive separate subject, reader and rendered reviews for L02,L03,L04,L05 before next lesson. L06 and closing resources reviewed together, then complete unit read for continuity and coverage.",
+  "subject_review": {
+    "evidence": "Per-lesson independent symbolic/limit calculations plus manual assumptions, domains, endpoints, units, diagram equations and all worked solution checks. Notebook and compact reference executed from fresh state. No finite sampling presented as proof.",
+    "corrections": [
+      "Changed exponential/log graph title that incorrectly described log as positive below1.",
+      "Corrected two quoted secants using fresh output.",
+      "Preserved real-power negative-input and zero conditions; chain failure distinguished from nondifferentiability of a complete composition.",
+      "Implicit point membership and nonzero coefficient made explicit; differentiating a point-value excluded."
+    ]
+  },
+  "reader_review": {
+    "progression": "U04 limits -> secant definition -> family rules -> product/quotient -> chain/layers -> implicit/second rates -> independent checks and cumulative synthesis. Unit introduction gives purpose/prerequisites; each lesson reconnects without reintroducing the unit. Conclusion returns to instantaneous rate and prepares U06/U07.",
+    "coverage": {
+      "5.1–5.2": {
+        "sections": "5.1–5.4",
+        "skills": "Definition, quotient algebra, tangent, reciprocal domain",
+        "comparison": "Active Calculus1.1 Activities1.1.2–1.1.3 average/instantaneous velocity; OpenStax3.1 definition examples. Our tasks require exact general-input algebra after supported lesson work, not a finite table alone."
+      },
+      "5.3": {
+        "sections": "5.5",
+        "skills": "Continuity versus differentiability and one-sided quotients",
+        "comparison": "OpenStax3.2 absolute-value/corner discussion. Original shifted-corner explanation, no new prerequisite."
+      },
+      "5.4": {
+        "sections": "5.6–5.10",
+        "skills": "Power, reciprocal/root, exponential/log including bases, trig including tangent, boundaries/radians",
+        "comparison": "OU MST224 U1 Exercises26–27 pp41–42 standard derivatives. Our set expands domain/boundary judgement and delays mixed-rule work to subsequent questions."
+      },
+      "5.5–5.7": {
+        "sections": "5.11–5.15",
+        "skills": "Product and quotient; original domain after cancellation",
+        "comparison": "OU Example3 p43 and Exercise29(a–b)p44, OpenStax3.3 product/quotient examples. More explicit error diagnosis and hole distinction; logarithm chain prerequisites separated."
+      },
+      "5.8–5.9": {
+        "sections": "5.16–5.19",
+        "skills": "Layer identification, nested chains and mixed rules",
+        "comparison": "OU Exercises30–31p45; Active Calculus2.5 Examples2.5.1–2.5.3 and PreviewActivity2.5.1. Comparable method families, different functions and added domain/first-rule explanations. OU assumes previous calculus; ours builds it."
+      },
+      "5.10": {
+        "sections": "5.9,5.20,5.23",
+        "skills": "Radian chain factor, first/second rates and units",
+        "comparison": "OU Exercise29(d)p44 second-rate calculation and §3.1p24 radian convention. Original supplied sinusoidal displacement separates unit conversion and phase; no dynamics theory required."
+      },
+      "5.11–5.12": {
+        "sections": "5.21–5.24",
+        "skills": "Implicit tangent, point membership, second derivative, exceptional point",
+        "comparison": "OU implicit ellipsep45/Exercise32p46; OpenStax3.8 Examples3.69–3.70. Our first task includes product term; second adds explicit independent check and vertical-tangent interpretation."
+      },
+      "5.13": {
+        "sections": "5.23",
+        "skills": "Distinguish position/velocity/acceleration and derivative squared",
+        "comparison": "OU Exercises25/27pp41–42 and29(d)p44; original zero-velocity/nonzero-acceleration diagnostic with units."
+      },
+      "5.14": {
+        "sections": "5.25; U04 continuity",
+        "skills": "Choose parameters for differentiability, diagnose missing second derivative",
+        "comparison": "OpenStax3.2 differentiable piecewise example/checkpoint3.8. Original synthesis adds second-order failure; taught polynomial branch assumptions retained."
+      },
+      "5.15–5.16": {
+        "sections": "5.11–5.20,5.26–5.28",
+        "skills": "Error diagnosis, counterexample, choice of numerical tests",
+        "comparison": "Original audit tasks calibrated to the taught rules and ActiveCalculus1.1 evidence/limit distinction. No exact supplied OU programming comparator. Expected written explanations, not merely corrected answers."
+      },
+      "5.17": {
+        "sections": "5.14,5.18–5.19,5.23,5.26",
+        "skills": "Select alternative routes, prove equivalence, differentiate again",
+        "comparison": "OU Exercise31p45 mixed methods and OpenStax3.3 simplification/quotient discussion. Original two-route requirement increases independence after scaffolding fades."
+      },
+      "5.18": {
+        "sections": "5.16,5.20,5.23,5.26",
+        "skills": "Physical chain, second rate, units, model limits and exact cross-check",
+        "comparison": "Active Calculus2.5 chain-as-rate reasoning; original sensor synthesis grounded in L04 calibration example. No matching OU sensor exercise claimed."
+      }
+    },
+    "workload": {
+      "unit_hours": 24,
+      "lesson_hours": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "python_hours": 2,
+      "closing_attempt_minutes": 180,
+      "closing_correction_minutes": 45,
+      "reference_conclusion_minutes": 20,
+      "limits": "Editorial estimates include attempts, correction and revision. No observed learner timings or guarantee."
+    }
+  },
+  "visual_review": {
+    "evidence": "All lessons tested at1440/900/390/320px in light/dark, hidden feedback, keyboard disclosure and source equality. No-JS and200%CSSzoom proxy. Original figures and contextual assets/captions inspected; representative radical, fraction, piecewise, multi-step examples and opened solutions viewed. Offline copies embed images; reference PDF both pages rendered and viewed.",
+    "fixes": [
+      "Long study labels and inline Python wrap under magnification.",
+      "Code and mathematical scrollers remain keyboard-accessible.",
+      "Added path-versus-time context photograph to L01 after whole-unit media review.",
+      "Exact intrinsic image dimensions; final unpublished figure numbering regenerated."
+    ],
+    "pdf": "Two A4pages; approved logo; exact KNOWLEDGE PURSUED FREELY motto; canonical title; v1.0/date;1/2 and2/2; short7.5pt gray reuse footer. Structured web table shares rows/code. Print reference is not claimed PDF/UA."
+  },
+  "media": "Twenty numbered figures across opening and lessons:13 original diagrams and7 photographic placements (6 distinct photographs). Source/creator/terms/modification register separate. No private source text or image republished. Each lesson includes a relevant contextual photograph as well as its explanatory text and, where useful, diagrams.",
+  "unit_gate": {
+    "numbering": "Sections5.1–5.30; Examples5.1–5.22; Activities5.1–5.27; Figures5.1–5.20; Exercises5.1–5.18; Key ideas5.1–5.11. Persistent IDs unique and sequences checked.",
+    "preservation": "Earlier teaching/source assets and approved unit scopes/dependencies unchanged. Availability/navigation updated additively; U06/U07 remain outlines. No learner state altered.",
+    "local_checks": "133 repository tests; production build;65 available pages indexed in search; structural media audit all7fragments; browser/clipboard/offline/download checks; notebook/guards/reference; numbering and source preservation.",
+    "publication": "Only after local review/checks pass; hosted workflow and exact live assets/pages verified separately after push."
+  },
+  "source_gap": "Supplied MST124 calculus Unit6 unavailable. Actual supplied MST224 Unit1 §5.1–5.2 printed38–46 is the principal differentiation comparator, but is revision for a more advanced audience. OpenStax3.1–3.3/3.5/3.6/3.8/3.9 and ActiveCalculus1.1/2.5 fill introductory exposition and practice differences. No claim to inspecting absent materials.",
+  "source_corrections": "Source inspection noticed an incorrect inner argument in the OU p44 alternative chain line, and two OpenStax3.8 annotations/bounds. Original derivations were checked independently instead of copying these statements.",
+  "limitations": "Distinct author self-review and independent recomputation, not independent human peer review, formal accessibility certification or student trial. Human educational quality is not certified by a passing checklist. No unresolved substantive defect identified in the completed checks."
+}

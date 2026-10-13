@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U05 L04",
+  "status": "Local review complete before L05; final integrated checks pending",
+  "subject": "20 independently checked symbolic derivatives; separately evaluated sensor composition at5, table-chain at2, domain restrictions, radian scaling and dimensional decay/log arguments. Conditions of chain theorem and failure of chosen decomposition distinguished from nondifferentiability of complete function.",
+  "reader": "Continuous reading after L03. Avoided false proof by cancelling du or dividing by inner increment that might vanish; labelled rate explanation as motivation and theorem as established. Introduced sin-squared shorthand explicitly. Added actual-inner-value emphasis and domain-before-formula sequence. Units in numerical sensor model traced through both stages.",
+  "visual": "Eight widths/themes, keyboard, no-JS, zoom and source equality passed. Viewed chain diagram, compressed sine, calibration photo/caption, nested-radical/log worked example. Clear radicals, brackets and stacked fractions.",
+  "comparators": {
+    "5.16": "OU MST224U1 \u00a75.2 p44 chain rule, ActiveCalculus2.5.1\u20132.5.2 Examples2.5.1\u20132.5.3 structure/rate motivation. Original numerical calibration provides units not in abstract revision.",
+    "5.17": "OU p44 example sin(x\u00b3+2x), Exercises30 pp45; OpenStax3.6 elementary chains. Adds explicit domain of outer at inner value.",
+    "5.18": "OU Example4 pp44\u201345 powers of sine; ActiveCalculus2.5 PreviewActivity2.5.1 composition recognition. Original multilayer log/root and failed-decomposition example.",
+    "5.19": "OU Exercise31 p45 mixed product/chain; OpenStax3.6 combined-rule examples. Original problems avoid reciprocal trig not taught beyond sec notation.",
+    "5.20": "Original dimensional synthesis building from L01 units and Unit4 composition; no exact OU task counterpart. NIST photo and rights inspected directly, earlier image file retained."
+  },
+  "workload": "75reading+100activities+35correction+30reservedclosing=240min; estimates unmeasured.",
+  "limitations": "Author review and computational/browser checks, not human/student validation. Full chain-rule proof not an outcome; theorem conditions retained."
+}
