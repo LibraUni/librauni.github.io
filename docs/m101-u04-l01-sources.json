@@ -1,0 +1,48 @@
+{
+  "inspected": "2026-10-12",
+  "editorial": [
+    "website/docs/teaching-standard-and-practice.md v1.10",
+    "website/content/editorial-reference/m101-opening-chapter-v0.4.html: complete explanatory text read; graphics/caption pattern inspected through existing source and OU page image",
+    "Current published U03-L06 closing explanation, reference, TMA handover and next-unit transition read"
+  ],
+  "passages": [
+    {
+      "sections": [
+        "4.1",
+        "4.2",
+        "4.5"
+      ],
+      "source": "Private supplied OU MST124 Unit3 Functions",
+      "locations": "§1.2 starts printed p209; §1.3 pp214–216, including domain convention and piecewise definitions; Activity9 p215 and solution p304",
+      "fit": "Real functions; OU fixes codomain to R. Targeted retrieval here, not full set theory; original model-range example, cancellation critique and ambiguous-boundary activity extend the question types."
+    },
+    {
+      "sections": [
+        "4.3"
+      ],
+      "source": "Private supplied OU MST124 Unit3 Functions",
+      "locations": "§1.6 opening p227; §4.2 pp270–271 logarithm meaning and Activity42",
+      "fit": "Function-family recognition and log argument/output distinction. We do not reproduce the full graph-transformation or logarithm-algebra syllabus."
+    },
+    {
+      "sections": [
+        "4.4"
+      ],
+      "source": "Private supplied OU MST124 Unit3 Functions",
+      "locations": "§3.1 p249; §3.2 pp250–253, Examples4–5, Activities30–32; solutions p308",
+      "fit": "Read exposition and practice. Same algebra readiness; our square-root composition, intermediate restriction and invented calibration combine domain reasoning with interpretation rather than copying source examples."
+    },
+    {
+      "sections": [
+        "4.1",
+        "4.5"
+      ],
+      "source": "https://personal.math.ubc.ca/~CLP/CLP1/clp_1_dc/sec_0_4.html",
+      "locations": "Definitions0.4.1–0.4.2 and Examples0.4.3–0.4.4",
+      "fit": "Broader set-valued introduction clarifies rule versus formula and codomain versus range; abstract injectivity/surjectivity terminology excluded."
+    }
+  ],
+  "typography": "Actual supplied OU PDF page16 / printed214 rendered and inspected: continuous radicals, inline/display hierarchy, green and blue semantic boxes. New MathML checked separately.",
+  "practiceCalibration": "OU Activity9: routine domain fluency; Activities30–32: ordered composition and domain checks. New Activities4.3/4.7/4.8 require more explanation, model-domain intersection or critique; original synthetic tasks have no exact one-to-one comparator. Questions are formative within study time, not exam-equivalent claims.",
+  "not_claimed": "Limits/continuity sources explored before scope correction but no later teaching authored or reviewed. No selected video or interactive: static graphs expose the needed domain distinctions without additional controls. No source text or private PDF is published."
+}

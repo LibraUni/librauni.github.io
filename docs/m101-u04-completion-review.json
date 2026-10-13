@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-13",
+  "scope": "Complete U04 only; preserve published L01 teaching and introduction except availability status. User explicitly authorises publication after checks.",
+  "sequence": "L02 drafted/reviewed before L03; L03 drafted/reviewed before L04 and unit closing resources. Separate lesson review records retained.",
+  "subject_review": {
+    "checks": 6683,
+    "detail": "4513 exact/numerical/MathML checks for L02–L04 plus2170 separately evaluated closing checks. All existence claims also reviewed through written identities, bounds or branch reasoning; finite sampling is not treated as proof.",
+    "corrections": [
+      "Explained square-root law separately at zero and positive radicand limits.",
+      "Kept original domains after algebraic rearrangement and in Python guards.",
+      "Corrected first displayed numerical disagreement from 1e-8 to1e-4 using actual output.",
+      "Distinguished finite-offset deviation from rounding error."
+    ]
+  },
+  "reader_review": {
+    "baseline": "Fixed v0.4 reference sustained explanation, labelled roles and worked reasoning; actual private OU passages and public topic matches in lesson records.",
+    "continuity": "L01 function/domain/branches -> L02 approach/value -> L03 valid local algebra -> L04 continuity/composition/numerical evidence. All required prerequisites in main text, optional historical/instrument context in blue boxes.",
+    "closing": "Substantive conclusion returns to opening missing-sensor question conceptually. Twelve varied cumulative exercises, hidden full reasoning, selective hints, open-task acceptance criteria and taught-method coverage; no lesson-end exercise sets.",
+    "coverage": {
+      "4.1": {
+        "outcome": "Function/domain/range; single output",
+        "sections": "4.1–4.3",
+        "comparison": "OU Functions §1.3 Activity9 (printed215, solution304): domain fluency. Adds range and function-versus-relation explanation."
+      },
+      "4.2": {
+        "outcome": "Ordered composition and intermediate domain",
+        "sections": "4.4",
+        "comparison": "OU Functions §3.2 Activities30–32 pp250–253/solutions308. Similar prerequisite algebra; original paired rules and equality criterion."
+      },
+      "4.3": {
+        "outcome": "Graph, point value and one-sided limits",
+        "sections": "4.5,4.8–4.9",
+        "comparison": "CLP1 §1.3 Exercises1.3.2.4–9: interpreting nearby/value distinctions. Requires student sketch instead of reading supplied graph."
+      },
+      "4.4": {
+        "outcome": "Tolerance identity and limits of sampling",
+        "sections": "4.7,4.11",
+        "comparison": "OU Unit10 §3 pp36–39 Activity18 approach bands: sequences-at-infinity mismatch stated. New finite-input task with an exact error identity."
+      },
+      "4.5–4.7": {
+        "outcome": "Laws, factorisation, expansion, conjugate and common denominator",
+        "sections": "4.12–4.15",
+        "comparison": "OU Algebra §3.3 pp46–52 Activity24/26; §4.1 pp60–62 Example19; CLP1 §1.4 Examples1.4.12/17 and exercises20–24/28. Mixed method selection with conditions; no untaught Taylor or special trig-limit methods."
+      },
+      "4.8": {
+        "outcome": "One-sided sign, finite limit versus unbounded",
+        "sections": "4.10,4.16",
+        "comparison": "CLP1 §1.3 Examples1.3.5/6; OpenStax2.4 exercise136 absolute-value discontinuity. Linked original classification tests common-domain misconception."
+      },
+      "4.9": {
+        "outcome": "Continuity join plus calibration; two equations",
+        "sections": "4.18; prior U03 linear equations",
+        "comparison": "OpenStax2.4 exercises145/149 parameter joins. Adds second calibration condition and separately assigned value; greater integration, elementary algebra only."
+      },
+      "4.10": {
+        "outcome": "Composition domain and endpoint continuity",
+        "sections": "4.18–4.19",
+        "comparison": "OpenStax2.4 Examples2.33–2.35 with OU composition restrictions; original logarithm/root chain."
+      },
+      "4.11": {
+        "outcome": "Numerical evidence, rounding and finite-offset error",
+        "sections": "4.20",
+        "comparison": "Original critique based on checked experiment; no exact OU exercise match. Python tutorial§15 supplies numerical representation context."
+      },
+      "4.12": {
+        "outcome": "Construct counterexample, diagnose/repair continuity",
+        "sections": "4.11,4.17",
+        "comparison": "OpenStax2.4 exercises157–159 graph construction and162–163 explanation/counterexample. Our finite-table construction has fewer simultaneous conditions, explicit sample-solution criteria and no IVT."
+      }
+    },
+    "workload": {
+      "unit_hours": 16,
+      "lesson_hours": [
+        4,
+        3.5,
+        3.5,
+        5
+      ],
+      "python_hours": 1,
+      "exercise_attempt_minutes": [
+        6,
+        7,
+        7,
+        7,
+        9,
+        8,
+        8,
+        8,
+        9,
+        7,
+        7,
+        7
+      ],
+      "exercise_review_minutes": 45,
+      "limit": "Editorial estimates include correction and reference. No claim of observed completion times."
+    }
+  },
+  "visual_review": {
+    "checks": "Desktop1440/900 and mobile390/320, light/dark, native feedback, no-JS, 200%CSSzoom proxy, all figures, representative opened solutions and code; exact keyboard copying. Three self-contained offline lesson files and both PDF pages inspected.",
+    "fixes": [
+      "Unsupported aligned LaTeX converted to MathML array rows.",
+      "Display lim approach moved below operator, with inline notation compact.",
+      "Removed fixed portrait-width overflow under zoom.",
+      "PDF identity/footer fonts embedded after renderer exposed missing base-font text."
+    ],
+    "pdf": "Two pages, canonical M101/U04 title, approved logo, exact motto, v1.0/date/page numbering and compact reuse terms. Shared rows/code keep web consistent. Accessible HTML is the structured mathematical alternative; PDF is a print reference, not claimed PDF/UA."
+  },
+  "unit_gate": {
+    "preserved": "L01 source byte-identical; introduction teaching unchanged, final availability sentences corrected. Existing IDs untouched.",
+    "numbering": "Sections4.1–4.22; Examples4.1–4.18; Activities4.1–4.24; Figures4.1–4.18; Exercises4.1–4.12.",
+    "curriculum": "U04 16h/1Python, B02 72h/8Python and existing outcomes/dependencies unchanged. Block blueprint covers planning only, not U05 teaching.",
+    "boundary": "No Unit5 lesson/content created. U05 remains outline. No enrolment, completion or other learner records changed.",
+    "verification": "127 repository tests, production build and54-page search pass; final browser/download checks stored locally and live verification recorded after deployment."
+  },
+  "source_gap": "No supplied MST124 Unit6 calculus chapter. Actual supplied Functions, Algebra, Unit10 sequences and MST224Unit1p39 are partial comparators; no claim to unavailable chapter. Public UBC/OpenStax fill limits/continuity exposition and exercise match.",
+  "limitations": "Distinct author self-reviews and independent calculations, not independent human peer review, formal accessibility certification or measured learner workload."
+}

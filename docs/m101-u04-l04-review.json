@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-13",
+  "lesson": "M101 U04 L04",
+  "standard": "Teaching Standard and Practice v1.10; fixed illustrated M101 opening v0.4",
+  "subject": "Continuity conditions and interval conventions read separately from numerical behaviour. Joins, endpoints, domains, all 12 exercise solutions and Python evaluated independently: 2170 closing checks, including 80-digit Decimal reference arithmetic. Exact finite-offset value distinguished from its limit and from rounded output. Example code guards preserve the original quotient domain.",
+  "reader": "Continuous read after L03 review. Explicit transitions from nearby equality to continuous extension, then to composition and numerical evaluation. Point-value repair distinguished from changing a model domain. Added range reasoning to Exercise4.1 and counterexample acceptance criteria to4.12. No derivative rules, formal epsilon-delta quantifiers, IVT or arrays required.",
+  "visual": "Native MathML, original three-panel continuity diagram and carefully recontextualised NIST photograph. Checked open solutions, radical bars, piecewise braces, reference table, desktop/mobile light/dark, keyboard disclosures and exact two-block code copying. Display limit operators corrected to put approach beneath lim. Local mathematical/code scrolling retains mobile legibility. Both final PDF pages inspected: embedded logo, motto, page numbers, 7.5pt reuse footer and readable 9–11pt reference content.",
+  "whole_lesson": "5h includes 60min Python, 90min mixed attempts, 45min correction and 15min conclusion/reference. Four in-text activities, three worked examples, twelve cumulative exercises. Feedback hidden until requested; code starter has no stored outputs. Editorial time estimates, not measured student timings.",
+  "comparators": {
+    "4.17": "OpenStax Calculus1 §2.4 definition and Examples2.26–2.31: three separate continuity conditions and classification. Original point-repair exposition adds model-domain caveat. OU Functions §1.3 pp214–216 supplies domain/piecewise baseline, not a continuity theorem.",
+    "4.18": "OpenStax §2.4 Examples2.33–2.34 interval/endpoint reasoning and exercises145/147/149 parameter joins. Our two-parameter calibration synthesis requires method selection and an independent assigned point value; it is not a reskinned source exercise.",
+    "4.19": "OpenStax §2.4 Theorem2.9 and Example2.35; OU Functions §3.2 pp250–253 composition input restrictions. Here logarithm/square-root composition uses taught domains; no trigonometric-limit proof assumed. Explicit counterexample shows why outer continuity matters.",
+    "4.20": "Python tutorial §15 opening representation and displayed rounding discussion, https://docs.python.org/3/tutorial/floatingpoint.html. Original experiment transfers L03 conjugate identity into code. OU Algebra §4.1 pp60–62 underpins exact identity, but has no matching Python experiment; this gap is explicit.",
+    "4.21": "Practice matrix in completion-review record maps all twelve exercises to taught outcomes and actual source question families. Conclusion returns to unit opening questions; derivative handover only.",
+    "4.22": "Compact reference follows approved v1.10, derived from actual L01–L04; web/PDF rows and code share content/m101/unit4-reference.json."
+  },
+  "limitations": "Author self-review with separate computational/visual checks, not independent human peer review or student testing. Supplied MST124 Unit6 missing; accessible university/OpenStax passages supply topical match, no claim that unavailable OU calculus chapter was inspected."
+}

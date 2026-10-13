@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-13",
+  "status": "Planning only; no U05\u2013U07 teaching or availability change",
+  "policy": "construction-policy.js v1.0 gates 1\u20132",
+  "parents": [
+    "curriculum/m101-units.js",
+    "curriculum/m101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/later-stage-audit.js"
+  ],
+  "boundary": "No epsilon-delta course, infinite-series theory or ODE methods. All hours include practice. P101 owns Python induction. Wider source-equivalence gaps remain.",
+  "units": {
+    "U04": [
+      {
+        "title": "Functions and their domains",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Rules, domain, range, composition and piecewise branches",
+        "requires": "U03",
+        "evidence": "Domain and composition audit",
+        "handover": "Finite limits",
+        "id": "U04-L01",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Limits",
+        "hours": 3.5,
+        "pythonHours": 0,
+        "purpose_scope": "Near versus at; finite and one-sided limits; graph/table evidence and failure modes",
+        "requires": "U04-L01",
+        "evidence": "Interpret graphs; construct counterexample to a table claim",
+        "handover": "Algebraic limit justification",
+        "id": "U04-L02",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Calculating limits",
+        "hours": 3.5,
+        "pythonHours": 0,
+        "purpose_scope": "Arithmetic laws, nonzero conditions, cancellation, conjugates and one-sided algebra",
+        "requires": "U04-L02",
+        "evidence": "Select and justify a simplification; diagnose invalid division",
+        "handover": "Continuity and exact/numerical comparison",
+        "id": "U04-L03",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Continuity and numerical evidence",
+        "hours": 5,
+        "pythonHours": 1,
+        "purpose_scope": "Continuity at points/endpoints, joining pieces, scalar numerical audit and whole-unit synthesis",
+        "requires": "U04-L03; P101 U01 for code",
+        "evidence": "Continuity counterexample; independent scalar check; cumulative exercises",
+        "handover": "U05 prerequisites only",
+        "id": "U04-L04",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      }
+    ],
+    "U05": [
+      {
+        "title": "From secants to a derivative",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Difference quotient and first principles",
+        "requires": "U04",
+        "evidence": "Derive a simple derivative",
+        "handover": "Elementary rules",
+        "id": "U05-L01",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Elementary derivative families",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Powers, exponential, logarithmic and trigonometric derivatives, radians",
+        "requires": "U05-L01",
+        "evidence": "Choose rule and domain",
+        "handover": "Products and quotients",
+        "id": "U05-L02",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Products and quotients",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Product/quotient rules with domains",
+        "requires": "U05-L02",
+        "evidence": "Explain rule selection",
+        "handover": "Composition",
+        "id": "U05-L03",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "The chain rule",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Composition, inner and outer changes",
+        "requires": "U05-L03",
+        "evidence": "Nested derivative with reasoning",
+        "handover": "Implicit relations",
+        "id": "U05-L04",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Implicit and second derivatives",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Implicit differentiation, second derivatives",
+        "requires": "U05-L04",
+        "evidence": "Differentiate a relation and interpret order",
+        "handover": "Numerical checks",
+        "id": "U05-L05",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Checking derivative calculations",
+        "hours": 4,
+        "pythonHours": 2,
+        "purpose_scope": "Independent scalar checks; cumulative exercises/reference/conclusion",
+        "requires": "U05-L05; P101 scalar/functions",
+        "evidence": "Written and computational comparisons",
+        "handover": "U06",
+        "id": "U05-L06",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      }
+    ],
+    "U06": [
+      {
+        "title": "Increase, decrease and stationary points",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Derivative signs and stationary points",
+        "requires": "U05",
+        "evidence": "Sign analysis with hypotheses",
+        "handover": "Concavity",
+        "id": "U06-L01",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Concavity and extrema",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "Second derivative, critical points and endpoints",
+        "requires": "U06-L01",
+        "evidence": "Classify extrema on specified domains",
+        "handover": "Related rates",
+        "id": "U06-L02",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Related rates",
+        "hours": 3,
+        "pythonHours": 0,
+        "purpose_scope": "Supplied physical models and units",
+        "requires": "U06-L02",
+        "evidence": "Explain rate relation",
+        "handover": "Mean value",
+        "id": "U06-L03",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "The mean-value idea",
+        "hours": 3,
+        "pythonHours": 0,
+        "purpose_scope": "Statement, hypotheses and counterexamples",
+        "requires": "U06-L03",
+        "evidence": "Check assumptions and interpret conclusion",
+        "handover": "Graph audit",
+        "id": "U06-L04",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Reading the shape critically",
+        "hours": 4,
+        "pythonHours": 2,
+        "purpose_scope": "Graph sampling/window audit and cumulative closing resources",
+        "requires": "U06-L04; P101 array/plot readiness",
+        "evidence": "Analytic versus plotted claims",
+        "handover": "U07",
+        "id": "U06-L05",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      }
+    ],
+    "U07": [
+      {
+        "title": "Tangent-line approximations",
+        "hours": 3,
+        "pythonHours": 0,
+        "purpose_scope": "Locality, units and model interpretation",
+        "requires": "U05/U06",
+        "evidence": "Select and justify local approximation",
+        "handover": "Finite differences",
+        "id": "U07-L01",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Numerical derivatives",
+        "hours": 3,
+        "pythonHours": 1,
+        "purpose_scope": "Forward and central differences",
+        "requires": "U07-L01; P101 scalar/functions",
+        "evidence": "Implement and check against hand derivative",
+        "handover": "Step-size errors",
+        "id": "U07-L02",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Why smaller is not always better",
+        "hours": 4,
+        "pythonHours": 2,
+        "purpose_scope": "Truncation versus floating-point cancellation; no Taylor series",
+        "requires": "U07-L02",
+        "evidence": "Step-size experiment with edge cases",
+        "handover": "Synthesis",
+        "id": "U07-L03",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      },
+      {
+        "title": "Block synthesis and formative checkpoint",
+        "hours": 4,
+        "pythonHours": 0,
+        "purpose_scope": "U04\u2013U07 exercises, embedded iCMA02, reference and conclusion",
+        "requires": "U07-L03",
+        "evidence": "Transfer and correction; TMA02 preparation",
+        "handover": "TMA02 separately budgeted 6h",
+        "id": "U07-L04",
+        "outcomes": [
+          "M101-O1",
+          "M101-O5",
+          "M101-O6"
+        ],
+        "boundary": "Within approved parent unit; teaching uncommissioned beyond U04"
+      }
+    ]
+  }
+}

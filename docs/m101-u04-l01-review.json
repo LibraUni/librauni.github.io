@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-12",
+  "scope": "M101 Block 2 introduction, Unit 4 introduction and Lesson 1 only. User explicitly excludes creation and publication of later Unit 4 teaching.",
+  "standard": "Teaching Standard and Practice v1.10; fixed illustrated M101 opening chapter v0.4 inspected.",
+  "subject_review": {
+    "result": "pass",
+    "checks": {
+      "count": 1927,
+      "passed": true,
+      "scope": "Independent rational arithmetic, inequalities, range witnesses, all worked example/activity results and MathML/source structure. Numerical samples support, not prove, general results."
+    },
+    "reasoning": "Domain exclusions retained after cancellation; range includes attainability argument; composition checks both stages in order; piecewise boundary belongs to exactly one branch; calibration example explicitly invented, with restricted composite domain. MathML inequality entities corrected before final checks."
+  },
+  "reader_review": {
+    "result": "pass",
+    "prerequisites": "Earlier M101 algebra, intervals, coordinate graphs and elementary function families. Logarithm domain recalled before use. No limits, differentiation or new Python required.",
+    "progression": "Input/output/domain/range; restrictions from formulas; graph families; composition; piecewise rules. Five worked examples and eight activities include explanations, interpretation and closed feedback.",
+    "revision": "Added explicit range witness, log-domain retrieval and discussion of calibration evidence versus a supplied rule."
+  },
+  "visual_review": {
+    "result": "pass",
+    "evidence": "24 browser route/width/theme cases; 320/390/900/1440 widths, all 198 MathML elements, images, unique IDs, closed feedback, keyboard disclosure and diagram focus, no-JS reading, exact source text and local links. Three standalone offline copies checked.",
+    "repairs": "Separated graph labels from curves, corrected encoded inequalities, made wide mathematics and diagrams locally scrollable, fixed offline box sizing. Inspected worked mathematics, all lesson figures, mobile feedback and print/200% CSS zoom proxies.",
+    "limitations": "CSS zoom is a proxy rather than native browser zoom. Automated checks and author editorial review are not independent human or learner accessibility evaluation. Block introduction deliberately leads into the illustrated unit introduction without an extra decorative image."
+  },
+  "whole_lesson_review": {
+    "result": "pass",
+    "numbering": "Sections 4.1\u20134.5; Examples 4.1\u20134.5; Activities 4.1\u20134.8; Figures 4.1\u20134.6 across unit opening and lesson; Keys 4.1\u20134.3.",
+    "budget": "4 hours including introductions, reading, attempted activities, feedback and correction. Unit remains 16 hours including 1 Python hour; remaining 12 hours reserved. Timing is an editorial estimate, not measured learner data.",
+    "boundary": "No later lesson authored. No cumulative exercises, unit conclusion or unit reference PDF yet because the unit is incomplete. No completion or learner records altered."
+  },
+  "release_checks": {
+    "site_tests": 127,
+    "search_pages": 51,
+    "production_build": "pass",
+    "media_audit": "pass",
+    "diff_check": "pass",
+    "deployment": "pending"
+  }
+}
