@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-13",
+  "decision": "All local gates passed; live verification required after publishing",
+  "standard": "Teaching Standard and Practice v1.10; illustrated M101 v0.4 calibration and approved Block2 blueprint",
+  "preservation": "Block2 and Unit4 introductions and L01 teaching byte-identical by SHA256. Availability and navigation updated outside fragments. No Unit5 teaching. Concurrent M101 release preserved.",
+  "continuity": "Whole-unit reading: boundary/inventory -> resultant/laws -> force-model feasibility -> constant acceleration over a valid interval -> shared time/components/landing event -> code and model audit. Conclusion returns to opening questions. M101 vectors/quadratics and P101 arrays/plotting recalled; no calculus, ODE solver or moments assumed.",
+  "coverage": [
+    {
+      "outcome": "System selection and justified forces",
+      "lessons": [
+        1,
+        2
+      ],
+      "exercises": [
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "outcome": "Laws, directions, units and recipients",
+      "lessons": [
+        2
+      ],
+      "exercises": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "outcome": "Contact/gravity models and conditions",
+      "lessons": [
+        3
+      ],
+      "exercises": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "outcome": "Constant acceleration and interpretation",
+      "lessons": [
+        4
+      ],
+      "exercises": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "outcome": "Projectile/computational checks and limits",
+      "lessons": [
+        5
+      ],
+      "exercises": [
+        11,
+        12
+      ],
+      "activity": "4.26 parameter isolation and4.27 two-hour Python investigation"
+    }
+  ],
+  "workload": "3+3+4+3+5=18h, including2Python; Block2 remains72h/10Python. L05 includes75min exercises and45feedback, with no added booklet, lesson-end set or assessment. Editorial estimates, not learner timings.",
+  "subject": "1140 recorded calculation/structure/code checks across L02\u201305 plus131site tests. All new examples/activities/exercise solutions independently recomputed. Critical conditions reviewed: inertial frame, constant mass, pair recipients, N>=0, rope pulling, actual vs limiting static friction, relative sliding, valid interval after stop/contact, signed area vs distance, equal-height vs floor event, numeric check vs empirical validation.",
+  "reader": "Each lesson continuously read and reviewed before the next was authored. Motivation, intermediate reasoning, choices and interpretations retained; whole-unit transitions and opening/closing alignment checked.",
+  "visual": "All new figures inspected;32width/theme cases plus native feedback/keyboard/noJS/200%CSSzoom proxies. Explorer keyboard/reset/zero-case/static alternative/reduced-motion checked; no animation. Eight code copies exact. Two PDF pages inspected, correct branding/motto/reuse and page labels. PDF untagged; equivalent structured HTML reference provided.",
+  "resources": {
+    "internal_links_and_anchors": 5,
+    "sequences": {
+      "sections": 32,
+      "figures": 29,
+      "examples": 27,
+      "activities": 27,
+      "exercises": 12
+    },
+    "reference_rows": 12,
+    "python_reference_cells": 3,
+    "zip_matches": true,
+    "unit4_all_available": true,
+    "unit5_all_outlines": true
+  },
+  "offline": "Four local self-contained lesson copies pass8offline width cases; external links/downloads remain online.",
+  "sources": "Per-lesson records identify actual OU mathematical passages, primary mechanics and software comparisons. No supplied private OU mechanics chapter; external mechanics supplement. Fendt actual written instructions inspected; live UI security-policy verification unavailable, so partial comparator only. Original teaching/figures/questions; NASA reuse and credits recorded.",
+  "site": "Production build,58available-page search,media structural checks,131site tests,module/block/unit navigation pass; Unit5 all outlines. No learner records, security rules or assessment entitlement changes.",
+  "limitations": "Distinct author self-review with independent computations, not independent human peer review, learner validation or screen-reader certification."
+}

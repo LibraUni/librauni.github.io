@@ -1,7 +1,7 @@
 export const p101Block2Lessons = {
   "version": "1.0",
   "date": "2026-10-12",
-  "status": "Production blueprint within approved block scope; only U04-L01 released",
+  "status": "Production blueprint within approved block scope; complete U04 released; U05–U07 teaching remains in preparation",
   "lessons": [
     {
       "id": "U04-L01",

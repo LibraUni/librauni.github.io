@@ -1,3 +1,7 @@
+# P101 Unit 4 complete publication authorised — 13 October 2026
+
+User authorises completing L02–L05 locally, reviewing each lesson, then publishing after whole-unit checks; STOP before Unit5. All remaining lessons and closure complete to standardv1.10. Introductions and L01 teaching byte-identical. Unit18h/2Python retained;32sections,27examples,27activities,29figures,12cumulative exercises with hidden solutions. Original projectile explorer, checked notebook/script/ZIP and synchronised two-page reference. See docs/p101-u04-completion-review.json and per-lesson reviews/sources. 1140subject/structure/code checks,131site tests,58-page search,32browser width/theme cases,offline/PDF/copy/navigation/media/build checks pass. M101 release preserved; no learner records changed. Await deployment/live verification.
+
 # P101 Unit 4 opening LIVE — 12 October 2026
 
 Release 32856f67fa60f8322ec17d9111600768a1da7a25 published; workflow 38297821749 security and publish succeeded. All three live page texts match reviewed fragments, 24 width/theme cases and keyboard/no-JS feedback passed, 48-page search and future-outline gates verified. Two images match local bytes; 11 linked build assets return 200. See docs/p101-u04-l01-live.json. Next is L02 Newton’s laws and equilibrium, 3h/0h Python. Unit 4 remains incomplete; closing exercises, conclusion and web/PDF reference remain due at L05. M101 TMA01 concurrent release preserved. No learner records changed.
