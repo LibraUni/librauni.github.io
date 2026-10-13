@@ -1,0 +1,16 @@
+/* Scoped to newly authored Unit 4 Lessons 2–5. */
+.p101-u4-new .equation math{margin:0 auto}
+.p101-u4-new .equation{max-width:100%;font-size:1em}
+.p101-u4-new header{margin-bottom:44px}
+.p101-u4-new .diagram svg{min-width:640px}
+.p101-u4-new .table-scroll{max-width:100%;overflow-x:auto}
+.p101-u4-new table{width:100%;border-collapse:collapse;font-size:.85em}
+.p101-u4-new th,.p101-u4-new td{padding:12px 14px;border:1px solid #aabbb3;text-align:left;vertical-align:top}
+.p101-u4-new th{background:#e3ede6;color:#223c36}
+.p101-u4-new .media-credit{display:block;margin-top:8px}
+.p101-u4-new .reference-table td:first-child{width:16%;font:600 13px system-ui}
+@media print{.p101-u4-new .diagram svg{min-width:0}.p101-u4-new .table-scroll{overflow:visible}}
+
+.p101-u4-new math[display="inline"]{display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}
+.p101-u4-new{min-width:0;box-sizing:border-box}
+.p101-u4-new :is(p,h1,h2,h3,h4,li){overflow-wrap:break-word}

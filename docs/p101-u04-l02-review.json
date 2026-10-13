@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-13",
+  "disposition": "Lesson2 locally reviewed; proceed to Lesson3; no publication yet",
+  "subject": "89 independent numerical/structure/math checks; all example and activity values recomputed. Common acceleration required for combined cart equation; contact regime reconsidered after stopping; frames and constant mass qualified.",
+  "reader": "Continuous author-led reading of six sections and all feedback against L01 and reference. Acceleration introduced before law; average/instant distinction and signed speed explained without calculus. Explicitly distinguishes instantaneous rest, interval equilibrium, pair recipients and internal cancellation. Main argument remains prose with worked reasoning. Corrected skipped key numbering; unlike comparator errors, no inference of force direction from velocity alone.",
+  "visual": "All six figures and representative examples/opened feedback inspected; forces/acceleration separate scales; contact arrows have stated recipients. Eight width/theme cases, exact fragment text, keyboard feedback and no-JS/200%CSS zoom checked. Found enlarged inline mathematics overflow and fixed using bounded inline scroll; L01 styles unchanged.",
+  "practice": "Six activities90min; reading60min; correction30min within180min. Feedback gives reasoning and criteria for diagrams. Timings not student-tested.",
+  "whole_lesson": "4.7\u20134.12; Examples4.6\u20134.11, Activities4.7\u20134.12, Figures4.7\u20134.12; handover quantitative force models. No requirement for calculus, friction coefficients, moments or momentum.",
+  "limitations": "Separate self-review passes with independent arithmetic, not independent human or actual learner validation. Whole-unit/PDF/offline integration remains required at closure."
+}

@@ -1,3 +1,4 @@
+import {p101U04LessonCount} from '../scripts/p101-teaching.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -12,10 +13,10 @@ test('P101 Block 2 lesson budgets preserve approved unit and Python allocations'
  }
  assert.ok(p101Block2Lessons.lessons.find(l=>l.id==='U07-L03').requires.includes('M101-U05'));
 });
-test('P101 Unit 4 opens only Lesson 1; future lessons remain unavailable to teaching search',()=>{
+test('P101 Unit 4 release count controls teaching availability; future lessons stay outlines',()=>{
  const base=new URL('../learn/physics/stage-1/p101/b02/u04/',import.meta.url);
  const first=fs.readFileSync(new URL('l01/index.html',base),'utf8');
  assert.match(first,/data-search-status="available"/);
  for(let n=1;n<=6;n++)assert.ok(first.includes(`id="P101-U04-L01-S0${n}"`));
- for(let n=2;n<=5;n++){const h=fs.readFileSync(new URL(`l0${n}/index.html`,base),'utf8');assert.doesNotMatch(h,/data-search-status="available"/);assert.match(h,/Teaching is in preparation/);}
+ for(let n=p101U04LessonCount+1;n<=5;n++){const h=fs.readFileSync(new URL(`l0${n}/index.html`,base),'utf8');assert.doesNotMatch(h,/data-search-status="available"/);assert.match(h,/Teaching is in preparation/);}
 });

@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-13",
+  "standard": "v1.10; fixed M101 illustrated v0.4 read in full",
+  "authorisation": "Complete remaining P101 U04 locally one lesson at a time; close and review unit, publish after required checks; do not begin U05",
+  "preservation": {
+    "block2.html": "9a9d53d891a84153c2ce1b8232fb0bc1cf71aa93bb9c80b0161ae27aec434399",
+    "unit4.html": "b1749aea4e91d0649294dbe7538b793f8ad02f765214ee3f1e9e3bdc39d97765",
+    "unit4-lesson1.html": "5d6f3105703652a883782f6e0eaf1ca87fbb130a710e522fe09e2bccd020fa29"
+  },
+  "construction_policy": "1.0; complete20-lesson B02 map read; relevant U04/U05 and wider maps inspected; 18h/2Python U04 within72h/10Python B02 unchanged",
+  "lesson2": {
+    "title": "Newton\u2019s laws and equilibrium",
+    "sections": [
+      {
+        "number": "4.7",
+        "purpose": "Velocity changes and physical acceleration; signs and short intervals",
+        "prerequisite": "P101 U03 signed velocity; M101 vectors",
+        "evidence": "Activity4.7,10min"
+      },
+      {
+        "number": "4.8",
+        "purpose": "First law, inertial frames, ground approximation",
+        "prerequisite": "4.7 and L01 force inventory",
+        "evidence": "Activity4.8,10min"
+      },
+      {
+        "number": "4.9",
+        "purpose": "Second law; inertial mass, components and units",
+        "prerequisite": "4.7\u20134.8",
+        "evidence": "Activity4.9,15min"
+      },
+      {
+        "number": "4.10",
+        "purpose": "Translational equilibrium from component sums",
+        "prerequisite": "4.9",
+        "evidence": "Activity4.10,15min"
+      },
+      {
+        "number": "4.11",
+        "purpose": "Third-law pairs versus balance; unequal acceleration",
+        "prerequisite": "Agent/recipient from L01; second law",
+        "evidence": "Activity4.11,15min"
+      },
+      {
+        "number": "4.12",
+        "purpose": "Combined translating systems and model audit",
+        "prerequisite": "4.11",
+        "evidence": "Activity4.12,25min"
+      }
+    ],
+    "budget_minutes": {
+      "reading": 60,
+      "attempts": 90,
+      "feedback": 30
+    },
+    "boundary": "No calculus, momentum course, moments or force-coefficient formulae",
+    "handover": "L03 quantitative contact and gravity models"
+  },
+  "closing_reservation": {
+    "L05": {
+      "reading_including_reference_and_conclusion": 35,
+      "trajectory_written": 25,
+      "cumulative_exercises_attempts": 75,
+      "python_investigation": 120,
+      "feedback_and_correction": 45
+    },
+    "coverage": "L01 boundary/inventory; L02 signs/laws/pairs; L03 contact model and feasibility; L04 relation selection/turning; L05 components/landing/code/model limits",
+    "no_extra_assessment": "No iCMA in U04; iCMA02 is reserved in U07; TMA02 remains separate"
+  },
+  "media_plan": {
+    "L02": "SPHERES photograph as motion-evidence limitation; original velocity-change, force-sum, balance/pairs and translating-system diagrams",
+    "L03": "Search NASA lunar rover contact image; diagrams showing support/friction limits and ramp resolution",
+    "L04": "Search NASA drop facility image; v-t signed area and vertical trajectory diagrams",
+    "L05": "Search relevant projectile demonstration imagery; labelled computed trajectory; consider static parameter explorer only if comparison supports value"
+  },
+  "release": "Pending each lesson review and whole-unit closing checks"
+}

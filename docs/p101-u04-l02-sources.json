@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-13",
+  "lesson": "U04-L02",
+  "sources": [
+    {
+      "source": "Private OU MST124 Unit5 Coordinate geometry and vectors",
+      "path": "sources/Unit 5 - Coordinate Geometry.pdf",
+      "inspected": "Printed pp135\u2013142: signed motion, vectors/scalars, equality, zero and negative vectors, addition; Activities23\u201324 and solutions p195; visible p140 layout inspected in opening release and retained",
+      "fit": "4.7 velocity change; 4.9\u20134.10 signed sums; mathematical notation and progression throughout",
+      "gap": "No supplied OU mechanics chapter; vector questions calibrate mathematical reasoning only, not Newton-law physics. No private wording/figures reused."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a75.2",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-2-newtons-first-law",
+      "inspected": "Opening friction discussion, reference frames, equilibrium, Example5.1 and Check5.2",
+      "fit": "4.8 and Activity4.8",
+      "difference": "Our explanation states approximate ground frame; does not claim zero vertical resultant establishes zero friction, or make unqualified universality claims."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a75.3",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law",
+      "inspected": "Force/acceleration and mass proportionality through Example5.2 and significance",
+      "fit": "4.7 and4.9; original supplied-force problems",
+      "difference": "Constant mass explicitly required; moving forward alone does not establish forward resultant. We distinguish velocity from acceleration rather than adopt the source significance passage\u2019s misleading parenthetical inference."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a75.5",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-5-newtons-third-law",
+      "inspected": "Third law, swimmer, package scale Example5.9, system change Examples5.10\u20135.11",
+      "fit": "4.11\u20134.12; force recipients and system transitions",
+      "difference": "Our original carts avoid walking/rolling force subtleties and stipulate common translation. More scaffolding before independent multi-error Activity4.12."
+    },
+    {
+      "source": "MIT8.01SC Ch7",
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter7.pdf",
+      "inspected": "Example7.1 and solution pp7-3\u20137-4, \u00a77.1.1 inertial mass, \u00a77.2 first law p7-5, opening \u00a77.3 pp7-6\u20137-7",
+      "fit": "4.8\u20134.10 physical laws and equilibrium inversion",
+      "difference": "Calculus and momentum formulation deferred; no historical anecdotes or quotations adopted."
+    }
+  ],
+  "section_mapping": {
+    "4.7": "OU pp135\u2013136; OpenStax5.3",
+    "4.8": "OpenStax5.2; MIT7.2",
+    "4.9": "OpenStax5.3; MIT7.1.1",
+    "4.10": "MIT Example7.1; OU vector sums",
+    "4.11": "OpenStax5.5 Example5.9 and force-pair discussion",
+    "4.12": "OpenStax5.5 Examples5.10\u201311"
+  },
+  "practice": "Six original activities progress from signed-rate interpretation through force inference, impossible equilibrium and force-pair classification to system audit. Exact comparator questions inspected as above; 90min attempts and30feedback are editorial estimates, not measured equivalence. No extra lesson-end set.",
+  "media": {
+    "asset": "/teaching/p101/u04/spheres.jpg",
+    "source": "https://www.nasa.gov/image-article/pair-of-tiny-free-floating-satellites-known-as-spheres/",
+    "creator": "NASA; ISS061-E-112435; 31Dec2019",
+    "terms": "NASA educational/editorial media terms inspected13Oct2026; no third-party credit on source; no endorsement",
+    "modifications": "NASA 1200\u00d7800 rendition; unmodified",
+    "inspection": "Actual downloaded asset viewed; photo used for evidence limits, not a claim of no gravity or inertial cabin",
+    "originals": "Five original SVGs for velocity change, force/acceleration, equilibrium, pairs and common cart motion. No video selected or claimed watched. Static comparisons suffice here; interactive opportunity reserved for friction/projectile investigation."
+  }
+}
