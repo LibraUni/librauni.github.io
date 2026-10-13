@@ -347,6 +347,6 @@ export const m101Unit3Lessons = [
   }
 ];
 
-export const m101Unit4Lessons = [{id:'U04-L01',unit:'U04',title:'Functions and their domains',hours:4,purpose:'Specify functions and their domains, interpret elementary graphs, and compose rules while preserving input restrictions.'}];
+export const m101Unit4Lessons = [{"id": "U04-L01", "unit": "U04", "title": "Functions and their domains", "hours": 4, "purpose": "Specify functions and their domains, interpret elementary graphs, and compose rules while preserving input restrictions."}, {"id": "U04-L02", "unit": "U04", "title": "Limits", "hours": 3.5, "purpose": "Distinguish a value from a finite limit, use one-sided approaches and explain limitations of tables and graphs."}, {"id": "U04-L03", "unit": "U04", "title": "Calculating limits", "hours": 3.5, "purpose": "Use limit laws and justified algebraic simplification with domain conditions."}, {"id": "U04-L04", "unit": "U04", "title": "Continuity and numerical evidence", "hours": 5, "purpose": "Check continuity, compare numerical evidence with algebra and consolidate the whole unit."}];
 
 export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons,...m101Unit3Lessons,...m101Unit4Lessons];

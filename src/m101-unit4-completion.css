@@ -1,0 +1,18 @@
+/* New Unit 4 lessons only: preserve published Lesson 1 typography. */
+.m101-u4-new .table-scroll{overflow-x:auto;max-width:100%}
+.m101-u4-new table{border-collapse:collapse;width:100%;font-size:.92em}
+.m101-u4-new th,.m101-u4-new td{padding:10px 13px;border-bottom:1px solid #b8c8be;text-align:left;vertical-align:top}
+.m101-u4-new caption{font:600 14px/1.5 system-ui;text-align:left;padding-bottom:10px}
+.m101-u4-new .study-note{font:14px/1.65 system-ui;background:#eef3ef;padding:16px;border-left:3px solid #9aafa5}
+.m101-u4-new pre{background:#eef2f5;padding:18px;border-radius:10px;overflow:auto;font:13px/1.6 monospace;max-width:100%;box-sizing:border-box}
+.m101-u4-new .context{background:#e8f0f7;padding:20px 25px;margin:26px 0;border-left:3px solid #7198b3;max-width:760px}
+.m101-u4-new .context h3{font:600 16px/1.5 system-ui}
+.m101-u4-new .exercise{border-top:2px solid #acbfb4;margin-top:30px;padding-top:18px}
+.m101-u4-new .photo img{display:block;max-width:100%;height:auto;max-height:600px;object-fit:contain;margin:auto}
+html[data-theme="dark"] .m101-u4-new .study-note{background:#25392f}
+html[data-theme="dark"] .m101-u4-new .context{background:#223747}
+html[data-theme="dark"] .m101-u4-new pre{background:#14222c;color:#e6edf2}
+@media print{.m101-u4-new .table-scroll{overflow:visible}.m101-u4-new pre{white-space:pre-wrap}.m101-u4-new details{display:block}.m101-u4-new details>*{display:block}.m101-u4-new details summary{display:none}}
+.m101-u4-new .portrait{float:none;width:300px;max-width:100%;height:auto;margin:20px auto}
+.m101-u4-new .context{box-sizing:border-box;min-width:0}
+@media(max-width:650px){.m101-u4-new .context{padding:16px 12px}}

@@ -1,0 +1,17 @@
+{
+  "lesson": "M101 U04 L03",
+  "date": "2026-10-13",
+  "status": "Local lesson subject/reader/visual review complete; unit release gate pending",
+  "subject": "1465 independent rational identity, restriction, sign and answer checks; all native MathML parsed. Square-root limit justification separates A=0 from A>0, avoiding division by zero. Absolute-value cases computed separately.",
+  "reader": "Continuous read against L02 handover, fixed v0.4 example exposition, OU algebra passage and CLP worked reasoning. Explains why denominator limit must be nonzero and why 0/0 is not an answer; worked methods retain original domain and interpret results. Added sign sanity check to compound fraction; no derivative taught.",
+  "visual": "Fixed unsupported aligned conversion by generating MathML tables; replaced diagram plaintext radical expressions by verbal operation labels and kept fully typeset working. Sized parentheses around radicals. Corrected portrait fixed-width overflow under mobile 200% CSS zoom. Eight desktop/mobile theme cases, figures, worked algebra, keyboard and noJS checked.",
+  "comparators": {
+    "4.12": "CLP1\u00a71.4 Theorems1.4.1/3/11 and Examples1.4.4\u20137; square-root argument is original elementary explanation.",
+    "4.13": "OU MST124 Algebra \u00a73.3 pp46\u201349 equivalence/cancellation and Activity24; CLP Example1.4.12. OU algebra does not teach finite limits here, so the local-equality argument is supplied explicitly.",
+    "4.14": "OU Algebra \u00a74.1 pp60\u201362 rationalisation/Example19; CLP Example1.4.17; our numerator rationalisation reverses placement and explicitly checks positivity/domain.",
+    "4.15": "OU Algebra \u00a73.3 pp50\u201352 Example15/Activity26; CLP\u00a71.4 exercises1\u20135,20\u201324,28 for conceptual laws and method variation. Mixed selection is shorter and more scaffolded than the full CLP bank, with no untaught trig-limit or Taylor method.",
+    "4.16": "L01 absolute value and L02 one-sided criteria; CLP\u00a71.3 one-sided examples. Original linked pair tests failure versus successful limit."
+  },
+  "practice": "Six activities cover fluent laws, restrictions, conjugates, mixed selection, error diagnosis and branch comparison. 3.5h including feedback; no added coding.",
+  "limitations": "Self-review and checks do not establish learner timing or independent human validation."
+}

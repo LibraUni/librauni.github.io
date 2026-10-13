@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "date": "2026-10-13",
+  "rows": [
+    [
+      "Recall",
+      "Function and domain",
+      "One output for each allowed input; range: all attained outputs. Check denominators $\\ne0$, real square-root arguments $\\ge0$, logarithm arguments $&gt;0$."
+    ],
+    [
+      "Understand",
+      "Composition",
+      "$(f\\circ g)(x)=f(g(x))$. Require $x\\in D_g$ and $g(x)\\in D_f$. Order matters."
+    ],
+    [
+      "Understand",
+      "Finite limit",
+      "$f(x)\\to L$ as $x\\to a$: nearby nonzero offsets make outputs as close to $L$ as required. The value at $a$ need not exist or equal $L$."
+    ],
+    [
+      "Recall",
+      "One-sided test",
+      "At an interior point, a finite two-sided limit exists exactly when both one-sided limits exist and agree. At an interval endpoint, use the approach within the domain."
+    ],
+    [
+      "Understand",
+      "Continuity",
+      "At an interior point: $f(a)$ exists, the finite two-sided limit exists, and $$\\lim_{x\\to a}f(x)=f(a).$$ At included endpoints use the inward one-sided limit. Check each join separately."
+    ],
+    [
+      "Recall",
+      "Finite-limit arithmetic",
+      "If $f(x)\\to A$ and $g(x)\\to B$: $$f\\pm g\\to A\\pm B,\\quad cf\\to cA,\\quad fg\\to AB,\\quad \\frac{f}{g}\\to\\frac{A}{B}\\ (B\\ne0).$$ All component limits use the same approach and a common nearby domain."
+    ],
+    [
+      "Understand",
+      "Continuous outer function",
+      "If $g(x)\\to L$ and $f$ is continuous at $L$: $$f(g(x))\\to f(L).$$ Nearby inner outputs must lie in the outer domain."
+    ],
+    [
+      "Recall",
+      "Elementary families",
+      "Polynomials: continuous everywhere. Rational functions: denominator nonzero. $\\sqrt{x}$: $x\\ge0$; $\\ln x$: $x&gt;0$. Absolute value, sine, cosine and exponential: continuous on their real domains."
+    ],
+    [
+      "Understand",
+      "Equality near the target",
+      "Equal rules on a deleted neighbourhood have the same limit. Cancellation preserves exclusions; a continuous extension is a separate definition."
+    ],
+    [
+      "Consult",
+      "Algebraic methods",
+      "Try valid substitution first. For $0/0$: factor, expand, combine fractions or multiply by a nonzero conjugate. $$ (A-B)(A+B)=A^2-B^2. $$ $0/0$ is an indeterminate form, not an answer."
+    ],
+    [
+      "Recall",
+      "Absolute value",
+      "$$|u|=\\begin{cases}u,&u\\ge0,\\\\-u,&u&lt;0.\\end{cases}$$ Split at a sign change before cancelling."
+    ],
+    [
+      "Understand",
+      "Failure and numerical evidence",
+      "Unequal one-sided limits, unbounded growth or persistent oscillation can prevent a finite limit. A finite table or plot is evidence, not proof. Rounded subtraction of nearly equal numbers can lose accuracy."
+    ],
+    [
+      "Consult",
+      "Stable example and domain",
+      "$$\\frac{\\sqrt{9+h}-3}{h}=\\frac{1}{\\sqrt{9+h}+3}\\to\\frac16\\quad(h\\to0).$$ Equality on the original domain: $h\\ge-9$, $h\\ne0$. A finite-offset difference from $1/6$ is not necessarily rounding error."
+    ]
+  ],
+  "python": "from math import sqrt\n\ndef quotient(h):\n    if h < -9 or h == 0:\n        return None\n    return 1 / (sqrt(9 + h) + 3)\n\nfor h in [0.01, -0.01, 1e-8, -1e-8]:\n    print(h, quotient(h))"
+}

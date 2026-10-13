@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-13",
+  "authorisation": "Complete U04 locally lesson by lesson, review complete unit then publish; do not begin Unit5 teaching. Supersedes prior stop-after-L01 boundary.",
+  "standard": "v1.10 and fixed v0.4 reference",
+  "preserve": [
+    "content/m101/unit4-lesson1.html",
+    "published IDs 4.1\u20134.5 sections, Examples4.1\u20134.5, Activities4.1\u20134.8, Figures4.1\u20134.6"
+  ],
+  "sections": {
+    "L02": [
+      "4.6 A value approached",
+      "4.7 How close is close enough?",
+      "4.8 Approaching from each side",
+      "4.9 Reading a graph at a missing point",
+      "4.10 When nearby values do not settle",
+      "4.11 What a table can and cannot establish"
+    ],
+    "L03": [
+      "4.12 Building limits from simpler ones",
+      "4.13 Cancelling without filling a hole",
+      "4.14 Removing a radical difference",
+      "4.15 Combining fractions and choosing a method",
+      "4.16 Absolute values and one-sided algebra"
+    ],
+    "L04": [
+      "4.17 Matching value and limit",
+      "4.18 Joining rules and checking endpoints",
+      "4.19 When composition preserves continuity",
+      "4.20 A numerical investigation",
+      "4.21 Unit conclusion and mixed exercises",
+      "4.22 Unit reference"
+    ]
+  },
+  "minutes": {
+    "L02": {
+      "reading_examples": 80,
+      "attempts": 80,
+      "feedback_review": 50
+    },
+    "L03": {
+      "reading_examples": 75,
+      "attempts": 85,
+      "feedback_review": 50
+    },
+    "L04": {
+      "reading_examples": 55,
+      "in_text_attempts_feedback": 35,
+      "python_including_feedback": 60,
+      "unit_exercise_attempts": 90,
+      "unit_solutions_correction": 45,
+      "conclusion_reference": 15
+    }
+  },
+  "sources_gap": "Supplied MST124 Unit6 calculus is absent. Actual supplied Functions and Sequences passages plus MST224 Unit1 limit-as-approach passage are partial editorial matches. Accessible UBC CLP1 and OpenStax calculus fill topic-specific exposition/practice gaps. Do not claim OU limits chapter inspected.",
+  "media_plan": {
+    "L02": "Observation instrument photograph, limit versus value graph, one-sided graph, failure comparison and unseen spike diagram; optional point-value exploration if comparator and checks support it",
+    "L03": "NASA Katherine Johnson portrait replaces unavailable Smithsonian slide-rule images; verified NASA historical context about calculation checking. Three original algebra/method diagrams.",
+    "L04": "Revisit verified NIST calibration photo with explicit cross-reference, original three-case continuity graph, learner-controlled Python numerical comparison and two-page web/PDF reference."
+  },
+  "review_status": {
+    "L02": "completed; see distinct review records",
+    "L03": "completed; see distinct review records",
+    "L04": "completed; see distinct review records",
+    "whole_unit": "completed; see distinct review records"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "lesson": "M101 U04 L02",
+  "date": "2026-10-13",
+  "construction": "Reviewed before L03 drafting; local only pending complete-unit gate",
+  "subject": "2496 independent exact/numerical case checks; native MathML parsed. General arguments for linear tolerance, unequal approaches, reciprocal growth, oscillation witnesses and bounded-amplitude limit reviewed separately.",
+  "reader": "Read continuous draft against v0.4 reference and L01 handover. Explicitly explained approach signs, point changes, strict tolerances, endpoint convention, repeated attainment and limitations of a finite table. Fixed graph interpretation by distinguishing Kepler field image from brightness-time graph. No derivative or formal sequence theory required.",
+  "visual": "Eight width/theme cases, all figures and representative inline maths inspected, keyboard and no-JS checks passed. Lazy image check corrected to trigger loads before inspection. Added explicit Credit label required by media audit. Zoom proxy uses local mathematical scrolling; sidebar closed during screenshots.",
+  "whole_lesson": "Six connected sections; four worked examples, six activities, six figures incl NASA image; 3.5h includes attempts/feedback. Independent sketches and counterexamples broaden routine limit reading.",
+  "comparators": {
+    "4.6\u20134.9": "UBC CLP1 \u00a71.3 Definition1.3.7, Theorem1.3.8, Examples1.3.4/6/9 and exercises1.3.2.4\u20139; OpenStax\u00a72.2 definition. New functions and prompts; some retrieve prior L01 examples deliberately.",
+    "4.7/4.10": "OU MST124 Unit10 \u00a73 pp36\u201339 and Activity18 inspect approach-band progression (sequences at infinity are a prerequisite mismatch, not assigned); UBC\u00a71.3 Examples1.3.5/6 and Figure1.3.10. Added bounding reasoning rather than a plotting conclusion.",
+    "4.11": "Original finite-sample counterexample synthesis; no exact OU task match. UBC table-to-limit exposition motivates explicit stronger evidence distinction.",
+    "private_gap": "MST124 Unit6 not supplied; MST224Unit1p39 checks two-sided approach handover but assumes derivatives and is not a learner prerequisite."
+  },
+  "limitations": "Author self-review and automated checks; no independent human review or measured study-time claim."
+}

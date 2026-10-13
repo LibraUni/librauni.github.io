@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-13",
+  "site_tests": 127,
+  "search_available_pages": 54,
+  "production_build": "passed",
+  "media_structure": "passed",
+  "subject": {
+    "passed": true,
+    "counts": {
+      "L02 arithmetic and cases": 2496,
+      "L03 arithmetic and identities": 1465,
+      "all_checks": 4513
+    },
+    "limitations": "Exact rational identities and independently evaluated examples; sampled numerical checks supplement the written arguments, not proofs of limits."
+  },
+  "closing_subject": {
+    "passed": true,
+    "checks": 2170,
+    "method": "Exact rational identities, domain inequalities, endpoint/join substitutions; separately evaluated 80-digit Decimal quotient and fresh notebook execution. Existence arguments reviewed in prose.",
+    "numerical_errors": [
+      {
+        "h": 0.1,
+        "direct_error": "5.67483235575406134974507769247289480630586138355050349556078307E-16",
+        "rearranged_error": "7.483235575406134974507769247289480630586138355050349556078307E-18"
+      },
+      {
+        "h": -0.1,
+        "direct_error": "1.189116035863596875142681484300987269526839493616592461509493214E-15",
+        "rearranged_error": "2.9116035863596875142681484300987269526839493616592461509493214E-17"
+      },
+      {
+        "h": 0.01,
+        "direct_error": "1.787449850971101478792001788886130646407539053605257783945216766E-14",
+        "rearranged_error": "5.50149028898521207998211113869353592460946394742216054783234E-18"
+      },
+      {
+        "h": -0.01,
+        "direct_error": "1.276109046855087968416191385080222901153772128926057233381331974E-14",
+        "rearranged_error": "1.09046855087968416191385080222901153772128926057233381331974E-18"
+      },
+      {
+        "h": 0.0001,
+        "direct_error": "1.518432303522550028640989395363564666159780559782225320895950476E-12",
+        "rearranged_error": "1.7696477449971359010604636435333840219440217774679104049524E-17"
+      },
+      {
+        "h": -0.0001,
+        "direct_error": "1.441863951899324177546982905420337865259616248647130446926800512E-12",
+        "rearranged_error": "1.3951899324177546982905420337865259616248647130446926800512E-17"
+      },
+      {
+        "h": 1e-08,
+        "direct_error": "1.383635812960390946503843735709630455216317962623250540747674512E-8",
+        "rearranged_error": "1.039609053496156264290369544783682037376749459252325488E-17"
+      },
+      {
+        "h": -1e-08,
+        "direct_error": "1.374376553701131687241012231365780432351634077206054652585169585E-8",
+        "rearranged_error": "2.98868312758987768634219567648365922793945347414830415E-18"
+      },
+      {
+        "h": 1e-12,
+        "direct_error": "0.0001332129728885570370370372942386831275541552354823973654295585021",
+        "rearranged_error": "1.70370370372942386831275541552354823973654295585021E-17"
+      },
+      {
+        "h": -1e-12,
+        "direct_error": "0.0001332129728978162962962965534979423868491369455875642607199105829",
+        "rearranged_error": "3.7037037034465020576131508630544124357392800894171E-18"
+      },
+      {
+        "h": 1e-16,
+        "direct_error": "0.166666666666666666203703703703703706275720164609053480081161408",
+        "rearranged_error": "6.203703703703703706275720164609053480081161408E-18"
+      },
+      {
+        "h": -1e-16,
+        "direct_error": "0.166666666666666667129629629629629632201646090534979441729538180",
+        "rearranged_error": "7.129629629629629632201646090534979441729538180E-18"
+      }
+    ]
+  },
+  "boundary": {
+    "L01_unchanged_sha256": "02d4b3e6dafb8c99e7530cf342d864676c7feb22c065a94e639d7bb3e3476f89",
+    "unit_object_IDs_unique": true,
+    "sequences_contiguous": true,
+    "sections": 22,
+    "Unit5_unchanged": true
+  },
+  "browser": {
+    "L2": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 131,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L3": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 162,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L4": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 250,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    }
+  },
+  "closing_browser": {
+    "codeCopyKeyboardExact": true,
+    "downloadsExact": [
+      "M101-Unit-4-Reference.pdf",
+      "M101-Unit-4-Investigation.py",
+      "M101-Unit-4-Investigation.ipynb",
+      "u04-kepler.jpg",
+      "u04-johnson.jpg"
+    ],
+    "routesAndAnchors": true,
+    "unit5Outline": true,
+    "offlineChecked": true,
+    "errors": []
+  },
+  "pdf": "Both final pages rendered and visually inspected after typography and embedded-font corrections."
+}

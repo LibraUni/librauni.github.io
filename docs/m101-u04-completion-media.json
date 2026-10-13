@@ -1,0 +1,41 @@
+{
+  "inspected": "2026-10-13",
+  "original_diagrams": {
+    "figures": "4.7–4.10,4.12,4.14–4.17",
+    "licence": "CC BY-NC-SA 4.0",
+    "notes": "Axes labelled; finite windows and unresolved oscillation interval stated. Open/filled points match actual rules; schematic number line labelled not to scale. Algebra diagrams organise reasoning rather than substitute plain-text radicals for typeset expressions."
+  },
+  "photos": [
+    {
+      "figure": "4.11",
+      "file": "public/teaching/m101/u04-kepler.jpg",
+      "creator": "NASA/Ames/JPL-Caltech",
+      "source": "https://science.nasa.gov/resource/full-focal-plane-image-first-light-for-kepler-photometer/",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "purpose": "Finite observation versus defined nearby rule; caption explicitly distinguishes detector-field image from time graph.",
+      "modifications": "Unaltered NASA 1280px rendition, display scaling only"
+    },
+    {
+      "figure": "4.13",
+      "file": "public/teaching/m101/u04-johnson.jpg",
+      "creator": "NASA",
+      "source": "https://www.nasa.gov/image-detail/1-1966-l-06717_2/",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "history": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/",
+      "purpose": "Optional calculation-checking context; 1966 desk photo; no reproduction of orbital calculations.",
+      "modifications": "Unaltered 862x1024 NASA rendition, display scaling only"
+    },
+    {
+      "figure": "4.18",
+      "file": "public/teaching/m101/u04-calibration.jpg",
+      "creator": "NIST, image11PML009 (2011)",
+      "source": "https://www.nist.gov/image/thermometermercuryjpg",
+      "terms": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications",
+      "purpose": "Deliberate return to L01 Figure4.4: continuity assumption versus finite calibration observations. Reuse explicitly acknowledged.",
+      "modifications": "None; original published file preserved. US-government status with NIST foreign-copyright qualification retained."
+    }
+  ],
+  "candidate_searches": "NASA detector imagery selected for L02. Smithsonian slide-rule/thermostat candidates had inaccessible images or insufficient verified image-rights evidence and were not used. NIST digital thermometer page contextual evidence considered; existing verified calibration image selected for continuity connection.",
+  "interactive_decision": "Considered moving centre point and branch controls. Static side-by-side diagrams make all relevant cases simultaneously available; the one-hour learner-controlled Python experiment supplies useful manipulation and comparison. No additional animation/video would justify added controls or workload for this unit. This is a selection decision after media planning, not a general exemption.",
+  "review": "All new figure images rendered and inspected with captions; structural media audit passes for each new lesson. No private OU image or text reproduced."
+}
