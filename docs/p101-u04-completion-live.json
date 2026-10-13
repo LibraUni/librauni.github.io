@@ -1,0 +1,444 @@
+{
+  "date": "2026-10-13",
+  "release": "e8158a4d3bb68a8f57d4f1ff859ad2a8dff7341f",
+  "workflow": "https://github.com/LibraUni/librauni.github.io/actions/runs/38381887449",
+  "deployment": "success; planner-security and publish passed",
+  "lessons": {
+    "L02": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 53,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L03": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 111,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L04": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 132,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    },
+    "L05": {
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 900,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "light",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        },
+        {
+          "width": 320,
+          "theme": "dark",
+          "overflow": false,
+          "images": true,
+          "idsUnique": true,
+          "math": 216,
+          "badMath": false
+        }
+      ],
+      "keyboard": true,
+      "noJS": true,
+      "zoomProxy": true,
+      "sourceExact": true,
+      "errors": []
+    }
+  },
+  "interaction": {
+    "keyboard": true,
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "reducedMotion": true,
+    "noAnimation": true,
+    "noJS": true,
+    "copies": 8,
+    "sourceDescriptions": true,
+    "reset": true,
+    "zeroCase": true
+  },
+  "navigation": [
+    {
+      "path": "/learn/physics/stage-1/p101/",
+      "links": 0
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b02/",
+      "links": 2
+    },
+    {
+      "path": "/learn/physics/stage-1/p101/b02/u04/",
+      "links": 10
+    }
+  ],
+  "preservation": [
+    {
+      "file": "block2",
+      "liveTextMatchesPreservedSource": true
+    },
+    {
+      "file": "unit4",
+      "liveTextMatchesPreservedSource": true
+    },
+    {
+      "file": "unit4-lesson1",
+      "liveTextMatchesPreservedSource": true
+    }
+  ],
+  "files_search_and_future_units": {
+    "files": [
+      {
+        "path": "/teaching/p101/u04/crawler.jpg",
+        "bytes": 214617,
+        "sha256": "100e996df45e7f6a07272288a1d22f29377c3cf98bcdefa02d63d50cf6f1bf12"
+      },
+      {
+        "path": "/teaching/p101/u04/spheres.jpg",
+        "bytes": 137713,
+        "sha256": "7d984634d14a586b8954f226221f4a3c22bef42f794f6f5ad43eb3f6761903fa"
+      },
+      {
+        "path": "/teaching/p101/u04/projectile-path.png",
+        "bytes": 47651,
+        "sha256": "56303f052b2b3caffbb9711e2e8359b6c19dadfacd2e9dbe3ae61e3171fa1ce3"
+      },
+      {
+        "path": "/teaching/p101/u04/P101-Unit-4-reference.pdf",
+        "bytes": 2622007,
+        "sha256": "3dbbd55ab5958da04e035232e68821b9ea81a33d6c6d8246b1bc661530301601"
+      },
+      {
+        "path": "/teaching/p101/u04/P101-U04-README.txt",
+        "bytes": 783,
+        "sha256": "5470beecba94377fc13628782f96b161cae189b6ffcf3c1d066bdd2d58500d9d"
+      },
+      {
+        "path": "/teaching/p101/u04/drop-vehicle.jpg",
+        "bytes": 140554,
+        "sha256": "069341b993a5f3b48340fb206680a1b66fcf1c2cd8ea5d57c109eddcf5ff8114"
+      },
+      {
+        "path": "/teaching/p101/u04/P101-U04-projectile.py",
+        "bytes": 1965,
+        "sha256": "ba72f480ebb89683750a731352cf71beefd945791d91df71198f564e605644e1"
+      },
+      {
+        "path": "/teaching/p101/u04/lunar-rover.jpg",
+        "bytes": 237378,
+        "sha256": "076554eff33efcdb3765fc8e76503aa0fcadd0d186901809e2ff6ee0c6c1dba8"
+      },
+      {
+        "path": "/teaching/p101/u04/P101-U04-projectile.ipynb",
+        "bytes": 6581,
+        "sha256": "a0196994bfcc768bc81b14d6d128126f0be4c816cbfd05b0b6acff60b2fd8d8f"
+      },
+      {
+        "path": "/teaching/p101/u04/P101-U04-model.json",
+        "bytes": 638,
+        "sha256": "0d010fdc9270f1c927b1b707467c773f24767b6a2a24277cc158c8a0963e9743"
+      },
+      {
+        "path": "/teaching/p101/u04/lunar-jump.jpg",
+        "bytes": 188752,
+        "sha256": "da7209ecdb13f1cfc59e15913f16f3d0702ed37aa28a414240622221052a047d"
+      },
+      {
+        "path": "/teaching/p101/u04/P101-U04-projectile-investigation.zip",
+        "bytes": 4352,
+        "sha256": "995cc39e07e270162d6d7f5a7237a77ae25c153d04b48204e03d9f1fcb18bfcd"
+      }
+    ],
+    "search_manifest_exact": true,
+    "assets_200": 13,
+    "all_unit4_available": true,
+    "all_unit5_outlines": true
+  },
+  "disposition": "Unit4 complete and live. No Unit5 teaching begun; no learner records changed."
+}

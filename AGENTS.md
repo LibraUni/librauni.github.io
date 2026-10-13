@@ -1,3 +1,7 @@
+# P101 Unit 4 COMPLETE AND LIVE — 13 October 2026
+
+Release e8158a4d3bb68a8f57d4f1ff859ad2a8dff7341f; workflow38381887449 security and publish succeeded. Live Lessons2–5 match reviewed source;32width/theme cases,feedback/noJS/keyboard/explorer/reset/zero-case and8exactcodecopies pass. Both introductions and Lesson1 match preserved source. All12media/downloads match bytes;13linked build assets return200;58-page search manifest exact; closing-resource/navigation checks pass. Unit5 remains outline and is not commissioned. See docs/p101-u04-completion-live.json. Supersedes pending publication disposition below.
+
 # P101 Unit 4 complete publication authorised — 13 October 2026
 
 User authorises completing L02–L05 locally, reviewing each lesson, then publishing after whole-unit checks; STOP before Unit5. All remaining lessons and closure complete to standardv1.10. Introductions and L01 teaching byte-identical. Unit18h/2Python retained;32sections,27examples,27activities,29figures,12cumulative exercises with hidden solutions. Original projectile explorer, checked notebook/script/ZIP and synchronised two-page reference. See docs/p101-u04-completion-review.json and per-lesson reviews/sources. 1140subject/structure/code checks,131site tests,58-page search,32browser width/theme cases,offline/PDF/copy/navigation/media/build checks pass. M101 release preserved; no learner records changed. Await deployment/live verification.
