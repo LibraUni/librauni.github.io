@@ -1,3 +1,7 @@
+# P101 Unit 6 complete; publication authorised — 14 October 2026
+
+Five lessons developed and reviewed sequentially to standard v1.11. Whole-unit review and closing resources complete:18h/2hPython,24sections,16examples,21activities,14figures,12 cumulative exercises,two notebooks/scripts and synchronised two-page reference.139site tests,production build,85-page search,56browser cases,5no-JS,14offline and10final reflow cases pass. Earlier teaching hashes preserved; no learner records changed. See docs/p101-u06-completion-review.json and check-evidence.json. Deployment/live verification pending; do not claim live before success. U07 remains outline and is not commissioned.
+
 # P101 Unit 4 COMPLETE AND LIVE — 13 October 2026
 
 Release e8158a4d3bb68a8f57d4f1ff859ad2a8dff7341f; workflow38381887449 security and publish succeeded. Live Lessons2–5 match reviewed source;32width/theme cases,feedback/noJS/keyboard/explorer/reset/zero-case and8exactcodecopies pass. Both introductions and Lesson1 match preserved source. All12media/downloads match bytes;13linked build assets return200;58-page search manifest exact; closing-resource/navigation checks pass. Unit5 remains outline and is not commissioned. See docs/p101-u04-completion-live.json. Supersedes pending publication disposition below.

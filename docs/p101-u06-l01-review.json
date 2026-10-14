@@ -1,0 +1,11 @@
+{
+  "lesson": "U06-L01",
+  "standard": "1.11",
+  "subject": "Independently recomputed signed sums, rebound, stopping averages, unequal-duration force average, outside impulse and interval bounds in work/qa/l1-subject.json. All correct. Fixed-matter/inertial-frame qualification added; no open-system rocket claim.",
+  "reader": "Read continuously against fixed v0.4: distinguish state/change/interaction before conservation. Revised average-force definition to exclude endpoint averaging; compare neglected impulse with target resolution rather than tiny signed total. Five activities have diagnostic discussion and90min attempt budget.",
+  "comparators": "OU U4 pp4\u201310: explanation then boxed result and worked substitution, relevant for exposition rather than mechanics. OpenStax CollegePhysics2e8.1 Eq8.7 and Example8.2 inspected; explicitly repair finite-interval average qualification.8.3 internal cancellation inspected for handover; no private OU mechanics text available.",
+  "visual": "Six local standalone width/theme cases1440/390/320 passed image loading, unique IDs, page overflow and keyboard feedback. Desktop figure and mobile dark example visually inspected. Integrated site checks remain due.",
+  "media": "NASA LRC-2013-00602 actual photograph inspected: suspended airframe, marked background, cameras. Verified NASA media terms; no preceding P101 placement by asset identity. Three original diagrams checked against text.",
+  "disposition": "Complete and approved for the user-authorised whole-unit publication. Distinct self-review passes, not external peer review.",
+  "final_integrated_review": "Passed: production browser review at1440/900/390/320 in light/dark; feedback, keyboard, code copies where present, images and unique anchors. Final revised source passed offline review and targeted mobile/enlarged reflow. See p101-u06-completion-review.json."
+}

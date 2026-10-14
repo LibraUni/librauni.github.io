@@ -1,0 +1,12 @@
+{
+  "lesson": "U06-L02",
+  "standard": "1.11",
+  "subject": "81 mass/velocity cases checked against independent reduced-mass energy-decrease identity and between-endpoint bound;4 invalid cases rejected; fresh-kernel notebook executes. Example/activity arithmetic recomputed including external impulse, separation and proposed observation residual.",
+  "reader": "Conservation condition precedes equation. Missing second condition explicitly identified; common velocity supplies it for sticking. Introduced kinetic energy as preview with derivation deferred toL03. Revised interpretation to separate constructed algebra benchmark from independently measured evidence. DART context does not claim intact sticking.",
+  "visual": "Six standalone width/theme cases with feedback open passed; mobile dark worked example visually inspected. Figures checked by eye; integrated release checks pending.",
+  "media": "Original before/after diagram; NASA/JohnsHopkinsAPL Dimorphos preimpact surface image downloaded from NASA article and inspected. No earlier P101 matching identity found. NASA terms retained.",
+  "calibration": "OpenStax8.3 internal cancellation and8.1 force interval used for comparison, not copied; OU fixed reference layout and explained substitutions retained. Practice varied from known outcome to missing-condition diagnosis and model/evidence audit. No private OU mechanics source available.",
+  "workload": "60 explanation+90 written+60 Python+30feedback=240min; notebook/script alternatives",
+  "disposition": "Complete and approved for the user-authorised whole-unit publication. Distinct self-review passes, not external peer review.",
+  "final_integrated_review": "Passed: production browser review at1440/900/390/320 in light/dark; feedback, keyboard, code copies where present, images and unique anchors. Final revised source passed offline review and targeted mobile/enlarged reflow. See p101-u06-completion-review.json."
+}

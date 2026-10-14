@@ -1,0 +1,80 @@
+{
+  "l1-subject": {
+    "momentum": true,
+    "rebound": true,
+    "three endings": true,
+    "average": true,
+    "boundary": true,
+    "bounds": true
+  },
+  "l2-subject": {
+    "cases": 81,
+    "invalid": 4,
+    "fresh_kernel": true,
+    "hand_results": {
+      "example5": 1.2,
+      "activity6": 1.1,
+      "example6": 0.7,
+      "example7_decrease": 0.48,
+      "activity10_residual": -0.02
+    }
+  },
+  "l3-subject": {
+    "dot": true,
+    "angle": true,
+    "lowering": true,
+    "speed": true,
+    "stop": true,
+    "net": true,
+    "friction": true,
+    "final": true,
+    "time_distance": true
+  },
+  "l4-subject": {
+    "cases": 81,
+    "invalid": 4,
+    "fresh_kernel": true,
+    "benchmark": [
+      12.000000000000002,
+      3.464101615137755
+    ]
+  },
+  "l5-subject": {
+    "Q1": true,
+    "Q2": true,
+    "Q3": true,
+    "Q4v": true,
+    "Q4loss": true,
+    "Q5K": true,
+    "Q6": true,
+    "Q7": true,
+    "Q8": true,
+    "Q9": true,
+    "Q10": true,
+    "Q11": true,
+    "Q12": true
+  },
+  "final": {
+    "cases": 10,
+    "zoom": "200% equivalent reflow:720CSSpx at2device scale on1440px screen; not browser UI zoom",
+    "passed": true
+  },
+  "links": {
+    "count": 399,
+    "downloads": 10
+  },
+  "integrated_cases": 56,
+  "offline_cases": 14,
+  "assets_sha256": {
+    "P101-Unit-6-Collisions.ipynb": "592c7453c007a496a634b8d5e307b2d1028a546179de6067306015e640b0efee",
+    "P101-Unit-6-Collisions.py": "b0a5d1206fc04e24aa73c458af8652b33539b8577785ad858749a9fc4399ce11",
+    "P101-Unit-6-Energy.ipynb": "fb941d091685555f60a9506ca56ffd2bf4d25cefccc71a9c911ca8eb4443be45",
+    "P101-Unit-6-Energy.py": "86c06afccd698fbeda2ccea39eb0f37812f2b83a48138e2522495c74a7bbf504",
+    "P101-Unit-6-Reference.pdf": "536a1da08314c79899f16834556b39b506932c7abd420e23cf2cc9ab0399b544",
+    "crane.jpg": "b03aac09a0e866afab5cdeb34993c6191b0a635603c521c3bba9a77716139d99",
+    "crash.jpg": "ce053d2a8e6ec9835cca38c332fbf73cae8b0ceb0a139054dcbd70b889837de2",
+    "dimorphos.png": "11996a57e7226b527685aa4c060eb1dcf935dd20cd0ec187e2afd2d58ac6e6d3",
+    "parachute.jpg": "7880526f98ea7ffe6f3b846a098c589a53b6aff4ac2eed866114f7f596dd781b",
+    "splashdown.jpg": "7bb3121b041583e5868b51c32cf23c65b9db0c0c6e8f23e301ba112964dca2c4"
+  }
+}

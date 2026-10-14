@@ -1,0 +1,11 @@
+{
+  "lesson": "U06-L04",
+  "standard": "1.11",
+  "subject": "81 energy scenarios checked with independent reconstructed ledger and height-zero invariance; invalid inputs and negative energy rejected; fresh-kernel notebook passed. Hand examples checked for reference shift, rise/drop, dissipation sign and internal barrier.",
+  "reader": "Separate particle work and Earth-object energy accounts prevents double-counting gravity. Explicitly distinguish negative potential energy from impossible negative kinetic energy. Revised endpoint language: positive available energy does not prove a feasible path. All90min written/60minPython within240min.",
+  "visual": "Six standalone cases passed; roots, ledger and example inspected. Integrated site checks remain. Actual image review found NASA's shared caption did not match first candidate; replaced with inspected jsc2022e045303 showing all three deployed parachutes and vehicle near ground, with caption avoiding an inferred speed.",
+  "media": "NASA unique parachute image and original height/ledger diagrams. Source terms checked. No third-party repeat; actual pixels inspected rather than relying on search metadata.",
+  "calibration": "OpenStax7.3 height/reference treatment and7.5 nonconservative work inspected; original ledger notation uses explicit positive dissipated quantity. Avoided anthropomorphic stopping-force example and clarified system limitations.",
+  "disposition": "Complete and approved for the user-authorised whole-unit publication. Distinct self-review passes, not external peer review.",
+  "final_integrated_review": "Passed: production browser review at1440/900/390/320 in light/dark; feedback, keyboard, code copies where present, images and unique anchors. Final revised source passed offline review and targeted mobile/enlarged reflow. See p101-u06-completion-review.json."
+}

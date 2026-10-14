@@ -1,0 +1,11 @@
+{
+  "lesson": "U06-L03",
+  "standard": "1.11",
+  "subject": "Nine independent numerical groups checked: component dot product, angle, lifting/lowering signs, kinetic-energy root, impossible endpoint/stopping distance, pull ledger, normal-dependent friction and impulse/work agreement. Derivation explicitly limited to constant resultant and extended by components; circular force is not treated as constant over an arc.",
+  "reader": "Added force-vs-net-work distinction and signed velocity vs speed distinction. Work tied to displacement before theorem. Guarded particle scope and point-of-application limitation.135minutes written practice across retrieval, diagnosis and mixed method tasks.",
+  "visual": "Six standalone cases pass; desktop projection and mobile dark example inspected. MathML roots and fractions retained; shared scroll areas accessible. Integrated checks remain due.",
+  "media": "NASA crane replacement image inspected: actual suspended equipment, not a claimed image of Orion. Source identity unique across P101; NASA/Kim Shiflett metadata and terms checked. Original projection and signed work bars checked.",
+  "comparators": "OpenStax7.1 dot product/force directions and7.2 algebraic work-energy derivation inspected. Original examples avoid mower/calorie example and use component retrieval and dependent friction. OU U4 trigonometric projection/explained substitutions support notation; no private OU mechanics chapter.",
+  "disposition": "Complete and approved for the user-authorised whole-unit publication. Distinct self-review passes, not external peer review.",
+  "final_integrated_review": "Passed: production browser review at1440/900/390/320 in light/dark; feedback, keyboard, code copies where present, images and unique anchors. Final revised source passed offline review and targeted mobile/enlarged reflow. See p101-u06-completion-review.json."
+}

@@ -1,0 +1,59 @@
+{
+  "standard": "1.11",
+  "rule": "Module-wide source-identity scan, no repeated asset; all actual assets visually inspected. NASA educational media terms verified. Individual source credits retained.",
+  "placements": [
+    {
+      "page": "unit6-lesson1.html",
+      "figure": "p101-u06-figure-05",
+      "src": "/teaching/p101/u06/crash.jpg",
+      "sources": [
+        "https://images.nasa.gov/details/LRC-2013-00602",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "caption": "Figure 6.5 \u00b7 Measuring a stop.  NASA Langley's helicopter airframe drop-test apparatus. Notice the marked background and cameras: a motion record can help locate the interval over which momentum changes. This photograph supplies no stopping time or force measurement. Credit: NASA, LRC-2013-00602 \u00b7  Source  \u00b7  NASA media terms . Unmodified supplied rendition."
+    },
+    {
+      "page": "unit6-lesson2.html",
+      "figure": "p101-u06-figure-07",
+      "src": "/teaching/p101/u06/dimorphos.png",
+      "sources": [
+        "https://www.nasa.gov/solar-system/early-results-from-nasas-dart-mission/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "caption": "Figure 6.7 \u00b7 A target is not always an intact trolley.  DART's last complete image of Dimorphos before impact. The rocky surface invites a question our sticking model omits: what momentum might material carry away if it is ejected? This is an image before impact, not a measurement of the ejecta. Credit: NASA/Johns Hopkins APL \u00b7  Source and credit  \u00b7  NASA media terms . Unmodified."
+    },
+    {
+      "page": "unit6-lesson3.html",
+      "figure": "p101-u06-figure-09",
+      "src": "/teaching/p101/u06/crane.jpg",
+      "sources": [
+        "https://images.nasa.gov/details/KSC-20210315-PH-KLS01_0032",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "caption": "Figure 6.9 \u00b7 Holding and lowering.  Removal of an older crane during replacement at Kennedy Space Center. The straps exert an upward force on the suspended equipment. To determine that force's work, we also need the equipment's displacement; the still photograph cannot establish it. Credit: NASA/Kim Shiflett \u00b7 KSC-20210315-PH-KLS01_0032 \u00b7  Source  \u00b7  NASA media terms . Unmodified supplied rendition."
+    },
+    {
+      "page": "unit6-lesson4.html",
+      "figure": "p101-u06-figure-13",
+      "src": "/teaching/p101/u06/parachute.jpg",
+      "sources": [
+        "https://images.nasa.gov/details/jsc2022e045303",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "caption": "Figure 6.13 \u00b7 Height need not become speed.  Orion test vehicle and deployed parachutes at the Arizona test site, 13 September 2017. Air interaction can remove mechanical energy from a descending vehicle. The image does not establish its instantaneous speed, whether that speed is steady, or a constant drag force. Credit: NASA \u00b7  Source jsc2022e045303  \u00b7  NASA media terms . Unmodified supplied rendition."
+    },
+    {
+      "page": "unit6.html",
+      "figure": "p101-u06-figure-01",
+      "src": "/teaching/p101/u06/splashdown.jpg",
+      "sources": [
+        "https://images.nasa.gov/details/S71-43542",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+      ],
+      "caption": "Figure 6.1 \u00b7 Bringing motion to an end.  Apollo 15 at splashdown, 7 August 1971. Water and air interact with the returning capsule. A stopping-time question invites an impulse account; a question about motion energy invites a different balance. The photograph provides a setting, not the measurements required for either calculation. Credit: NASA, S71-43542 \u00b7  Source  \u00b7  NASA media terms . Unmodified supplied rendition."
+    }
+  ],
+  "rejected": "jsc2022e045305 metadata described parachutes but pixels showed predeployment vehicle; replaced by inspected045303.",
+  "synthesis": "L05 links earlier images for direct revisiting instead of republishing; reference is intentionally compact lookup, not narrative.",
+  "new_opening": "NASA S71-43542 inspected and unique in P101; contrasts time and energy questions, shows surroundings moving. Figure numbers established continuously1\u201314 before first publication."
+}

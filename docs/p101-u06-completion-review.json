@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-14",
+  "unit": "P101 U06 Momentum, work and energy balances",
+  "standard": "Teaching standard v1.11; fixed illustrated M101 v0.4; construction policy v1.0",
+  "authority": "User requested local sequential lesson development/review, complete closing resources, whole-unit review, and publication when required checks pass.",
+  "process": "Introduction and five lessons developed and subject/reader/visual reviewed sequentially. Whole-unit coherence reviewed after closing resources. Reviews are distinct passes by the author, not independent human peer review.",
+  "scope": {
+    "hours": 18,
+    "python_hours": 2,
+    "lesson_hours": [
+      3,
+      4,
+      4,
+      4,
+      3
+    ],
+    "sections": 24,
+    "examples": 16,
+    "activities": 21,
+    "figures": 14,
+    "cumulative_exercises": 12,
+    "notebooks": 2,
+    "reference_pdf_pages": 2
+  },
+  "coherence": [
+    "Signed momentum and an explicit system/interval precede internal cancellation and approximate conservation. Common final velocity supplies the missing condition for sticking; momentum does not imply kinetic-energy conservation.",
+    "Constant-force work and its sign lead to the kinetic-energy theorem, then Earth-object potential energy and a positive dissipated-energy ledger. Gravity is counted once. Negative potential energy is distinguished from impossible negative kinetic energy.",
+    "Final method selection returns to the opening trolley problem and combines collision and climbing in separate intervals. Questions vary retrieval, diagnosis, dependent normal/friction calculation, mixed balances and code critique.",
+    "Unit conclusion prepares thermal transfer in U07 without introducing its teaching. No calculus work integrals, continuous impulse integration, restitution or rotational dynamics are assumed.",
+    "The 18-hour allocation includes introductions, all practice and feedback, two60-minute Python activities, and closing reference revision. Closing lesson35 reading+100 written+45 feedback minutes; exercise attempts90minutes within that total."
+  ],
+  "closing_resources": {
+    "exercises": "12 cumulative original questions, individual hints and complete worked solutions initially closed; stable return links. Covers all four preceding lessons and combines methods in Q11. No formal assessment or attainment inference.",
+    "reference": "One shared13-row data source produces on-page and two-page PDF reference. Recall/understand/consult and validity conditions retained, plus guarded Python pattern. Logo, exact motto, version/date, licence and page numbers visually checked on both pages.",
+    "downloads": "Two fresh-kernel checked notebooks and companion scripts; final PDF; standalone offline HTML introduction, five lessons and reference."
+  },
+  "source_calibration": "Actual supplied OU U4 pp4\u201310 used for mathematical exposition, not claimed mechanics calibration; no private OU mechanics chapter available. Actual OpenStax College Physics2e8.1/8.3 and7.1/7.2/7.3/7.5 exposition and Ch8 problems1\u20135,7\u201311/Ch7 problems1\u20133,7\u20138,12\u201313 inspected. Original examples and questions; no timing claims about comparator students.",
+  "subject_checks": {
+    "lesson1": "Signed sums, rebounds, stopping averages, unequal-duration average, outside impulse and interval bounds independently recomputed.",
+    "lesson2": "81 cases against reduced-mass energy-loss identity and velocity bounds;4 invalid cases; fresh kernel notebook.",
+    "lesson3": "9 independent calculation groups, including dot product, signed work, friction, impossible endpoint and time/distance consistency.",
+    "lesson4": "81 energy cases, height-zero invariance, ledger identities,4 invalid inputs, impossible-energy guard and fresh kernel notebook.",
+    "lesson5": "All12 worked exercise calculations independently recomputed."
+  },
+  "visual_and_accessibility": {
+    "production": "56 width/theme cases;5 no-JavaScript cases; all images, initially hidden feedback, keyboard disclosure, exact code copies, unique IDs, no page overflow or runtime errors.",
+    "final_corrections": "Force-vector component proportions corrected; long L1 calculation split for mobile; L5 solutions use richer MathML; final10 mobile/enlarged cases pass.",
+    "zoom_limit": "200% equivalent responsive reflow at720 CSS pixels with2 device scale on1440 pixel screen; not an actual browser UI zoom operation.",
+    "offline": "14 final network-disabled cases pass,7 pages at1440/390.",
+    "media": "Five distinct source-identified NASA photographs/images and9 original diagrams; actual pixels, captions, terms and existing-module identities checked. An initial parachute image rejected on pixel inspection. Closing lesson revisits earlier photographs by link; concise reference intentionally has no narrative photograph."
+  },
+  "repository_checks": {
+    "tests": "139/139 pass",
+    "build": "Production curriculum, evidence pages, Vite and85-page search build pass",
+    "links": "399 internal links/anchors checked;10 published media/download assets match built copies",
+    "math": "MathML/SVG parse, IDs and numbered sequences checked; no raw placeholders or open feedback",
+    "preservation": "All previously published P101 content fragments match recorded hashes. Other module teaching unchanged. Existing learner data, dates and marks untouched.",
+    "whitespace": "git diff --check passes"
+  },
+  "disposition": "All local editorial and implementation gates pass. Publish authorised; deployment security job and live verification must succeed before claiming live.",
+  "handover": "U07 remains outline. No further teaching commissioned."
+}

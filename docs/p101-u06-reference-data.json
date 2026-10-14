@@ -1,0 +1,83 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "Momentum",
+      "$\\mathbf p=m\\mathbf v$; $P_x=\\sum m_iv_{ix}$. Units kg m/s. Common inertial frame; signed components.",
+      1
+    ],
+    [
+      "Recall",
+      "Impulse",
+      "$J_x=\\overline F_x\\Delta t=\\Delta p_x$. Units N s = kg m/s. Same interval; constant mass for $\\Delta p_x=m(v_x-u_x)$.",
+      1
+    ],
+    [
+      "Understand",
+      "System balance",
+      "$P_{fx}-P_{ix}=J_{\\mathrm{ext},x}$. Fixed matter; internal impulses cancel. Negligible external impulse gives approximate conservation.",
+      1
+    ],
+    [
+      "Recall",
+      "Sticking",
+      "$v=\\frac{m_Au_A+m_Bu_B}{m_A+m_B}$. Positive masses; common final velocity; negligible external impulse. All velocities signed.",
+      2
+    ],
+    [
+      "Understand",
+      "Collision checks",
+      "Momentum alone cannot determine two unknown final velocities. Elastic: total $K$ unchanged. Sticking generally reduces $K$; total energy is not destroyed.",
+      2
+    ],
+    [
+      "Recall",
+      "Constant-force work",
+      "$W=\\mathbf F\\cdot\\mathbf s=Fs\\cos\\theta$; $W=F_xs_x+F_ys_y$. $\\theta$: angle between vectors. J = N m. Particle model; constant force vector.",
+      3
+    ],
+    [
+      "Recall",
+      "Kinetic energy",
+      "$K=\\frac12mv^2\\geq0$; $W_{\\mathrm{net}}=K_f-K_i$. Add all force works. $v=\\sqrt{2K_f/m}$ gives speed, not direction.",
+      3
+    ],
+    [
+      "Understand",
+      "Zero work",
+      "Zero displacement or perpendicular force gives zero work. Zero net work can also mean cancellation of nonzero contributions.",
+      3
+    ],
+    [
+      "Recall",
+      "Uniform gravity",
+      "$\\Delta U_g=mg(h_f-h_i)=-W_g$; $U_g=mgh$ for chosen zero. Heights vertical; constant $g$. Energy belongs to Earth\u2013object interaction.",
+      4
+    ],
+    [
+      "Understand",
+      "Mechanical energy",
+      "$E_{\\mathrm{mech}}=K+U_g$; $\\Delta E_{\\mathrm{mech}}=W_{\\mathrm{other}}$. Do not count $W_g$ again. Conserved only if other net work vanishes.",
+      4
+    ],
+    [
+      "Consult",
+      "Explicit ledger",
+      "$K_f=K_i+mg(h_i-h_f)+W_{\\mathrm{in}}-E_d$. $E_d\\geq0$: dissipated amount. Do not also subtract the same friction work. Units J.",
+      4
+    ],
+    [
+      "Understand",
+      "Feasibility",
+      "$K_f<0$ rejects the stated endpoint. $K_f\\geq0$ alone does not check barriers, contact or travel time. Numerical agreement is not experimental validation.",
+      4
+    ],
+    [
+      "Consult",
+      "Method choice",
+      "Force/acceleration: Newton. Force/time: impulse. Force/displacement: work. Collision then climb: separate intervals and assumptions.",
+      5
+    ]
+  ],
+  "code": "# SI values; m > 0; inputs finite.\np_i = m_a * u_a + m_b * u_b\nv_joined = p_i / (m_a + m_b)\nk_i = 0.5 * m * speed_i**2\nk_f = k_i + m * g * (h_i - h_f) + work_in - dissipated\nif k_f < 0:\n    raise ValueError(\"Impossible endpoint\")\nspeed_f = (2 * k_f / m)**0.5"
+}

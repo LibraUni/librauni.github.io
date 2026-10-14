@@ -1,0 +1,11 @@
+{
+  "lesson": "U06-L05",
+  "standard": "1.11",
+  "subject": "All12 cumulative answers independently recomputed; collision/climb separated into two intervals. Q8 normal/friction dependency and Q12 impossible-energy guard checked.24sections,16examples,21activities and12exercises across unit.",
+  "reader": "Whole sequence returns to opening two-trolley question, adds method-selection synthesis without new prerequisite, closes toward thermal transfers. Exercise time90+method10+feedback45+reading35=180min. Complete worked solutions, separate hints and stable question backlinks.",
+  "visual": "Six local cases pass and two referencePDF pages rendered and visually inspected: canonical title,logo,motto,version/date,legible formulas,code,footer,page counts. Reference has shared source for web/PDF. Integrated browser review still due.",
+  "practice_calibration": "Actual OpenStax Ch8 problems1\u20135,7\u201311 inspected for direct momentum,stopping time and signed impulse; Ch7 problems1\u20133,7\u20138,12\u201313 inspected for work inventories,steady motion and stopping distance. LibraUni set uses smaller hand-checkable cases, then condition diagnosis,dependent friction,mixed collision/climb and code critique. No close paraphrases; no claims about comparator learner timings. Q11 combines already taught methods; U11 variable-force work,rotation,restitution omitted.",
+  "media": "Original method-selection figure; closing prose links back to distinct DART/parachute placements instead of redundant reprinting. Purposeful compact synthesis, not an all-diagram substitute for the illustrated teaching inL01\u2013L04.",
+  "disposition": "Complete and approved for the user-authorised whole-unit publication. Distinct self-review passes, not external peer review.",
+  "final_integrated_review": "Passed: production browser review at1440/900/390/320 in light/dark; feedback, keyboard, code copies where present, images and unique anchors. Final revised source passed offline review and targeted mobile/enlarged reflow. See p101-u06-completion-review.json."
+}

@@ -10,15 +10,17 @@ const unit3=p101Home+'b01/u03/';
 const block2=p101Home+'b02/';
 const unit4=block2+'u04/';
 const unit5=block2+'u05/';
+const unit6=block2+'u06/';
+export const p101U06LessonCount=5;
 export const p101U05LessonCount=5;
 export const p101U04LessonCount=5;
-export const p101TeachingPaths=[unit5+'reference/',unit5,...Array.from({length:p101U05LessonCount},(_,i)=>unit5+'l0'+(i+1)+'/'),...[2,3,4,5].filter(n=>n<=p101U04LessonCount).map(n=>unit4+'l0'+n+'/'),block2,unit4,unit4+'l01/',p101Home,p101Home+'orientation/',p101Home+'assessments/',p101Home+'assessments/tma01/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
+export const p101TeachingPaths=[unit6,unit6+'reference/',...Array.from({length:p101U06LessonCount},(_,i)=>unit6+'l0'+(i+1)+'/'),unit5+'reference/',unit5,...Array.from({length:p101U05LessonCount},(_,i)=>unit5+'l0'+(i+1)+'/'),...[2,3,4,5].filter(n=>n<=p101U04LessonCount).map(n=>unit4+'l0'+n+'/'),block2,unit4,unit4+'l01/',p101Home,p101Home+'orientation/',p101Home+'assessments/',p101Home+'assessments/tma01/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
  const nav=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
  const module=pages.find(p=>p[0]===p101Home);
- module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2><p>Complete Units 1 and 2 teaching, exercises and reference resources are available. Complete Unit 3 teaching, exercises, formative iCMA 01 and reference resources are also available. TMA 01 is available after Block 1. Block 2 introduction and complete Units 4 and 5 teaching, exercises, Python investigations and reference resources are available; Units 6–7 remain in preparation.</p><p><a href="/learn/physics/stage-1/p101/assessments/tma01/">TMA 01 · Questions and submission guidance</a></p>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
+ module[3]=notice+read('module')+nav(link(p101Home+'orientation/','Practical orientation'),link(unit,'Begin Unit 1 →'))+'<section><h2>Module blocks</h2><p>Complete Units 1 and 2 teaching, exercises and reference resources are available. Complete Unit 3 teaching, exercises, formative iCMA 01 and reference resources are also available. TMA 01 is available after Block 1. Block 2 introduction and complete Units 4, 5 and 6 teaching, exercises, Python investigations and reference resources are available; Unit 7 remains in preparation.</p><p><a href="/learn/physics/stage-1/p101/assessments/tma01/">TMA 01 · Questions and submission guidance</a></p>'+extraRails.get(p101Home).items.map(b=>'<p>'+link(b.href,b.title)+'</p>').join('')+'</section>';
  const u=pages.find(p=>p[0]===unit);
  u[3]=notice+read('unit')+nav(link(p101Home,'← Module introduction'),link(lesson,'Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block1Lessons.lessons.filter(l=>l.unit==='U01').map((l,i)=>'<p>'+link(unit+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<6?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>All six lessons are available. <a href="/learn/physics/stage-1/p101/b01/u01/l06/#P101-U01-L06-S03">Unit exercises</a> · <a href="/learn/physics/stage-1/p101/b01/u01/l06/#P101-U01-L06-S05">On-page reference</a> · <a href="/teaching/p101/P101-Unit-1-Reference.pdf" download>Printable reference PDF</a>.</p></section>';
  const l=pages.find(p=>p[0]===lesson);l[3]=notice+read('lesson')+nav(link(unit,'← Unit introduction'),link(unit+'l02/','Lesson 2 →'));
@@ -162,7 +164,7 @@ export function addP101Teaching({root,pages,extraRails,link}){
   pages.find(p=>p[0]===path)[3]='<p class="eyebrow">P101 · Block 2 · '+planned.unit+' · Lesson plan</p><h1>'+planned.title+'</h1><p>'+planned.purpose+'</p><p>'+planned.scope+'</p><p>'+planned.hours+' planned hours, including '+planned.pythonHours+' hours of Python. Teaching is in preparation.</p>'+nav(link(up,'← Unit overview'),'');
  }
  const wrap4=name=>'<div data-search-status="available" class="teaching-reading p101-reading p101-u4">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
- pages.find(p=>p[0]===block2)[3]=wrap4('block2')+nav(link(assessment,'← TMA 01'),'Unit 4: '+link(unit4,'Begin interactions, diagrams and motion →'))+'<section><h2>Block units</h2>'+extraRails.get(block2).items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(['U04','U05'].includes(item.unitId)?' · Complete teaching and closing resources available':' · Outline; teaching in preparation')+'</p>').join('')+'</section>';
+ pages.find(p=>p[0]===block2)[3]=wrap4('block2')+nav(link(assessment,'← TMA 01'),'Unit 4: '+link(unit4,'Begin interactions, diagrams and motion →'))+'<section><h2>Block units</h2>'+extraRails.get(block2).items.map(item=>'<p>'+unitLink({id:item.unitId,...item},link)+(['U04','U05','U06'].includes(item.unitId)?' · Complete teaching and closing resources available':' · Outline; teaching in preparation')+'</p>').join('')+'</section>';
  pages.find(p=>p[0]===unit4)[3]=wrap4('unit4')+nav(link(block2,'← Block 2 introduction'),link(unit4+'l01/','Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block2Lessons.lessons.filter(l=>l.unit==='U04').map((l,i)=>'<p>'+link(unit4+l.id.split('-').at(-1).toLowerCase()+'/',`Lesson ${i+1} · ${l.title}`)+(i<p101U04LessonCount?' · Available':' · Lesson plan; teaching in preparation')+'</p>').join('')+'<p>All five lessons are available. <a href="'+unit4+'l05/#P101-U04-L05-S05">Unit exercises and worked solutions</a> · <a href="'+unit4+'l05/#P101-U04-L05-S06">On-page reference</a> · <a href="/teaching/p101/u04/P101-Unit-4-reference.pdf" download>Printable reference PDF</a> · <a href="'+unit4+'l05/#P101-U04-L05-S04">Python investigation and downloads</a>.</p></section>';
  const first4=unit4+'l01/';
  pages.find(p=>p[0]===first4)[3]=wrap4('unit4-lesson1')+nav(link(unit4,'← Unit 4 introduction'),link(unit4+'l02/','Lesson 2 →'));
@@ -183,12 +185,24 @@ export function addP101Teaching({root,pages,extraRails,link}){
  pages.find(p=>p[0]===unit5)[3]=wrap5('unit5')+nav(link(unit4+'l05/','← Unit 4 closing lesson'),link(unit5+'l01/','Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block2Lessons.lessons.filter(l=>l.unit==='U05').map((l,i)=>'<p>'+link(unit5+'l0'+(i+1)+'/',`Lesson ${i+1} · ${l.title}`)+(i<p101U05LessonCount?' · Available':' · Teaching in preparation')+'</p>').join('')+'<p>All five lessons are available. <a href="'+unit5+'l05/#P101-U05-L05-S03">Cumulative exercises and worked solutions</a> · <a href="'+unit5+'reference/">Web reference</a> · <a href="/teaching/p101/u05/P101-Unit-5-Reference.pdf" download>Two-page reference PDF</a> · <a href="'+unit5+'l04/#P101-U05-L04-S04">Python investigation and downloads</a>.</p></section>';
  for(let n=1;n<=p101U05LessonCount;n++){
   const path=unit5+'l0'+n+'/';const fragment=fs.readFileSync(root+'content/p101/unit5-lesson'+n+'.html','utf8');
-  pages.find(p=>p[0]===path)[3]=wrap5('unit5-lesson'+n)+nav(link(n===1?unit5:unit5+'l0'+(n-1)+'/',n===1?'← Unit introduction':'← Lesson '+(n-1)),link(n<5?unit5+'l0'+(n+1)+'/':block2+'u06/',n<5?'Lesson '+(n+1)+' →':'Unit 6 outline →'));
+  pages.find(p=>p[0]===path)[3]=wrap5('unit5-lesson'+n)+nav(link(n===1?unit5:unit5+'l0'+(n-1)+'/',n===1?'← Unit introduction':'← Lesson '+(n-1)),link(n<5?unit5+'l0'+(n+1)+'/':block2+'u06/',n<5?'Lesson '+(n+1)+' →':'Unit 6 introduction →'));
   const sections=[...fragment.matchAll(/<section class="chapter" id="(P101-U05-L0\d-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
   extraRails.set(path,{title:'In this lesson',back:unit5,items:[...sections,{href:'#references',title:'Further reading and context'}]});
  }
 
  pages.push([unit5+'reference/','P101 · Unit 5 reference',[],wrap5('unit5-reference')+nav(link(unit5+'l05/','← Closing lesson and exercises'),link(unit5,'Unit overview →'))]);
  extraRails.set(unit5+'reference/',{title:'Unit reference',back:unit5,items:[{href:'#motion',title:'Motion and sustaining forces'},{href:'#gravity',title:'Gravity and circular models'}]});
+
+
+ const wrap6=name=>'<div data-search-status="available" class="teaching-reading p101-reading p101-u6">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div><link rel="stylesheet" href="/src/p101-unit6.css">';
+ pages.find(p=>p[0]===unit6)[3]=wrap6('unit6')+nav(link(unit5+'l05/','← Unit 5 closing lesson'),link(unit6+'l01/','Start Lesson 1 →'))+'<section><h2>Unit lessons</h2>'+p101Block2Lessons.lessons.filter(l=>l.unit==='U06').map((l,i)=>'<p>'+link(unit6+'l0'+(i+1)+'/',`Lesson ${i+1} · ${l.title}`)+' · Available</p>').join('')+'<p><a href="'+unit6+'l05/#P101-U06-L05-S02">Cumulative exercises and solutions</a> · <a href="'+unit6+'reference/">Web reference</a> · <a href="/teaching/p101/u06/P101-Unit-6-Reference.pdf" download>Printable reference PDF</a> · <a href="'+unit6+'l02/#P101-U06-L02-S04">Collision investigation</a> · <a href="'+unit6+'l04/#P101-U06-L04-S05">Energy investigation</a>.</p></section>';
+ for(let n=1;n<=p101U06LessonCount;n++){
+  const path=unit6+'l0'+n+'/';const fragment=fs.readFileSync(root+'content/p101/unit6-lesson'+n+'.html','utf8');
+  pages.find(p=>p[0]===path)[3]=wrap6('unit6-lesson'+n)+nav(link(n===1?unit6:unit6+'l0'+(n-1)+'/',n===1?'← Unit introduction':'← Lesson '+(n-1)),link(n<5?unit6+'l0'+(n+1)+'/':block2+'u07/',n<5?'Lesson '+(n+1)+' →':'Unit 7 outline →'));
+  const sections=[...fragment.matchAll(/<section class="chapter" id="(P101-U06-L0\d-S\d+)"><h2>(.*?)<\/h2>/g)].map(m=>({href:'#'+m[1],title:m[2]}));
+  extraRails.set(path,{title:'In this lesson',back:unit6,items:[...sections,{href:'#references',title:'Further reading and context'}]});
+ }
+ pages.push([unit6+'reference/','P101 · Unit 6 reference',[],wrap6('unit6-reference')+nav(link(unit6+'l05/','← Closing lesson and exercises'),link(unit6,'Unit overview →'))]);
+ extraRails.set(unit6+'reference/',{title:'Unit reference',back:unit6,items:[]});
 
 }
