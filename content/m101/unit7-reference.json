@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "date": "2026-10-23",
+  "title": "M101 Unit 7 \u00b7 Linear approximation and numerical derivatives",
+  "rows": [
+    [
+      "Recall",
+      "Local linear model",
+      "$L(a+h)=f(a)+f\\prime(a)h$. Require a finite derivative at $a$; $h$ is a signed input change. Estimated change: $f\\prime(a)h$."
+    ],
+    [
+      "Understand",
+      "Locality",
+      "$r(h)=f(a+h)-L(a+h)$ satisfies $r(h)/h\\to0$ as $h\\to0$ when $f$ is differentiable at $a$. No universal finite-step radius or tolerance follows."
+    ],
+    [
+      "Recall",
+      "Error measures",
+      "Estimate $A$, target $v$: absolute error $|A-v|$; relative error $|A-v|/|v|$ only for $v\\ne0$. Percentage error:100 times relative error."
+    ],
+    [
+      "Recall",
+      "Forward difference",
+      "$D_+(h)=\\dfrac{f(a+h)-f(a)}{h}$, $h>0$. Both inputs must be allowed."
+    ],
+    [
+      "Recall",
+      "Central difference",
+      "$D_0(h)=\\dfrac{f(a+h)-f(a-h)}{2h}$, $h>0$. Samples lie on both sides; full separation is $2h$."
+    ],
+    [
+      "Consult",
+      "Backward difference",
+      "$D_-(h)=\\dfrac{f(a)-f(a-h)}{h}$, $h>0$. At a domain endpoint, label a one-sided rate."
+    ],
+    [
+      "Understand",
+      "Existence is a separate question",
+      "Differentiability implies exact difference convergence. Central convergence alone does not imply differentiability: $|x|$ at zero gives $D_0(h)=0$."
+    ],
+    [
+      "Understand",
+      "Exact test case",
+      "For $f(x)=x^3$ at1: derivative3; $D_+(h)=3+3h+h^2$; $D_0(h)=3+h^2$. These identities are not universal error formulas."
+    ],
+    [
+      "Understand",
+      "Competing effects",
+      "Truncation is finite-step error in exact arithmetic. Rounding/cancellation can dominate at small steps. Equal stored inputs or outputs can destroy the useful difference."
+    ],
+    [
+      "Consult",
+      "Bounded output errors",
+      "If each sampled output error has magnitude at most $\\delta$: contribution at most $2\\delta/h$ forward/backward, $\\delta/h$ central. Excludes truncation and other errors."
+    ],
+    [
+      "Consult",
+      "Report a numerical check",
+      "State model/domain, base input/units, formula, steps, independent reference, observed errors, edge cases and limitations. A finite table is not a universal bound."
+    ]
+  ],
+  "code": "def central(f, a, h):\n    if h <= 0:\n        raise ValueError(\"Use a positive step.\")\n    if a + h == a or a - h == a:\n        raise ValueError(\"A sampled input did not change.\")\n    return (f(a + h) - f(a - h)) / (2 * h)\n\ndef cube(x):\n    return x ** 3\n\nfor h in [0.1, 0.01, 0.001]:\n    estimate = central(cube, 1.0, h)\n    print(h, estimate, abs(estimate - 3.0))\n# Use finite real inputs; check domain and derivative existence.\n# A passed guard does not certify accuracy.\n# Restart and run all cells; do not round intermediate outputs."
+}

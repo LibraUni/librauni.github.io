@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-23",
+  "standard": "1.11",
+  "scope": "All nine figure placements and introduction/closing review",
+  "figures": [
+    {
+      "id": "7.1",
+      "kind": "Original diagram",
+      "purpose": "Tangent and curve share base value/slope but separate nearby."
+    },
+    {
+      "id": "7.2",
+      "file": "u07-tirs-testing.png",
+      "creator": "NASA",
+      "identity": "GSFC_20181009_TIRS2_33878_EnvironmentalTesting.png",
+      "source": "https://science.nasa.gov/mission/landsat/tirs/",
+      "purpose": "Real instrument environmental testing provides a calibration context, explicitly distinct from the illustrative voltage formula."
+    },
+    {
+      "id": "7.3",
+      "kind": "Original diagram",
+      "purpose": "Quadratic remainder makes a tolerance range visible; x-axis label repositioned after inspection."
+    },
+    {
+      "id": "7.4",
+      "kind": "Original diagram",
+      "purpose": "Central sample interval for cube; full separation2h, secant versus tangent."
+    },
+    {
+      "id": "7.5",
+      "kind": "Original diagram",
+      "purpose": "Corner has unequal one-sided slopes despite a horizontal symmetric secant."
+    },
+    {
+      "id": "7.6",
+      "file": "u07-detector-array.jpg",
+      "creator": "NASA",
+      "identity": "QWIPBestImage-copy.jpg",
+      "source": "https://science.nasa.gov/mission/landsat/tirs/",
+      "purpose": "Three detector assemblies connect sampled outputs with actual hardware; image is not measurement data."
+    },
+    {
+      "id": "7.7",
+      "kind": "Original computed diagram",
+      "purpose": "Actual fresh-run cube error versus step; logarithmic coordinate explanation and tabular alternative."
+    },
+    {
+      "id": "7.8",
+      "file": "u07-pleiades.jpg",
+      "creator": "Marco Librero, NASA Ames",
+      "identity": "SC08/image/Pleiades.jpg",
+      "source": "https://www.nas.nasa.gov/SC08/Pleiades.html",
+      "purpose": "Historical 2008 computing context; hardware scale does not remove finite arithmetic. No current capacity or operational claim."
+    },
+    {
+      "id": "7.9",
+      "kind": "Original diagram",
+      "purpose": "Question/domain -> appropriate method -> independent check and qualified conclusion."
+    }
+  ],
+  "rights": "NASA educational/informational media guidance inspected at https://www.nasa.gov/nasa-brand-center/images-and-media/. Credits, source links and separate image status retained in captions. Original teaching/diagrams CC BY-NC-SA4.0; codeMIT; branding excluded. No NASA endorsement claimed.",
+  "inspection": "All three downloaded assets viewed; captions and alt text checked against actual contents and NASA identification. Intrinsic dimensions800x533,800x600,500x333 preserved. No crop, recolouring or image edits; display scaling only.",
+  "reuseAudit": "Source identities and filenames searched across earlier M101 content/docs/assets. No previous placement of these three underlying images found. Same placements in web/offline copies are equivalent renditions, not new teaching placements. None is repeated in the PDF or introduction.",
+  "editorial": "Introduction is a short reading orientation, not an additional illustrated exposition. Closing uses the original synthesis diagram. Three substantive development lessons each pair diagrams with a distinct verified contextual photograph. This is a whole-unit illustrated-richness judgement against v0.4, not a photo quota."
+}

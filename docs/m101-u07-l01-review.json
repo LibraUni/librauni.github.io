@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-23",
+  "scope": "U07 introduction and L01; 180 minutes including 25 reserved closing-exercise minutes",
+  "standard": "1.11; fixed M101 v0.4 read; B02 lesson blueprint and U06 introduction/L05 handover inspected",
+  "construction": "All B02 lessons blueprinted. L01 five sections planned before drafting. Unit/module/stage boundaries unchanged; no Taylor series or full uncertainty course.",
+  "comparators": {
+    "editorial": "Fixed v0.4 opening/value-versus-change examples and supplied OU MST124 U4 pp4–10 radians exposition; the latter is an editorial comparator, not a linearisation source.",
+    "subject": "OpenStax Calculus Volume1 4.2 tangent exposition and Examples4.5–4.6 inspected; ordinary derivative mathematics independently reconstructed. No supplied OU introductory calculus chapter located.",
+    "practice": "OpenStax4.2 Exercises46–67 and72–77 inspected: tangent construction, constant tangent, choice of base point, numerical error, differentials. Original activities add exact remainders, units, tolerance and failed-derivative diagnosis; no copied question text. Comparator timing is unknown.",
+    "sections": "7.1 derivative definition from U05;7.2 OpenStax4.2 construction;7.3 differentials/units;7.4 exact polynomial remainder is original algebraic development without Taylor;7.5 U04/U05 counterexamples and reciprocal extrapolation."
+  },
+  "subject_review": "Exact rational recomputation in work/qa/lesson1-subject.py verifies three polynomial identities, reciprocal remainder, square-root check, sensor/position arithmetic, tolerance and logarithm direction. Derivative-definition remainder argument and domain exceptions reviewed separately.",
+  "reader_review": [
+    "Defined relative error before using it and specified its nonzero denominator.",
+    "Distinguished change from final value and instantaneous rate from constant velocity.",
+    "Explained that difference in squared values is not difference in roots.",
+    "Kept illustrative voltage model separate from actual Landsat calibration.",
+    "Full continuous read retains progression from derivative definition to bounded example to limitations; timings remain estimates, not student data."
+  ],
+"visual_review": "Eight local browser width/theme cases (1440/900/390/320), all feedback opened, keyboard disclosure, image loading and unique IDs. Viewed mobile radical feedback and desktop dark example. Diagram inspection found x-axis label overlap; moved label down. Removed plain radical from caption in favour of reference to the typeset derivation. Refreshed standalone run passed after those fixes; final integrated browser run also passed.",
+  "media": "Two original computed diagrams and distinct NASA Landsat9 TIRS environmental-testing image, actual downloaded asset inspected. Source identity searched across prior M101 content/docs; no earlier placement found. NASA source identifies instrument and credit; educational media terms inspected. Source https://science.nasa.gov/mission/landsat/tirs/; asset GSFC_20181009_TIRS2_33878_EnvironmentalTesting.png. No image alteration, display scaling only.",
+  "handover": "L02 estimates slopes from values, introducing forward/central secants and corner counterexample before code; preserves L01 locality/error distinctions.",
+  "release": "Local only. Full unit integration, closing resources, security/build/search/live checks remain. Self-review and computational recalculation are not independent human review or learner validation."
+}

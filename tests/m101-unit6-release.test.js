@@ -18,7 +18,7 @@ test('M101 Unit6 complete teaching, hidden feedback and stable sequences',()=>{
   assert.deepEqual([...all.matchAll(new RegExp(`id="m101-u06-${type}-(\\d+)"`,'g'))].map(m=>+m[1]),Array.from({length:count},(_,i)=>i+1));
  }
  assert.equal((all.match(/Worked solution to Exercise 6\./g)||[]).length,15);
- assert.match(read('learn/physics/stage-1/m101/b02/u07/index.html'),/data-search-status="outline"/);
+ assert.match(read('learn/physics/stage-1/m101/b02/u07/index.html'),/data-search-status="available"/);
  assert.match(read('learn/physics/stage-1/m101/b02/u06/index.html'),/M101-Unit-6-Reference.pdf/);
 });
 test('M101 Unit6 notebook and synchronised reference ship as usable assets',()=>{

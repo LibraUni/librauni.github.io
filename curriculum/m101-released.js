@@ -353,4 +353,10 @@ export const m101Unit5Lessons = [{"id": "U05-L01", "unit": "U05", "title": "From
 
 export const m101Unit6Lessons = [{"id": "U06-L01", "unit": "U06", "title": "Increase, decrease and stationary points", "hours": 4, "purpose": "Derivative signs and stationary points"}, {"id": "U06-L02", "unit": "U06", "title": "Concavity and extrema", "hours": 4, "purpose": "Second derivative, critical points and endpoints"}, {"id": "U06-L03", "unit": "U06", "title": "Related rates", "hours": 3, "purpose": "Supplied physical models and units"}, {"id": "U06-L04", "unit": "U06", "title": "The mean-value idea", "hours": 3, "purpose": "Statement, hypotheses and counterexamples"}, {"id": "U06-L05", "unit": "U06", "title": "Reading the shape critically", "hours": 4, "purpose": "Graph sampling/window audit and cumulative closing resources"}];
 
-export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons,...m101Unit3Lessons,...m101Unit4Lessons,...m101Unit5Lessons,...m101Unit6Lessons];
+export const m101Unit7Lessons = [
+{id:'U07-L01',unit:'U07',title:'Tangent-line approximations',hours:3,purpose:'Build and qualify local linear predictions, with units and exact error checks.'},
+ {id:'U07-L02',unit:'U07',title:'Numerical derivatives',hours:3,purpose:'Derive, implement and compare forward and central differences without confusing an estimate with derivative existence.'},
+ {id:'U07-L03',unit:'U07',title:'Why smaller is not always better',hours:4,purpose:'Investigate truncation, rounding and cancellation using independent checks and qualified numerical evidence.'},
+ {id:'U07-L04',unit:'U07',title:'Block synthesis and formative checkpoint',hours:4,purpose:'Consolidate Unit 7 and Block 2, correct formative practice and prepare for separately released assessment.'}
+];
+export const m101Lessons = [...m101Unit1Lessons,...m101Unit2Lessons,...m101Unit3Lessons,...m101Unit4Lessons,...m101Unit5Lessons,...m101Unit6Lessons,...m101Unit7Lessons];

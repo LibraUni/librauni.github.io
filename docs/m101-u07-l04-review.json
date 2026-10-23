@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-23",
+  "standard": "1.11",
+  "scope": "L04 sections 7.16–7.21; 240 minutes plus 80 exercise-attempt minutes reserved in Lessons 1–3.",
+  "construction": "B02 lesson blueprint precedes drafting; L04 section and workload plan established before L01. L01, L02 and L03 separately drafted/reviewed in sequence before closing lesson.",
+  "comparators": {
+    "7.16": "Original synthesis of U04 domain/extension and U05 derivative definition; no exact external counterpart claimed.",
+    "7.17": "OpenStax Calculus Volume 1 §4.2 Exercises 46–67,72–77: tangent choice, local estimates, error, domain. FNC §5.5 Examples 5.5.1–5.5.4: finite difference error and loss of accuracy. These are inspected sources, not copied questions.",
+    "7.18": "Approved U04/U05/U06 teaching and reference tables, plus U06 recorded comparator review: continuity, derivative rules, extrema and MVT hypotheses. Mixed tasks retrieve taught operations, not a new syllabus.",
+    "7.19–7.21": "Original formative synthesis, retrieval reference and handover; no exact external counterpart. Supplied OU trigonometry excerpt provides an editorial comparison only, not equivalent numerical-calculus practice."
+  },
+  "subject": "Independently recomputed all twelve exercises and four mixed activities. Exact rational identities, square-root rationalisation, secant values and units, perturbation bounds, tied extrema, cooling rate/MVT witness and shifted-cube explanation checked. iCMA correct choices and every distractor checked against mathematical conditions. Reference code and notebook code cells run from fresh namespaces.",
+  "reader": {
+    "fixes": [
+      "Replaced ambiguous horizontal-inflection wording with a direct comparison of stationary points and the inflection point.",
+      "Repaired a Python string escape that had corrupted the not-equal symbol in iCMA feedback.",
+      "Separated the reserved 80-minute unit-exercise attempt period from the 60-minute mixed Block 2 period and 45-minute correction allocation.",
+      "Kept limits, original functions and continuous extensions explicitly distinct.",
+      "Reference labels distinguish recall, understanding and lookup; no added mandatory coding task."
+    ],
+    "judgement": "Worked solutions explain the method and invalid inferences rather than only provide answers. Mixed practice combines method selection, hypotheses and an independent check. The checkpoint supports correction, not certification."
+  },
+  "visual": "Eight standalone width/theme cases and final integrated browser review. Inspected mobile worked example, opened extrema solution, decision diagram and checkpoint feedback. All mathematics semantic MathML; long formulas locally scrollable. PDF two A4 pages rendered and both inspected after footer-spacing correction.",
+  "media": "One original decision diagram. No additional photograph in the closing lesson: this is synthesis of the three illustrated development lessons, with no new physical instrument or historical claim. Reviewed against the illustrated reference; the original diagram, mixed practice, native feedback and reference table provide appropriate visual structure. No blanket exemption from image standards or duplicate image added for decoration.",
+  "workload": "35 synthesis +60 mixed activities +45 correction +60 iCMA (40 attempt/20 feedback) +25 conclusion/reference +15 handover =240 minutes. Twelve unit exercises total80 reserved minutes. No separate lesson-end sets or extra assessment budget.",
+  "assessment": "Formative iCMA02 has 10 questions, explanatory feedback, keyboard controls and manual no-JS fallback; no persistence, submission, threshold or completion award. TMA02 remains separate6h and unreleased.",
+  "disposition": "Subject, reader, standalone and integrated reviews passed. This is author self-review and independent recalculation, not external human review or observed learner testing."
+}

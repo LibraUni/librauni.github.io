@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-23",
+  "standard": "Teaching Standard and Practice1.11; fixed illustrated M101 openingv0.4",
+  "constructionGate": {
+    "policy": "25 September recursive construction policy",
+    "inputs": [
+      "curriculum/stage1-map.js",
+      "curriculum/m101-blocks.js",
+      "curriculum/m101-units.js",
+      "docs/m101-block2-lesson-blueprint.json"
+    ],
+    "status": "Construction ready: all B02 lessons and each U07 lesson section planned before detailed drafting. Distant unit/block outlines preserved; no widened syllabus."
+  },
+  "sequence": "Substantive introduction first. L01 drafted and separately subject/reader/render reviewed, then L02, then L03, then L04/closing. Final cross-lesson review and corrections followed. Per-lesson records distinguish initial local passes from the final integration gate.",
+  "coherence": "Known derivative -> nearby value; nearby values -> estimated derivative; mathematical convergence -> finite-arithmetic limitations; synthesis -> qualified claims. Deliberate retrieval of U04 domain/excluded point, U05 derivative and U06 critical/stationary/endpoint/MVT distinctions. No systematic Taylor expansion or untaught solver.",
+  "comparativeRead": "Fixed v0.4 opening motivates a question before notation and separates observation from model. U07 retains that movement from local prediction to evidence, with longer calculations supported by diagrams and worked feedback. OpenStax4.2 supplies actual tangent exposition/practice comparison; FNC5.5 actual examples/table/code support numerical-error comparison, but its advanced Taylor analysis is deliberately not assumed. Python floating-point tutorial informs stored-value versus displayed-digit distinction. Supplied OU excerpt is trigonometry, not an equivalent introductory numerical-calculus chapter; that source gap is explicit.",
+  "practiceMapping": [
+    {
+      "exercises": "7.1–7.4",
+      "sections": "7.1–7.5",
+      "outcomes": [
+        "M101-O1",
+        "M101-O6"
+      ],
+      "demand": "Construct model, separate value/change, sign and exact error, domain/locality, units and modelling limits."
+    },
+    {
+      "exercises": "7.5–7.7",
+      "sections": "7.6–7.10",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "demand": "Derive both formulas, compare steps, select permissible sample locations, diagnose false stationarity."
+    },
+    {
+      "exercises": "7.8–7.9",
+      "sections": "7.11–7.15",
+      "outcomes": [
+        "M101-O5",
+        "M101-O6"
+      ],
+      "demand": "Interpret error ratios without claiming universal order; derive contribution bounds with units and distinguish total error."
+    },
+    {
+      "exercises": "7.10–7.12",
+      "sections": "7.6–7.15",
+      "outcomes": [
+        "M101-O1",
+        "M101-O5",
+        "M101-O6"
+      ],
+      "demand": "Repair formula/rounding/inference separately; explain constant shift and finite representation; qualify measured secant rates."
+    }
+  ],
+  "calibration": "OpenStax4.2 Exercises46–67 and72–77 support routine model construction and interpretation; original exercises add exact algebraic tolerances and error rationalisation after worked scaffolding. FNC5.5 examples support controlled refinement/cancellation tasks, but not an equivalent beginner timed problem set. Mixed report questions demand explanations rather than library implementation. Workload is an editorial allocation, not observed student timing.",
+  "workload": {
+    "lessonHours": [
+      3,
+      3,
+      4,
+      4
+    ],
+    "pythonHours": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "totalHours": 14,
+    "unitExerciseMinutes": 80,
+    "exerciseReservation": [
+      25,
+      25,
+      30,
+      0
+    ],
+    "lesson4Minutes": {
+      "synthesis": 35,
+      "mixedPractice": 60,
+      "correction": 45,
+      "icma": 60,
+      "referenceConclusion": 25,
+      "handover": 15
+    },
+    "noAdditionalRequiredWork": "No separate exercise booklet, mandatory external media or new Python task in L04. TMA02 six hours outside unit/block study."
+  },
+  "reviewFindings": [
+    "Added a definition of relative error and its nonzero-target condition.",
+    "Corrected diagram axis-label overlap and removed an untypeset radical from a caption.",
+    "Verified photo identities and corrected detector alt text and Pleiades intrinsic dimensions.",
+    "Corrected ambiguous mixed-practice wording and iCMA not-equal escape.",
+    "Normalised prose word/number spacing without changing mathematics or Python.",
+    "Matched lesson metadata titles to approved blueprint and actual headings."
+  ],
+  "closing": "Twelve core exercises with separate hints/worked solutions, four mixed B02 activities, ten-question local iCMA02, substantive conclusion, synced eleven-row reference plus code, two-page PDF, two fresh-run notebooks and companion scripts. All mathematical feedback remains available without JavaScript.",
+  "checks": {
+"subject": "Independent exact/rational/value checks for all lessons; schema-validated notebooks executed in fresh Jupyter kernels, plus reference-code execution; all choices/distractors reviewed.",
+    "repository": "142 tests pass; production build passes; 90 available pages indexed. Existing bundle-size warning only.",
+    "media": "Structural media checks pass; zero-image introduction/closing flags resolved by explicit editorial review in media record.",
+    "browser": "40 integrated viewport/theme cases, native keyboard disclosures, images, exact code-copy text; empty/all-correct/wrong/changed/reset/reload checkpoint states; no-JS manual feedback; 640 CSS-pixel reflow equivalent to1280px at200%.",
+    "magnificationLimit": "A body-CSS-zoom proxy exposed shared site header overflow; it does not emulate browser responsive zoom. No shared-site CSS was changed. The responsive640px and narrower320/390px checks pass. No formal accessibility certification claimed.",
+    "offline": "Ten file:// cases with network disabled, with/without JavaScript; embedded images/math, disclosures and local checkpoint verified.",
+    "links": "27 local reading-sequence/resource/anchor links verified; generated reading text exactly equals canonical fragments.",
+    "pdf": "Two A4pages rendered and both inspected after final footer correction; logo,motto,version,date,page numbers,7.5pt grey reuse footer; canonical web rows/code match."
+  },
+  "preservation": "Earlier teaching fragments/assets, curriculum hours/outcomes/dependencies and learner records unchanged. Existing U06 closing navigation advances to U07; earlier historical reviews retained. U08 remains outline; TMA02 questions remain unreleased.",
+  "disposition": "Local teaching and integration gates passed. Ready for authorised publication through required hosted security/test/build/deployment gates; live success must be verified before reporting published.",
+  "limitations": "Author self-review plus independent computational checks, not independent human review, student timing or formal accessibility certification. No invented learner attainment. No substantive new-unit teaching defect identified."
+}

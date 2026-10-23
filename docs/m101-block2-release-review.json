@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-23",
+  "scope": "M101 B02 Units4–7; detailed U07 completion and cross-unit progression review, not retrospective rewriting of published Units4–6.",
+  "basis": "Approved block/unit/lesson blueprints, actual U04/U05/U06 reference statements and adjoining teaching, prior U06 whole-unit review and actual U07 teaching/closing resources. Existing historical review records remain unchanged.",
+  "purpose": "Change and local behaviour: derivatives developed from limits, then used to reason about functions and local models with checked numerical evidence.",
+  "unitChain": [
+    {
+      "unit": "U04",
+      "hours": 16,
+      "python": 1,
+      "role": "Domain/composition -> finite and one-sided limits -> continuity and numerical evidence.",
+      "retrievedInU07": "Excluded-point example7.8 and mixed7.16; domain-based stencil selection; exact versus rounded expression distinction."
+    },
+    {
+      "unit": "U05",
+      "hours": 24,
+      "python": 2,
+      "role": "Derivative definition -> elementary families/rules -> implicit/second derivatives -> independent checks.",
+      "retrievedInU07": "Local remainder argument, rule-based benchmarks, tangent units, two-sided existence. Prior full differentiation practice is not replaced by the short checkpoint."
+    },
+    {
+      "unit": "U06",
+      "hours": 18,
+      "python": 2,
+      "role": "Signs, concavity, extrema/endpoints, related rates, MVT and graph audit.",
+      "retrievedInU07": "Corner critical/nonstationary distinction; mixed7.17 ties/endpoints/inflection; mixed7.18 chain rule, rate units, theorem hypotheses and attained versus limiting value."
+    },
+    {
+      "unit": "U07",
+      "hours": 14,
+      "python": 3,
+      "role": "Local prediction -> finite differences -> truncation/finite representation -> synthesis and iCMA02.",
+      "handover": "B03 accumulation; M102 systematic series; A101 transparent approximation checks."
+    }
+  ],
+  "budget": "16+24+18+14=72h;1+2+2+3=8Python hours inside those72. TMA02 remains separately budgeted6h. No credit, calendar, enrolment, submission or completion change.",
+  "outcomes": {
+    "M101-O1": "Definition/rules inU05; applications/conditions inU06; local models and derivative-existence safeguards inU07.",
+    "M101-O5": "Progression from nearby function values through derivative/plot checks to independently explainable finite-difference functions and controlled step-size experiments.",
+    "M101-O6": "Domains, signs, units, hypotheses, exact versus empirical claims and readable justified reports throughout."
+  },
+  "balance": "Abstract polynomial/reciprocal/root/logarithm practice remains substantial alongside supplied sensor, temperature and position contexts. Physics assumptions are supplied; M101 does not claim to teach P101 laws. U07 error bounds are elementary endpoint-error algebra, not a full uncertainty or numerical-analysis course.",
+  "assessmentReadiness": "The teaching now offers practice for every declared TMA02 role: differentiation, interpretation, local approximation and an explained independent numerical check. Embedded iCMA02 is formative and tests a sample, not exhaustive coverage or mastery. TMA02 questions, rubric and private marking guide are a distinct future commission; this release does not imply that they exist.",
+  "stageAndDegree": "P101 functions/loops/lists are required before U07 computing; plotting is not required here. P101 calculus applications depend on demonstrated U05 capability, not necessarily completion of all B02. B03 can now build on rates/domains/limits and numerical caution. M102 owns systematic series, deeper analysis and later linear algebra. M201 retains multivariable calculus. No claim to resolve wider degree coverage gaps.",
+  "forwardActions": [
+    "When commissioning TMA02, include independent written and executable evidence plus private checked marking guidance; avoid merely repeating checkpoint questions.",
+    "U08 should retrieve signed local rates, continuity and limits while explicitly teaching accumulation and both directions of the fundamental theorem.",
+    "Later numerical integration should revisit misleading refinement and independent benchmarks without assuming finite differences certify general convergence."
+  ],
+  "disposition": "Block teaching complete and coherent within approved scope; U07 local checks passed. Assessment availability remains honestly separate. This review establishes content readiness, not learner attainment or external accreditation."
+}
