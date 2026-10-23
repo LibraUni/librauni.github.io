@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-23",
+  "standard": "Teaching Standard and Practice v1.12",
+  "fixedReference": "Full textual opening/coordinates/examples/activities of fixed v0.4 inspected; actual OU p56 layout rendered and viewed",
+  "adjoining": "Unit8 introduction and complete Lesson4 read; Unit7 code foundation verified; approved U09/B03 and six-lesson blueprint read",
+  "privateOU": {
+    "file": "sources/mst224_unit01_e1i1.pdf",
+    "exposition": "\u00a76.1 pp50\u201352; \u00a76.2 pp53\u201355; \u00a76.3 pp55\u201359 Examples7\u20139; \u00a76.4 pp59\u201361 Examples10\u201311",
+    "practice": "Exercises35,37,38,40\u201343,45; solutions35/37 pp78\u201379,40/41 pp80\u201381,42/43 p82,45 p83 inspected",
+    "fit": "Revision chapter for advanced MST224; used as editorial comparator with slower first-learning derivations, stated prerequisites and original mixed diagnostic questions. Handbook-dependent inverse trig/rational/cyclic-parts content excluded. Example11 singular endpoint not imported into our continuous-integrand theorem. No source content reproduced.",
+    "correctionToEarlierRecord": "U08 sources record did not identify this available integration revision chapter. It was located and used for U09; previous U08 files not altered."
+  },
+  "public": [
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_substitution.html",
+      "inspected": "6.1 opening chain-rule development",
+      "fit": "Confirms method motivation, not a copied sequence or practice bank"
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-standard/sec_IBP.html",
+      "inspected": "6.2 opening derivation, Theorem6.2.2, Example6.2.5 and surrounding method-choice explanation",
+      "fit": "Use introductory product-rule reasoning; omit broader cyclic techniques and mnemonic dependence"
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_antider.html",
+      "inspected": "5.1 definition/opening and linearity example explanation",
+      "fit": "Retrieve elementary foundation already taught in Unit8"
+    }
+  ],
+  "sectionMap": "See individual lesson reviews for every section; original verification/computing syntheses explicitly recorded as without exact OU equivalents.",
+  "rights": "Private OU used for inspection only; original teaching and diagrams; photo retains separate public-domain status."
+}

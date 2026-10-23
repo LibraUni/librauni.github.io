@@ -1,0 +1,15 @@
+{
+  "lesson": "U09-L06",
+  "status": "local reviewed; integrated whole-unit checks in progress",
+  "sources": {
+    "9.21": "Original combination of already-taught substitution/parts; MST224 U1 \u00a76.3 supplies individual methods, no exact equivalent combined example claimed",
+    "9.22": "Original implementation audit based on P101 foundation and Unit7 checks; no exact OU code comparator",
+    "9.23": "Exercise coverage and calibration in m101-u09-exercise-coverage.json; actual OU solutions35,37,40\u201343,45 pp78\u201383 inspected",
+    "9.24": "Derived directly from current unit; PDF and web share JSON content"
+  },
+  "subject": "25 additional exact identities/definite integrals/residuals; all16 exercise solutions read against their questions including invalid domain cases and open accepted alternatives. Learner and corrected notebook fresh kernels pass.",
+  "reader": "Read synthesis, all questions/hints/solutions and conclusion. Distinguishes integration-variable u from parts labels in combined example. Removed activity repair from visible reference code, using an earlier polynomial example instead so repair stays hidden.",
+  "visual": "Six offline/noJS width/theme cases with feedback opened; actual Example9.18 and both reference pages inspected. Individual exercise screenshots reviewed in integrated closing review.",
+  "workload": "4h with165min cumulative attempts (100min prior reservations),65feedback,60Python,25reference,25reading/activity. No extra assessment or learner records.",
+  "limitations": "Editorial timing estimate; no human/student validation."
+}

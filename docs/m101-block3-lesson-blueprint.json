@@ -3,7 +3,7 @@
   "date": "2026-10-23",
   "standard": "1.12",
   "reference": "v0.4",
-  "status": "local blueprint within approved unit scope; U09\u2013U11 teaching not commissioned",
+  "status": "local blueprint within approved unit scope; U09 commissioned and reviewed; U10\u2013U11 teaching not commissioned",
   "gate": "construction-policy 1.0: all block lessons mapped before U08 sections",
   "parents": [
     "curriculum/m101-blocks.js",

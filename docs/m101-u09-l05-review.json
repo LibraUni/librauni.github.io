@@ -1,0 +1,13 @@
+{
+  "lesson": "U09-L05",
+  "status": "local reviewed; final integrated checks pending",
+  "sources": {
+    "9.17": "MST224 U1 pp52,56\u201359 method-choice commentary and Exercises40/42; our comparison uses already-taught families",
+    "9.18\u20139.20": "Original diagnostic synthesis grounded in Unit7 numerical-check limitations and Unit8 antiderivative/FTC; no exact private-OU coding comparator claimed"
+  },
+  "subject": "14 additional symbolic/endpoint checks; notebook companion run; learner and corrected specimen fresh-kernel execution checked separately.",
+  "reader": "Whole lesson read. Introduced passing a function to change explicitly, connects to taught Unit7; distinguishes analytical derivative encoded in code from symbolic differentiation; gives hand predictions before computation.",
+  "visual": "Six offline/noJS viewport/theme cases with opened feedback; actual desktop code section9.19 and mobile discrepancy section9.18 inspected. Copy controls checked later in integrated site and offline script enhancement.",
+  "workload": "4h/1hPython; Activity19 includes its own feedback within60min. Other written practice/feedback separate; closing20min retained.",
+  "limitations": "No human timing validation; code copying and final integrated reflow pending."
+}

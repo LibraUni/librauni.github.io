@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:8779",
+  "checks": [
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/l01/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/l02/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/l03/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/l04/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/l05/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b03/u09/l06/",
+      "sourceTextMatch": true
+    },
+    {
+      "url": "/teaching/m101/M101-Unit-9-Checks.ipynb",
+      "bytes": 4406,
+      "sha256": "966d62bd38ba90e8aebe3eec17f153fa04892a50176c27ff757a546369abb1ef"
+    },
+    {
+      "url": "/teaching/m101/M101-Unit-9-Checks.py",
+      "bytes": 2411,
+      "sha256": "0ee05f0a9924d4fdcd17132369534af9bd88f8e45235692ba27026a2b9b93d76"
+    },
+    {
+      "url": "/teaching/m101/M101-Unit-9-Reference.pdf",
+      "bytes": 217376,
+      "sha256": "b8b15059cae300a654a23df76859dd6f1fe0b0a55b7d003c6d48b0e4afbc3d68"
+    },
+    {
+      "url": "/teaching/m101/u09-planimeter.jpg",
+      "bytes": 1026212,
+      "sha256": "3a3a199c6ebf2018ad5980b6873154cf640416b412457dcd3813c4e19f677d89"
+    }
+  ],
+  "searchPages": 105
+}

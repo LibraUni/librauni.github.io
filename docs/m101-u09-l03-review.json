@@ -1,0 +1,14 @@
+{
+  "lesson": "U09-L03",
+  "status": "local reviewed; final integrated checks pending",
+  "sources": {
+    "9.9": "MST224 U1 \u00a76.4 pp59\u201361, Example11 endpoint conversion; inverse-trig/singular-endpoint example not copied into this continuous-integrand syllabus",
+    "9.10\u20139.11": "same conversion principle and Exercise45 p61; original decreasing substitutions and two-route error diagnosis extend explicit reasoning",
+    "9.12": "Original chain-rule/FTC proof and split-interval example; no claimed exact OU exercise equivalent; Unit8 signed additivity prerequisite"
+  },
+  "subject": "10 additional exact integrals executed; invalid singular cases reviewed analytically, not passed to an integrator as valid problems. Nonmonotone theorem proof checks whole product and continuity over image.",
+  "reader": "Complete lesson read; corrected contradictory draft sentence in Activity9.11 feedback: endpoint arithmetic is correct for wrong bounds. Both routes shown before error exercise.",
+  "visual": "Six offline/noJS width/theme cases; actual desktop9.9/mobile9.12 inspected. SVG whitespace collapsed column labels; replaced with explicitly positioned tspan labels. Scrollable diagrams and equations retain keyboard focus.",
+  "workload": "Four hours as planned; 12 activity parts plus reconstructing two endpoint routes and split path.",
+  "limitations": "Final integrated recheck required; no human timing validation."
+}

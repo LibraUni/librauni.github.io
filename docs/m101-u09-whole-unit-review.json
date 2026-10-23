@@ -1,0 +1,56 @@
+{
+  "unit": "M101 U09 — Choosing an integration method",
+  "date": "2026-10-23",
+  "standard": "Teaching Standard and Practice v1.12",
+  "calibration": "M101 opening chapter v0.4; actual MST224 Unit1 sections6.1–6.4 and selected solutions; see per-section source records",
+  "status": "All required local checks passed; authorised for hosted publication gates and live verification",
+  "scope": {
+    "lessons": 6,
+    "sections": 24,
+    "workedExamples": 18,
+    "activities": 22,
+    "unitExercises": 16,
+    "figures": 7,
+    "hours": 24,
+    "pythonHours": 2,
+    "nextUnit": "U10 remains outline and uncommissioned"
+  },
+  "sequence": "Each lesson authored and reviewed before the next lesson. Per-lesson records retain their historical local disposition; this final review supersedes pending integrated checks when passed.",
+  "subjectReview": {
+    "independentSymbolicAndEndpointChecks": 89,
+    "method": "Independent symbolic differentiation, endpoint evaluations and residual checks; manual review of hypotheses, domains, rejected singular cases, all questions and all worked solutions. Numerical sampling is not presented as proof.",
+    "notebook": "Learner starter and separate corrected specimen validated and executed in fresh Jupyter kernels. No execution outputs or specimen answers in starter download."
+  },
+  "readerReview": {
+    "continuity": "U08 accumulation and FTC lead into elementary recognition, substitution, changed bounds and parts; L05 develops method selection and diagnostic checks; L06 combines taught methods and closes the unit. Advanced rational, trigonometric and improper integration remain outside required scope.",
+    "practice": "16 cumulative exercises with hidden separate hints and worked solutions; source calibration and outcome coverage recorded. Closing attempts reserve100min in earlier lessons plus65min in L06. Feedback, correction and Python remain inside24h.",
+    "reference": "Web and two-page PDF use the same reference JSON; visible code uses an earlier polynomial example to preserve the hidden notebook repair.",
+    "limitation": "Editorial workload estimates, not student pilot timing; reviews performed by authoring agent with independent computations, not external human review."
+  },
+  "visualReview": {
+    "inspected": "Lesson section renders, all16exercise solution screenshots, original diagram renders, planimeter context and both PDF pages; final mobile equality chains re-rendered and inspected.",
+    "corrections": "Long inline calculations promoted to focusable displays; equality chains use supported MathML array tables. All inline equations checked for narrow-width clipping. Photo alt describes actual wheel/dial/tracer close view. Figure9.5 labels use explicit positions.",
+    "accessibility": "Native MathML, labelled box roles, keyboard disclosures and code copy, alt/text alternatives; responsive themes and reduced-motion. Original mathematical diagrams serve explanatory purposes; media flags reviewed in media record."
+  },
+  "preservation": {
+    "baseline": "a455e4c9cdfef04452a537824c5324ffad50c3a3",
+    "trackedTeachingMediaAndSourceFiles": 346,
+    "byteIdentical": true
+  },
+  "publicationGate": "149 site tests, build/search, source/download/link checks and final responsive/offline browser checks locally; hosted security/test/build/deployment gates then live source/assets/navigation verification required before claiming live.",
+  "finalChecks": {
+    "siteTests": 149,
+    "browserWidthThemeCases": 70,
+    "noJavaScriptLessons": 6,
+    "exactKeyboardClipboardCopies": 2,
+    "offlineFiles": 7,
+    "offlineCopyControls": 3,
+    "zoomCases": 6,
+    "searchPages": 105,
+    "sourceMatches": 7,
+    "downloadHashMatches": 4,
+    "allMathMLValidXML": true,
+    "inlineMath320px": "no clipping in all six lessons",
+    "PDF": "Both pages visually reviewed; web/reference JSON content synchronised"
+  }
+}

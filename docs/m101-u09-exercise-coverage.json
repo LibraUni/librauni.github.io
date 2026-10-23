@@ -1,0 +1,15 @@
+{
+  "coreExercises": 16,
+  "attemptMinutes": 165,
+  "feedbackMinutes": 65,
+  "coverage": {
+    "elementary": "1,2,3",
+    "indefiniteSubstitution": "4,5,6,11",
+    "definiteSubstitution": "3,7,8",
+    "parts": "9,10,11,14",
+    "methodChoice": "2,4,6,9,10,11",
+    "constantsAndDomains": "5,7,12,13,14",
+    "verificationAndPython": "12,15,16 plus Activities19,22"
+  },
+  "calibration": "Actual MST224 U1 Exercises35,37(a,d,e),38(a,c),40(a\u2013f),41,42(a,b),43,45 inspected. Omit handbook-dependent inverse trig/partial fractions/cyclic parts. Original problems broaden explanation and error diagnosis; code tasks have no exact OU match. Workload editorial estimate, not student validated."
+}

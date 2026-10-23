@@ -1,0 +1,58 @@
+{
+  "title": "Choosing an integration method",
+  "version": "1.0",
+  "date": "2026-10-23",
+  "rows": [
+    [
+      "Recall",
+      "Elementary pairs",
+      "\\(\\int x^pdx=\\frac{x^{p+1}}{p+1}+C\\), \\(p\\ne-1\\); valid real interval. \\(\\int dx/x=\\ln|x|+C\\), interval excludes 0."
+    ],
+    [
+      "Recall",
+      "Exponential and trig",
+      "\\(\\int e^x dx=e^x+C\\); \\(\\int\\cos xdx=\\sin x+C\\); \\(\\int\\sin xdx=-\\cos x+C\\). Radians."
+    ],
+    [
+      "Recall",
+      "Linear input",
+      "If \\(F\\prime=f\\), \\(a\\ne0\\): \\(\\int f(ax+b)dx=\\frac1aF(ax+b)+C\\)."
+    ],
+    [
+      "Understand",
+      "Substitution",
+      "\\(u=g(x)\\), \\(du=g\\prime(x)dx\\); rewrite every factor. Check by the chain rule."
+    ],
+    [
+      "Recall",
+      "Changed limits",
+      "\\(\\int_a^b f(g(x))g\\prime(x)dx=\\int_{g(a)}^{g(b)}f(u)du\\). Preserve endpoint order."
+    ],
+    [
+      "Recall",
+      "Parts",
+      "\\(\\int u\\,dv=uv-\\int v\\,du\\). Choose an easier remaining integral; finish with C."
+    ],
+    [
+      "Understand",
+      "Definite parts",
+      "\\(\\int_a^buv\\prime dx=[uv]_a^b-\\int_a^bu\\prime vdx\\). Same variable and bounds."
+    ],
+    [
+      "Consult",
+      "Conditions",
+      "FTC: continuous integrand on closed interval. Substitution: g continuously differentiable; f continuous over its image. Definite parts: u,v continuously differentiable."
+    ],
+    [
+      "Understand",
+      "Verification",
+      "Antiderivative: \\(F\\prime=f\\) on interval. Definite result: \\(F(b)-F(a)\\). Initial value determines C. Numerical samples supplement identities."
+    ],
+    [
+      "Consult",
+      "Method choice",
+      "Simplify \u2192 elementary pair \u2192 inner derivative match \u2192 useful parts split. Reinspect after each transformation. Domain, signs and units remain part of the calculation."
+    ]
+  ],
+  "code": "def F(x):\n    return x**3\n\ndef change(F, a, b):\n    return F(b) - F(a)\n\nprint(change(F, 0.0, 1.0))  # 1.0\nprint(change(F, 1.0, 0.0))  # -1.0"
+}

@@ -1,0 +1,15 @@
+{
+  "lesson": "U09-L02",
+  "status": "local reviewed; final integrated checks pending",
+  "comparison": {
+    "9.5\u20139.6": "MST224 U1 \u00a76.3 pp55\u201356 Example7: inner/outer and compensating constant; APEX6.1 chain-rule opening",
+    "9.7": "MST224 p57 equation82 and Exercise40(d,f)",
+    "9.8": "MST224 Example8 pp57\u201358/Exercise41; our linear-root example uses lower algebraic demand before independent practice"
+  },
+  "practice": "Activities5\u20138 broaden original recognition, explicit substitution, domains and error explanation; no cyclic/inverse trig techniques. OU revision prerequisites made explicit and slowed.",
+  "subject": "14 new symbolic checks; all examples and numerical-free activity solutions manually compared with original questions and domain intervals.",
+  "reader": "Whole lesson read continuously. Differential is introduced from chain rule before symbolic replacement; avoids dividing by zero in x\u00b2 dx. Explanation identifies remaining-factor problem.",
+  "visual": "Six widths/themes offline/noJS cases passed with feedback opened; desktop9.6 and mobile9.8 inspected. Split long Example9.8 transformations and derivative explanation into meaningful steps to reduce horizontal scrolling; final full reflow check pending.",
+  "hours": 4,
+  "limitations": "No independent human review or student timing validation."
+}

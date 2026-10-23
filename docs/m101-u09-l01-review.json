@@ -1,0 +1,16 @@
+{
+  "lesson": "U09-L01",
+  "status": "local lesson reviewed; integrated site checks pending at unit closure",
+  "sources": {
+    "9.1": "MST224 U1 6.1 pp50\u201352 and6.4 pp59\u201360; Unit8 L04",
+    "9.2": "MST224 U1 6.2 pp53\u201354, Exercises37(a),38(a,c); omit broader handbook-dependent functions",
+    "9.3": "same passages plus differentiation rules taught in Unit5",
+    "9.4": "MST224 U1 Exercise35 p52; Unit8 continuity and evaluation conditions"
+  },
+  "fit": "OU is revision for a more advanced module; this first-learning treatment supplies slower reasoning, reconstruction and original multi-part feedback. No private wording/questions copied.",
+  "subject": "13 symbolic identities/endpoint checks executed; manual signs, domains, constants and invalid theorem use checked against each question.",
+  "reader": "Read complete lesson in order. Added explicit three-target distinction and explanation of variable factor that cannot be repaired by a constant; retained current v1.12 direct phrasing.",
+  "visual": "12 offline/noJS viewport/theme cases across introduction and lesson; all disclosures opened. Actual desktop section9.2 and mobile9.3 inspected. Fixed undersized graph by giving scrollable diagram a 560px minimum; corrected photo alt text after actual asset inspection (no case shown). Stacked power-rule fraction improved.",
+  "wholeLesson": "4h budget includes reconstruction and correction; first four activities have15 subparts. Scope limited to elementary recognition; next lesson derives substitution.",
+  "limitations": "Editorial self-review, no human timing validation. Final integrated site/zoom/keyboard review still required."
+}

@@ -1,0 +1,14 @@
+{
+  "lesson": "U09-L04",
+  "status": "local reviewed; final integrated checks pending",
+  "sources": {
+    "9.13\u20139.14": "MST224 U1 \u00a76.3 pp58\u201359, formula83/84 and Example9 rationale; APEX6.2 opening product-rule derivation and Example6.2.5",
+    "9.15": "MST224 Exercise42(a,b), p59; cyclic42(c) intentionally outside introductory allocation",
+    "9.16": "Original definite version derived from product rule and Unit8 FTC; MST224 \u00a76.4 endpoint comparison"
+  },
+  "subject": "13 new symbolic/definite/residual checks executed; signs, brackets and lower boundary contributions manually verified.",
+  "reader": "Read all four sections sequentially. Explained new roles of u,v, omission of intermediate constant, why repeated parts terminates for these examples, and why an alternative split makes work harder.",
+  "visual": "Six offline/noJS width/theme cases; actual desktop9.15 and narrow9.14 inspected. Split logarithm derivation into two displays. Figure6 retains text equivalent in adjacent derivative check.",
+  "hours": 4,
+  "limitations": "No human timing validation; final integrated/keyboard/reflow checks pending."
+}

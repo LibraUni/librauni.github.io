@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23",
+  "standard": "v1.12",
+  "authorisation": "Create U09 locally lesson by lesson, complete closure, publish after all required checks. No new permission needed. U10 not commissioned.",
+  "baseline": "a455e4c9cdfef04452a537824c5324ffad50c3a3",
+  "hours": 24,
+  "pythonHours": 2,
+  "sequence": [
+    "Recognising elementary antiderivatives",
+    "Substitution as a reversed chain rule",
+    "Definite substitution and changed limits",
+    "Integration by parts",
+    "Selecting and checking a method",
+    "Mixed practice and unit synthesis"
+  ],
+  "budgetsMinutes": {
+    "L01-L04_each": {
+      "reading_worked_reconstruction": 100,
+      "activities": 80,
+      "feedback": 40,
+      "reserved_closing_attempts": 20
+    },
+    "L05": {
+      "reading": 55,
+      "activities": 60,
+      "feedback": 45,
+      "python": 60,
+      "reserved_closing_attempts": 20
+    },
+    "L06": {
+      "synthesis_reading": 25,
+      "closing_attempts": 65,
+      "closing_feedback": 65,
+      "python": 60,
+      "reference_revision": 25
+    }
+  },
+  "closingAttemptsTotal": 165,
+  "mediaPlan": "Original paired antiderivative plots; substitution mapping and differential-factor diagrams; parts product decomposition; check residual plot. Search instrument photography to connect choice of analytical/computational methods; verify actual image rights and module-wide prior identity. Static explanatory diagrams preferred to gratuitous manipulation; notebook provides purposeful changing-input exploration.",
+  "sourceInspected": [
+    "Fixed v0.4 full reading text; actual OU page56 render",
+    "MST224 Unit1 sections6.1\u20136.4 pp50\u201361; exercises35\u201345 selectively, excluding inverse trigonometric/rational techniques and cyclic parts",
+    "Unit8 introduction and complete L04; approved B03/U09 and six lesson blueprint"
+  ],
+  "reviewPolicy": "Finish and record subject/reader/render/whole-lesson reviews before drafting next lesson. Review claims require actual evidence."
+}

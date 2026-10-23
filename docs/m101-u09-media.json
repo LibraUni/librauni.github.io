@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-23",
+  "thirdParty": [
+    {
+      "figure": "9.1",
+      "placement": "Unit introduction only",
+      "asset": "public/teaching/m101/u09-planimeter.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Compensating_Polar_Planimeter_(30844680656).jpg",
+      "creator": "Central Intelligence Agency",
+      "terms": "United States government work; public domain in United States, as recorded on file licensing entry (Flickr review confirms government-work status)",
+      "modifications": "None; HTML scales aspect ratio",
+      "inspection": "Actual downloaded5184x3456 photo viewed. Alt text corrected to wheel/dial/tracer arm (no fitted case visible).",
+      "duplication": "Searched prior M101 teaching and media registers for planimeter/source identity30844680656; no prior use. Earlier U08 media record documents rejected different planimeter sources only.",
+      "sha256": "3a3a199c6ebf2018ad5980b6873154cf640416b412457dcd3813c4e19f677d89"
+    }
+  ],
+  "originalFigures": {
+    "9.2": "Rate and antiderivative curves, numerical sampling from exact formulas",
+    "9.3": "Inner-expression/differential replacements",
+    "9.4": "Endpoint correspondence (explicitly schematic)",
+    "9.5": "Nonmonotone substitution path; positioned column labels repaired",
+    "9.6": "Product-rule cancellation; equivalent accessible prose",
+    "9.7": "Derivative discrepancy line1\u22122x; midpoint blind spot"
+  },
+  "editorialReview": "Compared teaching roles and visual reading rhythm with fixed M101v0.4 and adjacent Unit8. Actively searched Smithsonian, Commons and museum instrument collections; Smithsonian metadata CC0 was not treated as image permission. Selected actual instrument detail for method/information context. Abstract method lessons use six original relevant explanatory figures, with full caption/alt equivalents, not arbitrary repeated photos. Closing lesson is mixed practice/reference and refers back to taught representations; no decorative figure inserted. No third-party repeats. Structural all-diagram flags reviewed with this unit-level account, not waived by an assumed exemption.",
+  "interactiveDecision": "Static correspondence and derivative figures directly serve the arguments. Notebook input manipulation supplies purposeful exploration within2h; no uninspected video or decorative animation added."
+}
