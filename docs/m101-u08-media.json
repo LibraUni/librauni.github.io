@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-23",
+  "figures": [
+    {
+      "id": "m101-u08-fig-02",
+      "file": "public/teaching/m101/u08-flow-measurement.jpg",
+      "source": "https://www.usgs.gov/media/images/usgs-hydrologic-technician-making-streamgage-measurements",
+      "creator": "USGS, Central Midwest Water Science Center; individual photographer not named",
+      "terms": "Public Domain, explicitly declared on source page",
+      "modifications": "Downloaded source full-width rendition; no crop or content change",
+      "sha256": "e73fabd40c2961e4d6c034a984de19509391590d5cbc438f4beb5560b1e7733e",
+      "purpose": "Connect sampled rates and modelled accumulated volume to field flow measurement; adjacent text explains interpolation limitation",
+      "priorPlacementAudit": "No prior module source-identity text match or identical public image bytes; no repeat",
+      "inspected": "Actual downloaded image visually inspected in Lesson1 desktop screenshot"
+    },
+    {
+      "id": "m101-u08-fig-01",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "type": "original inline SVG",
+      "purpose": "left rectangle contributions"
+    },
+    {
+      "id": "m101-u08-fig-03",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "type": "original inline SVG",
+      "purpose": "signed triangular balance"
+    },
+    {
+      "id": "m101-u08-fig-04",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "type": "original inline SVG",
+      "purpose": "accumulation shape"
+    },
+    {
+      "id": "m101-u08-fig-05",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "type": "original inline SVG",
+      "purpose": "new strip in FTC difference"
+    },
+    {
+      "id": "m101-u08-fig-06",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "type": "original inline SVG",
+      "purpose": "antiderivative vertical family"
+    },
+    {
+      "id": "m101-u08-fig-07",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA 4.0",
+      "type": "original inline SVG",
+      "purpose": "initial-value anchoring"
+    }
+  ],
+  "editorial": "Actual M101 v0.4 reference and adjacent U07 compared. One field photograph anchors the rate construction, and six original mathematical figures carry the abstract development. Introductions remain connected prose; later all-diagram lessons deliberately show the actual relationships being reasoned about. Photo is not repeated to fill slots. Supplemental planimeter search found Smithsonian image restrictions distinct from CC0 metadata and a US-only historic public-domain scan; neither used. Static strip/family figures serve the reasoning without controls; computational manipulation is supplied through the notebook. No video added without inspecting actual educational content."
+}

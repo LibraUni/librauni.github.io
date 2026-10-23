@@ -1,0 +1,68 @@
+{
+  "version": "1.0",
+  "date": "2026-10-23",
+  "title": "M101 Unit 8 \u00b7 Accumulation and the fundamental theorem",
+  "rows": [
+    [
+      "Recall",
+      "Endpoint sums",
+      "\\(\\Delta x=(b-a)/n\\). Left samples \\(a+i\\Delta x\\), i=0,\u2026,n\u22121; right samples i=1,\u2026,n. Multiply every height by its width."
+    ],
+    [
+      "Understand",
+      "Integral as a limit",
+      "\\(\\int_a^b f(x)\\,dx=\\lim\\sum f(c_i)\\Delta x_i\\) as the largest width tends to zero. Continuous f on [a,b] guarantees existence."
+    ],
+    [
+      "Recall",
+      "Orientation and joining",
+      "\\(\\int_b^a f=-\\int_a^b f\\); \\(\\int_a^a f=0\\); \\(\\int_a^b f=\\int_a^c f+\\int_c^b f\\)."
+    ],
+    [
+      "Recall",
+      "Linearity",
+      "\\(\\int_a^b(\\alpha f+\\beta g)=\\alpha\\int_a^b f+\\beta\\int_a^b g\\), for constants \u03b1,\u03b2."
+    ],
+    [
+      "Understand",
+      "Signs, units, bounds",
+      "Net signed total; units = integrand units \u00d7 input units. For a&lt;b and m\u2264f\u2264M: \\(m(b-a)\\leq\\int_a^b f\\leq M(b-a)\\)."
+    ],
+    [
+      "Recall",
+      "Accumulation theorem",
+      "\\(A(x)=\\int_a^x f(t)\\,dt\\) gives \\(A\\prime(x)=f(x)\\) at interior x when f is continuous. A(a)=0."
+    ],
+    [
+      "Recall",
+      "Moving endpoints",
+      "\\(\\frac{d}{dx}\\int_a^{g(x)}f(t)\\,dt=f(g(x))g\\prime(x)\\). Continuous f, differentiable g. A moving lower limit contributes a minus sign."
+    ],
+    [
+      "Recall",
+      "Evaluation theorem",
+      "\\(\\int_a^b f(x)\\,dx=F(b)-F(a)\\), if f is continuous and F\u2032=f on the interval."
+    ],
+    [
+      "Understand",
+      "Antiderivative family",
+      "\\(\\int f(x)\\,dx=F(x)+C\\). Equal derivatives imply a constant difference on an interval; constants cancel in endpoint subtraction."
+    ],
+    [
+      "Recall",
+      "Elementary pairs",
+      "\\(x^p\\mapsto\\frac{x^{p+1}}{p+1}\\) (p\u2260\u22121); \\(1/x\\mapsto\\ln|x|\\); \\(e^x\\mapsto e^x\\); \\(\\cos x\\mapsto\\sin x\\); \\(\\sin x\\mapsto-\\cos x\\). Valid real intervals; reciprocal excludes zero; trig uses radians."
+    ],
+    [
+      "Recall",
+      "Initial value",
+      "\\(Q(t)=Q_0+\\int_{t_0}^{t}q(s)\\,ds\\), for Q\u2032=q continuous and Q(t\u2080)=Q\u2080."
+    ],
+    [
+      "Consult",
+      "Checks",
+      "Differentiate an antiderivative; substitute initial data; inspect the whole domain, signs, units and bounds. Benchmark code against a hand sum and an exact integral."
+    ]
+  ],
+  "code": "def left_sum(f, a, b, n):\n    # Increasing interval; positive integer n.\n    width = (b - a) / n\n    total = 0.0\n    for i in range(n):\n        total += f(a + i * width) * width\n    return total\n\n# Benchmark: f(x)=3 on [1,4] gives 9.\n# Use the lesson function for guarded/oriented inputs."
+}

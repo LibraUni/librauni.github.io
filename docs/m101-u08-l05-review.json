@@ -1,0 +1,25 @@
+{
+  "lesson": "U08-L05",
+  "status": "reviewed locally; final integrated checks passed",
+  "sections": {
+    "8.17": "Transparent endpoint implementation; traced hand square example before execution. Comparators: taught Unit7 code-check practice and APEX5.3 partition/endpoints.",
+    "8.18": "Analytic benchmark from L01/L04; constant, orientation, equal endpoint and faulty-code tests. This code task is an original synthesis; no identical external task claimed.",
+    "8.19": "Sixteen original exercises: arithmetic/sums1\u20133; limit definition4; signs/geometry5; interval/linearity6;bounds7;FTC8\u20139;antiderivatives10;definite evaluation11;conditions12;initial-value/extrema13;shape14;jump15;code16.",
+    "8.20": "Conclusion returns to rate/total opening; shared twelve-entry JSON web/PDF reference plus code. Unit9 handover preserves scope."
+  },
+  "practiceCalibration": {
+    "sources": [
+      "APEX5.3 exercises5\u201312 (finite-sum expansion) and Example5.3.10 (endpoint construction)",
+      "APEX5.2 Example5.2.10 and Theorem5.2.9 (sign/orientation)",
+      "APEX5.1 exercises1\u20135,8\u201316,18,20 (family meaning/elementary fluency), Example5.1.7 (nonzero-time initial condition)",
+      "APEX5.4 exercises1\u20134,5\u20138,10,12\u201320 (meaning and definite evaluations); Theorems5.4.6/8"
+    ],
+    "fit": "Routine fluency is comparable in prerequisites. LibraUni deliberately includes more written sign/domain explanation, graph reasoning and a code audit; reciprocal-trig and broader exponential catalogue in APEX are not imported. Hints/solutions provide more scaffolding; no equivalence-of-hours claim. Original synthesis questions13\u201316 combine earlier taught methods. Missing OU introductory integration/practice chapter remains recorded; supplied MST224 p67 used for accumulation motivation, not practice-equivalence claims."
+  },
+  "subject": "95 separately executed subject/code checks plus hand recalculation of all16 solutions; notebook schema and two fresh Jupyter kernels passed (learner and completed specimen).",
+  "reader": "Changed long Exercise11 endpoint chain to short endpoint values after narrow render; expressed jump conditions in MathML. Exercise16 asks limits of a test, not proof by agreement. Added reconstruct-the-worked-example practice to make explicit use of the L01\u2013L04 activity allocation.",
+  "visual": "All sixteen opened exercises inspected; both final PDF pages inspected after formula/date fixes; no clipping. Solutions closed initially. Final integrated rerun passed.",
+  "workload": "20h total incl1hPython preserved. L01\u2013L04 90min reading/examples +90min reconstructing examples/activities +40min feedback +20min reserved closing each. L05 240min as displayed plus80reserved minutes for total120min written closing attempts. Estimates, not student-trial timings.",
+  "limitations": "Self-review with independent calculation methods; no human moderation or measured learner pacing claimed.",
+  "finalIntegratedReview": "70 page/viewport/theme cases passed across all seven new teaching pages; no-JavaScript feedback, keyboard copying and narrow-screen zoom passed. Ten focused cases rerun after final typography changes passed."
+}

@@ -1,0 +1,264 @@
+{
+  "version": "1.0",
+  "date": "2026-10-23",
+  "standard": "1.12",
+  "reference": "v0.4",
+  "status": "local blueprint within approved unit scope; U09\u2013U11 teaching not commissioned",
+  "gate": "construction-policy 1.0: all block lessons mapped before U08 sections",
+  "parents": [
+    "curriculum/m101-blocks.js",
+    "curriculum/m101-units.js",
+    "curriculum/construction-policy.js",
+    "docs/curriculum-authoring.md"
+  ],
+  "units": [
+    {
+      "id": "U08",
+      "hours": 20,
+      "pythonHours": 1,
+      "lessons": [
+        {
+          "id": "U08-L01",
+          "title": "From rates to finite sums",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U07",
+          "purpose": "From rates to finite sums",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Definite integrals and signed accumulation"
+        },
+        {
+          "id": "U08-L02",
+          "title": "Definite integrals and signed accumulation",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U08-L01",
+          "purpose": "Definite integrals and signed accumulation",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Accumulation functions and the fundamental theorem"
+        },
+        {
+          "id": "U08-L03",
+          "title": "Accumulation functions and the fundamental theorem",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U08-L02",
+          "purpose": "Accumulation functions and the fundamental theorem",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Antiderivatives, evaluation and initial values"
+        },
+        {
+          "id": "U08-L04",
+          "title": "Antiderivatives, evaluation and initial values",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U08-L03",
+          "purpose": "Antiderivatives, evaluation and initial values",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Rectangle sums and unit synthesis"
+        },
+        {
+          "id": "U08-L05",
+          "title": "Rectangle sums and unit synthesis",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U08-L04",
+          "purpose": "Rectangle sums and unit synthesis",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Next approved unit; closing cumulative exercises and reference included"
+        }
+      ]
+    },
+    {
+      "id": "U09",
+      "hours": 24,
+      "pythonHours": 2,
+      "lessons": [
+        {
+          "id": "U09-L01",
+          "title": "Recognising elementary antiderivatives",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "previous unit",
+          "purpose": "Recognising elementary antiderivatives",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Substitution as a reversed chain rule"
+        },
+        {
+          "id": "U09-L02",
+          "title": "Substitution as a reversed chain rule",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U09-L01",
+          "purpose": "Substitution as a reversed chain rule",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Definite substitution and changed limits"
+        },
+        {
+          "id": "U09-L03",
+          "title": "Definite substitution and changed limits",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U09-L02",
+          "purpose": "Definite substitution and changed limits",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Integration by parts"
+        },
+        {
+          "id": "U09-L04",
+          "title": "Integration by parts",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U09-L03",
+          "purpose": "Integration by parts",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Selecting and checking a method"
+        },
+        {
+          "id": "U09-L05",
+          "title": "Selecting and checking a method",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U09-L04",
+          "purpose": "Selecting and checking a method",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Mixed practice and unit synthesis"
+        },
+        {
+          "id": "U09-L06",
+          "title": "Mixed practice and unit synthesis",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U09-L05",
+          "purpose": "Mixed practice and unit synthesis",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Next approved unit; closing cumulative exercises and reference included"
+        }
+      ]
+    },
+    {
+      "id": "U10",
+      "hours": 18,
+      "pythonHours": 2,
+      "lessons": [
+        {
+          "id": "U10-L01",
+          "title": "Signed area and geometric area",
+          "hours": 3,
+          "pythonHours": 0,
+          "requires": "previous unit",
+          "purpose": "Signed area and geometric area",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Displacement and distance"
+        },
+        {
+          "id": "U10-L02",
+          "title": "Displacement and distance",
+          "hours": 3,
+          "pythonHours": 0,
+          "requires": "U10-L01",
+          "purpose": "Displacement and distance",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Mean values and accumulated flow"
+        },
+        {
+          "id": "U10-L03",
+          "title": "Mean values and accumulated flow",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U10-L02",
+          "purpose": "Mean values and accumulated flow",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Volumes by slices and supplied work models"
+        },
+        {
+          "id": "U10-L04",
+          "title": "Volumes by slices and supplied work models",
+          "hours": 4,
+          "pythonHours": 0,
+          "requires": "U10-L03",
+          "purpose": "Volumes by slices and supplied work models",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Model selection and unit synthesis"
+        },
+        {
+          "id": "U10-L05",
+          "title": "Model selection and unit synthesis",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U10-L04",
+          "purpose": "Model selection and unit synthesis",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Next approved unit; closing cumulative exercises and reference included"
+        }
+      ]
+    },
+    {
+      "id": "U11",
+      "hours": 16,
+      "pythonHours": 5,
+      "lessons": [
+        {
+          "id": "U11-L01",
+          "title": "Rectangle and midpoint quadrature",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "previous unit",
+          "purpose": "Rectangle and midpoint quadrature",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Trapezoidal estimates and refinement"
+        },
+        {
+          "id": "U11-L02",
+          "title": "Trapezoidal estimates and refinement",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U11-L01",
+          "purpose": "Trapezoidal estimates and refinement",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Missed features and trustworthy comparisons"
+        },
+        {
+          "id": "U11-L03",
+          "title": "Missed features and trustworthy comparisons",
+          "hours": 4,
+          "pythonHours": 2,
+          "requires": "U11-L02",
+          "purpose": "Missed features and trustworthy comparisons",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Block synthesis and formative checkpoint"
+        },
+        {
+          "id": "U11-L04",
+          "title": "Block synthesis and formative checkpoint",
+          "hours": 4,
+          "pythonHours": 1,
+          "requires": "U11-L03",
+          "purpose": "Block synthesis and formative checkpoint",
+          "evidence": "Original explained calculations, conceptual activity and corrected practice; code benchmark where allocated",
+          "boundary": "Retain approved unit scope; no improper/multiple integrals or new numerical rules",
+          "handover": "Next approved unit; closing cumulative exercises and reference included"
+        }
+      ]
+    }
+  ]
+}

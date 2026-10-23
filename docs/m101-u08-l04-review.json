@@ -1,0 +1,15 @@
+{
+  "lesson": "U08-L04",
+  "status": "reviewed locally; final integrated checks passed",
+  "sources": {
+    "8.13": "APEX5.1 definition, constant-family discussion; Unit6 MVT supplies uniqueness argument",
+    "8.14": "APEX5.1 Theorem5.1.6, power/log discussion and Example5.1.5; omit reciprocal-trig catalogue beyond immediate need",
+    "8.15": "APEX5.4 Theorem5.4.8 and Examples5.4.9\u201310; original derivation via equal derivatives",
+    "8.16": "APEX5.1 Example5.1.7 initial value at nonzero time; original first-order volume model replaces physical acceleration assumptions"
+  },
+  "subject": "11 independent SymPy checks passed. Every initial value substituted; all endpoint evaluations recalculated. Domain exclusions, exponent\u22121 exception, radian convention and constant cancellation checked.",
+  "reader": "Continuous read against previous lesson and v0.4: explicit reason antiderivatives differ by constants; logarithm on negative inputs justified with chain rule; nonzero initial time used to expose initial-value versus constant distinction. No substitution/parts syllabus introduced.",
+  "visual": "Six offline responsive/theme cases passed with all hints/discussions open. Mobile elementary-pairs table inspected: scrollable with focus; equations and radicals readable.",
+  "limitations": "Self-review; full integrated site, final PDF and publication checks pending.",
+  "finalIntegratedReview": "70 page/viewport/theme cases passed across all seven new teaching pages; no-JavaScript feedback, keyboard copying and narrow-screen zoom passed. Ten focused cases rerun after final typography changes passed."
+}

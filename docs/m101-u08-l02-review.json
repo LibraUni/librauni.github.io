@@ -1,0 +1,17 @@
+{
+  "lesson": "U08-L02",
+  "standard": "1.12",
+  "status": "reviewed locally; final integrated checks passed",
+  "sources": {
+    "8.5": "APEX 5.3 Definition5.3.12 and limiting-sum theorem; continuity sufficient, mesh versus count",
+    "8.6": "APEX 5.2 signed-area exposition and Example5.2.10; supplied OU MST224 p67 units comparator",
+    "8.7": "APEX 5.2 Theorem5.2.9 and discussion of arbitrary order",
+    "8.8": "APEX 5.2 integral properties; original constant-product counterexample"
+  },
+  "subject": "All examples/activities independently recalculated:15;3/2 versus5/2;0;4 versus8;5 and\u22125;10,\u22127,0;9;bounds2..8. Oriented interval conditions and continuity guarantee checked.",
+  "reader": "Continuous pass checked distinction between a fixed integral and function, geometric area and net change. Added explicit sufficient/not necessary continuity statement and sample-versus-model condition on bounds.",
+  "visual": "6 offline viewport/theme cases passed, feedback opened. Inspected desktop signed-area section. Found escaped less-than rendered literally; fixed compiler unescaping globally. Added signed triangular fills and enlarged mobile diagram labels. Recheck follows before next lesson.",
+  "practice": "APEX5.3 exercises5\u201312 inspected for finite-index fluency; LibraUni adds dimensional interpretation. APEX5.2 Example5.2.10 conceptual sign/order comparison used; original graph and numerical work, no close adaptation.",
+  "limitations": "Self-review; integrated site/PDF/publication checks remain.",
+  "finalIntegratedReview": "70 page/viewport/theme cases passed across all seven new teaching pages; no-JavaScript feedback, keyboard copying and narrow-screen zoom passed. Ten focused cases rerun after final typography changes passed."
+}

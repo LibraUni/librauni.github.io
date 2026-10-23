@@ -1,0 +1,28 @@
+{
+  "lesson": "U08-L01",
+  "standard": "1.12",
+  "status": "reviewed locally; final integrated checks passed",
+  "sources": {
+    "8.1": [
+      "Private OU MST224 Unit8 printed p67: small contributions and limiting accumulation; already assumes integration, used for motivation only"
+    ],
+    "8.2": [
+      "APEX 5.3.2 Example5.3.6 and Theorem5.3.7; sigma expansion and finite sums"
+    ],
+    "8.3": [
+      "APEX 5.3.3 partition and endpoint construction, Example5.3.10; midpoint rule deferred"
+    ],
+    "8.4": [
+      "APEX 5.3 limiting Riemann-sum discussion; linear bounded example chosen to avoid untaught sums of squares"
+    ]
+  },
+  "subject": "Independent Fraction sums at n=1,2,4,8,16,80,101 verified L=16\u22128/n and R=16+8/n; all four activity solutions recalculated. Constant-rate/representative-rate distinction checked.",
+  "readerReview": "Continuous read against v0.4 coordinate development: added explicit n+1 endpoints explanation, paired-duration arithmetic, and derivation of integer-sum identity; no assumed summation knowledge. Bound claim limited to known monotonic model.",
+  "visualReview": "Six offline viewport/theme cases passed; full feedback opened. Inspected 390px section3 and 1440px section4. Split paired displayed sums after observing avoidable mobile scrolling; responsive diagram minimum reduced to320px. Final rerender required.",
+  "limitations": [
+    "Self-review, not independent human/student trial. Timings are editorial estimates.",
+    "Full introductory OU integration unit absent; actual MST224 passage and APEX supplement recorded."
+  ],
+  "media": "USGS Des Moines technician photograph inspected; page declares public domain; module text/source identity search found no prior placement; original rectangle diagram checked against data.",
+  "finalIntegratedReview": "70 page/viewport/theme cases passed across all seven new teaching pages; no-JavaScript feedback, keyboard copying and narrow-screen zoom passed. Ten focused cases rerun after final typography changes passed."
+}

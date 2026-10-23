@@ -1,0 +1,15 @@
+{
+  "lesson": "U08-L03",
+  "status": "reviewed locally; final integrated checks passed",
+  "sources": {
+    "8.9": "APEX5.4 Example5.4.2 and Figures5.4.4\u20135; geometric moving endpoint",
+    "8.10": "APEX5.4 Theorem5.4.6 and Example5.4.7; explicit two-sided bounding argument is original expansion",
+    "8.11": "APEX5.4 accumulation plots plus taught Unit6 sign/concavity reasoning",
+    "8.12": "APEX5.4 theorem hypotheses and Unit5 chain rule; jump counterexample original synthesis"
+  },
+  "subject": "Five independent SymPy integral/derivative checks passed. Proof checked for h<0 orientation, boundedness, endpoint qualification. Jump example checked by one-sided slopes; no claim of derivative at jump.",
+  "reader": "Read continuously; supplied geometric derivation of quadratic accumulation rather than using evaluation theorem before teaching it. Explained dummy variable and moving endpoint separately. APEX online Example5.4.7 has an apparent swapped-variable wording typo; not reproduced.",
+  "visual": "12 cases across corrected L02/L03 passed at1440/390/320 and both themes, offline/noJS/all feedback. Inspected L03 proof desktop and variable-endpoint mobile: radical bars, limits, symbols and disclosure working readable.",
+  "limitations": "Self-review; actual student pacing not measured; integrated checks pending.",
+  "finalIntegratedReview": "70 page/viewport/theme cases passed across all seven new teaching pages; no-JavaScript feedback, keyboard copying and narrow-screen zoom passed. Ten focused cases rerun after final typography changes passed."
+}

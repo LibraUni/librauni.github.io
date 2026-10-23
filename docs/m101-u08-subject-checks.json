@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "checks": 95,
+  "notebook": "all supplied cells executed in fresh Python namespace; completed-task specimen checks passed; not yet Jupyter-kernel validation",
+  "exerciseReview": "16 worked solutions independently recalculated; symbolic cross-checks for nontrivial integrals and derivatives; geometry/bookkeeping checked separately"
+}

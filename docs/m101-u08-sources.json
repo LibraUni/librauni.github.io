@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-23",
+  "standard": "docs/teaching-standard-and-practice.md v1.12",
+  "fixedReference": "content/editorial-reference/m101-opening-chapter-v0.4.html, actual opening/coordinates/example/activity passages read",
+  "adjoining": "Unit7 introduction, tangent opening, complete closing lesson and TMA02 handover; Unit5 derivative rules/Unit6 MVT prerequisites checked against approved released structure",
+  "privateOU": {
+    "file": "sources/mst224_unit08_e1i1.pdf",
+    "page": "printed67 / PDF3",
+    "passage": "Introduction, rod linear density, small mass contribution and limiting total",
+    "inspection": "extracted full paragraph text plus rendered original page",
+    "fit": "Actual accumulation and units passage; assumes single-variable integration and proceeds to multiple integrals, so only opening rod passage informs this unit. Supplied MST124 units10/12 checked and identified as sequences/complex numbers, not a missing introductory integration replacement. No private content reproduced."
+  },
+  "publicComparators": [
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_riemann.html",
+      "passages": "5.3.2 summation,5.3.3 partition/endpoint sums,5.3.4 limiting construction; exercises5\u201312",
+      "fit": "Same algebra/limit readiness; midpoint/squares/cubes sum catalogue not required here."
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_def_int.html",
+      "passages": "5.2 signed-area development,Theorem5.2.9,Example5.2.10",
+      "fit": "Geometric sign/orientation and linearity; LibraUni begins with contribution sums and uses SI-style units."
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_FTC.html",
+      "passages": "Example5.4.2,Theorems5.4.6/8,Examples5.4.7/9/10,exercises1\u20138,10,12\u201320",
+      "fit": "Both theorem directions and practice; explicit two-sided strip proof and original code synthesis supplied locally."
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_antider.html",
+      "passages": "Example5.1.5,Theorem5.1.6,Example5.1.7;exercises1\u20135,8\u201316,18,20",
+      "fit": "Families,elementary rules,initial data; broader reciprocal-trig catalogue omitted."
+    }
+  ],
+  "gaps": "Introductory OU integration chapter and equivalent OU practice not supplied; no claim of inspecting them. Source comparisons are editorial calibration, not equivalence/accreditation or copied teaching."
+}

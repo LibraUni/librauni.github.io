@@ -1,0 +1,44 @@
+{
+  "unit": "M101 Unit 8",
+  "date": "2026-10-23",
+  "status": "all local gates passed; deployment and live verification required",
+  "standard": "Teaching Standard and Practice v1.12; fixed illustrated M101 opening chapter v0.4",
+  "scope": {
+    "lessons": 5,
+    "sections": 20,
+    "hours": 20,
+    "pythonHours": 1,
+    "examples": 12,
+    "activities": 18,
+    "closingExercises": 16,
+    "figures": 7
+  },
+  "reviewMethod": "Each lesson authored and reviewed in sequence before progressing. Distinct subject, reader, visual and continuity reviews; independent calculation methods within self-review, not external moderation.",
+  "checks": {
+    "repositoryTests": 147,
+    "subjectAndCodeChecks": 95,
+    "notebooks": "schema validation and fresh learner/completed Jupyter runs passed",
+    "integratedBrowserCases": 70,
+    "finalFocusedBrowserCases": 10,
+    "accessibility": "keyboard disclosures, exact keyboard code copying, no-JavaScript feedback and narrow-screen zoom passed",
+    "search": "98 available pages indexed; Unit9 excluded",
+    "links": "all seven new teaching pages and internal links/anchors checked",
+    "downloads": "four published assets byte-identical to reviewed source",
+    "pdf": "two final rendered pages visually inspected",
+    "exerciseSolutions": "all sixteen recalculated and opened rendered solutions inspected"
+  },
+  "defectsCorrected": [
+    "Narrow-screen global brand overflow scoped fix",
+    "Long exercise endpoint chain shortened",
+    "Native mathematical conditions and power fraction typography",
+    "Broken external comparator link replaced with verified section",
+    "Block navigation Unit labels made explicit"
+  ],
+  "curriculum": "Approved scope and 20h/1h Python budget preserved. Unit9 onward remains outline. Unit7 source teaching unchanged; rendered handover updated. No new assessment checkpoint.",
+  "limitations": [
+    "Introductory OU integration chapter absent; exact supplied MST224 passage and accessible APEX passages/practice used, with gaps recorded in source audit.",
+    "Study times are editorial estimates, not measured learner trials.",
+    "No interactive simulation included: static explanatory figures and checked Python activity provide purposeful exploration."
+  ],
+  "publicationAuthorization": "User explicitly requested publication when required checks pass. Hosted security, tests, build/deployment and live verification remain required."
+}

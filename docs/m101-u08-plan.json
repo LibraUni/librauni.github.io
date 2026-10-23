@@ -1,0 +1,145 @@
+{
+  "status": "completed locally; all local release checks passed; hosted verification follows deployment",
+  "hours": 20,
+  "pythonHours": 1,
+  "lessons": [
+    {
+      "id": "U08-L01",
+      "sections": [
+        {
+          "id": "M101-U08-L01-S01",
+          "title": "Products that measure contributions"
+        },
+        {
+          "id": "M101-U08-L01-S02",
+          "title": "Building and reading a finite sum"
+        },
+        {
+          "id": "M101-U08-L01-S03",
+          "title": "Left and right rectangle estimates"
+        },
+        {
+          "id": "M101-U08-L01-S04",
+          "title": "Refinement and what the evidence says"
+        }
+      ],
+      "minutes": {
+        "readingExamples": 90,
+        "activities": 90,
+        "feedback": 40,
+        "reservedClosing": 20
+      }
+    },
+    {
+      "id": "U08-L02",
+      "sections": [
+        {
+          "id": "M101-U08-L02-S01",
+          "title": "A limit that defines a total"
+        },
+        {
+          "id": "M101-U08-L02-S02",
+          "title": "The meaning of a signed integral"
+        },
+        {
+          "id": "M101-U08-L02-S03",
+          "title": "Reversing and joining intervals"
+        },
+        {
+          "id": "M101-U08-L02-S04",
+          "title": "Combining integrands and bounding totals"
+        }
+      ],
+      "minutes": {
+        "readingExamples": 90,
+        "activities": 90,
+        "feedback": 40,
+        "reservedClosing": 20
+      }
+    },
+    {
+      "id": "U08-L03",
+      "sections": [
+        {
+          "id": "M101-U08-L03-S01",
+          "title": "Letting the endpoint move"
+        },
+        {
+          "id": "M101-U08-L03-S02",
+          "title": "Why the derivative recovers the integrand"
+        },
+        {
+          "id": "M101-U08-L03-S03",
+          "title": "Reading accumulation from a rate graph"
+        },
+        {
+          "id": "M101-U08-L03-S04",
+          "title": "Variable endpoints and continuity conditions"
+        }
+      ],
+      "minutes": {
+        "readingExamples": 90,
+        "activities": 90,
+        "feedback": 40,
+        "reservedClosing": 20
+      }
+    },
+    {
+      "id": "U08-L04",
+      "sections": [
+        {
+          "id": "M101-U08-L04-S01",
+          "title": "Antiderivatives and the constant"
+        },
+        {
+          "id": "M101-U08-L04-S02",
+          "title": "Reversing elementary derivative rules"
+        },
+        {
+          "id": "M101-U08-L04-S03",
+          "title": "The evaluation part of the theorem"
+        },
+        {
+          "id": "M101-U08-L04-S04",
+          "title": "Recovering a quantity from an initial value"
+        }
+      ],
+      "minutes": {
+        "readingExamples": 90,
+        "activities": 90,
+        "feedback": 40,
+        "reservedClosing": 20
+      }
+    },
+    {
+      "id": "U08-L05",
+      "sections": [
+        {
+          "id": "M101-U08-L05-S01",
+          "title": "A transparent rectangle calculation"
+        },
+        {
+          "id": "M101-U08-L05-S02",
+          "title": "Testing against an exact answer"
+        },
+        {
+          "id": "M101-U08-L05-S03",
+          "title": "Unit exercises"
+        },
+        {
+          "id": "M101-U08-L05-S04",
+          "title": "Conclusion and compact reference"
+        }
+      ],
+      "minutes": {
+        "reading": 25,
+        "python": 60,
+        "exercises": 40,
+        "correction": 75,
+        "reference": 25,
+        "handover": 15
+      }
+    }
+  ],
+  "closingBudget": "L01\u2013L04 each reserve 20min for cumulative attempts (80min). L05: 25min reading,60min Python including feedback,40min mixed attempts,75min correction,25min reference,15min handover. Total unit 1200min; written closing attempts120min."
+}

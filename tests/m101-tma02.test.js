@@ -37,10 +37,10 @@ test('TMA02 public package is accessible questions and criteria, not a solution 
  assert.match(offline,/NIST distribution notice/);
  for(let i=1;i<=5;i++)assert.equal(off('#M101-TMA02-Q0'+i).text(),$('#M101-TMA02-Q0'+i).text());
 });
-test('TMA02 availability is linked without releasing Unit 8',()=>{
+test('TMA02 availability stays linked after the Unit 8 release',()=>{
  const path='learn/physics/stage-1/m101/';
  for(const file of ['index.html','b02/index.html','assessments/index.html','b02/u07/l04/index.html'])assert.match(read(path+file),/href="\/learn\/physics\/stage-1\/m101\/assessments\/tma02\/"/);
  assert.match(read(path+'assessments/tma02/index.html'),/data-search-status="available"/);
  assert.match(read(path+'assessments/tma02/index.html'),/aria-current="page">TMA 02/);
- assert.match(read(path+'b03/u08/index.html'),/data-search-status="outline"/);
+ assert.match(read(path+'b03/u08/index.html'),/data-search-status="available"/);
 });
