@@ -1,0 +1,17 @@
+{
+  "lesson": "U10-L03",
+  "status": "complete; integrated local release checks passed",
+  "sections": {
+    "10.9": "APEX5.4 mean-value exposition, Ex5.4.23 and practice36\u201340; original equal-width sample derivation",
+    "10.10": "Original unequal-duration example and U10L02 velocity/speed results",
+    "10.11": "OU U1p8 numerical units; USGS Streamgaging Basics factual context; original vessel balance",
+    "10.12": "Original parameter inspection based on taught functions/lists; no exact OU counterpart"
+  },
+  "subject": "13 added integral/endpoint checks;42 cumulative pass. Capacity/min/max checks and simultaneous inflow/outflow interpretation checked by independent algebra.",
+  "reader": "Complete ordered read; preserved mean-value versus mean-slope distinction, weighted intervals, and model validity. Clarified total variation of storage versus gross transfer.",
+  "code": "Notebook schema valid; fresh kernels for outlets2,4,6 passed endpoint assertions. Standard-library no-Matplotlib path executed. Plot branch and integrated copy tests remain for final code audit. Plot branch subsequently executed with local Matplotlib for all three outlets; actual outlet6 figure inspected and matches empty boundary. No-Matplotlib fallback also passes.",
+  "visual": "Six width/theme offline/noJS cases pass; actual mobile10.9 and desktop10.11 inspected; original downloaded USGS asset viewed, labels/colour/layout and source credit checked. OU printedp62 actual rendered page inspected for sign-area/typographic calibration.",
+  "wholeLesson": "4h includes60min Python and20min closing reserve. Activities10.10\u201310.13 progress from mean to parameter validity.",
+  "limitations": "Study timing is an editorial estimate; self-review, not an independent human learner trial. Publication subject to hosted gates and live verification.",
+  "finalIntegratedReview": "Whole-unit review confirms rendered solutions, navigation, downloads, no-JavaScript feedback, keyboard use, narrow screens, themes, magnification and source equality. See m101-u10-whole-unit-review.json."
+}

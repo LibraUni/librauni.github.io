@@ -1,0 +1,16 @@
+{
+  "lesson": "U10-L02",
+  "status": "complete; integrated local release checks passed",
+  "sections": {
+    "10.5": "U08FTC and U09L06 rate example; APEX5.4.2 net-change discussion",
+    "10.6": "APEX5.4.11/Figs5.4.12\u201313; original trolley model and position reconstruction",
+    "10.7": "U06 derivative sign tests; original double-root versus simple-root comparison",
+    "10.8": "APEX5.4 exercises41\u201346 as lower scaffold comparator; original diagnosis and complete motion account"
+  },
+  "subject": "19 added symbolic endpoint/derivative/sign checks;29 cumulative pass. Direction/origin invariance and distance inequality checked independently.",
+  "reader": "Continuous read: all physical relations supplied; time numerical conventions explicit; origin/velocity sign distinction linked to U02. Supplied comparator prose saying back-and-forth for nonnegative squared velocity was not adopted; our stop/turn treatment explicitly checks signs.",
+  "visual": "Six offline/noJS cases, all feedback opened, no page overflow. Actual mobile10.6 and desktop10.7 viewed; paired graphs labels/values and colours checked.",
+  "wholeLesson": "3h with20min cumulative-practice reservation,5activities; progression single reversal\u2192two reversals\u2192touching zero\u2192diagnosis.",
+  "limitations": "Study timing is an editorial estimate; self-review, not an independent human learner trial. Publication subject to hosted gates and live verification.",
+  "finalIntegratedReview": "Whole-unit review confirms rendered solutions, navigation, downloads, no-JavaScript feedback, keyboard use, narrow screens, themes, magnification and source equality. See m101-u10-whole-unit-review.json."
+}

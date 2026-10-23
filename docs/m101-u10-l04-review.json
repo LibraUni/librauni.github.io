@@ -1,0 +1,16 @@
+{
+  "lesson": "U10-L04",
+  "status": "complete; integrated local release checks passed",
+  "sections": {
+    "10.13": "APEX7.2 opening/Theorem7.2.2; original area profile",
+    "10.14": "APEX7.2 Example7.2.3 slice geometry; original square/taper and cone coordinate comparison",
+    "10.15": "APEX7.5 opening/Example7.5.5, Exercises1,5\u20137 inspected; our supplied force/component law avoids untaught rope/gravity theory",
+    "10.16": "OU U1p8 units conventions; original coordinate-shift and physical-validity synthesis"
+  },
+  "subject": "14 added independent symbolic checks;56 cumulative pass. Radius/diameter, signed force, return bounds and volume positivity checked.",
+  "reader": "Read all sections in order. Required relations supplied, U02 component distinction recalled, no shells/washers/general solids or new physical law assumed. Clarified restoring versus actuator force and actual material versus external envelope in context.",
+  "visual": "Six offline/noJS cases, all feedback opened; desktop10.13 and mobile10.15 viewed. Schematic slice/force plot labels and signs inspected. Actual core photo viewed before placement; source explicitly public domain.",
+  "wholeLesson": "4h includes20min closing reserve. Four activities with geometry, units, coordinate invariance and signs.",
+  "limitations": "Study timing is an editorial estimate; self-review, not an independent human learner trial. Publication subject to hosted gates and live verification.",
+  "finalIntegratedReview": "Whole-unit review confirms rendered solutions, navigation, downloads, no-JavaScript feedback, keyboard use, narrow screens, themes, magnification and source equality. See m101-u10-whole-unit-review.json."
+}

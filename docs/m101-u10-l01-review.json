@@ -1,0 +1,17 @@
+{
+  "lesson": "U10-L01",
+  "status": "complete; integrated local release checks passed",
+  "sections": {
+    "10.1": "OU MST224U1 p62/Fig29; U08 sums",
+    "10.2": "OU p62 sign distinction and APEX7.1 practice13\u201314; original sign-chart comparison",
+    "10.3": "APEX7.1 opening strip development, exercises8/10/17",
+    "10.4": "OU MST224U1 p8 numerical-variable convention; U08 integral bounds"
+  },
+  "subject": "10 symbolic integral checks executed; A1 linear equations and A4 rectangle bounds independently checked by arithmetic; each figure generated from stated formula.",
+  "reader": "Read complete lesson. Kept root versus sign-change distinction; explicitly stated difference zeros for two boundaries and unit product. Revised automatic equation transformations because multiple assignments were visually conflated.",
+  "visual": "12 offline/noJS width/theme checks, all feedback opened; actual desktop10.1 and mobile10.3 screenshots viewed. Rebuilt with explicit equation arrays and inline expression preservation; rerun12 cases passes. Diagram scroll region keyboard focusable; static text contains values.",
+  "wholeLesson": "Three hours reconciled;20min closing reserve. Original four activities include contrasting cases and error diagnosis. Handover applies area sign logic to velocity.",
+  "media": "Two original plots each directly interpreted. Unit visual plan includes separately verified measurement photography in L03; no arbitrary photo added to abstract sign argument. Final richness audit at closure.",
+  "limitations": "Study timing is an editorial estimate; self-review, not an independent human learner trial. Publication subject to hosted gates and live verification.",
+  "finalIntegratedReview": "Whole-unit review confirms rendered solutions, navigation, downloads, no-JavaScript feedback, keyboard use, narrow screens, themes, magnification and source equality. See m101-u10-whole-unit-review.json."
+}

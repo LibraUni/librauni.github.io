@@ -1,0 +1,60 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "Signed and geometric totals",
+      "\\(I=\\int_a^b f(x)\\,dx\\); \\(A=\\int_a^b|f(x)|\\,dx\\). Forward bounds \\(a&lt;b\\)."
+    ],
+    [
+      "Recall",
+      "Between boundaries",
+      "Area \\(\\int_a^b|f-g|\\,dx\\). Upper minus lower on each ordering interval."
+    ],
+    [
+      "Understand",
+      "Where to split",
+      "Find zeros/sign changes of the integrand or boundary difference. A touching zero need not reverse sign."
+    ],
+    [
+      "Recall",
+      "Motion along a line",
+      "\\(\\Delta s=\\int_a^b v\\,dt\\); \\(D=\\int_a^b|v|\\,dt\\); \\(s(b)=s(a)+\\Delta s\\)."
+    ],
+    [
+      "Recall",
+      "Interval mean",
+      "\\(\\overline f=\\frac{1}{b-a}\\int_a^b f\\,dx\\), \\(a&lt;b\\). Same units as \\(f\\)."
+    ],
+    [
+      "Understand",
+      "Weighted means",
+      "\\(\\overline f=(m_1L_1+m_2L_2)/(L_1+L_2)\\). Weight by interval length."
+    ],
+    [
+      "Recall",
+      "Stored amount",
+      "\\(q=q_{\\rm in}-q_{\\rm out}\\); \\(V(t)=V(a)+\\int_a^t q(u)\\,du\\). Check empty/capacity boundaries."
+    ],
+    [
+      "Recall",
+      "Slice volume",
+      "\\(V=\\int_a^b A(x)\\,dx\\); \\(A\\geq0\\). Circle: \\(A=\\pi r^2\\); square: \\(A=s^2\\)."
+    ],
+    [
+      "Consult",
+      "Supplied work model",
+      "\\(W=\\int_a^b F(x)\\,dx\\), signed force component in the chosen axis; \\(\\mathrm{N\\,m}=\\mathrm J\\)."
+    ],
+    [
+      "Understand",
+      "Checks",
+      "\\(D\\geq|\\Delta s|\\); \\(m\\leq\\overline f\\leq M\\) if \\(m\\leq f\\leq M\\). Check units, derivative, initial value and bounds."
+    ],
+    [
+      "Consult",
+      "Conditions and notation",
+      "Continuous functions on bounded intervals; split piecewise continuous models at jumps. Mean requires positive interval length. Numerical variable units must match stated formula and bounds."
+    ]
+  ],
+  "code": "def change(F, a, b):\n    return F(b) - F(a)\n\ndef mean(F, a, b):\n    if b <= a:\n        raise ValueError(\"Require a < b\")\n    return change(F, a, b)/(b - a)\n\n# Example: v(t) = 2*t - 2, reversal at t = 1\ndef F(t):\n    return t*t - 2*t\nD = abs(change(F, 0, 1)) + abs(change(F, 1, 2)) # 2"
+}

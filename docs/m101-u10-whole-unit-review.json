@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-23",
+  "status": "complete locally; publication authorised subject to hosted gates and live verification",
+  "standard": "Teaching Standard and Practice v1.12; fixed illustrated v0.4",
+  "sequence": "Introduction then L01\u2013L05 authored and reviewed individually before next lesson; final whole-unit pass completed.",
+  "scope": {
+    "hours": 18,
+    "pythonHours": 2,
+    "lessons": 5,
+    "sections": 20,
+    "examples": 15,
+    "activities": 19,
+    "figures": 8,
+    "exercises": 16
+  },
+  "subjectReview": "86 independent symbolic checks passed, supplemented by dimensional, sign, boundary and open-task reasoning. Checked orientation, reversal vs stationary touch, net vs gross transfer, storage limits, cross-sectional area, work signs and unit conversions. Fresh notebook kernels tested both starter and completed solution, outlets 2/4/6, plotting and executable reference code.",
+  "readerReview": "Complete lesson readings recorded separately; progression from Unit 8 accumulation and Unit 9 techniques to interpretation and supplied models. Definitions motivated, intermediate reasoning and feedback visible on request. No new physical law or advanced integration prerequisite assumed. Unit opening and conclusion connect modelling questions and next-unit preparation.",
+  "visualReview": "36 standalone width/theme cases;60 integrated cases;19 additional final checks including12 offline noJS, all5 lessons magnified with open feedback, exact keyboard code copying and diagram focus. All16 exercise solutions visually inspected, both PDF pages inspected, photos and notebook plots inspected. One clipped inline equation moved into accessible display and rechecked.",
+  "resources": "16 original cumulative exercises with separate hidden hints and worked solutions; eleven-row web reference and synchronized two-page PDF; clean starter notebook and matching script. Nine-file self-contained offline reading pack retained locally.",
+  "hierarchyReview": "Section-to-lesson prerequisites and lesson-to-unit outcomes checked through source/exercise records. Approved 18h/2h Python retained in Block3 and M101; no block/module/degree workload changes. Unit11 remains outline; no uncommissioned teaching or learner records changed.",
+  "calibration": "Actual OU MST224 printed p8 and pp62\u201363 plus actual APEX passages/questions inspected; section-level and practice prerequisite differences recorded. Relevant supplied MST124 applications chapter unavailable; no claim of direct matching comparison.",
+  "workload": "1080min including120Python; cumulative practice145min attempts and65feedback, with80min reserved in earlier lessons. Estimates require future learner calibration.",
+  "releaseChecks": {
+    "siteTests": 151,
+    "searchPages": 111,
+    "sourceMatchedPages": 6,
+    "byteMatchedDownloadsAndImages": 5,
+    "earlierTrackedTeachingFilesPreserved": 346
+  },
+  "limitations": "Distinct self-review passes and independent calculations, not independent human reviewers. Final hosted security/build/deployment and live checks must pass before calling live."
+}

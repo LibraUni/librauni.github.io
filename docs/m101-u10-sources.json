@@ -1,0 +1,25 @@
+{
+  "standard": "v1.12",
+  "reference": "Fixed v0.4 complete text inspected; adjoining U09L06 complete and U08L03 accumulation read.",
+  "privateOU": {
+    "file": "sources/mst224_unit01_e1i1.pdf",
+    "passages": "printed p8 units conventions; pp62\u201363 Areas and the use of symmetry, Figure29 and odd/even comparison",
+    "fit": "Revision-level comparator; original slower first-learning argument and sign-chart practice. Supplied MST124 U10 is sequences, U12 complex numbers; no matching MST124 integration applications chapter found. MST224 U7 multivariable scope is beyond this unit."
+  },
+  "public": {
+    "L01": "APEX \u00a77.1 opening slice derivation; Exercises8,10,13,14,17 inspected. Our bounded two-crossing and diagnosis tasks are original; no horizontal slicing/general region techniques.",
+    "L02": "APEX \u00a75.4.2 Example5.4.11 and Figures5.4.12\u201313; displacement questions41\u201346. Supply kinematics and use SI numerical variables; do not import gravity assumptions.",
+    "L03": "APEX \u00a75.4 mean-value passage Theorem5.4.22/Example5.4.23 and Exercises36\u201340; omit inverse trig solving and derive mean from equal-width samples. USGS streamgaging context and image page inspected.",
+    "L04": "APEX \u00a77.2 opening/Theorem7.2.2/Example7.2.3 and \u00a77.5 opening, spring example7.5.5 inspected; only simple supplied cross-sections and supplied signed work. Broader washer/shell/pumping methods omitted. Source spring paragraph has inconsistent centimetre wording; not imported.",
+    "L05": "Original model audit/synthesis; compare prior lesson sources. No exact OU computing counterpart."
+  },
+  "urls": [
+    "https://opentext.uleth.ca/apex-calculus/sec_ABC.html",
+    "https://opentext.uleth.ca/apex-calculus/sec_FTC.html",
+    "https://opentext.uleth.ca/apex-calculus/sec_disk.html",
+    "https://opentext.uleth.ca/apex-calculus/sec_work.html",
+    "https://www.usgs.gov/mission-areas/water-resources/science/streamgaging-basics",
+    "https://www.usgs.gov/media/images/routine-measurement"
+  ],
+  "rights": "Private sources stay outside repository. Original teaching, examples and diagrams; no copied source exercises or text."
+}

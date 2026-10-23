@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-23",
+  "standard": "v1.12; fixed v0.4",
+  "authorisation": "Whole U10 locally, sequential lesson reviews, closure then publish after required checks. U11 not commissioned.",
+  "hours": 18,
+  "pythonHours": 2,
+  "baseline": "b106bb9",
+  "budgetsMinutes": {
+    "L01": {
+      "reading_reconstruction": 80,
+      "activities": 45,
+      "feedback": 35,
+      "closing_reserve": 20
+    },
+    "L02": {
+      "reading_reconstruction": 75,
+      "activities": 50,
+      "feedback": 35,
+      "closing_reserve": 20
+    },
+    "L03": {
+      "reading_reconstruction": 70,
+      "activities": 50,
+      "feedback": 40,
+      "python": 60,
+      "closing_reserve": 20
+    },
+    "L04": {
+      "reading_reconstruction": 100,
+      "activities": 70,
+      "feedback": 50,
+      "closing_reserve": 20
+    },
+    "L05": {
+      "synthesis": 25,
+      "python": 60,
+      "closing_attempts": 65,
+      "closing_feedback": 65,
+      "reference": 25
+    }
+  },
+  "closingAttempts": 145,
+  "sectionBlueprint": {
+    "L01": [
+      "10.1 What the small contribution measures",
+      "10.2 Split before taking magnitudes",
+      "10.3 A gap between boundaries",
+      "10.4 Dimensions and plausibility"
+    ],
+    "L02": [
+      "10.5 Recovering position from velocity",
+      "10.6 Reversals and distance",
+      "10.7 A zero is not always a reversal",
+      "10.8 Read and check a journey"
+    ],
+    "L03": [
+      "10.9 A constant with the same total",
+      "10.10 Averages depend on the interval",
+      "10.11 Flow and stored amount",
+      "10.12 Inspecting a model with Python"
+    ],
+    "L04": [
+      "10.13 From thin slices to volume",
+      "10.14 Constructing the cross-sectional area",
+      "10.15 A supplied work model",
+      "10.16 Limits, units and physical admissibility"
+    ],
+    "L05": [
+      "10.17 Formulate before calculating",
+      "10.18 Audit a model in Python",
+      "10.19 Unit exercises",
+      "10.20 Conclusion and reference"
+    ]
+  },
+  "mediaPlan": "Original signed/absolute paired areas, crossing boundaries, position/velocity plots, mean-level balance, flow/store graph, sliced solid and signed-force graph. New public-domain USGS streamflow photograph connects measured rate and accumulated volume. Search source identities throughout M101. No interactive quota: notebook variable changes serve exploration with static feedback.",
+  "reviews": "Subject, reader, actual render and continuous lesson review before next lesson; integrated reviews at closure. Timing estimates are editorial."
+}

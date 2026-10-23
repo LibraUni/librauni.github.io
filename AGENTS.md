@@ -1,3 +1,7 @@
+# M101 Unit 10 complete; publication authorised — 23 October 2026
+
+Five lessons developed and reviewed sequentially to standard v1.12 and reference v0.4. Unit18h/2hPython,20sections,15examples,19activities,8figures,16cumulative exercises,checked notebook/script and synchronized two-page reference. See docs/m101-u10-whole-unit-review.json and per-lesson/source/media records. Earlier346 tracked teaching/media/reference files preserved. Hosted security/test/build/deployment and live verification must succeed before claiming live. U11 remains outline and uncommissioned. No learner records changed. This supersedes the historical U10 boundary below.
+
 # M101 Unit 9 complete; publication authorised — 23 October 2026
 
 Six lessons developed and reviewed sequentially to standard v1.12 and reference v0.4. Unit24h/2hPython,24sections,18worked examples,22activities,16cumulative exercises,7figures,checked notebook/script and synchronised two-page reference. 89independent subject checks,149site tests,70browser width/theme cases,6no-JS,offline/keyboard/zoom/PDF/source/link/download checks pass. See docs/m101-u09-whole-unit-review.json and per-lesson/source/media records. Earlier346tracked teaching/media/source files preserved byte-for-byte. Hosted security/test/build/deployment and live verification must succeed before claiming live. U10 remains outline and uncommissioned. No learner records changed.

@@ -1,0 +1,16 @@
+{
+  "lesson": "U10-L05",
+  "status": "complete; integrated local release checks passed",
+  "sections": {
+    "10.17": "U09 parts and U10 earlier model passages; original supplied inflow synthesis",
+    "10.18": "Original sign-sampling audit; extends U09 numerical checks to model interpretation",
+    "10.19": "See exercise coverage/calibration record;16 original questions",
+    "10.20": "Original conclusion and synchronized reference from taught results"
+  },
+  "subject": "30 additional symbolic checks;86 cumulative pass. All16 exercise results checked with symbolic arithmetic or independent dimensional/sign reasoning; open task has worked sample and acceptance criteria.",
+  "reader": "Read complete lesson including hints/solutions. Separated formulation from technique; code labels provisional result explicitly. Reference code changed from undefined illustrative symbols to an executable example.",
+  "visual": "All 16 rendered exercises and open solutions inspected at 320px; integrated and offline reflow passed. Notebook plot outputs and both PDF pages inspected. Exact keyboard code copying passed.",
+  "wholeLesson": "4h plus80min earlier reserved attempts;145min attempts/65feedback,60Python. Full unit remains18h/2Python.",
+  "limitations": "Study timing is an editorial estimate; self-review, not an independent human learner trial. Publication subject to hosted gates and live verification.",
+  "finalIntegratedReview": "Whole-unit review confirms rendered solutions, navigation, downloads, no-JavaScript feedback, keyboard use, narrow screens, themes, magnification and source equality. See m101-u10-whole-unit-review.json."
+}

@@ -1,0 +1,30 @@
+{
+  "thirdParty": [
+    {
+      "figure": "10.5",
+      "file": "public/teaching/m101/u10-stream-measurement.png",
+      "source": "https://www.usgs.gov/media/images/routine-measurement",
+      "creator": "USGS Central Plains Water Science Center; individual photographer not stated",
+      "rights": "Public Domain explicitly on source page",
+      "modifications": "None; HTML scaling only",
+      "sha256": "c6983cf8e9b82212a320cacaf4f2220ddd4678da164874d43016b3f0c6829a95",
+      "inspection": "Actual image viewed, photo and complete desktop placement viewed",
+      "priorUse": "Source identity routine-measurement and measurement.png searched across M101 source/media records. Earlier U08 uses a different USGS photograph of a different scene; no repeat."
+    },
+    {
+      "figure": "10.7",
+      "source": "https://www.usgs.gov/media/images/rock-core-samples-carbonate-aquifer-characterization-lab",
+      "creator": "Chrishera Smith, USGS",
+      "date": "2024-06-12",
+      "rights": "Public Domain explicitly on asset page",
+      "file": "public/teaching/m101/u10-rock-core.jpg",
+      "sha256": "4f7c2d70daa05c81323c2dc41e990d7315c5f2808e037f6da2922bcaab3428dc",
+      "modifications": "None; HTML scales aspect ratio",
+      "inspection": "Actual image viewed; exposed/slabbed surfaces, cavities and breaks correctly described",
+      "priorUse": "Module source/media search for source title, creator and asset name found no earlier placement."
+    }
+  ],
+  "original": "Figures10.1\u201310.4,10.6,10.8 original plots/slice schematic; generated from stated functions or labelled schematic. Static prose equivalents and numbered captions.",
+  "rationale": "Photography connects actual flow measurement to a modelled time integral; diagrams carry area/sign/trajectory/mean reasoning. No arbitrary image quota or decorative repeats.",
+  "referenceComparison": "Compared with fixed illustrated v0.4: relevant scientific photography accompanies sustained teaching, original labelled diagrams explain the mathematics, captions and margin notes stay adjacent. Two real scientific contexts and six mathematical diagrams provide purposeful visual variety. No decorative animation; the two-hour notebook exploration offers parameter changes and deliberately misleading sampling, with text and static plot alternatives."
+}

@@ -12,7 +12,7 @@ test('Unit9 preserves its budget and releases six complete lessons with hidden f
  }
  assert.equal(new Set(all).size,all.length);
  const $=load(read('content/m101/unit9-lesson6.html'));assert.equal($('.exercise').length,16);assert.equal($('.exercise details').length,32);
- assert.match(read('learn/physics/stage-1/m101/b03/u10/index.html'),/data-search-status="outline"/);
+ assert.match(read('learn/physics/stage-1/m101/b03/u11/index.html'),/data-search-status="outline"/);
 });
 test('Unit9 reference and notebook are present, coherent and free of execution state',()=>{
  const ref=JSON.parse(read('content/m101/unit9-reference.json'));assert.equal(ref.rows.length,10);
