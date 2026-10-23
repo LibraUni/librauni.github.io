@@ -12,7 +12,7 @@ test('Unit12 budgets, sequential structure, closure and future boundary',()=>{
  }
  assert.equal(new Set(ids).size,ids.length);
  const $=load(read('content/m101/unit12-lesson4.html'));assert.equal($('[id^="m101-u12-exercise-"]').length,14);assert.equal($('[id^="m101-u12-exercise-"] details').length,28);
- assert.match(read('learn/physics/stage-1/m101/b04/u13/index.html'),/data-search-status="outline"/);
+ assert.match(read('learn/physics/stage-1/m101/b04/u13/index.html'),/data-search-status="available"/);
  assert.equal(load(read('content/m101/unit12-lesson4.html'))('code.language-python').last().text(),JSON.parse(read('content/m101/unit12-reference.json')).code);
  const nb=JSON.parse(read('public/teaching/m101/M101-Unit-12-Validation.ipynb'));for(const c of nb.cells.filter(c=>c.cell_type==='code')){assert.equal(c.execution_count,null);assert.deepEqual(c.outputs,[]);}
  assert.ok(read('public/teaching/m101/M101-Unit-12-Reference.pdf').startsWith('%PDF-'));

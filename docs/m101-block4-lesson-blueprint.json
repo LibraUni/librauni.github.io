@@ -2,7 +2,7 @@
   "date": "2026-10-23",
   "standard": "1.12",
   "reference": "v0.4",
-  "constructionGate": "All M101 units approved; Stage1 block maps and construction-policy 1.0 inspected. All B04 lessons mapped here before U12 section production. U13 plans only, no teaching commissioned.",
+  "constructionGate": "Policy1.0: stage1 maps, M101 block/unit scope and B04 peer lessons inspected; U13 section maps complete. Current user commissions U13 and conditional publication.",
   "units": [
     {
       "id": "U12",
@@ -83,7 +83,7 @@
       "id": "U13",
       "hours": 18,
       "pythonHours": 4,
-      "status": "planned only",
+      "status": "commissioned local development, sequential reviews",
       "lessons": [
         {
           "id": "U13-L01",
@@ -94,7 +94,13 @@
           "requires": "U12 and established B01\u2013B03 methods",
           "boundary": "No new physics or mathematics syllabus; no extra assessment",
           "evidence": "Formative explained method selection, independent benchmark and transfer response",
-          "handover": "Next synthesis lesson"
+          "handover": "Next synthesis lesson",
+          "sections": [
+            "Specify a planar journey",
+            "Recover coordinates with a matrix",
+            "Read a path and its component graphs",
+            "Choose a representation for the question"
+          ]
         },
         {
           "id": "U13-L02",
@@ -105,7 +111,13 @@
           "requires": "U12 and established B01\u2013B03 methods",
           "boundary": "No new physics or mathematics syllabus; no extra assessment",
           "evidence": "Formative explained method selection, independent benchmark and transfer response",
-          "handover": "Next synthesis lesson"
+          "handover": "Next synthesis lesson",
+          "sections": [
+            "Differentiate the position components",
+            "Use a tangent prediction",
+            "Recover displacement by accumulation",
+            "Separate distance from displacement"
+          ]
         },
         {
           "id": "U13-L03",
@@ -116,7 +128,13 @@
           "requires": "U12 and established B01\u2013B03 methods",
           "boundary": "No new physics or mathematics syllabus; no extra assessment",
           "evidence": "Formative explained method selection, independent benchmark and transfer response",
-          "handover": "Next synthesis lesson"
+          "handover": "Next synthesis lesson",
+          "sections": [
+            "Build a transparent calculation",
+            "Check the vector result independently",
+            "Investigate one change at a time",
+            "Write a reproducible account"
+          ]
         },
         {
           "id": "U13-L04",
@@ -127,7 +145,13 @@
           "requires": "U12 and established B01\u2013B03 methods",
           "boundary": "No new physics or mathematics syllabus; no extra assessment",
           "evidence": "Formative explained method selection, independent benchmark and transfer response",
-          "handover": "Separate revision/exam and M102/A101"
+          "handover": "Separate revision/exam and M102/A101",
+          "sections": [
+            "Transfer to a supplied transport model",
+            "Formative synthesis checkpoint",
+            "Unit exercises",
+            "Conclusion and reference"
+          ]
         }
       ]
     }

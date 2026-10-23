@@ -32,10 +32,10 @@ test('TMA03 questions and accessible offline copy exclude private answers and co
  for(let i=1;i<=5;i++)assert.equal(off('#M101-TMA03-Q0'+i).text(),$('#M101-TMA03-Q0'+i).text());
  assert.match(off.text(),/Public domain/);
 });
-test('TMA03 availability joins assessment/block/closing navigation while Unit13 remains unreleased',()=>{
+test('TMA03 availability joins assessment/block/closing navigation with completed Unit13 available',()=>{
  const path='learn/physics/stage-1/m101/';
  for(const f of ['index.html','b03/index.html','assessments/index.html','b03/u11/l04/index.html'])assert.match(read(path+f),/href="\/learn\/physics\/stage-1\/m101\/assessments\/tma03\/"/);
  assert.match(read(path+'assessments/tma03/index.html'),/data-search-status="available"/);
  assert.match(read(path+'assessments/tma03/index.html'),/aria-current="page">TMA 03/);
- assert.doesNotMatch(read(path+'b04/u13/index.html'),/data-search-status="available"/);
+ assert.match(read(path+'b04/u13/index.html'),/data-search-status="available"/);
 });

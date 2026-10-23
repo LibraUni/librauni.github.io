@@ -1,3 +1,11 @@
+# M101 Unit 13 locally complete; publication authorised — 23 October 2026
+
+Four lessons developed and reviewed sequentially to v1.12 and fixed v0.4.18h/4hPython;16sections,9examples,14activities,14unit exercises,6part formative checkpoint,5figures,checked notebook/script and synchronised2page reference.105subjectchecks,158repositorytests,50integrated viewport/theme cases,4noJS,3keyboardcopies, fresh notebook kernels and offline checks pass.381prior teaching/download files preserved. See docs/m101-u13-whole-unit-review.json. Hosted security/test/build/deploy and live verification required before claiming live. M101 taught-unit sequence complete; separate revision/exam and learner attainment remain distinct. No learner records changed.
+
+# M101 Unit 12 LIVE — 23 October 2026
+
+Published bc178cd7c10ab06d11b347ccf5e6b52df0eed521; workflow39993394761 succeeded (security/test/build/deploy). Six live page fragments match reviewed source; four downloads/assets byte-identical;123-page search and50live viewport/theme cases,4noJS,keyboardcopy/zoom pass. See docs/m101-u12-publication-verification.json. Supersedes pending publication status below. U13 teaching remains outline; no learner records changed.
+
 # M101 Unit 12 locally complete; publication authorised — 23 October 2026
 
 Four lessons developed and reviewed sequentially to v1.12 and fixed v0.4.18h/4hPython,16sections,10examples,14activities,14unit exercises,6figures,checked notebook/script and synchronised2page reference.100subject/codechecks,157site tests,60integrated viewport/theme cases,5keyboardcopies,4noJS and fresh kernels pass.370prior teaching/downloadfiles preserved. See docs/m101-u12-whole-unit-review.json. Hosted security/test/build/deploy and live verification must pass before claiming live. U13 has only a construction-gate lesson blueprint, not authored teaching. No learner records changed.

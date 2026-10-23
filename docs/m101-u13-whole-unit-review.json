@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-23",
+  "status": "local reviews passed; hosted security/deploy and live verification required",
+  "authorization": "User explicitly requests complete Unit13 locally, one lesson at a time, closing resources then publication after checks.",
+  "standard": "1.12; fixed illustrated v0.4",
+  "sequence": "L01 drafted/calculated/rendered/reviewed beforeL02; same gate beforeL03 andL04. Reviews retained separately. Closing and whole-unit checks follow.",
+  "scope": "18h including4hPython; four lessons,16sections,9examples,14activities including six-part synthesis checkpoint,14unit exercises,5figures,starter notebook/script,2page synchronized PDF and offline pack.",
+  "subject": "105 independent assertions, all exercise/ checkpoint results recalculated; exact author-only distance antiderivative provides additional numerical check. Two erroneous sensitivity draft values corrected before lesson review.",
+  "reader": "Whole unit read in sequence: origin/components\u2192matrix inversion\u2192path/time distinction\u2192rates\u2192local errors\u2192signed/unsigned accumulation\u2192transparent numerical checks\u2192transport transfer. Methods remain scalar calculus and elementary matrices. Explicit known-to-new transitions; no forced new physics. Long exercise8 inline calculation split after visual review; exercise7 identity made scrollable display.",
+  "visual": "50integrated cases at320/390/640/900/1440 and light/dark;4noJS;3keyboardclipboard checks;2xzoom. All14exercise solution renders inspected via four contact sheets. Drifter actual image/credit and dark example inspected. Final PDF both pages inspected after unit-link addition.",
+  "preservation": "381prior source/download files match baseline hashes. New scoped stylesheet; shared style/auth/private records unchanged. Stale Block4 forthcoming label corrected now both units available.",
+  "practice": "Coverage mapped in exercise-coverage record; all14questions have separate hidden hints/worked solutions.155min attempts includes60reserved;45min correction.75min checkpoint included. Workload estimates not student measured.",
+  "moduleBlockReview": "B04 completes36h/8hPython; U12 validation becomes U13 independent connected synthesis. M10113unit taught sequence complete; separate12h revision and final exam envelope unchanged. All6outcomes sampled by checkpoint; no claim that every module technique is re-assessed. M102/A101 handover requires demonstrated methods, not participation. No extraTMA/EMA or learner attainment created.",
+  "media": "Unique public-domain USGS image and four original explanatory diagrams; source/repeat audit recorded. Per-lesson all-diagram flags editorially reviewed in media register. No inaccessible source comparison, watched video or student validation claimed.",
+  "limits": "Author and automated review, not independent human peer review, empirical workload validation or full assistive-technology audit."
+}

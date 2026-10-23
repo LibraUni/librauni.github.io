@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-23",
+  "standard": "1.12",
+  "reference": "fixed v0.4 module/unit introductions and coordinate-development passages read; prose/calculation/interpretation sequence used, without reproducing text",
+  "privateOU": {
+    "path": "sources/mst124_unit2_e1i1.pdf",
+    "passages": "printed143\u2013145, Section2.4 displacement and velocity, Figures17\u201319 and Activity12",
+    "fit": "Sign, reference point, distance versus displacement and graph interpretation. Elementary straight-line prerequisite level; U13 adds two physical components, calculus and matrices already taught. No supplied OU integrated planar-synthesis chapter identified. Unit10 inspected contents: sequences/series not a suitable comparator; excluded."
+  },
+  "external": [
+    {
+      "url": "https://openstax.org/books/calculus-volume-3/pages/3-2-calculus-of-vector-valued-functions",
+      "passages": "Derivative definition and Example3.4; componentwise integration definition and Checkpoint3.8; exercises41,45,50\u201354",
+      "fit": "Scalar operations applied componentwise; same underlying calculus, broader3D/unit-tangent syllabus excluded. Our original model and problems combine calibration/validation rather than copying textbook questions."
+    },
+    {
+      "url": "https://textbooks.math.gatech.edu/ila/matrix-transformations.html",
+      "passages": "3.1.1 matrices as functions;3.1.3 columns/input-output interpretation",
+      "fit": "Geometric matrix viewpoint; retrieved text loses some mathematical content so existing fully inspected U03L02 is primary detailed matrix comparator. No interactive operation claimed."
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_numerical_integration.html",
+      "passages": "5.5.2, Example5.5.9 and Figures5.5.7\u201310; exercises9,13,15",
+      "fit": "Panel geometry, endpoint weighting and numerical comparison. Simpson and general error-bound questions excluded; original speed and model-check tasks require established trapezoid only."
+    }
+  ],
+  "adjoining": [
+    "U03L02 matrix composition and coordinate-vector tests; full closing passage inspected",
+    "U07L03 exact error versus rounding and reporting; opening sections inspected",
+    "U10L01 signed accumulation/dimensions and handover to motion inspected",
+    "U11L01 quadrature samples, count and bracket logic inspected",
+    "U12L01 validation teaching and U12L04 complete closing resources/handover inspected"
+  ],
+  "sections": {
+    "13.1\u201313.4": "OU143\u2013145; fixed v0.4 coordinate motivation; U03L02 and ILA3.1. Original channel model, no exact external analogue claimed.",
+    "13.5\u201313.8": "OpenStax3.2 derivative/integral definition and Example3.4/Checkpoint3.8; OU Activity12 sign interpretation; U07/U10 existing operations.",
+    "13.9\u201313.12": "APEX5.5.2 geometry/weights and U11/U12 validation. Original code audit/report synthesis.",
+    "13.13\u201313.16": "Original transfer/closing synthesis built from taught accumulation/matrix operations; no exact comparator for two-vessel network. Practice calibrated by component demand against listed OU/OpenStax/APEX questions."
+  },
+  "practice": "OU Activity12 is more scaffolded and one-dimensional; our activities remove scaffolding across lessons. OpenStax derivative/integral problems support routine fluency, whereas our later questions add method selection, units and checking. APEX9/13/15 support quadrature practice; only trapezoidal component used for comparison.14unit questions plus6-part checkpoint;155min exercise attempts and45feedback;75min checkpoint. Workload editorial estimate, not empirical equivalence.",
+  "interactiveVideo": "Parameter investigation in notebook rather than animation; static plots/tables support all core interpretation. No video selected: available source inspections did not identify a necessary added demonstration; no claim to have watched one."
+}

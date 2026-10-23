@@ -1,0 +1,18 @@
+{
+  "allUnitMaterial": {
+    "positions/calibration/graphs": "ex1\u20133,7,13; checkpoint1\u20132",
+    "derivatives/tangent/domain": "ex4\u20135,9; checkpoint2\u20133",
+    "accumulation/distance": "ex6,8,14; checkpoint4\u20135",
+    "independent code/resolution/input checks": "ex8\u201310,14; checkpoint6 and Activity13.11",
+    "transport/meaning": "ex11\u201312 and Activity13.13"
+  },
+  "outcomes": {
+    "O1": "checkpoint2\u20133, ex4\u20135",
+    "O2": "checkpoint4, ex6/11",
+    "O3": "checkpoint2/4, ex1/7",
+    "O4": "checkpoint1, ex2/12/13",
+    "O5": "checkpoint3/5/6, ex5/8/9/10",
+    "O6": "checkpoint6, ex10/14 and notebook report"
+  },
+  "notes": "Unit synthesis samples all6outcomes; does not retest every module technique. Full module revision/exam remain separate. No invented grade/attainment."
+}

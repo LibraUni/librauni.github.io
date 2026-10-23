@@ -1,0 +1,71 @@
+{
+  "module": "M101",
+  "moduleTitle": "Mathematics for physics I",
+  "unit": "U13",
+  "title": "Connecting mathematical representations",
+  "version": "1.0",
+  "date": "2026-10-23",
+  "rows": [
+    [
+      "Recall",
+      "Displacement",
+      "\\(\\Delta\\mathbf r=\\mathbf r(b)-\\mathbf r(a)\\). Fixed axes; position in length units."
+    ],
+    [
+      "Recall",
+      "Velocity and speed",
+      "\\(\\mathbf v=\\mathbf r^{\\prime}=(x^{\\prime},y^{\\prime})\\); \\(s=|\\mathbf v|=\\sqrt{v_x^2+v_y^2}\\). Perpendicular physical axes."
+    ],
+    [
+      "Understand",
+      "Tangent prediction",
+      "\\(\\mathbf r(t+h)\\approx\\mathbf r(t)+h\\mathbf v(t)\\). Assess error in position units; stay within domain."
+    ],
+    [
+      "Recall",
+      "Accumulation",
+      "\\(\\int_a^b\\mathbf v\\,dt=\\mathbf r(b)-\\mathbf r(a)\\); add initial position for final position."
+    ],
+    [
+      "Understand",
+      "Distance",
+      "\\(D=\\int_a^b|\\mathbf v|\\,dt\\geq|\\Delta\\mathbf r|\\) for \\(a\\leq b\\). Magnitude inside integral."
+    ],
+    [
+      "Understand",
+      "Fixed calibration",
+      "\\(\\mathbf z=A\\mathbf r\\), \\(\\mathbf r=B\\mathbf z\\), \\(BA=I\\). Constant matrices commute with differentiation/integration."
+    ],
+    [
+      "Consult",
+      "Baseline model",
+      "\\(x=ut,\\ y=wt-kt^2\\); \\(u=2\\) m/s, \\(w=4\\) m/s, \\(k=1\\) m/s\u00b2, \\(0\\leq t\\leq4\\) s. Tangent error \\((0,-kh^2)\\)."
+    ],
+    [
+      "Consult",
+      "Baseline recorder",
+      "\\(p=x+y,\\ q=x-y\\); \\(x=(p+q)/2,\\ y=(p-q)/2\\). \\(|\\mathbf z|=\\sqrt2|\\mathbf r|\\)."
+    ],
+    [
+      "Recall",
+      "Trapezoidal rule",
+      "\\(h=(b-a)/n\\); \\(Q_n=h[\\tfrac12f(a)+\\sum_{j=1}^{n-1}f(a+jh)+\\tfrac12f(b)]\\). Positive integer n; exact for linear f."
+    ],
+    [
+      "Understand",
+      "Transfer network",
+      "\\(V_A^{\\prime}=-q,\\ V_B^{\\prime}=q-r\\); \\((V_A+V_B)^{\\prime}=-r\\). Initial values, non-negative volumes and capacity matter."
+    ],
+    [
+      "Understand",
+      "Independent checks",
+      "Endpoint differences; constant/shifted-linear integrals; fixed-calibration basis vectors; zero interval; constant velocity; symmetry."
+    ],
+    [
+      "Consult",
+      "Report",
+      "Model/domain/units \u2192 quantity \u2192 method \u2192 independent checks \u2192 resolution/input effects \u2192 supported conclusion. State assistance."
+    ]
+  ],
+  "code": "from math import hypot, isclose\nspeed = hypot(vx, vy)\nclose = isclose(estimate, benchmark,\n                rel_tol=1e-8, abs_tol=1e-10)\n# Decode this unit's two channels:\nx, y = (p+q)/2, (p-q)/2\n# Format only for display:\nprint(f\"{distance:.6f} m\")"
+}

@@ -1,0 +1,109 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:8893",
+  "cases": [
+    {
+      "name": "unit13-lesson4",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit13-lesson4",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 160,
+      "closed": true,
+      "badAnchors": []
+    }
+  ],
+  "noJS": 4,
+  "exactClipboard": 3,
+  "zoomProxy": 2
+}

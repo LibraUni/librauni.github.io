@@ -1,0 +1,41 @@
+{
+  "figures": [
+    {
+      "id": "m101-u13-fig-01",
+      "source": "https://www.usgs.gov/media/images/satellite-tracked-drifter-follows-near-surface-currents",
+      "asset": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/GuamDrifter.jpg",
+      "creator": "Tom Reiss, USGS",
+      "rights": "Explicit Public Domain on source page inspected23October2026",
+      "modifications": "None; scaled proportionally for display",
+      "purpose": "Tracking positions and the need for coordinates/time; actual drifter distinguished from invented model",
+      "inspection": "Actual asset viewed, float/tether/fabric drogue visible",
+      "repeatAudit": "Searched all earlier M101 teaching and source registers by GuamDrifter, photographer and source URL: no match. No repeated placement."
+    },
+    {
+      "id": "m101-u13-fig-02",
+      "creator": "LibraUni original",
+      "rights": "CC BY-NC-SA4.0",
+      "purpose": "equal-scale trajectory/timestamps/chord"
+    },
+    {
+      "id": "m101-u13-fig-03",
+      "creator": "LibraUni original",
+      "rights": "CC BY-NC-SA4.0",
+      "purpose": "tangent position error"
+    },
+    {
+      "id": "m101-u13-fig-04",
+      "creator": "LibraUni original",
+      "rights": "CC BY-NC-SA4.0",
+      "purpose": "speed convexity/trapezoid chords"
+    },
+    {
+      "id": "m101-u13-fig-05",
+      "creator": "LibraUni original",
+      "rights": "CC BY-NC-SA4.0",
+      "purpose": "directed transport/conservation"
+    }
+  ],
+  "editorial": "Photo introduces observed tracking; four subsequent diagrams carry specific model arguments. Each lesson is read with its contextual opening. No repeated generic image inserted into later lessons; original diagrams, sustained prose, worked reasoning and labelled figures preserve the illustrated journey. All-diagram per-lesson structural flags receive this editorial disposition, not an automatic exemption.",
+  "limitations": "No human accessibility audit; native semantic maths and keyboard/responsive checks performed."
+}

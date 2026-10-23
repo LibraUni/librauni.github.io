@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:8893",
+  "checks": [
+    {
+      "url": "/learn/physics/stage-1/m101/b04/u13/",
+      "sourceTextMatch": true,
+      "links": true,
+      "buildAssets": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b04/u13/l01/",
+      "sourceTextMatch": true,
+      "links": true,
+      "buildAssets": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b04/u13/l02/",
+      "sourceTextMatch": true,
+      "links": true,
+      "buildAssets": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b04/u13/l03/",
+      "sourceTextMatch": true,
+      "links": true,
+      "buildAssets": true
+    },
+    {
+      "url": "/learn/physics/stage-1/m101/b04/u13/l04/",
+      "sourceTextMatch": true,
+      "links": true,
+      "buildAssets": true
+    },
+    {
+      "url": "/notebooks/M101-Unit-13-Synthesis.ipynb",
+      "bytes": 7091,
+      "sha256": "47f1fc69a7326df6bd8561079ce5b896fd845053ecafcaf584b6ec11e32a4502"
+    },
+    {
+      "url": "/notebooks/M101-Unit-13-Synthesis.py",
+      "bytes": 2800,
+      "sha256": "13930690df3469e0e79629a48439b091e44fe0a8298c5404a1ebdef149147d9b"
+    },
+    {
+      "url": "/teaching/m101/M101-Unit-13-Reference.pdf",
+      "bytes": 232730,
+      "sha256": "3ddbe9e745a4f7604f4877b57d3bc89906fe1475e0310a709f135bbc1652ad90"
+    },
+    {
+      "url": "/teaching/m101/u13/guam-drifter.jpg",
+      "bytes": 191992,
+      "sha256": "b1d054be9d40422900c4c0182f89b1bfc1073ab4e08a7548361a610c6f69a34b"
+    }
+  ],
+  "searchPages": 128,
+  "preserved": 381
+}

@@ -1,0 +1,9 @@
+{
+  "lesson": "U13-L02",
+  "status": "reviewed locally; publication pending unit closure",
+  "subject": "Component derivatives checked by difference quotient; polynomial tangent remainder expanded independently;20 step/start cases and D4 direct sum checked. Endpoint integrals, channel-rate integrals and distance bounds reviewed.",
+  "reader": "Continuous reading against OU143\u2013145, OpenStax3.2 derivative/integral development and U07/U11 prerequisites. Explicitly explains cancellation, speed at north turning point, constant-calibration condition and difference between sum of coordinate travel and path distance.",
+  "visual": "Six offline widths/themes all feedback open; desktop tangent section inspected with native fractions/matrices/radicals. Corrected matrix parser ambiguity by using stacked fractions in average velocity. Graph axes units and table values inspected.",
+  "coherence": "Local derivative\u2192tangent error\u2192signed accumulation\u2192speed integral, with static table for Python exploration.4h including1hPython and30min closing reservation.",
+  "limits": "Author review, not independent human or measured study-time validation."
+}

@@ -1,0 +1,49 @@
+{
+  "standard": "1.12",
+  "reference": "v0.4",
+  "date": "2026-10-23",
+  "hours": 18,
+  "pythonHours": 4,
+  "model": "Planar tracked object: r(t)=(2t,4t-t\u00b2) metres for numerical t in seconds, 0<=t<=4. Fixed measurement matrix A=[[1,1],[1,-1]]. Supplied kinematics only; no force/ODE syllabus.",
+  "allocationsMinutes": {
+    "L01": {
+      "reading_examples": 85,
+      "activities_reconstruction": 85,
+      "feedback": 40,
+      "closing_reserved": 30
+    },
+    "L02": {
+      "reading_examples": 65,
+      "activities": 55,
+      "feedback": 30,
+      "python": 60,
+      "closing_reserved": 30
+    },
+    "L03": {
+      "reading_examples": 45,
+      "written_reasoning": 40,
+      "feedback": 35,
+      "python": 180
+    },
+    "L04": {
+      "transfer_teaching": 45,
+      "checkpoint_attempt": 50,
+      "checkpoint_feedback": 25,
+      "exercise_attempts": 95,
+      "exercise_feedback": 45,
+      "conclusion_reference": 40
+    }
+  },
+  "closing": "155 exercise attempt minutes including earlier reservations;45 exercise feedback minutes; checkpoint75 additional within L04. Total1080min;240Python. Estimates not measured.",
+  "mediaPlan": [
+    "Unique USGS drifter photo in opening; actual source/rights and identity audit",
+    "Original trajectory with equal spatial scales, timestamp dots and coordinate readouts",
+    "Original component-time graphs",
+    "Original tangent versus curve close-up",
+    "Speed plot and refinement comparison",
+    "Transport compartments and directed rates"
+  ],
+  "sourcePlan": "OU Unit2 pp143\u2013145 displacement/velocity and Activity12; U03 matrices and U07/U10/U11/U12 actual adjoining teaching; OpenStax C3\u00a73.2 componentwise operations and selected practice; ILA3.1 matrix viewpoint; APEX5.5 trapezoid exposition. No exact published match for original synthesis claimed.",
+  "boundaries": "Separate12h revision and final exam allocation preserved. No extra TMA; no learner records.",
+  "review": "Each lesson subject, reader, visual and continuous pass before next authored. Unit/module handover review before publication."
+}
