@@ -1,0 +1,26 @@
+{
+  "exercises": {
+    "1": "Count panels and samples",
+    "2": "A complete small comparison",
+    "3": "Guarantee a tolerance",
+    "4": "Signed linear change",
+    "5": "Different widths",
+    "6": "Midpoints versus averages",
+    "7": "Read the error pattern",
+    "8": "A missed contribution",
+    "9": "Endpoint values at a jump",
+    "10": "Calibration and refinement",
+    "11": "Find the indexing defect",
+    "12": "An unsuitable relative error",
+    "13": "A numerical value outside the domain",
+    "14": "Design a defensible check"
+  },
+  "coverage": "1\u20136 rules/grids/signs/units/bounds;7 refinement;8 missed features;9 jumps;10 data/calibration;11 code;12 cancellation;13 domain;14 synthesis. Activities1\u201313 and notebook provide implementation/plots.",
+  "calibration": "APEX5.5 exercises5\u201312 compare rules with exact integrals;13\u201320 nontrivial functions. Our set excludes Simpson, formal derivative-error theorem and unintroduced singular-integral methods; adds audit, nonuniform data and failure interpretation. OU numerical chapter unavailable.",
+  "minutes": {
+    "attempts": 90,
+    "feedback": 50,
+    "checkpoint": 60
+  },
+  "checkpoint": "8 short questions sample U08\u2013U11; static native disclosure feedback; no record or grading."
+}

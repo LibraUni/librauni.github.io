@@ -1,0 +1,42 @@
+{
+  "unit": "M101 U11",
+  "date": "2026-10-23",
+  "status": "complete locally; publication authorised subject to hosted gates and live verification",
+  "standard": "Teaching Standard and Practice v1.12; fixed illustrated reference v0.4",
+  "scope": {
+    "lessons": 4,
+    "sections": 17,
+    "workedExamples": 8,
+    "activities": 13,
+    "figures": 6,
+    "unitExercises": 14,
+    "formativeCheckpointQuestions": 8,
+    "hours": 16,
+    "pythonHours": 5
+  },
+  "sequence": "Each lesson authored and reviewed before proceeding; see l01\u2013l04 review records. Section map consolidated during closure, as disclosed in plan, not claimed as a pre-drafting record.",
+  "subjectReview": "151 subject, code and structure checks pass, including independently calculated rational benchmarks, reversed and zero intervals, invalid input, discontinuities, hidden pulses, exercise solutions and reference consistency. Learner and completed specimen notebooks run in fresh kernels; plots inspected.",
+  "readerReview": "Connected introductions and explanations, method choices, assumptions and interpretation reviewed against taught prerequisites and actual adjoining U08\u2013U10 passages. Required conditions remain in main teaching. Closing exercise8 explicitly states symmetric pulse. All solutions hidden initially; open tasks have criteria and sample reasoning.",
+  "visualReview": "Rendered lesson sections and all14 exercise solutions inspected; two PDF pages inspected after final applicability correction. Light/dark and responsive checks pass. Six labelled figures include two licensed photographs and four original diagrams. Narrow-screen diagrams scroll by keyboard; mathematical lines have contained overflow. Static figures and native disclosures remain usable without JavaScript.",
+  "wholeUnitReview": "Unit introduction, four lessons, conclusion, cumulative practice, formative iCMA03, notebook/script, web/PDF reference and navigation complete. 960-minute budget includes attempts, feedback and correction; 80 minutes reserved in earlier lessons for closing work. No change to approved scope or hours.",
+  "wholeBlockReview": "U08\u2013U11 connection checked through FTC, substitution/parts, numerical estimates and independent checks. iCMA03 revisits established material. TMA03 remains separate and unreleased; U12 remains outline and uncommissioned.",
+  "calibration": "Actual private OU explanatory passages, fixed reference and APEX numerical-integration sections inspected. No directly equivalent private OU quadrature unit was available; source map explicitly records gap and prerequisite differences. Private files are not distributed.",
+  "finalChecks": {
+    "siteTests": 153,
+    "subjectChecks": 151,
+    "integratedViewportThemeCases": 50,
+    "offlineRenderCases": 24,
+    "packagedOfflinePages": 5,
+    "noJavaScriptLessons": 4,
+    "keyboardExactCodeCopies": 4,
+    "earlierTeachingFilesBytePreserved": 357,
+    "searchPages": 116,
+    "sourceTextMatches": 5,
+    "downloadByteMatches": 5,
+    "build": "pass",
+    "media": "pass with contextual editorial flags addressed in media record",
+    "diffWhitespace": "pass"
+  },
+  "refinements": "Final photographic context and credits supplement initial l01/l02 reviews. All original diagrams gained keyboard-scroll wrappers; final browser suite rerun. Whole-unit review corrected pulse symmetry wording and final response-audit decimals before release.",
+  "limitations": "Author editorial review and independently computed checks, not independent human review, learner timing trials or formal assistive-technology audit. Hosted security/deployment and live verification remain pending at this commit."
+}

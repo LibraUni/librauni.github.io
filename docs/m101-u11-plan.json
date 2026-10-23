@@ -1,0 +1,87 @@
+{
+  "standard": "1.12",
+  "reference": "fixed v0.4",
+  "baseline": "fb5024f",
+  "authorisation": "Entire Unit11 locally, sequential lesson reviews, closing resources then publish after checks. No Unit12 or separate TMA03 authorship.",
+  "hours": 16,
+  "pythonHours": 5,
+  "lessons": [
+    {
+      "id": 1,
+      "minutes": 240,
+      "python": 60,
+      "reading": 75,
+      "activities": 45,
+      "feedback": 30,
+      "closingReserve": 30
+    },
+    {
+      "id": 2,
+      "minutes": 240,
+      "python": 60,
+      "reading": 75,
+      "activities": 40,
+      "feedback": 35,
+      "closingReserve": 30
+    },
+    {
+      "id": 3,
+      "minutes": 240,
+      "python": 120,
+      "reading": 45,
+      "activities": 30,
+      "feedback": 25,
+      "closingReserve": 20
+    },
+    {
+      "id": 4,
+      "minutes": 240,
+      "python": 60,
+      "reading": 20,
+      "activities": 0,
+      "feedback": 0,
+      "closingReserve": 160
+    }
+  ],
+  "closing": "80 min earlier reserved +160 final: exercises attempts90/correction50, iCMA attempt30/correction30, reference20, synthesis20; 240 total.",
+  "media": "Original interval/rule plots, convergence graph, missed pulse and jump diagrams; new USGS rain-gauge calibration photo. Notebook manipulation serves exploration with static alternatives; no extra animated widget needed.",
+  "sourceGap": "Supplied MST124 units2,10,12 do not contain numerical quadrature; OU U2 pp117\u2013119 graph/model framing and U10 introduction inspected; actual APEX5.5.1\u20133 and exercises5\u201320 provide direct exposition/practice. Independent original derivation of monotone bound, quadratic errors, finite-node missed-feature example.",
+  "sectionMap": {
+    "L01": [
+      "Choosing what each sample represents",
+      "A bracket justified by monotonicity",
+      "Sampling at the midpoint",
+      "Turn the rule into readable code"
+    ],
+    "L02": [
+      "Joining the endpoint values",
+      "A table of measurements",
+      "Reading a refinement table",
+      "Implement, compare and report"
+    ],
+    "L03": [
+      "A pulse between the samples",
+      "Split at a known change",
+      "What kind of error are we reducing?",
+      "Investigate a failure and explain the repair"
+    ],
+    "L04": [
+      "From a number to an inspectable argument",
+      "Your numerical audit",
+      "Unit exercises",
+      "Block 3 formative checkpoint \u00b7 iCMA 03",
+      "Conclusion and reference"
+    ]
+  },
+  "constructionPolicy": {
+    "version": "1.0",
+    "parents": [
+      "curriculum/m101-units.js U11",
+      "docs/m101-block3-lesson-blueprint.json",
+      "curriculum/m101-blocks.js",
+      "curriculum/p101-units.js"
+    ],
+    "scope": "Existing four-lesson block blueprint and unit budgets retained. Detailed section map consolidated during closing review, not claimed to have been recorded before drafting.",
+    "progression": "U09 antiderivatives and U10 models supply entry; P101U01/U03 programming readiness explicit; U12 remains outline; TMA03 separate and not authored."
+  }
+}

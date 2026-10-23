@@ -1,0 +1,10 @@
+{
+  "lesson": "U11-L03",
+  "status": "reviewed locally",
+  "subject": "Exact Fraction evaluation of pulse and jump n4\u2013512 independently verifies every stated table. Pulse area from triangle; panel splitting with one-sided extensions reviewed. Offset bound derived from sum of weights. Domain singularity correctly left outside finite-integral scope.",
+  "reader": "Original finite-sampling counterexample complements APEX smooth cases; no claim of exact OU match. Removed a misleading activity request for an endpoint inside pulse at n64 because none exists. Added distinction between detection and accuracy.",
+  "visual": "Six noJS/offline width/theme cases; actual desktop11.9 and mobile11.11 inspected. Replaced connecting jump polyline with separate segments/open-closed markers; added actual sample dots to pulse plot.",
+  "wholeLesson": "Read as a progression from missed support to known discontinuity to model/data/arithmetic distinctions and independent audit. 45+30+25+120+20=240min.",
+  "limits": "No human validation; no formal error-theorem proof beyond original elementary examples.",
+  "finalIntegrationReview": "Final media, responsive diagrams, light/dark, no-JS and keyboard checks included in whole-unit review; full final integrated suite passes."
+}

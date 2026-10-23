@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-23",
+  "thirdParty": [
+    {
+      "figure": "11.1",
+      "file": "public/teaching/m101/u11-planimeter.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Planimeter.jpg",
+      "creator": "Stefan K\u00fchn",
+      "terms": "CC BY-SA3.0 Unported selected from offered licences; retained independently of CC BY-NC-SA text",
+      "modifications": "None; HTML aspect-ratio scaling only",
+      "sha256": "395ebc525e84d9d1263d42d6e9c191f2c6ee2e62295ca060246c1d4de26aa13b",
+      "inspection": "Actual downloaded image viewed and caption checked",
+      "priorUse": "Source identity and filename searched across earlier M101 fragments/registers; no prior placement. U09 uses a different CIA planimeter photograph; U08 records rejected candidates, not this placement."
+    },
+    {
+      "figure": "11.4",
+      "file": "public/teaching/m101/u11-rain-calibration.jpg",
+      "source": "https://www.usgs.gov/media/images/tyler-bowser-calibrates-rain-gage-harford-glen",
+      "creator": "David Fisher / USGS",
+      "terms": "Public Domain explicitly on source page",
+      "modifications": "None; HTML aspect-ratio scaling only",
+      "sha256": "86b024b7872d0908e1a6c4918abf94428e4e821a7cb3968408dd2220c5983a86",
+      "inspection": "Actual downloaded image viewed and caption checked",
+      "priorUse": "Source identity and filename searched across earlier M101 fragments/registers; no prior placement. U09 uses a different CIA planimeter photograph; U08 records rejected candidates, not this placement."
+    }
+  ],
+  "original": {
+    "11.2": "Midpoint inflow plot",
+    "11.3": "Trapezoidal inflow plot",
+    "11.5": "Magnified pulse with actual n32 nodes",
+    "11.6": "Jump shown by separated segments with one-sided endpoint markers"
+  },
+  "comparison": "Against fixed illustrated v0.4: sustained prose with two relevant instrument photographs, four original explanatory diagrams, labelled box roles, adjacent informative captions, one margin note, hidden practice feedback. L03 deliberately uses the mathematical failure figures; L04 is cumulative practice and synthesis with tables and references rather than decorative new imagery. Unit introduction is an orienting reading passage. All-diagram/no-image structural flags reviewed editorially, not treated as automatic exemptions.",
+  "changes": "Diagram scroll regions preserve label size at narrow widths. Intrinsic photo dimensions and explicit credit/source/licence links added. Existing figure IDs were renumbered only within this unpublished draft before first release.",
+  "rejected": "Science Museum Coradi image: verified CC BY-NC-SA terms but only72x48 thumbnail retrievable; rejected as insufficient resolution. Replaced with inspected Commons photograph."
+}

@@ -1,0 +1,66 @@
+{
+  "title": "Numerical integration and trustworthy checks",
+  "rows": [
+    [
+      "Recall",
+      "Grid",
+      "\\(h=(b-a)/n,\\quad x_i=a+ih\\). Positive integer n panels; n+1 endpoints."
+    ],
+    [
+      "Recall",
+      "Endpoint sums",
+      "\\(L_n=h\\sum_{i=0}^{n-1}f(x_i)\\); \\(R_n=h\\sum_{i=1}^{n}f(x_i)\\)."
+    ],
+    [
+      "Recall",
+      "Midpoints",
+      "\\(M_n=h\\sum_{i=0}^{n-1}f(a+(i+\\tfrac12)h)\\)."
+    ],
+    [
+      "Recall",
+      "Trapezoids",
+      "\\(T_n=h[\\tfrac12 f(a)+\\sum_{i=1}^{n-1}f(x_i)+\\tfrac12 f(b)]\\). \\(T_n=(L_n+R_n)/2\\)."
+    ],
+    [
+      "Understand",
+      "Monotone bracket",
+      "Forward bounds. Increasing: \\(L_n\\leq I\\leq R_n\\); decreasing: reversed. Width \\(h|f(b)-f(a)|\\). T error at most half-width."
+    ],
+    [
+      "Consult",
+      "Unequal widths",
+      "\\(T=\\sum_{i=0}^{n-1}(x_{i+1}-x_i)(y_i+y_{i+1})/2\\). Coordinates increasing; use actual widths and consistent units."
+    ],
+    [
+      "Understand",
+      "Signs and exactness",
+      "Midpoint/trapezoid exact for linear f. Reverse bounds: M,T change sign. \\(L_n(b,a)=-R_n(a,b)\\)."
+    ],
+    [
+      "Understand",
+      "Refinement",
+      "If \\(Q_n-I\\approx C/n^2\\), finer error \\(\\approx|Q_{2n}-Q_n|/3\\). Estimate, not a bound; inspect features and successive differences."
+    ],
+    [
+      "Recall",
+      "Error measures",
+      "Absolute: \\(|Q-I|\\). Relative: \\(|Q-I|/|I|\\), only \\(I\\ne0\\); use absolute tolerance near cancellation."
+    ],
+    [
+      "Consult",
+      "Before accepting",
+      "Domain, units, hand sum, exact benchmark, refinement, sample positions; split known changes using one-sided piece formulas."
+    ],
+    [
+      "Understand",
+      "Limits of refinement",
+      "Interpolated rows add no observations. Shared bias and missed features survive refinement. Retain precision until display."
+    ],
+    [
+      "Consult",
+      "Applicability",
+      "Finite continuous or piecewise-continuous models on bounded intervals; inspect domains and split known changes."
+    ]
+  ],
+  "code": "# Core formulas after validating n and finite inputs\nh = (b - a)/n\nmid = h*sum(f(a + (i + 0.5)*h) for i in range(n))\ntrap = h*((f(a) + f(b))/2\n          + sum(f(a + i*h) for i in range(1, n)))\n# Table with nonuniform increasing coordinates:\ntotal = sum((x[i+1]-x[i])*(y[i]+y[i+1])/2\n            for i in range(len(x)-1))"
+}

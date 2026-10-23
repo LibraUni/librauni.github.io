@@ -1,0 +1,10 @@
+{
+  "lesson": "U11-L01",
+  "status": "reviewed locally",
+  "subject": "Exact rational recomputation of L4=15/4,R4=23/4,M4=37/8,I=14/3; M8=149/32,M16=597/128. Monotonic bracket derivation and n>=80 checked. Constant/reversal/zero benchmark reasoned independently.",
+  "reader": "Compared fixed v0.4 worked coordinate reasoning and APEX5.5.1/5.5.3. Explicit n versus n+1, output-versus-input averaging and left reversal distinctions added. Timing typo corrected to120+30+60+30=240.",
+  "visual": "Six no-JS offline viewport/theme cases with every feedback opened; actual desktop section11.2 and mobile11.3 inspected. Found transport-stripped inline math delimiters despite structural pass; repaired before continuing. Shortened a long displayed sum to its evaluated total to improve mobile reading.",
+  "wholeLesson": "Read complete draft; prerequisites and next-lesson handover maintained; no separate end-lesson exercise set. One original teaching diagram; contextual photograph deliberately belongs to measured-data/calibration discussion in L02.",
+  "limits": "Self-review, not independent human or learner testing; timings editorial.",
+  "finalIntegrationReview": "Final media, responsive diagrams, light/dark, no-JS and keyboard checks included in whole-unit review; full final integrated suite passes."
+}

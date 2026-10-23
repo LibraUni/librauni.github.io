@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-23",
+  "standard": "v1.12 read from website/docs/teaching-standard-and-practice.md; fixed v0.4 preserved and representative introductions/worked coordinate passages read.",
+  "privateOU": {
+    "inspected": "MST124 Unit2 Graphs and equations, printed pp117\u2013119 introduction and graph/model transition; Unit10 Sequences and series introduction; Unit12 title/introduction to establish non-match.",
+    "fit": "OU exposition provides model/representation progression and typography comparator. It does not supply the missing numerical-integration chapter. No proprietary passages reproduced.",
+    "gap": "No direct OU quadrature exposition or equivalent question set in supplied files."
+  },
+  "public": [
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_numerical_integration.html",
+      "inspected": "5.5.1 endpoint sums and Examples5.5.2,5.5.4;5.5.2 trapezoid derivation/Examples5.5.9,5.5.11;5.5.3 input-versus-output averaging/Examples5.5.12,5.5.14;5.5.5 error discussion;5.5.6 actual exercise prompts5\u201324.",
+      "fit": "Same single-variable calculus prerequisites; our unit retains only rectangle/midpoint/trapezoid, derives a monotonicity bound and exact quadratic error, excludes Simpson and formal higher derivative bounds. Original units/examples/failure audits; source graphical/exposition errors not inherited."
+    },
+    {
+      "url": "https://docs.python.org/3/library/math.html",
+      "inspected": "isfinite, isclose, fsum API descriptions",
+      "fit": "Standard Python functions; only isfinite required in teaching. fsum is a brief consultable arithmetic aid, not a remedy for sampling."
+    }
+  ],
+  "perSection": {
+    "11.1\u201311.2": "APEX5.5.1 endpoint construction; original monotonic bound from panel inequalities; OU U2 opening for modelling voice.",
+    "11.3": "APEX5.5.3 distinction between averaging inputs and outputs; original inflow and signed benchmarks.",
+    "11.4": "P101U01/U03 prerequisites, U08L05 rectangle routine; original implementation tests; Python math docs.",
+    "11.5": "APEX5.5.2 weights/chords; original signed crossing example.",
+    "11.6": "APEX5.5.28 data/units context inspected, but its Simpson method excluded; original nonuniform rainfall and interpolation task.",
+    "11.7": "APEX5.5.5 distinction between accuracy and error bounds; original centred-quadratic derivation and refinement estimate algebra.",
+    "11.8": "APEX5.5.6 practice5\u201320 as level comparator; own reciprocal and linear benchmark.",
+    "11.9\u201311.10": "Original finite-grid pulse/jump counterexamples; no exact OU or APEX failure-mode counterpart claimed. Builds on U04 domain and U07 numerical limitations.",
+    "11.11\u201311.12": "Original offset-weight argument and audit; U07 arithmetic/context; Python fsum description.",
+    "11.13\u201311.14": "Original synthesis from U08\u2013U10 adjoining teaching and U11 methods; open response audit has explicit criteria and checked specimen.",
+    "11.15": "APEX5.5 exercise comparisons in practice-map; increased conceptual/method-selection breadth with reduced repetitive sums.",
+    "11.16": "Original retrieval of actual U08\u2013U11 taught methods; no reused assessed TMA questions.",
+    "11.17": "Reference derived from taught content; original whole-block synthesis."
+  },
+  "adjoining": "U08L05 rectangle implementation, U09L06 method-selection closure, U10L05 model audit/exercises/conclusion read; retained 16h/5Python and U12 boundary.",
+  "videosInteractives": "No video selected: required writing/self-contained practice and five-hour notebook investigation provide the explanatory route. Notebook parameter/sample changes include predictions, actual nodes, static prose/figures and independent model checks. No new hosted animation."
+}

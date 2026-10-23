@@ -1,0 +1,10 @@
+{
+  "lesson": "U11-L02",
+  "status": "reviewed locally",
+  "subject": "Independent Fraction calculation verified rainfall6.5mm and midpoint/trapezoid reciprocal benchmarks n4,8,16,32. Derived quadratic errors via centred panel integral; signed crossing example gives I2 versus area10/3.",
+  "reader": "APEX5.5.2 worked weights and5.5.3 input/output distinction compared. Added explicit n1 empty sum, nonuniform widths and interpolation-is-not-new-data activity. Error estimate algebra developed without formal asymptotic syllabus.",
+  "visual": "Six offline noJS width/theme cases, all disclosures; desktop11.7 and mobile11.6 screenshots inspected. Split paired rainfall calculation and added multiplication signs after noticing cramped juxtaposition. New actual photograph inspected and source identity absent from earlier M101 placements.",
+  "wholeLesson": "Complete reading retains derivation\u2192data\u2192refinement\u2192implementation flow;240min including30min reserve. Calibration is optional context, data limitations in required prose.",
+  "limits": "Self-review; workload estimate not student timing.",
+  "finalIntegrationReview": "Final media, responsive diagrams, light/dark, no-JS and keyboard checks included in whole-unit review; full final integrated suite passes."
+}
