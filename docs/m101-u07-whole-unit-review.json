@@ -87,6 +87,7 @@
     "noAdditionalRequiredWork": "No separate exercise booklet, mandatory external media or new Python task in L04. TMA02 six hours outside unit/block study."
   },
   "reviewFindings": [
+    "Final reread changed the Lesson3 opening: approaching the limiting definition does not imply monotonic improvement at each smaller step.",
     "Added a definition of relative error and its nonzero-target condition.",
     "Corrected diagram axis-label overlap and removed an untypeset radical from a caption.",
     "Verified photo identities and corrected detector alt text and Pleiades intrinsic dimensions.",
