@@ -1,0 +1,74 @@
+{
+  "status": "Complete local unit, all local gates passed; publication/live checks pending",
+  "authorization": "User requests entire U12 locally, sequential lesson reviews, closure and conditional publication.",
+  "base": "1589c95 including TMA03",
+  "hours": 18,
+  "pythonHours": 4,
+  "allocationsMinutes": {
+    "L01": {
+      "reading_examples": 95,
+      "activities": 75,
+      "feedback": 40,
+      "closing_exercises_reserved": 30
+    },
+    "L02": {
+      "reading_examples": 75,
+      "activities": 50,
+      "feedback": 25,
+      "python": 60,
+      "closing_exercises_reserved": 30
+    },
+    "L03": {
+      "reading_examples": 70,
+      "activities": 60,
+      "feedback": 30,
+      "python": 120,
+      "closing_feedback_reserved": 20
+    },
+    "L04": {
+      "reading_examples": 60,
+      "transfer_writing": 40,
+      "python": 60,
+      "unit_exercises": 70,
+      "feedback": 30,
+      "reference_conclusion": 40
+    }
+  },
+  "closingCombined": "130 minutes attempts and 50 minutes feedback, including 80 reserved earlier; no extra TMA/iCMA.",
+  "mediaPlan": [
+    "NASA wind-tunnel photograph in block opening: computational agreement versus physical testing; check module duplicates and terms",
+    "Original cumulative volume versus rate diagram L01",
+    "Original input sensitivity graph L02",
+    "Original near-parallel equation graph L02",
+    "Original refinement/error table visual L03",
+    "Original validation pathway figure L04"
+  ],
+  "interactive": "Notebook parameter and resolution investigations with predictions and static worked alternatives; no animation needed. Video search considered only if adds specific explanatory value; none required.",
+  "reviews": "Separate subject, reader, rendered visual and continuous coherence pass for each lesson before authoring next. Whole-unit pass and publication verification after closure.",
+  "sectionMap": {
+    "U12-L01": [
+      "Specify the quantity and the model",
+      "Build independent checks",
+      "Read a discrepancy",
+      "Choose the next test"
+    ],
+    "U12-L02": [
+      "Change an input deliberately",
+      "Use a derivative to predict a change",
+      "Cancellation and small residuals",
+      "Choose a meaningful tolerance"
+    ],
+    "U12-L03": [
+      "Separate sources of disagreement",
+      "Inspect a flawed check",
+      "Test a repair independently",
+      "Explore resolution and input changes"
+    ],
+    "U12-L04": [
+      "Construct a short validation report",
+      "Transfer the checks to a new model",
+      "Unit exercises",
+      "Conclusion and reference"
+    ]
+  }
+}

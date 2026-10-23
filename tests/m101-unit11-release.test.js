@@ -12,7 +12,7 @@ test('Unit11 preserves budget, required practice and correct availability',()=>{
  }
  assert.equal(new Set(all).size,all.length);
  const $=load(read('content/m101/unit11-lesson4.html'));assert.equal($('.exercise').length,14);assert.equal($('.exercise details').length,28);assert.equal($('[id^="m101-u11-icma03-"]').length,8);
- assert.match(read('learn/physics/stage-1/m101/b04/u12/index.html'),/data-search-status="outline"/);
+ assert.match(read('learn/physics/stage-1/m101/b04/u13/index.html'),/data-search-status="outline"/);
 });
 test('Unit11 reference and learner notebook remain coherent',()=>{
  const ref=JSON.parse(read('content/m101/unit11-reference.json'));assert.equal(ref.rows.length,12);

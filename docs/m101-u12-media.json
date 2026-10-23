@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-23",
+  "thirdParty": [
+    {
+      "id": "m101-u12-fig-01",
+      "asset": "u12-naca-wind-tunnels.jpg",
+      "creator": "NASA/NACA",
+      "source": "https://www.nasa.gov/image-article/naca-20-foot-free-spinning-wind-tunnel/",
+      "identity": "NACA24710; 1-naca_24710.jpg",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "rights": "NASA educational/informational reuse; no third-party credit on source; separate from LibraUni licence",
+      "modifications": "none",
+      "inspected": "Actual image read; ground-level view corrected in alt text before review",
+      "duplicateAudit": "Source identity NACA24710/1-naca_24710, title and spin-tunnel search across prior M101 fragments/registers found no prior placement. One placement in Unit12 introduction; equivalent offline copy is same use."
+    }
+  ],
+  "originals": [
+    {
+      "id": "m101-u12-fig-02",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Rate and accumulation on separate labelled axes"
+    },
+    {
+      "id": "m101-u12-fig-03",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Exact amount versus tangent"
+    },
+    {
+      "id": "m101-u12-fig-04",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Nearly parallel lines and graphical resolution"
+    },
+    {
+      "id": "m101-u12-fig-05",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Stages where discrepancies enter"
+    },
+    {
+      "id": "m101-u12-fig-06",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Parameter-dependent response ordering"
+    }
+  ],
+  "status": "Complete; actual photograph, diagrams and captions inspected; intrinsic dimensions/source/credit/reuse links pass structural check.",
+  "editorialRichness": "Compared with fixed illustrated v0.4 and adjoining U11: the contextual NASA photograph supports the distinction between physical and mathematical tests; five original figures support rate/accumulation, tangent sensitivity, near-parallel geometry, diagnostic stages and integral ordering. Diagram-only lesson flags were reviewed deliberately: no per-lesson photograph quota; each graph/diagram carries a named explanatory purpose and remains readable via keyboard horizontal scrolling. Photograph occurs once in unit opening. No reused asset or standard exception."
+}

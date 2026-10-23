@@ -1,0 +1,30 @@
+{
+  "standard": "1.12",
+  "fixedReference": "v0.4 introductions, coordinate development and worked position example read; original teaching follows connected motivation, calculation and interpretation",
+  "privateOU": {
+    "source": "sources/mst124_unit2_e1i1.pdf",
+    "passages": "printed117\u2013118 introduction;138\u2013142 section2.4 including Activities9\u201310",
+    "fit": "Modelling, graphical/algebraic representations, units and bounded physical applicability. Lower prerequisite level than this synthesis; no direct supplied OU validation/code-audit chapter found. Private text not reproduced."
+  },
+  "public": [
+    {
+      "url": "https://openstax.org/books/calculus-volume-1/pages/4-2-linear-approximations-and-differentials",
+      "passages": "linear approximation development, Examples4.5,4.7,4.9\u20134.11 and checkpoints4.5/4.7",
+      "fit": "Derivative-based changes and distinction between actual and estimated error. Original pump/input examples; no statistical uncertainty syllabus."
+    },
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_numerical_integration.html",
+      "passages": "5.5 quadrature exposition; prior U11 comparison revisited for rule/error reasoning",
+      "fit": "Same elementary calculus; no Simpson or higher-derivative bound introduced."
+    }
+  ],
+  "adjoining": "U11L03 error sources/offsets and L04 closure inspected; U07L03 local approximation inspected; U03 required elimination retained.",
+  "sections": {
+    "12.1\u201312.2": "OU2.4 model/domain/units; fixed reference representation distinctions; U11 quadrature",
+    "12.3\u201312.4": "U11 exact quadratic error and independent checks; original diagnosis activities, no exact external match claimed",
+    "12.5\u201312.6": "OpenStax4.2 actual change versus derivative prediction; original supplied pump model",
+    "12.7\u201312.8": "U03 elimination and U11 error measures; original nearly dependent system/tolerance synthesis",
+    "12.9\u201312.12": "U11 numerical implementation/error sources; original deliberately flawed check and repair",
+    "12.13\u201312.16": "Original synthesis and exercises derived from taught methods; closing coverage recorded separately"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-23",
+  "standard": "1.12",
+  "reference": "v0.4",
+  "constructionGate": "All M101 units approved; Stage1 block maps and construction-policy 1.0 inspected. All B04 lessons mapped here before U12 section production. U13 plans only, no teaching commissioned.",
+  "units": [
+    {
+      "id": "U12",
+      "hours": 18,
+      "pythonHours": 4,
+      "lessons": [
+        {
+          "id": "U12-L01",
+          "title": "Comparing answers to the same question",
+          "hours": 4,
+          "pythonHours": 0,
+          "sections": [
+            "Specify the quantity and the model",
+            "Build independent checks",
+            "Read a discrepancy",
+            "Choose the next test"
+          ],
+          "purpose": "Diagnose and justify agreement using previously taught mathematics",
+          "requires": "U03 elimination; U07 derivatives/linearisation; U11 quadrature; P101 functions/loops/notebooks",
+          "evidence": "Explained comparisons, corrected activities and clean-runnable audit",
+          "boundary": "No new ODE, eigenvalue, series or Newton syllabus",
+          "handover": "Sensitivity, scale and useful precision"
+        },
+        {
+          "id": "U12-L02",
+          "title": "Sensitivity, scale and useful precision",
+          "hours": 4,
+          "pythonHours": 1,
+          "sections": [
+            "Change an input deliberately",
+            "Use a derivative to predict a change",
+            "Cancellation and small residuals",
+            "Choose a meaningful tolerance"
+          ],
+          "purpose": "Diagnose and justify agreement using previously taught mathematics",
+          "requires": "U03 elimination; U07 derivatives/linearisation; U11 quadrature; P101 functions/loops/notebooks",
+          "evidence": "Explained comparisons, corrected activities and clean-runnable audit",
+          "boundary": "No new ODE, eigenvalue, series or Newton syllabus",
+          "handover": "Diagnosing and repairing a calculation"
+        },
+        {
+          "id": "U12-L03",
+          "title": "Diagnosing and repairing a calculation",
+          "hours": 5,
+          "pythonHours": 2,
+          "sections": [
+            "Separate sources of disagreement",
+            "Inspect a flawed check",
+            "Test a repair independently",
+            "Explore resolution and input changes"
+          ],
+          "purpose": "Diagnose and justify agreement using previously taught mathematics",
+          "requires": "U03 elimination; U07 derivatives/linearisation; U11 quadrature; P101 functions/loops/notebooks",
+          "evidence": "Explained comparisons, corrected activities and clean-runnable audit",
+          "boundary": "No new ODE, eigenvalue, series or Newton syllabus",
+          "handover": "A defensible mathematical judgement"
+        },
+        {
+          "id": "U12-L04",
+          "title": "A defensible mathematical judgement",
+          "hours": 5,
+          "pythonHours": 1,
+          "sections": [
+            "Construct a short validation report",
+            "Transfer the checks to a new model",
+            "Unit exercises",
+            "Conclusion and reference"
+          ],
+          "purpose": "Diagnose and justify agreement using previously taught mathematics",
+          "requires": "U03 elimination; U07 derivatives/linearisation; U11 quadrature; P101 functions/loops/notebooks",
+          "evidence": "Explained comparisons, corrected activities and clean-runnable audit",
+          "boundary": "No new ODE, eigenvalue, series or Newton syllabus",
+          "handover": "U13 transfer"
+        }
+      ]
+    },
+    {
+      "id": "U13",
+      "hours": 18,
+      "pythonHours": 4,
+      "status": "planned only",
+      "lessons": [
+        {
+          "id": "U13-L01",
+          "title": "Choose and connect representations",
+          "hours": 4,
+          "pythonHours": 0,
+          "purpose": "Connect vector/matrix, local-rate and accumulated representations of a supplied planar model",
+          "requires": "U12 and established B01\u2013B03 methods",
+          "boundary": "No new physics or mathematics syllabus; no extra assessment",
+          "evidence": "Formative explained method selection, independent benchmark and transfer response",
+          "handover": "Next synthesis lesson"
+        },
+        {
+          "id": "U13-L02",
+          "title": "Local rates and accumulated change",
+          "hours": 4,
+          "pythonHours": 1,
+          "purpose": "Connect vector/matrix, local-rate and accumulated representations of a supplied planar model",
+          "requires": "U12 and established B01\u2013B03 methods",
+          "boundary": "No new physics or mathematics syllabus; no extra assessment",
+          "evidence": "Formative explained method selection, independent benchmark and transfer response",
+          "handover": "Next synthesis lesson"
+        },
+        {
+          "id": "U13-L03",
+          "title": "A reproducible synthesis",
+          "hours": 5,
+          "pythonHours": 3,
+          "purpose": "Connect vector/matrix, local-rate and accumulated representations of a supplied planar model",
+          "requires": "U12 and established B01\u2013B03 methods",
+          "boundary": "No new physics or mathematics syllabus; no extra assessment",
+          "evidence": "Formative explained method selection, independent benchmark and transfer response",
+          "handover": "Next synthesis lesson"
+        },
+        {
+          "id": "U13-L04",
+          "title": "Transfer and formative synthesis",
+          "hours": 5,
+          "pythonHours": 0,
+          "purpose": "Connect vector/matrix, local-rate and accumulated representations of a supplied planar model",
+          "requires": "U12 and established B01\u2013B03 methods",
+          "boundary": "No new physics or mathematics syllabus; no extra assessment",
+          "evidence": "Formative explained method selection, independent benchmark and transfer response",
+          "handover": "Separate revision/exam and M102/A101"
+        }
+      ]
+    }
+  ]
+}

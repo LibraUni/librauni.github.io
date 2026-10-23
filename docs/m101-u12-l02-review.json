@@ -1,0 +1,10 @@
+{
+  "scope": "L02 sections12.5\u201312.8",
+  "subject": "11 additional exact rational checks; worst-case corners, time-change expansion, both shifted systems and b-dependent quadrature verified. isclose formula inspected in official Python documentation.",
+  "reader": "Read complete lesson after derivations; bounded ranges distinguished from probability; held-fixed language qualified by dependence of quadrature error on b; contrasted residual versus coordinate error through elimination.",
+  "visual": "Initial full desktop12.7/mobile12.6 screenshots exposed too-small graph labels on narrow screens. Added keyboard-focusable scrolling with540px minimum diagram width, preserving desktop;12 repeat L01/L02 viewport/theme/noJS cases pass. Corrected third legend position.",
+  "practice": "Four original activities with hidden reasoning; one-hour code task uses exact formula to isolate input sensitivity.",
+  "workload": "210min current work including60Python;30min closing attempts reserved; editorial estimate",
+  "disposition": "Lesson review complete; integrated checks pending",
+  "limitations": "No independent student/human review"
+}

@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "lesson": 1,
+      "copies": 0,
+      "allFeedback": "open without page overflow",
+      "diagramKeyboard": "pass"
+    },
+    {
+      "lesson": 2,
+      "copies": 1,
+      "allFeedback": "open without page overflow",
+      "diagramKeyboard": "pass"
+    },
+    {
+      "lesson": 3,
+      "copies": 3,
+      "allFeedback": "open without page overflow",
+      "diagramKeyboard": "pass"
+    },
+    {
+      "lesson": 4,
+      "copies": 1,
+      "allFeedback": "open without page overflow",
+      "diagramKeyboard": "pass"
+    }
+  ],
+  "offline": 5
+}

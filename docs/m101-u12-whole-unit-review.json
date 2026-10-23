@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-23",
+  "standard": "v1.12; fixed illustrated v0.4",
+  "authorization": "Entire Unit12 locally; sequential lesson reviews; publish after required checks.",
+  "scope": "Block4 and Unit12 introductions;4lessons/16sections,10worked examples,14activities,14unit exercises,6unit figures,starter notebook/Python,web and2pagePDFreference,offline pack.",
+  "sequence": "L01 drafted\u2192subject/reader/visual review;L02 then same;L03 then same;L04/closure then whole-unit review. Final visual revisions carried back through affected pages.",
+  "correctness": {
+    "subjectCodeChecks": 100,
+    "siteTests": 157,
+    "notebook": "schema plus starter and completed specimen in separate fresh kernels",
+    "sourceEquality": "five unit/lesson fragments equal rendered text; all internal links/anchors and linked assets verified",
+    "preservedEarlierFiles": 370
+  },
+  "readerReview": {
+    "continuity": "Quantity/assumptions \u2192 independent checks \u2192 sensitivity/scales \u2192 code diagnosis \u2192 report/transfer. Each later lesson explicitly retrieves the required earlier distinctions.",
+    "defectsResolved": [
+      "Photo alt originally said aerial; corrected after inspecting actual asset",
+      "Small mobile graph labels replaced by keyboard-scrollable diagrams with540pxminimum width",
+      "Third line legend moved off plot border",
+      "Response feedback decimal transposition corrected by numerical check",
+      "PDFmetadata corrected fromUnit11 toUnit12",
+      "Moved contextual photo from block to unit opening and renumbered unpublished figures1\u20136 to preserve one source placement",
+      "Earlier tests treatingU12asfuture now checkU13; prior teaching unchanged"
+    ],
+    "prerequisites": "U03 elimination;U07derivatives/local approximation;U11quadrature/error;P101notebook foundations. No ODE/eigenvalue/series expansion syllabus introduced.",
+    "insideOut": "Sections feed bounded validation questions; unit supports B04 synthesis and M101O1/O2/O4/O5/O6; U13 remains uncommissioned teaching outline, 18h/4Python lesson plan only. Stage1M102/A101 receive explained checks/reproducibility, not inferred attainment."
+  },
+  "visualAccessibility": {
+    "integrated": 60,
+    "noJS": 4,
+    "keyboardCopies": 5,
+    "diagramKeyboard": "four lessons",
+    "zoom": "200%CSS zoom proxy",
+    "offline": "five unit pages with local navigation and embedded images",
+    "pdf": "two final rendered pages inspected",
+    "media": "Structural checks pass, diagram-only editorial flags reviewed in media register; source identity non-repetition checked"
+  },
+  "practice": "14core problems cover every lesson;130attempt+50feedbackminutes includes80reserved earlier. Separate hints/solutions closed initially. No additional TMA/iCMA.",
+  "hours": 18,
+  "pythonHours": 4,
+  "limitations": [
+    "Self-review and independently computed checks, not independent human review",
+    "Workload estimates not empirically student-tested",
+    "Keyboard/noJS/zoom checks are not a full screen-reader audit"
+  ],
+  "publication": "Local gates passed; hosted security/test/build/deploy and live verification must pass before calling live."
+}

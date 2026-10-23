@@ -1,0 +1,66 @@
+{
+  "title": "Validation, sensitivity and competing answers",
+  "rows": [
+    [
+      "Recall",
+      "Compare like with like",
+      "Quantity, units, interval, initial value, model and inputs."
+    ],
+    [
+      "Recall",
+      "Discrepancy",
+      "Signed: \\(Q-I\\). Absolute: \\(|Q-I|\\). Relative: \\(|Q-I|/|I|\\), only \\(I\\ne0\\)."
+    ],
+    [
+      "Understand",
+      "Accumulation",
+      "\\(A(T)=\\int_0^T q(t)\\,dt\\); check \\(A(0)=0\\) and \\(A\\prime(T)=q(T)\\) for continuous q. Stored amount = initial amount + net accumulation."
+    ],
+    [
+      "Understand",
+      "Local sensitivity",
+      "\\(\\Delta F=F(p+\\delta p)-F(p)\\approx F\\prime(p)\\delta p\\). Small admissible changes; check accuracy over the chosen interval."
+    ],
+    [
+      "Consult",
+      "Pump model",
+      "\\(q(t)=a-bt^2\\); \\(A(T)=aT-bT^3/3\\). Fixed T: \\(\\Delta A=T\\delta a-T^3\\delta b/3\\). Check domain, rate sign and capacity."
+    ],
+    [
+      "Understand",
+      "Input ranges",
+      "Find extrema over allowed inputs; monotonicity can locate endpoint/corner values. Bounds are not probabilities."
+    ],
+    [
+      "Understand",
+      "Residual",
+      "Residual = left side \u2212 right side. Small residual need not mean small solution error in a sensitive system."
+    ],
+    [
+      "Consult",
+      "Numerical comparison",
+      "\\(|u-v|\\leq\\max(\\varepsilon_{\\rm abs},\\varepsilon_{\\rm rel}\\max(|u|,|v|))\\). Absolute tolerance has output units; relative tolerance is dimensionless."
+    ],
+    [
+      "Consult",
+      "Quadratic trapezoid error",
+      "For \\(q=a-bt^2\\) on [0,T], n equal panels: \\(Q_n-A(T)=-bT^3/(6n^2)\\). Exact arithmetic; fixed model/inputs."
+    ],
+    [
+      "Understand",
+      "Independent evidence",
+      "Constant/shifted-linear benchmarks; reversed/zero interval; known curved case; domain and samples; fresh run."
+    ],
+    [
+      "Consult",
+      "Diagnose",
+      "Separate model, input, approximation, implementation and rounding. Vary one factor; retain precision until display."
+    ],
+    [
+      "Consult",
+      "Report",
+      "Question \u2192 model/domain \u2192 method \u2192 independent checks \u2192 discrepancy/tolerance \u2192 limitations. State assistance used."
+    ]
+  ],
+  "code": "from math import isclose\n# Values expressed in the same units:\nisclose(u, v, rel_tol=0.001, abs_tol=0.0005)\n# Signed/absolute discrepancy:\ndifference = estimate - benchmark\nerror = abs(difference)\n# Sensitivity with other inputs fixed:\nchange = F(p + dp) - F(p)\n# Keep precision; format only for display:\nprint(f\"{estimate:.6f}\")"
+}

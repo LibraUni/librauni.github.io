@@ -1,3 +1,4 @@
+import {addM101Unit12,m101Unit12Paths} from './m101-unit12-teaching.mjs';
 import {addM101Tma03} from './m101-tma03-teaching.mjs';
 import {addM101Unit11,m101Unit11Paths} from './m101-unit11-teaching.mjs';
 import {addM101Unit10,m101Unit10Paths} from './m101-unit10-teaching.mjs';
@@ -17,7 +18,7 @@ export const m101Lesson2=m101Unit+'l02/';
 export const m101Lesson3=m101Unit+'l03/';
 export const m101Lesson4=m101Unit+'l04/';
 export const m101Lesson5=m101Unit+'l05/';
-export const m101TeachingPaths=[...m101Unit11Paths,...m101Unit10Paths,...m101Unit9Paths,...m101Unit8Paths,...m101Unit7Paths,...m101Unit6Paths,...m101Unit5Paths,...m101Unit4Paths,m101Home,m101Home+'assessments/',m101Home+'assessments/tma01/',m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/',m101Home+'b01/u03/l03/',m101Home+'b01/u03/l04/',m101Home+'b01/u03/l05/',m101Home+'b01/u03/l06/'];
+export const m101TeachingPaths=[...m101Unit12Paths,...m101Unit11Paths,...m101Unit10Paths,...m101Unit9Paths,...m101Unit8Paths,...m101Unit7Paths,...m101Unit6Paths,...m101Unit5Paths,...m101Unit4Paths,m101Home,m101Home+'assessments/',m101Home+'assessments/tma01/',m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/',m101Home+'b01/u03/l03/',m101Home+'b01/u03/l04/',m101Home+'b01/u03/l05/',m101Home+'b01/u03/l06/'];
 m101TeachingPaths.push(m101Home+'assessments/tma02/',m101Home+'assessments/tma03/');
 export function addM101Teaching({root,pages,extraRails,link}){
  const reading=name=>'<div data-search-status="available" class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
@@ -186,6 +187,7 @@ export function addM101Teaching({root,pages,extraRails,link}){
  addM101Unit9({root,pages,extraRails,link});
  addM101Unit10({root,pages,extraRails,link});
  addM101Unit11({root,pages,extraRails,link});
+ addM101Unit12({root,pages,extraRails,link});
  addM101Tma02({root,pages,extraRails,link});
  addM101Tma03({root,pages,extraRails,link});
 }
