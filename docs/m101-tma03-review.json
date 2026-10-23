@@ -1,0 +1,54 @@
+{
+  "assessment": "M101 TMA 03",
+  "version": "1.0",
+  "date": "2026-10-23",
+  "status": "Local review complete; publication authorised subject to hosted gates and live verification",
+  "scope": "Five original questions,19parts,100marks,6separate assessment hours. Outcomes O2/O5/O6; declared earlier algebra/domain/differentiation/sign/trigonometric prerequisites.",
+  "standard": "v1.12 canonical standard and fixed illustrated v0.4; current Block3 teaching and TMA02 format inspected.",
+  "reviews": {
+    "subject": {
+      "status": "pass",
+      "evidence": "89 independent symbolic/rational/numerical checks cover all worked answers, discontinuity and domain conditions, signed distance, mean-value roots, slice dimensions, unequal panels, offset, exact quadrature, oscillatory node sums, guard cases and fresh-process execution. Private per-part allocations reconciled to the public19part/100mark plan. Results remain outside public repository."
+    },
+    "reader": {
+      "status": "pass",
+      "evidence": "Read the complete question flow and marking guide against U08\u2013U11 prerequisites. Definitions give numerical units; capacity/flow data and assumptions are self-contained. Q1 requests all extremum locations, Q2 separates requested methods and rejects a singular interval without requiring improper integration, Q4 states interpolation, Q5 limits validation scope and requires actual sample-position reasoning. Alternatives, carry-forward, assistance and file handover are explicit. Six-hour allocation includes reading/checking/rerun/packaging; no student timing trial claimed."
+    },
+    "visual": {
+      "status": "pass",
+      "evidence": "All public sections and all five private worked-question sections inspected as rendered. Compared mathematical presentation with actual OU printed p59. Split Q1 definition into shorter displays for mobile. Corrected vessel height-axis label to clear rim. Verified radical bars, fraction scope, piecewise braces, limits and units. Captions/credits adapted to checker-compatible identifiers before publication. Desktop/mobile light/dark,51MathML,keyboard diagram scrolling,noJS,offline at900/390/320px,200%zoom proxy and print-media styling pass. Native image and SVG source inspected."
+    },
+    "wholeAssessment": {
+      "status": "pass",
+      "evidence": "Questions sample accumulation/FTC, elementary/substitution/parts, conditions, signed motion, averages, volume by slices, nonuniform data, common bias and independent quadrature judgement. No new method or later-unit prerequisite; advanced integration and formal error-bound theorems excluded. The oscillating audit transfers taught missed-feature reasoning rather than duplicating a unit pulse exercise. Public criteria omit answer allocations; private guide supplies worked reasoning, partial credit and feedback approach."
+    },
+    "wholeBlockModule": {
+      "status": "pass",
+      "evidence": "Fits approved six-hour TMA after78hBlock3. Unit11 closes with released-assessment handover; all other367tracked teaching/media/notebook files in preserved inventory unchanged. O2/O5/O6 contribute to Stage1 mathematical and reproducible-computing evidence. U12 remains outline; no final exam, threshold, weighting, deadline, learner record or enrolment change."
+    }
+  },
+  "media": "One verified public-domain USGS photograph and one original slice diagram, no earlier M101 identity repeat. Structural media check passes. Unchanged U11 closure has no new image: only availability sentence altered; prior whole-unit illustrated review preserved.",
+  "checks": {
+    "siteTests": 156,
+    "subjectChecks": 89,
+    "responsiveThemeCases": 10,
+    "offlineWidths": [
+      900,
+      390,
+      320
+    ],
+    "noJavaScript": "pass",
+    "keyboard": "pass",
+    "privateGuideDesktopMobile": "pass",
+    "zoomProxy": "pass",
+    "printMedia": "pass",
+    "productionBuild": "pass",
+    "searchPages": 117,
+    "sourceEquality": "question and closing fragment exact",
+    "assets": "two downloads byte-equal; ten linked build assets resolve",
+    "privacy": "1569 public/build files scanned; private sentinels and file hashes absent; only public assessment in search",
+    "baselineWarnings": "Inherited older-page HTML, legacy script and large bundle warnings; no TMA03 build failure."
+  },
+  "limitations": "Author subject/editorial reviews plus independently computed verification, not independent human review, student timing data or formal assistive-technology audit. Offline HTML is the printable deliverable; no dedicated assessment PDF authored.",
+  "publication": "Hosted security, tests, build and deployment must pass, then live verification is recorded separately."
+}

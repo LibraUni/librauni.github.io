@@ -1,0 +1,86 @@
+{
+  "assessment": "M101 TMA 03",
+  "version": "1.0",
+  "date": "2026-10-23",
+  "standard": "v1.12; fixed reference v0.4",
+  "authorisation": "Local creation and thorough review, then publish after all required checks.",
+  "constructionGate": "Policy1.0. Stage1 module map, M101 block/unit outlines, complete Block3 lesson blueprint and released U08\u2013U11 inspected. Full question/subpart plan established before drafting.",
+  "outcomes": [
+    "M101-O2",
+    "M101-O5",
+    "M101-O6"
+  ],
+  "cumulative": "Algebra, function domains, differentiation and one-sided derivatives (U04\u2013U07), elementary trigonometry; no later module prerequisite.",
+  "questions": [
+    {
+      "id": "Q01",
+      "marks": 16,
+      "minutes": 40,
+      "parts": [
+        6,
+        5,
+        5
+      ],
+      "scope": "Piecewise accumulation formula, extrema, continuity and one-sided derivative at jump; U08 and cumulative U04\u2013U06."
+    },
+    {
+      "id": "Q02",
+      "marks": 24,
+      "minutes": 65,
+      "parts": [
+        5,
+        7,
+        8,
+        4
+      ],
+      "scope": "Elementary power rewriting; definite substitution; logarithm integration by parts and derivative check; reject invalid FTC across singularity; U08/U09."
+    },
+    {
+      "id": "Q03",
+      "marks": 18,
+      "minutes": 50,
+      "parts": [
+        6,
+        7,
+        5
+      ],
+      "scope": "Displacement and final position; distance and average speed; mean velocity attained and conditions; U10/U08."
+    },
+    {
+      "id": "Q04",
+      "marks": 18,
+      "minutes": 50,
+      "parts": [
+        6,
+        6,
+        3,
+        3
+      ],
+      "scope": "Circular slice tank capacity, nonuniform inflow interpolation, mean rate and constant calibration offset; U10/U11."
+    },
+    {
+      "id": "Q05",
+      "marks": 24,
+      "minutes": 100,
+      "parts": [
+        5,
+        5,
+        5,
+        6,
+        3
+      ],
+      "scope": "Hand benchmark, independent midpoint/trapezoid routines, refinement/reversal/zero checks, oscillatory misleading agreement, reproducibility; U11."
+    }
+  ],
+  "minutes": {
+    "reading": 15,
+    "questions": 305,
+    "checkingPackaging": 40,
+    "total": 360
+  },
+  "boundary": "No improper integration evaluation, Simpson rule, derivative error-bound theorem, ODE, advanced packages or new physical laws. No threshold, weight, deadlines, enrolment or records altered.",
+  "mediaPlan": "USGS constant-head tank photograph for capacity/flow setting, subject to actual rights/assets verification; original tank slice diagram with given dimensions. No answer-generating interactive; plain table sufficient for independent coding.",
+  "privacy": "Worked marking guide, criterion allocations, model code and result-bearing checks stay in restricted sibling work/m101-tma03-private, outside public checkout and build.",
+  "delivery": "Public questions/criteria and self-contained offline HTML; private worked guide and model code. Existing private tutoring handover retained.",
+  "workloadLimits": "Editorial estimate, not student timing data. Includes reading, independent attempts, checking, rerun and packaging; feedback after marking uses existing module feedback allocation."
+}

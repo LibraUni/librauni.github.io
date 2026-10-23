@@ -1,0 +1,36 @@
+{
+  "standard": "v1.12 canonical document read; fixed v0.4 opening and coordinate/model progression inspected. Public TMA02 questions and criteria inspected as assessment-format comparator.",
+  "privateOU": [
+    {
+      "source": "MST124 Unit2 Graphs and equations",
+      "pages": "printed118\u2013119 model-to-graph transition and coordinate exposition",
+      "fit": "Presentation and prerequisite comparator; not an integration question source."
+    },
+    {
+      "source": "MST224 Unit1 Getting started",
+      "pages": "printed50\u201354 \u00a76.1\u20136.2 including Ex35,37,38;57\u201361 \u00a76.3\u20136.4 including Ex40\u201343 and Examples8\u201311;62 signed-area discussion",
+      "fit": "Actual integration exposition and exercises inspected. Revision material assumes previous calculus; M101 assesses first-course mastery after complete teaching. Rational/trigonometric advanced integrals, repeated cyclic parts and improper integral evaluation excluded. Page59 rendered and visually inspected for notation and worked reasoning."
+    }
+  ],
+  "public": [
+    {
+      "url": "https://opentext.uleth.ca/apex-calculus/sec_numerical_integration.html",
+      "sections": "5.5.6 Ex5\u201312 exact-versus-numerical comparisons; Ex13\u201320 finite-panel practice;5.5.28 sampled-rate context",
+      "fit": "Same basic calculus; Simpson rule and derivative error-bound tasks excluded. TMA uses fewer hand panels and adds independent code, nonuniform intervals and an original oscillatory failure audit."
+    },
+    {
+      "url": "https://openstax.org/books/calculus-volume-2/pages/3-1-integration-by-parts",
+      "sections": "Theorem3.1, Example3.1 and product-rule motivation",
+      "fit": "Method-selection/cancellation comparator. Original logarithmic task; no transcription of source question or solution."
+    }
+  ],
+  "questionMap": {
+    "Q01": "U08L03 accumulation/FTC and earlier one-sided derivatives; OU \u00a76.4 accumulation and signed contribution. Original joined-rate synthesis; no directly equivalent supplied OU assessment.",
+    "Q02": "U09L01\u2013L04; OU Ex35/37/38/40/42, Examples8\u20139, and OpenStax3.1. Reduced advanced scope; independent choice, limits, domain critique and explicit derivative verification.",
+    "Q03": "U10L02\u2013L03; OU \u00a76.4 signed-area interpretation. Original multi-stage motion plus mean-value argument; no source exercise merely rescaled.",
+    "Q04": "U10L03\u2013L04 and U11L02\u2013L03; OU Example10 accumulation/units, APEX5.5.28 data integration. Original slice/unequal-time/offset context; source Simpson method excluded.",
+    "Q05": "U11L01\u2013L04; APEX5.5.6 comparison structure. Independent implementation and oscillatory sample coincidence extend taught missed-feature reasoning. No equivalent OU coding assessment claimed."
+  },
+  "calibrationLimits": "Supplied MST124 collection lacks the relevant calculus/quadrature unit. MST224 revision and accessible first-course texts provide partial comparisons, not an equal-hours or OU assessment-equivalence claim. All questions and worked reasoning original.",
+  "workload": "Five questions progress from structured reasoning to an independently coded audit. Estimated305min attempts,15min reading,40min checking/rerun/packaging. No measured student timing claimed."
+}

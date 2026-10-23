@@ -1,0 +1,32 @@
+{
+  "assessment": "M101 TMA03",
+  "searches": [
+    "USGS water tank flow calibration",
+    "NIST water flow calibration tank"
+  ],
+  "selected": [
+    {
+      "id": "M101-TMA03-F01",
+      "source": "https://www.usgs.gov/media/images/hif-constant-head-tank",
+      "asset": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/USGS_HIF_constantheadtank.jpg",
+      "creator": "USGS Hydrologic Instrumentation Facility",
+      "terms": "Public Domain explicitly stated on source page",
+      "modifications": "None; resized only by display styling",
+      "dimensions": [
+        2552,
+        3854
+      ],
+      "sha256": "76a12bd956b2ba90f897ec1ef21e8f449b533f500ebe7ab49542bc33861689c4",
+      "inspection": "Actual full photograph viewed; cylindrical outdoor tank, ladder and pipework. Caption separates actual facility from invented tapered vessel and readings. Source HTML retained locally. Earlier M101 source identities searched; this asset not previously published."
+    },
+    {
+      "id": "M101-TMA03-F02",
+      "creator": "LibraUni",
+      "terms": "CC BY-NC-SA4.0",
+      "purpose": "Clarify vertical coordinate, internal radius and horizontal slicing without supplying computed area or integral. Explicitly schematic. Formula provides equivalent text."
+    }
+  ],
+  "candidateDisposition": "USGS page accessible through direct retrieval despite web-reader challenge. NIST flow-standard page inspected as an alternate, not used. No need to reuse earlier water-tower, planimeter or rain-calibration images.",
+  "presentation": "Photograph beside capacity/inflow question; original labelled slice diagram immediately follows model. No image quota. Native MathML and readable table provide primary problem data.",
+  "interactivesVideos": "Not selected for independent assessment: self-contained questions and learner-produced investigation provide purposeful activity; answer-generating controls would undermine evidence."
+}
