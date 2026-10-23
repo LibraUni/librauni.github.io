@@ -1,3 +1,4 @@
+import {addM101Tma02} from './m101-tma02-teaching.mjs';
 import {addM101Unit7,m101Unit7Paths} from './m101-unit7-teaching.mjs';
 import {addM101Unit6,m101Unit6Paths} from './m101-unit6-teaching.mjs';
 import {addM101Unit5,m101Unit5Paths} from './m101-unit5-teaching.mjs';
@@ -12,6 +13,7 @@ export const m101Lesson3=m101Unit+'l03/';
 export const m101Lesson4=m101Unit+'l04/';
 export const m101Lesson5=m101Unit+'l05/';
 export const m101TeachingPaths=[...m101Unit7Paths,...m101Unit6Paths,...m101Unit5Paths,...m101Unit4Paths,m101Home,m101Home+'assessments/',m101Home+'assessments/tma01/',m101Unit,m101Lesson,m101Lesson2,m101Lesson3,m101Lesson4,m101Lesson5,m101Home+'b01/u02/',m101Home+'b01/u02/l01/',m101Home+'b01/u02/l02/',m101Home+'b01/u02/l03/',m101Home+'b01/u02/l04/',m101Home+'b01/u02/l05/',m101Home+'b01/u03/',m101Home+'b01/u03/l01/',m101Home+'b01/u03/l02/',m101Home+'b01/u03/l03/',m101Home+'b01/u03/l04/',m101Home+'b01/u03/l05/',m101Home+'b01/u03/l06/'];
+m101TeachingPaths.push(m101Home+'assessments/tma02/');
 export function addM101Teaching({root,pages,extraRails,link}){
  const reading=name=>'<div data-search-status="available" class="teaching-reading'+(name==='lesson4'?' m101-l04':name==='lesson5'?' m101-l05':'')+'">'+fs.readFileSync(root+'content/m101/'+name+'.html','utf8')+'</div>';
  const pagination=(a,b)=>'<nav class="lesson-pagination" aria-label="Reading sequence">'+a+b+'</nav>';
@@ -175,4 +177,5 @@ export function addM101Teaching({root,pages,extraRails,link}){
  addM101Unit5({root,pages,extraRails,link});
  addM101Unit6({root,pages,extraRails,link});
  addM101Unit7({root,pages,extraRails,link});
+ addM101Tma02({root,pages,extraRails,link});
 }

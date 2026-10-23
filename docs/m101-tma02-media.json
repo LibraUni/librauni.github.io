@@ -1,0 +1,9 @@
+{
+ "assessment":"M101 TMA 02",
+ "items":[
+  {"id":"M101-TMA02-F01","caption":"Figure M101-TMA02-1","creator":"LibraUni","type":"Original inline SVG","rights":"CC BY-NC-SA 4.0","purpose":"Identifies a sphere's radius without supplying computed rates.","checks":"Labelled radius from centre to surface; semantic title/description, caption, scalable viewBox and equivalent prompt; not a measured drawing."},
+  {"id":"M101-TMA02-F02","caption":"Figure M101-TMA02-2","file":"public/teaching/m101/tma02-sprts.png","creator":"National Institute of Standards and Technology","source":"https://www.nist.gov/image/sprts","sourceAsset":"https://www.nist.gov/sites/default/files/images/2025/09/03/SPRTs.png","rights":"NIST non-SRD work terms, https://www.nist.gov/open/license; U.S. employee work/public domain with worldwide reuse grant under the stated terms.","notice":"public/teaching/m101/tma02-image-terms.txt","verified":"Source caption, NIST credit and reuse terms inspected 23 October 2026; actual downloaded image viewed. No third-party credit identified on source.","changes":"None; original aspect ratio retained and displayed at reduced size.","purpose":"Genuine temperature-calibration context, explicitly distinguished from the supplied illustrative polynomial.","identityReview":"New underlying image in M101, not merely a renamed or recropped earlier asset."}
+ ],
+ "offline":"Original SVG, MathML, styles and photo are embedded; NIST distribution notice is included in a disclosure. No network asset is needed to read the assessment.",
+ "interactiveDecision":"No interactive is needed or included: calculation and independent code are assessed evidence, not provided answer-generating controls."
+}

@@ -25,7 +25,7 @@ test('M101 Unit7 sequence, workload, feedback and future boundary',()=>{
  assert.equal((all.match(/Hint for Exercise 7\./g)||[]).length,12);
  assert.match(read('learn/physics/stage-1/m101/b03/u08/index.html'),/data-search-status="outline"/);
  assert.match(read('learn/physics/stage-1/m101/b02/index.html'),/Block 2 teaching is complete/);
- assert.match(read('learn/physics/stage-1/m101/assessments/index.html'),/TMA 02.*not released here/);
+ assert.match(read('learn/physics/stage-1/m101/assessments/index.html'),/TMA 02.*Questions and marking criteria available/);
 });
 test('iCMA02 key, unattempted and invalid responses, feedback remain formative',()=>{
  assert.deepEqual(answerKey,[0,1,2,0,1,2,0,1,2,0]);

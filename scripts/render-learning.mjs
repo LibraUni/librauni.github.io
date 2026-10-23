@@ -125,7 +125,7 @@ export function renderLearning({root,shell,link,e}) {
   for(const part of parts){
    href+=part+'/';
    const kind={b:'Block',u:'Unit',l:'Lesson'}[part[0]];
-   chain.push({href,label:kind&&/^[bul]\d+$/.test(part)?kind+' '+Number(part.slice(1)):part==='tma01'?'TMA 01':part[0].toUpperCase()+part.slice(1)});
+   chain.push({href,label:kind&&/^[bul]\d+$/.test(part)?kind+' '+Number(part.slice(1)):/^tma\d+$/.test(part)?'TMA '+part.slice(3):part[0].toUpperCase()+part.slice(1)});
   }
   page[2]=[...rootCrumbs,...chain.map((item,i)=>i===chain.length-1?`<span aria-current="page">${e(item.label)}</span>`:link(item.href,item.label))];
  }

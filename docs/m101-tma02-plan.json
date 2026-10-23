@@ -1,0 +1,20 @@
+{
+ "assessment":"M101 TMA 02","version":"1.0","date":"2026-10-23",
+ "authorisation":"Create locally, review questions and criteria, retain worked marking guide privately, publish after checks.",
+ "standard":"Teaching Standard and Practice v1.12; fixed M101 v0.4. Project header's v1.4 is older than the canonical document.",
+ "constructionGate":"25 September recursive policy. Stage1 maps, M101 block/unit maps, complete B02 lesson blueprint and released U04–U07 inspected; question/subpart plan established before drafting. No missing relevant blueprint.",
+ "parentSources":["curriculum/stage1-map.js","curriculum/m101-blocks.js","curriculum/m101-units.js","docs/m101-block2-lesson-blueprint.json","docs/m101-block2-release-review.json"],
+ "questions":[
+  {"id":"Q01","marks":15,"minutes":40,"parts":[7,8],"scope":"Domain, radical limit, continuous extension; parameterised join and differentiability.","outcomes":["M101-O1","M101-O6"]},
+  {"id":"Q02","marks":25,"minutes":65,"parts":[7,7,7,4],"scope":"Logarithmic quotient, exponential-trigonometric composition and second derivative, implicit tangent/second derivative, first-principles reciprocal.","outcomes":["M101-O1","M101-O6"]},
+  {"id":"Q03","marks":20,"minutes":60,"parts":[8,4,4,4],"scope":"Quartic signs and interior stationary points, endpoint comparison, concavity, MVT on a subinterval.","outcomes":["M101-O1","M101-O6"]},
+  {"id":"Q04","marks":20,"minutes":50,"parts":[6,5,5,4],"scope":"Supplied sphere rates; local resistance model, exact tolerance interval and time rate with units.","outcomes":["M101-O1","M101-O5","M101-O6"]},
+  {"id":"Q05","marks":20,"minutes":90,"parts":[4,5,5,3,3],"scope":"Independent reusable forward/central code, rational predictions, refinement and shifted-output experiment, corner counterexample, fresh run and report.","outcomes":["M101-O1","M101-O5","M101-O6"]}
+ ],
+ "minutes":{"reading":15,"questions":305,"checkingPackaging":40,"total":360},
+ "boundary":"No integration, Taylor theory, general numerical solver, mandatory plotting, experiments or new physical laws. No learner record, deadline, threshold or weighting change.",
+ "mediaPlan":"Distinct verified NIST calibration photograph beside the resistance context; original sphere/radius schematic supplies geometry without computed answers. No repeat of earlier M101 image identities. No interactive answer-generating aid.",
+ "calibration":"Private OU MST224 U1 pp42–50, Ex27/29–34 and worked examples3–5 inspected; prior-calculus revision differs from M101 first teaching. Supplied introductory MST124 calculus chapter absent. OpenStax2.3 and FNC5.5 supplement domain/limits and numerical reasoning. Original tasks, not number-swapped source exercises.",
+ "privacy":"All worked answers, criterion-level result allocations, model code and subject-check outputs in sibling work/m101-tma02-private, never inside the public checkout, dist, public downloads or public review logs.",
+ "delivery":"Public web questions and criteria plus self-contained offline HTML. Private worked guide and model code. Existing private tutoring handover; no new upload service."
+}
