@@ -1,0 +1,15 @@
+{
+  "lesson": "P101 U07 L04",
+  "standard": "1.12",
+  "sources": {
+    "7.14": "R official cars documentation, complete source50pairs and datasets DESCRIPTION.in; original historical source citation retained, not claimed inspected. Source does not supply uncertainties or stopping-start protocol. R COPYING version2 inspected and packaged separately.",
+    "7.15\u20137.18": "Adjacent P101U03L03 actual model/residual prose inspected; original comparison/report/code development. NASA drop-frame source and actual pixels inspected. No exact OU empirical-comparison match; mathematical exposition comparison Unit5 pp104\u2013106/109.",
+    "practice": "OpenStax UP1 Ch3 problems30\u201336 and39 read for motion/graph prerequisites; multi-model dataset/report task original synthesis, beyond direct exercise match. Stanford2019 real-data candidate rejected: CSV404 and restrictive reuse; R chosen for stable source and explicit redistribution terms."
+  },
+  "subject": "All50pairs/source order verified unchanged;100kinematic distance comparisons via stopping time independently check energy formula; main/sensitivity summaries recomputed. Rows39/43 recalculated. Dataset plotted without connected observations.",
+  "reader": "Replaced synthetic-only investigation before writing L04 with authentic historical observations. Explicitly acknowledge illustrative parameters selected after scale inspection, not independent predictive testing. Added same-speed spread and sensitivity reversal to prevent unjustified B-is-best claim. Units and residual sign established before code. No statistical fitting or invented uncertainty.",
+  "visual": "Six standalone1440/390/320theme/noJS cases pass; observed/residual desktop passage inspected. Caption identifies speed axis as separate observations; distinct NASA photograph gives instrumentation context.",
+  "workload": "60reading90written60Python30feedback; activities20+20+25+25written. Reproducibility is integrated within Python allowance.",
+  "disposition": "Sequential lesson review complete. Final notebook/site/whole-unit checks pending. Proceed closing lesson.",
+  "finalResolution": "All deferred integrated/notebook/whole-unit checks resolved in p101-u07-whole-unit-review.json and p101-u07-checks. Sequential review disposition above is retained as history."
+}

@@ -1,0 +1,75 @@
+{
+  "unit": "P101 U07 Thermal transfers and testing a motion model",
+  "standard": "1.12; fixed illustrated M101 v0.4",
+  "date": "2026-10-23",
+  "authority": "User requests all five lessons locally with sequential lesson reviews, complete closure then publication after required checks.",
+  "construction": {
+    "policy": "1.0",
+    "gate": "All 20 B02 lessons already blueprinted; all sections for each U07 lesson listed here before authoring.",
+    "parents": [
+      "curriculum/p101-block2-lessons.js",
+      "curriculum/p101-units.js",
+      "curriculum/p101-blocks.js",
+      "curriculum/stage1-map.js",
+      "curriculum/coverage.js",
+      "docs/curriculum-authoring.md"
+    ],
+    "dependencies": "P101 U06 energy/system reasoning, U02 measurement limits, U03 residuals/Python; M101 U05 differentiation required before L03. Earlier M101 U05 already authored; no inference of learner completion.",
+    "wider": "B02 closure; TMA02 retains separate6h and stays unreleased. B03 oscillations next. P201 thermal/rotation depth and X201 inference/apparatus limitations remain.",
+    "disposition": "Ready for publication through existing required checks"
+  },
+  "hours": [
+    3,
+    4,
+    3,
+    4,
+    4
+  ],
+  "pythonHours": [
+    0,
+    1,
+    1,
+    1,
+    0
+  ],
+  "sections": [
+    [
+      "A reproducible temperature",
+      "Temperature levels and temperature changes",
+      "Energy stored and energy transferred",
+      "A microscopic picture with a macroscopic boundary"
+    ],
+    [
+      "From a temperature rise to an energy change",
+      "Heat and work in one account",
+      "Two bodies reaching a common temperature",
+      "Checking a thermal calculation in Python",
+      "What a simple thermal model leaves out"
+    ],
+    [
+      "Position, velocity and acceleration",
+      "Signs, turning and the shape of motion",
+      "Checking a derivative numerically",
+      "A motion function another person can use"
+    ],
+    [
+      "Make the comparison fair",
+      "Read the residuals",
+      "Locate the source of disagreement",
+      "A reproducible comparison in Python",
+      "Write a bounded conclusion"
+    ],
+    [
+      "Connecting the block",
+      "Cumulative exercises",
+      "Formative iCMA 02",
+      "Reference and conclusion"
+    ]
+  ],
+  "practiceBudget": "L01 written90 feedback30; L02 written90 Python60 feedback30; L03 written50 Python60 feedback30; L04 written90 Python60 feedback30. L05 explanation40, written100 (synthesis10+14exercises90), feedback100 (solutions/corrections40+iCMAattempt30+feedback/retry30). Total1080min,Python180min.",
+  "media": "Intro NASA Clipper TVAC; L01 original equilibrium/scales/microscopic diagrams plus instrument photo sought; L02 energy boundaries and mixing figure/explorer; L03 NASA drop tower and linked motion curves; L04 separate NASA frame photograph, observations/residual plots. L05 method map plus return links. All new photos searched by source identity against prior P101, no matches.",
+  "data": "Real R cars dataset:50 historical stopping observations, full source/order retained; GNU GPLv2 source+licence included. Original synthetic-record plan replaced before L04 authoring to strengthen empirical comparison. Dataset metadata gaps explicitly taught; illustrative parameter choices not called fitted or independent.",
+  "interactive": "L02 vary one heat capacity at fixed starting temperatures; predict equilibrium and inspect energy transfers. Static worked cases and table provide equivalent reasoning; no motion.",
+  "review": "Subject, reader, visual and continuous whole-lesson passes sequentially; whole-unit/block review after closure. Distinct author reviews, not independent human peer review.",
+  "status": "All five lessons and closing resources complete; local release checks passed"
+}

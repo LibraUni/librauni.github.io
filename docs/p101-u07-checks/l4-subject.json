@@ -1,0 +1,15 @@
+{
+  "source_pairs_unchanged": 50,
+  "independent_kinematic_distance_checks": 100,
+  "summaries": {
+    "3": [
+      4.613327997269334,
+      3.335786297002666
+    ],
+    "2.5": [
+      3.5981204924416,
+      3.6432378370047998
+    ]
+  },
+  "source_sha256": "8f115b8c3a08f8d502a443bdab51ba19b90a0c96e7eebbd2d7e1a17b958b52b9"
+}

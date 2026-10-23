@@ -1,0 +1,65 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "Temperature",
+      "\\(T/\\mathrm K=\\theta/{}^\\circ\\mathrm C+273.15\\). A change of 1 \u00b0C equals a change of 1 K. Do not add the offset to a temperature interval."
+    ],
+    [
+      "Understand",
+      "State and transfer",
+      "Internal energy belongs to the system\u2019s microscopic state. Heat is transfer caused by a temperature difference; work is another transfer mechanism. Neither is stored \u201cheat\u201d. Choose the system boundary."
+    ],
+    [
+      "Recall",
+      "First law",
+      "\\(\\Delta E_{\\mathrm{int}}=Q+W_{\\mathrm{on}}=Q-W_{\\mathrm{by}}\\) when other stored-energy changes are negligible. Inward heat and work on the system are positive."
+    ],
+    [
+      "Understand",
+      "Heat capacity",
+      "\\(\\Delta E_{\\mathrm{int}}=C\\Delta T=mc\\Delta T\\), with \\(C\\) in J/K and \\(c\\) in J/(kg K). Use an appropriate approximately constant capacity, fixed phase and sufficiently uniform temperature; include other energy changes when relevant."
+    ],
+    [
+      "Recall",
+      "Isolated equilibrium",
+      "\\(T_f=\\frac{C_1T_1+C_2T_2}{C_1+C_2}\\). Positive capacities; common final temperature; no external heat, work or phase change. Include a vessel as another term if needed. The endpoint lies between the starting levels."
+    ],
+    [
+      "Understand",
+      "Microscopic model",
+      "For a dilute ideal monatomic gas, temperature tracks mean translational kinetic energy per particle. Total internal energy also depends on particle number. This is not a universal microscopic formula for all materials."
+    ],
+    [
+      "Recall",
+      "Rates of motion",
+      "\\(v=\\frac{\\mathrm dx}{\\mathrm dt}\\), \\(a=\\frac{\\mathrm dv}{\\mathrm dt}\\). For \\(x=x_0+v_0t+\\tfrac12at^2\\), constant \\(a\\) gives \\(v=v_0+at\\). A zero of velocity is a turn only if velocity changes sign."
+    ],
+    [
+      "Understand",
+      "Speed and signs",
+      "Speed is \\(|v|\\). Away from \\(v=0\\), equal signs of \\(v\\) and \\(a\\) mean increasing speed; opposite signs mean decreasing speed. Displacement and distance are different."
+    ],
+    [
+      "Consult",
+      "Centred estimate",
+      "\\(v(t)\\approx\\frac{x(t+h)-x(t-h)}{2h}\\), with \\(h>0\\) and both sample times inside the domain. Reducing \\(h\\) can reduce approximation error while amplifying rounded-input effects."
+    ],
+    [
+      "Consult",
+      "Stopping models",
+      "For initial speed \\(v>0\\), constant braking magnitude \\(b>0\\): \\(t_A=\\frac{v}{b}\\), \\(d_A=\\frac{v^2}{2b}\\). A constant-speed delay \\(\\tau\\geq0\\) adds \\(\\tau\\) to time and \\(v\\tau\\) to distance."
+    ],
+    [
+      "Recall",
+      "Residual",
+      "\\(r_i=d_{\\mathrm{observed},i}-d_{\\mathrm{predicted},i}\\); \\(\\mathrm{MAR}=\\frac{1}{n}\\sum_i|r_i|\\). Keep repeated observations. Plot residuals as well as calculating a summary."
+    ],
+    [
+      "Understand",
+      "Evidence and units",
+      "1 mph = 0.44704 m/s; 1 ft = 0.3048 m. A benchmark tests implementation. Observations test predictions under documented conditions. A smaller MAR alone does not identify a cause or validate a universal law."
+    ]
+  ],
+  "code": "v = speed_mph * 0.44704\nobserved = distance_ft * 0.3048\npredicted = v**2 / (2*b) + v*tau\nresidual = observed - predicted\nmar = sum(abs(r) for r in residual) / len(residual)"
+}

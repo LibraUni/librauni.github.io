@@ -1,0 +1,15 @@
+{
+  "lesson": "P101 U07 L03",
+  "standard": "1.12",
+  "sources": {
+    "7.10\u20137.11": "OpenStax UniversityPhysics1 3.2 Eq3.4 and3.3 Eq3.9/Example3.6 inspected; Ch3 problems30\u201336/39 inspected for signs, graphs and value/rate distinctions. Original motion and non-reversal examples, not numerical variants of a source question.",
+    "7.12\u20137.13": "M101U05L02 polynomial-rule teaching inspected; P101U03L03 residual introduction inspected. Original finite-step comparison and Python synthesis.",
+    "OU": "Supplied Unit5 pp104\u2013106/109 actual geometric worked reasoning and signed differences inspected; no supplied OU elementary differentiation unit.",
+    "context": "NASA Glenn2.2SecondDropTower official description and actual photo inspected. Near-weightlessness distinguished from zero gravitational acceleration."
+  },
+  "subject": "5table rows,6centred-difference cases,5invalid inputs,fall distance,rounding bound and non-reversal reviewed and independently recomputed; l3-subject.json.",
+  "reader": "Continuous review after L02. Explicit M101U05 readiness gate; differentiate before substituting; coefficient units written before numerical code. Revised zero velocity claim to require sign change, illustrated by cubic. Centred quadratic exactness explicitly exceptional.",
+  "visual": "Six1440/390/320theme/offline noJS cases pass with all feedback opened; actual three-graph desktop section inspected. No duplicate photo identity in prior P101.",
+  "disposition": "Sequential review complete; final integrated/notebook checks due. Proceed L04.",
+  "finalResolution": "All deferred integrated/notebook/whole-unit checks resolved in p101-u07-whole-unit-review.json and p101-u07-checks. Sequential review disposition above is retained as history."
+}

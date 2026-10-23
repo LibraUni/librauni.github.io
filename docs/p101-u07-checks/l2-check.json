@@ -1,0 +1,11 @@
+{
+  "cases": 27,
+  "checks_per_case": [
+    "endpoint bounds",
+    "energy residual",
+    "exchange symmetry",
+    "temperature shift"
+  ],
+  "invalid_cases": 4,
+  "worked_examples": "all checked"
+}

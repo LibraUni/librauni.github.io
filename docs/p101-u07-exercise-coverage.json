@@ -1,0 +1,92 @@
+{
+  "attemptMinutes": 90,
+  "feedbackMinutes": 40,
+  "exercises": [
+    {
+      "id": "7.1",
+      "title": "Temperature and interval",
+      "minutes": 5,
+      "coverage": "L01"
+    },
+    {
+      "id": "7.2",
+      "title": "One temperature, two amounts",
+      "minutes": 5,
+      "coverage": "L01"
+    },
+    {
+      "id": "7.3",
+      "title": "Name the transfer",
+      "minutes": 5,
+      "coverage": "L01"
+    },
+    {
+      "id": "7.4",
+      "title": "Signed first law",
+      "minutes": 7,
+      "coverage": "L02"
+    },
+    {
+      "id": "7.5",
+      "title": "Three-body equilibrium",
+      "minutes": 8,
+      "coverage": "L02"
+    },
+    {
+      "id": "7.6",
+      "title": "Infer a missing transfer",
+      "minutes": 7,
+      "coverage": "L02"
+    },
+    {
+      "id": "7.7",
+      "title": "Reject an unsuitable model",
+      "minutes": 6,
+      "coverage": "L02"
+    },
+    {
+      "id": "7.8",
+      "title": "A complete return",
+      "minutes": 7,
+      "coverage": "L03"
+    },
+    {
+      "id": "7.9",
+      "title": "A changing acceleration",
+      "minutes": 6,
+      "coverage": "L03"
+    },
+    {
+      "id": "7.10",
+      "title": "A finite-step check",
+      "minutes": 6,
+      "coverage": "L03"
+    },
+    {
+      "id": "7.11",
+      "title": "Stopping and residuals",
+      "minutes": 7,
+      "coverage": "L04"
+    },
+    {
+      "id": "7.12",
+      "title": "A fair summary",
+      "minutes": 6,
+      "coverage": "L04"
+    },
+    {
+      "id": "7.13",
+      "title": "Audit the code and the claim",
+      "minutes": 8,
+      "coverage": "L04"
+    },
+    {
+      "id": "7.14",
+      "title": "From collision to warming",
+      "minutes": 7,
+      "coverage": "U06+L02 synthesis"
+    }
+  ],
+  "checkpoint": "10questions across U04\u2013U07;30attempt+30feedback/retry;no formal marks",
+  "calibration": "OpenStax CP2e Ch14 questions1\u20137,Ch15questions2\u20134;UP1Ch3questions30\u201336,39 inspected. Our set adds diagnosis,conditional claims,code critique and mixed collision/thermal reasoning;original questions,not changed-number copies. No exact private OU physics match."
+}

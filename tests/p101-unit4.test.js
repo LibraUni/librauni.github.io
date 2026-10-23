@@ -21,9 +21,9 @@ test('P101 Unit 4 published opening and Lesson 1 remain byte-identical',()=>{
  const plan=JSON.parse(fs.readFileSync(new URL('../docs/p101-u04-completion-plan.json',import.meta.url)));
  for(const [file,hash] of Object.entries(plan.preservation))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../content/p101/'+file,import.meta.url))).digest('hex'),hash,file);
 });
-test('Unit 4 closing resources exist while Unit 7 has no published teaching',()=>{
+test('Unit 4 closing resources exist while Unit 8 remains an outline',()=>{
  const content=fs.readFileSync(new URL('../content/p101/unit4-lesson5.html',import.meta.url),'utf8');
  assert.equal((content.match(/class="exercise"/g)||[]).length,12);assert.doesNotMatch(content,/<details[^>]*\bopen\b/);
  for(const file of ['P101-Unit-4-reference.pdf','P101-U04-projectile.ipynb','P101-U04-projectile-investigation.zip'])assert.ok(fs.statSync(new URL('../public/teaching/p101/u04/'+file,import.meta.url)).size>100);
- for(let n=1;n<=5;n++){const page=fs.readFileSync(new URL(`../learn/physics/stage-1/p101/b02/u07/l0${n}/index.html`,import.meta.url),'utf8');assert.doesNotMatch(page,/data-search-status="available"/);assert.match(page,/Teaching is in preparation/);}
+ const next=fs.readFileSync(new URL('../learn/physics/stage-1/p101/b03/u08/index.html',import.meta.url),'utf8');assert.doesNotMatch(next,/data-search-status="available"/);
 });

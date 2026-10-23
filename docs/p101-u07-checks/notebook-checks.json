@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Thermal",
+    "schema": "valid",
+    "starterFreshKernel": "pass",
+    "completedSpecimenFreshKernel": "pass",
+    "publicOutputs": "empty"
+  },
+  {
+    "name": "Motion",
+    "schema": "valid",
+    "starterFreshKernel": "pass",
+    "completedSpecimenFreshKernel": "pass",
+    "publicOutputs": "empty"
+  },
+  {
+    "name": "Comparison",
+    "schema": "valid",
+    "starterFreshKernel": "pass",
+    "completedSpecimenFreshKernel": "pass",
+    "publicOutputs": "empty"
+  }
+]

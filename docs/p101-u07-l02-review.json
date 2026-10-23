@@ -1,0 +1,19 @@
+{
+  "lesson": "P101 U07 L02",
+  "standard": "1.12",
+  "sources": {
+    "7.5": "OpenStax CollegePhysics2e14.2 Eq14.2 and Example14.1: specific-heat scaling and container capacity; our fixed-phase solid/liquid scope explicitly retains negligible expansion work.",
+    "7.6": "15.1 Eq15.1 and sign discussion; our Won convention translated explicitly from their Wby.",
+    "7.7,7.9": "14.2 calorimetry development: derive weighted average, verify signed transfers, add vessel.",
+    "7.8": "Original computational synthesis based on taught P101U01/U03 methods; no exact OU counterpart.",
+    "OU": "Actual supplied Unit5 pp104\u2013106/109 inspected for developing formula from conditions, signed differences and independent check; no private thermal chapter.",
+    "practice": "Actual CollegePhysics2e Ch14 problems1\u20137 and15 problems2\u20134 inspected. Our original tasks add boundary choice, error diagnosis and reproducibility; no evaporation, engines or statistics.",
+    "interactive": "PhET Energy Forms and Changes official landing page inspected but rendered content absent in text tool; PhET-authored2019 teacher guide via ASU mirror inspected for predict/compare purpose and finite energy-chunk limits. Partial lower-level comparator, not a claimed undergraduate match or simulation run. Original endpoint-only control avoids misleading time dynamics; static table equivalent."
+  },
+  "subject": "27 independent cases for bounds, energy cancellation, exchange symmetry and temperature shift;4 invalid-input checks; all numerical examples and activities recomputed.",
+  "reader": "Whole lesson read against L01 and fixedv0.4. Explicitly distinguished specific capacity/material from whole-body capacity; added work-convention translation and note on Celsius weighted-average invariance. Vessel example supplies physical reason for discrepancy before discussing code.",
+  "visual": "Six noJS/offline viewport/theme cases1440/390/320, feedback open, pass. Actual desktop mixing passage and mobile code section inspected. Interactive keyboard/reset and site code-copy integration remain in final checks.",
+  "media": "Energy-balance diagram and capacity table support calculations; earlier unique chamber photograph supplies real thermal-system context. Additional NASA calorimeter search gave no suitable asset; no repeat photo inserted merely for quota.",
+  "disposition": "Sequential lesson review complete; proceed to L03, retaining final interaction/notebook/site checks.",
+  "finalResolution": "All deferred integrated/notebook/whole-unit checks resolved in p101-u07-whole-unit-review.json and p101-u07-checks. Sequential review disposition above is retained as history."
+}

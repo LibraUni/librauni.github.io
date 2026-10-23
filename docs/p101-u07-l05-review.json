@@ -1,0 +1,16 @@
+{
+  "lesson": "P101 U07 L05",
+  "standard": "1.12",
+  "sections": {
+    "7.19": "Original synthesis of U04\u2013U07; adjacent U06 closing and approved M101 sample inspected.",
+    "7.20": "OpenStax CP2e Ch14 problems1\u20137, Ch15 problems2\u20134; UP1 Ch3 problems30\u201336/39 read for thermal/motion difficulty. Our mixed diagnostic questions are original and require taught methods; no exact OU thermal match.",
+    "7.21": "Original Block2 checkpoint using U04\u2013U07 taught concepts; non-assessed local feedback.",
+    "7.22": "Reference compiled from taught results, shared JSON for web/PDF; original conclusion."
+  },
+  "subject": "Separately recalculated temperature, three-body, missing-transfer, polynomial, rounding, stopping and collision/thermal solutions. Inspected conceptual answers and all ten keys.",
+  "reader": "Removed compressed spacing from closing frame; clarified separate TMA02 allowance, no saved mark, model conditions. Full solutions initially collapsed; hints separate. Exercises progress from recall through method selection and critique.",
+  "visual": "Twelve standalone cases for closure/reference pass at1440/390/320 light/dark with noJS and all feedback open. Both PDF pages inspected at1400px: no clipping, readable notation/code, two pages. Final site and updated title recheck pending.",
+  "workload": "240min:40synthesis/reference/conclusion+10activity+90exercises+40correction+30checkpoint+30retry.",
+  "disposition": "Sequential review complete; proceed whole-unit and integrated release checks.",
+  "finalResolution": "All deferred integrated/notebook/whole-unit checks resolved in p101-u07-whole-unit-review.json and p101-u07-checks. Sequential review disposition above is retained as history."
+}

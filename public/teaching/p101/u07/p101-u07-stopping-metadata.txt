@@ -1,0 +1,11 @@
+P101 Unit7 stopping comparison · version1.0 ·23October2026
+Source: R datasets::cars, R Core Team and contributors.
+Documentation https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/cars.html
+Data https://raw.githubusercontent.com/wch/r-source/trunk/src/library/datasets/data/cars.R
+Historical source identified by R: M.Ezekiel(1930), Methods of Correlation Analysis, Wiley.
+50 observations from the1920s. Original columns speed(mph),dist(ft).
+CSV reformatted by LibraUni23October2026: columns renamed speed_mph,distance_ft; added1-based row; all50 pairs/order unchanged. No fitted or synthetic observations.
+SI conversions: mph*0.44704=m/s; ft*0.3048=m. No rounding applied in calculations.
+Source does not specify uncertainty, calibration, vehicle/surface identity or stopping-start event; do not infer precision from integer formatting.
+Illustrative models: immediate constant braking b=3m/s2; comparison adds delay0.50s at initial speed. Parameters selected after inspecting scale, not independently measured or formally fitted. Sensitivity trial b=2.5m/s2.
+Data/source/derived data plots retain GNU GPLv2 as supplied with R; see COPYING-R.txt. No warranty. Original analysis code MIT; teaching CC BY-NC-SA4.0; branding excluded. The separate licences remain attached.

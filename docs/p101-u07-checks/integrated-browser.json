@@ -1,0 +1,708 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "name": "unit7-reference",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-reference",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 27,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 0,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson1",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 13,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson2",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 54,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson3",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 53,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson4",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 33,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    }
+  ],
+  "noJS": 5,
+  "exactClipboard": 3,
+  "zoomProxy": 2
+}

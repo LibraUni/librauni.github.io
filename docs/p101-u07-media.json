@@ -1,0 +1,86 @@
+{
+  "standard": "1.12",
+  "reference": "Fixed illustrated M101 v0.4 inspected before drafting. Prose carries the teaching; media selected for explanatory purpose, not quota.",
+  "photos": [
+    {
+      "figure": "7.1",
+      "placement": "unit7",
+      "file": "public/teaching/p101/u07/clipper.jpg",
+      "creator": "NASA/JPL-Caltech",
+      "sourceIdentity": "PIA26065",
+      "source": "https://science.nasa.gov/photojournal/europa-clipper-rolls-into-thermal-vacuum-testing/",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "NASA educational/editorial use under its published terms; not relicensed as CC. No endorsement implied.",
+      "modifications": "Unaltered downloaded source rendition; responsive display only",
+      "purpose": "Spacecraft thermal test conditions and nonuniform assemblies",
+      "pixels": "Actual asset inspected",
+      "moduleDeduplication": "Source identity and filenames checked against preceding P101 placements; no prior placement found. Offline equivalent is same placement.",
+      "sha256": "439bd14aaedbbfa02c3498fd627f25bb62bdb7ebf6a3ec59cf889002ca8b9a6a"
+    },
+    {
+      "figure": "7.6",
+      "placement": "unit7-lesson3",
+      "file": "public/teaching/p101/u07/drop-tower.jpg",
+      "creator": "NASA Glenn",
+      "sourceIdentity": "exteriorview-m",
+      "source": "https://www.nasa.gov/centers-and-facilities/glenn/2-2-second-drop-tower/",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "NASA educational/editorial use under its published terms; not relicensed as CC. No endorsement implied.",
+      "modifications": "Unaltered downloaded source rendition; responsive display only",
+      "purpose": "Finite fall domain and physical scale",
+      "pixels": "Actual asset inspected",
+      "moduleDeduplication": "Source identity and filenames checked against preceding P101 placements; no prior placement found. Offline equivalent is same placement.",
+      "sha256": "21e1189b57195dc45927af282f01e449dff14771136dbb380c726f2d8f4acc3b"
+    },
+    {
+      "figure": "7.10",
+      "placement": "unit7-lesson4",
+      "file": "public/teaching/p101/u07/drop-frame.jpg",
+      "creator": "NASA Glenn",
+      "sourceIdentity": "1994-05829",
+      "source": "https://www.nasa.gov/centers-and-facilities/glenn/2-2-second-drop-tower/",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "NASA educational/editorial use under its published terms; not relicensed as CC. No endorsement implied.",
+      "modifications": "Unaltered downloaded source rendition; responsive display only",
+      "purpose": "Apparatus context needed alongside a data table",
+      "pixels": "Actual asset inspected",
+      "moduleDeduplication": "Source identity and filenames checked against preceding P101 placements; no prior placement found. Offline equivalent is same placement.",
+      "sha256": "c244482427b75f8f0c0987db21bcabcf1da32cf0437521205ccfed283a668331"
+    }
+  ],
+  "originalDiagrams": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    11
+  ],
+  "dataPlots": [
+    8,
+    9
+  ],
+  "judgement": {
+    "L01": "Three original diagrams distinguish scales, transfers and particle mean/total. Thermometer source searched; no verified freely reusable instrument asset selected. The introduction immediately preceding this lesson has a substantial new NASA thermal-testing image. Here an instrument photo would add less than the three explanations; substantive illustrated reading retained, no claim that diagrams alone discharge the search requirement.",
+    "L02": "Original energy-balance diagram and purposeful capacity explorer with static table; calorimeter candidates considered during drafting, no verified suitable asset selected. The visual sequence moves from boundary to balance and interactive endpoint, rather than repeating the introductory thermal-chamber photo.",
+    "L03": "New sourced facility photograph plus linked three-panel mathematical graph.",
+    "L04": "Authentic data plots, residual plot and different sourced apparatus photograph.",
+    "L05": "Original method-selection map supports synthesis; exercise/reference space devoted to attempted reasoning and worked feedback. No arbitrary repeated image.",
+    "reference": "Compact retrieval table/PDF; branding only, no repeated teaching photograph."
+  },
+  "interactive": {
+    "source": "Original endpoint explorer; optional PhET teacher guide comparison, not copied simulation",
+    "question": "How does increasing the cooler body capacity move equilibrium and energy received?",
+    "conditions": "Positive constant capacities, no phase change/work/external transfer; fixed initial temperatures.",
+    "alternatives": "Static four-case table and worked reasoning; no animation.",
+    "checks": "Endpoint arithmetic checked; native range keyboard/reset, reduced motion and noJS alternative checked in integrated review."
+  },
+  "dataset": {
+    "source": "https://raw.githubusercontent.com/wch/r-source/trunk/src/library/datasets/data/cars.R",
+    "documentation": "https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/cars.html",
+    "licence": "GNU GPLv2, full COPYING-R.txt and original cars-source.R packaged with CSV and plots. Separate aggregate from original teaching/code.",
+    "changes": "CSV headers renamed and row number added; 50 pairs/order unchanged; SI conversion in analysis, no rounded input replacement.",
+    "plotting": "Original SVG geometry from all50 records, axes/units/markers/captions verified against source; dataset provenance retained.",
+    "limitations": "Historical metadata sparse; original Ezekiel1930 book cited by R but not inspected. No invented uncertainties or protocol. Parameters illustrative and inspected on same data; sensitivity included."
+  }
+}

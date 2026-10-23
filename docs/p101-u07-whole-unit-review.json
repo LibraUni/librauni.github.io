@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-23",
+  "status": "All local release checks passed; ready for hosted security/deployment gate and live verification.",
+  "authorization": "User requests complete P101 Unit7 locally, one lesson at a time, closing resources then publish when required checks pass.",
+  "standard": "Teaching Standard and Practice1.12; fixed illustrated M101 v0.4. No reduction authorised or taken.",
+  "sequence": "Lessons1\u20134 separately drafted, calculated, rendered and continuously reviewed before advancing. Lesson5 closing/practice/reference then reviewed separately; records retained. Whole-unit pass followed.",
+  "scope": "18h including3hPython; five lessons,22sections,13worked examples,19activities,14cumulative exercises,10formative iCMA02 questions,11figures,3notebooks/scripts,2pagePDF,webreference,offlinepack. Approved scope and dependencies retained; TMA02 separate6h and unreleased.",
+  "subject": "Temperature levels/intervals, transfer signs, first-law conventions and fixed-phase assumptions reviewed. Thermal examples, bounds/cancellation/symmetry/shift and invalid inputs checked; motion rows, centered estimates, nonreversal, rounding and fall checked; all50data pairs verified,100 stopping kinematic checks and sensitivity results recomputed.14closing solutions independently recalculated; all10checkpoint keys inspected. Distinct author checks, not independent human peer review.",
+  "reader": "Read the continuous argument from U06 stores/boundaries into temperature and transfers, capacity and equilibrium, derivative motion, empirical comparison, then method selection and closure. Explicit M101U05 prerequisite beforeL03; U03 residual/Python knowledge reused. Notation Eint avoids conflict with Ug. Mean versus total, zero velocity versus reversal, code versus physical evidence, and selected versus fitted parameters are handled where needed. Representative openings/worked reasoning compared with fixed v0.4 and actual source passages. No unintroduced statistical fitting/thermodynamic cycles required.",
+  "revisions": "Replaced proposed synthetic comparison with real licensed historical data beforeL04; retained repeated observations and added parameter-sensitivity reversal. Corrected particle marks to oppose bulk direction. Restored prose spacing and image dimensions/credits. Changed long Exercise7.5 inline arithmetic to a properly typeset display after inspecting all solutions. Reference fractions improved; module title corrected.",
+  "practice": "Coverage map retained.14exercises90min attempts+40feedback;19activities across unit with written/Python allocations;10item checkpoint30attempt+30feedback/retry. Hidden hints/solutions are available withoutJavaScript. Exercise14 connects U06 momentum/mechanical energy to conditional thermal partition. Formative checkpoint local only: no pass/completion award, storage or submission.",
+  "budget": "Lesson hours3+4+3+4+4=18;Python0+1+1+1+0=3. Reading/attempt/feedback included in each opening. Closing240min includes synthesis/reference40,methodactivity10,exercises90,correction40,checkpoint30,retry30. Estimates not empirically student-tested.",
+  "calibration": "Actual supplied OU Coordinate Geometry Unit5 printed104\u2013106,109 for editorial reasoning/notation; no supplied thermal or elementary differentiation chapters. OpenStax actual CP2e13.1,13.4,14.1,14.2,14.3opening,15.1 and equivalent exercise passages; UP1 3.2,3.3 and Ch3problems30\u201336/39. Section mappings/gaps in lesson reviews. Original practice/code/synthesis, not close paraphrase. NASA official images/context and R metadata/source inspected.",
+  "visual": "70 integrated viewport/theme cases320/390/640/900/1440;5noJS disclosures; keyboard exact-copy checks on lessons2\u20134;2xzoom proxy. All14opened exercise solutions and4dark examples inspected. Actual NASA images and linked graphs inspected. Both final PDF pages inspected; native MathML and static alternatives work offline. Scoped styles preserve earlier teaching. Final focused recheck follows Exercise7.5 correction. Final focused10viewport/theme cases pass; corrected Exercise7.5 display visually inspected at390px.",
+  "media": "Three distinct NASA photographs, six original explanatory diagrams and two real-data plots. Source/identity/rights register retained. All-diagram lessons explicitly reviewed against illustrated reference; source searches recorded, no arbitrary repeated photograph. Interactive endpoint explorer has labelled native range/reset and equivalent static table; keyboard endpoints verified. No decorative motion/video added.",
+  "notebooks": [
+    {
+      "name": "Thermal",
+      "schema": "valid",
+      "starterFreshKernel": "pass",
+      "completedSpecimenFreshKernel": "pass",
+      "publicOutputs": "empty"
+    },
+    {
+      "name": "Motion",
+      "schema": "valid",
+      "starterFreshKernel": "pass",
+      "completedSpecimenFreshKernel": "pass",
+      "publicOutputs": "empty"
+    },
+    {
+      "name": "Comparison",
+      "schema": "valid",
+      "starterFreshKernel": "pass",
+      "completedSpecimenFreshKernel": "pass",
+      "publicOutputs": "empty"
+    }
+  ],
+  "preservation": {
+    "files": 358,
+    "changed": []
+  },
+  "limitations": "Author review, not independent human or actual learner study. No exact private OU thermal comparator. Historical dataset lacks uncertainty/apparatus/protocol details; claims bounded accordingly. No formal TMA02 question set commissioned.",
+  "releaseGate": "All local tests/build/media, notebooks, rendered exercises/PDF and interaction/offline checks must pass before push. Existing hosted workflow gates Pages deployment on Firestore security tests then repository tests/build. Verify deployed pages/assets/search afterward.",
+  "tests": "161 repository tests passed; production build/search passed (135available pages); media structural checks passed with editorial decisions recorded."
+}

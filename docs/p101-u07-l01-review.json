@@ -1,0 +1,17 @@
+{
+  "lesson": "P101 U07 L01",
+  "standard": "1.12",
+  "sources": {
+    "all": "Fixed illustrated v0.4 actual prose and examples inspected; supplied OU Unit5 pp104\u2013106 and109 (geometric exposition/definition after reasoning and worked sign choices, not a thermal comparator).",
+    "7.1\u20137.2": "OpenStax College Physics2e13.1: operational thermometer, equilibrium, scales and Example13.1; no Fahrenheit prerequisite added.",
+    "7.3": "CollegePhysics2e14.1 heat and mechanical equivalent,15.1 distinction of state and transfer; original same-input/different-route example.",
+    "7.4": "CollegePhysics2e13.4 kinetic model and14.3 phase-change opening; no ideal-gas law, statistical derivation or latent-heat calculation prerequisite.",
+    "gap": "No private OU thermal chapter supplied."
+  },
+  "practice": "Four original activities: instrument diagnosis, level/difference/ratio, boundary comparison, mean/total/bulk distinctions. Comparator13.1 conceptual questions,14.1 work discussion and13.4 idealisation; no direct OU physics practice match.90min attempts+30min feedback.",
+  "subject": "Thermal-state/transfer distinctions, signs and fixed-phase limits reviewed.6 arithmetic assertions in work/p101-u07/l1-subject.json pass. Particle figure revised from same-direction marks to opposed pairs to support no bulk movement.",
+  "reader": "Read complete lesson against v0.4; retained instrument equilibration motivation and scale-offset cancellation. Explicit Eint avoids conflict with earlier Ug. Added equal-temperature does not determine phase/mass; temperature ratios use kelvin.",
+  "visual": "12 offline intro/lesson viewport-theme cases at1440/390/320 with noJS and all feedback opened pass; actual mobile section7.2 and desktop7.3 inspected. Final particle revision needs final integrated render check.",
+  "disposition": "Lesson subject/reader/initial visual review complete; proceed to L02. Whole-unit/site/live checks pending. Author self-review, not independent human review.",
+  "finalResolution": "All deferred integrated/notebook/whole-unit checks resolved in p101-u07-whole-unit-review.json and p101-u07-checks. Sequential review disposition above is retained as history."
+}

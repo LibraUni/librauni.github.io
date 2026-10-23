@@ -1,0 +1,8 @@
+{
+  "cooling_kelvin": true,
+  "ratio": true,
+  "interval": true,
+  "exchange": true,
+  "two_routes": true,
+  "double_particles": true
+}

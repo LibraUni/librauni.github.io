@@ -1,0 +1,108 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "name": "unit7-lesson5",
+      "width": 1440,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 1440,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 900,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 900,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 640,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 640,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 390,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 390,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 320,
+      "theme": "light",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    },
+    {
+      "name": "unit7-lesson5",
+      "width": 320,
+      "theme": "dark",
+      "overflow": false,
+      "images": true,
+      "math": 56,
+      "closed": true,
+      "badAnchors": []
+    }
+  ],
+  "noJS": 5,
+  "exactClipboard": 3,
+  "zoomProxy": 2
+}
