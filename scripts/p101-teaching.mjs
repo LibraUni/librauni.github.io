@@ -1,3 +1,4 @@
+import {addP101Unit9,p101Unit9Paths} from './p101-unit9-teaching.mjs';
 import {addP101Unit8,p101Unit8Paths} from './p101-unit8-teaching.mjs';
 import {addP101Tma02,p101Tma02Path} from './p101-tma02-teaching.mjs';
 import {addP101Unit7,p101Unit7Paths} from './p101-unit7-teaching.mjs';
@@ -17,7 +18,7 @@ const unit6=block2+'u06/';
 export const p101U06LessonCount=5;
 export const p101U05LessonCount=5;
 export const p101U04LessonCount=5;
-export const p101TeachingPaths=[...p101Unit8Paths,p101Tma02Path,...p101Unit7Paths,unit6,unit6+'reference/',...Array.from({length:p101U06LessonCount},(_,i)=>unit6+'l0'+(i+1)+'/'),unit5+'reference/',unit5,...Array.from({length:p101U05LessonCount},(_,i)=>unit5+'l0'+(i+1)+'/'),...[2,3,4,5].filter(n=>n<=p101U04LessonCount).map(n=>unit4+'l0'+n+'/'),block2,unit4,unit4+'l01/',p101Home,p101Home+'orientation/',p101Home+'assessments/',p101Home+'assessments/tma01/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
+export const p101TeachingPaths=[...p101Unit9Paths,...p101Unit8Paths,p101Tma02Path,...p101Unit7Paths,unit6,unit6+'reference/',...Array.from({length:p101U06LessonCount},(_,i)=>unit6+'l0'+(i+1)+'/'),unit5+'reference/',unit5,...Array.from({length:p101U05LessonCount},(_,i)=>unit5+'l0'+(i+1)+'/'),...[2,3,4,5].filter(n=>n<=p101U04LessonCount).map(n=>unit4+'l0'+n+'/'),block2,unit4,unit4+'l01/',p101Home,p101Home+'orientation/',p101Home+'assessments/',p101Home+'assessments/tma01/',unit,lesson,unit+'l02/',unit+'l03/',unit+'l04/',unit+'l05/',unit+'l06/',unit2,unit2+'l01/',unit2+'l02/',unit2+'l03/',unit2+'l04/',unit2+'l05/',unit3,unit3+'l01/',unit3+'l02/',unit3+'l03/',unit3+'l04/',unit3+'l05/'];
 export function addP101Teaching({root,pages,extraRails,link}){
  const read=name=>'<div data-search-status="available" class="teaching-reading p101-reading">'+fs.readFileSync(root+'content/p101/'+name+'.html','utf8')+'</div>';
  const notice='';
@@ -210,5 +211,6 @@ export function addP101Teaching({root,pages,extraRails,link}){
 
  addP101Unit7({root,pages,extraRails,link});
  addP101Unit8({root,pages,extraRails,link});
+ addP101Unit9({root,pages,extraRails,link});
  addP101Tma02({root,pages,extraRails,link});
 }

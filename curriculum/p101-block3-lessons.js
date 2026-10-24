@@ -1,7 +1,7 @@
 export const p101Block3Lessons = {
   "version": "1.0",
   "date": "2026-10-24",
-  "status": "Complete B03 construction blueprint within approved 54h/8h Python; U09/U10 teaching remains in preparation.",
+  "status": "Complete B03 construction blueprint within approved 54h/8h Python; U08/U09 teaching available; U10 teaching remains in preparation.",
   "lessons": [
     {
       "id": "U08-L01",
@@ -162,9 +162,9 @@ export const p101Block3Lessons = {
       "evidence": "Labelled profiles and hand-checked wave model.",
       "handover": "U09-L02",
       "allocation": {
-        "reading": 72,
+        "reading": 75,
         "python": 60,
-        "practiceAndFeedback": 108
+        "practiceAndFeedback": 105
       }
     },
     {
@@ -188,9 +188,9 @@ export const p101Block3Lessons = {
       "evidence": "Two-profile numerical comparison with prediction.",
       "handover": "U09-L03",
       "allocation": {
-        "reading": 72,
+        "reading": 70,
         "python": 60,
-        "practiceAndFeedback": 108
+        "practiceAndFeedback": 110
       }
     },
     {
@@ -214,9 +214,9 @@ export const p101Block3Lessons = {
       "evidence": "Node locations checked by hand and code.",
       "handover": "U09-L04",
       "allocation": {
-        "reading": 72,
+        "reading": 75,
         "python": 60,
-        "practiceAndFeedback": 108
+        "practiceAndFeedback": 105
       }
     },
     {
@@ -240,9 +240,9 @@ export const p101Block3Lessons = {
       "evidence": "Explain observed patterns within model limits.",
       "handover": "U09-L05",
       "allocation": {
-        "reading": 72,
+        "reading": 65,
         "python": 0,
-        "practiceAndFeedback": 108
+        "practiceAndFeedback": 115
       }
     },
     {
@@ -266,9 +266,9 @@ export const p101Block3Lessons = {
       "evidence": "Documented conclusion and mixed exercises.",
       "handover": "U10",
       "allocation": {
-        "reading": 72,
+        "reading": 15,
         "python": 0,
-        "practiceAndFeedback": 108
+        "practiceAndFeedback": 165
       }
     },
     {

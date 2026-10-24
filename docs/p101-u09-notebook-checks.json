@@ -1,0 +1,9 @@
+{
+  "schema": "valid",
+  "publicOutputs": "empty",
+  "freshKernels": [
+    "starter",
+    "completed"
+  ],
+  "completed": "All3activities and node/nonzero/boundary/grid/phase comparisons executed"
+}

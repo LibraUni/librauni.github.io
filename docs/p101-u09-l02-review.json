@@ -1,0 +1,18 @@
+{
+  "standard": "1.12/referencev0.4",
+  "scope": "L02 sections9.5\u20139.8,Examples9.3\u20139.5,Activities9.5\u20139.8,Figure9.3;4h including1hPython",
+  "sources": {
+    "9.5": "Russell Superposition of Waves opening and opposite pulses; CollegePhysics16.10 opening. Linear condition made explicit.",
+    "9.6": "Russell constructive/destructive equation and explanatory text; supplied identity developed stepwise. OU U4pp34\u201336 cosine periodicity inspected inL01, reused.",
+    "9.7": "Original time-delay derivation using L01 phase/speed; common wavelength and arriving-amplitude conditions explicit.",
+    "9.8": "Original NumPy implementation; U08 sampling comparator; no exact privateOU match."
+  },
+  "subject": "47 scalar checks in l2-subject.json; all hand examples and path arithmetic checked.",
+  "reader": "Added pressure-background example; distinguished instantaneous value from amplitude and grid maximum from analytic maximum. Phase sign from delay explained rather than concealed. Continuous progression from pointwise addition through phase to controlled code.",
+  "visual": "6offline width/theme cases with disclosures opened; desktop phase figures/equations inspected. Keyboard-scrolling figures retain readable labels. Interactive parameter/reset/keyboard/reduced-motion checks recorded separately.",
+  "interactiveCalibration": "Russell phase-animation exposition inspected: relative phase changes are a comparison rather than elapsed physical propagation. Local implementation deliberately separates fixed phase and time, with no autoplay and static three-case equivalent. Source animation not copied; text inspected, not claimed as video viewing.",
+  "media": "Original three-case profiles support signed addition; opening NASA image provides unit context. No forced repeated photograph.",
+  "practice": "Activities include signed offsets, prediction, assumption critique and controlled code. Closing set reserved100min +40correction.",
+  "limitations": "Self-review, no human moderation or measured learner times",
+  "status": "Local subject, reader and rendered review completed before next lesson; final integration and focused checks passed."
+}

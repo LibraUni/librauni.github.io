@@ -1,0 +1,11 @@
+{
+  "status": "Local complete",
+  "scope": "9.16\u20139.18,Activity9.16,16cumulativeexercises,12reference rows+Python,conclusion",
+  "sources": "sources.json actual textbook practice comparisons; preceding lessons andU08 closure re-read for handover. Original investigation synthesis with no exact privateOU counterpart.",
+  "subject": "38 independent closing arithmetic checks plus conceptual answer review; all solutions and criteria checked against taught methods. Notebook starter/completed run in2fresh kernels; exact lesson-code consistency checked byAST.",
+  "reader": "Mixed tasks progress from fluency to interpretation, boundary rejection, controlled investigation and evidence critique. Complete node questions require multiple times; physical assumptions stated locally. Corrected ambiguous slash grouping inExercise9.12 to stackedfraction/sizeddelimiters.",
+  "visual": "All16opened exercise screenshots inspected; finalcorrected9.12 inspected again.12offlineclosing/referenceviewportcases; bothPDFpages viewed; integrateddisclosures/copy/navigation checked.",
+  "budget": "25mininvestigationwriteup+100minexercises+40mincorrection+15minreference/conclusion=180min. No addedPython hour; reuses completedL01\u2013L03work.",
+  "resources": "Web,closing and2pagePDF generated fromsame12rowJSON/code.11fileofflinepackCRCvalid;7readingpages workoffline withlocalnav.",
+  "limits": "Self-review, no independenthuman moderation; workload editorial estimate."
+}

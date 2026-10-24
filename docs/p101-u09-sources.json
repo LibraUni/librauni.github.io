@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-24",
+  "reference": "Fixed illustratedM101v0.4 actual explanatory text read, including introductions, coordinate development, worked reasoning and feedback. Current1.12 standard read; neighbouringU08 opening/closure and B03 blueprint read.",
+  "private": {
+    "file": "sources/U4_Trigonometry.pdf",
+    "passages": "Unit4 section2.3, printedpp34\u201336: sine/cosine graphs, radians, periodicity, phase translation; actual locally extracted text inspected.",
+    "fit": "Editorial and trig comparator for9.2\u20139.3,9.6,9.9\u20139.11. P101U08 already establishes radians; wave physics is additional. No exact privateOU wave/superposition/diffraction or Python practice chapter in supplied collection. No private source reproduced."
+  },
+  "public": [
+    {
+      "url": "https://www.acs.psu.edu/drussell/Demos/waves/wavemotion.html",
+      "passages": "Longitudinal/Transverse Wave Motion; Water Waves",
+      "use": "9.1 particle/propagation distinction and physical scope; linked optional context. Exposition inspected, not claimed as watched video."
+    },
+    {
+      "url": "https://www.acs.psu.edu/drussell/Demos/superposition/superposition.html",
+      "passages": "Opening; opposite pulses; Constructive and Destructive Interference; Sine waves travelling in opposite directions",
+      "use": "9.5\u20139.6,9.9\u20139.12 and explorer comparison. Original local formulas/plots; no copied animations. Explorer separates relative phase and elapsed time to prevent conflating controls."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/16-9-waves",
+      "passages": "Wave description, spatial wavelength, propagation speed relation",
+      "use": "9.1\u20139.3. Original rope explanation avoids overgeneralising ideal water motion."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference",
+      "passages": "Signed superposition; Standing Waves, figures16.36\u201338",
+      "use": "9.5,9.9\u20139.11. Fixed-end derivation extended; fundamental explicitly first harmonic, avoiding confusing source wording."
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/16-5-interference-of-waves",
+      "passages": "Reflection and Transmission, figure16.17 and junction discussion",
+      "use": "9.13\u20139.14; no unsupported amplitude-transmission formula imported."
+    },
+    {
+      "url": "https://faraday.physics.utoronto.ca/PVB/Harrison/Diffraction/Diffraction.html",
+      "passages": "Diffraction subsection, qualitative scale comparison",
+      "use": "9.15; algebraic qualitative undergraduate fit. Two-slit equation and detailed optical theory excluded. No photograph copied from this note."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/27-2-huygenss-principle-diffraction",
+      "passages": "Wavefront description and wavelet construction",
+      "use": "9.15; qualitative contribution picture only, no quantitative diffraction/ray derivation."
+    }
+  ],
+  "practice": [
+    {
+      "source": "CollegePhysics2e Chapter16 Problems&Exercises47\u201356,61",
+      "url": "https://openstax.org/books/college-physics-2e/pages/16-problems-exercises",
+      "fit": "Actual questions inspected.47\u201352 calibrate propagation fluency,53/56 combined inference,61 fixed-end counting. Our questions add graph-axis interpretation, endpoint testing and explicit assumptions; exclude beats57\u201360 and mass-density law. No source answers copied."
+    },
+    {
+      "source": "UniversityPhysics1 Chapter16 Problems47,90\u201392",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/16-problems",
+      "fit": "Actual substitution/superposition/standing identity questions inspected during closing review. Ex2\u20133,5\u20137,9\u201312 use related operations with original diagnostic structure and prior-scaffolded identities. Source can demand more independent algebra; our code tasks add verification rather than untaught calculus."
+    },
+    {
+      "source": "UniversityPhysics1 Chapter16 Conceptual1\u20136,10\u201311,21,24\u201328",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/16-conceptual-questions",
+      "fit": "Actual prompts inspected; calibrate direction versus local motion, energy, reflection and pointwise addition. Ex4/10/12/16 add original numerical-evidence critiques. Diffraction investigation has no exact privateOU exercise match: calibrated to Toronto exposition, with open-task criteria supplied."
+    }
+  ],
+  "coverage": "Per-section mapping in L01\u2013L04 reviews;9.16 is original synthesis of9.4/9.8/9.12;9.17 mapped in practice-coverage;9.18 references taught results only.",
+  "workload": "Activities and practice calibrated by demand and prerequisite fit, not a source-question quota.100min cumulative attempts+40mincorrection withinL05; estimates not measured student times.",
+  "accessGaps": "PhysicsClassroom403; Russell reflection page timed out twice. Accessible OpenStax boundary passages used instead. No unsupported claim of viewing videos."
+}

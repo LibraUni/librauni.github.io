@@ -1,0 +1,15 @@
+{
+  "status": "Local subject, reader and rendered review completed before next lesson; final integration and focused checks passed.",
+  "standard": "1.12/M101v0.4",
+  "sources": {
+    "9.1": "Russell Penn State Wave Motion: longitudinal/transverse paragraphs; clearer distinction of material displacement from propagation. Water-wave complexities excluded from rope model.",
+    "9.2": "College Physics2e16.9 exposition and questions47\u201352; spatial/temporal distinction expanded into two labelled graphs. OU U4 pp34\u201336 cosine graph/periodicity; physical wave interpretation additional.",
+    "9.3": "OU U4 pp34\u201336 periodicity; original constant-phase algebra, using priorU08 radians.",
+    "9.4": "PriorU08 sampling/code, original two-input extension; no directOU wave-code match."
+  },
+  "subject": 17,
+  "reader": "Continuous read checked variable roles, sign conventions and assumed skills. Added explicit crest-identification timing, spatial-grid interval count and distinction between sampled and exact maxima. All inputs taught; four-hour budget includes3h noncoding and1hPython.",
+  "visual": "12offline width/theme cases passed; actual mobileS2/desktopS3 screenshots inspected. Found tiny graph labels and long equation; widened scrollable figure with keyboard region and split calculation before rerun.",
+  "media": "NASA SouthSandwich41390 context image inspected, credited and source identity absent from previousP101; L01 graphs directly support graph reading; no repeated photograph inserted.",
+  "limitations": "Self-review; estimates not student-tested. No exact privateOU wave chapter."
+}

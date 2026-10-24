@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "standard": "Teaching Standard and Practice v1.12; fixed illustrated M101 opening v0.4",
+  "authorization": "User requests local one-lesson-at-a-time development/review, closing resources then publication after checks.",
+  "status": "Local release checks passed; hosted security/deployment and liveverification pending.",
+  "sequence": "Each lesson received subject, reader and rendered review before the next was drafted. Whole-unit integration and closure were reviewed separately.",
+  "scope": "18 hours including 3 Python hours; 5 lessons, 18 sections, 10 worked examples, 16 activities, 16 cumulative exercises, 7 figures (2 external images and 5 original figures), phase/time explorer, notebook and script, 12-row reference with two-page PDF, 11-file offline pack.",
+  "coherence": "Unit 8 phase and sampling lead to a two-input profile, signed addition, relative phase and path conditions, opposite propagation directions, nodes and endpoints, then reflection, transmission and diffraction. The final investigation and exercises connect these descriptions. The conclusion answers the introduction and prepares Unit 10.",
+  "prerequisites": "No calculus/ODE/Fourier/complexamplitude dependency. Sine/cosinephase relation andsumidentities supplied; k introduced asspatialphase. Arrays/functions/plots fromP101earlierunits.",
+  "wider": "B0354h/8hPython unchanged; O3/O6/O7; U10/TMA03 remain unreleased. P201 retains wave-equationtheory. No learnerrecords modified.",
+  "subject": "155 independent scalar/arithmetic checks, 24 explorer parameter cases and two fresh notebook runs. Hand answers, boundaries, frequency conditions and energy wording reviewed separately.",
+  "readerRevisions": "Explicit variable roles, cosine\u2192sine transition, exact versus sampled maxima, nonzero benchmark against zero-returning code, physical versus implementation evidence; isotropic defined; Exercise9.12 grouping improved.",
+  "visual": "42 integrated viewport/theme cases; 5 no-JavaScript cases; 24 explorer cases; 7 offline-pack pages; 2 enlarged-text/reflow cases. Exact keyboard clipboard checks passed. All 16 opened exercise solutions and both PDF pages were inspected. Corrected fraction grouping and dark standing-wave rendering inspected again.",
+  "media": "Rights andsourceidentities verified; two distinctexternalimages, no repeats. Structuralmediaflags editorially reviewed; all requiredconditions retained.",
+  "workload": "4 + 4 + 4 + 3 + 3 = 18 hours. The first three lessons each include one Python hour. Final exercise attempts (100 minutes), correction (40), investigation write-up (25) and reference/conclusion (15) fit Lesson 5. These are editorial estimates, not measured student times.",
+  "tests": "168repositorytests pass;productionbuild and151pagesearch pass; locallinks/anchors,duplicateIDs,downloads,notebookAST andZIP checks pass. Existinglarge-bundleadvisory remains.",
+  "preservation": {
+    "files": 401,
+    "changed": []
+  },
+  "limitations": "Self-review, not independent human moderation. The private OU collection lacks an exact waves chapter; actual accessible university and textbook passages were inspected and gaps recorded.",
+  "releaseGate": "The hosted workflow requires Firestore security tests, repository tests, production build and deployment. Live page, download-hash and search checks follow before claiming publication."
+}

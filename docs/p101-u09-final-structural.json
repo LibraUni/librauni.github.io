@@ -1,0 +1,41 @@
+{
+  "linksIds": [
+    {
+      "file": "unit9.html",
+      "ids": 2,
+      "links": 2
+    },
+    {
+      "file": "unit9-lesson3.html",
+      "ids": 14,
+      "links": 2
+    },
+    {
+      "file": "unit9-lesson2.html",
+      "ids": 14,
+      "links": 1
+    },
+    {
+      "file": "unit9-lesson5.html",
+      "ids": 21,
+      "links": 20
+    },
+    {
+      "file": "unit9-lesson4.html",
+      "ids": 13,
+      "links": 4
+    },
+    {
+      "file": "unit9-reference.html",
+      "ids": 0,
+      "links": 1
+    },
+    {
+      "file": "unit9-lesson1.html",
+      "ids": 13,
+      "links": 3
+    }
+  ],
+  "code": "Notebook matches all three public lesson source blocks by AST",
+  "search": "151pages;U09all7pages present,U10absent"
+}

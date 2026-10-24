@@ -1,0 +1,15 @@
+{
+  "status": "Local subject, reader and rendered review completed before next lesson; final integration and focused checks passed.",
+  "scope": "9.9\u20139.12,Examples9.6\u20139.7,Activities9.9\u20139.12,Figures9.4\u20139.5;4h/1hPython",
+  "sources": {
+    "9.9": "Russell opposite-direction identity and explanation; same sine convention supplied explicitly.",
+    "9.10": "CollegePhysics16.10 standing-wave paragraphs and figure16.36; zero-snapshot ambiguity expanded.",
+    "9.11": "CollegePhysics16.10 fixed-end figures16.37\u201338 and problem61; use conventional first harmonic=fundamental, avoiding source wording ambiguity.",
+    "9.12": "Original cross-check and invalid-boundary challenge; no exactOU counterpart. OU trigonometric periodicity pp34\u201336 supports sine zeros."
+  },
+  "subject": "43 independent scalar checks; mode counts, node families, phase, energy wording and nonzero invalidendpoint reviewed.",
+  "reader": "Explained switch cosine\u2192sine before formula, supplied identity, distinguished coefficient sign from amplitude and permanent nodes from transient zeros. Fixed-end count follows from endpoints rather than memorised formula.",
+  "visual": "6offline width/theme cases; desktop mode plot and mathematics inspected. Labels readable via keyboard-scroll regions on narrow screens; feedback hidden initially.",
+  "media": "Two original figures carry snapshot and boundary reasoning; unit context image retained without duplication.",
+  "limitations": "Self-review; no learner timing study or exact privateOU wave chapter."
+}

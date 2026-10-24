@@ -1,0 +1,146 @@
+[
+  {
+    "width": 390,
+    "d": 0,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 0.000 rad; exact resultant amplitude 6.000 mm. At x = 0 m, sum 6.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 0,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 0.000 rad; exact resultant amplitude 6.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 0,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 0.000 rad; exact resultant amplitude 6.000 mm. At x = 0 m, sum -6.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 1.5707963267948966,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 1.571 rad; exact resultant amplitude 4.243 mm. At x = 0 m, sum 3.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 1.5707963267948966,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 1.571 rad; exact resultant amplitude 4.243 mm. At x = 0 m, sum 3.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 1.5707963267948966,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 1.571 rad; exact resultant amplitude 4.243 mm. At x = 0 m, sum -3.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 2.0943951023931953,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 2.094 rad; exact resultant amplitude 3.000 mm. At x = 0 m, sum 1.500 mm."
+  },
+  {
+    "width": 390,
+    "d": 2.0943951023931953,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 2.094 rad; exact resultant amplitude 3.000 mm. At x = 0 m, sum 2.598 mm."
+  },
+  {
+    "width": 390,
+    "d": 2.0943951023931953,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 2.094 rad; exact resultant amplitude 3.000 mm. At x = 0 m, sum -1.500 mm."
+  },
+  {
+    "width": 390,
+    "d": 3.141592653589793,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 3.142 rad; exact resultant amplitude 0.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 3.141592653589793,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 3.142 rad; exact resultant amplitude 0.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 390,
+    "d": 3.141592653589793,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 3.142 rad; exact resultant amplitude 0.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 0,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 0.000 rad; exact resultant amplitude 6.000 mm. At x = 0 m, sum 6.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 0,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 0.000 rad; exact resultant amplitude 6.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 0,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 0.000 rad; exact resultant amplitude 6.000 mm. At x = 0 m, sum -6.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 1.5707963267948966,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 1.571 rad; exact resultant amplitude 4.243 mm. At x = 0 m, sum 3.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 1.5707963267948966,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 1.571 rad; exact resultant amplitude 4.243 mm. At x = 0 m, sum 3.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 1.5707963267948966,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 1.571 rad; exact resultant amplitude 4.243 mm. At x = 0 m, sum -3.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 2.0943951023931953,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 2.094 rad; exact resultant amplitude 3.000 mm. At x = 0 m, sum 1.500 mm."
+  },
+  {
+    "width": 1440,
+    "d": 2.0943951023931953,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 2.094 rad; exact resultant amplitude 3.000 mm. At x = 0 m, sum 2.598 mm."
+  },
+  {
+    "width": 1440,
+    "d": 2.0943951023931953,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 2.094 rad; exact resultant amplitude 3.000 mm. At x = 0 m, sum -1.500 mm."
+  },
+  {
+    "width": 1440,
+    "d": 3.141592653589793,
+    "t": 0,
+    "txt": "Time 0.00 s; phase difference 3.142 rad; exact resultant amplitude 0.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 3.141592653589793,
+    "t": 0.25,
+    "txt": "Time 0.25 s; phase difference 3.142 rad; exact resultant amplitude 0.000 mm. At x = 0 m, sum 0.000 mm."
+  },
+  {
+    "width": 1440,
+    "d": 3.141592653589793,
+    "t": 0.5,
+    "txt": "Time 0.50 s; phase difference 3.142 rad; exact resultant amplitude 0.000 mm. At x = 0 m, sum 0.000 mm."
+  }
+]

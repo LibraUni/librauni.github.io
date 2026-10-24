@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24",
+  "unit": "P101 U09 Travelling waves and superposition",
+  "standard": "1.12; fixed M101 v0.4",
+  "authority": "Local sequential lessons and reviews; closing resources; publish after all checks.",
+  "constructionGate": "B03 complete 15-lesson blueprint; P101 module units and stage blocks mapped; curriculum/construction-policy.js and docs/curriculum-authoring.md apply.",
+  "parents": [
+    "curriculum/p101-block3-lessons.js",
+    "curriculum/p101-units.js",
+    "curriculum/p101-blocks.js",
+    "curriculum/stage1-map.js",
+    "curriculum/coverage.js"
+  ],
+  "scope": "18h/3hPython, O3/O6/O7; no wave equation, Fourier transforms, complex amplitudes or quantitative diffraction. U10 and TMA03 remain future work.",
+  "sections": [
+    [
+      "Local motion and travelling change",
+      "A snapshot and a time record",
+      "A travelling sinusoidal model",
+      "Check a profile in Python"
+    ],
+    [
+      "Adding at the same place and time",
+      "Phase controls reinforcement",
+      "Two paths to an observation point",
+      "Compare two sampled profiles"
+    ],
+    [
+      "Two directions, one standing pattern",
+      "Nodes, antinodes and zero snapshots",
+      "Fitting a fixed-end string",
+      "Test the boundary conditions"
+    ],
+    [
+      "Reflection at an end",
+      "Transmission into a different medium",
+      "Diffraction and physical scale"
+    ],
+    [
+      "A controlled wave investigation",
+      "Cumulative exercises",
+      "Reference and conclusion"
+    ]
+  ],
+  "minutes": [
+    {
+      "reading": 75,
+      "written": 55,
+      "python": 60,
+      "feedback": 50
+    },
+    {
+      "reading": 70,
+      "written": 60,
+      "python": 60,
+      "feedback": 50
+    },
+    {
+      "reading": 75,
+      "written": 55,
+      "python": 60,
+      "feedback": 50
+    },
+    {
+      "reading": 65,
+      "written": 70,
+      "feedback": 45
+    },
+    {
+      "investigationWriteup": 25,
+      "exercises": 100,
+      "correction": 40,
+      "referenceConclusion": 15
+    }
+  ],
+  "mediaPlan": "Original paired spatial/time graphs, phase sums, standing pattern, modes and boundary diagrams. Actively source distinct NASA sea-wave/sunglint or instrument imagery; verify reuse and prior P101 identity. Purposeful phase/time explorer in L02 if model and accessibility checks pass.",
+  "practicePlan": "16 original varied cumulative exercises, 100min attempts plus40min correction; embedded activities and3hPython already within18h.",
+  "review": "Subject, reader, rendered and whole-lesson reviews before proceeding. Self-review disclosed; no independent human moderation claimed.",
+  "status": "Introduction/L01 development"
+}

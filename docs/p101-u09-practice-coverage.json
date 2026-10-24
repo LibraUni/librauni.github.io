@@ -1,0 +1,98 @@
+[
+  {
+    "exercise": 1,
+    "title": "Two kinds of graph",
+    "minutes": 4,
+    "sections": "9.1\u20139.2"
+  },
+  {
+    "exercise": 2,
+    "title": "A model at two instants",
+    "minutes": 6,
+    "sections": "9.3"
+  },
+  {
+    "exercise": 3,
+    "title": "Track a crest",
+    "minutes": 5,
+    "sections": "9.3\u20139.4"
+  },
+  {
+    "exercise": 4,
+    "title": "Sampling a spatial maximum",
+    "minutes": 6,
+    "sections": "9.4,9.8"
+  },
+  {
+    "exercise": 5,
+    "title": "Signed addition",
+    "minutes": 4,
+    "sections": "9.5"
+  },
+  {
+    "exercise": 6,
+    "title": "Amplitude and phase",
+    "minutes": 7,
+    "sections": "9.6"
+  },
+  {
+    "exercise": 7,
+    "title": "Imperfect cancellation",
+    "minutes": 5,
+    "sections": "9.5\u20139.6"
+  },
+  {
+    "exercise": 8,
+    "title": "Two paths and one source condition",
+    "minutes": 6,
+    "sections": "9.7"
+  },
+  {
+    "exercise": 9,
+    "title": "Read a standing pattern",
+    "minutes": 6,
+    "sections": "9.9\u20139.10"
+  },
+  {
+    "exercise": 10,
+    "title": "A straight string is not necessarily at rest",
+    "minutes": 5,
+    "sections": "9.10"
+  },
+  {
+    "exercise": 11,
+    "title": "Infer the mode",
+    "minutes": 7,
+    "sections": "9.11"
+  },
+  {
+    "exercise": 12,
+    "title": "Reject a boundary model",
+    "minutes": 7,
+    "sections": "9.11\u20139.12"
+  },
+  {
+    "exercise": 13,
+    "title": "Reflection and return",
+    "minutes": 5,
+    "sections": "9.13"
+  },
+  {
+    "exercise": 14,
+    "title": "A transmitted wavelength",
+    "minutes": 6,
+    "sections": "9.14"
+  },
+  {
+    "exercise": 15,
+    "title": "An opening in wavelength units",
+    "minutes": 8,
+    "sections": "9.15"
+  },
+  {
+    "exercise": 16,
+    "title": "Audit a numerical claim",
+    "minutes": 13,
+    "sections": "9.4,9.8,9.10,9.12,9.16"
+  }
+]

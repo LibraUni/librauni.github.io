@@ -1,0 +1,4 @@
+{
+  "checks": 17,
+  "basis": "Exact public function compared with independently known quarter-cycle values, crest trajectories, invalid parameter checks and axis arithmetic."
+}

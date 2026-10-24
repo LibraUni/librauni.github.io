@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-24",
+  "assets": [
+    {
+      "id": "p101-u09-figure-01",
+      "file": "wave-clouds.jpg",
+      "source": "https://science.nasa.gov/earth/earth-observatory/wave-clouds-from-south-sandwich-islands-41390/",
+      "identity": "southsand_tmo_2009327.jpg",
+      "creator": "NASA/JeffSchmaltz,MODISRapidResponseTeam,GSFC",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "status": "NASA educational/informational reuse; not relabelled as original-textCC licence",
+      "modifications": "Unaltered NASA web rendition",
+      "purpose": "Unit introduction: visible spatial atmospheric pattern, separated from a temporal observation",
+      "inspection": "Actual720x480image viewed; labelled three islands/cloud bands, provenance and NASA terms read; priorP101source/author identity search found no reuse."
+    },
+    {
+      "id": "p101-u09-figure-07",
+      "file": "water-diffraction.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Water_diffraction.jpg",
+      "identity": "Wikimedia/b/b5/Water_diffraction.jpg",
+      "creator": "Lorenzarius",
+      "terms": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "status": "CCBY-SA3.0 chosen from offered licences",
+      "modifications": "None; original2272x1704file",
+      "purpose": "9.15 curved ripples beyond a physical breakwater opening",
+      "inspection": "Actualimage viewed; source page and offered licence read; no earlierP101identity/creator match."
+    }
+  ],
+  "originalFigures": {
+    "9.2": "Paired snapshot/time record with independent axes",
+    "9.3": "Three phase sums with line-style distinctions and fixed scales",
+    "9.4": "Standing-wave snapshots and permanent nodes",
+    "9.5": "Fixed-end modes1\u20133",
+    "9.6": "Fixed/free separated pulse reflection sketches"
+  },
+  "originalTerms": "CCBY-NC-SA4.0; interactive codeMIT; branding excluded",
+  "editorialDecision": "Photographs at unit opening and diffraction observation; computational/phase/boundary passages use original figures whose labels and data carry the argument. L01\u2013L03 all-diagram flags explicitly reviewed against reference, no repeated photo padding. Closing lesson and reference use questions/compact lookup rather than unrelated images. Sevenfigures across unit; no arbitrary quota.",
+  "accessibility": "Meaningful alt/title, numbered captions, credits, keyboard-scroll graph regions, labelled controls/reset/readout, line styles plus colours, no autoplay; static phase figure and text support noJS and PDF reference."
+}

@@ -1,0 +1,46 @@
+{
+  "checks": [
+    [
+      1.2,
+      1.2
+    ],
+    [
+      2.0,
+      2
+    ],
+    [
+      1.3333333333333333,
+      1.3333333333333333
+    ],
+    [
+      0.6,
+      0.6
+    ],
+    [
+      2.0,
+      2
+    ],
+    [
+      0.4,
+      0.4
+    ],
+    [
+      0.1,
+      0.1
+    ],
+    [
+      8.0,
+      8
+    ],
+    [
+      1.0,
+      1
+    ],
+    [
+      6.0,
+      6
+    ]
+  ],
+  "boundary": "Fixed endpoint yinc+yref=0; free-end same displacement sign; frequency conserved only stationary linear boundary/steady sinusoid.",
+  "diffraction": "a/lambda scale describes spread, not power; common-medium wavelength preserved."
+}

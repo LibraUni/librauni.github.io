@@ -1,0 +1,65 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "Space and time",
+      "\\(\\lambda\\): spatial repetition / m. \\(T\\): time repetition / s. \\(f=1/T\\) / Hz. Propagation speed \\(v_{\\mathrm w}=f\\lambda\\)."
+    ],
+    [
+      "Recall",
+      "Phase scales",
+      "\\(k=2\\pi/\\lambda\\) / rad m\u207b\u00b9; \\(\\omega=2\\pi f\\) / rad s\u207b\u00b9. \\(kx\\), \\(\\omega t\\), \\(\\phi\\): rad."
+    ],
+    [
+      "Recall",
+      "Travelling profile",
+      "\\(y=A\\cos(kx-\\omega t+\\phi)\\): rightward for \\(k,\\omega>0\\). Plus time term: leftward. Speed \\(\\omega/k\\); local material motion differs."
+    ],
+    [
+      "Understand",
+      "Linear superposition",
+      "\\(y=y_1+y_2\\), at the same position/time and common zero. Small disturbances in a linear model; add signed deviations."
+    ],
+    [
+      "Consult",
+      "Equal-wave phase sum",
+      "Same direction, frequency, wavelength, amplitude: \\(y=2A\\cos(\\delta/2)\\cos(\\theta+\\delta/2)\\), \\(\\theta=kx-\\omega t\\). Amplitude \\(2A|\\cos(\\delta/2)|\\)."
+    ],
+    [
+      "Understand",
+      "Path difference",
+      "In-phase sources, common wavelength: \\(\\Delta r=m\\lambda\\) reinforces; \\(\\Delta r=(m+\\tfrac12)\\lambda\\) opposes. Equal arriving amplitudes needed for zero. Integer \\(m\\)."
+    ],
+    [
+      "Recall",
+      "Standing wave",
+      "\\(A\\sin(kx-\\omega t)+A\\sin(kx+\\omega t)=2A\\sin(kx)\\cos(\\omega t)\\). Equal opposite components; local amplitude \\(2A|\\sin(kx)|\\)."
+    ],
+    [
+      "Recall",
+      "Nodes / antinodes",
+      "For that sine form: nodes \\(x=n\\lambda/2\\); antinodes \\(x=(2n+1)\\lambda/4\\), integer \\(n\\). A node is zero at all times."
+    ],
+    [
+      "Recall",
+      "Fixed-end modes",
+      "\\(\\lambda_n=2L/n\\); \\(f_n=nv_{\\mathrm w}/(2L)\\), \\(n=1,2,\\ldots\\). Uniform string, common speed, fixed ends; \\(n\\) lobes, \\(n-1\\) interior nodes."
+    ],
+    [
+      "Understand",
+      "Boundary response",
+      "Transverse string displacement: fixed end inverts; ideal free end does not. Stationary linear boundary, steady source: frequency unchanged; \\(\\lambda_2=v_2/f\\)."
+    ],
+    [
+      "Understand",
+      "Diffraction scale",
+      "Opening width \\(a\\): compare \\(a/\\lambda\\). Large ratio: narrower main spread; comparable/smaller ratio: broader spread. Spread and transmitted power differ."
+    ],
+    [
+      "Understand",
+      "Validation",
+      "Check a signed value, crest or node, a nonzero antinode and endpoints. Refine sampling. Model agreement tests implementation; observations test physical suitability."
+    ]
+  ],
+  "code": "import numpy as np\nx = np.linspace(0, 2, 401)       # metres\nA, lam, f, t = 0.003, 2.0, 1.0, 0.0\nk, omega = 2*np.pi/lam, 2*np.pi*f\nphase = k*x - omega*t\ny1 = A*np.cos(phase)\ny2 = A*np.cos(phase + np.pi)\ny = y1 + y2\nassert np.allclose(y, 0, rtol=0, atol=1e-12)\n# Standing product: equal sine components\nstanding = 2*A*np.sin(k*x)*np.cos(omega*t)"
+}

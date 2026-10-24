@@ -1,0 +1,13 @@
+{
+  "status": "Local subject, reader and rendered review completed before next lesson; final integration and focused checks passed.",
+  "sources": {
+    "9.13": "UniversityPhysics1 16.5 Reflection and Transmission, fixed/free conditions and figure16.17. Rejected source overgeneralisation about free-end height; only sign and sum taught. Russell reflection page unavailable after two attempts, not relied on.",
+    "9.14": "Same16.5 transmission exposition plus CollegePhysics27.1 frequency continuity; no refraction geometry imported.",
+    "9.15": "Harrison TorontoPHY132F diffraction subsection, actual qualitative text; OpenStax27.2 wavefront construction. Preceding two-slit formula excluded. Commons Water_diffraction.jpg provenance/terms inspected."
+  },
+  "subject": "10 numeric checks, boundary logic and frequency conditions verified",
+  "reader": "Defined isotropic when first used; distinguished pulse direction from inversion, spread from transmitted power, and profile variables. Three-hour allocation includes70min activities and45min feedback.",
+  "visual": "6offline width/theme cases passed; reflection diagram and mobile diffraction passage inspected. Photograph observed, not just metadata.",
+  "media": "Figure9.6 original boundary diagram;9.7Lorenzarius photoCCBY-SA3.0 unaltered, distinct across priorP101 checked by author/source identity.",
+  "limits": "Self-review, no laboratory validation or student timing data"
+}
