@@ -1,0 +1,66 @@
+{
+  "viewportCases": [
+    {
+      "width": 320,
+      "theme": "light",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 640,
+      "theme": "light",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 640,
+      "theme": "dark",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 900,
+      "theme": "light",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 900,
+      "theme": "dark",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "equation15": "fits",
+      "sidebar": "in flow at <=900"
+    }
+  ],
+  "internalLinksChecked": 20,
+  "offlineNoJS": 7
+}

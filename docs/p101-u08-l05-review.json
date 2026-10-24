@@ -1,0 +1,10 @@
+{
+  "lesson": "U08-L05",
+  "status": "Reviewed locally; required integration checks passed",
+  "subject": "16 original solutions reviewed separately from prompts: reciprocal/event counts and endpoint bound, phase shifts/rate signs, mass ratio and energy/direction, decay fraction, resonance inference, sample count/interpolation, analytic aliases and a physical oscillator sampled once per cycle.221 numerical/identity checks plus a fresh-kernel final investigation.",
+  "reader": "Continuous reading of final task, each question/hint/solution and conclusion. Clarified sparse apparent-period variability: individual intervals1.29289/1.41421s and mean1.34142s for the exact eight-second record; no claim of exact1.333s estimator result. Changed erroneous \u201calternate\u201d wording to two possible interval values. Phase/duration follow-up keeps controls separate.",
+  "visual": "All16 opened solutions inspected at390px; split Exercise8.15 equation to fit320px. Fixed prose spacing. Narrow-screen sidebar changed to stay in flow withinUnit8 only. Canonical12row web/on-page reference and both PDF pages inspected; two pages, correct logo/motto/version/module/title.",
+  "practice": "16exercises100min attempts+45min correction.60min finalPython task,15reading,20revision:240min total. Coverage map links every lesson; open tasks have criteria/sample approaches. Hints/solutions closed initially and available withoutJavaScript.",
+  "calibration": "Actual CP2eChapter16 exercises7\u201315,36\u201339,41; Smithch3pp39\u201342 for sampling. No exact supplied OU sampling-task counterpart; map/gap recorded. Questions original, not number-swapped copies.",
+  "limits": "Author review and independent recalculation, not independent human moderation or student timing trial."
+}

@@ -1,0 +1,9 @@
+{
+  "lesson": "U08-L03",
+  "status": "Reviewed locally; final integration pending",
+  "subject": "Energy table, speed0.346m/s, loss0.064J, remaining fraction0.263, power0.030W and20cycles/0.30J independently checked. Damping figure is bounded by exponential envelope; period describes cosine phase, not exact repetition of shrinking signal.",
+  "reader": "Full three-section continuous read. Supplied elastic-energy relation connects existing balance methods; no integral/ODE prerequisite. Clarifies energy boundary, steady input/loss, controls and finite frequency resolution. Three activities total75min.",
+  "visual": "Six offline/noJS width/theme cases passed; all three sections inspected with opened feedback. Photograph and source rights inspected. Energy chart uses ordered pairs as well as colour; curve/envelope use solid/dashed distinction.",
+  "workload": "180min:65reading75activities40feedback.",
+  "limitations": "No actual apparatus data or human/student validation; image is contextual, synthetic records labelled."
+}

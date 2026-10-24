@@ -1,0 +1,5 @@
+{
+  "publicScriptNotebookAndCheckedCore": "AST-equivalent for generator and estimator",
+  "starterOutputs": "empty",
+  "limitations": "Not every possible arbitrary signal is a valid period-estimation input; taught model and invalid records tested."
+}

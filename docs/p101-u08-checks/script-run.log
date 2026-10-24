@@ -1,0 +1,8 @@
+/Users/iker/.codex/.chatgpt-projects/g-p-6ab2a87e0300819183621d7ca21c1def/work/p101-unit8-release/public/teaching/p101/u08/P101-Unit-8-Sampling.py:83: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+First five values / m: [ 0.01        0.00809017  0.00309017 -0.00309017 -0.00809017]
+Crossings / s: [0.375, 0.875, 1.375, 1.875, 2.375, 2.875, 3.375, 3.875]
+Intervals / s: [0.5 0.5 0.5 0.5 0.5 0.5 0.5]
+Estimated period / s: 0.5
+Known period / s: 0.5
+Difference / s: 0.0

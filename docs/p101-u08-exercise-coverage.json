@@ -1,0 +1,82 @@
+[
+  {
+    "number": 1,
+    "time": 5,
+    "coverage": "L01 amplitude/offset/period"
+  },
+  {
+    "number": 2,
+    "time": 6,
+    "coverage": "L01 timing/precision"
+  },
+  {
+    "number": 3,
+    "time": 6,
+    "coverage": "L02 radians/phase"
+  },
+  {
+    "number": 4,
+    "time": 5,
+    "coverage": "L02 phase shift"
+  },
+  {
+    "number": 5,
+    "time": 6,
+    "coverage": "L02 rates/signs"
+  },
+  {
+    "number": 6,
+    "time": 6,
+    "coverage": "L02 spring scaling/limits"
+  },
+  {
+    "number": 7,
+    "time": 7,
+    "coverage": "L03 energy and direction"
+  },
+  {
+    "number": 8,
+    "time": 6,
+    "coverage": "L03 damping/accounting"
+  },
+  {
+    "number": 9,
+    "time": 5,
+    "coverage": "L03 resonance/control"
+  },
+  {
+    "number": 10,
+    "time": 4,
+    "coverage": "L04 grid/duration"
+  },
+  {
+    "number": 11,
+    "time": 7,
+    "coverage": "L04 interpolation/estimate"
+  },
+  {
+    "number": 12,
+    "time": 7,
+    "coverage": "L04 alias proof"
+  },
+  {
+    "number": 13,
+    "time": 6,
+    "coverage": "L04 equality/phase"
+  },
+  {
+    "number": 14,
+    "time": 8,
+    "coverage": "L04 method selection/measurement"
+  },
+  {
+    "number": 15,
+    "time": 7,
+    "coverage": "L02+L04 mixed model"
+  },
+  {
+    "number": 16,
+    "time": 9,
+    "coverage": "Whole-unit synthesis/evidence"
+  }
+]

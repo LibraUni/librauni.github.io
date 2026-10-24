@@ -1,0 +1,46 @@
+{
+  "standard": "1.12 / fixed v0.4",
+  "inspected": [
+    "Fixed illustrated M101 opening v0.4: coordinate conventions, worked explanations, Activity1.1/1.2, visual/caption roles.",
+    "P101 U07 introduction, L03 rate/sign/numerical-check passages, L05 closing handover and references.",
+    "Private OU MST124 U4 printed pp34\u201340: sine/cosine graphs, unit-circle motivation, Example6 and Activity17. Supports L01 graph reading and L02 phase; no oscillator force or sampling lesson in supplied collection.",
+    "OpenStax University Physics1 \u00a715.1 actual period/frequency passage, phase Eq15.2\u201315.8, Example15.2; source sign/description inconsistencies checked independently.",
+    "College Physics2e \u00a716.3, \u00a716.7, \u00a716.8 actual prose/figures; L02/03 models. Avoid simplified resonance claims: damped displacement peak can shift; no Tacoma-collapse anecdote.",
+    "College Physics2e ch16 exercises7\u201315 inspected: reciprocal units and mass/stiffness scaling; our tasks combine graphs, offset, direction and timing audit.",
+    "Steven W Smith DSP Guide ch3 printed pp39\u201341 including Fig3-3 actual PDF: sparse samples/aliasing; full reconstruction theory outside U08.",
+    "Feynman Lectures I \u00a723-2 Eq23.11\u201323.13 and surrounding response prose inspected: precise damping/near-resonance distinction; complex method outside prerequisites, used for author check only."
+  ],
+  "sectionMap": {
+    "L01-S01": "Fixed M101 conventions; OpenStax15.1 physical oscillation; P101U04 force/velocity",
+    "L01-S02": "OpenStax15.1 period/frequency and CP16 exercises7\u201310",
+    "L01-S03": "OU U4 pp34\u201339 graphs; P101U07 L03 velocity signs",
+    "L01-S04": "P101U02 timing/precision and U03 event intervals; original synthesis, no exact OU match",
+    "L02-S01": "OU U4 pp34\u201340; UP15.1 Eq15.2 phase mapping; radian definition retrieved from prior mathematics but taught explicitly here.",
+    "L02-S02": "UP15.1 Fig15.7/15.8 and Eq15.3; independently checked shift signs rather than inconsistent image-description wording.",
+    "L02-S03": "UP15.1 Eq15.3\u201315.8, Example15.2; CP16.3 force/motion relation. Supplies derivatives rather than requiring trigonometric differentiation.",
+    "L02-S04": "CP16.3 Example16.4 and ch16 exercises13\u201315; original ratio/control task. Corrected source numeric typo not reproduced.",
+    "L03-S01": "P101U06 energy balances; CP16.5 energy/SHM actual passage; supplied elastic energy avoids variable-force integral beforeU11.",
+    "L03-S02": "CP16.7 opening decay/envelope/Fig16.20; no critical-damping formula; original turning-point energy audit.",
+    "L03-S03": "CP16.8 and UP15.6 Eq15.29 inspected; amplitude expression independently supports shifted damped displacement peak. NASA GPM source actual photograph and caption inspected. No bridge-collapse anecdote.",
+    "L04-S01": "Smith DSP Guide ch3 pp39\u201341/Fig3-3; prior P101U03 time records and model/observation distinction.",
+    "L04-S02": "Original synthesis of P101U03 straight segments and L01 same-direction events; no exact OU task match. Independent analytic crossing checks.",
+    "L04-S03": "Smith pp39\u201342/Fig3-3/3-4 actual PDF read; original2Hz/1Hz identity and equality-phase case; no Fourier prerequisites.",
+    "L04-S04": "P101U03 notebook methods; official NumPy/Matplotlib docs to verify API; no external exact exercise counterpart.",
+    "L05-S01": "Smith ch3 pp39\u201342 aliasing; original controlled investigation using taught estimator. No exact supplied OU coding counterpart. Known model is a benchmark, not instrument calibration.",
+    "L05-S02": "OpenStax CP2e ch16 exercises7\u201315,36\u201339,41 inspected: reciprocals, scaling, energy and damping. Our set adds offset, direction, phase, endpoint bounds and cross-topic observational decisions. Sampling tasks calibrated to Smith actual Fig3-3/3-4, no matching OU question available.",
+    "L05-S03": "Retrieval of the actual taught equations/conditions. Fixed v0.4 closing rhythm and prior P101U07 closure, but exercises occur only at unit end."
+  },
+  "limits": "OU trigonometry is mathematical, not an experimental oscillation course. Sources are comparators, not copied text/data. All new examples and questions original. Estimates are editorial, not student timing trials.",
+  "interactiveComparison": {
+    "source": "https://dspfirst.gatech.edu/matlab/",
+    "inspected": "Actual institutional GUI description for Continuous-Discrete Sampling Demo, controls/signal/spectrum/reconstruction features; not executed because requires MATLAB. Smith actual static sampling figure is visual comparator.",
+    "fit": "Our two labelled controls change sampling rate/phase at fixed known2Hz; time-domain only, no spectrum/reconstruction or animation. Predict/change/explain prompt, reset, sample table and noJS static alternative.",
+    "gap": "No execution of external MATLAB interactive claimed; original local implementation tested separately."
+  },
+  "practiceCalibration": {
+    "source": "https://openstax.org/books/college-physics-2e/pages/16-problems-exercises",
+    "fit": "Exercises7\u201315 support fluency and mass/stiffness ratios;36\u201339 energy/speed;41 amplitude-squared decay. Our original questions combine sign/phase interpretation and method choice with these fluencies.",
+    "differences": "P101 supplies rate/elastic-energy formulas rather than presuming calculus. No vertical gravitational-energy extension, effective mass derivation or Fourier analysis. Hints and full reasoning support independent adult study.16questions100min plus45min correction; timing estimated, not learner trial.",
+    "samplingGap": "No exact OU sampling exercise match in supplied collection. Transparent crossings, alias proof and controlled notebook are original synthesis; separately calculated analytic benchmarks and fresh-kernel checks."
+  }
+}

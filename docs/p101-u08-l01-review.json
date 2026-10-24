@@ -1,0 +1,10 @@
+{
+  "lesson": "U08-L01",
+  "status": "Reviewed locally; integrated release checks remain",
+  "subject": "Independently checked all example/activity values; five-state velocity/force signs, event-minus-one count, reciprocal interval endpoints and units. All agree.",
+  "reader": "Continuous read against fixed M101 and OU U4 pp34\u201339. Revised ambiguous origin-shift instruction to adding 6cm to reported positions. Endpoint bound distinguished from confidence interval; no calculus prerequisite introduced.",
+  "visual": "Six offline/noJS viewport/theme cases at1440/390/320, all feedback opened, unique IDs/images/no page overflow pass. Inspected desktop section1/2/3 and mobile1/4. Fixed floating-photo collision with key box; shortened overlong equation text.",
+  "practice": "Four activities80min plus feedback40min; three worked examples;180min total incl introductions.",
+  "media": "Actual photograph inspected; CC BY-SA3.0 from original source, not inaccurate secondary CC0 claim. Source identity absent from earlier P101. Figure8.2 matches 4cm,2s model.",
+  "limitations": "Author self-review; no human moderation or measured student timings."
+}

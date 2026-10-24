@@ -1,0 +1,10 @@
+{
+  "lesson": "U08-L04",
+  "status": "Reviewed locally; final integration pending",
+  "subject": "239 independent checks: analytic crossings at several phases/rates, manually supplied interpolation pairs,2Hz/1Hz alias identity, equality-phase/zero-amplitude refusal, invalid records. Starter and specimen notebooks validated and run in two fresh kernels.",
+  "reader": "Continuous four-section read. Input/output roles separated; estimator receives no known frequency. Replaced relative zero tolerance with explicit absolute1e-12m convention after examining all-near-zero samples. Count samples versus intervals explicitly.",
+  "visual": "Six offline/noJS cases pass with opened feedback; number lists spaced to resolve narrow-screen overflow. Inspected interpolation and alias sections; code controls and sampled plot separately.",
+  "interactive": "24 rate/phase/viewport cases, exact table/marker checks, keyboard Enter/reset, reduced motion and no page overflow pass. Replaced problematic native select automation with clear pressed-state buttons; no animation. Static model/table provide full alternative.",
+  "workload": "240min:45reading40written120Python35feedback.",
+  "limits": "External GeorgiaTech MATLAB demo description inspected but not executed; Smith actual static figure comparator. Self-review, no student testing."
+}

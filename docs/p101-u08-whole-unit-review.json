@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-24",
+  "standard": "Teaching Standard and Practice1.12; fixed illustrated M101v0.4. No reduction authorised or taken.",
+  "authorization": "User requested local sequential lesson development and review, closing resources, then publication after required checks.",
+  "status": "Local release gates passed; hosted security/deployment gate and live verification pending.",
+  "sequence": "L01\u2192L02\u2192L03\u2192L04 developed with distinct calculation, reader and rendered reviews before advancing;L05 independently checked next. Final unit-level integration and coherence pass follows.",
+  "scope": "B03 introduction and completeU08:18h/3hPython,5lessons,18sections,12worked examples,15activities,16cumulative exercises,8figures (2photographs/6original diagrams),1purposeful sampling explorer,notebook/script,12row web/on-page reference,two-pagePDF,13file offlinepack. U09/U10 blueprint remains planned; TMA03 not released.",
+  "subject": "Phase/period/angular frequency, signed motion, suppliedSHM relations, energy and damping, shifted damped displacement resonance, sampling and analytic alias identities checked. Generator/estimator versions AST-consistent. Numerical checks independently use analytic crossings, hand interpolation, energy identities and scaling. Invalid inputs/zero-amplitude/equality-phase cases refuse estimates.",
+  "reader": "Continuous argument connects prior signed motion/energy/rate reasoning to physical cycle, phase, restoring motion, real energy changes, observational ambiguity and controlled evidence. Required radians and supplied rates are taught here without silently adding calculus or ODE prerequisites. Opening camera question is answered in conclusion; next-unit spatial wave description follows naturally.",
+  "revisions": "Clarified origin-shift instructions, phase timing and numerical zero convention; added aligned motion diagram; corrected sparse interval description, prose spacing, credit labels and narrow solution equation. Scoped mobile sidebar fix prevents it covering teaching. All affected checks repeated.",
+  "calibration": "Exact privateOU U4 trigonometry printedpp34\u201340; actual OpenStax/Feynman/Smith passages and exercise comparisons recorded per section. Fixed M101v0.4 text and rendered opening compared with current reading style; source gaps disclosed, no close paraphrase/private reproduction.",
+  "media": "Verified distinct Helihark tuning-forkCCBY-SA3.0 and NASA/WarrenShultzaberger vibration-test photograph terms; images inspected and identities checked against earlierP101. Six original diagrams carry phase/rates/energy/decay/alias reasoning. All-diagram/closing pages received explicit editorial decisions; no duplicate photo padding.8numbered figures with captions/alt/credits.",
+  "visual": "48integrated viewport/theme cases plus5noJS cases;24interactive parameter/viewport cases;10focused cases at320/390/640/900/1440 after fixes;7offline/noJS pages;all16opened exercise solutions and bothPDF pages viewed. NativeMathML, keyboard disclosures/exact code clipboard, reduced motion/static alternative and local link targets checked.",
+  "workload": "3+4+3+4+4=18h;Python0+0+0+2+1=3h. Blueprint allocations synchronised with lesson openings;100min finalexercise attempts and45mincorrection included. Estimates not learner tested.",
+  "resources": "PDF title, canonicalP101/U8, approved logo, KNOWLEDGE PURSUED FREELY, version/date/page numbers and compact reuse line checked.12reference rows generated from canonicalJSON into web/closing/PDF. ZIP CRC validated; extracted reading works offline and preserves separate image licences.",
+  "notebooks": "Public starter schema valid and outputs empty; starter, completedbenchmark/challenge and finalinvestigation run in3fresh kernels. Final specimen corrected a missingMatplotlibimport before rerun. Public functions match checkedcore byAST.",
+  "tests": "166repository tests pass; production build/search144available pages; media structural check pass with required editorial judgments recorded. Existing bundle-size advisory remains unrelated toU08.",
+  "preservation": {
+    "files": 386,
+    "changed": []
+  },
+  "limits": "Self-review rather than independent human moderation/learner study. Supplied OU materials have no exact oscillator/sampling match beyond trigonometry. ExternalGeorgiaTech MATLAB description inspected but not executed; local explorer tested.",
+  "releaseGate": "GitHubPages workflow runs Firestore security rules tests then repository tests/build before deployment. Verify published pages/download hashes/search afterwards."
+}

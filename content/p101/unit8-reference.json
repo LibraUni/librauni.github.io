@@ -1,0 +1,65 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "Cycle and size",
+      "Full cycle: same stage and direction. Amplitude \\(A\\): largest displacement magnitude from equilibrium. Peak-to-peak: \\(2A\\). Offset \\(y_0\\): equilibrium position."
+    ],
+    [
+      "Recall",
+      "Time and phase",
+      "\\(f=1/T\\); \\(\\omega=2\\pi f=2\\pi/T\\). \\(T\\) in s, \\(f\\) in Hz, \\(\\omega\\) in rad/s. One cycle: \\(2\\pi\\) rad."
+    ],
+    [
+      "Recall",
+      "Sinusoidal model",
+      "\\(y=y_0+x\\); \\(x=A\\cos(\\omega t+\\phi)\\). Initial phase \\(\\phi\\) in rad. Positive maximum at \\(t_p\\): \\(\\phi=-\\omega t_p\\) modulo \\(2\\pi\\)."
+    ],
+    [
+      "Recall",
+      "Supplied SHM rates",
+      "\\(v=-A\\omega\\sin(\\omega t+\\phi)\\); \\(a=-\\omega^2x\\). Maximum speed \\(A\\omega\\); maximum acceleration magnitude \\(A\\omega^2\\)."
+    ],
+    [
+      "Understand",
+      "Spring model",
+      "\\(F=-kx\\), \\(\\omega=\\sqrt{k/m}\\), \\(T=2\\pi\\sqrt{m/k}\\). Linear spring, fixed support, negligible damping and spring mass; \\(k>0,m>0\\)."
+    ],
+    [
+      "Understand",
+      "Mechanical energy",
+      "\\(E=\\tfrac12mv^2+\\tfrac12kx^2=\\tfrac12kA^2\\) for the horizontal undamped model. \\(|v|=\\sqrt{(k/m)(A^2-x^2)}\\); direction needs cycle stage."
+    ],
+    [
+      "Understand",
+      "Damping and driving",
+      "Free damping removes oscillatory mechanical energy. Steady driving balances loss per cycle. Lightly damped displacement resonance peaks near the undamped natural frequency."
+    ],
+    [
+      "Recall",
+      "Sample grid",
+      "\\(\\Delta t=1/f_s\\), \\(t_n=n/f_s\\). Samples per cycle: \\(f_s/f\\). \\(N\\) intervals have \\(N+1\\) endpoints. Record actual duration."
+    ],
+    [
+      "Consult",
+      "Upward crossing",
+      "For \\(x_i\\le0<x_{i+1}\\): \\(t_c=t_i+\\frac{-x_i}{x_{i+1}-x_i}(t_{i+1}-t_i)\\). Subtract equilibrium offset first; linear interpolation."
+    ],
+    [
+      "Consult",
+      "Period estimate",
+      "\\(\\widehat T=(c_{q-1}-c_0)/(q-1)\\), \\(q\\ge2\\) upward crossings. Inspect individual intervals; too few crossings means no estimate."
+    ],
+    [
+      "Understand",
+      "Aliasing",
+      "Distinct motions can share samples. Use \\(f_s>2f_{\\max}\\) with a justified signal-frequency bound; equality is unsafe. Graph/crossing estimates need resolution and duration checks."
+    ],
+    [
+      "Understand",
+      "Evidence",
+      "Model benchmark checks implementation; independent observations test physical predictions. More samples at an unchanged aliasing rate need not resolve ambiguity."
+    ]
+  ],
+  "code": "import numpy as np\nfs, f, A, phi = 20.0, 2.0, 0.01, 0.0\nt = np.arange(81) / fs       # 0 to 4 s inclusive\nx = A*np.cos(2*np.pi*f*t + phi)\n# Use the lesson's checked crossing_period function:\nperiod, crossings = crossing_period(t, x)\nintervals = np.diff(crossings)\nerror = period - 1/f        # synthetic benchmark only"
+}

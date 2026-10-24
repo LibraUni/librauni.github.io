@@ -1,0 +1,53 @@
+{
+  "standard": "1.12; fixed M101 v0.4",
+  "photos": [
+    {
+      "figure": "8.1",
+      "placement": "unit8-lesson1",
+      "file": "tuning-fork.jpg",
+      "creator": "Helihark",
+      "source": "https://commons.wikimedia.org/wiki/File:Tuning-fork.jpg",
+      "sourceIdentity": "Tuning-fork.jpg / f/ff",
+      "terms": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "reuse": "CC BY-SA3.0; source original checked, secondary CC0 description rejected.",
+      "purpose": "Shows an instrument whose prongs move about equilibrium; photograph is context, not a displacement trace.",
+      "modifications": "Unchanged source download; responsive display only",
+      "sha256": "e1d02d762c729d865c4a5adc19232497e4f0b5ad21d12e75abcb78f07c1d013f",
+      "moduleDeduplication": "No earlier P101 placement found by asset identity/filename. Equivalent offline copy counts as same placement."
+    },
+    {
+      "figure": "8.7",
+      "placement": "unit8-lesson3",
+      "file": "gpm-shaker.jpg",
+      "creator": "NASA / Warren Shultzaberger",
+      "source": "https://www.nasa.gov/image-article/gpm-completes-vibration-tests/",
+      "sourceIdentity": "woa-gpm-it-0272_event_105_04.jpg",
+      "terms": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "reuse": "NASA educational/editorial reuse under published terms; not relicensed as CC.",
+      "purpose": "Authentic vibration testing links a controlled driver to response and model limits.",
+      "modifications": "Unchanged source download; responsive display only",
+      "sha256": "bd2db70cbb95cecd743607033e7ddd684d8c57497f6a883a8133a5a173792710",
+      "moduleDeduplication": "No earlier P101 placement found by asset identity/filename. Equivalent offline copy counts as same placement."
+    }
+  ],
+  "originalFigures": {
+    "8.2": "signed displacement time graph,4cm amplitude2s period",
+    "8.3": "phase circle and five-state cosine table",
+    "8.4": "aligned displacement/velocity/acceleration with separate units",
+    "8.5": "potential/kinetic energy bars at three positions",
+    "8.6": "illustrative damped cosine and envelope, not measured data",
+    "8.8": "2Hz/1Hz cosine candidates share3samples/s values"
+  },
+  "searchAndSelection": "Searched tuning-fork instrument and spacecraft vibration-test imagery; verified original Commons identity and NASA source/reuse terms, downloaded and inspected actual assets. Earlier P101 source identities and filenames searched; no prior occurrence.",
+  "judgement": {
+    "L01": "New instrument photograph plus original labelled graph, linked to physical motion and the prose.",
+    "L02": "Phase-circle and linked-rate figures answer the mathematical questions directly. Instrument context is established inL01; repeating that photograph would add no direct value. Sourced-image search not replaced by an all-diagram exemption.",
+    "L03": "Energy and decay diagrams followed by a different authentic shaker photograph; explicit nearby explanation of what the photograph can show.",
+    "L04": "Original alias graph/table and purposeful interactive expose missing information through controls; no generic electronics image selected.",
+    "L05": "Final notebook produces evidence plots; cumulative exercises and retrieval table are the principal visual organisation. No repeated photograph appended for quota.",
+    "introductionsAndReference": "Sustained orienting prose; compact retrieval table/PDF. No arbitrary duplicate images."
+  },
+  "interactive": "Original fixed2Hz explorer: rate/phase buttons, reset, labelled cm/s plot and table, staticFig8.8 alternative;24parameter/viewport cases and keyboard/reset/reduced-motion checked. External GeorgiaTech description only; execution gap documented.",
+  "video": "No video selected: the static and controllable comparisons deliver the needed close inspection without additional prerequisite or viewing allocation.",
+  "licensing": "Original prose/diagrams CC BY-NC-SA4.0; code MIT; photographs retain separate terms; branding excluded. No private OU files redistributed."
+}

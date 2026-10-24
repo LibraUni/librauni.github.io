@@ -1,0 +1,10 @@
+{
+  "lesson": "U08-L02",
+  "status": "Reviewed locally; integration pending",
+  "subject": "129 independent numeric/rate checks pass; phase sign, quarter-cycle states, force/stiffness and square-root scaling. Supplied model satisfies Newton law; no ODE derivation required.",
+  "reader": "Read all four sections continuously; corrected ambiguous half-period transition. Explicitly distinguish offset, phase and amplitude and explain radian mode. Added aligned motion plots to connect prose to signs and turning points.",
+  "visual": "Six offline/noJS viewport/theme cases pass with feedback open. Inspected all sections across desktop/mobile, radicals and nested phase brackets. New Figure8.4 inspected after insertion; exact plotted amplitudes0.04m/0.2m/s/1m/s\u00b2 and period2\u03c0/5s. Wide expressions remain keyboard-scrollable.",
+  "calibration": "OU U4 pp34\u201340 and UP15.1 Eq15.2\u201315.8/Example15.2; CP16.3 Example16.4 and exercises13\u201315. Correct source errors rather than reproduce them.",
+  "workload": "240min:85reading105activities50feedback; four activities, four examples.",
+  "limitations": "Author review, no student timing or independent human moderation."
+}

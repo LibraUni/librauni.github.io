@@ -25,5 +25,5 @@ test('Unit 4 closing resources exist while Unit 8 remains an outline',()=>{
  const content=fs.readFileSync(new URL('../content/p101/unit4-lesson5.html',import.meta.url),'utf8');
  assert.equal((content.match(/class="exercise"/g)||[]).length,12);assert.doesNotMatch(content,/<details[^>]*\bopen\b/);
  for(const file of ['P101-Unit-4-reference.pdf','P101-U04-projectile.ipynb','P101-U04-projectile-investigation.zip'])assert.ok(fs.statSync(new URL('../public/teaching/p101/u04/'+file,import.meta.url)).size>100);
- const next=fs.readFileSync(new URL('../learn/physics/stage-1/p101/b03/u08/index.html',import.meta.url),'utf8');assert.doesNotMatch(next,/data-search-status="available"/);
+ const next=fs.readFileSync(new URL('../learn/physics/stage-1/p101/b03/u09/index.html',import.meta.url),'utf8');assert.doesNotMatch(next,/data-search-status="available"/);
 });

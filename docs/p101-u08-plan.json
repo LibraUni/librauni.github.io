@@ -1,0 +1,97 @@
+{
+  "unit": "P101 U08 Oscillation and sampled signals",
+  "standard": "1.12; fixed M101 v0.4",
+  "date": "2026-10-24",
+  "authority": "Create locally; review one lesson at a time; complete closing resources then publish after checks.",
+  "construction": {
+    "gate": "All 15 B03 lessons blueprinted before U08 sections. All module units and stage blocks already mapped.",
+    "parents": [
+      "curriculum/p101-block3-lessons.js",
+      "curriculum/p101-units.js",
+      "curriculum/p101-blocks.js",
+      "curriculum/stage1-map.js",
+      "curriculum/coverage.js",
+      "docs/curriculum-authoring.md"
+    ],
+    "prerequisites": "P101 U01\u2013U07 signed position, force, energy, graph reading, measurement, functions/arrays/plots. Radian phase and supplied sinusoidal rates taught here; no new M101 dependency.",
+    "wider": "O3/O5/O6/O7; B03 54h/8hPython, U08 18h/3hPython; U09 travelling-wave handover, A101 sampled signals, M102 later oscillator derivation. TMA03 stays separate and unreleased."
+  },
+  "sections": [
+    [
+      "A motion about equilibrium",
+      "How much and how often?",
+      "Reading a motion graph",
+      "Timing several cycles"
+    ],
+    [
+      "From a cycle to phase",
+      "Choosing the starting state",
+      "Velocity, acceleration and the restoring model",
+      "Using and checking the spring model"
+    ],
+    [
+      "Energy through a cycle",
+      "Damping a free oscillation",
+      "Driving and resonance"
+    ],
+    [
+      "A continuous model and a list of samples",
+      "Estimate a period transparently",
+      "When distinct signals give identical samples",
+      "Build a checked sampling notebook"
+    ],
+    [
+      "Investigate one choice at a time",
+      "Cumulative exercises",
+      "Reference and conclusion"
+    ]
+  ],
+  "hours": [
+    3,
+    4,
+    3,
+    4,
+    4
+  ],
+  "pythonHours": [
+    0,
+    0,
+    0,
+    2,
+    1
+  ],
+  "budgetMinutes": [
+    {
+      "reading": 60,
+      "activities": 80,
+      "feedback": 40
+    },
+    {
+      "reading": 85,
+      "activities": 105,
+      "feedback": 50
+    },
+    {
+      "reading": 65,
+      "activities": 75,
+      "feedback": 40
+    },
+    {
+      "reading": 45,
+      "written": 40,
+      "python": 120,
+      "feedback": 35
+    },
+    {
+      "reading": 15,
+      "python": 60,
+      "unitExercises": 100,
+      "solutionsAndCorrection": 45,
+      "referenceAndRevision": 20
+    }
+  ],
+  "media": "Tuning-fork photograph at L01; original time/phase/force/energy/sample figures; NASA GPM shaker photograph in L03. Search source identity across P101; no arbitrary quota. L04 static sample comparison plus purposeful parameter control if validated; no automatic animation.",
+  "practice": "16 mixed original closing questions; routine, conceptual, explanation, numerical and method-selection tasks; 100min attempts +45min correction in L05. Extra practice optional, no hidden prerequisite.",
+  "review": "Distinct subject, reader, rendered and continuous-lesson passes before next lesson; unit coherence, resources, code, offline and live checks afterwards. Self-review, not human moderation.",
+  "status": "Five lessons developed and reviewed sequentially; closing resources and local integration checks complete. Hosted security/deployment and live verification next."
+}
