@@ -1,0 +1,300 @@
+{
+  "cases": [
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/",
+      "width": 1440,
+      "theme": "light",
+      "math": 0,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 0,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/",
+      "width": 390,
+      "theme": "light",
+      "math": 0,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/",
+      "width": 390,
+      "theme": "dark",
+      "math": 0,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/",
+      "width": 320,
+      "theme": "light",
+      "math": 0,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/",
+      "width": 320,
+      "theme": "dark",
+      "math": 0,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+      "width": 1440,
+      "theme": "light",
+      "math": 46,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 46,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+      "width": 390,
+      "theme": "light",
+      "math": 46,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+      "width": 390,
+      "theme": "dark",
+      "math": 46,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+      "width": 320,
+      "theme": "light",
+      "math": 46,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+      "width": 320,
+      "theme": "dark",
+      "math": 46,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+      "width": 1440,
+      "theme": "light",
+      "math": 38,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 38,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+      "width": 390,
+      "theme": "light",
+      "math": 38,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+      "width": 390,
+      "theme": "dark",
+      "math": 38,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+      "width": 320,
+      "theme": "light",
+      "math": 38,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+      "width": 320,
+      "theme": "dark",
+      "math": 38,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+      "width": 1440,
+      "theme": "light",
+      "math": 37,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 37,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+      "width": 390,
+      "theme": "light",
+      "math": 37,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+      "width": 390,
+      "theme": "dark",
+      "math": 37,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+      "width": 320,
+      "theme": "light",
+      "math": 37,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+      "width": 320,
+      "theme": "dark",
+      "math": 37,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+      "width": 1440,
+      "theme": "light",
+      "math": 2,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 2,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+      "width": 390,
+      "theme": "light",
+      "math": 2,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+      "width": 390,
+      "theme": "dark",
+      "math": 2,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+      "width": 320,
+      "theme": "light",
+      "math": 2,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+      "width": 320,
+      "theme": "dark",
+      "math": 2,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+      "width": 1440,
+      "theme": "light",
+      "math": 33,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 33,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+      "width": 390,
+      "theme": "light",
+      "math": 33,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+      "width": 390,
+      "theme": "dark",
+      "math": 33,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+      "width": 320,
+      "theme": "light",
+      "math": 33,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+      "width": 320,
+      "theme": "dark",
+      "math": 33,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+      "width": 1440,
+      "theme": "light",
+      "math": 24,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+      "width": 1440,
+      "theme": "dark",
+      "math": 24,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+      "width": 390,
+      "theme": "light",
+      "math": 24,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+      "width": 390,
+      "theme": "dark",
+      "math": 24,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+      "width": 320,
+      "theme": "light",
+      "math": 24,
+      "errors": []
+    },
+    {
+      "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+      "width": 320,
+      "theme": "dark",
+      "math": 24,
+      "errors": []
+    }
+  ],
+  "noJS": 5,
+  "keyboardClipboard": "exact source text"
+}

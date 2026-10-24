@@ -1,0 +1,17 @@
+{
+  "status": "Local lesson review passed; whole-unit integration passed",
+  "standard": "1.12/M101 v0.4",
+  "subject": "17 independent numerical tests plus transmitted-ray domain test; frequency/wavelength and reversed path checked",
+  "reader": "Continuous read against M101 reference: preserved motivation, definitions, worked decisions and interpreted results. Inverse sine and degree mode explicitly taught using OU U4 pp18\u201320 \u00a71.4. Distinguished phase speed and slow brightness variation.",
+  "visual": "12 introduction/lesson offline width/theme cases; corrected arrowheads and added angle arcs after actual desktop inspection; split long equation, reran6lesson cases with opened disclosures. DesktopS2/mobileS4 inspected.",
+  "sources": {
+    "10.1": "NASA Anatomy, electromagnetic versus mechanical waves; priorU09 diffraction; no OU optics chapter supplied",
+    "10.2": "CollegePhysics2e25.2 reflection/local normal/rough surfaces",
+    "10.3": "CollegePhysics2e25.3 speed/index and Snell exposition; priorU09 stationary boundary",
+    "10.4": "OU U4 \u00a71.4 pp18\u201320 inverse trig and Example3; CollegePhysics2e25.3 Examples25.2\u201325.3; own domain extension"
+  },
+  "practice": "OU Activity8 and Example3 angle recovery as mathematical comparator; CollegePhysics2e Ch25 exercises5\u201316 for index/speed and boundary reasoning. Original diagnostic/reversal tasks; no close paraphrase. Critical-angle domain explanation adds scaffolding.",
+  "budget": "240min including90attempts54feedback; estimates not student validated",
+  "limitations": "Self-review; no independent human moderation; no exact privateOU optics source",
+  "handover": "L02 real/virtual image geometry; preserve angles and direction conventions"
+}

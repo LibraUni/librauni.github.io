@@ -1,0 +1,25 @@
+{
+  "numericChecks": [
+    "E1frequency",
+    "E1speed",
+    "E1lambda",
+    "E3angle",
+    "E4angle",
+    "E4critical",
+    "E8intensity",
+    "E8power",
+    "E8energy",
+    "E11flat0",
+    "E11flat3",
+    "E11flat6",
+    "E11flat9",
+    "E11max",
+    "E11min",
+    "E13absolute",
+    "rayintersection30",
+    "rayintersection6",
+    "L3energy"
+  ],
+  "exactChecks": "lens/sign/reciprocal/background/mean/domain",
+  "nonnumeric": "E2,E7,E12,E14 reasoning reviewed against taught conditions; no unique essay answer claimed"
+}

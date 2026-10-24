@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-24",
+  "status": "Local lesson and closure review passed",
+  "sections": {
+    "10.17": "Original synthesis of U08 oscillations, U09 waves and U10 optical/recording chain",
+    "10.18": "Fourteen exercises mapped in practice-coverage; OpenStax Ch25 questions 5–16 and 40–47 calibrate elementary refraction and lens algebra; IAU standard-candle activity calibrates intensity/systematic errors. No exact source match for synthetic record and code-diagnosis questions.",
+    "10.19": "Eight formative questions revisit all three block units; local feedback only; no official assessment or attainment record",
+    "10.20": "Reference and conclusion reconnect opening image and evidential questions; fields/potentials handover preserves later prerequisite gate"
+  },
+  "subject": "19 independent numerical checks plus exact rational lens/sign/background/mean and total-internal-reflection domain checks; E2/E7/E12/E14 explanations reviewed separately. All iCMA answer indices checked against worked explanations.",
+  "reader": "Read continuously through synthesis, exercise prompts and opened hints/solutions, checkpoint and conclusion. Added explicit correction/retry instructions; clarified source versus background count and open-response criteria. Mobile inspection revealed missing spaces next to angles and numbers; corrected and recompiled. Typeset checkpoint frequency/speed and pi hint as semantic MathML.",
+  "visual": "All fourteen opened exercise/solution screenshots inspected; light/dark and 320/390/1440px cases; two PDF pages actually inspected. Keyboard/reset/change/empty/wrong/correct checkpoint states pass, no-JavaScript feedback remains accessible.",
+  "workload": "180min = 10 synthesis + 75 exercise attempts + 30 correction/retry + 50 iCMA attempts/feedback + 15 reference/conclusion; estimates, not measured student times.",
+  "resources": "12-row web/PDF reference from shared JSON, two-page PDF; starter notebook and script; 11-file offline ZIP. Full activity solutions remain in closed lesson disclosures, not public starter notebook.",
+  "limitations": "Self-review, not independent human moderation or student testing."
+}

@@ -1,0 +1,65 @@
+{
+  "rows": [
+    [
+      "Recall",
+      "Vacuum light",
+      "\\(c\\approx3.00\\times10^8\\,\\mathrm{m\\,s^{-1}}\\); \\(c=f\\lambda_0\\), \\(T=1/f\\). Spectrum, increasing frequency: radio \u2192 microwave \u2192 infrared \u2192 visible \u2192 ultraviolet \u2192 X-ray \u2192 gamma ray."
+    ],
+    [
+      "Recall",
+      "Reflection",
+      "\\(\\theta_{\\mathrm r}=\\theta_1\\). Angles from the local normal; rays and normal coplanar. Surface angle \\(=90^\\circ-\\theta_1\\)."
+    ],
+    [
+      "Recall",
+      "Refraction",
+      "\\(n=c/v\\); \\(n_1\\sin\\theta_1=n_2\\sin\\theta_2\\). Stationary boundary: frequency fixed, \\(\\lambda=\\lambda_0/n\\). Higher index: smaller speed and normal angle."
+    ],
+    [
+      "Understand",
+      "Critical angle",
+      "For \\(n_1>n_2\\): \\(\\theta_{\\mathrm c}=\\sin^{-1}(n_2/n_1)\\). Above it: total internal reflection at an ideal transparent lossless interface. Inverse sine is not reciprocal sine."
+    ],
+    [
+      "Recall",
+      "Thin converging lens",
+      "\\(1/f=1/d_{\\mathrm o}+1/d_{\\mathrm i}\\); \\(f>0,d_{\\mathrm o}>0\\). Real image beyond lens: \\(d_{\\mathrm i}>0\\); virtual, object side: \\(d_{\\mathrm i}<0\\). Thin, paraxial lens in air; common length units."
+    ],
+    [
+      "Understand",
+      "Image geometry",
+      "Parallel ray \u2192 far focus; central ray \u2192 straight; near-focus ray \u2192 parallel. \\(m=h_{\\mathrm i}/h_{\\mathrm o}=-d_{\\mathrm i}/d_{\\mathrm o}\\). Negative \\(m\\): inverted. \\(d_{\\mathrm o}=f\\): no finite image plane."
+    ],
+    [
+      "Recall",
+      "Intensity and energy",
+      "\\(I=P/(4\\pi r^2)\\) / W m\u207b\u00b2. Steady isotropic small source, \\(r>0\\), negligible losses. Small perpendicular collector: \\(P_{\\mathrm{received}}=IA\\), \\(E=IA\\Delta t\\) for steady intensity."
+    ],
+    [
+      "Understand",
+      "Distance ratio",
+      "Unchanged source/conditions: \\(I_2/I_1=(r_1/r_2)^2\\). Source power differs from received power. \\(1\\,\\mathrm{cm^2}=10^{-4}\\,\\mathrm{m^2}\\)."
+    ],
+    [
+      "Understand",
+      "Recorded values",
+      "Matched additive background: source estimate \\(R-B\\). Counts depend on exposure and response settings. Linear unsaturated response needed for proportional comparisons."
+    ],
+    [
+      "Understand",
+      "Observational limits",
+      "Resolution: distinguish nearby features. Magnification: image/display size. Cadence: time between samples. Exposure: accumulation interval. Finer sampling cannot undo optical blur or exposure averaging."
+    ],
+    [
+      "Consult",
+      "Validation",
+      "Check an absolute value, ratio, units, zero-power case and invalid inputs. Preserve raw records, settings and provenance. Hand agreement checks implementation; measured evidence tests the physical model."
+    ],
+    [
+      "Consult",
+      "Sampling comparison",
+      "Compare full and sparse records on common axes; check sampling phase. Nearly equal samples do not establish a steady source between them. Repeated/control measurements test specified alternatives."
+    ]
+  ],
+  "code": "import numpy as np\nr = np.linspace(1, 5, 81)        # m; exclude zero\nI = 12 / (4*np.pi*r**2)          # W/m\u00b2\n# Matched background; arrays share times/settings\ncorrected = raw - control\nsparse_t = t_s[::2]             # every second sample\nsparse_y = corrected[::2]\nspan = np.max(corrected) - np.min(corrected)"
+}

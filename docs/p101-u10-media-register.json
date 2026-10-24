@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-24",
+  "images": [
+    {
+      "figure": "10.1",
+      "placement": "Unit introduction",
+      "asset": "refraction.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Refraction_close_up.jpg",
+      "creator": "Rodrigo Menezes (Ironmanbr),2009",
+      "terms": "CC BY-SA4.0",
+      "licence": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "None; browser scales proportionally",
+      "purpose": "A recognisable image in a droplet motivates ray paths and image formation. Actual source image inspected.",
+      "repeat": "Source identity and filenames checked throughout previous P101; no earlier placement."
+    },
+    {
+      "figure": "10.6",
+      "placement": "10.13",
+      "asset": "ground-space.jpg",
+      "source": "https://science.nasa.gov/asset/hubble/comparison-of-imaging-from-the-ground-and-space/",
+      "creator": "NASA, Mauro Giavalisco, Lexi Moustakas, Peter Capak, Len Cowie and the GOODS Team",
+      "terms": "NASA educational/editorial media use; no endorsement; retain full credit, not relicensed as LibraUni original",
+      "licence": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "modifications": "None; browser scales proportionally",
+      "purpose": "Actual observation distinguishes enlarged display from resolved structure; text notes different instruments/atmosphere. Original image, caption and policy inspected.",
+      "repeat": "No earlier P101 source-identity placement."
+    }
+  ],
+  "original": [
+    {
+      "figure": "10.2",
+      "purpose": "Boundary normal and direction/angle conventions; arrowheads and arcs revised after rendering"
+    },
+    {
+      "figures": "10.3–10.4",
+      "purpose": "Same-point rays, physical outgoing rays and backward virtual extensions; equal x/y scale and analytic intersections checked"
+    },
+    {
+      "figure": "10.5",
+      "purpose": "Sphere cross-section and inverse-square area; radius2r corrected to start at centre"
+    },
+    {
+      "figure": "10.7",
+      "purpose": "Exact synthetic time record and sparse subset; matches notebook data"
+    }
+  ],
+  "originalTerms": "Original diagrams/text CC BY-NC-SA4.0; codeMIT; brandingexcluded.",
+  "visualJourney": "Opening real-world refraction photograph, precise directional and lens diagrams through Lessons1–2, power-spreading geometry inLesson3, independent scientific observation and data plot inLesson4. Lesson5 uses mathematical practice/feedback and compact reference rather than decorative images. All-diagram flags received editorial review against fixed illustrated reference: images support observation and explanation, with captions, margin placement, labelled roles, readable typography and contextual imagery retained. No reduced-standard exception requested or used.",
+  "planChanges": "Spectrum represented in prose/ordered wavelength information rather than an arbitrary colour strip; no unneeded point-spread simulation. Convex_Lens.jpg candidate was a diagram, inspected then rejected/deleted. Optional lens explorer not selected because static same-scale constructions and student drawing teach the required geometrical reasoning; preceding block units already contain verified interactive wave explorations. No uninspected video linked.",
+  "checks": "Captions/credits/alt text/uniqueIDs; images loaded at all viewport/theme cases; source identity searched across earlier module; web/offline same placement counted once; required structural media script passes with expected all-diagram/closing-page editorial flags."
+}

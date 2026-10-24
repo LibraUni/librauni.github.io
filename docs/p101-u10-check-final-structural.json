@@ -1,0 +1,44 @@
+{
+  "linksIds": [
+    {
+      "file": "unit10-reference.html",
+      "ids": 0,
+      "links": 1
+    },
+    {
+      "file": "unit10-lesson1.html",
+      "ids": 16,
+      "links": 2
+    },
+    {
+      "file": "unit10-lesson2.html",
+      "ids": 17,
+      "links": 1
+    },
+    {
+      "file": "unit10-lesson3.html",
+      "ids": 14,
+      "links": 3
+    },
+    {
+      "file": "unit10-lesson4.html",
+      "ids": 13,
+      "links": 4
+    },
+    {
+      "file": "unit10.html",
+      "ids": 1,
+      "links": 2
+    },
+    {
+      "file": "unit10-lesson5.html",
+      "ids": 28,
+      "links": 17
+    }
+  ],
+  "code": "Both lesson codeblocks match notebook by AST",
+  "search": 158,
+  "priorFilesPreserved": 446,
+  "media": "No source-identity repeat in earlierP101",
+  "zip": "11files; hash matched companions"
+}

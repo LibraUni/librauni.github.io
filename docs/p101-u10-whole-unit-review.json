@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-24",
+  "status": "Local release checks passed; hosted security/deployment and live verification pending",
+  "authorization": "User explicitly requested local sequential lessons, closure, then publication after all required checks.",
+  "standard": "v1.12; fixed illustrated M101v0.4",
+  "sequence": "Each of Lessons1–4 received separate subject, continuous-reader and rendered review before subsequent lesson drafting. Lesson5 and closing resources reviewed afterward; integrated whole-unit/block checks separate.",
+  "scope": "18h including2hPython;5lessons,20sections,11workedexamples,16activities,14cumulativeexercises,8question formativeiCMA03,7figures,starter notebook/script,12-row web/referencePDF,11-fileofflinepack.",
+  "coherence": "U09 diffraction and stationary boundaries connect wave description to ray approximations. Normal angles and refraction lead to same-point ray bundles, real/virtual images and signed equations. Power/area then exposure leads to record interpretation, control subtraction and sampling. Closing synthesis distinguishes direction, image geometry, energy and evidential limits; conclusion returns to droplet opening.",
+  "prerequisites": "Only earlier algebra/trigonometry, wave/sampling and NumPy/plotting teaching; inverse sine, array guards and slicing explicitly explained. No calculus, ODE, Fourier or complex amplitude methods. P201 retains deeper wave theory; A101 retains telescope/detector calibration and astronomical inference.",
+  "subject": "17 L1 scalar checks plus domain;7 exact lens-distance/magnification cases;19 closure numeric checks plus exact rational/domain tests. Fresh starter and completed notebook kernels verify intensity scaling/guards, synthetic raw/corrected benchmarks, ranges, shifted cadence and control subtraction. Physical assumptions and qualitative solutions separately reviewed.",
+  "readerRevisions": "Added inverse-sine/domain explanation, distinguished frequency from brightness variation, stated same-point rays and real/virtual interpretation, expanded NumPy guard explanation, documented synthetic offsets without implying a noise distribution, corrected sphere radius and exercise spacing. Examples show intermediate method choices and interpretation; full solutions hidden.",
+  "visual": "42 integrated viewport/theme cases (1440/390/320,light/dark),5noJS,7offline,3enlarged-text cases, exact keyboard code clipboard tests; iCMA empty/correct/wrong/change/reset/focus. All14opened exercise solutions and both PDF pages actually inspected. Intentional diagram/code scrolling labelled and keyboard accessible.",
+  "media": "See media-register; seven purpose-led figures with two independently sourced scientific images and five original diagrams/plots. All-diagram structural flags editorially resolved; no source repeats and no learner-authorised reduction.",
+  "workload": "4+4+4+3+3=18h;Python1h inL3 and1h inL4. Attempts, correction and feedback explicitly budgeted, closing180min internally redistributed without adding work. Estimates, not student-validated timing.",
+  "tests": "171repositorytests pass; production build and158-page search pass; source AST/notebook, links/anchors, public outputs, asset/ZIP and preservation checks pass. Existing large-bundle advisory unchanged.",
+  "preservation": {
+    "files": 446,
+    "changed": []
+  },
+  "limitations": "Self-review, not independent human moderation. PrivateOU collection lacks matching optics chapter; exact accessible passages and gaps recorded. No measured detector data or student workload validation claimed.",
+  "gate": "Publish only through successful hosted security/test/build/deploy; then verify live pages, assets and search."
+}

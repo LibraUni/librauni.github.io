@@ -11,7 +11,7 @@ test('P101 Unit7 release is complete and later content stays unreleased',()=>{
  const closing=read('content/p101/unit7-lesson5.html');
  assert.equal((closing.match(/id="p101-u07-exercise-/g)||[]).length,14);
  assert.equal((closing.match(/class="icma-question"/g)||[]).length,10);
- assert.doesNotMatch(read('learn/physics/stage-1/p101/b03/u10/index.html'),/data-search-status="available"/);
+ assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u11/index.html'),/data-search-status="available"/);
  assert.match(closing,/questions and marking criteria are now available/);
  for(const f of ['Reference.pdf','Thermal.ipynb','Motion.ipynb','Comparison.ipynb','Comparison.zip','Offline.zip'])assert.ok(fs.statSync(new URL('../public/teaching/p101/u07/P101-Unit-7-'+f,import.meta.url)).size>100);
 });

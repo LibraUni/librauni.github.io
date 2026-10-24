@@ -1,0 +1,15 @@
+{
+  "status": "Local lesson review passed; whole-unit integration passed",
+  "subject": "Companion executed with numerical assertions: absolute benchmark, ratio, power doubling, zero power, four invalid distances. Independent energy/area conversions and means checked.",
+  "reader": "Revised guards to explain asarray,isfinite,~ and any; distinguished code-domain check from point-source physical validity. Background comparison states synthetic units and evidence limits.",
+  "visual": "6offline viewport/theme cases passed and screenshotsS1/S3 inspected; corrected radius2r label to measure from centre, reran6cases. Code scrolls locally without page overflow.",
+  "sources": {
+    "10.9": "IAUastroEDU Street lights: Apparent brightness inverse square formula; CollegePhysics2e24.4 intensity definition/Example24.4(a), excludes field amplitudes",
+    "10.10": "IAUastroEDU inverse-square assumptions and systematic-error investigation; original background diagnostic",
+    "10.11": "PriorU08/U09 NumPy plotting and independent checks; original supplied model task",
+    "10.12": "IAUastroEDU discussion of digital recording/exposure; priorP101averaging; original equal-interval example"
+  },
+  "practice": "IAUactivity requires actual camera/image analysis and astronomical distance inference; ours keeps no-apparatus synthetic comparisons and explicitly avoids calibration. Original area/ratio/background/exposure questions.",
+  "budget": "240min including60Python65written43feedback",
+  "limitations": "Self-review; timings not student validated; no exactOUoptics/code comparator"
+}

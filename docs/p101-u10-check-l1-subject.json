@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "frequency",
+    "period",
+    "aperture large",
+    "aperture small",
+    "radio",
+    "material wavelength",
+    "speed1",
+    "speed2",
+    "transmission",
+    "critical",
+    "air glass",
+    "reverse 0",
+    "reverse 10",
+    "reverse 30",
+    "reverse 50",
+    "reverse 70",
+    "reverse 89"
+  ],
+  "totalInternalReflection": true
+}

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-24",
+  "standard": "Teaching Standard and Practice v1.12; fixed M101 opening v0.4 read. B03 fifteen-lesson blueprint, P101 outline and adjoining U09 L4/L5 inspected.",
+  "private": {
+    "file": "sources/U4_Trigonometry.pdf",
+    "passages": "Unit4 section1.4 printed pp18–20, Example3; preceding Activity8 pp17–18. Actual extracted explanatory text inspected.",
+    "fit": "Inverse sine, angle recovery, calculator mode and reciprocal/inverse distinction in 10.4. These are mathematical prerequisites; supplied private collection has no matching optics/intensity/detector chapter. No private source reproduced."
+  },
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/ems/02_anatomy/",
+      "passages": "Anatomy of an Electromagnetic Wave: mechanical versus electromagnetic waves",
+      "fit": "10.1 wave/ray opening; excludes advanced field dynamics."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/25-2-the-law-of-reflection",
+      "passages": "Reflection law, local normals and rough surfaces",
+      "fit": "10.2 normal convention and reflected paths; original figure and examples."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/25-3-the-law-of-refraction",
+      "passages": "Speed/index, Snell law, Examples25.2–25.3",
+      "fit": "10.3–10.4; explicitly teach inverse-sine domain and direction tests. Critical angle is developed from sine bound, not an unexplained prerequisite."
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-3/pages/1-6-huygenss-principle",
+      "passages": "Wavefront/ray Huygens construction",
+      "fit": "Supplementary calibration for ray/wave connection; no integral or field theory imported."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/25-6-image-formation-by-lenses",
+      "passages": "Ray rules, real/virtual images, Examples25.6/25.7, whole-lens image discussion",
+      "fit": "10.5–10.8. Converging thin lens only; excludes lens power, diverging-lens extensions. Our negative-distance discussion supplies explicit outgoing-ray interpretation."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/24-4-energy-in-electromagnetic-waves",
+      "passages": "Intensity definition and Example24.4(a)",
+      "fit": "10.9; excludes field-amplitude equations and radiation pressure."
+    },
+    {
+      "url": "https://astroedu.iau.org/activities/street-lights-as-standard-candles/",
+      "passages": "Markus Pössel, Street Lights as Standard Candles: sphere derivation, collecting area, exposure/systematic comparisons",
+      "fit": "10.9–10.12 and 10.14/10.16; no camera purchase or practical apparatus requirement, no astronomical distance derivation. Original synthetic numbers and numerical diagnostics."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/27-6-limits-of-resolution-the-rayleigh-criterion",
+      "passages": "Opening overlap/diffraction paragraphs, Fig27.25 and two-line experiment",
+      "fit": "10.13 qualitative resolution only; excludes Rayleigh criterion calculation, astronomical inference and outdated contextual claims."
+    },
+    {
+      "url": "https://science.nasa.gov/asset/hubble/comparison-of-imaging-from-the-ground-and-space/",
+      "passages": "Ground/space image and original caption inspected",
+      "fit": "10.13 genuine observed comparison; instrument and atmosphere differ, so not a controlled aperture experiment."
+    }
+  ],
+  "practice": [
+    {
+      "source": "OU U4 Activity8 and Example3",
+      "fit": "Angle recovery scaffolding; no exact optics practice comparator. Own questions add explicit geometry, reversal and physical-domain checks."
+    },
+    {
+      "url": "https://openstax.org/books/college-physics-2e/pages/25-problems-exercises",
+      "passages": "Questions5–16 and40–47",
+      "fit": "Actual questions inspected. Index/speed/refraction and lens-distance fluency comparable; our set mixes drawing, inverse choices, failure diagnosis and conditions. Source may be less scaffolded; local hints separated from full solutions. Original questions, not numerical substitutions into source prompts."
+    },
+    {
+      "source": "IAU Street Lights activity and OpenStax27.6 two-line experiment",
+      "fit": "Intensity comparison, assumptions and resolution; local work is apparatus-free and includes fixed synthetic data, code verification and observation-plan criteria. No exact OU/Python comparator available; prior P101 U08/U09 code/sampling teaching supplies prerequisites."
+    }
+  ],
+  "mapping": "Per-section details in l01–l05-review; cumulative coverage in practice-coverage.10.15 and10.16 original synthesis; no false one-to-one exercise-source equivalence.",
+  "calibration": "Fixed M101 sample motivates a question, develops notation in connected prose, justifies worked choices and supplies diagnostic feedback; U10 follows that intellectual progression. Its demonstration closing practice quantity/placement is not copied. Subject reviews, reader revisions and actual rendering checks recorded separately."
+}

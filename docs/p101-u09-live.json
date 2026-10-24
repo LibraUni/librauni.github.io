@@ -1,0 +1,118 @@
+{
+  "pages": [
+    "/learn/physics/stage-1/p101/b03/u09/",
+    "/learn/physics/stage-1/p101/b03/u09/l01/",
+    "/learn/physics/stage-1/p101/b03/u09/l02/",
+    "/learn/physics/stage-1/p101/b03/u09/l03/",
+    "/learn/physics/stage-1/p101/b03/u09/l04/",
+    "/learn/physics/stage-1/p101/b03/u09/l05/",
+    "/learn/physics/stage-1/p101/b03/u09/reference/"
+  ],
+  "downloads": [
+    {
+      "name": "P101-Unit-9-Reference.pdf",
+      "sha256": "45a3438191eaae433154fc509de7fc57c55caf93df7b59fcb6727b105e1a3ce5",
+      "bytes": 222393
+    },
+    {
+      "name": "P101-Unit-9-Offline.zip",
+      "sha256": "cd6110df4c11ab06952d01484ae6f12056e3442fc336bcde9c2d855939373113",
+      "bytes": 2641367
+    },
+    {
+      "name": "P101-Unit-9-Waves.ipynb",
+      "sha256": "7fddee64641137d152d5e5e1f968fb42eaadb91cd7d92117e93b90b61ab27ba7",
+      "bytes": 6220
+    },
+    {
+      "name": "P101-Unit-9-Waves.py",
+      "sha256": "1faf9bf4d94176782996315eb7f61d78692dc6a1862f4d903d35034983a5fe5c",
+      "bytes": 2004
+    },
+    {
+      "name": "wave-clouds.jpg",
+      "sha256": "92586a4afa8c12e4fe4970f802aed6f7805ddf0638be83aacc790aa4ec1254c8",
+      "bytes": 73644
+    },
+    {
+      "name": "water-diffraction.jpg",
+      "sha256": "6db77452ca1f40881570aafcbf263a9f38baf07ca4b786148600decf54077646",
+      "bytes": 2306255
+    }
+  ],
+  "search": "All 7 Unit 9 pages indexed; Unit 10 absent from available teaching",
+  "release": {
+    "commit": "3207b672aac3220ab00ed9fefc942b4f63ebc438",
+    "repository": "https://github.com/LibraUni/librauni.github.io"
+  },
+  "workflow": {
+    "id": 40078342273,
+    "conclusion": "success",
+    "security": "success",
+    "publish": "success"
+  },
+  "browser": {
+    "cases": [
+      {
+        "width": 390,
+        "route": ""
+      },
+      {
+        "width": 390,
+        "route": "l01/"
+      },
+      {
+        "width": 390,
+        "route": "l02/"
+      },
+      {
+        "width": 390,
+        "route": "l03/"
+      },
+      {
+        "width": 390,
+        "route": "l04/"
+      },
+      {
+        "width": 390,
+        "route": "l05/"
+      },
+      {
+        "width": 390,
+        "route": "reference/"
+      },
+      {
+        "width": 1440,
+        "route": ""
+      },
+      {
+        "width": 1440,
+        "route": "l01/"
+      },
+      {
+        "width": 1440,
+        "route": "l02/"
+      },
+      {
+        "width": 1440,
+        "route": "l03/"
+      },
+      {
+        "width": 1440,
+        "route": "l04/"
+      },
+      {
+        "width": 1440,
+        "route": "l05/"
+      },
+      {
+        "width": 1440,
+        "route": "reference/"
+      }
+    ],
+    "explorer": "Cancellation, reset and keyboard slider passed at both widths",
+    "solutions": "Exercise 12 closed initially and opens on request",
+    "pageErrors": []
+  },
+  "status": "Published and live verification passed"
+}

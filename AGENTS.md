@@ -1,3 +1,11 @@
+# P101 Unit 10 complete locally; publication authorised — 24 October 2026
+
+Five lessons developed and reviewed sequentially to standard v1.12 and fixed M101v0.4.18h/2hPython;20sections,11examples,16activities,14cumulativeexercises,8question formativeiCMA03,7figures,checked notebook/script,two-page reference and offlinepack.171repositorytests,production/browser/notebook/PDF checks pass;446prior source/download files preserved. See docs/p101-u10-whole-unit-review.json and docs/p101-block3-release-review.json. Hosted security/test/build/deploy and live verification must pass before claiming live. U11 and TMA03 remain in preparation; no learner records changed.
+
+# P101 Unit 9 published and verified — 24 October 2026
+
+Release 3207b672aac3220ab00ed9fefc942b4f63ebc438; workflow 40078342273 succeeded. Seven live pages, six download/media hashes, search availability, 14 browser cases, interactive cancellation/reset/keyboard and hidden solutions passed. See docs/p101-u09-live.json. Supersedes the pending publication status below. Unit 10 remains outline; no learner records changed.
+
 # P101 Unit 9 complete locally; publication authorised — 24 October 2026
 
 Five lessons developed and reviewed sequentially to Teaching Standard v1.12 and fixed M101 v0.4. Unit remains 18 hours including 3 Python hours. Closing resources include 16 checked exercises with hidden solutions, notebook/script, phase explorer, synchronized two-page reference and offline pack. See docs/p101-u09-whole-unit-review.json and source/media/per-lesson evidence. 168 site tests and local production/browser/notebook checks pass; 401 earlier teaching/download files preserved. Hosted security/deployment and live verification must pass before claiming live. Unit 10 and TMA03 remain uncommissioned. No learner records changed.

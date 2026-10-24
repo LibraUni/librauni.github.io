@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-24",
+  "standard": "1.12; fixed M101 opening v0.4 read in full",
+  "unit": "P101 U10 Light, images and observational limits",
+  "authority": "User requests local sequential lesson development and review, closure, publication after checks",
+  "gate": "B03 fifteen-lesson blueprint inspected; module unit outcomes and parent construction policy inspected. Relevant prerequisites U09 plus U08 sampling and P101 Python.",
+  "scope": "18h,2hPython; O3/O5/O6/O7; no telescope required, no detector calibration or astronomical distance/spectral-shift derivation; TMA03 separately scoped.",
+  "sections": [
+    [
+      "Light as a wave and a ray",
+      "Reflection and the normal",
+      "Speed, wavelength and refraction",
+      "Solving and checking a refraction problem"
+    ],
+    [
+      "Rays from one object point",
+      "Locating a real image",
+      "A converging lens as a magnifier",
+      "Image size and the limits of the model"
+    ],
+    [
+      "Power spread over area",
+      "Distance comparisons and background",
+      "A checked intensity plot",
+      "From incident light to recorded values"
+    ],
+    [
+      "Resolution before sampling",
+      "Small signals and competing explanations",
+      "Compare documented records in Python",
+      "Designing a better observation"
+    ],
+    [
+      "From oscillation to evidence",
+      "Cumulative unit exercises",
+      "Formative iCMA03",
+      "Reference and conclusion"
+    ]
+  ],
+  "minutes": [
+    {
+      "reading": 96,
+      "attempts": 90,
+      "feedback": 54
+    },
+    {
+      "reading": 96,
+      "attempts": 90,
+      "feedback": 54
+    },
+    {
+      "reading": 72,
+      "python": 60,
+      "attempts": 65,
+      "feedback": 43
+    },
+    {
+      "reading": 48,
+      "python": 60,
+      "attempts": 42,
+      "feedback": 30
+    },
+    {
+      "synthesis": 10,
+      "exercises": 75,
+      "correction": 30,
+      "icmaIncludingFeedback": 50,
+      "referenceConclusion": 15
+    }
+  ],
+  "practice": "14 varied cumulative exercises; 75min attempts+30min correction; 8 formative checkpoint questions in50min. All in1080min total. L05 reading reservation redistributed to actual synthesis/practice within3h, no increase.",
+  "media": "Original spectrum, boundary rays, real/virtual lens constructions, inverse-square shell, sampled point-spread/signal graphs. Search and inspect distinct refraction and instrument/scientific photographs; record permissions and module-wide identity check. Optional lens parameter explorer if verified.",
+  "review": "Subject calculation separately from authoring; continuous reader read, screenshots and offline checks before proceeding to next lesson. Whole unit and block handover separately. Self review, no human moderation claim.",
+  "status": "Completed; final design decisions and checks in whole-unit-review and media-register"
+}

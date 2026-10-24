@@ -1,0 +1,14 @@
+{
+  "status": "Local lesson review passed; whole-unit integration passed",
+  "standard": "1.12/fixedM101v0.4",
+  "subject": "Seven exact rational image/magnification pairs, singular focus, same-scale generated ray intersections checked",
+  "reader": "Continuous read: distance convention introduced before equations; same object point requirement explicit; similar triangles motivate magnification; thinness distinguished from paraxial and aberration assumptions. No calculus required.",
+  "visual": "6offline widths/themes with all feedback opened; actual real/virtual construction screenshots inspected; same-scale geometry and dashed backwards extensions verified.",
+  "sources": {
+    "10.5\u201310.7": "CollegePhysics2e25.6 ray rules, image formation, Examples25.6\u201325.7 and misconception alert; excludes lens power/diverging lenses from required scope",
+    "10.8": "Original algebraic sensitivity synthesis using existing reciprocal algebra; qualitative resolution handover"
+  },
+  "practice": "Ch25 exercises40\u201347 inspected for multi-step image position/size/context interpretation. Original construction/comparison/diagnosis activities, no lens powers required.",
+  "budget": "240min;90attempts54feedback; no student-tested timing",
+  "limitations": "Self-review; suppliedOUcollection has no optics chapter; fixed reference and OU trig support editorial/maths calibration. Static ray comparison chosen; no decorative interactive."
+}

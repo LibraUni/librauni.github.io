@@ -1,7 +1,7 @@
 export const p101Block3Lessons = {
   "version": "1.0",
   "date": "2026-10-24",
-  "status": "Complete B03 construction blueprint within approved 54h/8h Python; U08/U09 teaching available; U10 teaching remains in preparation.",
+  "status": "Complete B03 construction blueprint within approved 54h/8h Python; U08–U10 teaching and embedded formative iCMA03 available; separate TMA03 remains in preparation.",
   "lessons": [
     {
       "id": "U08-L01",

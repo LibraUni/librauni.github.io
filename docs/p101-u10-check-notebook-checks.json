@@ -1,0 +1,9 @@
+{
+  "schema": "valid",
+  "publicOutputs": "empty",
+  "freshKernels": [
+    "starter",
+    "completed"
+  ],
+  "checks": "intensity ratio/scaling/guards; raw/corrected benchmark; ranges; shifted phase and common background subtraction"
+}

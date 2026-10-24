@@ -1,0 +1,161 @@
+[
+  {
+    "exercise": 1,
+    "sections": "10.1,10.3",
+    "purpose": "spectrum,boundary",
+    "minutes": 4,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 2,
+    "sections": "10.2",
+    "purpose": "reflection",
+    "minutes": 5,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 3,
+    "sections": "10.3,10.4",
+    "purpose": "refraction,reversal",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 4,
+    "sections": "10.4",
+    "purpose": "domain,critical",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 5,
+    "sections": "10.5,10.6",
+    "purpose": "realimage,diagram",
+    "minutes": 5,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 6,
+    "sections": "10.6,10.7",
+    "purpose": "inversechoice,virtual",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 7,
+    "sections": "10.7,10.8",
+    "purpose": "limits",
+    "minutes": 4,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 8,
+    "sections": "10.9",
+    "purpose": "intensity,energy",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 9,
+    "sections": "10.10",
+    "purpose": "background",
+    "minutes": 5,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7"
+    ]
+  },
+  {
+    "exercise": 10,
+    "sections": "10.12",
+    "purpose": "exposure",
+    "minutes": 5,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7",
+      "P101-O5"
+    ]
+  },
+  {
+    "exercise": 11,
+    "sections": "10.15",
+    "purpose": "sampling",
+    "minutes": 5,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7",
+      "P101-O5"
+    ]
+  },
+  {
+    "exercise": 12,
+    "sections": "10.8,10.13",
+    "purpose": "resolution",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7",
+      "P101-O5"
+    ]
+  },
+  {
+    "exercise": 13,
+    "sections": "10.11",
+    "purpose": "codediagnosis",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7",
+      "P101-O5"
+    ]
+  },
+  {
+    "exercise": 14,
+    "sections": "10.12\u201310.16",
+    "purpose": "mixed evidence",
+    "minutes": 6,
+    "outcomes": [
+      "P101-O3",
+      "P101-O6",
+      "P101-O7",
+      "P101-O5"
+    ]
+  }
+]
