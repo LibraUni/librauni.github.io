@@ -1,0 +1,130 @@
+{
+  "assessment": "P101 TMA02",
+  "version": "1.0",
+  "date": "2026-10-24",
+  "standard": "1.12; fixed M101 v0.4 inspected",
+  "authorisation": "Create locally, review, publish after required checks.",
+  "constructionGate": "Existing module/stage map, B02 four units/20lesson blueprint, U04\u2013U07 completed teaching and six separate assessment hours. No scope change.",
+  "questions": [
+    {
+      "id": "Q01",
+      "title": "A pull changes the contact",
+      "marks": 18,
+      "minutes": 40,
+      "parts": [
+        5,
+        5,
+        4,
+        4
+      ],
+      "units": [
+        "U04",
+        "U06"
+      ],
+      "outcomes": [
+        "O1",
+        "O2",
+        "O7"
+      ],
+      "scope": "Own force diagram/third-law partner; angled pull normal and static condition; changed pull kinetic acceleration; independent constant-force work/energy check."
+    },
+    {
+      "id": "Q02",
+      "title": "Which distance belongs in an orbit?",
+      "marks": 16,
+      "minutes": 45,
+      "parts": [
+        6,
+        6,
+        4
+      ],
+      "units": [
+        "U05"
+      ],
+      "outcomes": [
+        "O1",
+        "O7"
+      ],
+      "scope": "Circular gravitational model derivation, centre radius versus altitude, field/speed/period, mass doubling and freefall explanation. No orbital-energy integration."
+    },
+    {
+      "id": "Q03",
+      "title": "Two checks on one collision",
+      "marks": 20,
+      "minutes": 55,
+      "parts": [
+        5,
+        5,
+        5,
+        5
+      ],
+      "units": [
+        "U06",
+        "U04"
+      ],
+      "outcomes": [
+        "O1",
+        "O2",
+        "O7"
+      ],
+      "scope": "Signed momentum and two candidate reports; kinetic-energy consistency versus passive assumption; impulses/average forces; interval-bound and system explanation."
+    },
+    {
+      "id": "Q04",
+      "title": "An energy account for a thermal assembly",
+      "marks": 18,
+      "minutes": 50,
+      "parts": [
+        5,
+        5,
+        3,
+        5
+      ],
+      "units": [
+        "U07"
+      ],
+      "outcomes": [
+        "O2",
+        "O5",
+        "O7"
+      ],
+      "scope": "Three-body balance; changed measured endpoint with paddle work; level/interval and transfer distinction; controlled follow-up differentiating thermal loss versus probe offset."
+    },
+    {
+      "id": "Q05",
+      "title": "Does the motion require changing acceleration?",
+      "marks": 28,
+      "minutes": 115,
+      "parts": [
+        6,
+        6,
+        7,
+        5,
+        4
+      ],
+      "units": [
+        "U07",
+        "U03 prerequisite"
+      ],
+      "outcomes": [
+        "O1",
+        "O5",
+        "O6",
+        "O7"
+      ],
+      "scope": "Polynomial rates and finite-step hand check; independent CSV/model functions/common comparisons; position and residual plots/MAR; fresh rerun and independent benchmarks; bounded conclusion and one next observation."
+    }
+  ],
+  "minutes": {
+    "reading": 15,
+    "questions": 305,
+    "checkingPackaging": 40,
+    "total": 360
+  },
+  "privateKey": "Detailed checked solutions and specimen code outside public repository in sibling work/p101-tma02-private. Public criteria, no solutions/reveal controls.",
+  "handover": "After U07 and formative iCMA02, before B03 U08 outline; M101U05 derivative prerequisite already explicit in U07. Earlier P101 Python and evidence methods cumulative.",
+  "media": "Two original scenario diagrams and one full source table. Students draw assessed free-body/model/residual graphs. Assessment-format calibration against P101TMA01 avoids supplying an assessed answer as illustration; no decorative photo or interactive answer calculator.",
+  "data": "Original invented record, transparently identified; same-time independent runs remain distinct. No claim to experimental validation or invented instrument specification.",
+  "workload": "Editorial estimate, not learner timing trial. Existing feedback allocation used for subsequent feedback; any targeted reassessment requires a separately agreed scope/time, not automatic six-hour repeat.",
+  "status": "Complete question/subpart plan before drafting"
+}
