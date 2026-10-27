@@ -1,3 +1,7 @@
+# M101 revision release — 27 October 2026
+
+User authorises publication of reviewed revision v0.2 and record after final checks. Six public resources include the linked public specimen, worked guide, clarifications and examination reference. See docs/m101-revision-release-review.json. All six outcomes and720minutes preserved;174tests and36browser cases pass. Private final examination/marking guide stay outside this repository, build and search. No policy adoption or learner-record change. Hosted security/deployment and live verification required before claiming live.
+
 # P101 Unit 10 complete locally; publication authorised — 24 October 2026
 
 Five lessons developed and reviewed sequentially to standard v1.12 and fixed M101v0.4.18h/2hPython;20sections,11examples,16activities,14cumulativeexercises,8question formativeiCMA03,7figures,checked notebook/script,two-page reference and offlinepack.171repositorytests,production/browser/notebook/PDF checks pass;446prior source/download files preserved. See docs/p101-u10-whole-unit-review.json and docs/p101-block3-release-review.json. Hosted security/test/build/deploy and live verification must pass before claiming live. U11 and TMA03 remain in preparation; no learner records changed.

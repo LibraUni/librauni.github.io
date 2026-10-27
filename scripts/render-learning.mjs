@@ -1,3 +1,4 @@
+import {addM101Revision} from './m101-revision.mjs';
 import {presentOverview,subjectFor} from './module-presentation.mjs';
 import {unitLink,assertBlockUnitLabels} from './unit-link.mjs';
 import {addP101Teaching,p101TeachingPaths} from './p101-teaching.mjs';
@@ -112,6 +113,7 @@ export function renderLearning({root,shell,link,e}) {
  }
  addM101Teaching({root,pages,extraRails,link});
  addP101Teaching({root,pages,extraRails,link});
+ addM101Revision({root,pages,extraRails,link});
  // One breadcrumb rule for every module, block, unit and lesson, including future pages.
  for(const page of pages){
   const module=modules.find(m=>page[0].startsWith(m.base));
@@ -152,6 +154,7 @@ export function renderLearning({root,shell,link,e}) {
   if(path==='/learn/physics/stage-1/m101/b01/u01/l01/')html=html.replace('</body>','<script src="/m101-legacy-links.js"></script></body>');
   if(path.startsWith('/learn/physics/stage-1/p101/b02/'))html=html.replace('</head>','<link rel="stylesheet" href="/src/p101-unit4.css"></head>');
   if(path.startsWith('/learn/physics/stage-1/p101/'))html=html.replace('<script type="module" src="/src/study-ui.js"></script>','').replace('</head>','<link rel="stylesheet" href="/src/p101.css"></head>');
+  if(path.startsWith('/learn/physics/stage-1/m101/revision/'))html=html.replace('<body>','<body class="m101-revision-page">').replace('<script type="module" src="/src/study-ui.js"></script>','');
   if(path==='/learn/')html=html.replace('<a class="button-link" href="/learn/">Learning materials</a>','');
   if(path.startsWith(base))html=html.replace(/<script type="module" src="\/src\/study-ui.js"><\/script>/g,'').replaceAll('LEARNING MATERIALS','PROTOTYPE ARCHIVE').replace(/<p class="section-read">[\s\S]*?<\/p>/g,'');
   fs.mkdirSync(root+path.slice(1),{recursive:true});fs.writeFileSync(root+path.slice(1)+'index.html',html);

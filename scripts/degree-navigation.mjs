@@ -54,7 +54,7 @@ export function degreeSidebar(path,hierarchy,rails,e){
     return '<li>'+anchor(up,'Unit '+Number(u.id.slice(1))+' · '+u.title)+ls+'</li>';
    }).join('')+'</ol>';
    return '<li>'+anchor(bp,'Block '+Number(b.id.slice(1))+' · '+b.title)+nested+'</li>';
-  }).join('')+(['M101','P101'].includes(m.code)?'<li>'+anchor(m.href+'assessments/tma01/','TMA 01 · Block 1 assessment')+'</li>':'')+'</ol>';
+  }).join('')+(['M101','P101'].includes(m.code)?'<li>'+anchor(m.href+'assessments/tma01/','TMA 01 · Block 1 assessment')+'</li>':'')+(m.code==='M101'?'<li>'+anchor(m.href+'revision/','Revision · 12 hours')+'<ol><li>'+anchor(m.href+'revision/record/','Revision record')+'</li><li>'+anchor(m.href+'revision/specimen/','Public specimen')+'</li></ol></li>':'')+'</ol>';
  }
  return `<details class="lesson-navigation degree-navigation" open><summary><span class="sidebar-toggle-label"><span class="sidebar-show">Show sidebar</span><span class="sidebar-hide">Hide sidebar</span></span><span data-current-section></span></summary><nav aria-label="Learning materials"><h2>${anchor('/learn/','Learning materials')}</h2>${path.match(/\/l\d+\/$/)?'<a class="current-lesson-link" href="#lesson-start">Back to this lesson ↑</a>':''}<ol class="degree-navigation-tree">${[1,2,3].map(n=>`<li class="navigation-stage">${anchor('/learn/physics/stage-'+n+'/','Stage '+n)}<ol>${degreeModules.filter(m=>m.stage===n).map(m=>'<li class="navigation-module'+(path.startsWith(m.href)?' is-current-module':'')+'">'+anchor(m.href,m.code+' · '+m.title)+children(m)+'</li>').join('')}</ol></li>`).join('')}</ol></nav></details>`;
 }
