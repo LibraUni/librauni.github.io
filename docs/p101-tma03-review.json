@@ -35,7 +35,8 @@
     "corrections": [
       "Split paired wave and source-model formulas into separate displays for narrow screens.",
       "Added visible narrow-screen diagram-scroll cue; keyboard scrolling reaches right-hand table and diagram content.",
-      "Cleaned data readme spacing and explicit source credits."
+      "Cleaned data readme spacing and explicit source credits.",
+      "Final live opening inspection exposed global site-header flex styling: scoped the assessment header to a normal block and added a computed-layout browser assertion. Rebuilt offline copy and rechecked before final release."
     ],
     "math": "Semantic inline/display MathML with fractions, radicals, superscripts and delimiters; readable without JS. Larger apparatus diagrams/tables scroll within labelled keyboard-focusable regions.",
     "media": "Two original setup diagrams plus licensed original-size kit photograph, contextual caption and reuse record. Existing U10 closing page media warning reviewed: only its assessment handover sentence changed; prior figures and unit illustration programme preserved.",
