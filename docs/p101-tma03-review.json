@@ -1,0 +1,80 @@
+{
+  "assessment": "P101 TMA03",
+  "version": "1.0",
+  "date": "2026-10-27",
+  "standard": "Teaching Standard and Practice v1.12; fixed M101 opening v0.4",
+  "scope": "5 questions, 20 parts, 100 marks, 6 separate assessment hours after U08–U10 and formative iCMA03. No deadlines, weights, thresholds or learner records changed.",
+  "reviewType": "Distinct author subject, reader, visual and whole-assessment review passes. Fresh separate calculations and program executions provide computational cross-checks. This is not independent human review or learner testing.",
+  "subject": {
+    "status": "pass",
+    "coverage": "All 20 parts have worked private solutions and criterion-level allocations, alternative-method and carried-forward guidance. Open interpretation questions have sample reasoning and criteria.",
+    "checks": 103,
+    "method": "Separate numerical/Fraction/trigonometric checks of motion, energy, propagation, boundary conditions, ray geometry, detector budgets, fixed models and residuals. Invalid data checks and identical CSV/JSON outputs from two clean processes in separate folders. Private specimen plot inspected against tabular output.",
+    "corrections": [
+      "Corrected a rounding error in the private refraction result.",
+      "Private lens caption now describes light direction without claiming undrawn arrowheads."
+    ],
+    "privacy": "Full results, worked guide, specimen code, diagrams, output and screenshots remain in restricted sibling work/p101-tma03-private outside repository and publication."
+  },
+  "reader": {
+    "status": "pass",
+    "method": "Read complete public assessment, check each requested operation against taught sections and worked guide; compare explanatory/practice passages in sources record.",
+    "corrections": [
+      "Explicitly stated thin paraxial lens model.",
+      "Made control matching, instantaneous sampling, response scale, nonchronological file order and two group meanings explicit.",
+      "Qualified extension beyond eight seconds by continued model validity.",
+      "Distinguished display precision from a supplied uncertainty distribution.",
+      "Kept common notebook/written explanations cross-referenced, avoiding duplicate submission work."
+    ],
+    "continuity": "Opening connects the block question of patterns versus observations; final handover preserves the transition to fields/potentials. References point to all three completed unit resources."
+  },
+  "visual": {
+    "status": "pass",
+    "actualInspection": "Public desktop question sections, preparation and handover; private worked question sections; narrow-screen optical diagram, photo, wave and model mathematics, data table and offline copy; dark-mode wave question. Refined displays re-inspected after change.",
+    "automatedCases": "10 widths/theme combinations at 1440, 900, 640, 390, 320 px; no-JS; keyboard contents navigation; 200% zoom proxy; offline questions and private guide at 1440/390/320 px; print-media availability. No page overflow, broken internal anchors, duplicate IDs, unloaded images or JavaScript errors.",
+    "corrections": [
+      "Split paired wave and source-model formulas into separate displays for narrow screens.",
+      "Added visible narrow-screen diagram-scroll cue; keyboard scrolling reaches right-hand table and diagram content.",
+      "Cleaned data readme spacing and explicit source credits."
+    ],
+    "math": "Semantic inline/display MathML with fractions, radicals, superscripts and delimiters; readable without JS. Larger apparatus diagrams/tables scroll within labelled keyboard-focusable regions.",
+    "media": "Two original setup diagrams plus licensed original-size kit photograph, contextual caption and reuse record. Existing U10 closing page media warning reviewed: only its assessment handover sentence changed; prior figures and unit illustration programme preserved.",
+    "format": "Self-contained printable offline HTML with embedded photograph, table and mathematical structure. No separate assessment PDF authored; existing compact unit references remain unchanged."
+  },
+  "wholeAssessment": {
+    "status": "pass",
+    "coverage": "O3 physical reasoning, O5 controlled interpretation/planning, O6 reproducible programming, O7 evidence and communication; U08 motion/energy/driving, U09 propagation/superposition/boundaries, U10 rays/energy/resolution/records.",
+    "variety": "Routine fluency, explanations, derivation, sketches, diagnostic counterexamples, mixed ratios and original computational investigation. No unstated apparatus competence or new mathematical methods.",
+    "workload": "15 min preparation + 45/60/55/40/110 min questions + 35 min check/rerun/package = 360 min. Existing B03 54h/8h Python remains intact; feedback uses existing module allocation, reassessment requires separately agreed scope. Author estimate, not timed student validation.",
+    "balance": "No public answer disclosure or model solution code; suitable private guidance is complete. No forced extra lesson exercises or unrelated extension work."
+  },
+  "localReleaseChecks": {
+    "repositoryTests": 177,
+    "productionBuild": "pass; existing chunk-size advisory only",
+    "searchAvailablePages": 165,
+    "structuralMediaCheck": "pass; existing review-page warning editorially considered",
+    "verification": {
+      "status": "pass",
+      "publicParts": 20,
+      "publicMarks": 100,
+      "minutes": 360,
+      "priorFilesPreserved": 390,
+      "permittedEarlierEdit": [
+        "content/p101/unit10-lesson5.html"
+      ],
+      "checkedPublicFiles": 2271,
+      "checkedPublicArchives": 26,
+      "publicDownloadFiles": 5,
+      "localLinks": 14,
+      "privateCanariesAndHashesAbsent": true,
+      "completePublicDataAndOfflineCopy": true
+    }
+  },
+  "limitations": [
+    "No independent human review or timed learner pilot.",
+    "Private OU physics/optics assessment comparator unavailable; inspected OU trigonometry and open undergraduate physics passages used with explicit fit/gaps.",
+    "No exact external question matches the combined Q05 computing investigation."
+  ],
+  "disposition": "Locally complete; user-authorised publication may proceed. Hosted security, tests, build and deployment must pass, then verify live content, downloads and browser behaviour before claiming live.",
+  "integration": "Rebased onto d8153a7 (reviewed M101 revision release); its source and rendered pages remain unchanged. Combined 177 tests and 165-page search rebuilt successfully."
+}

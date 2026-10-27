@@ -1,0 +1,572 @@
+{
+  "pages": [
+    "/learn/physics/stage-1/p101/b03/u10/",
+    "/learn/physics/stage-1/p101/b03/u10/l01/",
+    "/learn/physics/stage-1/p101/b03/u10/l02/",
+    "/learn/physics/stage-1/p101/b03/u10/l03/",
+    "/learn/physics/stage-1/p101/b03/u10/l04/",
+    "/learn/physics/stage-1/p101/b03/u10/l05/",
+    "/learn/physics/stage-1/p101/b03/u10/reference/"
+  ],
+  "downloads": [
+    {
+      "name": "P101-Unit-10-Reference.pdf",
+      "sha256": "c36aabb21333f9537ff4601f0de4d1b5f4fdef104f1868d8a60a6adf7c8acada",
+      "bytes": 238217
+    },
+    {
+      "name": "P101-Unit-10-Offline.zip",
+      "sha256": "cb0ee06ef030253c0a7a264cf5e1eb4d2a4e6e8d80b3639cb2678759576e3092",
+      "bytes": 3837760
+    },
+    {
+      "name": "P101-Unit-10-Light.ipynb",
+      "sha256": "f3f3e69cbeadc89d326ee401a9c9748850ddce335bdb2ad19fc34475ae32245c",
+      "bytes": 4262
+    },
+    {
+      "name": "P101-Unit-10-Light.py",
+      "sha256": "7529c1167f7c2c107badbd6072c0e3953e39b5065b027c7fc8ff73a9459e0546",
+      "bytes": 2604
+    },
+    {
+      "name": "refraction.jpg",
+      "sha256": "9edc72ab775cc6c4112863c5b8c1ecfca5bbc1f2f0ab7fee83f905097854f141",
+      "bytes": 3589842
+    },
+    {
+      "name": "ground-space.jpg",
+      "sha256": "e3a8e1d66d5c79ae7c3304ebd2f06cbb92f344eeef90f8bb9609ef3bc5cb23a4",
+      "bytes": 239603
+    }
+  ],
+  "search": "All 7 Unit 10 pages indexed; Unit 11 absent from available teaching",
+  "release": {
+    "commit": "1cc935504bf3ecfabb40c23dfd08a07fc46cf53a",
+    "repository": "https://github.com/LibraUni/librauni.github.io"
+  },
+  "date": "2026-10-24",
+  "status": "Published and verified",
+  "workflow": {
+    "conclusion": "success",
+    "headSha": "1cc935504bf3ecfabb40c23dfd08a07fc46cf53a",
+    "jobs": [
+      {
+        "completedAt": "2026-10-24T21:52:22Z",
+        "conclusion": "success",
+        "databaseId": 120997667849,
+        "name": "planner-security",
+        "startedAt": "2026-10-24T21:51:27Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-24T21:51:28Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-24T21:51:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:51:33Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "startedAt": "2026-10-24T21:51:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:51:35Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "number": 3,
+            "startedAt": "2026-10-24T21:51:33Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:51:35Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-java@v4",
+            "number": 4,
+            "startedAt": "2026-10-24T21:51:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:51:56Z",
+            "conclusion": "success",
+            "name": "Run npm install -g pnpm@11.19.0 firebase-tools@15.3.1",
+            "number": 5,
+            "startedAt": "2026-10-24T21:51:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:03Z",
+            "conclusion": "success",
+            "name": "Run pnpm install --frozen-lockfile --config.strictDepBuilds=false",
+            "number": 6,
+            "startedAt": "2026-10-24T21:51:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:20Z",
+            "conclusion": "success",
+            "name": "Run firebase emulators:exec --only firestore --config firebase.test.json --project demo-librauni 'pnpm test:rules'",
+            "number": 7,
+            "startedAt": "2026-10-24T21:52:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:20Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-java@v4",
+            "number": 12,
+            "startedAt": "2026-10-24T21:52:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:20Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "number": 13,
+            "startedAt": "2026-10-24T21:52:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:21Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 14,
+            "startedAt": "2026-10-24T21:52:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:21Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 15,
+            "startedAt": "2026-10-24T21:52:21Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/LibraUni/librauni.github.io/actions/runs/40136048542/job/120997667849"
+      },
+      {
+        "completedAt": "2026-10-24T21:53:31Z",
+        "conclusion": "success",
+        "databaseId": 120997875664,
+        "name": "publish",
+        "startedAt": "2026-10-24T21:52:26Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-24T21:52:29Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-24T21:52:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:35Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "startedAt": "2026-10-24T21:52:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:36Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "number": 3,
+            "startedAt": "2026-10-24T21:52:35Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:38Z",
+            "conclusion": "success",
+            "name": "Install package manager",
+            "number": 4,
+            "startedAt": "2026-10-24T21:52:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:46Z",
+            "conclusion": "success",
+            "name": "Install dependencies",
+            "number": 5,
+            "startedAt": "2026-10-24T21:52:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:52:52Z",
+            "conclusion": "success",
+            "name": "Run pnpm test",
+            "number": 6,
+            "startedAt": "2026-10-24T21:52:46Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:53:01Z",
+            "conclusion": "success",
+            "name": "Run pnpm build",
+            "number": 7,
+            "startedAt": "2026-10-24T21:52:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:53:06Z",
+            "conclusion": "success",
+            "name": "Run actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa",
+            "number": 8,
+            "startedAt": "2026-10-24T21:53:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:53:28Z",
+            "conclusion": "success",
+            "name": "Deploy",
+            "number": 9,
+            "startedAt": "2026-10-24T21:53:06Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:53:28Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "number": 17,
+            "startedAt": "2026-10-24T21:53:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:53:29Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 18,
+            "startedAt": "2026-10-24T21:53:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-24T21:53:29Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-10-24T21:53:29Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/LibraUni/librauni.github.io/actions/runs/40136048542/job/120997875664"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/LibraUni/librauni.github.io/actions/runs/40136048542"
+  },
+  "browser": {
+    "cases": [
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/",
+        "width": 1440,
+        "theme": "light",
+        "math": 0,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 0,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/",
+        "width": 390,
+        "theme": "light",
+        "math": 0,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/",
+        "width": 390,
+        "theme": "dark",
+        "math": 0,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/",
+        "width": 320,
+        "theme": "light",
+        "math": 0,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/",
+        "width": 320,
+        "theme": "dark",
+        "math": 0,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+        "width": 1440,
+        "theme": "light",
+        "math": 46,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 46,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+        "width": 390,
+        "theme": "light",
+        "math": 46,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+        "width": 390,
+        "theme": "dark",
+        "math": 46,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+        "width": 320,
+        "theme": "light",
+        "math": 46,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l01/",
+        "width": 320,
+        "theme": "dark",
+        "math": 46,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+        "width": 1440,
+        "theme": "light",
+        "math": 38,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 38,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+        "width": 390,
+        "theme": "light",
+        "math": 38,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+        "width": 390,
+        "theme": "dark",
+        "math": 38,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+        "width": 320,
+        "theme": "light",
+        "math": 38,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l02/",
+        "width": 320,
+        "theme": "dark",
+        "math": 38,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+        "width": 1440,
+        "theme": "light",
+        "math": 37,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 37,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+        "width": 390,
+        "theme": "light",
+        "math": 37,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+        "width": 390,
+        "theme": "dark",
+        "math": 37,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+        "width": 320,
+        "theme": "light",
+        "math": 37,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l03/",
+        "width": 320,
+        "theme": "dark",
+        "math": 37,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+        "width": 1440,
+        "theme": "light",
+        "math": 2,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 2,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+        "width": 390,
+        "theme": "light",
+        "math": 2,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+        "width": 390,
+        "theme": "dark",
+        "math": 2,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+        "width": 320,
+        "theme": "light",
+        "math": 2,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l04/",
+        "width": 320,
+        "theme": "dark",
+        "math": 2,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+        "width": 1440,
+        "theme": "light",
+        "math": 33,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 33,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+        "width": 390,
+        "theme": "light",
+        "math": 33,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+        "width": 390,
+        "theme": "dark",
+        "math": 33,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+        "width": 320,
+        "theme": "light",
+        "math": 33,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/l05/",
+        "width": 320,
+        "theme": "dark",
+        "math": 33,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+        "width": 1440,
+        "theme": "light",
+        "math": 24,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+        "width": 1440,
+        "theme": "dark",
+        "math": 24,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+        "width": 390,
+        "theme": "light",
+        "math": 24,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+        "width": 390,
+        "theme": "dark",
+        "math": 24,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+        "width": 320,
+        "theme": "light",
+        "math": 24,
+        "errors": []
+      },
+      {
+        "route": "/learn/physics/stage-1/p101/b03/u10/reference/",
+        "width": 320,
+        "theme": "dark",
+        "math": 24,
+        "errors": []
+      }
+    ],
+    "noJS": 5,
+    "keyboardClipboard": "exact source text"
+  },
+  "focused": {
+    "icma": "empty,correct,incorrect,change,keyboard reset and focus passed",
+    "largeText": 3,
+    "offline": 7
+  },
+  "sourceEquality": "All seven live teaching fragments match reviewed source after ignoring generated heading IDs/search attributes and normal HTML serialization.",
+  "localReview": "docs/p101-u10-whole-unit-review.json",
+  "priorFilesPreserved": 446
+}

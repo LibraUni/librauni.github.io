@@ -1,0 +1,80 @@
+{
+  "assessment": "P101 TMA03 v1.0",
+  "reviewDate": "2026-10-27",
+  "approach": "Actual explanatory passages and questions inspected; original scenarios, wording, data and solutions. No private OU text or pages redistributed.",
+  "references": [
+    {
+      "source": "Teaching Standard and Practice v1.12; fixed illustrated M101 opening chapter v0.4",
+      "location": "docs/teaching-standard-and-practice.md; content/editorial-reference/m101-opening-chapter-v0.4.html",
+      "fit": "Substantive purpose-led introduction, readable connected reasoning, mathematical typography, meaningful captions and mixed practice. Assessment questions preserve independent work rather than inserting worked answers into the public task."
+    },
+    {
+      "source": "Published P101 Units 8–10 and TMA02",
+      "location": "content/p101/unit8-lesson1.html through unit10-lesson5.html; content/p101/tma02.html",
+      "passages": {
+        "Q01": "U08 §§8.5–8.11: phase and rates, restoring parameter, energy and damping, controlled driving",
+        "Q02": "U09 §§9.1–9.3, 9.5, 9.9–9.12: phase propagation, superposition, fixed ends, tests that can fail",
+        "Q03": "U10 §§10.2–10.8: normal angles, boundary frequency, real/virtual images and signed lens model",
+        "Q04": "U10 §§10.9–10.13: power-area-time, controlled ratios, optical versus recorded resolution",
+        "Q05": "U08 §§8.12–8.15 and U10 §§10.14–10.16: sparse sampling, source/control records, distinguishing models and checked computation"
+      },
+      "fit": "All required methods already taught; earlier algebra, energy, CSV, functions, loops and plots reused. TMA02 establishes open-book independence and private chat marking handover."
+    },
+    {
+      "source": "Private supplied OU MST124 Unit 4 Trigonometry",
+      "location": "sources/U4_Trigonometry.pdf",
+      "inspected": "§1.4 printed pp18–19 (inverse trig); §2.3 pp34–36 (cosine/sine periodicity); Example 6 pp37–38 and Activity 17 p39 (values, symmetry and periodic solutions)",
+      "parts": [
+        "Q01(a,b)",
+        "Q02(a,b,c,d)",
+        "Q03(a,b)",
+        "Q05(a,d,e)"
+      ],
+      "fit": "Reasoned angle selection, period and symmetry precede numerical evaluation. OU questions isolate mathematical fluency; this assessment combines those skills with already taught physics and asks for greater independence. No close number-swapped adaptations."
+    },
+    {
+      "source": "OpenStax College Physics 2e Chapter 16 Problems & Exercises",
+      "url": "https://openstax.org/books/college-physics-2e/pages/16-problems-exercises",
+      "inspected": "Questions 7–10, 41, 43, 47–54, 61, 63–64",
+      "parts": [
+        "Q01(a,b,c)",
+        "Q02(a,b)",
+        "Q04(a,b)"
+      ],
+      "fit": "Cycle quantities; amplitude-energy relationships; wave speed/wavelength; fixed-end node/antinode interpretation; power/intensity. Original task combines fluent calculations with explanatory and diagnostic steps. Beats, pendulums and untaught calculus excluded."
+    },
+    {
+      "source": "OpenStax College Physics 2e §16.8 Forced Oscillations and Resonance",
+      "url": "https://openstax.org/books/college-physics-2e/pages/16-8-forced-oscillations-and-resonance",
+      "inspected": "Driving, energy input, frequency response and damping discussion",
+      "parts": [
+        "Q01(d)"
+      ],
+      "fit": "Qualitative controlled comparison and steady energy account; no unsupported claim that every damped displacement peak is exactly the undamped natural frequency."
+    },
+    {
+      "source": "OpenStax College Physics 2e §16.11 Energy in Waves: Intensity",
+      "url": "https://openstax.org/books/college-physics-2e/pages/16-11-energy-in-waves-intensity",
+      "inspected": "Intensity definition and Example 16.9(a), energy from intensity, area and duration",
+      "parts": [
+        "Q04(a,b)"
+      ],
+      "fit": "Same taught dimensional chain; task adds a mixed ratio and a bounded inference about recorded counts."
+    },
+    {
+      "source": "OpenStax College Physics 2e Chapter 25 Problems & Exercises",
+      "url": "https://openstax.org/books/college-physics-2e/pages/25-problems-exercises",
+      "inspected": "Questions 5–16, 40–42, 45–47, 49",
+      "parts": [
+        "Q03(a,b,c,d)"
+      ],
+      "fit": "Normal-angle refraction, index relations and thin-lens real/virtual geometry. Original question uses separate boundary and lens arrangements; no dioptre-power prerequisite."
+    }
+  ],
+  "gaps": [
+    "No matching supplied private OU physics/waves/optics assessment available; public undergraduate physics sources supplement the private mathematical comparator.",
+    "Q02 diagnostic failure and Q05 combined source-control, fixed-model alias comparison and reproducibility task have no exact external assessment match. Calibrated to actual taught examples and earlier TMA format; do not claim external workload validation.",
+    "An attempted IAU outreach page timed out; no fresh inspection or assessment claim relies on it."
+  ],
+  "workloadCalibration": "Six hours: 15 reading, 310 questions, 35 checking/rerun/package. Mixed conceptual, calculation, diagram and computational work; subparts scaffold task organisation without supplying assessed answers. Author estimate, not timed learner testing."
+}

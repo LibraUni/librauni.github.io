@@ -1,3 +1,11 @@
+# P101 TMA03 complete locally; publication authorised — 27 October 2026
+
+Five questions / 20 parts / 100 marks / six separate hours, reviewed to v1.12 and fixed reference v0.4. Public questions, criteria, invented data and offline copy only. Worked marking guide, specimen code, outputs and 103 subject checks are in restricted sibling work/p101-tma03-private OUTSIDE this repository; never copy them into public source, downloads, build or search. See docs/p101-tma03-{plan,sources,media,review}.json. 177 site tests, production build, 165-page search, responsive/no-JS/keyboard/offline and privacy checks pass. 390 earlier inventoried files preserved; only Unit10 final TMA handover sentence changes earlier teaching. Hosted security/test/build/deploy and live verification required before claiming live. Unit11 remains outline. No learner records changed. Supersedes historical TMA03 preparation status below.
+
+# P101 Unit 10 published and verified — 24 October 2026
+
+Release 1cc935504bf3ecfabb40c23dfd08a07fc46cf53a; workflow40136048542 succeeded. Seven live teaching fragments match reviewed source; six download/media hashes, search availability,42live viewport/theme cases,5noJS,keyboard code copying,iCMA states and3enlarged-text cases pass. See docs/p101-u10-live.json. Supersedes pending publication status below. Block3 teaching complete; TMA03 and Unit11 remain in preparation. No learner records changed.
+
 # M101 revision release — 27 October 2026
 
 User authorises publication of reviewed revision v0.2 and record after final checks. Six public resources include the linked public specimen, worked guide, clarifications and examination reference. See docs/m101-revision-release-review.json. All six outcomes and720minutes preserved;174tests and36browser cases pass. Private final examination/marking guide stay outside this repository, build and search. No policy adoption or learner-record change. Hosted security/deployment and live verification required before claiming live.

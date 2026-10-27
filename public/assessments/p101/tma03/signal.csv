@@ -1,0 +1,12 @@
+sample,group,time_s,raw_au,control_au
+R01,regular,0.00,51.10,6.00
+R02,regular,1.00,46.15,6.25
+R03,regular,2.00,41.55,6.50
+R04,regular,3.00,46.75,6.75
+R05,regular,4.00,51.95,7.00
+R06,regular,5.00,47.35,7.25
+R07,regular,6.00,42.40,7.50
+R08,regular,7.00,47.80,7.75
+R09,regular,8.00,53.00,8.00
+E01,extra,0.50,49.70,6.10
+E02,extra,1.50,42.80,6.40

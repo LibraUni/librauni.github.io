@@ -1,0 +1,37 @@
+.p101-tma03 {overflow-wrap:break-word;min-width:0;}
+.lesson-layout:has(.p101-tma03)>.lesson-sidebar:has(>.lesson-navigation:not([open])) {position:static;}
+.p101-tma03 .small {font:14px/1.55 system-ui;}
+.p101-tma03 h2 span {display:block;font:15px/1.6 system-ui;margin-top:.5em;}
+.p101-tma03 math {font-family:"STIX Two Math","Cambria Math",math;font-size:1.06em;}
+.p101-tma03 .tma-equation {margin:1.3em 0;padding:.5em 2px;overflow-x:auto;}
+.p101-tma03 .tma-equation math {margin:auto;}
+.p101-tma03 .tma-equations {display:flex;flex-wrap:wrap;justify-content:center;gap:0 2em;}
+.p101-tma03 .tma-equation:focus-visible {outline:2px solid #216b68;outline-offset:3px;}
+.p101-tma03 ol {padding-left:1.55em;max-width:80ch;}
+.p101-tma03 li p {max-width:76ch;}
+.p101-tma03 li {padding-left:.2em;margin-bottom:1.25em;}
+.p101-tma03 .tma-contents {display:grid;gap:.7em;margin:1.5em 0;font:16px/1.5 system-ui;}
+.p101-tma03 .tma-sphere {max-width:380px;margin:1.8em auto;}
+.p101-tma03 .tma-sphere svg text {font:italic 25px Georgia,serif;}
+.p101-tma03 .tma-context-photo {max-width:690px;margin:2em auto;}
+.p101-tma03 .tma-context-photo img {display:block;width:100%;height:auto;}
+.p101-tma03 .credit {display:block;margin-top:.6em;}
+.p101-tma03 code {font-size:.9em;white-space:normal;}
+:root[data-theme="dark"] .p101-tma03 {background:#152329;color:#e1e8e9;border-color:#45616a;}
+:root[data-theme="dark"] .p101-tma03 h1,:root[data-theme="dark"] .p101-tma03 h2,:root[data-theme="dark"] .p101-tma03 h3 {color:#b8dce6;}
+:root[data-theme="dark"] .p101-tma03 a {color:#a6d9eb;}
+:root[data-theme="dark"] .p101-tma03 .eyebrow,:root[data-theme="dark"] .p101-tma03 figcaption {color:#bacbd1;}
+:root[data-theme="dark"] .p101-tma03 .important {background:#193c32;}
+@media(max-width:550px){.p101-tma03{padding:22px 16px;}.p101-tma03 h1{font-size:30px;}.p101-tma03 h2{font-size:25px;}.p101-tma03 .important{padding:16px;}.p101-tma03 math{font-size:1em;}}
+@media print{.p101-tma03{border:0;padding:0;background:white!important;color:#111!important;}.p101-tma03 h2,.p101-tma03 h3{break-after:avoid;}.p101-tma03 .tma-contents{display:none;}.p101-tma03 li,.p101-tma03 figure{break-inside:avoid;}.p101-tma03 .tma-equation{overflow:visible;}.p101-tma03 .tma-context-photo{max-width:450px;}}
+
+.p101-tma03 .tma-context-photo{max-width:370px;}
+.p101-tma03 .tma-diagram{overflow-x:auto;}
+.p101-tma03 .tma-diagram svg{display:block;width:100%;min-width:560px;height:auto;}
+.p101-tma03 .table-scroll{overflow-x:auto;}
+.p101-tma03 table{width:100%;border-collapse:collapse;font:16px/1.6 system-ui;}
+.p101-tma03 th,.p101-tma03 td{padding:.5em .8em;border-bottom:1px solid #80989c;text-align:left;}
+
+.p101-tma03 .tma-diagram{max-width:640px;margin:22px auto}.p101-tma03 .tma-diagram svg{display:block;width:100%;min-width:460px;height:auto;background:#fcfcf7}.p101-tma03 .tma-diagram svg text{fill:#253a42;font:20px Georgia,serif}.p101-tma03 .tma-table{overflow-x:auto;margin:28px 0}.p101-tma03 table{border-collapse:collapse;width:100%;max-width:660px;font-size:17px}.p101-tma03 td,.p101-tma03 th{padding:10px 16px;border-bottom:1px solid #9baea9;text-align:left}.p101-tma03 caption{text-align:left;font:14px/1.5 system-ui;padding-bottom:12px}.p101-tma03 figure{margin:25px 0}.p101-tma03 figcaption{font:14px/1.6 system-ui;max-width:75ch}.p101-tma03 .tma-opening{display:block}.p101-tma03 h1{max-width:24ch}.p101-tma03 .chapter+.chapter{margin-top:56px;padding-top:26px;border-top:1px solid #b8c7c0}@media print{.p101-tma03 .tma-diagram svg{min-width:0}.p101-tma03 .tma-diagram{max-width:390px}.p101-tma03 .chapter{break-before:page}.p101-tma03 a{color:inherit}}
+
+.p101-tma03 .tma-scroll-note{font-size:.85rem;color:inherit}@media(min-width:700px){.p101-tma03 .tma-scroll-note{display:none}}@media print{.p101-tma03 .tma-scroll-note{display:none}}.p101-tma03 .tma-context-photo{max-width:520px}.p101-tma03 .key-idea{background:#e9f1df;border-left:4px solid #527554;padding:16px 22px;margin:24px 0}.p101-tma03 .key-idea h3{margin-top:0}:root[data-theme="dark"] .p101-tma03 .key-idea{background:#193c32;color:#e1e8e9}.p101-tma03 .tma-table table{min-width:500px}.p101-tma03 .tma-diagram svg text{font:19px Georgia,serif}

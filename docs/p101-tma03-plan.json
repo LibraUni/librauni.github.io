@@ -1,0 +1,125 @@
+{
+  "assessment": "P101 TMA03",
+  "version": "1.0",
+  "date": "2026-10-27",
+  "standard": "Teaching Standard and Practice v1.12 and fixed M101 opening chapter v0.4",
+  "authorization": "User requests local creation, thorough review, publication after checks; marking guide and worked solutions private.",
+  "constructionGate": "Existing approved P101 module/stage map, B03 15lessons/3units54h8Python, published U08\u2013U10, existing TMA03 six separate hours. Full question/subpart blueprint completed before draft.",
+  "questions": [
+    {
+      "id": "Q01",
+      "title": "A motion, an energy account and a driven response",
+      "marks": 16,
+      "minutes": 45,
+      "parts": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "units": [
+        "U08"
+      ],
+      "outcomes": [
+        "O3",
+        "O5",
+        "O7"
+      ],
+      "prerequisites": "8.5\u20138.11: phase/state, restoring parameters, turning-point energy and controlled resonance inference"
+    },
+    {
+      "id": "Q02",
+      "title": "What makes a point a node?",
+      "marks": 22,
+      "minutes": 60,
+      "parts": [
+        5,
+        6,
+        5,
+        6
+      ],
+      "units": [
+        "U09"
+      ],
+      "outcomes": [
+        "O3",
+        "O7"
+      ],
+      "prerequisites": "9.1\u20139.3,9.5,9.9\u20139.12: propagation, superposition, fixed ends and failed node tests"
+    },
+    {
+      "id": "Q03",
+      "title": "Where does the light go?",
+      "marks": 20,
+      "minutes": 55,
+      "parts": [
+        5,
+        5,
+        6,
+        4
+      ],
+      "units": [
+        "U10"
+      ],
+      "outcomes": [
+        "O3",
+        "O7"
+      ],
+      "prerequisites": "10.2\u201310.8: boundary angles, unchanged frequency, real/virtual ray geometry"
+    },
+    {
+      "id": "Q04",
+      "title": "Light collected and detail preserved",
+      "marks": 16,
+      "minutes": 40,
+      "parts": [
+        6,
+        5,
+        5
+      ],
+      "units": [
+        "U10"
+      ],
+      "outcomes": [
+        "O3",
+        "O5",
+        "O7"
+      ],
+      "prerequisites": "10.9\u201310.13: inverse-square power/exposure and physical/recorded resolution"
+    },
+    {
+      "id": "Q05",
+      "title": "Can the record distinguish two periods?",
+      "marks": 26,
+      "minutes": 110,
+      "parts": [
+        5,
+        7,
+        6,
+        4,
+        4
+      ],
+      "units": [
+        "U08",
+        "U10"
+      ],
+      "outcomes": [
+        "O3",
+        "O5",
+        "O6",
+        "O7"
+      ],
+      "prerequisites": "8.12\u20138.15,10.14\u201310.16: raw/control data, equivalent sparse predictions, diagnostic extra observations and independently checked code"
+    }
+  ],
+  "minutes": {
+    "reading": 15,
+    "questions": 310,
+    "checkingPackaging": 35,
+    "total": 360
+  },
+  "boundary": "No Fourier/fitting/ODE methods, new apparatus, astronomical inference or detector calibration. Supplied instantaneous linear synthetic data; established NumPy/Matplotlib and earlier CSV skills.",
+  "private": "Marking guide, criterion-level answers and specimen program in sibling work/p101-tma03-private outside all repository/build/download/search directories. Public broad criteria only.",
+  "mediaPlan": "Two original setup diagrams, one licensed contextual optical-kit photograph, and the complete original source table. Assessed constructions remain student work. No answer-generating interactive.",
+  "status": "Authored to this blueprint; final review recorded separately"
+}
