@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29",
+  "status": "Close-out complete; policy publication verification pending",
+  "policy": "M101-COMPLETION-POLICY v1.0 adopted prospectively",
+  "authorisation": "User directed completion of remaining steps and explicitly approved documented checks instead of unseen learner trial",
+  "privateAssessment": "Main form preserved; complete replacement form and marking guide authored and checked privately",
+  "replacementChecks": 28,
+  "replacementEditorialMinutes": [
+    151,
+    176
+  ],
+  "baselineHours": 300,
+  "revisionHours": 12,
+  "privateDelivery": "Owner-operated self-administered dated package and private return; original bytes, receipts, verification, correction history and backup/recovery tested with fixtures",
+  "actualSittingIssued": false,
+  "actualLearnerRecordsChanged": false,
+  "trial": "No learner trial; documented timing/accessibility substitution approved",
+  "independence": "Form A independent AI review; Form B author checks; no human external moderation claimed",
+  "siteTests": 177,
+  "privateLayoutCases": 24,
+  "publicPolicyLayoutCases": 6,
+  "privacy": "No actual examination, replacement questions or private marking guide included in website source, assets or search"
+}

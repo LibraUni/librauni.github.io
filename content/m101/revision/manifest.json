@@ -40,5 +40,12 @@
     "title": "Examination reference sheet",
     "fragment": "reference",
     "sourceSha256": "f55ccbe436e63fe9aa544383600f472df3119469809cd53014b066195b0cc7e3"
+  },
+  {
+    "file": "M101-Completion-Policy.html",
+    "route": "/learn/physics/stage-1/m101/revision/policy/",
+    "title": "Completion policy",
+    "fragment": "policy",
+    "sourceSha256": "b6c742479e925cd4d144e6c4514ec609f57550b74e04c1b7ececc086402b7744"
   }
 ]

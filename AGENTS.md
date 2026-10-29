@@ -1,3 +1,7 @@
+# M101 development close-out — 29 October 2026
+
+User authorised completing the remaining administrative and assessment development. Policy v1.0 adopted prospectively from calibrated v0.3; user explicitly accepted documented timing/accessibility checks in place of an unseen learner trial. Main and replacement examinations/marking guides remain private outside the repository. Owner-operated delivery, receipts, originals, correction history and recovery tested with dummy data; no real sitting or learner result created. See docs/m101-closeout.json. Public change is adopted policy and links/status alignment; preserve all teaching and later P101 changes.
+
 # P101 TMA03 complete locally; publication authorised — 27 October 2026
 
 Five questions / 20 parts / 100 marks / six separate hours, reviewed to v1.12 and fixed reference v0.4. Public questions, criteria, invented data and offline copy only. Worked marking guide, specimen code, outputs and 103 subject checks are in restricted sibling work/p101-tma03-private OUTSIDE this repository; never copy them into public source, downloads, build or search. See docs/p101-tma03-{plan,sources,media,review}.json. 177 site tests, production build, 165-page search, responsive/no-JS/keyboard/offline and privacy checks pass. 390 earlier inventoried files preserved; only Unit10 final TMA handover sentence changes earlier teaching. Hosted security/test/build/deploy and live verification required before claiming live. Unit11 remains outline. No learner records changed. Supersedes historical TMA03 preparation status below.

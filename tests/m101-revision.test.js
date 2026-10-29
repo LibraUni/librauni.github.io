@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {load} from 'cheerio';
 const manifest=JSON.parse(fs.readFileSync('content/m101/revision/manifest.json','utf8'));
-test('M101 revision publication has only six public resource inputs and hosted dependencies',()=>{
- assert.deepEqual(manifest.map(m=>m.fragment),['revision','record','specimen','guide','clarifications','reference']);
+test('M101 revision publication has only seven public resource inputs and hosted dependencies',()=>{
+ assert.deepEqual(manifest.map(m=>m.fragment),['revision','record','specimen','guide','clarifications','reference','policy']);
  for(const m of manifest){const raw=fs.readFileSync('content/m101/revision/'+m.fragment+'.html','utf8');assert(!/file:\/\/|m101-final-private|PRIVATE-Marking|M101-FE-A|M101-Specimen-Calibration/.test(raw));const $=load(raw);$('a[href]').each((_,a)=>assert.match($(a).attr('href'),/^(#|\/learn\/physics\/stage-1\/m101\/)/));}
 });
 test('Revision attempts and feedback remain separated; workload includes R1 timing adjustment',()=>{
