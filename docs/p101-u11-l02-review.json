@@ -1,0 +1,10 @@
+{
+  "lesson": "U11-L02",
+  "status": "Local review passed; integration pending",
+  "subject": "Exact rational recomputation of work sums, cancellation, gravitational work and impulse in l2-subject.json. Differentiated antiderivatives manually; checked near-surface limit and dimensions.",
+  "reader": "Continuous pass against P101U06 and M101 integration: small contribution precedes integral; one-force versus net-work distinction preserved; reverse-path caveat limited to actual resistance ambiguity. Added physical radius boundary before numerical use.",
+  "visual": "6 offline/noJS viewport/theme cases pass, feedback opened. Desktop S02 image inspected: signed areas, labels, fractions, bounds and compound radicals clear.",
+  "practice": "Activities20+30+30+20min; feedback45min, reading95min=240. Example force histories kept distinct from position functions.",
+  "comparator": "MST224U01\u00a76.4pp59\u201362 accumulation and signs; UP1\u00a77.1 variable work. Unit uses more physical reasoning and simpler paths than the latter.",
+  "limitations": "Editorial timing and self-review, not learner validation."
+}

@@ -1,3 +1,7 @@
+# P101 Unit 11 complete locally; publication authorised — 30 October 2026
+
+Five lessons developed and reviewed sequentially to v1.12 and fixed M101 v0.4. 18 hours including 3 Python hours; 19 sections, 12 examples, 16 activities, 16 cumulative exercises, six figures, checked notebook/script, synchronized two-page reference and offline pack. 180 repository tests, production build, 174-page search and local browser/notebook/PDF checks pass; 468 earlier inventoried files preserved. See docs/p101-u11-whole-unit-review.json. Hosted security, test, build, deployment and live verification required before claiming live. Units12–13 remain outlines; Block4 is not complete. No learner records changed. This supersedes historical Unit11 outline status below.
+
 # M101 development close-out — 29 October 2026
 
 User authorised completing the remaining administrative and assessment development. Policy v1.0 adopted prospectively from calibrated v0.3; user explicitly accepted documented timing/accessibility checks in place of an unseen learner trial. Main and replacement examinations/marking guides remain private outside the repository. Owner-operated delivery, receipts, originals, correction history and recovery tested with dummy data; no real sitting or learner result created. See docs/m101-closeout.json. Public change is adopted policy and links/status alignment; preserve all teaching and later P101 changes.

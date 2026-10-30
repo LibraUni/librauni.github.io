@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "date": "2026-10-30",
+  "rows": [
+    [
+      "Recall",
+      "Field and response",
+      "$\\mathbf F_{\\mathrm g}=m\\mathbf g$; $\\mathbf F_{\\mathrm e}=q\\mathbf E$.<br>$[g]=\\mathrm{N\\,kg^{-1}}$; $[E]=\\mathrm{N\\,C^{-1}}=\\mathrm{V\\,m^{-1}}$. Signed $q$."
+    ],
+    [
+      "Recall",
+      "Radial sources",
+      "Outward positive: $g_r=-GM/r^2$; $E_r=k_{\\mathrm e}Q/r^2$.<br>Point sources: $r>0$. Spherically symmetric exterior: $r\\ge R>0$; fixed sources."
+    ],
+    [
+      "Recall",
+      "Accumulation",
+      "$W=\\int_a^bF_x(x)\\,dx$ [J]; $J_x=\\int_{t_a}^{t_b}F_{\\mathrm{net},x}(t)\\,dt=\\Delta p_x$ [N s].<br>Start/end bounds; signed components; domain valid throughout."
+    ],
+    [
+      "Recall",
+      "Energy balance",
+      "$\\Delta K=W_{\\mathrm{net}}$; $K=\\tfrac12mv^2$.<br>Conservative field: $W_{\\mathrm{field}}=-\\Delta U$; $\\Delta(K+U)=W_{\\mathrm{other}}$."
+    ],
+    [
+      "Recall",
+      "Potential",
+      "$U_{\\mathrm g}=m\\phi$; $\\Delta U_{\\mathrm e}=q\\Delta V$.<br>$[\\phi]=\\mathrm{J\\,kg^{-1}}$; $[V]=\\mathrm{J\\,C^{-1}}$ (volt). $\\Delta V=V_B-V_A$."
+    ],
+    [
+      "Recall",
+      "Point-source potential",
+      "Zero at infinity: $\\phi=-GM/r$; $V=k_{\\mathrm e}Q/r$.<br>Potentials add as scalars; fields as vectors. Exterior/point-source domains as above."
+    ],
+    [
+      "Understand",
+      "Work from endpoints",
+      "$W_{\\mathrm g}=GMm(1/b-1/a)$.<br>$W_{\\mathrm e}=k_{\\mathrm e}Qq(1/a-1/b)=-q\\Delta V$.<br>Radial paths; fixed sources; same domain throughout."
+    ],
+    [
+      "Understand",
+      "Slope and reference",
+      "$E_x=-dV/dx$; $g_r=-d\\phi/dr$.<br>Uniform $E_x$: $\\Delta V=-E_x\\Delta x$.<br>Constant reference shifts leave fields and differences unchanged."
+    ],
+    [
+      "Understand",
+      "Magnetic response",
+      "Compass north end aligns with $\\mathbf B$ [tesla, T].<br>Classical point charge: magnetic force is zero at rest or parallel motion; otherwise perpendicular to velocity and field. Magnetic force does no work on that particle."
+    ],
+    [
+      "Consult",
+      "Constants and scales",
+      "$G\\approx6.67\\times10^{-11}\\,\\mathrm{N\\,m^2\\,kg^{-2}}$.<br>$k_{\\mathrm e}\\approx8.99\\times10^9\\,\\mathrm{N\\,m^2\\,C^{-2}}$.<br>$e\\approx1.602\\times10^{-19}\\,\\mathrm C$; nC: $10^{-9}$ C; \u03bcC: $10^{-6}$ C."
+    ],
+    [
+      "Understand",
+      "Numerical work",
+      "Midpoint: $h=(b-a)/n$, $r_i=a+(i+\\tfrac12)h$.<br>$W_n=\\sum_{i=0}^{n-1}(C/r_i^2)h$. Benchmark: $C(1/a-1/b)$.<br>Check domain, units, hand case, reversal, scaling and refinement."
+    ]
+  ],
+  "code": "# Full guarded functions: Lesson 4 / notebook\nC = -GM * m           # gravity; SI units\nC = k_e * Q * q       # electric alternative\nestimate = radial_work(C, a, b, n, radius)\nexact = exact_work(C, a, b, radius)\nerror_J = abs(estimate - exact)\n# Increase n; compare errors, then reverse a,b.\n# Require positive exterior radii and integer n > 0."
+}

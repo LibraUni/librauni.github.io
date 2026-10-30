@@ -1,0 +1,98 @@
+[
+  {
+    "exercise": "11.1",
+    "minutes": 5,
+    "sections": "11.1\u201311.3",
+    "demand": "Field and probe"
+  },
+  {
+    "exercise": "11.2",
+    "minutes": 6,
+    "sections": "11.2\u201311.3",
+    "demand": "Charge, units and direction"
+  },
+  {
+    "exercise": "11.3",
+    "minutes": 8,
+    "sections": "11.4,11.11",
+    "demand": "Two sources, two sums"
+  },
+  {
+    "exercise": "11.4",
+    "minutes": 7,
+    "sections": "11.5\u201311.6",
+    "demand": "A nonzero starting bound"
+  },
+  {
+    "exercise": "11.5",
+    "minutes": 6,
+    "sections": "11.5\u201311.6",
+    "demand": "Work with a reversal"
+  },
+  {
+    "exercise": "11.6",
+    "minutes": 8,
+    "sections": "11.7,11.10",
+    "demand": "Exterior gravitational work"
+  },
+  {
+    "exercise": "11.7",
+    "minutes": 6,
+    "sections": "11.8",
+    "demand": "Impulse or work?"
+  },
+  {
+    "exercise": "11.8",
+    "minutes": 5,
+    "sections": "11.9",
+    "demand": "External work and a reference shift"
+  },
+  {
+    "exercise": "11.9",
+    "minutes": 7,
+    "sections": "11.10\u201311.11",
+    "demand": "Potential and radial field"
+  },
+  {
+    "exercise": "11.10",
+    "minutes": 6,
+    "sections": "11.11\u201311.12",
+    "demand": "A negative charge gains energy"
+  },
+  {
+    "exercise": "11.11",
+    "minutes": 6,
+    "sections": "11.12",
+    "demand": "Read a potential slope"
+  },
+  {
+    "exercise": "11.12",
+    "minutes": 5,
+    "sections": "11.12",
+    "demand": "An equipotential journey"
+  },
+  {
+    "exercise": "11.13",
+    "minutes": 5,
+    "sections": "11.13",
+    "demand": "Magnetic evidence"
+  },
+  {
+    "exercise": "11.14",
+    "minutes": 7,
+    "sections": "11.14\u201311.15",
+    "demand": "Audit the numerical sum"
+  },
+  {
+    "exercise": "11.15",
+    "minutes": 5,
+    "sections": "11.7,11.16",
+    "demand": "A finite answer outside the model"
+  },
+  {
+    "exercise": "11.16",
+    "minutes": 8,
+    "sections": "11.1\u201311.16",
+    "demand": "Choose and defend a method"
+  }
+]

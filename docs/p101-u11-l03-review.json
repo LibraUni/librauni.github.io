@@ -1,0 +1,10 @@
+{
+  "lesson": "U11-L03",
+  "date": "2026-10-30",
+  "status": "Local review passed; integrated release pending",
+  "subject": "Eight independent numerical checks in l3-subject.json; checked derivatives of -GM/r and kQ/r, signed charge/energy relation, constant reference cancellation and uniform-field units.",
+  "reader": "Continuous pass reconnects actual P101U06 potential energy before per-mass/per-charge potentials. Electric sign example follows general energy relation. Added explicit distinction between necessary endpoint energy condition and trajectory, because a nonnegative endpoint energy alone does not establish accessibility.",
+  "visual": "6 offline/noJS viewport/theme cases, all hints/solutions opened, no overflow; desktop S04 potential map, equations and feedback inspected.",
+  "practice": "Activities20+20+30+30min; reading95/feedback45=240min. Compare CP2e19.1/19.3 and Ch19Q1\u20137, removing microscopic thermal prerequisites.",
+  "limitations": "Self-review; timing editorial, no student trial."
+}

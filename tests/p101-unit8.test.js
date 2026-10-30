@@ -11,7 +11,7 @@ test('P101 Unit8 release preserved with Unit10 still planned',()=>{
  const closing=read('content/p101/unit8-lesson5.html');
  assert.equal((closing.match(/id="p101-u08-exercise-/g)||[]).length,16);
  assert.equal((closing.match(/Worked solution to Exercise/g)||[]).length,16);
- for(const u of ['u11'])assert.doesNotMatch(read(`learn/physics/stage-1/p101/b04/${u}/index.html`),/data-search-status="available"/);
+ for(const u of ['u12'])assert.doesNotMatch(read(`learn/physics/stage-1/p101/b04/${u}/index.html`),/data-search-status="available"/);
  for(const f of ['Reference.pdf','Sampling.ipynb','Sampling.py','Offline.zip'])assert.ok(fs.statSync(new URL('../public/teaching/p101/u08/P101-Unit-8-'+f,import.meta.url)).size>100);
  const all=Array.from({length:5},(_,i)=>read(`content/p101/unit8-lesson${i+1}.html`)).join('');
  for(let i=1;i<=15;i++)assert.equal(all.split(`id="p101-u08-activity-${String(i).padStart(2,'0')}"`).length-1,1);

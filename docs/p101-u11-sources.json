@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-29",
+  "standard": "v1.12; fixed M101 opening v0.4 read in full from preserved text; original HTML retained in website/content/editorial-reference.",
+  "adjoining": [
+    "P101 U06 L03 \u00a7\u00a76.11\u20136.15 and L04 \u00a7\u00a76.16\u20136.20: constant-force work, energy and reference choices.",
+    "P101 U10 L05 closing synthesis and model-domain exercise.",
+    "M101 U08 L05 rectangle-sum algorithm, examples and Exercises8.10\u20138.16; U09 approved integration dependency."
+  ],
+  "comparators": [
+    {
+      "source": "Private MST124 Unit2",
+      "passage": "\u00a71.1, printed pp119\u2013120, coordinate axes and scales",
+      "fit": "Field diagrams and force-position graphs; editorial notation/scales only, not physics."
+    },
+    {
+      "source": "Private MST224 Unit1",
+      "passage": "\u00a76.1 pp50\u201352; \u00a76.4 pp59\u201362, Example10 and Exercise43",
+      "fit": "L02/L04 accumulation and checked antiderivatives; more compressed revision assumed by OU, so P101 develops physical contribution and signs explicitly. Substitution/arcsine example inspected but not needed."
+    },
+    {
+      "source": "MIT 8.02T Chapter2 Coulomb law",
+      "url": "https://ocw.mit.edu/courses/8-02t-electricity-and-magnetism-spring-2005/c31cd03c1b74a450ec131921f5625f0a_chap2coulomb_law.pdf",
+      "passage": "\u00a7\u00a72.1\u20132.5 pp2\u20138; \u00a72.14 questions1\u20134 pp38\u201339 and \u00a72.15.1\u20132 p39",
+      "fit": "L01 all sections: source/probe, signed field addition and qualitative checking. MIT uses broader vector and continuous distributions; P101 restricts calculations to discrete/one-dimensional sources. Original questions rather than numerical substitutions."
+    },
+    {
+      "source": "OpenStax University Physics1 \u00a77.1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/7-1-work",
+      "passage": "Work definition and variable-force discussion; Example7.4 inspected",
+      "fit": "L02 small work contributions. Curved-path line integral exceeds scope; use straight/radial scalar integrals only."
+    },
+    {
+      "source": "OpenStax College Physics2e \u00a7\u00a719.1,19.3",
+      "url": "https://openstax.org/books/college-physics-2e/pages/19-1-electric-potential-energy-potential-difference",
+      "passage": "\u00a719.1 potential difference/energy paragraphs; \u00a719.3 point-charge expression and Examples19.6\u201319.7",
+      "fit": "L03 potential versus energy and reference. P101 derives finite-bound radial differences using its M101 prerequisite, rather than importing an unexplained formula."
+    },
+    {
+      "source": "OpenStax College Physics2e \u00a722.3",
+      "url": "https://openstax.org/books/college-physics-2e/pages/22-3-magnetic-fields-and-magnetic-field-lines",
+      "passage": "Compass mapping; Figs22.14\u201322.15 and field-line rules",
+      "fit": "L04 qualitative magnetic map. Avoid absolute claim that probes never disturb field; qualify small probe. No monopole or quantitative magnetic-force course."
+    },
+    {
+      "source": "OpenStax College Physics2e Chapter19 exercises",
+      "url": "https://openstax.org/books/college-physics-2e/pages/19-problems-exercises",
+      "passage": "Questions1\u20137",
+      "fit": "L03/L05 energy-voltage arithmetic and multi-step interpretation. Thermal microscopic prerequisites and relativistic limits exceed the intended practice; retain low-energy simple particle/model cases."
+    },
+    {
+      "source": "OpenStax University Physics Volume 2 \u00a711.2",
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/11-2-magnetic-fields-and-lines",
+      "passage": "Magnetic force on moving charges; direction and no-work discussion",
+      "fit": "L04 \u00a711.14: classical point-charge scope, stationary charge and perpendicular force; quantitative cross products deliberately deferred."
+    }
+  ],
+  "gaps": "No supplied OU electrostatics or magnetism chapter. Direct OpenStax \u00a718.5 retrieval failed; MIT actual text supplies the match. No interactive comparator needed: static diagrams plus numerical notebook chosen for this unit. No video recommended without inspection."
+}

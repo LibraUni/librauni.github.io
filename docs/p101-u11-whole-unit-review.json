@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-30",
+  "status": "All local release gates passed; hosted security/deploy/live verification pending",
+  "standard": "Teaching Standard and Practice v1.12; approved fixed M101 opening chapter v0.4",
+  "scope": {
+    "hours": 18,
+    "pythonHours": 3,
+    "lessons": 5,
+    "sections": 19,
+    "examples": 12,
+    "activities": 16,
+    "exercises": 16,
+    "figures": 6
+  },
+  "sequentialDevelopment": "Each lesson drafted, subject/reader reviewed and locally rendered before advancing; individual review records retained. Closing resources completed after lesson sequence.",
+  "subject": {
+    "lesson1Checks": 6,
+    "lesson2Checks": 7,
+    "lesson3Checks": 8,
+    "notebookChecks": 51,
+    "closingArithmeticChecks": 23,
+    "notebook": "Starter and completed versions executed in fresh kernels; exact Fraction checks separate from floating implementation. No learner solutions stored in starter outputs.",
+    "model": "Fixed sources; point/exterior radial domains; signed charge/force/displacement; reference shifts; classical point-charge magnetic restriction; finite midpoint inputs and physical boundaries."
+  },
+  "reader": "Prerequisites traced to P101 U06/U10 and M101 accumulation/integration. Source/probe precedes field addition, signed work precedes potential, physical sum precedes code. Unit opening and conclusion connected. Required knowledge remains in main teaching. Optional extension does not gate later work.",
+  "media": "Two licensed contextual photographs, four original explanatory SVGs; all six captions and model qualifications checked. Module-wide identity search found no previous use of these photographs. Lessons without photos are justified by explanatory diagrams or cumulative practice; no decorative image quota. Private OU files remain outside repository.",
+  "visualAccessibility": {
+    "integratedWidthThemeCases": 42,
+    "noJavaScriptCases": 5,
+    "additionalBlockOfflineEnlargedCases": 14,
+    "pdf": "Two-page branded synchronized reference; both initial pages visually checked, final revised first page rechecked. Text selectable; no clipped table rows.",
+    "checks": "Closed feedback, distinct labels independent of colour, image loading, unique identifiers, page width at320/390/1440, dark/light, reduced motion, keyboard exact code copying, native MathML and offline links."
+  },
+  "engineering": {
+    "repositoryTests": 180,
+    "build": "Passed production build with local Vite configLoader runner because shared dependencies are read-only; hosted clean install must also pass.",
+    "searchPages": 174,
+    "preservedEarlierFiles": 468,
+    "preservedChanges": 0,
+    "offlineFiles": 12
+  },
+  "closingResources": [
+    "Substantive conclusion",
+    "16 cumulative exercises with separate hints and worked solutions",
+    "Runnable starter notebook and Python companion",
+    "Shared-source web/PDF quick reference",
+    "Self-contained offline reading pack"
+  ],
+  "limitations": [
+    "Reviews performed by authoring assistant; no external human peer review claimed.",
+    "Study times are editorial estimates including feedback/correction; no learner trial claimed.",
+    "Block4 remains incomplete: Units12 and13 are planning outlines only."
+  ]
+}

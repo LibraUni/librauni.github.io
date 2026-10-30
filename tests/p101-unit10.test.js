@@ -13,7 +13,7 @@ test('Unit10 release includes all lessons, private-by-default feedback and closi
  const ids=[...all.join('').matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]).filter(id=>id!=='references');assert.equal(ids.length,new Set(ids).size);
  for(const f of ['Reference.pdf','Light.ipynb','Light.py','Offline.zip'])assert.ok(fs.statSync(new URL('../public/teaching/p101/u10/P101-Unit-10-'+f,import.meta.url)).size>100);
  const nb=JSON.parse(read('public/teaching/p101/u10/P101-Unit-10-Light.ipynb'));for(const c of nb.cells.filter(c=>c.cell_type==='code'))assert.equal(c.outputs.length,0);
- assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u11/index.html'),/data-search-status="available"/);
+ assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u12/index.html'),/data-search-status="available"/);
 });
 test('Unit10 retains approved workload with included closing practice',()=>{
  const ls=p101Block3Lessons.lessons.filter(l=>l.unit==='U10');assert.equal(ls.reduce((s,l)=>s+l.hours,0),18);assert.equal(ls.reduce((s,l)=>s+l.pythonHours,0),2);

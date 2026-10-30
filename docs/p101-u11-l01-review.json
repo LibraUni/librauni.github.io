@@ -1,0 +1,14 @@
+{
+  "lesson": "U11-L01",
+  "status": "Local lesson review passed; integrated release checks pending",
+  "subject": "Recomputed four examples and activity scaling/cancellation independently; l1-subject.json. Field/force direction reviewed separately from magnitudes; fixed-source and exterior domains explicit.",
+  "reader": "Continuous pass: gravity motivates source/probe split before electricity; distinguishes force from acceleration on support, three sign conventions, field from trajectory. Comparing MIT \u00a7\u00a72.1\u20132.5: narrower superposition and no continuous distributions. M101 v0.4 convention-before-calculation pacing retained.",
+  "defectsAndFixes": [
+    "Initial authoring delimiter loss exposed raw inline LaTex; restored delimiters and recompiled all inline expressions.",
+    "Narrow-screen math overflow eliminated by correct markup and bounded math scrollers."
+  ],
+  "visual": "Six no-JS/offline width/theme cases at1440/390/320; all feedback opened, IDs unique, no page overflow. Actual desktop S03 and mobile S02 screenshots inspected; fractions, signs, figure arrows/caption checked.",
+  "time": "180minutes=75reading+65activities+40feedback; editorial estimate, not learner trial.",
+  "media": "Original explanatory field/probe diagram; source-apparatus photograph in adjoining unit opening. Additional images would not clarify the sign argument.",
+  "limitations": "Self-review and browser automation, not independent human or screen-reader validation."
+}

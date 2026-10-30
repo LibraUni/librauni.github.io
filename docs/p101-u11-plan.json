@@ -1,0 +1,71 @@
+{
+  "standard": "1.12",
+  "reference": "Fixed M101 opening v0.4; full text inspected",
+  "authority": "User requests sequential local lesson development/review, closing resources, then publication after all checks.",
+  "unit": "U11",
+  "hours": 18,
+  "pythonHours": 3,
+  "sections": [
+    [
+      "11.1 Field and source",
+      "11.2 Charge and force",
+      "11.3 Electric field",
+      "11.4 Adding fields"
+    ],
+    [
+      "11.5 Small work contributions",
+      "11.6 Integrals with signs",
+      "11.7 Radial work and domain",
+      "11.8 Impulse accumulates over time"
+    ],
+    [
+      "11.9 Potential energy and reference",
+      "11.10 Gravitational potential",
+      "11.11 Electric potential",
+      "11.12 Potential maps and energy"
+    ],
+    [
+      "11.13 Magnetic interactions",
+      "11.14 Numerical work",
+      "11.15 Checks and refinement",
+      "11.16 Communicating a bounded investigation"
+    ],
+    [
+      "11.17 Choosing a representation",
+      "11.18 Cumulative exercises",
+      "11.19 Reference and conclusion"
+    ]
+  ],
+  "minutes": [
+    {
+      "reading": 75,
+      "activities": 65,
+      "feedback": 40
+    },
+    {
+      "reading": 95,
+      "activities": 100,
+      "feedback": 45
+    },
+    {
+      "reading": 95,
+      "activities": 100,
+      "feedback": 45
+    },
+    {
+      "reading": 35,
+      "activities": 15,
+      "feedback": 10,
+      "python": 180
+    },
+    {
+      "synthesis": 15,
+      "exerciseAttempts": 100,
+      "correction": 45,
+      "referenceConclusion": 20
+    }
+  ],
+  "review": "Distinct subject, reader, rendered visual and whole-lesson passes before next lesson. Self-review, not human moderation.",
+  "media": "Original field arrows, signed work areas, potential/field comparison and refinement graph; inspect freely reusable magnetic instrument/photo. No decorative interactive: numerical choices in notebook provide purposeful exploration.",
+  "sourcesGap": "OU supplied mathematics only; MST224 U01 integration review and MST124 U02 graph conventions supplement appropriate physics texts. No supplied OU physics chapter."
+}

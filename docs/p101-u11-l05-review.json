@@ -1,0 +1,10 @@
+{
+  "lesson": "U11-L05",
+  "date": "2026-10-30",
+  "status": "Local review passed",
+  "subject": "23 independently recomputed arithmetic checks for the 16 exercises; conceptual items 12,13,15 checked against magnetic point-charge conditions, units and model restrictions. Coverage in p101-u11-exercise-coverage.json.",
+  "reader": "Cumulative synthesis returns to source/probe, signed contribution and reference choices. Exercises progress from fluency through field/potential discrimination to method selection and numerical audit. Hints and worked solutions are separate and closed initially; conclusion prepares Unit12 without requiring its content.",
+  "visual": "Six local viewport/theme cases plus integrated review; opened exercise screenshots generated for all 16; exercises 3 and 14 visually inspected on mobile. Numeric-word spacing corrected before final rendering.",
+  "workload": "35 minutes synthesis/conclusion +100 attempts +45 feedback/correction =180 minutes. Editorial estimate, not learner trial.",
+  "limitations": "Self-review; no independent human reviewer or student timing trial claimed."
+}

@@ -21,7 +21,7 @@ test('assessment route, downloads and block handover are available',()=>{
  assert.match(page,/data-search-status="available"/);
  assert.match(page,/p101-tma03\.css/);
  for(const route of ['index.html','assessments/index.html','b03/index.html','b03/u10/l05/index.html'])assert.match(read('learn/physics/stage-1/p101/'+route),/assessments\/tma03\//);
- assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u11/index.html'),/data-search-status="available"/);
+ assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u12/index.html'),/data-search-status="available"/);
  for(const name of ['P101-TMA03-data.zip','P101-TMA03-Questions.html','signal.csv','README.txt'])assert.ok(fs.statSync(new URL('../public/assessments/p101/tma03/'+name,import.meta.url)).size>50);
 });
 test('source signal preserves groups, identifiers and nonchronological times',()=>{

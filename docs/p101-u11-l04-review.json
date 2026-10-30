@@ -1,0 +1,14 @@
+{
+  "lesson": "U11-L04",
+  "date": "2026-10-30",
+  "status": "Local review passed; integrated release pending",
+  "subject": "51 independent checks including exact Fraction midpoint sums, reversed bounds, scaling, zero coefficient/interval, physical interior, nonfinite inputs and invalid n; starter and completed notebooks execute in fresh kernels. See notebook-checks.json.",
+  "reader": "Continuous pass: distinguishes compass orientation from force-on-charge; limited qualitative magnetic result for classical point charge; electric/gravity sum begins from known physical contributions. Four-stage investigation includes own implementation and report.",
+  "defectsAndFixes": [
+    "Two draft rounded refinement values disagreed with independent exact sums. Corrected n4 to -1.944439 and n8 to -1.985279 before review.",
+    "Clarified coefficient C versus coulomb unit, SI numerical inputs and radius boundary."
+  ],
+  "visual": "Six width/theme offline/noJS checks with all feedback opened; desktop S03 refinement plot inspected. Actual magnet source asset inspected before placement; directions and density qualification checked.",
+  "time": "35reading+15magnetic activity+10feedback+180Python including feedback/report=240min.",
+  "limitations": "Self-review, editorial timing. No claim of physical apparatus competence or experimental model validation."
+}

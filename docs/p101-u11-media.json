@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-29",
+  "assets": [
+    {
+      "file": "generator.jpg",
+      "source": "https://collection.sciencemuseumgroup.org.uk/objects/co145070/van-de-graaff-generator-by-mli",
+      "asset": "smg00157476; object1985-225",
+      "creator": "Science Museum Group; \u00a9 The Board of Trustees of the Science Museum",
+      "terms": "CC BY-NC-SA4.0",
+      "placement": "Unit11 introduction Figure11.1",
+      "modifications": "None; supplied medium rendition",
+      "inspection": "Actual image viewed; two metal spheres and apparatus, no claim of visible discharge."
+    },
+    {
+      "file": "magnet.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bar-magnet-iron-filings_max.jpg",
+      "asset": "Bar-magnet-iron-filings_max.jpg",
+      "creator": "MikeRun (Michael A. Rundel), Vera Wurmsdobler",
+      "terms": "CC BY-SA4.0; retains separate licence",
+      "placement": "Lesson4 Figure11.5",
+      "modifications": "None",
+      "inspection": "Actual image viewed: filings around horizontal bar magnet, S left/N right; no arrow directions inferred from filings."
+    }
+  ],
+  "repeatCheck": "Search of all earlier P101 source fragments/registers by smg00157476/co145070/Bar-magnet-iron-filings/Wurmsdobler found no earlier placement; images appear once each in Unit11. Web/offline equivalent copies are one placement.",
+  "original": "New SVG diagrams and plots: LibraUni, CC BY-NC-SA4.0; mathematical geometry checked with subject review."
+}

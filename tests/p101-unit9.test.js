@@ -14,7 +14,7 @@ test('Unit9 release provides complete teaching, closed feedback and matching res
  for(const f of ['Reference.pdf','Waves.ipynb','Waves.py','Offline.zip'])assert.ok(fs.statSync(new URL('../public/teaching/p101/u09/P101-Unit-9-'+f,import.meta.url)).size>100);
  const rows=JSON.parse(read('content/p101/unit9-reference.json')).rows;assert.equal(rows.length,12);
  const nb=JSON.parse(read('public/teaching/p101/u09/P101-Unit-9-Waves.ipynb'));for(const c of nb.cells.filter(c=>c.cell_type==='code'))assert.equal(c.outputs.length,0);
- assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u11/index.html'),/data-search-status="available"/);
+ assert.doesNotMatch(read('learn/physics/stage-1/p101/b04/u12/index.html'),/data-search-status="available"/);
 });
 test('Unit9 budget covers Python and unit practice without expansion',()=>{
  const ls=p101Block3Lessons.lessons.filter(l=>l.unit==='U09');assert.equal(ls.length,5);assert.equal(ls.reduce((s,l)=>s+l.hours,0),18);assert.equal(ls.reduce((s,l)=>s+l.pythonHours,0),3);
